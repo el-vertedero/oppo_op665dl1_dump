@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<config><compat-change enableSinceTargetSdk="34" id="211757425" name="ENFORCE_CONNECT" /><compat-change enableSinceTargetSdk="37" id="401333807" name="BONDING_APIS_REQUIRE_PRIVILEGED_PERMISSION" /><compat-change enableSinceTargetSdk="37" id="455594702" name="DONOT_STEAL_AUDIO_ON_GATT_CONN" /></config>

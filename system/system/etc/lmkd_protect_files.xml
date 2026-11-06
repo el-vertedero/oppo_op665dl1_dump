@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LMKD protected files configuration
+    This file defines which files should be protected from memory reclaim.
+-->
+<lmkd_protect_files>
+    <file path="/system/framework/framework-res.apk"/>
+    <file path="/system/framework/framework.jar"/>
+    <file path="/system/framework/oplus-framework.jar"/>
+    <file path="/system/framework/arm64/boot-framework.oat"/>
+    <file path="/system/etc/compatible/com.android.art/lib64/libart.so"/>
+    <file path="/system/lib64/libhwui.so"/>
+    <file path="/system/fonts/SysSans-Hans-Regular.ttf"/>
+    <file path="/system/fonts/SysSans-En-Regular.ttf"/>
+</lmkd_protect_files>
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HealthInfoMap xmlns:app="http://schemas.android.com/apk/res-auto">
+    <HealthInfo app:name="healthInfoItem">
+        <CommonHealthInfoItem app:name="MarketName"/>
+        <CommonHealthInfoItem app:name="StorageSize"/>
+        <CommonHealthInfoItem app:name="AvailableSize"/>
+        <CommonHealthInfoItem app:name="StorageDev"/>
+        <CommonHealthInfoItem app:name="MemoryDev"/>
+        <CommonHealthInfoItem app:name="DDRDev"/>
+        <CommonHealthInfoItem app:name="ManufactureDate"/>
+        <CommonHealthInfoItem app:name="SerialNum"/>
+        <CommonHealthInfoItem app:name="bPreEOLInfo"/>
+        <CommonHealthInfoItem app:name="LifeTime"/>
+        <CommonHealthInfoItem app:name="RecordTime"/>
+        <CommonHealthInfoItem app:name="FailCount"/>
+        <HealthInfoItem app:name="initSuccessCount"/>
+        <HealthInfoItem app:name="ffuSuccessCount"/>
+        <HealthInfoItem app:name="lowVotageDetectCount"/>
+        <HealthInfoItem app:name="suddenPowOffCount"/>
+        <HealthInfoItem app:name="readRetry"/>
+        <HealthInfoItem app:name="readReclaim"/>
+        <HealthInfoItem app:name="TBW"/>
+        <HealthInfoItem app:name="TBR"/>
+        <HealthInfoItem app:name="badBlockInit"/>
+        <HealthInfoItem app:name="badBlock_runtim"/>
+        <HealthInfoItem app:name="eraseCacheCntAvg"/>
+        <HealthInfoItem app:name="eraseXLCCntAvg"/>
+        <HealthInfoItem app:name="eraseCacheCntMax"/>
+        <HealthInfoItem app:name="eraseXLCCnttMax"/>
+        <HealthInfoItem app:name="badBlockMarkReadFail"/>
+        <HealthInfoItem app:name="badBlockMarkProgramFail"/>
+        <HealthInfoItem app:name="badBlockMarkEraseFail"/>
+        <HealthInfoItem app:name="sramBitflip"/>
+        <HealthInfoItem app:name="uecc_count"/>
+        <HealthInfoItem app:name="metadata_corruption"/>
+        <HealthInfoItem app:name="StorageInfo"/>
+    </HealthInfo>
+</HealthInfoMap>

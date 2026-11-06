@@ -1,0 +1,19 @@
+service cameraserver /system/bin/cameraserver
+    class main
+    user cameraserver
+    group audio camera system input drmrpc
+    ioprio rt 4
+    task_profiles CameraServiceCapacity CameraServicePerformance
+    rlimit rtprio 10 10
+    capabilities SYS_NICE
+    onrestart class_restart cameraWatchdog
+    interface aidl android.frameworks.cameraservice.service.ICameraService/default
+
+#add for Camera Resource Preload
+on property:persist.sys.camera.preload.permission=1
+    chmod 644 /data/dalvik-cache/arm64/product@framework@com.oplus.camera.unit.sdk.jar@classes.vdex
+    chmod 644 /data/dalvik-cache/arm64/product@framework@com.oplus.camera.unit.sdk.jar@classes.dex
+    chmod 644 /data/dalvik-cache/arm64/product@app@OplusCamera@OplusCamera.apk@classes.vdex
+    chmod 644 /data/dalvik-cache/arm64/product@app@OplusCamera@OplusCamera.apk@classes.dex
+    chmod 644 /data/dalvik-cache/arm64/product@app@OplusCamera@OplusCamera.apk@classes.art
+    setprop persist.sys.camera.preload.permission 0

@@ -1,0 +1,9 @@
+# 仅在 ro.vendor.config.oplus.low_ram=true 时执行以下逻辑（若实际为 1 请改为 =1）
+on boot && property:ro.vendor.config.oplus.low_ram=true
+    stop lbs_dbg_ext
+
+on property:ro.vendor.config.oplus.low_ram=true && property:vendor.gpsdbglog.enable=1
+    start lbs_dbg_ext
+
+on property:ro.vendor.config.oplus.low_ram=true && property:vendor.gpsdbglog.enable=0
+    stop lbs_dbg_ext

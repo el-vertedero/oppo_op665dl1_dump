@@ -1,0 +1,165 @@
+# 开机默认创建容器运行所需目录并设置权限和用户组
+on post-fs-data
+    mkdir /data/a2lrootfs 0777 root root
+    mkdir /data/a2lrootfs/opt 0771 root root
+    mkdir /data/a2lrootfs/usr 0755 root root
+    mkdir /data/a2lrootfs/opt/kingsoft 0771 root root
+    mkdir /dev/shm 1777 root 7102
+    mkdir /dev/osl 0777 root 7102
+    mkdir /dev/osl/rdp 0777 root 7102
+    restorecon /dev/shm
+    restorecon /dev/osl/rdp
+    restorecon /dev/a2lrootfs
+
+service check_if_release_root_dir /system/bin/a2lrootfs.sh "check_if_release_root_dir"
+    class core
+    user root
+    disabled
+    oneshot
+
+service start_container /system/bin/a2lrootfs.sh "start_container"
+    class core
+    user root
+    disabled
+    oneshot
+
+service start_healthcheck /system/bin/a2lrootfs.sh "start_healthcheck"
+    class core
+    user root
+    disabled
+    oneshot
+
+service set_oslg_pid /system/bin/a2lrootfs.sh "set_oslg_pid"
+    class core
+    user root
+    disabled
+    oneshot
+
+service update_app_version /system/bin/a2lrootfs.sh "update_app_version"
+    class core
+    user root
+    disabled
+    oneshot
+
+service clean_appdata /system/bin/a2lrootfs.sh "clean_appdata"
+    class core
+    user root
+    disabled
+    oneshot
+
+service unistall_app /system/bin/a2lrootfs.sh "unistall_app"
+    class core
+    user root
+    disabled
+    oneshot
+
+service set_timezone /system/bin/a2lrootfs.sh "set_timezone"
+    class core
+    user root
+    disabled
+    oneshot
+
+service set_a2lrootfs_dns /system/bin/a2lrootfs.sh "set_a2lrootfs_dns"
+    class core
+    user root
+    disabled
+    oneshot
+
+service reset_a2lrootfs /system/bin/a2lrootfs.sh "reset_a2lrootfs"
+    class core
+    user root
+    disabled
+    oneshot
+
+service release_wps_files /system/bin/a2lrootfs.sh "release_wps_files"
+    class core
+    user root
+    disabled
+    oneshot
+
+service reset_window_size /system/bin/a2lrootfs.sh "reset_window_size"
+    class core
+    user root
+    disabled
+    oneshot
+
+service enable_channel /system/bin/a2lrootfs.sh "enable_channel"
+    class core
+    user root
+    disabled
+    oneshot
+
+service save_network_logs /system/bin/a2lrootfs.sh "save_network_logs"
+    class core
+    user root
+    disabled
+    oneshot
+
+on property:vendor.oplus.pcengine.container.start=1
+    start check_if_release_root_dir
+
+on property:vendor.oplus.pcengine.container.start=1 && property:vendor.oplus.pcengine.container.state=1
+    chown 7102 7102 /dev/shm
+    mount none /dev /data/a2lrootfs/dev bind rec
+    mount none /dev/pts /data/a2lrootfs/dev/pts bind rec
+    mount none /sys /data/a2lrootfs/sys bind rec
+    mount none /proc /data/a2lrootfs/proc bind rec
+    mount none /data/data/com.oplus.wpslauncher/files/fonts /data/a2lrootfs/home/oppo/.fonts bind rec
+    setprop vendor.oplus.pcengine.container.state 2
+
+on property:vendor.oplus.pcengine.container.start=1 && property:vendor.oplus.pcengine.container.state=2
+    mkdir /dev/shm 1777 root 7102
+    mkdir /dev/osl 0777 root 7102
+    mkdir /dev/osl/rdp 0777 root 7102
+    mkdir /data/a2lrootfs/tablet 0771 root root
+    mkdir /data/a2lrootfs/tmp/android17 0777 7102 7102
+    mkdir /data/a2lrootfs/tmp/android17/osl 0777 7102 7102
+    mkdir /data/a2lrootfs/tmp/android17/osl/rdp 0777 7102 7102
+    restorecon /dev/shm
+    restorecon /dev/osl/rdp
+    restorecon /data/a2lrootfs/tmp/android17/osl/rdp
+    umount /data/a2lrootfs/tablet
+    mount none /storage/self/primary /data/a2lrootfs/tablet bind rec
+    start enable_channel
+    start start_container
+    start save_network_logs
+    setprop vendor.oplus.pcengine.container.state 3
+
+on property:vendor.oplus.pcengine.container.start=0
+    stop start_container
+    stop start_healthcheck
+
+on property:vendor.oplus.pcengine.container.start=1 && property:vendor.oplus.pcengine.heartbeat=*
+    start start_healthcheck
+
+on property:vendor.oplus.pcengine.app.update=*
+    start update_app_version
+
+on property:vendor.oplus.pcengine.app.clean=*
+    start clean_appdata
+
+on property:vendor.oplus.pcengine.app.uninstall=*
+    start unistall_app
+
+on property:persist.vendor.oplus.pcengine.a2lrootfs.dns=*
+    start set_a2lrootfs_dns
+
+on property:vendor.oplus.pcengine.container.reset=1
+    start reset_a2lrootfs
+
+on property:vendor.oplus.pcengine.window.size.reset=1
+    start reset_window_size
+
+on property:persist.sys.timezone=*
+    start set_timezone
+
+on property:vendor.oplus.pcengine.mount.start=1 && property:vendor.oplus.pcengine.img.loopdevice=* && property:vendor.oplus.pcengine.img.mountpath=*
+    mount erofs ${vendor.oplus.pcengine.img.loopdevice} ${vendor.oplus.pcengine.img.mountpath} ro
+    setprop vendor.oplus.pcengine.mount.start 0
+
+on property:vendor.oplus.pcengine.kingsoft.exists=1
+    start release_wps_files
+    setprop vendor.oplus.pcengine.kingsoft.exists 0
+
+on property:persist.sys.assert.panic=true
+    start save_network_logs

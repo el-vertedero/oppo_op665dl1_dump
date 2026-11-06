@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HealthInfoMap xmlns:app="http://schemas.android.com/apk/res-auto">
+    <HealthInfo app:healthinfotype="StorageHealthInfo">
+        <HealthInfoItem app:healthinfoname="type" app:offset="0" app:healthinfolength="1"
+            app:healthinfohighFirst="false" app:healthinfodescription="The Storage Type" />
+        <HealthInfoItem app:healthinfoname="jedecId" app:offset="1" app:healthinfolength="2"
+            app:healthinfohighFirst="false" app:healthinfodescription="ManufactureerID" />
+        <HealthInfoItem app:healthinfoname="ManufactureDate" app:offset="3" app:healthinfolength="4"
+            app:healthinfohighFirst="false" app:healthinfodescription="wManufactureDate" />
+        <HealthInfoItem app:healthinfoname="StorageDev" app:offset="7" app:healthinfolength="8" app:healthinfohighFirst="false"
+            app:healthinfodescription="firmware version" />
+        <HealthInfoItem app:healthinfoname="SerialNum" app:offset="85" app:healthinfolength="16"
+            app:healthinfohighFirst="false" app:healthinfodescription="wSerialNum" />
+        <HealthInfoItem app:healthinfoname="bPreEOLInfo" app:offset="101" app:healthinfolength="1"
+            app:healthinfohighFirst="false" app:healthinfodescription="Pre End of Life Info" />
+        <HealthInfoItem app:healthinfoname="initSuccessCount" app:offset="160" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="ufs init success count / Open Count" />
+        <HealthInfoItem app:healthinfoname="ffuSuccessCount" app:offset="164" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="FFU success count / Firmware Success Count" />
+        <HealthInfoItem app:healthinfoname="lowVotageDetectCount" app:offset="168" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="low vcc,vccq detect LVD" />
+        <HealthInfoItem app:healthinfoname="suddenPowOffCount" app:offset="172" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="power lose suddenly SPOR" />
+        <HealthInfoItem app:healthinfoname="readRetry" app:offset="176" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="read fail and read retry by diff ref voltage" />
+        <HealthInfoItem app:healthinfoname="readReclaim" app:offset="180" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Read Reclaim Count bitfilp is more than ecc warning threadhold" />
+        <HealthInfoItem app:healthinfoname="TBW" app:offset="184" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="write size(100MBytes)" />
+        <HealthInfoItem app:healthinfoname="TBR" app:offset="188" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="read size(100MBytes)" />
+        <HealthInfoItem app:healthinfoname="badBlockInit" app:offset="232" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Initial Bad Block" />
+        <HealthInfoItem app:healthinfoname="badBlock_runtim" app:offset="236" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Run Time Bad Block" />
+        <HealthInfoItem app:healthinfoname="eraseCacheCntAvg" app:offset="240" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Avg SLC Erase Cycle" />
+        <HealthInfoItem app:healthinfoname="eraseXLCCntAvg" app:offset="244" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Avg MLC Erase Cycle" />
+        <HealthInfoItem app:healthinfoname="eraseCacheCntMax" app:offset="248" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Max SLC Erase Cycle" />
+        <HealthInfoItem app:healthinfoname="eraseXLCCnttMax" app:offset="252" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Max MLC Erase Cycle" />
+        <HealthInfoItem app:healthinfoname="badBlockMarkReadFail" app:offset="256" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="The number of run time bad block by read fail" />
+        <HealthInfoItem app:healthinfoname="badBlockMarkProgramFail" app:offset="260" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="The number of run time bad block by program fail" />
+        <HealthInfoItem app:healthinfoname="badBlockMarkEraseFail" app:offset="264" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="The number of run time bad block by erase fail" />
+        <HealthInfoItem app:healthinfoname="sramBitflip" app:offset="268" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="sram Error Detection Fail Count" />
+        <HealthInfoItem app:healthinfoname="uecc_count" app:offset="272" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="This count includes UECC's from the host read, GC, and in some cases power loss." />
+        <HealthInfoItem app:healthinfoname="metadata_corruption" app:offset="276" app:healthinfolength="4" app:healthinfohighFirst="false"
+            app:healthinfodescription="Metadata corruption." />
+        <HealthInfoItem app:healthinfoname="StorageInfo" app:offset="316" app:healthinfolength="512" app:healthinfohighFirst="false"
+            app:healthinfodescription="StorageInfo" />
+    </HealthInfo>
+</HealthInfoMap>

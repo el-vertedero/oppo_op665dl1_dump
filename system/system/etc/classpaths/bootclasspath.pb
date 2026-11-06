@@ -1,0 +1,73 @@
+
+#
+/system/framework/framework.jar
+#
+/system/framework/framework.jar
+0
+(/system/framework/framework-graphics.jar37
+0
+(/system/framework/framework-graphics.jar37
+0
+(/system/framework/framework-location.jar37
+0
+(/system/framework/framework-location.jar37
+
+/system/framework/ext.jar
+
+/system/framework/ext.jar
+*
+&/system/framework/telephony-common.jar
+*
+&/system/framework/telephony-common.jar
+%
+!/system/framework/voip-common.jar
+%
+!/system/framework/voip-common.jar
+$
+ /system/framework/ims-common.jar
+$
+ /system/framework/ims-common.jar
+E
+=/system/framework/framework-ondeviceintelligence-platform.jar37
+E
+=/system/framework/framework-ondeviceintelligence-platform.jar37
++
+#/system/framework/framework-nfc.jar36
++
+#/system/framework/framework-nfc.jar36
+/
+'/system/framework/framework-telecom.jar37
+/
+'/system/framework/framework-telecom.jar37
+)
+%/system/framework/oplus-framework.jar
+)
+%/system/framework/oplus-framework.jar
+-
+)/system/framework/com.android.fmradio.jar
+-
+)/system/framework/com.android.fmradio.jar
+-
+)/system/framework/subsystem-framework.jar
+-
+)/system/framework/subsystem-framework.jar
+-
+)/system_ext/framework/mediatek-common.jar
+-
+)/system_ext/framework/mediatek-common.jar
+0
+,/system_ext/framework/mediatek-framework.jar
+0
+,/system_ext/framework/mediatek-framework.jar
+1
+-/system_ext/framework/mediatek-ims-common.jar
+1
+-/system_ext/framework/mediatek-ims-common.jar
+/
++/system_ext/framework/mediatek-ims-base.jar
+/
++/system_ext/framework/mediatek-ims-base.jar
+1
+-/apex/com.android.i18n/javalib/core-icu4j.jar
+1
+-/apex/com.android.i18n/javalib/core-icu4j.jar

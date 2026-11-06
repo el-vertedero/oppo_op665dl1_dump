@@ -1,0 +1,20 @@
+#ifdef OPLUS_ARCH_EXTENDS
+#CaoYang@MULTIMEDIA.DISPLAY, 2023/9/18, Add for decoupling
+on late-init
+    chmod 0666 /sys/kernel/tracing/events/kgsl/enable
+    chmod 0666 /sys/kernel/tracing/events/kgsl/kgsl_regwrite/enable
+#endif
+
+service gpu /system/bin/gpuservice
+    class core
+    user gpu_service
+    group graphics readtracefs
+
+on property:sys.boot_completed=1
+	setprop vendor.gfx.perf_hint CL_PERF_HINT_NORMAL_QCOM
+
+#ifdef OPLUS_FEATURE_PRECACHE
+# Wangkaiwen@MULTIMEDIA.Display, 2026/05/09, add for precache save warm-up results
+on post-fs-data
+    mkdir /data/misc/precache_ledger 0700 gpu_service graphics
+#endif
