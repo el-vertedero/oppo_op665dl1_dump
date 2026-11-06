@@ -1,0 +1,11 @@
+on post-fs-data
+    mkdir /data/misc/oplus_net_bpfloader_log 0750 root root
+
+service oplus_net_bpfloader /system_ext/bin/oplus_net_bpfloader
+    user root
+    group root system
+    oneshot
+    disabled
+
+on property:bpf.progs_loaded=1
+    start oplus_net_bpfloader

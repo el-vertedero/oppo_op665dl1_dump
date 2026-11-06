@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ ********************************************************************************
+ ** Copyright (C) 2024-2124 Oplus. All rights reserved.
+ ** All rights reserved.
+ **
+ ** File: - sys_pms_appfilter_list.xml
+ ** Description:
+ **     local attributes of pms sys_pms_appfilter_list.xml
+ **
+ ** Version: 1.0
+ ** Date: 2024-08-13
+ ** Author: Binwang.Xu@ANDROID.PMS
+ **
+ ** <author>                        <data>       <version>   <desc>
+  ** Binwang.Xu@ANDROID.PMS        2024-08-13   1.0         Create this file
+ ********************************************************************************/
+  -->
+
+<!--  #Binwang.Xu@ANDROID.PMS, 2024/08/13, Add for store appsfilter local list -->
+<filter-conf>
+    <version>20250310</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_pms_appfilter_list</filter-name>
+    <featureOption>off</featureOption>
+    <minTargetSDK>15</minTargetSDK>
+    <forceQueryablePackage>com.tencent.mm</forceQueryablePackage>
+    <forceQueryablePackage>com.tencent.mobileqq</forceQueryablePackage>
+    <forceQueryablePackage>com.sina.weibo</forceQueryablePackage>
+    <forceQueryablePackage>com.eg.android.AlipayGphone</forceQueryablePackage>
+    <forceQueryablePackage>com.eg.android.AlipayGphoneRC</forceQueryablePackage>
+    <forceQueryablePackage>hk.alipay.wallet</forceQueryablePackage>
+    <forceQueryablePackage>com.unionpay</forceQueryablePackage>
+    <forceQueryablePackage>com.chinamworld.bocmbci</forceQueryablePackage>
+    <forceQueryablePackage>com.coloros.calendar</forceQueryablePackage>
+    <!-- map -->
+    <forceQueryablePackage>com.autonavi.minimap</forceQueryablePackage>
+    <forceQueryablePackage>com.baidu.BaiduMap</forceQueryablePackage>
+    <forceQueryablePackage>com.tencent.map</forceQueryablePackage>
+    <intent>
+        <action name="com.huawei.hms.core.aidlservice"/>
+    </intent>
+    <intent>
+        <action name="com.huawei.hms.core"/>
+    </intent>
+    <intent>
+        <action name="android.intent.action.MAIN"/>
+        <category name="android.intent.category.LAUNCHER"/>
+    </intent>
+    <intent>
+        <action name="android.intent.action.MAIN"/>
+    </intent>
+    <intent>
+        <action name="com.getui.sdk.action"/>
+    </intent>
+    <intent>
+        <action name="android.intent.action.VIEW"/>
+    </intent>
+    <intent>
+        <action name="com.umeng.message.action.notify"/>
+    </intent>
+    <intent>
+        <action name="com.hihonor.push.action.BIND_PUSH_SERVICE"/>
+    </intent>
+    <intent>
+        <action name="com.apptouch.intent.action.update_hms"/>
+    </intent>
+    <intent>
+        <action name="com.huawei.appmarket.intent.action.AppDetail"/>
+    </intent>
+    <intent>
+        <action name="com.getui.vendor.action.push"/>
+    </intent>
+    <intent>
+        <action name="com.huawei.appmarket.intent.action.ThirdUpdateAction"/>
+    </intent>
+    <intent>
+        <action name="cn.jpush.android.intent.PushService"/>
+    </intent>
+    <intent>
+        <action name="*"/>
+    </intent>
+    <intent>
+        <action name="null"/>
+    </intent>
+</filter-conf>

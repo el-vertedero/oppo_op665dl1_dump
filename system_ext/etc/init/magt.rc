@@ -1,0 +1,10 @@
+# MAGT
+service magt /system_ext/bin/magt
+    disabled
+    oneshot
+    class main
+    user system
+    group system
+
+on boot && property:ro.vendor.magt.mtk_magt_support=1
+    start magt

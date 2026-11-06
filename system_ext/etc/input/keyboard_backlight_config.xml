@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<config name="keyboard_backlight_config">
+    <auto_brightness_timeout_in_millis_config value="30000" />
+    <lux_filter_constant_config value="1.0" />
+    <lux_filter_threshold_config value="2" />
+    <increment_key_config value="10" />
+    <decrement_key_config value="10" />
+    <auto_brightness_config>
+        <decrease_level_config>
+            <brightness_level brightness="52" level="0" max_lux="2" min_lux="0" />
+            <brightness_level brightness="82" level="1" max_lux="5" min_lux="3" />
+            <brightness_level brightness="102" level="2" max_lux="15" min_lux="6" />
+            <brightness_level brightness="92" level="3" max_lux="21" min_lux="16" />
+            <brightness_level brightness="82" level="4" max_lux="27" min_lux="22" />
+            <brightness_level brightness="72" level="5" max_lux="33" min_lux="28" />
+            <brightness_level brightness="62" level="6" max_lux="39" min_lux="34" />
+            <brightness_level brightness="52" level="7" max_lux="45" min_lux="40" />
+            <brightness_level brightness="42" level="8" max_lux="51" min_lux="46" />
+            <brightness_level brightness="32" level="9" max_lux="57" min_lux="52" />
+            <brightness_level brightness="22" level="10" max_lux="63" min_lux="58" />
+            <brightness_level brightness="12" level="11" max_lux="69" min_lux="64" />
+            <brightness_level brightness="0" level="12" min_lux="70" />
+        </decrease_level_config>
+
+        <increase_level_config>
+            <brightness_level brightness="52" level="0" max_lux="3" min_lux="0" />
+            <brightness_level brightness="82" level="1" max_lux="6" min_lux="4" />
+            <brightness_level brightness="102" level="2" max_lux="16" min_lux="7" />
+            <brightness_level brightness="92" level="3" max_lux="22" min_lux="17" />
+            <brightness_level brightness="82" level="4" max_lux="28" min_lux="23" />
+            <brightness_level brightness="72" level="5" max_lux="36" min_lux="29" />
+            <brightness_level brightness="62" level="6" max_lux="42" min_lux="37" />
+            <brightness_level brightness="52" level="7" max_lux="48" min_lux="43" />
+            <brightness_level brightness="42" level="8" max_lux="54" min_lux="49" />
+            <brightness_level brightness="32" level="9" max_lux="60" min_lux="55" />
+            <brightness_level brightness="22" level="10" max_lux="66" min_lux="61" />
+            <brightness_level brightness="12" level="11" max_lux="72" min_lux="67" />
+            <brightness_level brightness="0" level="12" min_lux="73" />
+        </increase_level_config>
+    </auto_brightness_config>
+</config>

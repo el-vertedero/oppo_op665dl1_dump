@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<!--
+  LogTriggerModule.xml  (v4)
+  ===========================================================================
+  日志抓取通道的统一配置文件，涵盖两类配置：
+    1. <module>       : trigger 路径模块（NQM / GameScreenshot 等）的合法性与频率控制
+    2. <alertModule>  : alert/EAP 路径模块（RadioManager.sendAlertEvent 链路）的配置
+                        合并原 logserviceconfig.xml + eapwhitelist.xml，不再单独维护这两个文件
+
+  ========================== module 字段说明 ==========================
+    moduleName       : 模块标识（与 cause 字符串首个 '_' 之前的前缀大小写不敏感匹配）
+    maxTriggerCount  : 允许的最大累计触发次数
+                       · 0   = 无次数限制（适用于用户主动手势触发）
+                       · >0  = 当日最多触发 N 次
+    freqLimitSeconds : 同模块两次触发间最小间隔（秒）
+                       · 0   = 无频率限制（适用于用户主动手势触发）
+                       · >0  = 至少间隔 N 秒
+                       · 不配置 = 回到默认值 180 = 3 分钟
+    enable           : 1 = 启用该模块；0 = 禁用（触发请求将被拒绝）
+
+    scene 下的三个字段同语义（作用域到场景）。
+
+  ========================== alertModule 字段说明 ==========================
+    atomId           : RadioManager.sendAlertEvent 上报的 alert ID，唯一标识一条规则
+    moduleName       : 可读模块名称（仅用于日志打印）
+    maxDayCount      : 每自然日最大触发次数；0 = 无限制
+    freqLimitSeconds : 同 atomId 两次触发间最小间隔（秒）；0 = 不限制
+    enable           : 1 = 启用；0 = 禁用（触发请求将被拒绝）
+    eapWhitelist     : 1 = 允许 EAP 上传（等同于原 eapwhitelist.xml 中 enable=1 的条目）
+    info             : 传给 IMdLogController.startUploadLogToEap 的 info 标识字符串
+    timeInterval     : 传给 startUploadLogToEap 的 timeInterval 参数
+    moduleId         : 传给 startUploadLogToEap 的 moduleId 参数
+    logFilter        : 传给 startUploadLogToEap 的 collectLogType 参数；-1 = 不过滤
+    delayMs          : 传给 startUploadLogToEap 的 delayMs 参数
+
+  示例 cause 字符串与 moduleName 的对应关系（module 路径）：
+    "NetDiag_tcp_timeout"           → moduleName="NetDiag"
+    "WifiDiag_ap_disconnect"        → moduleName="WifiDiag"
+    "PowerDiag_wakelock#DETAIL#..." → moduleName="PowerDiag"
+    "RadioDiag_ims_drop"            → moduleName="RadioDiag"
+-->
+<LogTriggerModuleConfig>
+    <version>4</version>
+
+    <!-- ================================================================
+         trigger 路径模块（LogService.requestCapture → TriggerValidator）
+         ================================================================ -->
+
+    <!-- 网络低质监控模块（NetworkQualityMonitor 内部触发） -->
+    <module moduleName="NetQuality"
+            moduleId="120001"
+            atomId="100006"
+            maxTriggerCount="0"
+            freqLimitSeconds="600"
+            enable="1">
+        <!-- per-scene limit: each scene at least 10 minutes interval, max 5 triggers per day -->
+        <scene sceneName="GAME"      maxTriggerCount="1" freqLimitSeconds="600" enable="1" />
+        <scene sceneName="LIVE_HOST" maxTriggerCount="2" freqLimitSeconds="600" enable="1" />
+        <scene sceneName="MEETING" maxTriggerCount="2" freqLimitSeconds="600" enable="1" />
+        <scene sceneName="VIDEO_CALL" maxTriggerCount="2" freqLimitSeconds="600" enable="1" />
+        <scene sceneName="VOICE_CALL" maxTriggerCount="2" freqLimitSeconds="600" enable="1" />
+    </module>
+
+    <!--
+      游戏/低质场景用户手势触发（GameScreenshotEvent）：
+        · NORMAL   = 处于游戏场景时的截屏 / Vol-Down+Power 组合键
+        · LOWSCORE = 最近 60s 内发生过网络低分，用户主动截屏 / 组合键
+      这两类均为用户主动操作，放开次数/频率限制（全部配 0），由后端 mPendingRequests
+      队列安全处理并发。
+    -->
+    <module moduleName="GameScreenshot"
+            maxTriggerCount="0"
+            freqLimitSeconds="0"
+            enable="1">
+        <scene sceneName="NORMAL"   maxTriggerCount="0" freqLimitSeconds="0" enable="1" />
+        <scene sceneName="LOWSCORE" maxTriggerCount="0" freqLimitSeconds="0" enable="1" />
+    </module>
+
+    <!-- ================================================================
+         alert/EAP 路径模块（LogService.requestAlertCapture → LogManager）
+         合并原 logserviceconfig.xml + eapwhitelist.xml，两个旧文件不再使用
+
+         白名单模块：maxDayCount="0" freqLimitSeconds="0" 表示不受次数/频率限制。
+         ================================================================ -->
+
+    <alertModule atomId="100002"
+                 moduleName="weaknetworkfence"
+                 maxDayCount="0"
+                 freqLimitSeconds="0"
+                 enable="1"
+                 eapWhitelist="1"
+                 info="weaknetworkfence"
+                 timeInterval="0"
+                 moduleId="4"
+                 logFilter="1"
+                 delayMs="0" />
+
+    <!-- 模块异常类日志（原 atomId=100003，moduleexception） -->
+    <alertModule atomId="100003"
+                 moduleName="moduleexception"
+                 maxDayCount="6"
+                 freqLimitSeconds="0"
+                 enable="1"
+                 eapWhitelist="1"
+                 info="moduleexception"
+                 timeInterval="0"
+                 moduleId="5"
+                 logFilter="1"
+                 delayMs="0" />
+
+    <!-- 守护进程异常类日志（原 atomId=100004，daemonexception） -->
+    <alertModule atomId="100004"
+                 moduleName="daemonexception"
+                 maxDayCount="4"
+                 freqLimitSeconds="0"
+                 enable="1"
+                 eapWhitelist="1"
+                 info="daemonexception"
+                 timeInterval="0"
+                 moduleId="6"
+                 logFilter="1"
+                 delayMs="0" />
+
+    <!-- 智能 Modem 日志（原 atomId=100005，smartmodemlog） -->
+    <alertModule atomId="100005"
+                 moduleName="smartmodemlog"
+                 maxDayCount="3"
+                 freqLimitSeconds="600"
+                 enable="1"
+                 eapWhitelist="1"
+                 info="smartmodemlog"
+                 timeInterval="0"
+                 moduleId="7"
+                 logFilter="-1"
+                 delayMs="0" />
+
+</LogTriggerModuleConfig>

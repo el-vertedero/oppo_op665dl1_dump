@@ -1,0 +1,164 @@
+service midasd /system_ext/bin/midasd
+	class hal
+	user system
+	group system readproc root media_rw
+	capabilities SYS_NICE
+	disabled
+
+on property:sys.boot_completed=1 && property:persist.sys.midasd.enable=0
+	stop midasd
+
+on property:sys.boot_completed=1 && property:persist.sys.midasd.enable=1
+	start midasd
+
+on property:sys.boot_completed=1 && property:persist.sys.midasd.enable=2
+	start midasd
+
+on property:sys.boot_completed=1 && property:persist.sys.midasd.start=1
+	start midasd
+
+on property:sys.boot_completed=1 && property:persist.sys.midasd.start=0
+	stop midasd
+
+on property:sys.boot_completed=1 && property:persist.sys.midas_ostats.restriction=0
+    start midasd
+
+on property:sys.boot_completed=1 && property:persist.sys.midas_ostats.restriction=1
+	stop midasd
+
+on post-fs-data
+	mkdir /data/misc/midas 0770 system system
+	mkdir /data/misc/midas/database 0770 system system
+
+##############################################################################
+#  perfetto_labmode_sys_ostats_trigger_trace - Keeps a persistent active
+#  tracing session, for labmode debugging purposes  CLONE_SNAPSHOT mode
+##############################################################################
+
+on property:debug.oplus.labmode_sys_ostats_trigger_trace=1 && property:persist.traced.enable=1 && property:persist.sys.oplus.ostats.labmode.enable=1
+    # Set by traced after listen()ing on the consumer socket. Without this,
+    # perfetto could try to connect to traced before traced is ready to listen.
+    # wait_for_prop sys.trace.traced_started 1
+    start perfetto_labmode_sys_ostats_trigger_trace
+    mkdir /data/persist_log/operfetto 0777 system root
+
+# If something disables traced, we don't want init to respawn the service (that will fail) continuously.
+on property:persist.traced.enable=0
+    stop perfetto_labmode_sys_ostats_trigger_trace
+
+on property:debug.oplus.labmode_sys_ostats_trigger_trace=0
+    setprop debug.oplus.labmode_sys_ostats_trigger_trace ""
+
+on property:debug.oplus.labmode_sys_ostats_trigger_trace=""
+    stop perfetto_labmode_sys_ostats_trigger_trace
+
+service perfetto_labmode_sys_ostats_trigger_trace /system/bin/perfetto -c /system_ext/etc/perfetto-configs/labmode_sys_ostats_trace_cfg.pbtxt --txt -o /data/misc/perfetto-traces/oplus/sys_trigger_ostats_ext.trace.operfetto
+    disabled
+    user system
+    group root system
+
+on property:debug.oplus.labmode_sys_ostats_trigger_trace=2 && property:persist.sys.oplus.ostats.labmode.enable=1
+    start perfetto_ostats_trace_trigger
+
+on property:debug.oplus.labmode_sys_ostats_trigger_trace=3 && property:persist.sys.oplus.ostats.labmode.enable=1
+    stop perfetto_ostats_trace_trigger
+
+service perfetto_ostats_trace_trigger /system_ext/bin/trigger_operfetto.sh "triggerTrace"
+    class core
+    user system
+    seclabel u:r:shell:s0
+    group root system shell
+    disabled
+    oneshot
+
+##############################################################################
+#  labmode_data_ostats_trigger_trace - Keeps a persistent active
+#  tracing session, for data config labmode debugging purposes CLONE_SNAPSHOT mode
+##############################################################################
+on property:debug.oplus.labmode_data_ostats_trigger_trace=1 && property:persist.traced.enable=1 && property:persist.sys.oplus.ostats.labmode.enable=1
+    # Set by traced after listen()ing on the consumer socket. Without this,
+    # perfetto could try to connect to traced before traced is ready to listen.
+    # wait_for_prop sys.trace.traced_started 1
+    start labmode_data_ostats_trigger_trace
+
+# If something disables traced, we don't want init to respawn the service (that will fail) continuously.
+on property:persist.traced.enable=0
+    stop labmode_data_ostats_trigger_trace
+
+on property:debug.oplus.labmode_data_ostats_trigger_trace=0
+    setprop debug.oplus.labmode_data_ostats_trigger_trace ""
+
+on property:debug.oplus.labmode_data_ostats_trigger_trace=""
+    stop labmode_data_ostats_trigger_trace
+
+service labmode_data_ostats_trigger_trace /system/bin/perfetto -c /data/misc/perfetto-configs/labmode_data_ostats_trace_cfg.pbtxt --txt -o /data/misc/perfetto-traces/oplus/data_trigger_ostats.trace.operfetto
+    disabled
+    oneshot
+    user system
+    group root system
+
+on property:debug.oplus.labmode_data_ostats_trigger_trace=2 && property:persist.sys.oplus.ostats.labmode.enable=1
+    start perfetto_data_ostats_trace_trigger
+
+on property:debug.oplus.labmode_data_ostats_trigger_trace=3 && property:persist.sys.oplus.ostats.labmode.enable=1
+    stop perfetto_data_ostats_trace_trigger
+
+service perfetto_data_ostats_trace_trigger /system/bin/perfetto -c  /data/misc/perfetto-configs/labmode_data_ostats_trace_trigger.pbtxt --txt
+    disabled
+    oneshot
+    user system
+    group root system
+
+##############################################################################
+#  labmode_data_ostats_continuous_trace - Keeps a persistent active
+#  tracing session, for data config labmode debugging purposes period time limit mode
+##############################################################################
+on property:debug.oplus.labmode_data_ostats_continuous_trace=1 && property:persist.traced.enable=1 && property:persist.sys.oplus.ostats.labmode.enable=1
+    # Set by traced after listen()ing on the consumer socket. Without this,
+    # perfetto could try to connect to traced before traced is ready to listen.
+    # wait_for_prop sys.trace.traced_started 1
+    start labmode_data_ostats_continuous_trace
+
+# If something disables traced, we don't want init to respawn the service (that will fail) continuously.
+on property:persist.traced.enable=0
+    stop labmode_data_ostats_continuous_trace
+
+on property:debug.oplus.labmode_data_ostats_continuous_trace=0
+    setprop debug.oplus.labmode_data_ostats_continuous_trace ""
+
+on property:debug.oplus.labmode_data_ostats_continuous_trace=""
+    stop labmode_data_ostats_continuous_trace
+
+on property:debug.oplus.labmode_data_ostats_continuous_trace=2
+    start kill_labmode_data_ostats_continuous_trace
+
+service kill_labmode_data_ostats_continuous_trace /system/bin/perfetto --attach=operfetto --stop
+    disabled
+    gentle_kill
+    oneshot
+    user system
+    group system
+
+service labmode_data_ostats_continuous_trace /system/bin/perfetto -c /data/misc/perfetto-configs/labmode_data_continuous_ostats_trace_cfg.pbtxt --txt --detach=operfetto
+    disabled
+    gentle_kill
+    oneshot
+    user system
+    group system
+
+##############################################################################
+#  add for binder info record in labmode
+##############################################################################
+service ostats_bds /system_ext/bin/midasd --bds
+    class main
+    user system
+    group system readproc root media_rw
+    capabilities SYS_NICE
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1 && property:debug.ostats.bds.enable=0
+    stop ostats_bds
+
+on property:sys.boot_completed=1 && property:persist.sys.oplus.ostats.labmode.enable=1 && property:debug.ostats.bds.enable=1
+    start ostats_bds

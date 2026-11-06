@@ -1,0 +1,22 @@
+service oplusHmbirdBpfManager /system_ext/bin/oplusHmbirdBpfManager
+    capabilities CHOWN SYS_ADMIN NET_ADMIN SETGID SETUID
+    user root
+    group root system readproc
+    socket HmbirdBpfManager seqpacket+passcred 0660 system system u:object_r:opluscvt_socket:s0
+    disabled
+
+on boot
+    setprop sys.oplus.hmbird.manager.enable 1
+
+on property:sys.boot_completed=1 && property:ro.kernel.version=6.12 && property:sys.oplus.hmbird.manager.enable=1
+    start oplusHmbirdBpfManager
+
+on property:sys.boot_completed=1 && property:ro.kernel.version=6.18 && property:sys.oplus.hmbird.manager.enable=1
+    start oplusHmbirdBpfManager
+
+on property:sys.oplus.hmbird.manager.enable=0
+    stop oplusHmbirdBpfManager
+
+on property:persist.sys.oplus.hmbird.bpf.scene.attached=CameraScene && property:ro.vendor.qti.soc_model=SM8850
+    chmod 0666 sys/devices/system/cpu/cpufreq/policy0/hmbird/soft_freq_min
+    chmod 0666 sys/devices/system/cpu/cpufreq/policy6/hmbird/soft_freq_min

@@ -1,0 +1,25 @@
+on post-fs-data
+    mkdir /data/mdlog 0775 system system encryption=DeleteIfNecessary
+    mkdir /data/ramdump 0775 shell system encryption=DeleteIfNecessary
+    mkdir /data/debuglogger 0770 system system encryption=DeleteIfNecessary
+    restorecon /data/debuglogger
+
+service emdlogger /system/system_ext/bin/emdlogger
+    class main
+    user shell
+    group log system shell radio sdcard_rw inet sdcard_r media_rw
+
+on property:vendor.mtklog.enabled.emdlogger=1
+    start emdlogger
+
+on property:vendor.mtklog.enabled.emdlogger=0
+    stop emdlogger
+
+on property:persist.vendor.em.dy.debug=1
+    stop emdlogger
+
+on property:ro.vendor.mtk_protocol1_rat_config=1
+    stop emdlogger
+
+on property:persist.vendor.mdlog.3G=1
+    stop emdlogger

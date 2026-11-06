@@ -1,0 +1,31 @@
+service iopgp_v2 /system_ext/bin/iopgp --v2
+    class core
+    user system
+    group system
+    capabilities FOWNER
+    disabled
+    oneshot
+
+service iopgp_v1 /system_ext/bin/iopgp --v1
+    class core
+    user system
+    group system
+    capabilities FOWNER
+    disabled
+    oneshot
+
+on post-fs-data
+    # Create directory for iopgp (see iopgp_data_file in selinux file_contexts).
+    mkdir /data/misc/iopgp/ 0750 system system
+
+on property:sys.iopgp.version=2
+    stop iopgp_v1
+    start iopgp_v2
+
+on property:sys.iopgp.version=1
+    stop iopgp_v2
+    start iopgp_v1
+
+on property:sys.iopgp.version=0
+    stop iopgp_v1
+    stop iopgp_v2

@@ -1,0 +1,12 @@
+service oplus_kmsg_wb_helper /system_ext/bin/oplus_kmsg_wb_helper
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:oplus_kmsg_wb_helper:s0
+
+# ueventd has created and labelled /dev/block/by-name/* by this point, and
+# /proc/phoenix is available for handing the oplusreserve5 fd to kmsg_wb.
+on early-boot
+    start oplus_kmsg_wb_helper

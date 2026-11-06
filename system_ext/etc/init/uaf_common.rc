@@ -1,0 +1,210 @@
+on post-fs-data
+    chmod 0777 /dev/vip_binder
+
+on post-fs-data && property:ro.oplus.osense.uaf_qos_enable=true
+    chown system system /dev/cpuctl/background/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/background/cpu.uclamp.min
+    chown system system /dev/cpuctl/camera-background/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/camera-background/cpu.uclamp.min
+    chown system system /dev/cpuctl/camera-daemon/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/camera-daemon/cpu.uclamp.min
+    chown system system /dev/cpuctl/camera/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/camera/cpu.uclamp.min
+    chown system system /dev/cpuctl/display/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/display/cpu.uclamp.min
+    chown system system /dev/cpuctl/foreground/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.min
+    chown system system /dev/cpuctl/log/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/log/cpu.uclamp.min
+    chown system system /dev/cpuctl/mem/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/mem/cpu.uclamp.min
+    chown system system /dev/cpuctl/multimedia/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/multimedia/cpu.uclamp.min
+    chown system system /dev/cpuctl/nnapi-hal/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/nnapi-hal/cpu.uclamp.min
+    chown system system /dev/cpuctl/restricted-foreground/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/restricted-foreground/cpu.uclamp.min
+    chown system system /dev/cpuctl/rt/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/rt/cpu.uclamp.min
+    chown system system /dev/cpuctl/sstop/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/sstop/cpu.uclamp.min
+    chown system system /dev/cpuctl/ssfg/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/ssfg/cpu.uclamp.min
+    chown system system /dev/cpuctl/system/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/system/cpu.uclamp.min
+    chown system system /dev/cpuctl/system-background/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/system-background/cpu.uclamp.min
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
+    chown system system /dev/cpuctl/touch/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/touch/cpu.uclamp.min
+    chown system system /dev/cpuctl/bg/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/bg/cpu.uclamp.min
+    chown system system /dev/cpuctl/dex2oat/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/dex2oat/cpu.uclamp.min
+    chown system system /dev/cpuctl/foreground_window/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/foreground_window/cpu.uclamp.min
+
+    chown system system /dev/cpuctl/background/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/background/cpu.uclamp.max
+    chown system system /dev/cpuctl/camera-background/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/camera-background/cpu.uclamp.max
+    chown system system /dev/cpuctl/camera-daemon/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/camera-daemon/cpu.uclamp.max
+    chown system system /dev/cpuctl/camera/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/camera/cpu.uclamp.max
+    chown system system /dev/cpuctl/display/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/display/cpu.uclamp.max
+    chown system system /dev/cpuctl/foreground/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.max
+    chown system system /dev/cpuctl/log/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/log/cpu.uclamp.max
+    chown system system /dev/cpuctl/mem/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/mem/cpu.uclamp.max
+    chown system system /dev/cpuctl/multimedia/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/multimedia/cpu.uclamp.max
+    chown system system /dev/cpuctl/nnapi-hal/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/nnapi-hal/cpu.uclamp.max
+    chown system system /dev/cpuctl/rt/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/rt/cpu.uclamp.max
+    chown system system /dev/cpuctl/sstop/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/sstop/cpu.uclamp.max
+    chown system system /dev/cpuctl/ssfg/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/ssfg/cpu.uclamp.max
+    chown system system /dev/cpuctl/system/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/system/cpu.uclamp.max
+    chown system system /dev/cpuctl/system-background/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/system-background/cpu.uclamp.max
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.max
+    chown system system /dev/cpuctl/touch/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/touch/cpu.uclamp.max
+    chown system system /dev/cpuctl/bg/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/bg/cpu.uclamp.max
+    chown system system /dev/cpuctl/dex2oat/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/dex2oat/cpu.uclamp.max
+    chown system system /dev/cpuctl/foreground_window/cpu.uclamp.max
+    chmod 0664 /dev/cpuctl/foreground_window/cpu.uclamp.max
+
+    chown system system /dev/cpuctl/background/cpu.shares
+    chmod 0664 /dev/cpuctl/background/cpu.shares
+    chown system system /dev/cpuctl/camera-background/cpu.shares
+    chmod 0664 /dev/cpuctl/camera-background/cpu.shares
+    chown system system /dev/cpuctl/camera-daemon/cpu.shares
+    chmod 0664 /dev/cpuctl/camera-daemon/cpu.shares
+    chown system system /dev/cpuctl/camera/cpu.shares
+    chmod 0664 /dev/cpuctl/camera/cpu.shares
+    chown system system /dev/cpuctl/display/cpu.shares
+    chmod 0664 /dev/cpuctl/display/cpu.shares
+    chown system system /dev/cpuctl/foreground/cpu.shares
+    chmod 0664 /dev/cpuctl/foreground/cpu.shares
+    chown system system /dev/cpuctl/log/cpu.shares
+    chmod 0664 /dev/cpuctl/log/cpu.shares
+    chown system system /dev/cpuctl/mem/cpu.shares
+    chmod 0664 /dev/cpuctl/mem/cpu.shares
+    chown system system /dev/cpuctl/multimedia/cpu.shares
+    chmod 0664 /dev/cpuctl/multimedia/cpu.shares
+    chown system system /dev/cpuctl/nnapi-hal/cpu.shares
+    chmod 0664 /dev/cpuctl/nnapi-hal/cpu.shares
+    chown system system /dev/cpuctl/rt/cpu.shares
+    chmod 0664 /dev/cpuctl/rt/cpu.shares
+    chown system system /dev/cpuctl/sstop/cpu.shares
+    chmod 0664 /dev/cpuctl/sstop/cpu.shares
+    chown system system /dev/cpuctl/ssfg/cpu.shares
+    chmod 0664 /dev/cpuctl/ssfg/cpu.shares
+    chown system system /dev/cpuctl/system/cpu.shares
+    chmod 0664 /dev/cpuctl/system/cpu.shares
+    chown system system /dev/cpuctl/system-background/cpu.shares
+    chmod 0664 /dev/cpuctl/system-background/cpu.shares
+    chown system system /dev/cpuctl/top-app/cpu.shares
+    chmod 0664 /dev/cpuctl/top-app/cpu.shares
+    chown system system /dev/cpuctl/touch/cpu.shares
+    chmod 0664 /dev/cpuctl/touch/cpu.shares
+    chown system system /dev/cpuctl/bg/cpu.shares
+    chmod 0664 /dev/cpuctl/bg/cpu.shares
+    chown system system /dev/cpuctl/dex2oat/cpu.shares
+    chmod 0664 /dev/cpuctl/dex2oat/cpu.shares
+    chown system system /dev/cpuctl/foreground_window/cpu.shares
+    chmod 0664 /dev/cpuctl/foreground_window/cpu.shares
+
+    chown system system /dev/cpuctl/background/cpu.qos_level
+    chmod 0664 /dev/cpuctl/background/cpu.qos_level
+    chown system system /dev/cpuctl/camera-background/cpu.qos_level
+    chmod 0664 /dev/cpuctl/camera-background/cpu.qos_level
+    chown system system /dev/cpuctl/camera-daemon/cpu.qos_level
+    chmod 0664 /dev/cpuctl/camera-daemon/cpu.qos_level
+    chown system system /dev/cpuctl/camera/cpu.qos_level
+    chmod 0664 /dev/cpuctl/camera/cpu.qos_level
+    chown system system /dev/cpuctl/display/cpu.qos_level
+    chmod 0664 /dev/cpuctl/display/cpu.qos_level
+    chown system system /dev/cpuctl/foreground/cpu.qos_level
+    chmod 0664 /dev/cpuctl/foreground/cpu.qos_level
+    chown system system /dev/cpuctl/log/cpu.qos_level
+    chmod 0664 /dev/cpuctl/log/cpu.qos_level
+    chown system system /dev/cpuctl/mem/cpu.qos_level
+    chmod 0664 /dev/cpuctl/mem/cpu.qos_level
+    chown system system /dev/cpuctl/multimedia/cpu.qos_level
+    chmod 0664 /dev/cpuctl/multimedia/cpu.qos_level
+    chown system system /dev/cpuctl/nnapi-hal/cpu.qos_level
+    chmod 0664 /dev/cpuctl/nnapi-hal/cpu.qos_level
+    chown system system /dev/cpuctl/rt/cpu.qos_level
+    chmod 0664 /dev/cpuctl/rt/cpu.qos_level
+    chown system system /dev/cpuctl/sstop/cpu.qos_level
+    chmod 0664 /dev/cpuctl/sstop/cpu.qos_level
+    chown system system /dev/cpuctl/ssfg/cpu.qos_level
+    chmod 0664 /dev/cpuctl/ssfg/cpu.qos_level
+    chown system system /dev/cpuctl/system/cpu.qos_level
+    chmod 0664 /dev/cpuctl/system/cpu.qos_level
+    chown system system /dev/cpuctl/system-background/cpu.qos_level
+    chmod 0664 /dev/cpuctl/system-background/cpu.qos_level
+    chown system system /dev/cpuctl/top-app/cpu.qos_level
+    chmod 0664 /dev/cpuctl/top-app/cpu.qos_level
+    chown system system /dev/cpuctl/touch/cpu.qos_level
+    chmod 0664 /dev/cpuctl/touch/cpu.qos_level
+    chown system system /dev/cpuctl/bg/cpu.qos_level
+    chmod 0664 /dev/cpuctl/bg/cpu.qos_level
+    chown system system /dev/cpuctl/dex2oat/cpu.qos_level
+    chmod 0664 /dev/cpuctl/dex2oat/cpu.qos_level
+    chown system system /dev/cpuctl/foreground_window/cpu.qos_level
+    chmod 0664 /dev/cpuctl/foreground_window/cpu.qos_level
+
+    chown system system /dev/cpuctl/background/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/background/cpu.schedtune.boost
+    chown system system /dev/cpuctl/camera-background/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/camera-background/cpu.schedtune.boost
+    chown system system /dev/cpuctl/camera-daemon/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/camera-daemon/cpu.schedtune.boost
+    chown system system /dev/cpuctl/camera/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/camera/cpu.schedtune.boost
+    chown system system /dev/cpuctl/display/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/display/cpu.schedtune.boost
+    chown system system /dev/cpuctl/foreground/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/foreground/cpu.schedtune.boost
+    chown system system /dev/cpuctl/log/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/log/cpu.schedtune.boost
+    chown system system /dev/cpuctl/mem/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/mem/cpu.schedtune.boost
+    chown system system /dev/cpuctl/multimedia/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/multimedia/cpu.schedtune.boost
+    chown system system /dev/cpuctl/nnapi-hal/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/nnapi-hal/cpu.schedtune.boost
+    chown system system /dev/cpuctl/rt/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/rt/cpu.schedtune.boost
+    chown system system /dev/cpuctl/sstop/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/sstop/cpu.schedtune.boost
+    chown system system /dev/cpuctl/ssfg/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/ssfg/cpu.schedtune.boost
+    chown system system /dev/cpuctl/system/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/system/cpu.schedtune.boost
+    chown system system /dev/cpuctl/system-background/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/system-background/cpu.schedtune.boost
+    chown system system /dev/cpuctl/top-app/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/top-app/cpu.schedtune.boost
+    chown system system /dev/cpuctl/touch/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/touch/cpu.schedtune.boost
+    chown system system /dev/cpuctl/bg/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/bg/cpu.schedtune.boost
+    chown system system /dev/cpuctl/dex2oat/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/dex2oat/cpu.schedtune.boost
+    chown system system /dev/cpuctl/foreground_window/cpu.schedtune.boost
+    chmod 0664 /dev/cpuctl/foreground_window/cpu.schedtune.boost

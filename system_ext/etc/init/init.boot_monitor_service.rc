@@ -1,0 +1,13 @@
+# Boot monitor: start in post-fs-data (early; before zygote / SS for socket readiness).
+# Repair modules read persist.sys.boot_monitor.mode (property name fixed; values evolve).
+# clear_next_boot flag lives under /metadata/boot_monitor/ (not a property).
+
+on post-fs-data
+    mkdir /metadata/boot_monitor 0770 system system
+    start boot_monitor_service
+
+service boot_monitor_service /system_ext/bin/boot_monitor_service
+    user system
+    group system readproc
+    socket boot_monitor_service stream 0660 system system
+    writepid /dev/cpuset/system-background/tasks

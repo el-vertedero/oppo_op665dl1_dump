@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<settings>
+    <version>2025091609</version>
+    <notificationBp attr="com.heytap.themestore" sign="289CC3429F496460B66AC2A876C040091AAEF55B5EB942C2CE697EF3B1201459"/>
+    <notificationBp attr="com.tencent.mm" sign="0FE4FF85C215918396DADC7CD8CE6963339AF33D37751A56E54C7206B63A3C7C"/>
+    <notificationBp attr="com.oplus.games" sign="B0A9BBFC05EEE5E7D0A2C97C030586E15BB3301152078F54473BB82DF6D8C818"/>
+    <notificationBp attr="com.coloros.accessibilityassistant" sign="FC98DAE63AD39626C8C67FBE83F2F06F74932A9CD146B92CECFC6A047A904386"/>
+    <notificationBp attr="com.coloros.translate" sign="3B92460AAE5A3919E5CA9A9AEEE4ABDE56E67631B806C3AEBA0E42E86847E5A0"/>
+    <notificationBp attr="com.coloros.colordirectservice" sign="64AAFAF1D5BC9155A9E417A849E4F8EDA1D0D1341667C28ED7C443C76F820B9A"/>
+    <notificationBp attr="com.coloros.directui" sign="64AAFAF1D5BC9155A9E417A849E4F8EDA1D0D1341667C28ED7C443C76F820B9A"/>
+    <notificationBp attr="com.opos.ads" sign="3E02E48BAF4A244E6FE7877F86DD7140AA01862813710A2B576FFF68B0A2E219"/>
+    <notificationBp attr="com.oplus.gleanerservice" sign="E49802409584CE53152A9000820A51E4FA8A723B7BCC263E335240ACF100BF9E"/>
+</settings>

@@ -1,0 +1,18 @@
+<filter-conf>
+<version>20260121</version>
+<isOpen>1</isOpen>
+<filter-name>sys_view_cache_config_list</filter-name>
+<white>com.app.support.demo15^commonconfig{"enableactivity":"com.coui.support.demo.MainActivity"}</white>
+<white>com.app.support.demo16^commonconfig{"enableactivity":"com.coui.support.demo.MainActivity"}</white>
+
+<white>com.smile.gifmaker^commonconfig{"enableactivity":"com.yxcorp.gifshow.HomeActivity"}</white>
+<white>com.kuaishou.nebula^commonconfig{"enableactivity":"com.yxcorp.gifshow.HomeActivity|com.kwai.kds.krn.api.page.KwaiRnActivity"}</white>
+<white>com.xingin.xhs^commonconfig{"enableactivity":"com.xingin.xhs.index.v2.IndexActivityV2|com.xingin.matrix.notedetail.NoteDetailActivity"}</white>
+<white>tv.danmaku.bili^commonconfig{"enableactivity":"tv.danmaku.bili.MainActivityV2|com.bilibili.video.story.StoryVideoActivity"}</white>
+<white>com.baidu.searchbox^commonconfig{"enableactivity":"com.baidu.searchbox.home.feed.FeedDetailActivity|com.baidu.searchbox.video.feedflow.tab.VideoTabActivity|com.baidu.searchbox.video.linkageflow.VideoFlowLinkageFullActivity"}</white>
+<white>com.immomo.momo^commonconfig{"enableactivity":"com.immomo.momo.maintab.MaintabActivity|com.immomo.android.mvvm.luaview.view.LoginLuaActivity|com.immomo.momo.luaview.LuaViewActivity"}</white>
+
+<!-- Oplus handle style config -->
+<handle-global>true</handle-global>
+<handle-black>android.widget.cts</handle-black>
+</filter-conf>

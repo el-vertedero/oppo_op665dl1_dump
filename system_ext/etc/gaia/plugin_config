@@ -1,0 +1,49 @@
+plugins:41
+LogWorkManager[thread:logworkmanager]: static
+ApLog[]: logcore_deferred
+DynamicLog[]: logcore_deferred
+ScreenRecord[]: logcore_deferred
+RedScreenAssert[]: logcore_deferred
+BtHciLog[]: logcore_deferred
+UnisocBtLogger[]: logcore_deferred
+MtkLogger[]: logcore_deferred
+StabilityLog[]: logcore_deferred
+CameraLog[]: logcore_deferred
+LogArchiver[thread:log_archiving]: logcore_deferred
+FeedbackLogCollector[thread:feedback_log_collector]: logcore_deferred
+DisplayLog[]: logcore_deferred
+BrightnessLog[]: logcore_deferred
+WlanLogger[]: logcore_deferred
+UnisocWlanLogger[]: logcore_deferred
+AudioLog[]: logcore_deferred
+TouchScreenLog[thread:ordered_worker]: logcore_deferred
+GpsLog[]: logcore_deferred
+UnisocGpsLog[]: logcore_deferred
+BiometricsLog[]: logcore_deferred
+SecurityLog[]: logcore_deferred
+RegularLog[]: logcore_deferred
+LogkitSwitch[]: logcore_deferred
+LogkitSwitchCommon[]: logcore_deferred
+Systrace[]: logcore_deferred
+QXDMLog[]: logcore_deferred
+VideoLog[]: logcore_deferred
+ModemLog[]: logcore_deferred
+UnisocModemLog[]: logcore_deferred
+NetLog[]: logcore_deferred
+OsenseLog[thread:ordered_worker]: logcore_deferred
+QxdmCollector[]: logcore_deferred
+LogCollect[pool:log_collect_pool:4]: static
+LogCompress[thread:fault_logger]: static
+FaultLogCollector[pool:fault_log_collect_pool:4]: static
+LogPacking[thread:event_logger]: static
+DeviceFaultDetection[]: static
+LogLoadController[thread:gaia_load_controller]: static
+TheiaJudgement[thread:event_theia_judge]: static
+PeriodicDumpLog[]: logcore_deferred
+pipelines:3
+logCorePipeline:LogWorkManager LogkitSwitchCommon LogkitSwitch ApLog Systrace ScreenRecord QXDMLog BtHciLog UnisocBtLogger RegularLog DynamicLog BiometricsLog SecurityLog ModemLog UnisocModemLog NetLog OsenseLog RedScreenAssert WlanLogger UnisocWlanLogger GpsLog UnisocGpsLog StabilityLog CameraLog BrightnessLog DisplayLog AudioLog VideoLog TouchScreenLog MtkLogger QxdmCollector PeriodicDumpLog FeedbackLogCollector LogArchiver
+ExceptionLogPipeLine:LogCollect LogCompress
+FaultLogPipeLine:TheiaJudgement FaultLogCollector LogPacking
+eventsources:2
+CommonEventSource:logCorePipeline ExceptionLogPipeLine
+FaultLogEventSource:FaultLogPipeLine ExceptionLogPipeLine

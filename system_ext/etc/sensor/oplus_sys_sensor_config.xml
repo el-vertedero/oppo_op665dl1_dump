@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<filter-conf>
+    <OrientationEventListener>
+        <version>20251024</version>
+        <!-- default: 0, acc with resample and filter : 1, gravity : 2 -->
+        <solution>0</solution>
+        <!-- fix sample rate, -1 for not fixed, other means fix rate -->
+        <sample_rate>-1</sample_rate>
+        <!-- only work while solution = 1 -->
+        <filter_param>0.8</filter_param>
+        <!-- only work while solution = 1 -->
+        <resample_delay>100</resample_delay>
+        <!-- different soultion for apps -->
+        <solutions_override>
+            <item app="com.tencent.mm" solution="1" sample_rate="3" filter_param="0.6" resample_delay="100"/>
+            <item app="com.youku.phone" solution="1" sample_rate="3" filter_param="0.6" resample_delay="100"/>
+        </solutions_override>
+    </OrientationEventListener>
+</filter-conf>

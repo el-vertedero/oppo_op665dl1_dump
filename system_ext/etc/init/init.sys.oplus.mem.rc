@@ -1,0 +1,63 @@
+service mem_test_tools /system_ext/bin/mem_test_tools
+    class core
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
+
+on property:sys.oplus.mem_test_tools.enable=1
+    start mem_test_tools
+
+on property:sys.oplus.mem_test_tools.enable=0
+    stop mem_test_tools
+
+service mm_cont_pte_hugepage /system/system_ext/bin/oplus_system_debug "cont_pte_hugepage" ${sys.oplus.vm.cont_pte_hugepage}
+    class core
+    user root
+    group root system log
+    disabled
+    oneshot
+
+on property:sys.oplus.vm.cont_pte_hugepage=*
+    start mm_cont_pte_hugepage
+
+service mm_set_feature_disable1 /system/system_ext/bin/oplus_system_debug "mm_feature_disable1" ${sys.oplus.vm.set_feature_disable1}
+    class core
+    user root
+    group root system log
+    disabled
+    oneshot
+
+on property:sys.oplus.vm.set_feature_disable1=*
+    start mm_set_feature_disable1
+
+service mm_uxmem_opt /system/system_ext/bin/oplus_system_debug "uxmem_opt" ${sys.oplus.vm.uxmem_opt}
+    class core
+    user root
+    group root system log
+    disabled
+    oneshot
+
+on property:sys.oplus.vm.uxmem_opt=*
+    start mm_uxmem_opt
+
+service mm_dynamic_readahead /system/system_ext/bin/oplus_system_debug "dynamic_readahead" ${sys.oplus.vm.dynamic_readahead}
+    class core
+    user root
+    group root system log
+    disabled
+    oneshot
+
+on property:sys.oplus.vm.dynamic_readahead=*
+    start mm_dynamic_readahead
+
+service mm_aizerofs /system/system_ext/bin/oplus_system_debug "aizerofs" ${sys.oplus.vm.aizerofs}
+    class core
+    user root
+    group root system log
+    disabled
+    oneshot
+
+on property:sys.oplus.vm.aizerofs=*
+    start mm_aizerofs
+

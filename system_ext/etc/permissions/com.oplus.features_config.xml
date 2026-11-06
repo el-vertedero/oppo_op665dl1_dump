@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<oplus-config>
+    <oplus-feature name="oplus.software.color_split_feature"/>
+    <oplus-feature name="oplus.software.powerkey_disbale_turnoff_torch"/>
+    <oplus-feature name="oplus.software.pms_restrict_protected_app_install"/>
+</oplus-config>

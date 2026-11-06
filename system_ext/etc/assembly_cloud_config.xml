@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2020-2024 Oplus. All Rights Reserved.
+ Confidential and Proprietary - Oplus, Inc.
+
+ Tunable parameters for the assembly-cloud-recommend decision engine.
+ Bump "version" to force a re-parse on the next boot; otherwise the cached
+ SharedPreferences values are reused without reading this file.
+-->
+<assembly_cloud_config version="1">
+    <!-- Master switch: "1"/"true" = enabled, "0"/"false" = disabled. RUS-overridable. -->
+    <param name="feature_enabled" value="1" />
+
+    <!-- Recommendation decision -->
+    <param name="low_score_qoe_threshold" value="60" />     <!-- score window avg below this is "low" -->
+    <param name="score_window_duration_ms" value="6000" />  <!-- duration-weighted QoE window -->
+    <param name="min_trigger_interval_ms" value="30000" />  <!-- global anti-ping-pong gap -->
+    <param name="cell_cooldown_ms" value="60000" />         <!-- per-cell recommend cooldown -->
+    <param name="action_verify_timeout_ms" value="15000" /> <!-- max wait for switch onto target -->
+    <param name="recommend_fail_limit" value="3" />         <!-- fuse: stop recommending after N fails -->
+    <param name="improve_delta" value="5" />                <!-- post-switch QoE must beat baseline by this -->
+    <param name="active_hour_start" value="18" />           <!-- recommend only within [start,end] local hour -->
+    <param name="active_hour_end" value="22" />
+
+    <!-- Cloud data update -->
+    <param name="cloud_update_interval_ms" value="604800000" /> <!-- 7 days -->
+    <param name="cloud_update_init_delay_ms" value="60000" />   <!-- first check after boot -->
+    <param name="cloud_download_timeout_ms" value="180000" />   <!-- 3 minutes -->
+</assembly_cloud_config>

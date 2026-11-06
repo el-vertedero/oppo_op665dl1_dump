@@ -1,0 +1,14 @@
+# oF2FS UFS tune — system_ext/etc/init/ (see core_sys/oplus_f2fs_ufs_tune).
+# Manual: setprop persist.sys.oplus.f2fstune 1|2  (1=tuned, 2=default); clears with resetprop or empty.
+
+service oplus_f2fs_ufs_tune /system_ext/bin/oplus_f2fs_ufs_tune.sh apply
+    class main
+    user root
+    group root
+    oneshot
+    disabled
+
+# on boot start is in init.oplus.rootdir.rc (OF2FS block) so service order stays with write defaults.
+
+on property:persist.sys.oplus.f2fstune=*
+    start oplus_f2fs_ufs_tune

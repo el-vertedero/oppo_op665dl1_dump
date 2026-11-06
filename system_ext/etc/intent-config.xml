@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<intent-config>
+    <intent version="1">
+        <!-- parent intent, 1001~10000 raw collected data, 10001~Algorithm/AI reasoning data -->
+        <!-- mitics intent for third-party data，1001~2000 -->
+        <item name="intent_mitics" id="1001" parentId="0" />
+        <!-- intent for cellular common data collection，10001~20000 -->
+        <item name="intent_common" id="10001" parentId="0" />
+        <!-- intent for data collection，20001~30000 -->
+        <item name="intent_data" id="20001" parentId="0" />
+        <!-- intent for call collection，30001~40000 -->
+        <item name="intent_call" id="30001" parentId="0" />
+        <!-- intent for registration collection，40001~50000 -->
+        <item name="intent_reg" id="40001" parentId="0" />
+        <!-- intent for feedback collection，50001~60000 -->
+        <item name="intent_rf" id="50001" parentId="0" />
+
+        <!-- sub intent -->
+        <!-- intent for phone bill collection -->
+        <item name="intent_common_phone_bill" id="100010001" parentId="10001" />
+        <!-- intent for data usage collection -->
+        <item name="intent_common_data_usage" id="100010002" parentId="10001" />
+        <!-- intent for cross-regional collection -->
+        <item name="intent_common_cross_regional" id="100010003" parentId="10001" />
+        <!-- intent for traffic sensitive -->
+        <item name="intent_data_traffic_sensitive" id="200010001" parentId="20001" />
+        <!-- intent for card switch -->
+        <item name="intent_data_card_switch" id="200010002" parentId="20001" />
+        <!-- mitics navigation intent: driving/cycling/walking navigation status -->
+        <item name="intent_mitics_navigation" id="10010001" parentId="1001" />
+        <!-- mitics taxi intent: ride-hailing order status -->
+        <item name="intent_mitics_taxi" id="10010002" parentId="1001" />
+        <!-- mitics train trip intent: railway/12306 trip reminders -->
+        <item name="intent_mitics_train_trip" id="10010003" parentId="1001" />
+        <!-- mitics bike sharing intent: shared bike lock/unlock status -->
+        <item name="intent_mitics_bike_sharing" id="10010004" parentId="1001" />
+        <!-- mitics flight trip intent: airline trip reminders -->
+        <item name="intent_mitics_flight_trip" id="10010005" parentId="1001" />
+        <!-- mitics concert ticket intent: event ticket booking status -->
+        <item name="intent_mitics_concert_ticket" id="10010006" parentId="1001" />
+        <!-- mitics alipay transit intent: Alipay bus/subway boarding QR code status -->
+        <item name="intent_mitics_alipay_transit" id="10010007" parentId="1001" />
+        <!-- intent for phone consumption collection -->
+        <item name="intent_mitics_phone_consumption" id="10010008" parentId="1001" />
+    </intent>
+
+    <collector>
+        <!-- <item id="100001" package="com.oplus.intent.xxx" /> -->
+        <!-- Traffic-sensitive shards by data source (see trafficsensitive package). -->
+        <item id="100002" package="com.oplus.trafficsensitive.collector.BasicSettingCollector" />
+        <item id="100003" package="com.oplus.trafficsensitive.collector.TrafficSettingCollector" />
+        <item id="100004" package="com.oplus.trafficsensitive.collector.NetworkUsageCollector" />
+        <item id="100005" package="com.oplus.trafficsensitive.collector.DerivedMetricsCollector" />
+    </collector>
+
+    <extractor>
+        <item id="200001" package="com.oplus.intent.SmsIntentFeatureExtractor" />
+        <item id="200002" package="com.oplus.intent.SwNetIntentFeatureExtractor" />
+        <item id="200003" package="com.oplus.trafficsensitive.TrafficSensitiveFeatureExtractor" />
+    </extractor>
+
+    <algorithm>
+        <!-- <item id="300001" name="model_traffic_sensitive" package="com.oplus.intent.test.ExternalAPIModel" >
+            <config name="config_1" value="1" />
+            <config name="config_2" value="2" />
+        </item> -->
+        <item id="300001" name="sms_intent_algorithm" package="com.oplus.intent.SmsIntentAlgorithm" />
+        <item id="300002" name="switch_network_intent_algorithm" package="com.oplus.intent.SwNetIntentAlgorithm" />
+        <item id="300003" name="traffic_sensitive_algorithm" package="com.oplus.trafficsensitive.algorithm.TrafficSensitiveAlgorithm" >
+            <config name="model_tflite_path" value="/system_ext/etc/models/trafficsensitive/saving_intent_user_type.tflite" />
+            <config name="model_onnx_path" value="/system_ext/etc/models/trafficsensitive/saving_intent_xgb.onnx" />
+        </item>
+    </algorithm>
+
+    <data>
+        <item intentId="100010001" collectors="" extractors="200001" algorithm="300001" />
+        <item intentId="100010002" collectors="" extractors="200001" algorithm="300001" />
+        <item intentId="100010003" collectors="" extractors="200001" algorithm="300001" />
+        <item intentId="200010001" collectors="100002,100003,100004,100005" extractors="200003" algorithm="300003" />
+        <item intentId="200010002" collectors="" extractors="200002" algorithm="300002" />
+    </data>
+</intent-config>

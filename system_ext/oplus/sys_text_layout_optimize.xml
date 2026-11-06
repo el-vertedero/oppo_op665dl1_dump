@@ -1,0 +1,28 @@
+<filter-conf>
+    <version>202606030000</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_text_layout_optimize</filter-name>
+    <text-flayout-whiteList>
+        <package name="com.sina.weibo" />
+    </text-flayout-whiteList>
+    <text-flayout-blackList>
+        <package name="com.qiyi.video" />
+        <package name="com.lofter.android" />
+        <package name="com.tencent.mm" />
+        <package name="com.tencent.mobileqq" />
+    </text-flayout-blackList>
+    <punctuation-squeeze-blackList>
+        <package name="com.xunmeng.pinduoduo" />
+        <package name="com.izaodao.cd" />
+    </punctuation-squeeze-blackList>
+    <force-justified-blackList>
+        <package name="com.quark.browser" />
+        <package name="com.tencent.hunyuan.app.chat" />
+        <package name="com.aliyun.tongyi" />
+        <package name="com.kuaiduizuoye.scan" />
+        <package name="com.ss.android.ugc.aweme.hubble" />
+        <package name="com.heytap.speechassist" />
+        <package name="com.oplus.aimemory" />
+        <package name="com.teamtalk.im" />
+    </force-justified-blackList>
+</filter-conf>

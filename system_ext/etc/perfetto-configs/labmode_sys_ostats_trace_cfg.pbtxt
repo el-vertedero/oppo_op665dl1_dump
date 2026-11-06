@@ -1,0 +1,186 @@
+buffers: {
+    size_kb: 35000
+    fill_policy: RING_BUFFER
+}
+buffers: {
+    size_kb: 2048
+    fill_policy: DISCARD
+}
+
+compression_type:COMPRESSION_TYPE_DEFLATE
+
+data_sources: {
+    config {
+        name: "android.packages_list"
+        target_buffer: 1
+    }
+}
+data_sources: {
+    config {
+        name: "linux.system_info"
+        target_buffer: 1
+    }
+}
+data_sources: {
+    config {
+        name: "linux.process_stats"
+        target_buffer: 1
+        process_stats_config {
+            scan_all_processes_on_start: true
+            record_thread_names: true
+            proc_stats_poll_ms: 30000
+        }
+    }
+}
+data_sources: {
+    config {
+        name: "linux.sys_stats"
+        sys_stats_config {
+            cpufreq_period_ms: 1000
+        }
+    }
+}
+
+trigger_config: {
+    trigger_mode: CLONE_SNAPSHOT
+    trigger_timeout_ms: 4320000000
+    triggers: {
+        name: "sys_ostats_pefetto_trigger"
+    }
+}
+
+#data_sources: {
+#    config {
+#        name: "linux.perf"
+#        perf_event_config {
+#            timebase {
+#                frequency: 2
+#                timestamp_clock: PERF_CLOCK_MONOTONIC
+#            }
+#            callstack_sampling {
+#                kernel_frames: true
+#                scope {
+#                    exclude_pid: 0
+#                }
+#            }
+#            unwind_state_clear_period_ms: 600000
+#            kernel_frames: true
+#        }
+#    }
+#}
+
+data_sources: {
+    config {
+        name: "android.statsd"
+        statsd_tracing_config {
+            ##common atom##
+            raw_push_atom_id: 42 #activity_foreground_state_changed
+            ##components activity##
+            raw_push_atom_id: 29 #screen_state_changed
+            raw_push_atom_id: 48 #app_start_occurred
+            raw_push_atom_id: 99 #service_state_changed
+            raw_push_atom_id: 100 #service_launch_reported
+            raw_push_atom_id: 474 #settings_provider_setting_changed
+            raw_push_atom_id: 475 #broadcast_delivery_event_reported
+            raw_push_atom_id: 476 #service_request_event_reported
+            raw_push_atom_id: 477 #provider_acquisition_event_reported
+            raw_push_atom_id: 373 #app_process_died
+            raw_push_atom_id: 27 #uid_process_state_changed
+            raw_push_atom_id: 28 #process_life_cycle_state_changed
+            raw_push_atom_id: 169 #process_start_time
+            raw_push_atom_id: 8 #scheduled_job_state_changed
+            raw_push_atom_id: 367 #alarm_batch_delivered
+            raw_push_atom_id: 368 #alarm_scheduled
+            ##battery plugged_state_changed##
+            raw_push_atom_id: 32
+            ##binder##
+            raw_push_atom_id: 100209 #oplus_binder_stats_item
+            ###perf ux###
+            raw_push_atom_id: 100034
+            raw_push_atom_id: 100075
+            raw_push_atom_id: 100092
+            ##getproperty##
+            raw_push_atom_id: 100214
+            ##GameInfo##
+            raw_push_atom_id: 100107
+            raw_push_atom_id: 100114
+            raw_push_atom_id: 100113
+            raw_push_atom_id: 100124
+            ##anr crash##
+            raw_push_atom_id: 78 #app_crash_occurred
+            raw_push_atom_id: 79 #anr_occurred
+            ##art##
+            raw_push_atom_id: 565
+            ##small_window##
+            raw_push_atom_id: 100096
+            ##oplus_freeze_info##
+            raw_push_atom_id: 100036
+            ##gps_scan_state_changed##
+            raw_push_atom_id: 6
+            ##camera_state_changed##
+            raw_push_atom_id: 25
+            ##camera_state_changed##
+            raw_push_atom_id: 46
+            ##kernel_wakeup_reported##
+            raw_push_atom_id: 36
+            ##sensor_state_changed##
+            raw_push_atom_id: 5
+            ##oplus_wifi_rssi_changed##
+            raw_push_atom_id: 100050
+            ##wifi_scan_state_changed##
+            raw_push_atom_id: 39
+            ##connectivity_state_changed##
+            raw_push_atom_id: 98
+            ##oplus_screen_brightness_changed##
+            raw_push_atom_id: 100017
+            ##oplus_app_switch_pkg##
+            raw_push_atom_id: 100198
+            ##oplus_thermal_control_stats##
+            raw_push_atom_id: 100088
+            pull_config {
+                ##cpu statistics##
+                raw_pull_atom_id: 150122 #oplus_cpu_top_task
+                ##Battery##
+                raw_pull_atom_id: 150005
+                raw_pull_atom_id: 150010
+                raw_pull_atom_id: 150011
+                ##thermal info##
+                raw_pull_atom_id: 150129
+                raw_pull_atom_id: 150128
+                raw_pull_atom_id: 150126
+                pull_frequency_ms: 5000
+                packages: "SYSTEM_AID"
+                packages: "NOBODY_AID"
+                packages: "AID_NOBODY"
+                packages: "AID_GRAPHICS"
+                packages: "AID_INCIDENTD"
+                packages: "AID_STATSD"
+                packages: "AID_RADIO"
+                packages: "com.android.systemui"
+                packages: "com.android.vending"
+                packages: "AID_SYSTEM"
+                packages: "AID_ROOT"
+                packages: "AID_BLUETOOTH"
+                packages: "AID_LMKD"
+                packages: "com.android.managedprovisioning"
+                packages: "AID_MEDIA"
+                packages: "AID_NETWORK_STACK"
+                packages: "com.google.android.providers.media.module"
+                packages: "com.android.imsserviceentitlement"
+                packages: "com.google.android.cellbroadcastreceiver"
+                packages: "com.google.android.apps.nexuslauncher"
+                packages: "com.google.android.markup"
+                packages: "com.android.art"
+                packages: "com.google.android.art"
+                packages: "AID_KEYSTORE"
+                packages: "AID_VIRTUALIZATIONSERVICE"
+                packages: "com.google.android.permissioncontroller"
+                packages: "AID_NFC"
+                packages: "AID_SECURE_ELEMENT"
+                packages: "com.google.android.wearable.media.routing"
+                packages: "com.google.android.healthconnect.controller"
+                packages: "com.android.telephony.qns"
+            }
+        }
+    }
+}

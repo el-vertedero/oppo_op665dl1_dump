@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<subsys-config>
+    <plugins>
+        <plugin name="com.oplus.subsys.OcloudPlugin" module="ocloud" loaded="false" path="/system_ext/priv-app/OcloudApp/OcloudApp.apk"/>
+        <plugin name="com.oplus.scene.ScenePlugin" module="scene-plugin" loaded="false" path="/system_ext/framework/subsys-scene-plugin.jar"/>
+        <plugin name="com.oplus.wifi.WifiPlugin" module="wifi-plugin" loaded="false" path="/system_ext/framework/subsys-wifi-plugin.jar"/>
+        <plugin name="com.oplus.gps.GpsPlugin" module="gps-plugin" loaded="false" path="/system_ext/framework/subsys-gps-plugin.jar"/>
+        <plugin name="com.oplus.imsrtp.ImsRtpPlugin" module="imsrtp-plugin" loaded="false" path="/system_ext/framework/subsys-imsrtp-plugin.jar"/>
+        <plugin name="com.oplus.camera.CameraPlugin" module="camera-plugin" loaded="false" path="/system_ext/framework/subsys-camera-plugin.jar"/>
+        <plugin name="com.oplus.subsys.LiteFeaturePlugin" module="litefeature-plugin" loaded="true" path="/system_ext/framework/subsys-litefeature-plugin.jar"/>
+        <plugin name="com.oplus.subsys.SidoPlugin" module="sido-plugin" loaded="false" path="/system_ext/framework/subsys-sido-plugin.jar"/>
+        <plugin name="com.oplus.subsys.OlkPlugin" module="olk-plugin" loaded="true" path="/system_ext/framework/subsys-olk-plugin.jar"/>
+        <plugin name="com.oplus.plugin.InterfacePlugin" module="interface-plugin" loaded="false" path="/system_ext/priv-app/SubsysInterfacePlugin/SubsysInterfacePlugin.apk"/>
+        <plugin name="com.oplus.channellock.ChannelLockPlugin" module="channel-lock" loaded="false" path="/system_ext/framework/subsys-channel-lock-plugin.jar"/>
+        <plugin name="com.oplus.criticaldnsrecovery.CriticalDnsRecoveryPlugin" module="dns-recovery-plugin" loaded="false" path="/system_ext/framework/subsys-dns-recovery-plugin.jar"/>
+        <plugin name="com.oplus.subsys.TunnelDetectionPlugin" module="tunnel-detection-plugin" loaded="false" path="/system_ext/framework/subsys-tunneldetection-plugin.jar"/>
+        <!-- <plugin name="com.oplus.subsys.MaaFModelPlugin" module="maaf-model-plugin" loaded="false" path="/system_ext/framework/subsys-maaf-model-plugin.jar"/> -->
+    </plugins>
+    <components>
+        <component name="com.oplus.tai.ModelRunner" category="base" module="telecom-ai" loaded="true"/>
+        <component name="com.oplus.tcs.CloudSyncLoader" category="base" module="cloud"/>
+        <component name="com.oplus.diagnose.DiagnoserLoader" category = "base" module="diagnose"/>
+        <component name="com.oplus.scene.SceneService" category = "base" module="scene"/>
+        <component name="com.oplus.atom.AtomAppManagerLoader" category = "base" module="atom"/>
+        <component name="com.oplus.call.CallManagerLoader" category="base" module="call" loaded="false" policy="simReady"/>
+        <component name="com.oplus.reg.RegManagerLoader" category="base" module="reg"/>
+        <component name="com.oplus.data.DataManagerLoader" category="base" module="data" loaded="false" policy="simReady"/>
+        <component name="com.oplus.os.OSManagerLoader" category="base" module="os"/>
+        <component name="com.oplus.sense.SenseManagerLoader" category="base" module="sense"/>
+        <component name="com.oplus.fence.FenceLoader" category="base" module="fence" loaded="false" policy="wifiAvailableOrSimReady"/>
+        <component name="com.oplus.intent.IntentServiceLoader" category="base" module="intent"/>
+    </components>
+    <cluster>
+    </cluster>
+    <tcsservices>
+        <!-- <service name="com.oplus.tcs.cybersense.CellDataSyncService"/> -->
+        <service name="com.oplus.tcs.extremecomm.ExtremeCommSyncService" module="extreme-comm-sync-service" loaded="false" policy="simReady"/>
+        <!-- <service name="com.oplus.tcs.imsrtp.ImsRtpOpushService"/> -->
+        <service name="com.oplus.tcs.concert.ConcertSyncService" module="concert-detect-sync-service" loaded="false" policy="simReady"/>
+        <service name="com.oplus.tcs.exhibition.ExhibitionSyncService" module="exhibition-detect-sync-service" loaded="false" policy="simReady"/>
+        <service name="com.oplus.tcs.situationmap.SituationMapService" module="bigData-detect-sync-service" loaded="false" policy="simReady"/>
+        <service name="com.oplus.tcs.attraction.AttractionSyncService" module="attraction-detect-sync-service" loaded="false" policy="simReady"/>
+        <service name="com.oplus.tcs.airport.AirportSyncService" module="airport-detect-sync-service" loaded="false" policy="simReady"/>
+        <service name="com.oplus.tcs.border.BorderSyncService" module="border-port-sync-service" loaded="false" policy="simReady"/>
+    </tcsservices>
+</subsys-config>

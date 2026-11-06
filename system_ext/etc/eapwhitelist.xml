@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<EapWhitelist>
+<version>1000</version>
+<whitelist>
+        <whitelistConfig atomId="100003" info="moduleexception" enable="1">
+            <parameter name="description" value="Default whitelist entry for EAP upload" />
+        </whitelistConfig>
+        <whitelistConfig atomId="100004" info="daemonexception" enable="1">
+            <parameter name="description" value="Default whitelist entry for EAP upload" />
+        </whitelistConfig>
+        <whitelistConfig atomId="100005" info="smartmodemlog" enable="1">
+            <parameter name="description" value="Default whitelist entry for EAP upload" />
+        </whitelistConfig>
+        <whitelistConfig atomId="100006" info="NetQuality" enable="1">
+            <parameter name="description" value="NQM trigger path EAP whitelist" />
+        </whitelistConfig>
+        <whitelistConfig atomId="100007" info="borderpresearch" enable="1">
+            <parameter name="description" value="Default whitelist entry for EAP upload" />
+        </whitelistConfig>
+</whitelist>
+</EapWhitelist>

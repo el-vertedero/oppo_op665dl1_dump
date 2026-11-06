@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Devicelist>
+    <item device_name="fingerprint_dev" maxUpLoadTimes="20" logPath="/data/persist_log/DCS/de/obio" needAndroidLog="true">
+          <deviceNode  condition="ro.oplus.image.system_ext.device_type" propertyValue="phone">
+          <deviceNodePath path="/dev/fingerprint_dev"/>
+          </deviceNode>
+    </item>
+    <item device_name="cs_press" maxUpLoadTimes="2" logPath="/data/persist_log/DCS/de/touch" needAndroidLog="true">
+          <deviceNode>
+          <deviceNodePath path="/proc/cs_press/probe_status" value="1" />
+          </deviceNode>
+    </item>
+    <item device_name="touchpanel" maxUpLoadTimes="2" logPath="/data/persist_log/DCS/de/touch" needAndroidLog="true">
+          <deviceNode>
+              <deviceNodePath path="/proc/touchpanel/probe_status" value="1"/>
+          </deviceNode>
+    </item>
+    <item device_name="touchpanel_secondary_screen" maxUpLoadTimes="2" logPath="/data/persist_log/DCS/de/touch" needAndroidLog="true">
+          <deviceNode>
+              <deviceNodePath path="/proc/touchpanel/probe_status1" value="1"/>
+          </deviceNode>
+    </item>
+</Devicelist>

@@ -1,0 +1,17 @@
+service storage_tracing /system_ext/bin/storage.tracing.services
+    class core
+    user system
+    group system
+    disabled
+
+on property:sys.oplus.high.performance.spec=1
+   setprop sys.oplus.storage.tracing.enable 0
+
+on property:sys.oplus.storage.tracing.switch=1 && property:sys.oplus.storage.tracing.enable=1
+    start storage_tracing
+
+on property:sys.oplus.storage.tracing.switch=0
+    setprop sys.oplus.storage.tracing.enable 0
+
+on property:sys.oplus.storage.tracing.enable=0
+    stop storage_tracing

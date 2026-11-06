@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20260722</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_font_config_list</filter-name>
+
+    <!-- 1: enable GlobalFontFallback for all apps; 0: only packages listed below -->
+    <global-font-fallback-for-all>0</global-font-fallback-for-all>
+    <global-font-fallback package_name="com.jingdong.app.mall" />
+    <global-font-fallback package_name="com.sankuai.meituan" />
+    <global-font-fallback package_name="com.android.bankabc" />
+    <global-font-fallback package_name="com.sina.weibo" />
+    <global-font-fallback package_name="com.youku.phone" />
+
+    <kill-protect package_name="com.mediatek.mtklogger" />
+    <kill-protect package_name="com.coloros.alarmclock" />
+    <kill-protect package_name="com.android.captiveportallogin" />
+    <kill-protect package_name="com.android.systemui" />
+    <kill-protect package_name="com.android.keyguard" />
+    <kill-protect package_name="com.android.settings" />
+    <kill-protect package_name="com.coloros.bootreg" />
+    <kill-protect package_name="com.coloros.weather" />
+    <kill-protect package_name="com.coloros.gallery3d" />
+    <kill-protect package_name="com.nearme.themespace" />
+    <kill-protect package_name="com.color.safecenter" />
+    <kill-protect package_name="com.coloros.safecenter" />
+    <kill-protect package_name="com.coloros.filemanager" />
+    <kill-protect package_name="com.nearme.gamecenter" />
+    <kill-protect package_name="com.android.contacts" />
+    <kill-protect package_name="com.oneplus.soundrecorder" />
+    <kill-protect package_name="com.coloros.soundrecorder" />
+    <kill-protect package_name="com.android.providers.downloads" />
+    <kill-protect package_name="com.coloros.backuprestore" />
+    <kill-protect package_name="com.android.mms" />
+    <kill-protect package_name="com.oppo.community" />
+    <kill-protect package_name="com.nearme.note" />
+    <kill-protect package_name="com.android.email" />
+    <kill-protect package_name="com.android.packageinstaller" />
+    <kill-protect package_name="com.android.phone" />
+    <kill-protect package_name="org.codeaurora.bluetooth" />
+    <kill-protect package_name="com.android.bluetooth" />
+    <kill-protect package_name="com.android.nfc" />
+    <kill-protect package_name="com.android.incallui" />
+    <kill-protect package_name="com.google.android.dialer" />
+    <kill-protect package_name="com.tencent.mobileqq" />
+    <kill-protect package_name="com.tencent.wework" />
+    <kill-protect package_name="com.coloros.screenrecorder" />
+    <kill-protect package_name="com.heytap.themestore" />
+    <kill-protect package_name="com.oplus.themestore" />
+    <kill-protect package_name="com.google.android.marvin.talkback" />
+    <kill-protect package_name="com.android.wallpaper.livepicker" />
+    <kill-protect package_name="com.heytap.appplatform" />
+    <kill-protect package_name="com.oplus.appplatform" />
+    <kill-protect package_name="com.android.launcher" />
+    <kill-protect package_name="com.heytap.vip" />
+    <kill-protect package_name="com.heytap.usercenter" />
+    <kill-protect package_name="com.oneplus.retailmode" />
+    <kill-protect package_name="com.heytap.music" />
+    <kill-protect package_name="com.oplus.synergy" />
+    <kill-protect package_name="com.oplus.ota" />
+    <kill-protect package_name="com.oplus.screenrecorder" />
+    <kill-protect package_name="com.oplus.ocar" />
+    <kill-protect package_name="com.netease.cloudmusic" />
+    <kill-protect package_name="com.tencent.qqmusic" />
+    <kill-protect package_name="com.kugou.android" />
+    <kill-protect package_name="cn.kuwo.player" />
+    <kill-protect package_name="com.amazon.mp3" />
+    <kill-protect package_name="com.oplus.pscanvas" />
+    <kill-protect package_name="com.coloros.ocrscanner" />
+    <kill-protect package_name="com.coloros.translate" />
+    <kill-protect package_name="com.oplus.riderMode" />
+    <kill-protect package_name="com.oplus.pantanal.ums" />
+</filter-conf>

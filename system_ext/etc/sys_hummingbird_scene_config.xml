@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="hmbird_multimedia">
+    <filter-conf>
+        <version>20251229</version>
+        <filter-name>sys_hummingbird_multimedia_config</filter-name>
+        <loglevel>3</loglevel>
+        <delaytime>3000</delaytime>
+    </filter-conf>
+    <!-- 4K60HZ影像场景 -->
+    <scene id="50" description="video_4k60" delay="1000">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="700000" silver_max="" gold_min="800000" gold_max=""
+                    prime_min="900000" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;85:95:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="" soft_freq_min_c1="" soft_freq_min_c2=""
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="false" fps="60" resv="0xf0" excs="0x0" phr="1,80,100" freq_policy="1 1 1" coefficient="900,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000"/>
+            </sched>
+        </baseconfig>
+    </scene>
+</config>

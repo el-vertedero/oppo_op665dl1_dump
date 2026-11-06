@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Assembly collaboration algorithm configuration.
+    Deployed to /system_ext/etc/assembly_algorithm_config.xml.
+
+    version: increment this integer to trigger a re-parse and SP update on next
+             service startup.  A lower or equal version is silently ignored and
+             the values already stored in SharedPreferences are used instead.
+-->
+<assembly_config version="1">
+
+    <!-- =====================================================================
+         Feature master switch
+         ===================================================================== -->
+
+    <!-- Master on/off switch for the whole collaboration feature.
+         "1"/"true" = enabled, "0"/"false" = disabled. RUS-overridable. -->
+    <param name="feature_enabled"              value="1"/>
+
+    <!-- =====================================================================
+         Broadcast sender parameters
+         ===================================================================== -->
+
+    <!-- Period of one broadcast cycle (ms). -->
+    <param name="broadcast_period_ms"          value="60000"/>
+
+    <!-- Maximum number of individual broadcasts per cycle. -->
+    <param name="broadcast_max_count"          value="5"/>
+
+    <!-- Interval between consecutive broadcasts within one burst (ms).
+         broadcast_period_ms / broadcast_max_count = 60000 / 5 = 12000 -->
+    <param name="broadcast_single_interval_ms" value="12000"/>
+
+    <!-- Width of the rolling QoE average window (ms).
+         Samples older than this are discarded before computing the mean. -->
+    <param name="score_window_duration_ms"     value="6000"/>
+
+    <!-- Minimum average QoE score to allow a broadcast cycle to start. -->
+    <param name="qoe_threshold"                value="60"/>
+
+    <!-- Maximum cell load to allow a broadcast cycle to start. -->
+    <param name="cell_load_threshold"          value="50"/>
+
+    <!-- =====================================================================
+         Receiver / action parameters
+         ===================================================================== -->
+
+    <!-- Minimum elapsed time between two consecutive received ShareCellInfos
+         that may trigger an action (ms). Anti-ping-pong guard. -->
+    <param name="min_trigger_interval_ms"      value="30000"/>
+
+    <!-- Cooldown period after executing sendNetworkAction (ms).
+         No further action will be taken until this window has elapsed. -->
+    <param name="cell_cooldown_ms"             value="60000"/>
+
+    <!-- Maximum allowed absolute RSRP difference for signal match, in raw RSRP scale
+         (0.1 dB units, matching RadioServingCellInfo.signalInfo.rsrp; e.g. 100 = 10.0 dB). -->
+    <param name="rsrp_diff_threshold"          value="100"/>
+
+    <!-- Maximum number of entries kept in the receiver CellTable. -->
+    <param name="cell_table_max_size"          value="20"/>
+
+    <!-- Minimum candidate score required to trigger sendNetworkAction. -->
+    <param name="score_threshold"              value="30.0"/>
+
+    <!-- Maximum age of the oldest CellTable entry before eviction (ms). -->
+    <param name="cell_entry_max_age_ms"        value="100000"/>
+
+    <!-- =====================================================================
+         Confidence model parameters
+         ===================================================================== -->
+
+    <!-- Initial confidence assigned to a newly inserted CellEntry. -->
+    <param name="confidence_init"              value="0.3"/>
+
+    <!-- Confidence increment for a same-source confirmation event. -->
+    <param name="delta_same"                   value="0.10"/>
+
+    <!-- Confidence increment for a multi-source confirmation event. -->
+    <param name="delta_multi"                  value="0.15"/>
+
+    <!-- Confidence decrement for an experience-penalty event. -->
+    <param name="delta_penalty"                value="0.50"/>
+
+    <!-- Aging decay multiplier applied when the entry has not been
+         refreshed for a significant time (Ck = Ck-1 * decay_alpha). -->
+    <param name="decay_alpha"                  value="0.80"/>
+
+    <!-- Minimum confidence level for a cell to be considered stable. -->
+    <param name="stable_thr"                   value="0.80"/>
+
+    <!-- Minimum number of distinct source devices required for stability. -->
+    <param name="source_stable_thr"            value="3"/>
+
+    <!-- Minimum time a cell must have been present to qualify as stable (ms). -->
+    <param name="stable_duration_ms"           value="60000"/>
+
+    <!-- =====================================================================
+         Candidate scoring model weights
+         S = w_qos*qos + w_load*(100-load) + w_conf*confidence*100 + w_stable*bonus
+         ===================================================================== -->
+
+    <param name="score_weight_qos"             value="0.4"/>
+    <param name="score_weight_load"            value="0.2"/>
+    <param name="score_weight_confidence"      value="0.3"/>
+    <param name="score_weight_stable"          value="0.1"/>
+
+    <!-- Score bonus added when a cell's isStable flag is true. -->
+    <param name="score_stable_bonus"           value="10.0"/>
+
+</assembly_config>

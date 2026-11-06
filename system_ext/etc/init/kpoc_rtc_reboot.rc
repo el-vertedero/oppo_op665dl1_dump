@@ -1,0 +1,7 @@
+on charger
+    start kpoc_rtc_reboot
+
+service kpoc_rtc_reboot /system_ext/bin/kpoc_rtc_reboot
+    group system wakelock
+    capabilities BLOCK_SUSPEND SYS_ADMIN SYS_BOOT
+    user root

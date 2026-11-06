@@ -1,0 +1,57 @@
+service ordump_create /system_ext/bin/mrdump_ctrl
+    class core
+    user root
+    disabled
+    oneshot
+    group root system media_rw shell everybody
+    seclabel u:r:ordump:s0
+
+service ordump_clean /system_ext/bin/mrdump_ctrl -c
+    class core
+    user root
+    disabled
+    oneshot
+    group root system media_rw shell everybody
+    seclabel u:r:ordump:s0
+
+service ordump_move /system_ext/bin/mrdump_ctrl -m
+    class core
+    user root
+    disabled
+    oneshot
+    group root system media_rw shell everybody
+    seclabel u:r:ordump:s0
+
+service ordump_shrink_on /system_ext/bin/mrdump_ctrl -s
+    class core
+    user root
+    disabled
+    oneshot
+    group root system media_rw shell everybody
+    seclabel u:r:ordump:s0
+
+service ordump_shrink_off /system_ext/bin/mrdump_ctrl -f
+    class core
+    user root
+    disabled
+    oneshot
+    group root system media_rw shell everybody
+    seclabel u:r:ordump:s0
+
+on property:sys.boot_completed=1 && property:persist.sys.oplus.ordump.enable=true
+    mkdir /data/persist_log/DCS/de/ordump 0777 system system
+    mkdir /data/persist_log/DCS/en/ordump 0777 system system
+    mkdir /data/persist_log/ordump 0777 system system
+    start ordump_create
+
+on property:sys.boot_completed=1 && property:persist.sys.oplus.ordump.enable=false
+    start ordump_clean
+
+on property:vendor.debug.mtk.aeev.exp.record=done && property:vendor.debug.mtk.aeev.db=*
+    start ordump_move
+
+on property:sys.boot_completed=1 && property:persist.sys.oplus.ordump.shrinkdump=true
+    start ordump_shrink_on
+
+on property:sys.boot_completed=1 && property:persist.sys.oplus.ordump.shrinkdump=false
+    start ordump_shrink_off

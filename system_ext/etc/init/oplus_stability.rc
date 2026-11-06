@@ -1,0 +1,25 @@
+########################################################################################
+## Copyright (C), 2026-2036, OPLUS Mobile Comm Corp., Ltd
+## All rights reserved.
+##
+## File: - oplus_stability.rc
+## Description: add for oplus_stability service
+##
+## Version: 1.0
+## Date   : 2026/03/20
+## Author : Daibo.Le@ANDROID.STABILITY
+## ------------------------------- Revision History: ----------------------------------
+##  <author>                    <date>           <version >       <desc>
+##  Daibo.Le@ANDROID.STABILITY  2026/03/20       1.0              build this module
+########################################################################################
+
+on property:sys.oplus.binder.query_pid=*
+    start binder_proc_state_capture
+
+service binder_proc_state_capture /system/system_ext/bin/oplus_stability.sh "binder_proc_state_capture"
+    class core
+    user root
+    group system root shell
+    seclabel u:r:dumpstate:s0
+    disabled
+    oneshot

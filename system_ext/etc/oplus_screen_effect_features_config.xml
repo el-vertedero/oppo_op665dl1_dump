@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Configuration guide:
+https://odocs.myoas.com/docs/a5RLmh3BEckHsBxb
+ -->
+
+<filter-conf>
+    <version>20260421</version>
+    <toggle>1</toggle>
+    <config>
+        <!-- effect id, should be unique! -->
+        <!-- brightness effect 1~99-->
+        <effect name="HSLEffect">1</effect>
+        <effect name="OvalEffect">2</effect>
+
+        <!-- ripple effect 100~199-->
+        <effect name="ChargeRipple">100</effect>
+        <effect name="FPRipple">101</effect>
+        <effect name="BootRegRipple">102</effect>
+        <effect name="CUIRipple">103</effect>
+        <effect name="ShareRipple">104</effect>
+        <effect name="OS16ChargeRipple">105</effect>
+        <effect name="MagicCubeEffect">106</effect>
+
+        <!-- magic cube desktop effect 200~299-->
+        <effect name="MagicCubeDesktopDisplayHaloEffect">201</effect>
+        <effect name="MagicCubeDesktopLauncherIconEffect">202</effect>
+        <effect name="MagicCubeDesktopWallPaperEffect">203</effect>
+
+        <!-- must inclued parameter types! -->
+        <parameter name="effect">0</parameter>
+        <parameter name="parameter_id">1</parameter>
+        <parameter name="state">2</parameter>
+        <parameter name="action">3</parameter>
+        <parameter name="parameter">4</parameter>
+
+        <!-- supported actions! -->
+        <action name="drawLayers" type="layer">1</action>
+        <action name="drawTargetLayers" type="layer">3</action>
+
+        <action name="drawDisplay" type="display">16</action>
+        <!-- <action name="drawDisplayWithBlur" type="display" state="developing">48</action> -->
+
+        <action name="drawLayerBehind" type="display">256</action>
+        <!-- <action name="drawLayerBehindWithBlur" type="display" state="developing">768</action> -->
+
+<!--
+        Special function field
+        only do effect on targert layer
+        <targetLayer name="LayerName"></targetLayer>
+
+        ignore effect on defined layer
+        <ignoredLayer name="LayerName"></ignoredLayer>
+-->
+    </config>
+
+
+    <!-- ||||||||||||||||||||||||||||||||||||||| HSL Feature Start |||||||||||||||||||||||||||||||||||||||-->
+    <feature name="HSL">
+<!--
+        Feature owner: wangkaiwen
+        Update des   : 20250101, init code
+        Update des   : 20250327, bug fix:8937729, ignore FP layer in HSL
+        Update des   : 20250923, make HSL can be recorded in Logging & System Recording
+ -->
+        <effect name="HSLEffect" id="1" enable="1" virtualSupported="1">
+            <ShaderString name="HSLShader">
+                <![CDATA[
+                uniform shader u_input;
+                uniform float u_progress;
+
+                // change HSL's L
+                float3 brightnessContrast(float3 value, float brightness, float contrast) {
+                    return (value - 0.25) * contrast + 0.25 + brightness;
+                }
+
+                // change HSL's S
+                float3 czm_saturation(float3 rgb, float adjustment) {
+                    const float3 W = float3(0.2125, 0.7154, 0.0721);
+                    float3 intensity = float3(dot(rgb, W));
+                    return mix(intensity, rgb, adjustment);
+                }
+
+                float3 vfx_getHuvColor(float3 inputColor, float2 coord) {
+                    if (u_progress == 0.0) {
+                        inputColor.rgb *= 0.0;
+                        return inputColor;
+                    }
+
+                    float3 vfxColor = inputColor;
+                    vfxColor = czm_saturation(vfxColor, u_progress);
+                    vfxColor = clamp(brightnessContrast(vfxColor, -1.0 + u_progress, 1.0), 0.0, 1.0);
+                    return vfxColor;
+                }
+
+                half4 main (float2 coord) {
+                    vec4 outColor = u_input.eval(coord);
+                    outColor.rgb = vfx_getHuvColor(outColor.rgb, coord);
+                    return outColor;
+                }
+                ]]>
+            </ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <float name="u_progress">1.0</float>
+            </uniforms>
+            <parameters>
+                <parameter name="HSLParameter">effect, parameter_id, state, action, parameter, u_progress</parameter>
+            </parameters>
+            <ignoredLayer name="OnScreenFingerprintIcon"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintDisableIcon"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintPressedIcon"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintIconForAnim"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintFaceDozeView"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintDimLayer"></ignoredLayer>
+        </effect>
+
+<!--
+        Feature owner: wangkaiwen
+        Update des   : 20250101, init code
+        Update des   : 20250327, bug fix:8937729, ignore FP layer in HSL
+ -->
+        <effect name="OvalEffect" id="2" enable="1" virtualSupported="0">
+            <ShaderString name="OvalShader">
+                <![CDATA[
+                uniform shader u_input;
+                uniform float u_progress;
+                uniform vec2 u_resolution;
+
+                const float MASK_FEATHER              = 0.4;
+                const float MIX_PERCENT               = 0.65;
+                const float UV_ROT_90                 = 4.0;
+                const float UV_ROT_180                = 3.0;
+                const float UV_ROT_270                = 7.0;
+
+                uniform vec2 u_centerStart;
+                uniform vec2 u_centerEnd;
+                uniform vec2 u_abStart;
+                uniform vec2 u_abEnd;
+                uniform float u_orientation;
+                float centerMoveSpeed;
+                float abMoveSpeed;
+                float alphaLevels;
+
+
+                // change HSL's L
+                float3 brightnessContrast(float3 value, float brightness, float contrast) {
+                    return (value - 0.25) * contrast + 0.25 + brightness;
+                }
+
+                // change HSL's S
+                float3 czm_saturation(float3 rgb, float adjustment) {
+                    const float3 W = float3(0.2125, 0.7154, 0.0721);
+                    float3 intensity = float3(dot(rgb, W));
+                    return mix(intensity, rgb, adjustment);
+                }
+
+                float3 vfx_getHuvColor(float3 inputColor, float2 coord) {
+                    if (u_progress == 0.0) {
+                        inputColor.rgb *= 0.0;
+                        return inputColor;
+                    }
+
+                    float3 vfxColor = inputColor;
+                    vfxColor = czm_saturation(vfxColor, u_progress);
+                    vfxColor = clamp(brightnessContrast(vfxColor, -1.0 + u_progress, 1.0), 0.0, 1.0);
+                    return vfxColor;
+                }
+
+
+                // calculate pixels wheather in or out of oval bound
+                float dis_e(vec2 center, vec2 ab, vec2 coord) {
+                    float x2 = (coord.x - center.x) * (coord.x - center.x);
+                    float y2 = (coord.y - center.y) * (coord.y - center.y);
+                    float a2 = ab.x * ab.x;
+                    float b2 = ab.y * ab.y;
+                    float d = 1.0;
+                    d = x2 / a2 + y2 / b2 - 1.0;
+                    return d;
+                }
+
+                float vfx_getOvalShape(float2 coord) {
+                    vec2 center = u_centerStart;
+                    vec2 ab = u_abStart;
+                    center.y += (u_centerEnd.y - center.y) * centerMoveSpeed;
+                    ab.x += (u_abEnd.x - ab.x) * abMoveSpeed;
+                    ab.y += (u_abEnd.y - ab.y) * abMoveSpeed;
+
+                    float2 uv = coord / u_resolution.xy;
+                    uv = clamp(uv, 0.0, 1.0);
+
+                    if (u_orientation == UV_ROT_90) {
+                        uv = vec2(uv.y, uv.x);
+                    } else if (u_orientation == UV_ROT_180) {
+                        uv = vec2(uv.x, 1.0 - uv.y);
+                    } else if (u_orientation == UV_ROT_270) {
+                        uv = vec2(uv.y, 1.0 - uv.x);
+                    }
+
+                    float cut = dis_e(center, ab, uv);
+                    cut *= MASK_FEATHER;
+                    // ovalEffect
+                    cut = 1.0 - clamp(cut, 0.0, 1.0);
+
+                    return cut;
+                }
+
+                half4 main (float2 coord) {
+                    centerMoveSpeed = u_progress;
+                    abMoveSpeed = u_progress;
+                    alphaLevels = u_progress;
+                    vec4 outColor = u_input.eval(coord);
+                    float3 huvEffect = vfx_getHuvColor(outColor.rgb, coord);
+                    float3 alphaEffect = outColor.rgb * alphaLevels;
+                    float3 vfxMixAlpha = mix(huvEffect, alphaEffect, MIX_PERCENT);
+                    float cut = vfx_getOvalShape(coord);
+                    outColor.rgb = vfxMixAlpha * cut;
+
+                    return outColor;
+                }
+                ]]>
+            </ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <vec2 name="u_resolution" customized="no"></vec2>
+                <float name="u_orientation" customized="no"></float>
+                <float name="u_progress">1.0</float>
+                <vec2 name="u_centerStart">0.5, 0.88723</vec2>
+                <vec2 name="u_centerEnd">0.5, 0.50829</vec2>
+                <vec2 name="u_abStart">0.13889, 0.06219</vec2>
+                <vec2 name="u_abEnd">0.97639, 0.64055</vec2>
+            </uniforms>
+            <parameters>
+                <parameter name="OvalEffectParameter">effect, parameter_id, state, action, parameter, u_progress, u_centerStart</parameter>
+            </parameters>
+            <ignoredLayer name="OnScreenFingerprintIcon"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintDisableIcon"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintPressedIcon"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintIconForAnim"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintFaceDozeView"></ignoredLayer>
+            <ignoredLayer name="OnScreenFingerprintDimLayer"></ignoredLayer>
+        </effect>
+    </feature>
+    <!-- ||||||||||||||||||||||||||||||||||||||| HSL Feature End |||||||||||||||||||||||||||||||||||||||-->
+
+
+    <!-- ||||||||||||||||||||||||||||||||||||||| Ripple Feature Start |||||||||||||||||||||||||||||||||||||||-->
+    <feature  name="Ripple">
+<!--
+        Feature owner: 杜小东/80267202
+        Update des   : 20250101, init code
+ -->
+        <effect name="ChargeRipple" id="100" enable="1" virtualSupported="1">
+            <ShaderString name="ChargeRippleShader">
+                <![CDATA[
+                // TODO use const float
+                uniform shader u_input;
+                uniform float u_progress;
+                uniform vec2 u_resolution;
+                uniform vec2 u_center;
+
+                uniform float u_ripple_time_offset;
+                uniform vec3 u_ring;
+                uniform float u_strength;
+                uniform vec2 u_displacement;
+                uniform vec2 u_rb_displacement;
+                uniform vec4 u_moveCurve;
+                uniform vec4 u_fadeInOutCurve;
+                uniform float u_maskAlpha;
+
+                float cubicBezier(float t, vec2 b, vec2 c) {
+                    vec2 a = vec2(0.0), d = vec2(1.0);
+                    vec2 e = mix(a, b, t);
+                    vec2 f = mix(b, c, t);
+                    vec2 g = mix(c, d, t);
+                    vec2 h = mix(e, f, t);
+                    vec2 i = mix(f, g, t);
+                    vec2 r = mix(h, i, t);
+                    return r.y;
+                }
+
+                float ring(float len, float radius, float width) {
+                    return smoothstep(radius, radius + 0.5 * width, len) - smoothstep(radius + 0.5 * width, radius + width, len);
+                }
+
+                float trapezoidalCurve(float x, float a) {
+                    float x1 = max(0.0, min(1.0, -abs(x * 2.0 * a - a) + a));
+                    return x1;
+                }
+
+                float ring(float len, vec3 ring1, vec3 ring2) {
+                    float progress1 = u_progress / (1.0 - u_ripple_time_offset);
+                    float progress2 = (u_progress - u_ripple_time_offset) / (1.0 - u_ripple_time_offset);
+                    progress1 = clamp(progress1, 0.0, 1.0);
+                    progress2 = clamp(progress2, 0.0, 1.0);
+
+                    progress1 = cubicBezier(progress1, u_moveCurve.xy, u_moveCurve.zw);
+                    progress2 = cubicBezier(progress2, u_moveCurve.xy, u_moveCurve.zw);
+
+                    float r1 = ring1.x + (ring1.y - ring1.x) * progress1;
+                    float r2 = ring2.x + (ring2.y - ring2.x) * progress2;
+
+                    float weight1 = ring(len, r1, ring1.z);
+                    float weight2 = ring(len, r2, ring2.z);
+
+                    float alpha1 = cubicBezier(trapezoidalCurve(progress1, 2.0), u_fadeInOutCurve.xy, u_fadeInOutCurve.zw);
+
+                    float alpha2 = cubicBezier(trapezoidalCurve(progress2, 2.0), u_fadeInOutCurve.xy, u_fadeInOutCurve.zw);
+
+                    float weight = weight1 * alpha1 + weight2 * alpha2;
+
+                    return weight;
+                }
+
+                vec4 getColor(vec2 uv) {
+                    return mix(u_input.eval(uv * u_resolution), vec4(vec3(0.0), 1.0), u_maskAlpha);
+                }
+
+                vec4 vfx_getRippleShape(float2 coord) {
+                    float len = length(coord.xy - u_center);
+
+                    vec3 ring1 = u_ring;
+                    vec3 ring2 = u_ring;
+                    float weight = ring(len, ring1, ring2);
+                    vec2 offset = u_displacement * vec2(weight) * u_strength;
+                    vec2 offset_r = (u_displacement + u_rb_displacement)  * vec2(weight) * u_strength;
+                    vec2 offset_b = (u_displacement - u_rb_displacement)  * vec2(weight) * u_strength;
+
+
+                    vec2 uv = (coord.xy + offset) / u_resolution.xy;
+                    vec2 uv_r = (coord.xy + offset_r) / u_resolution.xy;
+                    vec2 uv_b = (coord.xy + offset_b) / u_resolution.xy;
+                    vec4 outColor = getColor(vec2(uv.x, uv.y));
+                    outColor.r = getColor(vec2(uv_r.x, uv_r.y)).r;
+                    outColor.b = getColor(vec2(uv_b.x, uv_b.y)).b;
+
+                    return outColor;
+                }
+
+                half4 main (float2 coord) {
+                    vec4 outColor = vfx_getRippleShape(coord);
+                    //vec4 outColor = u_input.eval(coord);
+                    // outColor.r *= 1.5;
+
+                    return outColor;
+                }
+                ]]>
+            </ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <vec2 name="u_resolution" customized="no"></vec2>
+                <float name="u_progress">1.0</float>
+                <vec2 name="u_center">0.5, 0.5</vec2>
+                <!-- todo Test type not match size -->
+                <vec3 name="u_ring" absolute="1">192.0, 480.0, 160.0</vec3>
+                <float name="u_ripple_time_offset">0.25</float>
+                <float name="u_strength">0.3</float>
+                <vec2 name="u_displacement">20.0, 20.0</vec2>
+                <vec2 name="u_rb_displacement">25.0, 0.0</vec2>
+                <vec4 name="u_moveCurve">0.0, 0.66, 0.57, 1.0</vec4>
+                <vec4 name="u_fadeInOutCurve">0.55, 0.2, 0.9, 0.5</vec4>
+                <float name="u_maskAlpha">0.0</float>
+            </uniforms>
+            <parameters>
+                <parameter name="ChargeRippleParams" index="0">effect, parameter_id, state, action, parameter, u_progress, u_center, u_ring</parameter>
+                <!-- <parameter name="ChargeRippleDismissParams" index="0">TODO</parameter> -->
+            </parameters>
+        </effect>
+
+<!--
+        Feature owner: SystemUI.Keyguard.VFX
+        Update des   : 20250101, init code
+ -->
+        <effect name="FPRipple" id="101" enable="1" virtualSupported="1">
+            <ShaderString name="FPRippleShader" extend="ChargeRippleShader"></ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <vec2 name="u_resolution" customized="no"></vec2>
+                <float name="u_progress">1.0</float>
+                <vec2 name="u_center">0.5, 0.8</vec2>
+                <vec3 name="u_ring" absolute="1">250.0, 480.0, 60.0</vec3>
+                <float name="u_ripple_time_offset">0.15</float>
+                <float name="u_strength">0.12</float>
+                <vec2 name="u_displacement">90.0, 90.0</vec2>
+                <vec2 name="u_rb_displacement">30.0, 30.0</vec2>
+                <vec4 name="u_moveCurve">0.0, 0.66, 0.57, 1.0</vec4>
+                <vec4 name="u_fadeInOutCurve">0.55, 0.2, 0.9, 0.5</vec4>
+                <float name="u_maskAlpha">0.0</float>
+            </uniforms>
+            <parameters>
+                <parameter name="FPRippleParams" id="0">effect, parameter_id, state, action, parameter, u_progress, u_center, u_ring</parameter>
+            </parameters>
+        </effect>
+
+ <!--
+        Feature owner: XXXXXX
+        Update des   : 20250101, init code
+ -->
+        <effect name="BootRegRipple" id="102" enable="1" virtualSupported="1">
+            <ShaderString name="BootRegRippleShader" extend="ChargeRippleShader"></ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <vec2 name="u_resolution" customized="no"></vec2>
+                <float name="u_progress">1.0</float>
+                <vec2 name="u_center">0.5, 0.5</vec2>
+                <vec3 name="u_ring" absolute="1">0.0, 1100.0, 200.0</vec3>
+                <float name="u_ripple_time_offset">0.0</float>
+                <float name="u_strength">0.15</float>
+                <vec2 name="u_displacement">100.0, 100.0</vec2>
+                <vec2 name="u_rb_displacement">15.0, 15.0</vec2>
+                <vec4 name="u_moveCurve">0.0, 0.66, 0.57, 1.0</vec4>
+                <vec4 name="u_fadeInOutCurve">0.55, 0.2, 0.9, 0.5</vec4>
+                <float name="u_maskAlpha">0.0</float>
+            </uniforms>
+            <parameters>
+                <parameter name="BootRegRippleParams" id="0">effect, parameter_id, state, action, parameter, u_progress</parameter>
+            </parameters>
+        </effect>
+
+ <!--
+        Feature owner: XXXXXX
+        Update des   : 20250101, init code
+ -->
+        <effect name="CUIRipple" id="103" enable="1" virtualSupported="1">
+            <ShaderString name="CUIRippleShader" extend="ChargeRippleShader"></ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <vec2 name="u_resolution" customized="no"></vec2>
+                <float name="u_progress">1.0</float>
+                <vec2 name="u_center">0.5, 0.5</vec2>
+                <vec3 name="u_ring" absolute="1">80.0, 2300.0, 900.0</vec3>
+                <float name="u_ripple_time_offset">0.07</float>
+                <float name="u_strength">0.38</float>
+                <vec2 name="u_displacement">50.0, 50.0</vec2>
+                <vec2 name="u_rb_displacement">15.0, 15.0</vec2>
+                <vec4 name="u_moveCurve">0.3, 0.0, 0.1, 1.0</vec4>
+                <vec4 name="u_fadeInOutCurve">0.3, 0.0, 1.0, 1.0</vec4>
+                <float name="u_maskAlpha">0.0</float>
+            </uniforms>
+            <parameters>
+                <parameter name="CUIRippleParams" id="0">effect, parameter_id, state, action, parameter, u_progress</parameter>
+            </parameters>
+        </effect>
+
+ <!--
+        Feature owner: 何俊轩/80264153
+        Update des   : 20250101, init code
+ -->
+        <effect name="ShareRipple" id="104" enable="1" virtualSupported="1">
+            <ShaderString name="ShareRippleShader" extend="ChargeRippleShader"></ShaderString>
+            <uniforms>
+                <texture name="u_input" customized="no"></texture>
+                <vec2 name="u_resolution" customized="no"></vec2>
+                <float name="u_progress">1.0</float>
+                <vec2 name="u_center">0.5, 0.5</vec2>
+                <vec3 name="u_ring" absolute="1">80.0, 720.0, 420.0</vec3>
+                <float name="u_ripple_time_offset">0.0</float>
+                <float name="u_strength">0.38</float>
+                <vec2 name="u_displacement">0.0, 60.0</vec2>
+                <vec2 name="u_rb_displacement">2.0, 2.0</vec2>
+                <vec4 name="u_moveCurve">0.0, 0.0, 0.1, 1.0</vec4>
+                <vec4 name="u_fadeInOutCurve">0.3, 0.0, 0.67, 1.0</vec4>
+                <float name="u_maskAlpha">0.0</float>
+            </uniforms>
+            <parameters>
+                <parameter name="ShareRippleParams" id="0">effect, parameter_id, state, action, parameter, u_progress</parameter>
+            </parameters>
+        </effect>
+<!--
+        Feature owner: 陈明海/80373096
+        Update des   : 20250512, init code
+ -->
+        <effect name="OS16ChargeRipple" id="105" enable="1" virtualSupported="1">
+            <ShaderString name="OS16ChargeRippleShader">
+                <![CDATA[
+                // TODO use const float
+                // Pi constant
+                float PI = 3.1415926538;
+                //standar deviation of gaussian
+                float STD = 75.0;
+                //offset scaling factor
+                float OFFSET_SCALE = 200.0;
+                //refraction coefficient
+                float REFRACTION_COEFFICIENT = 1.0/1.333;
+
+                uniform shader u_input;
+                uniform vec2 u_resolution;
+                uniform float u_time;
+                uniform float u_density;
+                uniform vec2 uRippleSource;
+                uniform float uMinRadius;
+                uniform float uRadius;
+                uniform float uAmplitude;
+                uniform float uRipples;
+                uniform float uFadingFactor;
+                uniform float uFadingFactor2;
+                uniform float uOffset;
+                uniform float uColorFullAlpha;
+                uniform float uRotateSpeed;
+                uniform float uAngleS;
+                uniform float uAngleE;
+
+                float square(float value) {
+                    return value * value;
+                }
+
+                float rippleGradient(float x) {
+                    float amplitude = uAmplitude * u_density;
+                    float ripples = uRipples * u_density;
+                    float fadingFactor = uFadingFactor * u_density;
+                    return (amplitude / ripples * exp(-square(x / ripples) / fadingFactor) * (sin(x / ripples)
+                    - 2.0 * x / square(ripples * STD) * cos(x / ripples)) / ripples);
+                }
+
+                mat2 rotate2d(float angle) {
+                    float radian = 3.14 * angle / 180.0;
+                    return mat2(cos(radian), -sin(radian),
+                                sin(radian), cos(radian));
+                }
+
+                vec4 ripple(float2 coord) {
+                    //derivative of the surface
+                    vec2 partial_derivative = vec2(0.0);
+
+                    //pixel position of droplet in the screen
+                    vec2 source = uRippleSource * u_resolution.xy;
+
+                    //uMinRadius of ripple
+                    // float r = mix(0.0, uMaxRadius, uProgress);
+
+                    float r = uRadius * u_density;
+
+                    //conversion derivative to normal angle
+                    vec2 radial_direction = coord.xy - source;
+                    //distance from droplet center
+                    float dist = length(radial_direction);
+                    float minRadius = uMinRadius * u_density;
+                    float appear = smoothstep(minRadius - 50.0, minRadius, dist);
+                    //proportions
+                    vec2 p = normalize(radial_direction);
+
+                    //function value;
+                    float x = dist - r;
+                    float offset = uOffset * u_density;
+                    vec3 col = vec3(rippleGradient(x - offset), rippleGradient(x), rippleGradient(x + offset)) * appear;
+
+                    // height of the water being uAmplitude*cos(x/SCALE)*exp(-pow(x/SCALE,2.0)/S) this is the derivative.
+                    // THe function is a product between a cosine function and a gaussian times a fading factor.
+                    partial_derivative = appear * p * rippleGradient(x) / (square(r * uFadingFactor2) + 1.0);
+
+                    vec3 normal = vec3(-partial_derivative.x, 1.0, -partial_derivative.y);
+                    vec3 eye = vec3(0.0, -1.0, 0.0);
+
+                    float c1 = dot(normal, eye);
+                    float c2 = sqrt(1.0 - square(REFRACTION_COEFFICIENT) * (1.0 - square(c1)));
+
+                    vec2 buv = coord.xy - u_resolution.xy * 0.5;
+                    buv = abs(buv * rotate2d(-u_time * uRotateSpeed));
+                    float angle = degrees(atan(buv.y/buv.x));
+                    float mask = smoothstep(uAngleS, uAngleE, angle);
+                    //computing the refraction
+                    vec3 refracted = REFRACTION_COEFFICIENT * eye + (REFRACTION_COEFFICIENT * c1 - c2) * normal;
+                    vec2 originalUV = coord.xy / u_resolution.xy;
+                    vec2 uv = originalUV + refracted.xz * mask;
+                    return u_input.eval(uv * u_resolution.xy) + vec4(col * uColorFullAlpha, 1.0) * mask;
+                }
+
+                half4 main(vec2 fragcoord) {
+                    return ripple(fragcoord);
+                }
+                ]]>
+                </ShaderString>
+                <uniforms>
+                    <texture name="u_input" customized="no"></texture>
+                    <vec2 name="u_resolution" customized="no"></vec2>
+                    <float name="u_time">1.0</float>
+                    <float name="u_density">1.0</float>
+                    <vec2 name="uRippleSource">0.5, 0.5</vec2>
+                    <float name="uMinRadius">143.0</float>
+                    <float name="uRadius">380.0</float>
+                    <float name="uAmplitude">0.0</float>
+                    <float name="uRipples">14.0</float>
+                    <float name="uFadingFactor">20.0</float>
+                    <float name="uFadingFactor2">0.0077</float>
+                    <float name="uOffset">10.0</float>
+                    <float name="uColorFullAlpha">0.2</float>
+                    <float name="uRotateSpeed">60.0</float>
+                    <float name="uAngleS">25.0</float>
+                    <float name="uAngleE">90.0</float>
+                </uniforms>
+                <parameters>
+                    <parameter name="OS16ChargeRippleParam0" index="0">effect, parameter_id, state, action, parameter, u_time, u_density, uRippleSource, uMinRadius, uRadius, uAmplitude, uRipples, uFadingFactor, uFadingFactor2, uOffset, uColorFullAlpha, uRotateSpeed, uAngleS, uAngleE</parameter>
+                </parameters>
+        </effect>
+
+<!--
+        Feature owner: 陈明海/80373096
+        Update des   : 20250611, init code
+ -->
+        <effect name="MagicCubeEffect" id="106" enable="1" virtualSupported="1">
+            <ShaderString name="MagicCubeEffectShader">
+                <![CDATA[
+                vec2 glFragCoord;
+                uniform shader u_input;
+                uniform float u_time;
+                uniform vec2 u_resolution;
+                uniform float u_density;
+                uniform float u_offset_x;
+                uniform float u_offset_y;
+                uniform float u_offset_angle;
+                uniform float u_fade;
+                uniform float u_fade_space;
+                uniform float u_oval_a;
+                uniform float u_oval_b;
+                uniform vec4 _HaloColor1;
+                uniform vec4 _HaloColor2;
+                uniform vec4 _HaloColor3;
+                uniform vec4 _HaloColor4;
+                uniform vec2 _HaloColorShakeDisp;
+                uniform vec4 _HaloColorShakeSpeed;
+                uniform vec4 _HaloColorSpeed;
+                uniform float _HaloColorScale;
+                uniform float _HaloColorPicSize;
+                uniform vec2 _HaloStartPoint;
+                uniform vec2 _HaloEndPoint;
+                uniform float _HaloOffset_x;
+                uniform float _HaloOffset_y;
+                uniform float _HaloStart;
+                uniform float _HaloSpace;
+                uniform float _HaloFadeRangeS;
+                uniform float _HaloFadeRangeE;
+                uniform float _HaloBrightness;
+                uniform float _HaloAlpha;
+                uniform vec2 _WaveStartPoint;
+                uniform vec2 _WaveEndPoint;
+                uniform float _WaveOffset_x;
+                uniform float _WaveOffset_y;
+                uniform float _WaveHaloStart;
+                uniform float _WaveHaloSpaceS;
+                uniform float _WaveHaloSpaceE;
+                uniform float _WaveIntensity;
+                uniform float _WaveIntensityX;
+                uniform float _WaveIntensityY;
+                uniform float _BlackMaskAlpha;
+                uniform float _RenderAlpha;
+
+                vec4 blendPremultiplied(vec4 srcColor, vec4 dstColor) {
+                    return srcColor + dstColor * (1.0 - srcColor.a);
+                }
+
+                vec4 blendNormal(vec4 srcColor, vec4 dstColor) {
+                    return srcColor * srcColor.a + dstColor * (1.0 - srcColor.a);
+                }
+
+                vec4 blendAdditive(vec4 srcColor, vec4 dstColor) {
+                    return srcColor + dstColor;
+                }
+
+                mat2 rotate2d(float angle) {
+                    float s = sin(angle);
+                    float c = cos(angle);
+                    return mat2(c, -s, s, c);
+                }
+
+                float getColor(vec2 pos, vec2 offset,vec2 oval_ab,float angle, float fade, float space, float colorAngle){
+                    vec2 pos_temp =mod(pos, 1.0);
+                    vec2 pos_ = rotate2d(radians(angle + colorAngle))*((2.0*pos_temp - 1.0) )- offset;
+                    float dis = length(pos_/oval_ab);
+                    return smoothstep(fade, fade - space , dis);
+                }
+
+                vec4 generateColorLayer(vec2 uv, vec2 center,
+                                    vec2 colorShakeDisplacement, float colorShakeSpeed, float colorSpeed,
+                                    float time,  float colorAngle, vec3 color, float colorScale) {
+                    vec2 dynamicCenter = center + colorShakeDisplacement * sin(colorShakeSpeed * time);
+                    vec2 rotatedUV = rotate2d(colorSpeed * time) * (uv - dynamicCenter) + dynamicCenter;
+                    rotatedUV = (rotatedUV - vec2(0.5)) * colorScale + vec2(0.5);
+                    float textureValue = getColor(rotatedUV, vec2(u_offset_x,u_offset_y), vec2(u_oval_a,u_oval_b),u_offset_angle,u_fade,u_fade_space,colorAngle);
+                    return vec4(color, textureValue);
+                }
+
+                vec3 generateRandomColors(vec2 uv, float time, vec2 colorShakeDisplacement,
+                                        vec4 colorShakeSpeed, vec4 colorSpeed,
+                                        vec3 color1, vec3 color2, vec3 color3, vec3 color4,
+                                        vec2 resolution, float colorScale, vec2 picSize) {
+                    vec2 muv = glFragCoord.xy / (picSize*u_density/3.0);
+                    vec2 center = vec2(0.5);
+                    vec4 layer1 = generateColorLayer(muv, center, colorShakeDisplacement, colorShakeSpeed.r, colorSpeed.r, time,  0.0, color1, colorScale);
+                    vec4 layer2 = generateColorLayer(muv, center, colorShakeDisplacement, colorShakeSpeed.g, colorSpeed.g, time,  120.0, color2, colorScale);
+                    vec4 layer3 = generateColorLayer(muv, center, colorShakeDisplacement, colorShakeSpeed.b, colorSpeed.b, time,  240.0, color3, colorScale);
+                    vec4 layer4 = generateColorLayer(muv, center, colorShakeDisplacement, colorShakeSpeed.a, colorSpeed.a, time,  0.0, color4, colorScale);
+                    vec3 col = mix(layer1.rgb, layer2.rgb, layer2.a);
+                    col = mix(col, layer3.rgb, layer3.a);
+                    col = mix(col, layer4.rgb, layer4.a);
+                    return col;
+                }
+
+                float getHaloMask(vec2 uv, vec2 resolution, vec2 startPoint, vec2 endPoint, float offset_x, float offset_y, float haloStart, float haloSpace, float fadeRangeS, float fadeRangeE) {
+                    vec2 pos_center =  startPoint + vec2(offset_x, offset_y) * (endPoint - startPoint);
+                    pos_center = vec2(0.0, resolution.y) + pos_center* vec2(1.0,-1.0);
+                    float dis = length((uv * resolution)  - pos_center);
+                    float Mask0 = smoothstep(haloStart - fadeRangeS, haloStart, dis);
+                    float Mask1 = smoothstep(haloStart + haloSpace, haloStart + haloSpace + fadeRangeE, dis);
+                    return Mask0 - Mask1;
+                }
+
+                vec4 getHoloColor(vec2 texUv){
+                    float des_HaloStart = _HaloStart*u_density/3.0;
+                    float des_HaloSpace = _HaloSpace*u_density/3.0;
+                    float des_HaloFadeRangeS = _HaloFadeRangeS*u_density/3.0;
+                    float des_HaloFadeRangeE= _HaloFadeRangeE*u_density/3.0;
+                    float haloMask = getHaloMask(texUv, u_resolution, _HaloStartPoint, _HaloEndPoint , _HaloOffset_x, _HaloOffset_y, des_HaloStart, des_HaloSpace, des_HaloFadeRangeS, des_HaloFadeRangeE);
+                    vec3 haloColor = generateRandomColors(texUv, u_time, _HaloColorShakeDisp, _HaloColorShakeSpeed, _HaloColorSpeed,
+                        _HaloColor1.rgb, _HaloColor2.rgb, _HaloColor3.rgb, _HaloColor4.rgb, u_resolution, _HaloColorScale, vec2(_HaloColorPicSize));
+                    vec4 finalColor = blendNormal(vec4(haloColor, haloMask * _HaloAlpha), vec4(0.));
+                    finalColor.a *= _HaloBrightness;
+                    return finalColor;
+                }
+
+                float getWaveMask(vec2 uv, vec2 resolution, vec2 startPoint, vec2 endPoint, float offset_x, float offset_y, float radius, float featherS, float featherE) {
+                    vec2 pos_center =  startPoint + vec2(offset_x, offset_y) * (endPoint - startPoint);
+                    pos_center = vec2(0.0, resolution.y) + pos_center * vec2(1.0,-1.0);
+                    float dis = length((uv * resolution)  - pos_center);
+                    float circle = smoothstep(radius + featherS, radius - featherS, dis);
+                    float circle1 = smoothstep(radius + featherS * (featherE/100.0+1.0), radius - featherS * (featherE/100.0+1.0), dis);
+                    return circle-circle1;
+                }
+
+                vec4 getWaveBackground(vec2 texUv) {
+                    float des_WaveHaloStart =  _WaveHaloStart*u_density/3.0;
+                    float des_WaveHaloSpaceS = _WaveHaloSpaceS*u_density/3.0;
+                    float des_WaveHaloSpaceE = _WaveHaloSpaceE*u_density/3.0;
+                    float waveMask = getWaveMask(texUv, u_resolution, _WaveStartPoint, _WaveEndPoint ,_WaveOffset_x,_WaveOffset_y, des_WaveHaloStart, des_WaveHaloSpaceS, des_WaveHaloSpaceE);
+                    vec2 uv = vec2(texUv.x - waveMask * _WaveIntensity * _WaveIntensityX,
+                                 texUv.y + waveMask * _WaveIntensity * _WaveIntensityY);
+                    vec4 finalColor = u_input.eval(vec2(uv.x, 1.0 - uv.y) * u_resolution);
+                    return finalColor;
+                }
+
+                half4 main(vec2 coord) {
+                    glFragCoord = vec2(coord.x, u_resolution.y - coord.y);
+                    vec2 texUv = glFragCoord / u_resolution;
+                    vec4 background = getWaveBackground(texUv);
+                    vec4 haloColor = getHoloColor(texUv);
+                    vec4 finalColor = blendPremultiplied(vec4(vec3(0.), _BlackMaskAlpha), background);
+                    finalColor = blendPremultiplied(haloColor, finalColor);
+                    finalColor.a = 1.0;
+                    vec4 fragColor = finalColor * _RenderAlpha;
+                    return fragColor;
+                }
+                ]]>
+                </ShaderString>
+                <uniforms>
+                    <texture name="u_input" customized="no"></texture>
+                    <vec2 name="u_resolution" customized="no"></vec2>
+                    <float name="u_time">1.0</float>
+                    <float name="u_density">3.0</float>
+                    <float name="u_offset_x">0.124</float>
+                    <float name="u_offset_y">0.406</float>
+                    <float name="u_offset_angle">203.0</float>
+                    <float name="u_fade">0.546</float>
+                    <float name="u_fade_space">0.961</float>
+                    <float name="u_oval_a">0.86</float>
+                    <float name="u_oval_b">0.755</float>
+                    <vec4 name="_HaloColor1">0.914,0.902,1.0,0.94</vec4>
+                    <vec4 name="_HaloColor2">0.945,1.0,0.957,0.82</vec4>
+                    <vec4 name="_HaloColor3">0.737,0.941,0.968,0.94</vec4>
+                    <vec4 name="_HaloColor4">0.968,0.913,0.827,0.34</vec4>
+                    <vec2 name="_HaloColorShakeDisp">0.03,0.02</vec2>
+                    <vec4 name="_HaloColorShakeSpeed">0.0,0.0,0.0,0.0</vec4>
+                    <vec4 name="_HaloColorSpeed">0.0,0.0,0.0,0.0</vec4>
+                    <float name="_HaloColorScale">0.27</float>
+                    <float name="_HaloColorPicSize">2000.0</float>
+                    <vec2 name="_HaloStartPoint">0.0,0.0</vec2>
+                    <vec2 name="_HaloEndPoint">540.0,1200.0</vec2>
+                    <float name="_HaloOffset_x">0.0</float>
+                    <float name="_HaloOffset_y">0.0</float>
+                    <float name="_HaloStart">0.0</float>
+                    <float name="_HaloSpace">0.0</float>
+                    <float name="_HaloFadeRangeS">198.0</float>
+                    <float name="_HaloFadeRangeE">300.0</float>
+                    <float name="_HaloBrightness">0.38</float>
+                    <float name="_HaloAlpha">0.0</float>
+                    <vec2 name="_WaveStartPoint">0.0,0.0</vec2>
+                    <vec2 name="_WaveEndPoint">540.0,1200.0</vec2>
+                    <float name="_WaveOffset_x">0.0</float>
+                    <float name="_WaveOffset_y">0.0</float>
+                    <float name="_WaveHaloStart">700.0</float>
+                    <float name="_WaveHaloSpaceS">1626.0</float>
+                    <float name="_WaveHaloSpaceE">3.352</float>
+                    <float name="_WaveIntensity">0.0</float>
+                    <float name="_WaveIntensityX">1.7</float>
+                    <float name="_WaveIntensityY">1.0</float>
+                    <float name="_BlackMaskAlpha">0.0</float>
+                    <float name="_RenderAlpha">1.0</float>
+                </uniforms>
+                <parameters>
+                    <parameter name="MagicCubeEffectParam0" index="0">effect, parameter_id, state, action, parameter, u_time, u_density, _HaloStartPoint, _HaloEndPoint, _HaloOffset_x, _HaloOffset_y, _HaloStart, _HaloSpace, _HaloFadeRangeE, _HaloAlpha, _WaveStartPoint, _WaveEndPoint, _WaveOffset_x, _WaveOffset_y, _WaveHaloStart, _WaveHaloSpaceS, _WaveHaloSpaceE, _WaveIntensity, _WaveIntensityX, _WaveIntensityY</parameter>
+                </parameters>
+        </effect>
+    </feature>
+    <!-- ||||||||||||||||||||||||||||||||||||||| Ripple Feature End |||||||||||||||||||||||||||||||||||||||-->
+
+
+    <!-- ||||||||||||||||||||||||||||||||||||||| MagicCubeDesktop Feature Start |||||||||||||||||||||||||||||||||||||||-->
+    <feature  name="MCFeature">
+    <!--
+        Feature owner: Daniel Deng/80418602
+        Update des   : 20251030, init code
+    -->
+        <effect name="MagicCubeDesktopDisplayHaloEffect" id="201" enable="1" virtualSupported="1">
+        <ShaderString name="MCDDisplayEffectShader">
+            <![CDATA[
+                uniform shader u_input;
+                uniform float2 u_resolution;
+                uniform float u_time;
+                uniform float u_Rin;
+                uniform float u_Rout;
+                uniform float u_EdgeFrac;
+                uniform float u_Exposure;
+                uniform float u_DirAngleDeg;
+                uniform float u_AmountPct;
+                uniform float u_AmountShaping;
+                uniform float u_GlowRadius;
+                uniform float u_GlowGain;
+                uniform float u_GlowSat;
+                uniform float u_DodgeStrength;
+                uniform float u_DodgeRolloff;
+                uniform float u_WhiteDamp;
+                uniform float u_HaloSaturation;
+                uniform float u_TurbAmountPct;
+                uniform float u_TurbScale;
+                uniform float u_TurbSeed;
+                uniform float4 u_Tint;
+                uniform float u_HaloAlpha;
+                uniform float u_GlowAlpha;
+
+                float interleavedGradientNoise(float2 uv) {
+                    const float3 magic = float3(0.06711056, 0.00583715, 52.9829189);
+                    return fract(magic.z * fract(dot(uv, magic.xy)));
+                }
+
+                half2 dirVec(half a) {
+                    return half2(cos(a), sin(a));
+                }
+
+                float2 spectralMist(float2 p) {
+                    float2 sum = float2(0.0);
+                    float amp = 1.0;
+                    float sn = 0.734;
+                    float cs = -0.678;
+                    float2x2 rot = float2x2(cs, -sn, sn, cs);
+                    float t = u_time * 0.6;
+                    // Can adjust the number of octaves here(2 by default, 3-4 recommended)
+                    for(int i = 0; i < 2; i++) {
+                        float2 harmonic = float2(
+                            sin(p.x + t) * sin(p.y + t * 0.8),
+                            sin(p.x * 0.8 - t) * sin(p.y + t)
+                        );
+                        sum += harmonic * amp;
+                        p = rot * p * 2.1;
+                        amp *= 0.5;
+                        t *= 1.2;
+                    }
+                    return sum;
+                }
+
+                float2 turbulentDisplace(float2 p, float bandWidth) {
+                    float2 q = p * u_TurbScale * 6.0;
+                    q += float2(u_TurbSeed * 10.0);
+                    float2 n = spectralMist(q);
+                    return n * (u_TurbAmountPct * bandWidth);
+                }
+
+                struct Coords {
+                    float2 p;
+                    float r;
+                    float smin;
+                };
+
+                half3 ringCoverage(half3 r, half Rin, half Rout, half smin, half edgeFrac) {
+                    half w = max(0.0001, Rout - Rin);
+                    half3 t = saturate((r - Rin) / w);
+                    half e = edgeFrac * w;
+                    half3 fin = smoothstep(0.0, e / w, t);
+                    half3 fout = 1.0 - smoothstep(1.0 - e / w, 1.0, t);
+                    half3 aa = half3(1.5 / smin);
+                    half3 aaIn = smoothstep(Rin - aa, Rin + aa, r);
+                    half3 aaOut = 1.0 - smoothstep(Rout - aa, Rout + aa, r);
+                    return fin * fout * aaIn * aaOut;
+                }
+
+                half3 ringShading(half3 r, half Rin, half Rout) {
+                    half w = max(0.0001, Rout - Rin);
+                    half3 t = saturate((r - Rin) / w);
+                    half3 u = t * (1.0 - t);
+                    half3 curve = (4.0 * u) * (0.65 + 0.25 * (4.0 * u));
+                    return mix(half3(1.0), curve, 0.5);
+                }
+
+                void dispersionEval(half2 p, half r, out half3 covRGB, out half3 shadeRGB, half Rin, half Rout, half smin, half dirAngleDeg, half amountPct, half amountShaping) {
+                    half band = Rout - Rin;
+                    half proj = dot(normalize(p), dirVec(radians(dirAngleDeg)));
+                    proj = sign(proj) * pow(abs(proj), 1.0 + amountShaping);
+                    half delta = amountPct * band * proj;
+                    half3 r3 = half3(r) + half3(delta, 0.0, -delta);
+                    covRGB = ringCoverage(r3, Rin, Rout, smin, half(u_EdgeFrac));
+                    shadeRGB = ringShading(r3, Rin, Rout);
+                }
+
+                float glowMaskAnalytic(float r, float Rin, float Rout, float glowRadius) {
+                    float bandCenter = (Rin + Rout) * 0.5;
+                    float bandHalf = (Rout - Rin) * 0.5;
+                    float expand = glowRadius * 0.12;
+                    float distToCenter = abs(r - bandCenter);
+                    float glowHalf = bandHalf + expand;
+                    float t = distToCenter / max(0.0001, glowHalf);
+                    float inner = 1.0 - smoothstep(0.0, 0.6, t);
+                    float outer = 1.0 - smoothstep(0.4, 1.0, t);
+                    return mix(outer, inner, 0.5);
+                }
+
+                half3 tonemapReinhard(half3 c, half exposure) {
+                    half3 t = c * exposure;
+                    return t / (half3(1.0) + t);
+                }
+
+                half3 blendPlusLighter(half3 base, half3 blend) {
+                    return min(base + blend, half3(1.0));
+                }
+
+                half4 main(float2 fragCoord) {
+                    float smin = min(u_resolution.x, u_resolution.y);
+                    float2 uv_norm = (fragCoord - 0.5 * u_resolution) / smin;
+                    float r_sq = dot(uv_norm, uv_norm);
+                    float max_r = float(u_Rout) + float(u_GlowRadius) + 0.2;
+                    float max_r_sq = max_r * max_r;
+                    if (r_sq > max_r_sq) {
+                        return half4(u_input.eval(fragCoord));
+                    }
+                    Coords C = Coords(uv_norm, sqrt(r_sq), smin);
+                    float bandWidth = max(0.0001, float(u_Rout - u_Rin));
+                    float2 disp = turbulentDisplace(float2(C.p), bandWidth);
+                    float2 pD = float2(C.p) + disp;
+                    float rD = length(pD);
+                    half3 covRGB;
+                    half3 shadeRGB;
+                    dispersionEval(pD, rD, covRGB, shadeRGB, half(u_Rin), half(u_Rout), half(C.smin), half(u_DirAngleDeg), half(u_AmountPct), half(u_AmountShaping));
+                    half3 tint = half3(u_Tint.rgb);
+                    half3 haloColor = covRGB * shadeRGB * tint;
+                    haloColor *= half(u_HaloAlpha);
+                    half aHalo = max(covRGB.r, max(covRGB.g, covRGB.b));
+                    aHalo *= half(u_HaloAlpha);
+                    float gMask = glowMaskAnalytic(rD, float(u_Rin), float(u_Rout), float(u_GlowRadius));
+                    half3 glowCol = mix(half3(gMask), half3(gMask) * tint, half(u_GlowSat)) * half(u_GlowGain) * half(u_GlowAlpha);
+                    glowCol *= half(u_GlowAlpha);
+                    half aGlow = gMask * half(u_GlowAlpha);
+                    half3 colorLin = haloColor + glowCol;
+                    half a = aHalo + aGlow - aHalo * aGlow;
+                    half3 B_orig = half3(u_input.eval(fragCoord).rgb);
+                    half3 F_tm = tonemapReinhard(colorLin, half(u_Exposure));
+                    half Y = dot(F_tm, half3(0.299, 0.587, 0.114));
+                    F_tm = mix(half3(Y), F_tm, half(u_HaloSaturation));
+                    half3 dodgeCol = blendPlusLighter(B_orig, F_tm);
+                    half3 haloOverOrig = mix(B_orig, dodgeCol, half(u_GlowAlpha) * 1.5);
+                    float dither = interleavedGradientNoise(fragCoord);
+                    haloOverOrig += half((dither - 0.5) / 255.0);
+                    return half4(haloOverOrig, 1.0);
+                }
+            ]]>
+        </ShaderString>
+        <uniforms>
+            <texture name="u_input" customized="no"></texture>
+            <vec2 name="u_resolution" customized="no"></vec2>
+            <float name="u_time">0.1</float>
+            <float name="u_Rin">0.14</float>
+            <float name="u_Rout">0.36</float>
+            <float name="u_EdgeFrac">0.60</float>
+            <float name="u_Exposure">1.8</float>
+            <float name="u_DirAngleDeg">300.0</float>
+            <float name="u_AmountPct">0.15</float>
+            <float name="u_AmountShaping">0.35</float>
+            <float name="u_GlowRadius">0.8</float>
+            <float name="u_GlowGain">0.8</float>
+            <float name="u_GlowSat">1.1</float>
+            <float name="u_DodgeStrength">1.10</float>
+            <float name="u_DodgeRolloff">0.72</float>
+            <float name="u_WhiteDamp">0.6</float>
+            <float name="u_HaloSaturation">2.05</float>
+            <float name="u_TurbAmountPct">0.10</float>
+            <float name="u_TurbScale">2.4</float>
+            <float name="u_TurbSeed">0.0</float>
+            <vec4 name="u_Tint">1.0, 1.0, 1.0, 1.0</vec4>
+            <float name="u_HaloAlpha">1.0</float>
+            <float name="u_GlowAlpha">1.0</float>
+        </uniforms>
+        <parameters>
+            <parameter name="HaloEffectParam">effect, parameter_id, state, action, parameter, u_time, u_Rin, u_Rout, u_EdgeFrac, u_Exposure, u_DirAngleDeg, u_AmountPct, u_AmountShaping, u_GlowRadius, u_GlowGain, u_GlowSat, u_DodgeStrength, u_DodgeRolloff, u_WhiteDamp, u_HaloSaturation, u_TurbAmountPct, u_TurbScale, u_TurbSeed, u_Tint, u_HaloAlpha, u_GlowAlpha</parameter>
+        </parameters>
+        <!-- <targetLayer name="Wallpaper BBQ wrapper"></targetLayer> -->
+        </effect>
+
+
+        <effect name="MagicCubeDesktopLauncherIconEffect" id="202" enable="1" virtualSupported="1">
+        <ShaderString name="MCDLauncherIconEffectShader">
+        <![CDATA[
+            uniform shader u_input;
+            uniform float2 u_resolution;
+            uniform float u_time;
+            uniform float u_radius;
+            uniform float u_curvature;
+            uniform float u_blurStrength;
+            uniform float u_fadingStrength;
+            uniform float u_samples;
+            uniform float u_boxBlurSize;
+            uniform float u_glowRadius;
+            uniform float u_glowFeather;
+            uniform float u_glowDecay;
+            uniform float u_glowIntensity;
+            uniform float2 u_icenter;
+
+            const int MAX_SAMPLES = 100;
+            const float PI = 3.14159265359;
+            const float2x2 GOLDEN_ROT = float2x2(-0.73736, 0.67549, -0.67549, -0.73736);
+
+            float interleavedGradientNoise(float2 screenPos) {
+                float3 magic = float3(0.06711056, 0.00583715, 52.9829189);
+                return fract(magic.z * fract(dot(screenPos, magic.xy)));
+            }
+
+            float2 aspectVec() {
+                return float2(u_resolution.x / u_resolution.y, 1.0);
+            }
+
+            float fastInvertRadius(float dPrime, float R, float k) {
+                if (abs(k) <= 1e-5) return dPrime;
+                float x = dPrime / R;
+                float m = 1.0 - x;
+                float denom = 1.0 - k * m * m;
+                return dPrime / max(denom, 0.1);
+            }
+
+            float2 lensInverseUV(float2 uvp) {
+                float2 asp = aspectVec();
+                float2 v = (uvp - u_icenter) * asp;
+
+                float dPrimeSq = dot(v, v);
+                if (dPrimeSq > u_radius * u_radius) return uvp;
+                float dPrime = sqrt(dPrimeSq);
+
+                if (dPrime <= 1e-6) return u_icenter;
+                if (abs(u_curvature) <= 1e-5) return uvp;
+                if (dPrime / u_radius >= 1.0) return uvp;
+                float d = fastInvertRadius(dPrime, u_radius, u_curvature);
+                float2 dir = v / dPrime;
+                return (dir * d) / asp + u_icenter;
+            }
+
+            float3 computeGlow(float2 uv, float2 center) {
+                float2 pos = (uv - center) * aspectVec();
+                float r = length(pos);
+                float coreMask = 1.0 - smoothstep(u_glowRadius - u_glowFeather, u_glowRadius + u_glowFeather, r);
+                float x = r / max(u_glowRadius, 1e-4);
+                float falloff = exp(-u_glowDecay * x * x);
+                float3 glow = float3(falloff) * coreMask;
+                return (1.0 - exp(-glow)) * u_glowIntensity;
+            }
+
+            const half PHI = 1.61803398875;
+
+            half4 sampleOptimizedBlur(float2 uv, float2 fragCoord, half blurStr, half fadingStr, half boxSize) {
+                float2 asp = aspectVec();
+                float2 centered = (uv - u_icenter) * asp;
+                float dPrime = length(centered);
+                float2 lensUV = lensInverseUV(uv);
+                if (blurStr <= 1e-4 && boxSize <= 0.5) {
+                    return u_input.eval(lensUV * u_resolution);
+                }
+                float normalizedDist = clamp(dPrime / u_radius, 0.0, 1.0);
+                float fadingFactor = pow(normalizedDist, fadingStr);
+                half radialStretch = blurStr * fadingFactor * half(dPrime);
+                half perpSpread = (boxSize / half(u_resolution.y)) * smoothstep(0.0, 0.3, blurStr);
+                float maxOffsetLen = abs(float(radialStretch) * 0.5) + abs(float(perpSpread));
+                float pixelSize = 1.0 / min(u_resolution.x, u_resolution.y);
+                if (maxOffsetLen < pixelSize) {
+                    return u_input.eval(lensUV * u_resolution);
+                }
+                int sampleCount = int(clamp(u_samples, 4.0, float(MAX_SAMPLES)));
+                half invSamples = 1.0 / half(sampleCount);
+                half4 acc = half4(0.0);
+                half wsum = 0.0;
+                half noise = interleavedGradientNoise(fragCoord);
+                half centerMix = smoothstep(0.0, 0.25, half(dPrime));
+                float2 geoRadialDir = (dPrime > 1e-6) ? (centered / dPrime) : float2(0.0, 1.0);
+                float2 geoPerpDir = float2(-geoRadialDir.y, geoRadialDir.x);
+                for (int i = 0; i < MAX_SAMPLES; i++) {
+                    if (i >= sampleCount) break;
+                    half t = (half(i) + noise) * invSamples;
+                    half radialT = t - 0.5;
+                    half uniformJitter = fract(half(i) * PHI + noise) * 2.0 - 1.0;
+                    half perpJitter = uniformJitter * abs(uniformJitter);
+                    half rndX = fract(half(i) * 0.12345 + noise);
+                    half rndY = fract(half(i) * 0.67890 + noise);
+                    half2 chaosDir = half2(rndX, rndY) * 2.0 - 1.0;
+                    half2 blendDir = mix(chaosDir, half2(geoPerpDir), centerMix);
+                    float2 currentPerpDir = normalize(float2(blendDir));
+                    float2 mainOffset = geoRadialDir * (float(radialT * radialStretch));
+                    float2 softOffset = currentPerpDir * float(perpJitter * perpSpread);
+                    float2 finalOffset = (mainOffset + softOffset) / asp;
+                    half weight = 1.0 - abs(radialT * 2.0);
+                    weight = weight * weight;
+                    weight = max(0.01, weight);
+                    acc += u_input.eval((lensUV + finalOffset) * u_resolution) * weight;
+                    wsum += weight;
+                }
+                return (wsum > 0.0) ? (acc / wsum) : u_input.eval(lensUV * u_resolution);
+            }
+
+            half3 blendColorDodge(half3 base, half3 blend) {
+                return base / max(half3(1.0) - blend, half3(0.001));
+            }
+
+            half3 blendPlusLighter(half3 base, half3 blend) {
+                return min(base + blend, half3(1.0));
+            }
+
+            half4 main(float2 coord) {
+                float2 uv = coord / u_resolution;
+
+                float2 asp = aspectVec();
+                float2 mainPos = (uv - u_icenter) * asp;
+                float distSq = dot(mainPos, mainPos);
+                float maxDist = u_radius * (1.0 + max(u_blurStrength, u_boxBlurSize) * 1.2); 
+                float maxDistSq = maxDist * maxDist;
+
+                if (distSq > maxDistSq) {
+                    return u_input.eval(coord); 
+                }
+
+                float3 glow = computeGlow(uv, u_icenter);
+                half4 colorHalf = sampleOptimizedBlur(uv, coord, u_blurStrength, u_fadingStrength, u_boxBlurSize);
+                float3 colorLinear = float3(colorHalf.rgb);
+                float3 dodge = blendPlusLighter(colorLinear, glow);
+                float noise = interleavedGradientNoise(coord);
+                dodge += (noise - 0.5) / 255.0;
+                return half4(half3(saturate(dodge)), colorHalf.a);
+            }
+        ]]>
+        </ShaderString>
+        <uniforms>
+            <texture name="u_input" customized="no"></texture>
+            <vec2 name="u_resolution" customized="no"></vec2>
+            <float name="u_time">0.1</float>
+            <float name="u_radius">0.8</float>
+            <float name="u_curvature">0.0</float>
+            <float name="u_blurStrength">0.0</float>
+            <float name="u_fadingStrength">1.0</float>
+            <float name="u_samples">12.0</float>
+            <float name="u_boxBlurSize">0.0</float>
+            <float name="u_glowRadius">0.16</float>
+            <float name="u_glowFeather">0.33</float>
+            <float name="u_glowDecay">7.0</float>
+            <float name="u_glowIntensity">1.1</float>
+            <vec2 name="u_icenter">0.5, 0.5</vec2>
+        </uniforms>
+        <parameters>
+            <parameter name="MagicCubeDesktopLauncherIconEffectParam0">effect, parameter_id, state, action, parameter, u_time, u_radius, u_curvature, u_blurStrength, u_fadingStrength, u_samples, u_boxBlurSize, u_glowRadius, u_glowFeather, u_glowDecay, u_glowIntensity, u_icenter</parameter>
+        </parameters>
+        <targetLayer name="com.android.launcher/com.android.launcher.Launcher"></targetLayer>
+        </effect>
+
+        <effect name="MagicCubeDesktopWallPaperEffect" id="203" enable="1" virtualSupported="1">
+        <ShaderString name="MCDWallPaperShader">
+        <![CDATA[
+            uniform shader u_input;
+            uniform vec2 u_resolution;
+            uniform float u_time;
+            uniform float u_BlackMaskAlpha;
+
+            half4 main(float2 coord) {
+                vec4 baseColor = u_input.eval(coord);
+                float intensity = 1.0 - u_BlackMaskAlpha;
+                return vec4(baseColor.rgb * intensity, baseColor.a);
+            }
+        ]]>
+        </ShaderString>
+        <uniforms>
+            <texture name="u_input" customized="no"></texture>
+            <vec2 name="u_resolution" customized="no"></vec2>
+            <float name="u_time">0.1</float>
+            <float name="u_BlackMaskAlpha">0.3</float>
+        </uniforms>
+        <parameters>
+            <parameter name="MagicCubeDesktopWallPaperEffectParameter">effect, parameter_id, state, action, parameter, u_time, u_BlackMaskAlpha</parameter>
+        </parameters>
+        <targetLayer name="Wallpaper BBQ wrapper"></targetLayer>
+        </effect>
+
+
+    </feature>
+    <!-- ||||||||||||||||||||||||||||||||||||||| MagicCubeDesktop Feature End |||||||||||||||||||||||||||||||||||||||-->
+</filter-conf>

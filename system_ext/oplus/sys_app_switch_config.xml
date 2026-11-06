@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-conf>
+    <version>2026082401</version>
+    <filter-name>sys_app_switch_config</filter-name>
+
+    <!-- monitor all package change notification start -->
+    <matchAppDefault>com.coloros.appswitch.all</matchAppDefault>
+    <matchAppDefault>com.coloros.athena</matchAppDefault>
+    <matchAppDefault>com.nearme.statistics.rom</matchAppDefault>
+    <matchAppDefault>com.coloros.deepthinker</matchAppDefault>
+    <matchAppDefault>com.coloros.safecenter</matchAppDefault>
+    <matchAppDefault>com.coloros.colorfilestand</matchAppDefault>
+    <matchAppDefault>com.coloros.oppoguardelf</matchAppDefault>
+    <matchAppDefault>com.oppo.autotest.themismonitor</matchAppDefault>
+    <matchAppDefault>com.oppo.autotest.memleakmonitor</matchAppDefault>
+    <matchAppDefault>com.oppo.autotest.performance</matchAppDefault>
+    <matchAppDefault>com.coloros.exserviceui</matchAppDefault>
+    <matchAppDefault>android</matchAppDefault>
+    <matchAppDefault>com.coloros.securitypermission</matchAppDefault>
+    <matchAppDefault>com.coloros.otrace</matchAppDefault>
+    <matchAppDefault>com.oplus.linker</matchAppDefault>
+
+    <!-- add for remove oppo related keywords-->
+    <matchAppDefault>com.oplus.deepthinker</matchAppDefault>
+    <matchAppDefault>com.oplus.safecenter</matchAppDefault>
+    <matchAppDefault>com.oplus.securitypermission</matchAppDefault>
+    <matchAppDefault>com.oplus.onetrace</matchAppDefault>
+    <matchAppDefault>com.oplus.obrain</matchAppDefault>
+    <matchAppDefault>com.oplus.battery</matchAppDefault>
+    <matchAppDefault>com.oplus.exserviceui</matchAppDefault>
+    <matchAppDefault>com.oplus.athena</matchAppDefault>
+    <matchAppDefault>com.oplus.autotest.themismonitor</matchAppDefault>
+    <matchAppDefault>com.oplus.autotest.memleakmonitor</matchAppDefault>
+    <matchAppDefault>com.oplus.autotest.performance</matchAppDefault>
+    <matchAppDefault>com.oplus.statistics.rom</matchAppDefault>
+    <matchAppDefault>com.oplus.exsystemservice</matchAppDefault>
+    <matchAppDefault>com.android.systemui</matchAppDefault>
+    <matchAppDefault>com.oplus.pscanvas</matchAppDefault>
+    <matchAppDefault>com.realme.aiengine</matchAppDefault>
+    <matchAppDefault>com.oplus.framework.network.drs</matchAppDefault>
+    <!-- monitor all package change notification end -->
+
+    <!-- monitor all Activity change notification start -->
+    <matchActivityDefault>com.coloros.appswitch.all</matchActivityDefault>
+    <matchActivityDefault>com.oplus.deepthinker</matchActivityDefault>
+    <matchActivityDefault>com.oplus.statistics.rom</matchActivityDefault>
+    <!-- monitor all Activity change notification end -->
+
+    <!-- pause in recents animation start -->
+    <matchRecentsAnimApp>com.ss.android.ugc.aweme</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.smile.gifmaker</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.kuaishou.nebula</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ss.android.ugc.aweme.lite</matchRecentsAnimApp>
+    <matchRecentsAnimApp>tv.danmaku.bili</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.baidu.haokan</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.hunantv.imgo.activity</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ss.android.ugc.live</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ximalaya.ting.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.xs.fm</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.mobileqq</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.xunmeng.pinduoduo</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.sankuai.meituan</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.jingdong.app.mall</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.taobao.taobao</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.achievo.vipshop</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.xingin.xhs</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.baidu.searchbox.lite</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ss.android.article.news</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ss.android.article.lite</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.dragon.read</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.UCMobile</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.baidu.browser.apps</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.lemon.lv</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.sgame</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.snda.wifilocating</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tmri.app.main</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.google.ar.core</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.android.bankabc</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.baidu.homework</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.android.mms</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.android.contacts</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.gallery3d</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.heytap.market</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.weather2</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.alarmclock</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.calculator</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.heytap.music</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.phonemanager</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.android.phone</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.filemanager</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.note</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.heytap.reader</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.oppo.community</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.heytap.book</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.oppo.music</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.oppo.market</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.soundrecorder</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.calendar</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.android.calculator2</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.weather</matchRecentsAnimApp>
+    <!-- Second batch -->
+    <matchRecentsAnimApp>com.youku.crazytogether</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.bilibili.bilibililive</matchRecentsAnimApp>
+    <matchRecentsAnimApp>tv.yixia.bobo</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.renren.mobile.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>air.tv.douyu.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.bokecc.dance</matchRecentsAnimApp>
+    <matchRecentsAnimApp>tv.xiaoka.live</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.cc</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.lokinfo.android.gamemarket.mmshow</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.gzlok.gamemarket.yueai.show</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wali.live</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.meelive.ingkee</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.hongren.ui</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.play</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.nice.live</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.showself.ui</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.haixiu.ui</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.huajiao</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.melot.meshow</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.smithereens.android.kan.huaxiu</matchRecentsAnimApp>
+    <matchRecentsAnimApp>org.fungo.a8sport</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tuhao.laosiji</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.now</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.lhzpst.myhs</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.zbhuanleba.app</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.yibasan.lizhifm</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.qzone</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.immomo.momo</matchRecentsAnimApp>
+    <matchRecentsAnimApp>cn.soulapp.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.p1.mobile.putong</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.lofter.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.lanjingren.ivwen</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wm.dmall</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.mogujie</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.sankuai.youxuan</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.suning.mobile.ebuy</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.jm.android.jumei</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.jd.jdlite</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.taobao.live</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.taobao.idlefish</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.taobao.litetao</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.alibaba.wireless</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tmall.wireless</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wuba.zhuanzhuan</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.dianping.v1</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.shizhuang.duapp</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.dewu.akdj</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.baidu.tieba</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.gamehelper.smoba</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.gamehelper.pg</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.hupu.games</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.qihoo.browser</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ucmobile.lite</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.cat.readall</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.quark.browser</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.meitu.meipaimv</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.meitu.meiyancamera</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.xt.retouch</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.yixia.videoeditor</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.kwai.videoeditor</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.kwai.m2u</matchRecentsAnimApp>
+    <matchRecentsAnimApp>cn.xiaoniangao.xngapp</matchRecentsAnimApp>
+    <matchRecentsAnimApp>net.zzlc.tracking</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.anjvision.aicamera</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.pubgmhd</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.yx.hlddz.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.miHoYo.Yuanshen</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.happyelements.AndroidAnimal</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.mc.vivo</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.outfit7.talkingtomgoldrun.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.bairimeng.dmmdzz.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wepie.snake.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wdqy.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.mf.uam</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.m4399.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.jkchess</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.lolm</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.KiHan</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.my.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.dnf</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.party</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.dwrg.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.letsgo</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.moba</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.minitech.miniworld.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>cn.jj</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.mc.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.cf</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.sky.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.cod</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.gnyx</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.speedmobile</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.nearme.gamecenter.ddz.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.kiloo.subwaysurf</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.jd.game.fruitsmasher.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.ig</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wandoujia.phoenix2</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.wuba</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.unionpay.tsmservice</matchRecentsAnimApp>
+    <matchRecentsAnimApp>cn.wps.moffice.lite</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.icbc</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.duowan.live</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.nearme.atlas</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.directui</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.coloros.compass</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.android.email</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.oppo.reader</matchRecentsAnimApp>
+    <!-- Third batch -->
+    <matchRecentsAnimApp>com.phoenix.read</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.sina.weibo</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.cf</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.dfm</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.zengame.zrttddz.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>cn.xuexi.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.weishi</matchRecentsAnimApp>
+    <matchRecentsAnimApp>my.maya.android</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.oplus.wpslauncher</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ss.android.yumme.video</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.kurogame.mingchao</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.msgame</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.oplus.engineermode</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.sup.android.superb</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.facebook.katana</matchRecentsAnimApp>
+    <matchRecentsAnimApp>org.videolan.vlc</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.netease.dfjs.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.kwai.hisense</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.tmgp.djsy</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.baitian.aqcs.aqcssy.bt</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.tencent.hyrzol</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.hsh.cqyzs.nearme.gamecenter</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.instagram.barcelona</matchRecentsAnimApp>
+    <matchRecentsAnimApp>com.ss.android.article.video</matchRecentsAnimApp>
+    <switchRecentsAnimApp>1</switchRecentsAnimApp>
+    <!-- pause in recents animation end -->
+
+    <!-- Broadcast notification start-->
+    <rule>
+        <pkg>com.coloros.osecret</pkg>
+         <config>
+            <type>2</type>
+                <name>com.android.packageinstaller</name>
+                <name>com.coloros.gamespace</name>
+                <name>com.oplus.cosa</name>
+                <name>com.coloros.backuprestore</name>
+                <name>com.google.android.packageinstaller</name>
+                <name>com.nearme.gamecenter</name>
+                <name>com.oppo.market</name>
+        </config>
+    </rule>
+    <!-- Broadcast notification end-->
+
+    <!-- forbidden resume when locked start-->
+    <forbiddenResume>com.ss.android.ugc.aweme</forbiddenResume>
+    <forbiddenResume>com.hunantv.imgo.activity</forbiddenResume>
+    <forbiddenResume>tv.danmaku.bili</forbiddenResume>
+    <forbiddenResume>com.oplus.linker</forbiddenResume>
+    <forbiddenResume>com.cat.readall</forbiddenResume>
+    <forbiddenResume>com.sup.android.superb</forbiddenResume>
+    <forbiddenResume>com.ss.android.yumme.video</forbiddenResume>
+    <forbiddenResume>com.ss.android.ugc.aweme.lite</forbiddenResume>
+    <forbiddenResume>com.smile.gifmaker</forbiddenResume>
+    <forbiddenResume>com.qiyi.video</forbiddenResume>
+    <forbiddenResume>com.kuaishou.nebula</forbiddenResume>
+    <forbiddenResume>com.xs.fm.lite</forbiddenResume>
+    <!-- forbidden resume when locked end-->
+
+    <!-- forbidden app relaunch -->
+    <forbiddenAppRelaunch>tv.danmaku.bili</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>tv.danmaku.bilibilihd</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ss.android.article.video</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.qiyi.video.pad</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youku.phone</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.qqlive</forbiddenAppRelaunch>
+    <!-- forbidden app relaunch -->
+    <forbiddenAppRelaunch>com.tencent.mtt</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tal100.yach</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.wemeet.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.taobao.taobao</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.duowan.mobile</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yizhilu.caidiantong</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.minitech.miniworld.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.wepie.snake.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.netease.party.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sxj.tjqy.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.leiting.aobi.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.babycloud.hanju</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cctv.yangshipin.app.androidp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sohu.sohuvideo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cmcc.cmvideo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>uyfs.pudh.qwth</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.cntv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zhui.hantv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.bbj.elearning</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cdel.medmobile</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.kuwo.player</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ss.android.ugc.aweme</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.app.moontv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.popcap.pvz2cthdop</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.le123.ysdq</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.news</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sankuai.meituan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.mm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.mobileqq</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xingin.xhs</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sina.weibo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.meta.box</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.m4399.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.gamehelper.pg</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mihoyo.hyperion</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lofter.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mbjir.rijbm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.hzwyst.kaituanpro</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.huohua.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.feizhi.zanzan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.liquid.poros.pro</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yy.huanju</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jideos.jnotes</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.alibaba.android.rimet</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.netdisk</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.newskyer.draw</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.androidqqmail</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.wenku</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.maimemo.markji.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jingdong.app.mall</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.news/</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>u0 com.sankuai.meituan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kptom.operator</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kuaidi100.courier</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.pb.artist</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.teambition.teambition</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mubu.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.huomiao.ameeting</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jjwxc.author</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.iflyrec.tjapp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ss.android.lark</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>tv.danmaku.bilibilihd</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.qiyi.video.pad</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.hunantv.imgo.activity</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.qiyi.video</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.qiyi.video.lite</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.weishi</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.example.pptv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.haokan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.bilibili.app.blue</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.taobao.idlefish</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.achievo.vipshop</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.shizhuang.duapp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.wuba.zhuanzhuan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.alibaba.wireless</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>con.wpfxsgsp.yimtf</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.hupu.shihuo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cainiao.wireless</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.searchbox</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kuaiduizuoye.scan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>net.huanci.hsjpro</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.iflytek.inputmethod</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.snda.wifilocating</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.searchbox.lite</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sohu.inputmethod.sogou</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.njh.biubiu</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.gotokeep.keep</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.homework</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.chaoxing.mobile</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.eduyun.app.factory.ykt</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.com.langeasy.LangEasyLexis</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sinyee.babybus.recommendapp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.hongen.app.word</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zhihu.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youdao.dict</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.fenbi.android.leo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xiwang.zaixian</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zxxk.zujuan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.wework</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.djcity</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.migu.miguplay</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.psyone.brainmusic</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zybang.bfsports</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.huawei.health</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.huayi.cme</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lingan.seeyou</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youxiang.soyoungapp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.gkid.crazyrope</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dianping.v1</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.anjuke.android.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cubic.autohome</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lianjia.beike</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.wuba</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ss.android.auto</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sankuai.meituan.takeoutnew</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>me.ele</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.eg.android.AlipayGphone</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ifeng.news2</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jjwxc.reader</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.qidian.QDReader</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.weread</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kuaikan.comic</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kmxs.reader</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xs.fm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dragon.read</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kugou.android.lite</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.qqmusicpad</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kwai.hisense</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.karaoke</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ximalaya.ting.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.qqmusic</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.netease.cloudmusic</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kugou.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.hermes.bgame.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.webiblegroup.bible</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cz.bible2</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mshiedu.online</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dianyun.pcgo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zuoyebang.xiaolusuyang</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yuantiku.collie</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.bcbook.whyx</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.miHoYo.Yuanshen</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.exam8.wantiku</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.hungbot.mingdegk.edu</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.qudiandu.diandu</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.dxy.inderal</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.blackboard.android.bbstudent</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.coloros.alarmclock</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.android.contacts</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.speechassist</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.music</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.coloros.gallery3d</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.oppo.store</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.android.email</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youban.xbldhw</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youku.phone</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>tv.danmaku.bili</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>tv.douyu.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.duowan.kiwi</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>air.tv.douyu.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tm.xjchuanmei</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jinshu.qb.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.books</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sgsp.video.xs</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.hp.printercontrol</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.happyelements.AndroidAnimal</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.smarthome</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>net.xmind.doughnut</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.googlequicksearchbox</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>kk.lsrptnvn.wgynbg</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>gzjm.sjs.djad</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.games.yikegames</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.yoli</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.coloros.soundrecorder</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.themestore</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sbskk.k9</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.keke.ysh1.tz08051h</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.teamtalk.im</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.phoenix.read</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.imgo.pad</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sgsp.video.xs</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.tmgp.pubgmhd</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.tmgp.sgame</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.HaoTuBang.H3DBodyFree</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sevenVideo.app.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zhongduomei.rrmj.society</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.video</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mfp.jelly.oppo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.android.vending</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.youtube</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.gm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.photos</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.maps</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.oneplus.membership</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.docs</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.oneplus.gallery</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.nbu.files</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.tachyon</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.amazon.avod.thirdpartyclient</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.oneplus.note</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.oneplus.account</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.instagram.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.spotify.music</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.adm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>net.oneplus.weather</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.flipkart.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.graymatrix.did</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>us.zoom.videomeetings</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sonyliv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.whatsapp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.facebook.katana</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.facebook.orca</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.youtube.music</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.snapchat.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.truecaller</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ss.android.ugc.trill</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.phonepe.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>org.telegram.messenger</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lemon.lvoverseas</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>in.amazon.mShop.android.shopping</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.facebook.lite</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jio.media.ondemand</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.wps.moffice_eng</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.netflix.mediaclient</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.meesho.supply</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zhiliaoapp.musically</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mxtech.videoplayer.ad</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jio.myjio</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>in.startv.hotstar</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>net.one97.paytm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.whatsapp.w4b</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.glance.internet</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lazada.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.videos</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.linkedin.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lenovo.anyshare.gps</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.video.fun.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.microsoft.appmanager</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.finshell.fin</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.king.candycrushsaga</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ludo.king</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.shopee.id</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.whereismytrain.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.walletnfcrel</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.myairtelapp</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dts.freefiremax</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.fintech.life</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.playit.videoplayer</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>in.mohalla.sharechat</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.eterno</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.apps.translate</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.twitter.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.pinterest</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.mainline.telemetry</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.bigwinepot.nwdn.international</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.imo.android.imoim</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mobile.legends</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.katanlabs.bubblepop</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dts.freefireth</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jio.media.jiobeats</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.bsbportal.music</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.nemo.vidmate</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.myntra.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.camerasideas.instashot</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>jp.naver.line.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.picsart.studio</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.application.zomato</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.roblox.client</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.mainline.adservices</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>in.mohalla.video</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.os.docvault</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kiloo.subwaysurf</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.grabtaxi.passenger</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mast.status.video.edit</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.realmecomm.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.instagram.barcelona</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.ubercab</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.flipkart.shopsy</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>id.dana</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.instagram.lite</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.snaptube.premium</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.gamma.scan</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sbi.lotusintouch</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.agoda.mobile.consumer</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zhiliaoapp.musically.go</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.katanlabs.bridgerunio</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.block.juggle</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cardfeed.video_public</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.canva.editor</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xiaomi.midrop</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.trichromelibrary_636715933</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zing.zalo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dream11.fantasy.cricket.football.kabaddi</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jio.jioplay.tv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kwai.bulldog</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>in.swiggy.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.intsig.camscanner</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.trichromelibrary_636708233</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dubox.drive</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.contacts</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.gms</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.shopee.ph</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.google.android.trichromelibrary_636711333</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.quicksearchbox</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.A17zuoye.mobile.homework</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.shusheng.JoJoRead</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.coloros.weather2</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yangcong345.android.phone</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mampod.ergedd</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jiongji.andriod.card</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.duoduo.child.story</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.fenbi.android.servant</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.netease.edu.ucmooc</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.handsgo.jiakao.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jdjdc.jdfastjdc</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zuoyebang.airclass</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yaerxing.fkst</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.fenbi.android.solar</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zmzx.college.search</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.fenbi.android.zhaojiao</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yuantiku.tutor</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.baidutranslate</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.duolingo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.able.wisdomtree</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.eusoft.ting.en</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.fenbi.android.zenglish</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jxedt</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zuoyebang.knowledge</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mistong.ewt360</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sprite.foreigners</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>zwzt.fangqiu.edu.com.zwzt</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.eduyun.app.hd</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.maimemo.android.momo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.bytedance.ep.android</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.zuoyebang.bangbangshizi</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.eeo.classin</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.bilibili.comic</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sinyee.babybus.chants</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.coloros.calendar</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.coloros.phonemanager</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.heytap.cloud</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.papegames.lysk.cn.nearme.gamecenter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youku.phone</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.larus.nova</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.taptap</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xt.retouch</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kwai.videoeditor</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xunlei.downloadprovider</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.kwai.hisense</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.mt.mtxx.mtxx</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.freenotes.freenotes</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.gamehelper.smoba</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>io.wallpaperengine.weclient</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.hunyuan.app.chat</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xingye.app</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.gamestar.perfectpiano</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xiaoe.client</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xmcy.hykb</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>bin.mt.plus</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.meitu.wink</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.jthj.turbobunny</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.damai</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.xyhj.hanju</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.clover.daysmatter</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.netease.uu</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>ctrip.android.view</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.sup.android.superb</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.tieba</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dz.hmjc</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.map</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yiyou.ga</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.baidu.input</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.jdjdc.jdfastjdc</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tmri.app.main</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.wepie.weplay</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.plan.kot32.tomatotime</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.cmplay.tiles2_cn</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>app.podcast.cosmos</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>me.yoopu.app.songbook</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.dongao.kaoqian.phone</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.edu24ol.newclass</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cmccwm.mobilemusic</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.quark.browser</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.tencent.tmgp.dfm</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.youban.xblertongpbhw</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.lemon.lv</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.orion.notein</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.nnsz.diy</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.yinxiang</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.adsk.sketchbook</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.wacom.bamboopapertab</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.color365.sketch</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.royole.rydrawing</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.wondershare.pdfelement</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.myscript.nebo</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>cn.wps.note</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.shouxbb.jnhuahua</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>notepad.color.pro</forbiddenAppRelaunch>
+    <forbiddenAppRelaunch>com.netease.nshhelper.nearme.gamecenter</forbiddenAppRelaunch>
+
+    <forbiddenPhoneAppRelaunch>com.tencent.mm</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.ss.android.ugc.aweme</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.dada.mobile.android</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.sankuai.meituan.dispatch.crowdsource</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.tencent.mobileqq</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.ss.android.ugc.aweme.lite</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.coloros.gallery3d</forbiddenPhoneAppRelaunch>
+    <forbiddenPhoneAppRelaunch>com.xingin.xhs</forbiddenPhoneAppRelaunch>
+
+    <!-- forbideen app predictive gesture animations !-->
+    <PredictBackBlackPkg>com.ytheekshana.deviceinfo</PredictBackBlackPkg>
+    <!-- forbideen app predictive gesture animations !-->
+
+    <!-- EmptyTaskRemove whitelist -->
+    <EmptyTaskRemove>com.tencent.mm.plugin.base.stub.UIEntryStub</EmptyTaskRemove>
+    <!-- EmptyTaskRemove whitelist -->
+
+    <!-- lockforbiddenResume whitelist -->
+    <lockforbiddenResume>com.kugou.android/.app.lockscreen.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>com.tencent.qqmusic/.business.lockscreennew.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>com.ximalaya.ting.android/.host.activity.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>com.netease.cloudmusic/.activity.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>cn.kuwo.player/cn.kuwo.ui.lockscreen.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>com.kuaiyin.player/.lockscreen.LockScreenV2Activity</lockforbiddenResume>
+    <lockforbiddenResume>com.kugou.android.lite/com.kugou.android.app.lockscreen.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>cn.wenyu.bodian/cn.kuwo.player.lockscreen.AllinLockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>com.kugou.android.elder/com.kugou.android.app.lockscreen.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>com.uxin.kilaaudio/com.uxin.room.lock.LiveLockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>cn.missevan/.activity.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>cmccwm.mobilemusic/com.migu.music.ui.lockscreen.LockScreenActivity</lockforbiddenResume>
+    <lockforbiddenResume>fm.qingting.qtradio/.lockscreen.LockScreenActivity</lockforbiddenResume>
+    <!-- lockforbiddenResume whitelist -->
+
+    <OptOutList>
+        <package name="com.spotify.music" type="0x001"/>
+        <package name="com.cictec.busintelligentonline" type="0x001"/>
+        <package name="com.xingye.app" type="0x001"/>
+        <package name="uni.UNIDB2EFEB" type="0x001"/>
+        <package name="com.oplus.pscanvas" type="0x001"/>
+        <package name="com.app.educard.idma" type="0x001"/>
+        <package name="com.booking" type="0x001"/>
+        <package name="com.eagersoft.youzy.youzy" type="0x001"/>
+        <package name="com.redfinger.app" type="0x001"/>
+        <package name="com.ihuman.english" type="0x001"/>
+        <package name="com.ms.dsal" type="0x001"/>
+        <package name="com.tiqiaa.icontrol" type="0x001"/>
+        <package name="com.tenda.router.app" type="0x001"/>
+        <package name="com.sec.android.easyMover" type="0x001"/>
+        <package name="com.ifeimo.audiorecord" type="0x001"/>
+        <package name="com.clone.youyou.opnd" type="0x001"/>
+        <package name="com.ipiaoniu.android" type="0x001"/>
+        <package name="com.redfinger.business" type="0x001"/>
+        <package name="com.tenda.security" type="0x001"/>
+        <package name="com.fl.mycalendar" type="0x001"/>
+        <package name="com.weigu.youmi" type="0x001"/>
+        <package name="com.heao.djhave" type="0x001"/>
+        <package name="com.qiyi.video" type="0x001"/>
+        <package name="com.qiyi.video.pad" type="0x001"/>
+        <package name="us.zoom.videomeetings" type="0x001"/>
+        <package name="com.vyou.vcameraclient" type="0x001"/>
+        <package name="com.edu24ol.newclass" type="0x001"/>
+        <package name="cn.ikaile.ruoshui.client" type="0x001"/>
+        <package name="com.wn.x" type="0x001"/>
+        <package name="com.juduoduo.video" type="0x001"/>
+        <package name="cn.com.wiisoft.catlight" type="0x001"/>
+        <package name="com.tfql.jobs" type="0x001"/>
+        <package name="com.fz.kaogujia" type="0x001"/>
+        <package name="com.clover.idaily" type="0x001"/>
+        <package name="com.linkedin.android" type="0x001"/>
+        <package name="us.zoom.videomeetings" type="0x001"/>
+        <package name="com.pinterest" type="0x001"/>
+        <package name="com.booking" type="0x001"/>
+        <package name="com.finaccel.android" type="0x001"/>
+        <package name="org.mozilla.firefox" type="0x001"/>
+        <package name="ru.dublgis.dgismobile" type="0x001"/>
+        <package name="com.ton_keeper" type="0x001"/>
+        <package name="com.nobroker.app" type="0x001"/>
+        <package name="com.hdictionary.bn" type="0x001"/>
+        <package name="net.skyscanner.android.main" type="0x001"/>
+        <package name="nithra.tamilcalender" type="0x001"/>
+        <package name="ru.ivi.client" type="0x001"/>
+        <package name="com.microblink.photomath" type="0x001"/>
+        <package name="ru.sportmaster.app" type="0x001"/>
+        <package name="com.freevpnplanet" type="0x001"/>
+        <package name="com.grammarly.android.keyboard" type="0x001"/>
+        <package name="com.mobso.photoreducer.lite" type="0x001"/>
+        <package name="ru.yandex.translate" type="0x001"/>
+        <package name="calc.gallery.lock" type="0x001"/>
+        <package name="nithra.telugu.calendar" type="0x001"/>
+        <package name="com.icemobile.lenta.prod" type="0x001"/>
+        <package name="de.softan.multiplication.table" type="0x001"/>
+        <package name="kz.slando" type="0x001"/>
+        <package name="com.dictionary.tl" type="0x001"/>
+        <package name="com.bf.browser" type="0x001"/>
+        <package name="net.metaquotes.metatrader4" type="0x001"/>
+        <package name="com.atpc" type="0x001"/>
+        <package name="com.ingka.ikea.app" type="0x001"/>
+        <package name="com.application.zomato" type="0x001"/>
+        <package name="com.amazon.avod.thirdpartyclient" type="0x001"/>
+        <package name="com.andi.alquran.id" type="0x001"/>
+        <package name="com.msf.angelmobile" type="0x001"/>
+        <package name="ru.rostel" type="0x001"/>
+        <package name="com.vidio.android" type="0x001"/>
+        <package name="com.brave.browser" type="0x001"/>
+        <package name="com.microsoft.emmx" type="0x001"/>
+        <package name="tv.twitch.android.app" type="0x001"/>
+        <package name="blibli.mobile.commerce" type="0x001"/>
+        <package name="com.clarodrive.android" type="0x001"/>
+        <package name="kz.kaspi.mobile" type="0x001"/>
+        <package name="com.shopback.app" type="0x001"/>
+        <package name="com.sec.android.app.shealth" type="0x001"/>
+        <package name="com.documentscan.simplescan.scanpdf" type="0x001"/>
+        <package name="com.jobstreet.jobstreet" type="0x001"/>
+        <package name="com.wego.android" type="0x001"/>
+        <package name="com.moh.nusukapp" type="0x001"/>
+        <package name="com.accor.appli.hybrid" type="0x001"/>
+        <package name="com.huami.watch.hmwatchmanager" type="0x001"/>
+        <package name="com.videodownloader.snap.originalapktube" type="0x001"/>
+        <package name="sg.ndi.sp" type="0x001"/>
+        <package name="vn.vtv.vtvgo" type="0x001"/>
+        <package name="org.coursera.android" type="0x001"/>
+        <package name="com.brilian.studyx.student" type="0x001"/>
+        <package name="app.waveful" type="0x001"/>
+        <package name="net.froemling.bombsquad" type="0x002"/>
+        <package name="com.jideos.jnotes" type="0x001"/>
+        <package name="com.rapid.short.tv" type="0x001"/>
+        <package name="com.ea.games.r3_row" type="0x002"/>
+        <package name="com.ea.games.simsfreeplay_row" type="0x002"/>
+        <package name="com.motor.speed.traffic3d" type="0x002"/>
+        <package name="com.ea.game.pvzfree_row" type="0x002"/>
+        <package name="com.firsttouchgames.dls7" type="0x002"/>
+        <package name="com.ansangha.drdriving" type="0x002"/>
+        <package name="com.rockstargames.gtavc.de" type="0x002"/>
+        <package name="in.startv.hotstar" type="0x002"/>
+        <package name="com.derekr.NoteCam" type="0x002"/>
+        <package name="com.oppo.daydreamvideo" type="0x002"/>
+        <package name="com.vectorunit.purple.googleplay" type="0x002"/>
+        <package name="com.ea.game.pvz2_row" type="0x002"/>
+        <package name="com.ertanto.kompas.official" type="0x002"/>
+        <package name="com.viber.voip" type="0x001"/>
+        <package name="com.xd.xdtglobal.gp" type="0x002"/>
+        <package name="tv.danmaku.bili" type="0x001"/>
+        <package name="com.coloros.translate" type="0x002"/>
+        <package name="com.google.android.apps.maps" type="0x001"/>
+        <package name="com.oplus.battery" type="0x002"/>
+    </OptOutList>
+</filter-conf>

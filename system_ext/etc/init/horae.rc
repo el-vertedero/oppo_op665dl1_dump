@@ -1,0 +1,18 @@
+service horae /system_ext/bin/horae
+	class hal
+	user system
+	group system readproc root
+	disabled
+
+on property:sys.boot_completed=1 && property:persist.sys.horae.enable=0
+	stop horae
+
+on property:sys.boot_completed=1 && property:persist.sys.horae.enable=1
+	start horae
+
+on property:sys.horae.qpt.enable=1
+	write /sys/class/powercap/qpt/enabled 1
+
+on property:sys.horae.qpt.enable=0
+	write /sys/class/powercap/qpt/enabled 0
+

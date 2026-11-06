@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KeyCombination version="1">
+    <!--
+    SHORTCUT_CODE_CTRL = 0x00000001;
+    SHORTCUT_CODE_SHIFT = 0x00000002;
+    SHORTCUT_CODE_ALT = 0x00000004;
+    SHORTCUT_CODE_SEARCH = 0x00000008;
+    SHORTCUT_CODE_WIN = 0x00000010;
+    <RuleInfo>
+        <keyCode="int">
+        <appInfo
+          type="activity|service|broadcast|customize"
+          pkgName="string"
+          className="string"
+          action="string"
+          category="string"
+          launchMode="zoom|split_screen|pip"
+          flags="00000001"
+          extras="key1:value1|key2:values2|key3:values3"
+        />
+    </RuleInfo>
+    -->
+    <RuleInfo>
+        <shortcutInfo keyCode="12"/> <!-- 5 -->
+        <appInfo
+            type="activity"
+            pkgName="com.oplus.screenrecorder"
+            className="com.oplus.screenrecorder.MainActivity"
+            extras="recorder_entrance:SystemUIControl"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="30"/> <!-- B -->
+        <appInfo
+            type="activity"
+            role="android.app.role.BROWSER"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="31"/> <!-- C -->
+        <appInfo
+            type="activity"
+            launchMode="zoom"
+            action="oplus.intent.action.CALCULATOR"
+            flags="14000000"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="33"/> <!-- E -->
+        <appInfo
+            type="activity"
+            category="android.intent.category.APP_EMAIL"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="34"/> <!-- F -->
+        <appInfo
+            type="activity"
+            action="oplus.intent.action.filemanager.OPEN_FILEMANAGER"
+            category="android.intent.category.DEFAULT"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="35"/> <!-- G -->
+        <appInfo
+            type="activity"
+            pkgName="com.oplus.screenrecorder"
+            className="com.oplus.screenrecorder.MainActivity"
+            extras="recorder_entrance:SystemUIControl"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="40"/> <!-- L -->
+        <appInfo
+            type="customize"
+            action="sleep"
+            extras="keyguardOn:1"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="45"/> <!-- Q -->
+        <appInfo
+            type="customize"
+            action="sleep"
+            extras="keyguardOn:1"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="47"/> <!-- S -->
+        <appInfo
+            type="activity"
+            pkgName="com.heytap.quicksearchbox"
+            className="com.heytap.quicksearchbox.ui.activity.SearchHomeActivity"
+            action="android.search.action.GLOBAL_SEARCH"
+            flags="10000000"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="117"/> <!-- meta -->
+        <appInfo
+            type="customize"
+            action="speech"
+            />
+    </RuleInfo>
+    <RuleInfo>
+        <shortcutInfo keyCode="774"/> <!-- AI -->
+        <appInfo
+            type="customize"
+            action="speech"
+            />
+    </RuleInfo>
+</KeyCombination>

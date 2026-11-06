@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppSenseConfig>
+    <version>20260624</version>
+
+    <!--抖音-->
+    <app name="com.ss.android.ugc.aweme">
+        <scene category="SHORT_VIDEO">
+            <node>
+                <activity>com.ss.android.ugc.aweme.main.MainActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.detail.ui.DetailActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.hotspot.HotSpotDetailActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.longervideo.landscape.home.activity.LandscapeFeedActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.mix.refactor.inner.CompilationInnerActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.mix.recommend.CompilationRecommendActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.playlet.videodetail.PlayletVideoPlayActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.listen.v2.view.ListenAwemeActivityV2</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.detail.ultra.ui.UltraDetailActivity</activity>
+            </node>
+        </scene>
+        <scene category="LIVE_STREAM">
+            <node>
+                <activity>com.ss.android.ugc.aweme.live.LivePlayActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.detail.ui.LiveDetailActivity</activity>
+            </node>
+            <node>
+                <activity>com.ss.android.ugc.aweme.live.LivePlayActivityV2</activity>
+            </node>
+        </scene>
+    </app>
+
+    <!--快手-->
+    <app name="com.smile.gifmaker">
+        <scene category="SHORT_VIDEO">
+            <node>
+                <activity>com.yxcorp.gifshow.detail.PhotoDetailActivity</activity>
+            </node>
+            <node>
+                <activity>com.yxcorp.gifshow.HomeActivity</activity>
+            </node>
+        </scene>
+        <scene category="LIVE_STREAM">
+            <node>
+                <activity>com.kuaishou.live.core.basic.activity.LiveSlideActivity</activity>
+            </node>
+            <node>
+                <activity>com.kuaishou.live.core.basic.activity.LiveSlideActivityTablet</activity>
+            </node>
+        </scene>
+    </app>
+
+    <!-- XHS -->
+    <app name="com.xingin.xhs">
+        <scene category="SHORT_VIDEO">
+            <node>
+                <activity>com.xingin.matrix.detail.activity.DetailFeedActivity</activity>
+            </node>
+        </scene>
+        <scene category="LIVE_STREAM">
+            <node>
+                <activity>com.xingin.alpha.audience.v2.AlphaAudienceActivityV2
+                </activity>
+            </node>
+            <node>
+                <activity>com.xingin.alpha.audience.AlphaAudienceActivity
+                </activity>
+            </node>
+        </scene>
+    </app>
+
+    <!-- tiktok asia -->
+    <app name="com.ss.android.ugc.trill">
+        <scene category="LIVE_STREAM">
+            <node>
+                <activity>com.ss.android.ugc.aweme.live.LivePlayActivity</activity>
+            </node>
+        </scene>
+    </app>
+</AppSenseConfig>

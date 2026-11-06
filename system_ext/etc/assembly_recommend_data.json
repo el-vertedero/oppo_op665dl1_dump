@@ -1,0 +1,87 @@
+[
+  {
+    "id": 0,
+    "category": "domestic",
+    "version": "1",
+    "data": [
+      {
+        "fenceName": "深圳华润前海大厦B座",
+        "plmnData": [
+          {
+            "plmn": ["46000", "46002", "46007", "46008"],
+            "cells": [
+              {"arfcn": 627264, "pci": 176, "band": 78},
+              {"arfcn": 633984, "pci": 174, "band": 78}
+            ],
+            "freqs": [
+              {"arfcn": 627264, "band": 78},
+              {"arfcn": 633984, "band": 78}
+            ]
+          },
+          {
+            "plmn": ["46001", "46006", "46009"],
+            "cells": [
+              {"arfcn": 428910, "pci": 874, "band": 1},
+              {"arfcn": 428910, "pci": 887, "band": 1}
+            ],
+            "freqs": [
+              {"arfcn": 428910, "band": 1}
+            ]
+          },
+          {
+            "plmn": ["46011", "46003", "46005"],
+            "cells": [
+              {"arfcn": 1506, "pci": 402, "band": 3}
+            ],
+            "freqs": [
+              {"arfcn": 1506, "band": 3}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "category": "export",
+    "version": "1",
+    "data": [
+      {
+        "fenceName": "EstadioGNPSeguros",
+        "plmnData": [
+          {
+            "plmn": ["334020"],
+            "cells": [
+              {"arfcn": 2825, "pci": 359, "band": 7},
+              {"arfcn": 2825, "pci": 144, "band": 7},
+              {"arfcn": 66536, "pci": 359, "band": 66},
+              {"arfcn": 67036, "pci": 144, "band": 66},
+              {"arfcn": 67036, "pci": 359, "band": 66}
+            ],
+            "freqs": [
+              {"arfcn": 2825, "band": 7},
+              {"arfcn": 67036, "band": 66}
+            ]
+          }
+        ]
+      },
+      {
+        "fenceName": "EstadioCiudaddelosDeportes",
+        "plmnData": [
+          {
+            "plmn": ["334020"],
+            "cells": [
+              {"arfcn": 2050, "pci": 429, "band": 4},
+              {"arfcn": 66536, "pci": 429, "band": 66},
+              {"arfcn": 2975, "pci": 429, "band": 7}
+            ],
+            "freqs": [
+              {"arfcn": 2050, "band": 4},
+              {"arfcn": 2975, "band": 7}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1231 @@
+<?xml version='1.0' encoding='utf-8'?>
+<logarchive>
+    <version>20260610001</version>
+    <item id="Basic">
+        <!-- android logs -->
+        <log value="0x00001000-0x00001006" />
+        <!-- mtk boot logs -->
+        <log value="0x00003000-0x00003006" />
+        <!-- mtk tcpdump -->
+        <log value="0x0000a004" />
+        <!-- screenshots & screen_record -->
+        <log value="0x00004000" />
+        <log value="0x00004002" />
+        <log value="0x00004003" />
+        <!-- msp log -->
+        <log value="0x00005d01" />
+        <!-- logtool logs -->
+        <log value="0x00002000-0x00002005" />
+        <log value="0x00002007" />
+        <log value="0x00002006" />
+        <log value="0x0000200a" />
+        <log value="0x0000200b" />
+        <log value="0x0000200c" />
+        <log value="0x0000200d" />
+    </item>
+    <item id="Basic_thirdpart_app">
+        <log value="0x00005000" condition="PACKAGE:(com.tencent.mm)" />
+        <log value="0x00005001" condition="PACKAGE:(com.tencent.mm)" />
+        <log value="0x00005003" condition="PACKAGE:(com.tencent.mobileqq)" />
+        <log value="0x00005004" condition="PACKAGE:(com.tencent.mobileqq)" />
+        <log value="0x00005005" condition="PACKAGE:(com.tencent.qqlive)" />
+        <log value="0x00005006" condition="PACKAGE:(com.tencent.wework)" />
+        <log value="0x00005007" condition="PACKAGE:(com.tencent.wework)" />
+        <log value="0x00005008" condition="PACKAGE:(com.tencent.tmgp.cf)" />
+        <log value="0x00005009" condition="PACKAGE:(com.kugou.android)" />
+        <log value="0x0000500a" condition="PACKAGE:(com.yx)" />
+        <log value="0x0000500b" condition="PACKAGE:(com.duowan.mobile)" />
+        <log value="0x0000500c" condition="PACKAGE:(com.microsoft.appmanager)" />
+        <log value="0x0000500d" condition="PACKAGE:(com.tencent.tmgp.cf)" />
+        <log value="0x0000500e" condition="PACKAGE:(com.tencent.tmgp.dfm)" />
+        <log value="0x0000500f" condition="PACKAGE:(com.tencent.mf.uam)" />
+        <log value="0x00005010" condition="PACKAGE:(com.tencent.tmgp.cod)" />
+        <log value="0x00005011" condition="PACKAGE:(com.papegames.infinitynikki)" />
+        <log value="0x00005012" condition="PACKAGE:(com.tencent.tmgp.pubgmhd)" />
+        <log value="0x00005013" condition="PACKAGE:(com.tencent.tmgp.sgame)" />
+        <log value="0x00005014" condition="PACKAGE:(com.tencent.tmgp.codev)" />
+        <log value="0x00005015" condition="PACKAGE:(com.tencent.lolm)" />
+
+        <log value="0x00005800" condition="PACKAGE:(com.heytap.pictorial)" />
+        <log value="0x00005801" condition="PACKAGE:(com.heytap.browser)" />
+        <log value="0x00005802" condition="PACKAGE:(com.heytap.yoli)" />
+        <log value="0x00005806" condition="PACKAGE:(com.heytap.quicksearchbox)" />
+         <!-- container logs -->
+        <log value="0x00005e01" condition="PACKAGE:(com.oplus.wpslauncher)"/>
+    </item>
+    <item id="Basic_system_app">
+        <log value="0x00006005-0x00006009" condition="PACKAGE:(com.android.launcher)" />
+        <log value="0x00008000-0x00008002" condition="PACKAGE:(com.android.launcher)" />
+    </item>
+    <item id="system_experience">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006000" />
+        <log value="0x00006001" condition="FEATURE:(assistantscreen)" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007002" />
+        <log value="0x00007006" />
+        <log value="0x0000c000" />
+        <log value="0x0000c020" />
+        <log value="0x0000f000" />
+        <log value="0x0001100b" />
+        <log value="0x00005815-0x00005819" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x00009013" />
+        <log value="0x00013000" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="system_experience_sysui">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006000" />
+        <log value="0x00006001" condition="FEATURE:(assistantscreen)" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007002" />
+        <log value="0x00007006" />
+        <log value="0x0000c000" />
+        <log value="0x0000c020" />
+        <log value="0x0000f000" />
+        <log value="0x0001100b" />
+        <log value="0x00005815-0x00005819" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x00009013" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00013000" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="launcher">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006003" />
+        <log value="0x00006005-0x00006009" />
+        <log value="0x00007000-0x00007002" />
+        <log value="0x00007006" />
+        <log value="0x0000b000" />
+        <log value="0x0000c000" />
+        <log value="0x0000c020" />
+        <log value="0x0001100b" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00006000" />
+        <log value="0x00009013" />
+        <log value="0x00005808" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="wallpaper">
+        <import patch="Basic" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007006" />
+        <log value="0x00005815-0x00005819" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00009013" />
+        <log value="0x00012003" />
+        <log value="0x00005808" />
+    </item>
+    <item id="screen_shot">
+        <import patch="Basic_system_app" />
+        <log value="0x00005805" />
+        <log value="0x00008000-0x00008002" condition="FEATURE:(perf)" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="clock">
+        <import patch="Basic_system_app" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="negative_screen">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x0001100b" />
+        <log value="0x00009013" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="vibration">
+        <log value="0x00009013" />
+        <import patch="Basic_system_app" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="note">
+        <import patch="Basic_system_app" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="thirdpart">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x0000b000" />
+        <log value="0x0000c000" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x0000c020" />
+        <log value="0x0000f000" />
+        <!-- container logs-->
+        <log value="0x00005e02" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00013000" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="inputmethod">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x00005c01" />
+        <log value="0x00005c02" />
+        <log value="0x00005c03" />
+        <log value="0x00005c04" />
+        <log value="0x00005c05" />
+        <log value="0x00005c06" />
+        <log value="0x00005c07" />
+        <log value="0x00005c08" />
+        <log value="0x0000b000" />
+        <log value="0x0000c000" />
+        <log value="0x0000c020" />
+        <log value="0x00008000-0x00008002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="touch">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x0000a003" />
+        <log value="0x0000c000" />
+        <log value="0x0000c001" />
+        <log value="0x0000c002" />
+        <log value="0x0000c003" />
+        <log value="0x0000c004" />
+        <log value="0x0000c005" />
+        <log value="0x0000c020" />
+        <log value="0x0000b000" />
+        <log value="0x00008000-0x00008002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="display">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x00007002" />
+        <log value="0x0000a000" />
+        <log value="0x0000a003" />
+        <log value="0x0000b000" />
+        <log value="0x00003008" />
+        <log value="0x00007003" />
+        <log value="0x00007005" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00010000" option="maxsize=30M|delete" />
+        <log value="0x00010004" option="maxsize=30M|delete" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="brightness">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x0001100b" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <log value="0x00008000-0x00008002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="call">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a000" />
+        <log value="0x0000a002" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000a005" />
+        <log value="0x00012001" condition="FEATURE:(postman)"/>
+        <log value="0x0000b001" />
+        <log value="0x00011000" />
+        <log value="0x00011008" />
+        <log value="0x00011001" />
+        <log value="0x00011003" />
+        <log value="0x00011005" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x00011006" />
+        <log value="0x0001100a" />
+        <log value="0x0001100b" />
+        <log value="0x0000a006" />
+        <log value="0x0000a007" />
+        <log value="0x0000a008" />
+        <log value="0x0000a009" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0001100e" />
+        <log value="0x00011010" />
+        <log value="0x00011013" />
+        <log value="0x00011014" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="network">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a000" />
+        <log value="0x0000a002" />
+        <log value="0x0000a003" />
+        <log value="0x0000a001" />
+        <log value="0x0000a005" />
+        <log value="0x0000a008" />
+        <log value="0x00012001" condition="FEATURE:(postman)"/>
+        <log value="0x0000b001" />
+        <log value="0x00011000" />
+        <log value="0x00011008" />
+        <log value="0x00011001" />
+        <log value="0x00011002" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011005" />
+        <log value="0x00011006" />
+        <log value="0x0001100a" />
+        <log value="0x0001100b" />
+        <log value="0x00003008" />
+        <log value="0x0000300d" />
+        <log value="0x0000a006" />
+        <log value="0x0000a007" />
+        <log value="0x0000a009" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0001100e" />
+        <log value="0x00011010" />
+        <log value="0x00008000" option="latest=2|maxsize=80M|mtime=48h|delete" />
+        <log value="0x00008002"/>
+        <log value="0x00009012" />
+        <log value="0x00011013" />
+        <log value="0x00011014" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="wifi">
+        <log value="0x0000a000" condition="FEATURE:(tcpdump)" />
+        <log value="0x0000a002" condition="FEATURE:(tcpdump)" />
+        <log value="0x0000a001" condition="FEATURE:(tcpdump)" />
+        <log value="0x00009000" condition="FEATURE:(perf)" />
+        <log value="0x00009012" />
+        <log value="0x00003007" />
+        <log value="0x00003008" />
+        <log value="0x0000a003" />
+        <log value="0x0000a008" />
+        <log value="0x0000d000" />
+        <log value="0x0000d001" />
+        <log value="0x0000d002" />
+        <log value="0x0000d003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011003" condition="FEATURE:(qxdm)" />
+        <log value="0x00011004" condition="FEATURE:(qxdm)" />
+        <log value="0x00011002" condition="FEATURE:(modem)" />
+        <log value="0x0001100b" />
+        <log value="0x0001100f" />
+        <log value="0x00011011" />
+        <log value="0x0000b002" condition="FEATURE:(stability)" />
+        <log value="0x0000b003" condition="FEATURE:(stability)" />
+        <log value="0x0000e000" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e001" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e002" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e003" condition="FEATURE:(bluetooth)" />
+        <log value="0x00008000-0x00008002" condition="FEATURE:(perf)" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="hotspot">
+        <log value="0x0000a000" condition="FEATURE:(tcpdump)" />
+        <log value="0x0000a002" condition="FEATURE:(tcpdump)" />
+        <log value="0x0000a001" condition="FEATURE:(tcpdump)" />
+        <log value="0x00009000" condition="FEATURE:(perf)" />
+        <log value="0x00009012" />
+        <log value="0x00003007" />
+        <log value="0x0000a003" />
+        <log value="0x0000d000" />
+        <log value="0x0000d001" />
+        <log value="0x0000d002" />
+        <log value="0x0000d003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011000" condition="FEATURE:(qxdm)" />
+        <log value="0x00011001" condition="FEATURE:(qxdm)" />
+        <log value="0x00011003" condition="FEATURE:(qxdm)" />
+        <log value="0x00011004" condition="FEATURE:(qxdm)" />
+        <log value="0x00011002" condition="FEATURE:(modem)" />
+        <log value="0x0001100b" />
+        <log value="0x0001100f" />
+        <log value="0x00011011" />
+        <log value="0x0000b002" condition="FEATURE:(stability)" />
+        <log value="0x0000b003" condition="FEATURE:(stability)" />
+        <log value="0x0000e000" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e001" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e002" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e003" condition="FEATURE:(bluetooth)" />
+        <log value="0x00008000-0x00008002" condition="FEATURE:(perf)" />
+        <log value="0x00011013" />
+        <log value="0x00011014" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="bluetooth">
+        <log value="0x00003009" />
+        <log value="0x00009012" />
+        <log value="0x0000a003" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x0000e005" />
+        <log value="0x0000e007" />
+        <log value="0x0000e008" />
+        <log value="0x0000e009" />
+        <log value="0x0000a000" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000f001" condition="FEATURE:(audio)" />
+        <log value="0x0000f002" condition="FEATURE:(audio)" />
+        <log value="0x0000f003" condition="FEATURE:(audio)" />
+        <log value="0x0000f004" condition="FEATURE:(audio)" />
+        <log value="0x0000f006" condition="FEATURE:(audio)" />
+        <log value="0x0000e00a" />
+        <log value="0x00005807" />
+        <log value="0x0000f00a" />
+        <log value="0x0000f00b" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00006000" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="gps">
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x00011007" />
+        <log value="0x0001100b" />
+        <log value="0x00003007" />
+        <log value="0x0000300c" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00009012" />
+        <log value="0x00012007" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="signal">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a002" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000a005" />
+        <log value="0x00012001" condition="FEATURE:(postman)"/>
+        <log value="0x0000b001" />
+        <log value="0x00011000" />
+        <log value="0x00011008" />
+        <log value="0x00011001" />
+        <log value="0x00011003" />
+        <log value="0x00011005" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x0001100a" />
+        <log value="0x0001100b" />
+        <log value="0x00003008" />
+        <log value="0x0000300d" />
+        <log value="0x0000a006" />
+        <log value="0x0000a007" />
+        <log value="0x0000a009" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0001100e" />
+        <log value="0x00011010" />
+        <log value="0x00011013" />
+        <log value="0x00011014" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="nfc">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <log value="0x0001100b" />
+        <!-- add gps log start-->
+        <log value="0x00011003" condition="FEATURE:(qxdm)" />
+        <log value="0x00011004" condition="FEATURE:(qxdm)" />
+        <!-- add gps log end-->
+        <!-- add wifi log start-->
+        <log value="0x0000d006" condition="FEATURE:(tcpdump)"/>
+        <log value="0x0000a000" condition="FEATURE:(tcpdump)"/>
+        <log value="0x0000a001" condition="FEATURE:(tcpdump)"/>
+        <log value="0x0000d005" condition="FEATURE:(tcpdump)"/>
+        <log value="0x0000d006" condition="FEATURE:(tcpdump)"/>
+        <!-- add wifi log end-->
+        <!-- add bt log end-->
+        <log value="0x0000e001" condition="FEATURE:(bluetooth)"/>
+        <log value="0x0000e002" condition="FEATURE:(bluetooth)"/>
+        <log value="0x0000e003" condition="FEATURE:(bluetooth)"/>
+        <!-- add bt log end-->
+        <!-- add qsee log start-->
+        <log value="0x0000c00d" />
+        <log value="0x00013000" />
+        <!-- add qsee log end-->
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="media">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" option="maxsize=20M|mtime=30m|lao" />
+        <log value="0x00003009" />
+        <log value="0x0000f006" />
+        <log value="0x0000a001" option="maxsize=110M|mtime=30m|delete" />
+        <log value="0x0000a003" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000f001" />
+        <log value="0x0000f002" />
+        <log value="0x0000f003" />
+        <log value="0x0000b001" />
+        <log value="0x0000f004" />
+        <log value="0x0000f005" />
+        <log value="0x00011000" option="maxsize=300M|mtime=15m|delete" />
+        <log value="0x00011008" />
+        <log value="0x00011001" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011005" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000f007" />
+        <log value="0x0000f008" />
+        <log value="0x0000f009" condition="FEATURE:(odmfaudiodump)" />
+        <log value="0x0000e000" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e001" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e002" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000e003" condition="FEATURE:(bluetooth)" />
+        <log value="0x0000f000" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00005807" />
+        <log value="0x0000f00a" />
+        <log value="0x0000f00b" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00011013" />
+        <log value="0x00011014" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="video">
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x00010000" />
+        <log value="0x00010001" />
+        <log value="0x00010002" />
+        <log value="0x00010004" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007002" />
+        <log value="0x00007006" />
+        <log value="0x00003007" />
+        <log value="0x00003008" />
+        <log value="0x0001100b" />
+        <log value="0x00005820" condition="FEATURE:(gallery)"  />
+        <log value="0x00005821" condition="FEATURE:(gallery)"  />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="heat">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x0000a002" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000a004" />
+        <log value="0x00009002" />
+        <log value="0x00009003" />
+        <log value="0x00009000" />
+        <log value="0x00005803" />
+        <log value="0x00005804" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000d005" />
+        <log value="0x0000c013" />
+        <log value="0x00012002" />
+        <log value="0x00009010" />
+        <log value="0x00009011" />
+        <log value="0x00009012" />
+        <log value="0x0001100b" />
+        <log value="0x00005822" />
+        <log value="0x0000c022" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00009013" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="power">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a002" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000a004" />
+        <log value="0x00009002" />
+        <log value="0x00009003" />
+        <log value="0x00009000" />
+        <log value="0x00003007" />
+        <log value="0x00005803" />
+        <log value="0x00005804" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x00009010" />
+        <log value="0x00009011" />
+        <log value="0x00009012" />
+        <log value="0x00012002" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0001100b" />
+        <log value="0x00005822" />
+        <log value="0x0000c022" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="charge">
+        <import patch="Basic_system_app" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x00011012" />
+        <log value="0x0000c009" />
+        <log value="0x0000c008" />
+        <log value="0x00009010" />
+        <log value="0x00009012" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="junk">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00003008" />
+        <log value="0x00005804" />
+        <log value="0x00009000" />
+        <log value="0x00007000-0x00007002" />
+        <log value="0x00007006" />
+        <log value="0x0000b000" />
+        <log value="0x00012002" />
+        <log value="0x0000f000" />
+        <log value="0x0000c000" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x0000c020" />
+        <log value="0x00005803" />
+        <log value="0x00006003" />
+        <log value="0x0000a000" />
+        <log value="0x00009010" />
+        <log value="0x00009012" />
+        <log value="0x0001100b" />
+        <log value="0x00007003" />
+        <log value="0x00012006" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00008000" />
+        <log value="0x00008004" />
+        <log value="0x00008002" />
+        <log value="0x00006000" />
+        <log value="0x00005822" />
+        <log value="0x0000c022" />
+        <log value="0x00009013" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="storage">
+        <import patch="Basic_system_app" />
+        <log value="0x0000c007" />
+        <log value="0x0000c006" />
+        <log value="0x00008000-0x00008002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="camera">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006003" />
+        <log value="0x0000c00e" />
+        <log value="0x0000c00f" />
+        <log value="0x0000c010" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x0000c021" />
+        <log value="0x0000b001" />
+        <log value="0x0000b002" />
+        <log value="0x00007000-0x00007002" condition="FEATURE:(camera_isp|camera_af|camera_ae|camera_awb|camera_crash|camera_dump)" />
+        <log value="0x00007006" />
+        <log value="0x0000b000" />
+        <log value="0x00009010" />
+        <log value="0x00012002" />
+        <log value="0x00005820" />
+        <log value="0x00005821" />
+        <log value="0x00003008" />
+        <log value="0x0001100b" />
+        <log value="0x00012006" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="gallery">
+        <import patch="Basic_system_app" />
+        <log value="0x00005820" />
+        <log value="0x00005821" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x00007006" />
+        <log value="0x00006003" /> <!--折叠屏-->
+        <log value="0x00008000-0x00008002"  /> <!--screen_shot-->
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="fingerprint">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x00007002" />
+        <log value="0x0000c00a" />
+        <log value="0x0000c00b" />
+        <log value="0x0000c00c" />
+        <log value="0x0000c000" />
+        <log value="0x0000c020" />
+        <log value="0x0000c00d" />
+        <log value="0x0001100b" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00006000" />
+        <log value="0x00013000" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="sensor">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a002" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000b001" />
+        <log value="0x0000c00d" />
+        <log value="0x0000c003" />
+        <log value="0x0000c004" />
+        <log value="0x0000f004" />
+        <log value="0x00003007" option="latest=10|lao" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection">
+        <import patch="Basic_system_app" />
+        <log value="0x00007000-0x00007003" logmode="LC"/>
+        <log value="0x00007006" logmode="LC"/>
+        <log value="0x00006003" logmode="LC"/>
+        <log value="0x00003007" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0000f001" logmode="LC"/>
+        <log value="0x00011003" />
+        <log value="0x0001100b" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x0000500c" />
+        <log value="0x00005809" />
+        <log value="0x00005810" />
+        <log value="0x00005811" />
+        <log value="0x00005812" />
+        <log value="0x00005813" />
+        <log value="0x00005814" />
+        <log value="0x00010003" condition="FEATURE:(odmfvideodump)" />
+        <log value="0x0000f00a" />
+        <log value="0x0000f00b" />
+        <log value="0x00008000-0x00008002" logmode="LC"/>
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car">
+        <import patch="Basic_system_app" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <log value="0x00005c0f" />
+        <log value="0x00005c10" />
+        <log value="0x00005c11" />
+        <log value="0x00006003" logmode="LC"/>
+        <log value="0x00007000-0x00007003" logmode="LC"/>
+        <log value="0x00007006" logmode="LC"/>
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000c009" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x0000f000" />
+        <log value="0x0000f001" logmode="LC"/>
+        <log value="0x0000f002" />
+        <log value="0x0000f003" />
+        <log value="0x0000f004" />
+        <log value="0x0000f005" />
+        <log value="0x0000f006" />
+        <log value="0x00011002" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x0001100b" />
+        <log value="0x0000f00a" />
+        <log value="0x0000f00b" />
+        <log value="0x00008000-0x00008002" logmode="LC"/>
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_wired_abnormal">
+        <import patch="Basic_system_app" />
+        <log value="0x00007000-0x00007003" />
+        <log value="0x00007006" />
+        <log value="0x0000c009" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <log value="0x0001100b" />
+        <log value="0x00006003" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_wireless_abnormal">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007003" />
+        <log value="0x00007006" />
+        <log value="0x0000a000" />
+        <log value="0x0000a003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000a001" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0001100b" />
+        <log value="0x00011002" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_sound_abnormal">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007003" />
+        <log value="0x00007006" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x0000f000" />
+        <log value="0x0000f001" />
+        <log value="0x0000f002" />
+        <log value="0x0000f003" />
+        <log value="0x0000f004" />
+        <log value="0x0000f005" />
+        <log value="0x0000f006" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <log value="0x00005c0f" />
+        <log value="0x00005c10" />
+        <log value="0x00005c11" />
+        <log value="0x0000f00a" />
+        <log value="0x0000f00b" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_app_abnormal">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007003" />
+        <log value="0x00007006" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <log value="0x00005c0f" />
+        <log value="0x00005c11" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_freezes_abnormal">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007003" />
+        <log value="0x00007006" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <log value="0x00005c0f" />
+        <log value="0x00005c11" />
+        <log value="0x00008000-0x00008002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_other_abnormal">
+        <import patch="Basic_system_app" />
+        <log value="0x00006003" />
+        <log value="0x00007000-0x00007003" />
+        <log value="0x00007006" />
+        <log value="0x0000a000" />
+        <log value="0x0000a001" />
+        <log value="0x0000a003" />
+        <log value="0x0000d004" />
+        <log value="0x0000d005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011002" />
+        <log value="0x0001100b" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x00005c09" />
+        <log value="0x00005c0a" />
+        <log value="0x00005c0b" />
+        <log value="0x00005c0c" />
+        <log value="0x00005c0d" />
+        <log value="0x00005c0e" />
+        <log value="0x00005c0f" />
+        <log value="0x00005c11" />
+        <log value="0x0000c009" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="interconnection_car_key_control">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a003" />
+        <log value="0x0000e000" />
+        <log value="0x0000e001" />
+        <log value="0x0000e002" />
+        <log value="0x0000e003" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="fold_screen">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00006003" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x0001100b" />
+        <log value="0x00008000-0x00008002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="stability">
+        <import patch="Basic_system_app" />
+        <log value="0x0000b005" />
+        <log value="0x0000b006" />
+        <log value="0x0000b002" />
+        <log value="0x0000b001" />
+        <log value="0x0000b007" />
+        <log value="0x0000b008" />
+        <log value="0x0000b009" />
+        <log value="0x0000b003" />
+        <log value="0x0000b00a" />
+        <log value="0x0000b00b" />
+        <log value="0x0000b00d" />
+        <log value="0x00009000" />
+        <log value="0x00006000" condition="FEATURE:(systemui)"/>
+        <log value="0x00006003" />
+        <log value="0x0000b00e" />
+        <log value="0x0000b00f" />
+        <log value="0x00007000-0x00007002" />
+        <log value="0x00007006" />
+        <log value="0x0000b000" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x00009010" />
+        <log value="0x00012002" />
+        <log value="0x0000f000" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x00003008" />
+        <log value="0x00007003" />
+        <log value="0x00012006" />
+        <log value="0x0000a000" />
+        <log value="0x0000b010" />
+        <log value="0x0000b011" />
+        <log value="0x0000b012" />
+        <log value="0x0001100b" />
+        <log value="0x00008000-0x00008002" />
+        <log value="0x00003007" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <log value="0x00013000" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="other">
+        <import patch="Basic_system_app" />
+        <log value="0x00003007" />
+        <log value="0x00012003" />
+        <log value="0x00006004" />
+        <log value="0x00006003" />
+        <log value="0x0000a001" option="maxsize=300M|mtime=30m|delete" />
+        <log value="0x0000b00e" />
+        <log value="0x00009010" />
+        <log value="0x00012004" />
+        <log value="0x00012001" condition="FEATURE:(postman)"/>
+        <log value="0x00011002" />
+        <log value="0x0000f007" />
+        <log value="0x00006005-0x00006009" />
+        <log value="0x00009001" />
+        <log value="0x0000b001" />
+        <log value="0x00009002" />
+        <log value="0x00009003" />
+        <log value="0x00009005" />
+        <log value="0x00009006" />
+        <log value="0x0000a003" />
+        <log value="0x0000b004" />
+        <log value="0x0000b005" />
+        <log value="0x0000b006" />
+        <log value="0x0000b002" />
+        <log value="0x0000b007" />
+        <log value="0x0000b009" />
+        <log value="0x0000b003" />
+        <log value="0x0000b00a" />
+        <log value="0x0000b00b" />
+        <log value="0x0000b00c" />
+        <log value="0x0000b00d" />
+        <log value="0x0000b000" />
+        <log value="0x0000c00d" />
+        <log value="0x0000c021" />
+        <log value="0x00005803" />
+        <log value="0x00005804" />
+        <log value="0x00007000" />
+        <log value="0x00007001" />
+        <log value="0x00007002" />
+        <log value="0x0000c000" />
+        <log value="0x0000c020" />
+        <log value="0x0000d005" option="maxsize=300M|delete" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0000e008" />
+        <log value="0x00012002" />
+        <log value="0x0000c003" />
+        <log value="0x0000c004" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x0000f000" />
+        <log value="0x00003008" />
+        <log value="0x0001100b" />
+        <log value="0x00012006" />
+        <log value="0x00013000" />
+        <!-- container logs-->
+        <log value="0x00005e02" />
+        <log value="0x00008000" option="maxsize=80M|latest=2|mtime=30m|delete" />
+        <log value="0x00008002" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+    <item id="network_lite">
+        <log value="0x0000a000" />
+        <log value="0x0000a002" />
+        <log value="0x0000a004" />
+        <log value="0x0000a009" />
+        <log value="0x00011002" />
+        <log value="0x0001100a" />
+        <log value="0x0001100e" />
+        <log value="0x00011010" />
+    </item>
+    <item id="aging">
+        <import patch="Basic_system_app" />
+        <log value="0x0000a003" />
+        <log value="0x0000c011" />
+        <log value="0x0000c012" />
+        <log value="0x0000c013" />
+        <log value="0x00011000" />
+        <log value="0x00011008" />
+        <log value="0x00011001" />
+        <log value="0x00011003" />
+        <log value="0x00011004" />
+        <log value="0x00011005" />
+        <log value="0x0000d006" />
+        <log value="0x0000d007" />
+        <log value="0x0000f000" />
+        <log value="0x0000f006" />
+        <log value="0x00012005" />
+        <log value="0x00011007" />
+        <log value="0x0001100b" />
+        <log value="0x00003007-0x00003010" />
+        <log value="0x0000c00a" />
+        <log value="0x0000c00b" />
+        <log value="0x0000c00d" />
+        <log value="0x00007003" />
+        <log value="0x00009010" />
+        <log value="0x00011013" />
+        <log value="0x00011014" />
+        <log value="0x00013000" />
+        <log value="0x00014001" />
+        <log value="0x00014002" />
+        <import patch="Basic_thirdpart_app" />
+        <import patch="Basic" />
+    </item>
+</logarchive>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20260319</version>
+    <only_support_cls_list_switch>true</only_support_cls_list_switch>
+     <!--
+        function_mask:1111
+        * 第一位: 是否启用memrelease
+        * 第二位: 是否启用delay component
+        * 第三位: 是否启用freeze
+        * 第四位: 是否启用gc supression
+     -->
+    <optimize_camera_cls_function_mask>1111</optimize_camera_cls_function_mask>
+    <memory_release_value>6-300|8-400|12-500|16-800|24-800</memory_release_value>
+    <optimize_camera_cls_list>
+        <cls>com.tencent.mm.plugin.scanner.ui.BaseScanUI</cls>
+        <cls>com.alipay.mobile.scan.as.main.MainCaptureActivity</cls>
+        <cls>com.tencent.mobileqq.olympic.activity.QQScanActivity</cls>
+    </optimize_camera_cls_list>
+
+
+</filter-conf>

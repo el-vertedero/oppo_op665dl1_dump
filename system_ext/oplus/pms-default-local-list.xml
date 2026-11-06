@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ********************************************************************************
+ ** Copyright (C) 2018-2023 Oplus. All rights reserved.
+ ** All rights reserved.
+ **
+ ** File: - pms-default-local-list.xml
+ ** Description:
+ **     local attributes of pms pms-default-local-list.xml
+ **
+ ** Version: 1.1
+ ** Date: 2024-01-04
+ ** Author: Yuanxi.Zeng@ANDROID.PMS
+ **
+ ** <author>                        <data>       <version>   <desc>
+  ** Yuanxi.Zeng@ANDROID.PMS       2023-06-06   1.0         Create this file
+  ** Binwang.Xu@ANDROID.PMS        2024-01-04   1.1         Add OPlus Install And Uninstall receivers list
+  ** WangZiren@ANDROID.PMS         2026-06-26   1.2         Add ADI developer verification whitelist
+ ********************************************************************************/
+  -->
+
+<!--  #Yuanxi.Zeng@ANDROID.PMS, 2023/06/05, Add for hard code change of special secure pay app name -->
+<filter-conf>
+    <secure-pay-pkg>com.tencent.mm</secure-pay-pkg>
+    <secure-pay-activity>com.tencent.mm.plugin.wallet.pay.ui.WalletPayUI</secure-pay-activity>
+    <secure-pay-activity>com.tencent.mm.plugin.offline.ui.WalletOfflineCoinPurseUI</secure-pay-activity>
+    <secure-pay-activity>com.tencent.mm.framework.app.UIPageFragmentActivity</secure-pay-activity>
+    <secure-pay-activity>com.tencent.kinda.framework.app.UIPageFragmentActivity</secure-pay-activity>
+    <OPlusInstallAndUninstallReceivers>com.oplus.games</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.phonemanager</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.coloros.phonemanager</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.heytap.market</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.heytap.openid</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.heytap.quicksearchbox</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.safecenter</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.sau</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.securitypermission</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.statistics.rom</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.themestore</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.nearme.gamecenter</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.framework.network.drs</OPlusInstallAndUninstallReceivers>
+    <OPlusInstallAndUninstallReceivers>com.oplus.deepthinker</OPlusInstallAndUninstallReceivers>
+    <!--suenbiao@ANDROID.PMS, 2024/06/01, Add for rom size optimize-->
+    <!--removablePath should be apk path, not package name-->
+    <removablePath>amazonshopping_ww</removablePath>
+    <removablePath>amazonprimevideo_ww</removablePath>
+    <removablePath>amazonmusicunlimited_ww</removablePath>
+    <removablePath>YandexApp_with_Alice</removablePath>
+    <removablePath>YandexBrowser_new</removablePath>
+    <removablePath>YandexMaps_new</removablePath>
+    <oplus-package-restrictions>
+        <pkg name="com.coloros.deeptesting" forbidDebugMode="true"></pkg>
+        <pkg name="com.oplus.ota">
+            <forbidVersion>
+                <item version="14099999" />
+                <item version="99999999" />
+            </forbidVersion>
+        </pkg>
+    </oplus-package-restrictions>
+    <!--//LiHang@ANDROID.PMS, 2025/11/20, add for restore protected app-->
+    <OplusProtectedApp>android</OplusProtectedApp>
+    <OplusProtectedApp>com.android.packageinstaller</OplusProtectedApp>
+    <OplusProtectedApp>com.android.permissioncontroller</OplusProtectedApp>
+    <OplusProtectedApp>com.android.sdksandbox</OplusProtectedApp>
+    <OplusProtectedApp>com.android.wifi.resources</OplusProtectedApp>
+    <OplusProtectedApp>com.android.connectivity.resources</OplusProtectedApp>
+    <OplusProtectedApp>com.android.providers.settings</OplusProtectedApp>
+    <OplusProtectedApp>com.android.systemui</OplusProtectedApp>
+    <OplusProtectedApp>com.android.devicelockcontroller</OplusProtectedApp>
+    <OplusProtectedApp>com.android.modulemetadata</OplusProtectedApp>
+    <OplusProtectedApp>com.android.uwb.resources</OplusProtectedApp>
+    <OplusProtectedApp>android.ext.services</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.ext.services</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.devicelockcontroller</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.modulemetadata</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.uwb.resources</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.packageinstaller</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.permissioncontroller</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.sdksandbox</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.wifi.resources</OplusProtectedApp>
+    <OplusProtectedApp>com.google.android.connectivity.resources</OplusProtectedApp>
+    <DeveloperWhitelistInstallSource>com.oplus.sau</DeveloperWhitelistInstallSource>
+</filter-conf>

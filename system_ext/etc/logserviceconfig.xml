@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<AtomTracker>
+
+    <version>1000</version>
+    <atom>
+        <logConfig id="123456" enable="1" info="demoinfo" delayMs="0" maxDaySize="0" maxDayCount="0" timeInterval="0" moduleId="654321" logFilter="1">
+        </logConfig>
+        <logConfig id="100003" enable="1" info="moduleexception" delayMs="0" maxDaySize="2147483647" maxDayCount="6" timeInterval="0" moduleId="5" logFilter="1">
+        </logConfig>
+        <logConfig id="100004" enable="1" info="daemonexception" delayMs="0" maxDaySize="2147483647" maxDayCount="4" timeInterval="0" moduleId="6" logFilter="1">
+        </logConfig>
+        <logConfig id="100005" enable="1" info="smartmodemlog" delayMs="0" maxDaySize="2147483647" maxDayCount="2" timeInterval="0" moduleId="7" logFilter="-1">
+        </logConfig>
+        <logConfig id="100007" enable="1" info="borderpresearch" delayMs="0" maxDaySize="2147483647" maxDayCount="4" timeInterval="0" moduleId="8" logFilter="1">
+        </logConfig>
+    </atom>
+</AtomTracker>

@@ -1,0 +1,1408 @@
+{
+    "version": "1",
+    "operators": [
+        {
+            "operatorCode": "46000|46002|46004|46007|46008",
+            "version": "1",
+            "operatorName": "中国移动",
+            "operatorNameEn": "China Mobile",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "10086|1008611",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:套餐包含流量总量|套餐包含总流量|流量共有|国内通用流量(?!已使用|已用)|流量共|套餐总流量|套餐总量|总流量|套餐内(?:高速)?流量|本月套餐流量|本月流量套餐|套餐流量总量|共含流量|流量总量|内的|订购的)(?:总额|总量|总颟|共)?[:：为]?\\s*[（(]?\\s*(?:共)?\\s*|含\\s*|(?:成功购买|成功订购|已成功购买|已成功订购)[\u4e00-\u9fa5A-Za-z]{0,12}\\s*|(?:已全部用完|全部用完|已用完|已用尽|全部使用完毕)[（(]\\s*)([\\d.]+)(TB|GB|MB|KB|G(?![Bb])|M(?![Bb])|T(?![Bb])|K(?![Bb]))(?!\\s*(?:国内(?:通用)?流量)?\\s*\\+)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:已使用|已用|已用流量|使用了|用了|实际使用|本月已使用|本月合计使用|本月已消耗|本月共使用|共使用)(?:高速)?(?:流量)?[:：]?\\s*|(?=\\d+(?:\\.\\d+)?(?:TB|GB|MB|KB)\\s*(?:国内(?:通用)?流量)?(?:已)?(?:全部使用完毕|全部用完|已用完|已用尽|用尽)))(\\d+(?:\\.\\d+)?)(TB|GB|MB|KB|G(?![Bb])|M(?![Bb])|T(?![Bb])|K(?![Bb]))",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:剩余流量|流量剩余|剩余高速流量|剩余(?:高速)?流量|剩余|[，,]剩|您当前所办套餐剩余资源如下：手机流量|剩余国内流量|可使用|可使用流量|可用|可用流量|剩余仅|流量仅剩|剩余不足|仅剩)[:：]?\\s*(\\d+(?:\\.\\d+)?)(TB|GB|MB|KB|T|G|M|K)|(?:已全部用完|全部用完|已用完|已用尽|流量已用完|已经用尽|用尽|耗尽|已全部使用完毕|全部使用完毕|高速流量用尽|流量用尽)(?:[（(][\\d.]+(?:TB|GB|MB|KB)[）)])?(?!.*剩余\\s*[1-9])()())",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|0}", "{$2|MB}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:上网速率将降至|网络速度限制为|上网速度将|将限制为|网络速度将|国内上网速率已降至)不高于\\s*[\\d.]+|(?:网速已降至|网速降至|网速已限至|已限至|降低至|速度已限制为|将被限制为|限制为|调整至|降至不高于)\\s*[\\d.]+\\s*(?:Mbps|Kbps|kbps|mbps)|不高于\\s*[\\d.]+\\s*(?:Mbps|Kbps|kbps|mbps)|(?:流量达量限速|处于流量达量限速状态|达到限速阈值|限速阈值已触发|流量限速提醒|流量限速通知|【流量限速】)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:(?:上网速率|网络速度|网速|上网速度)(?:已)?恢复正常|恢复正常(?:上网)?速率|网速限制已恢复正常|恢复正常上网|(?:已)?取消(?:网络)?限速|限速(?:已)?取消)",
+                            "fields": ["throttled"],
+                            "values": ["0"],
+                            "priority": 5
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "10086|1008611",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:账户余额仅剩|账户余额仅|账户余额为|账户余额|话费余额|剩余话费为|剩余话费|余额仅剩|余额仅|余额为|账户当前可用余额：|余额已不足|可用额度为|剩余可用额度已低于|余额不足|(?=.*(?:不足|低于|仅剩|已不足|即将欠费))(?:当前余额为|当前余额|当前可用余额|可用余额))\\s*([\\d.]+)\\s*(元?)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:欠费|已透支|有未付款的通信费|已欠费|当前欠费|欠费金额为)\\s*([\\d.]+)\\s*(元)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["-$1", "$2", "ARREARS"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?=.*已停机).*?欠费\\s*([\\d.]+)\\s*(元)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["-$1", "$2", "SUSPENDED"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:充值成功(?!后)|缴费成功(?!后)|成功充值|成功缴费|交费|已到账|为本机充值)[^。]*?(?:余额[为]?|可用余额|当前余额为|当前余额)\\s*([\\d.]+)\\s*(元?)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:已复机|已成功复机|(?<!将自动)恢复开机|完成复机|成功完成充值并恢复开机|恢复服务|手机已成功复机)(?:[^。]*?余额\\s*([\\d.]+)\\s*(元)|()())",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "RESTORED"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:充值成功(?!后)|缴费成功(?!后)|成功充值|成功缴费|交费|分充值|为本机充值|已到账\\s*[\\d.]+\\s*元?充值款?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 6
+                        }
+                    ]
+                },
+                {
+                    "type": "CROSS_REGIONAL",
+                    "typeDescription": "Cross regional reminder",
+                    "senderPattern": "10086|1008611",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)([\u4e00-\u9fa5]{2,10}(?:省|自治区))",
+                            "fields": ["isCrossRegional", "newProvince"],
+                            "values": ["1", "$1"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)((?:北京|上海|天津|重庆)市)",
+                            "fields": ["isCrossRegional", "newProvince", "newCity"],
+                            "values": ["1", "$1", "$1"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)([\u4e00-\u9fa5]{2,8}市)",
+                            "fields": ["isCrossRegional", "newCity"],
+                            "values": ["1", "$1"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "【([\u4e00-\u9fa5]{2,6}(?:维吾尔自治区|壮族自治区|回族自治区|藏族自治区|自治区))[^】]*】",
+                            "fields": ["newProvince"],
+                            "values": ["$1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到([\u4e00-\u9fa5]{2,15}(?:省|自治区|自贸港))(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newProvince"],
+                            "values": ["1", "$1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到((?:北京|上海|天津|重庆)市)(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newProvince", "newCity"],
+                            "values": ["1", "$1", "$1"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到([\u4e00-\u9fa5]{2,15}(?:市|景区))(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newCity"],
+                            "values": ["1", "$1"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "【[^】]*?([\u4e00-\u9fa5]{2,10}(?:省|自治区))(?:移动|联通|电信)】",
+                            "fields": ["newProvince"],
+                            "values": ["$1"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "【[^】]*?((?:北京|上海|天津|重庆)市)(?:移动|联通|电信)】",
+                            "fields": ["newProvince", "newCity"],
+                            "values": ["$1", "$1"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "您(?:当前)?位于[\u4e00-\u9fa5]{2,15}",
+                            "fields": ["isCrossRegional"],
+                            "values": ["1"],
+                            "priority": 10
+                        },
+                        {
+                            "regex": "[（(]([\u4e00-\u9fa5]{2,8}(?:市|县|区|镇|港))[）)]",
+                            "fields": ["newCity"],
+                            "values": ["$1"],
+                            "priority": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "46001|46006|46009",
+            "version": "1",
+            "operatorName": "中国联通",
+            "operatorNameEn": "China Unicom",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "10010",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:套餐包含流量总量|套餐包含总流量|流量共有|国内通用流量(?!已使用|已用)|流量共|套餐总流量|套餐总量|总流量|套餐内(?:高速)?流量|本月套餐流量|本月流量套餐|套餐流量总量|共含流量|流量总量|内的|订购的)(?:总额|总量|总颟|共)?[:：为]?\\s*[（(]?\\s*(?:共)?\\s*|含\\s*|(?:成功购买|成功订购|已成功购买|已成功订购)[\u4e00-\u9fa5A-Za-z]{0,12}\\s*|(?:已全部用完|全部用完|已用完|已用尽|全部使用完毕)[（(]\\s*)([\\d.]+)(TB|GB|MB|KB|G(?![Bb])|M(?![Bb])|T(?![Bb])|K(?![Bb]))(?!\\s*(?:国内(?:通用)?流量)?\\s*\\+)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:已使用|已用|已用流量|使用了|用了|实际使用|本月已使用|本月合计使用|本月已消耗|本月共使用|共使用)(?:高速)?(?:流量)?[:：]?\\s*|(?=\\d+(?:\\.\\d+)?(?:TB|GB|MB|KB)\\s*(?:国内(?:通用)?流量)?(?:已)?(?:全部使用完毕|全部用完|已用完|已用尽|用尽)))(\\d+(?:\\.\\d+)?)(TB|GB|MB|KB|G(?![Bb])|M(?![Bb])|T(?![Bb])|K(?![Bb]))",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:剩余流量|流量剩余|剩余高速流量|剩余(?:高速)?流量|剩余|[，,]剩|您当前所办套餐剩余资源如下：手机流量|剩余国内流量|可使用|可使用流量|可用|可用流量|剩余仅|流量仅剩|剩余不足|仅剩)[:：]?\\s*(\\d+(?:\\.\\d+)?)(TB|GB|MB|KB|T|G|M|K)|(?:已全部用完|全部用完|已用完|已用尽|流量已用完|已经用尽|用尽|耗尽|已全部使用完毕|全部使用完毕|高速流量用尽|流量用尽)(?:[（(][\\d.]+(?:TB|GB|MB|KB)[）)])?(?!.*剩余\\s*[1-9])()())",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|0}", "{$2|MB}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:上网速率将降至|网络速度限制为|上网速度将|将限制为|网络速度将|国内上网速率已降至)不高于\\s*[\\d.]+|(?:网速已降至|网速降至|网速已限至|已限至|降低至|速度已限制为|将被限制为|限制为|调整至|降至不高于)\\s*[\\d.]+\\s*(?:Mbps|Kbps|kbps|mbps)|不高于\\s*[\\d.]+\\s*(?:Mbps|Kbps|kbps|mbps)|(?:流量达量限速|处于流量达量限速状态|达到限速阈值|限速阈值已触发|流量限速提醒|流量限速通知|【流量限速】)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:(?:上网速率|网络速度|网速|上网速度)(?:已)?恢复正常|恢复正常(?:上网)?速率|网速限制已恢复正常|恢复正常上网|(?:已)?取消(?:网络)?限速|限速(?:已)?取消)",
+                            "fields": ["throttled"],
+                            "values": ["0"],
+                            "priority": 5
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "10010",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:账户余额仅剩|账户余额仅|账户余额为|账户余额|话费余额|剩余话费为|剩余话费|余额仅剩|余额仅|余额为|账户当前可用余额：|余额已不足|可用额度为|剩余可用额度已低于|余额不足|(?=.*(?:不足|低于|仅剩|已不足|即将欠费))(?:当前余额为|当前余额|当前可用余额|可用余额))\\s*([\\d.]+)\\s*(元?)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:欠费|已透支|有未付款的通信费|已欠费|当前欠费|欠费金额为)\\s*([\\d.]+)\\s*(元)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["-$1", "$2", "ARREARS"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?=.*已停机).*?欠费\\s*([\\d.]+)\\s*(元)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["-$1", "$2", "SUSPENDED"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:充值成功(?!后)|缴费成功(?!后)|成功充值|成功缴费|交费|已到账|为本机充值)[^。]*?(?:余额[为]?|可用余额|当前余额为|当前余额)\\s*([\\d.]+)\\s*(元?)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:已复机|已成功复机|(?<!将自动)恢复开机|完成复机|成功完成充值并恢复开机|恢复服务|手机已成功复机)(?:[^。]*?余额\\s*([\\d.]+)\\s*(元)|()())",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "RESTORED"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:充值成功(?!后)|缴费成功(?!后)|成功充值|成功缴费|交费|分充值|为本机充值|已到账\\s*[\\d.]+\\s*元?充值款?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 6
+                        }
+                    ]
+                },
+                {
+                    "type": "CROSS_REGIONAL",
+                    "typeDescription": "Cross regional reminder",
+                    "senderPattern": "10010",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)([\u4e00-\u9fa5]{2,10}(?:省|自治区))",
+                            "fields": ["isCrossRegional", "newProvince"],
+                            "values": ["1", "$1"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)((?:北京|上海|天津|重庆)市)",
+                            "fields": ["isCrossRegional", "newProvince", "newCity"],
+                            "values": ["1", "$1", "$1"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)([\u4e00-\u9fa5]{2,8}市)",
+                            "fields": ["isCrossRegional", "newCity"],
+                            "values": ["1", "$1"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "【([\u4e00-\u9fa5]{2,6}(?:维吾尔自治区|壮族自治区|回族自治区|藏族自治区|自治区))[^】]*】",
+                            "fields": ["newProvince"],
+                            "values": ["$1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到([\u4e00-\u9fa5]{2,15}(?:省|自治区|自贸港))(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newProvince"],
+                            "values": ["1", "$1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到((?:北京|上海|天津|重庆)市)(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newProvince", "newCity"],
+                            "values": ["1", "$1", "$1"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到([\u4e00-\u9fa5]{2,15}(?:市|景区))(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newCity"],
+                            "values": ["1", "$1"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "【[^】]*?([\u4e00-\u9fa5]{2,10}(?:省|自治区))(?:移动|联通|电信)】",
+                            "fields": ["newProvince"],
+                            "values": ["$1"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "【[^】]*?((?:北京|上海|天津|重庆)市)(?:移动|联通|电信)】",
+                            "fields": ["newProvince", "newCity"],
+                            "values": ["$1", "$1"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "您(?:当前)?位于[\u4e00-\u9fa5]{2,15}",
+                            "fields": ["isCrossRegional"],
+                            "values": ["1"],
+                            "priority": 10
+                        },
+                        {
+                            "regex": "[（(]([\u4e00-\u9fa5]{2,8}(?:市|县|区|镇|港))[）)]",
+                            "fields": ["newCity"],
+                            "values": ["$1"],
+                            "priority": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "46003|46005|46011",
+            "version": "1",
+            "operatorName": "中国电信",
+            "operatorNameEn": "China Telecom",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "10000|10001",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:套餐包含流量总量|套餐包含总流量|流量共有|国内通用流量(?!已使用|已用)|流量共|套餐总流量|套餐总量|总流量|套餐内(?:高速)?流量|本月套餐流量|本月流量套餐|套餐流量总量|共含流量|流量总量|内的|订购的)(?:总额|总量|总颟|共)?[:：为]?\\s*[（(]?\\s*(?:共)?\\s*|含\\s*|(?:成功购买|成功订购|已成功购买|已成功订购)[\u4e00-\u9fa5A-Za-z]{0,12}\\s*|(?:已全部用完|全部用完|已用完|已用尽|全部使用完毕)[（(]\\s*)([\\d.]+)(TB|GB|MB|KB|G(?![Bb])|M(?![Bb])|T(?![Bb])|K(?![Bb]))(?!\\s*(?:国内(?:通用)?流量)?\\s*\\+)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:已使用|已用|已用流量|使用了|用了|实际使用|本月已使用|本月合计使用|本月已消耗|本月共使用|共使用)(?:高速)?(?:流量)?[:：]?\\s*|(?=\\d+(?:\\.\\d+)?(?:TB|GB|MB|KB)\\s*(?:国内(?:通用)?流量)?(?:已)?(?:全部使用完毕|全部用完|已用完|已用尽|用尽)))(\\d+(?:\\.\\d+)?)(TB|GB|MB|KB|G(?![Bb])|M(?![Bb])|T(?![Bb])|K(?![Bb]))",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:剩余流量|流量剩余|剩余高速流量|剩余(?:高速)?流量|剩余|[，,]剩|您当前所办套餐剩余资源如下：手机流量|剩余国内流量|可使用|可使用流量|可用|可用流量|剩余仅|流量仅剩|剩余不足|仅剩)[:：]?\\s*(\\d+(?:\\.\\d+)?)(TB|GB|MB|KB|T|G|M|K)|(?:已全部用完|全部用完|已用完|已用尽|流量已用完|已经用尽|用尽|耗尽|已全部使用完毕|全部使用完毕|高速流量用尽|流量用尽)(?:[（(][\\d.]+(?:TB|GB|MB|KB)[）)])?(?!.*剩余\\s*[1-9])()())",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|0}", "{$2|MB}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:上网速率将降至|网络速度限制为|上网速度将|将限制为|网络速度将|国内上网速率已降至)不高于\\s*[\\d.]+|(?:网速已降至|网速降至|网速已限至|已限至|降低至|速度已限制为|将被限制为|限制为|调整至|降至不高于)\\s*[\\d.]+\\s*(?:Mbps|Kbps|kbps|mbps)|不高于\\s*[\\d.]+\\s*(?:Mbps|Kbps|kbps|mbps)|(?:流量达量限速|处于流量达量限速状态|达到限速阈值|限速阈值已触发|流量限速提醒|流量限速通知|【流量限速】)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:(?:上网速率|网络速度|网速|上网速度)(?:已)?恢复正常|恢复正常(?:上网)?速率|网速限制已恢复正常|恢复正常上网|(?:已)?取消(?:网络)?限速|限速(?:已)?取消)",
+                            "fields": ["throttled"],
+                            "values": ["0"],
+                            "priority": 5
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "10000|10001",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:账户余额仅剩|账户余额仅|账户余额为|账户余额|话费余额|剩余话费为|剩余话费|余额仅剩|余额仅|余额为|账户当前可用余额：|余额已不足|可用额度为|剩余可用额度已低于|余额不足|(?=.*(?:不足|低于|仅剩|已不足|即将欠费))(?:当前余额为|当前余额|当前可用余额|可用余额))\\s*([\\d.]+)\\s*(元?)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:欠费|已透支|有未付款的通信费|已欠费|当前欠费|欠费金额为)\\s*([\\d.]+)\\s*(元)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["-$1", "$2", "ARREARS"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?=.*已停机).*?欠费\\s*([\\d.]+)\\s*(元)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["-$1", "$2", "SUSPENDED"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:充值成功(?!后)|缴费成功(?!后)|成功充值|成功缴费|交费|已到账|为本机充值)[^。]*?(?:余额[为]?|可用余额|当前余额为|当前余额)\\s*([\\d.]+)\\s*(元?)",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:已复机|已成功复机|(?<!将自动)恢复开机|完成复机|成功完成充值并恢复开机|恢复服务|手机已成功复机)(?:[^。]*?余额\\s*([\\d.]+)\\s*(元)|()())",
+                            "fields": ["balance", "balanceUnit", "statusType"],
+                            "values": ["$1", "$2", "RESTORED"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:充值成功(?!后)|缴费成功(?!后)|成功充值|成功缴费|交费|分充值|为本机充值|已到账\\s*[\\d.]+\\s*元?充值款?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 6
+                        }
+                    ]
+                },
+                {
+                    "type": "CROSS_REGIONAL",
+                    "typeDescription": "Cross regional reminder",
+                    "senderPattern": "10000|10001",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)([\u4e00-\u9fa5]{2,10}(?:省|自治区))",
+                            "fields": ["isCrossRegional", "newProvince"],
+                            "values": ["1", "$1"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)((?:北京|上海|天津|重庆)市)",
+                            "fields": ["isCrossRegional", "newProvince", "newCity"],
+                            "values": ["1", "$1", "$1"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:您已进入|您已到达|已进入|已到达)([\u4e00-\u9fa5]{2,8}市)",
+                            "fields": ["isCrossRegional", "newCity"],
+                            "values": ["1", "$1"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "【([\u4e00-\u9fa5]{2,6}(?:维吾尔自治区|壮族自治区|回族自治区|藏族自治区|自治区))[^】]*】",
+                            "fields": ["newProvince"],
+                            "values": ["$1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到([\u4e00-\u9fa5]{2,15}(?:省|自治区|自贸港))(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newProvince"],
+                            "values": ["1", "$1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到((?:北京|上海|天津|重庆)市)(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newProvince", "newCity"],
+                            "values": ["1", "$1", "$1"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "欢迎(?:您)?来到([\u4e00-\u9fa5]{2,15}(?:市|景区))(?=[！!，,。]|$)",
+                            "fields": ["isCrossRegional", "newCity"],
+                            "values": ["1", "$1"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "【[^】]*?([\u4e00-\u9fa5]{2,10}(?:省|自治区))(?:移动|联通|电信)】",
+                            "fields": ["newProvince"],
+                            "values": ["$1"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "【[^】]*?((?:北京|上海|天津|重庆)市)(?:移动|联通|电信)】",
+                            "fields": ["newProvince", "newCity"],
+                            "values": ["$1", "$1"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "您(?:当前)?位于[\u4e00-\u9fa5]{2,15}",
+                            "fields": ["isCrossRegional"],
+                            "values": ["1"],
+                            "priority": 10
+                        },
+                        {
+                            "regex": "[（(]([\u4e00-\u9fa5]{2,8}(?:市|县|区|镇|港))[）)]",
+                            "fields": ["newCity"],
+                            "values": ["$1"],
+                            "priority": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "40402|40403|40410|40411|40420|40421|40422|40423|40424|40425|40430|40431|40440|40441|40445|40446|40449|40470|40490|40491|40492|40493|40494|40495|40496|40497|40498|40499",
+            "version": "1",
+            "operatorName": "Airtel",
+            "operatorNameEn": "Airtel",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "AIRTEL|AIRTELINDIA|AIRTELIN|LM-AIRTEL|VM-AIRTEL|AD-AIRTEL|121|140121",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:[Rr]emaining\\s+(?:data\\s+)?|(?:data\\s+)?remaining\\s*[,:]?\\s*|(?:[Jj]io\\s+)?data\\s+balance\\s+is\\s+|[Cc]urrent\\s+(?:data\\s+)?[Bb]alance\\s*:?\\s*)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?=[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of\\s+)?(?:high[-\\s]?speed\\s+)?(?:data\\s+)?(?:remaining|left|balance))([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:(?:your\\s+)?(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data).{0,50}?(?:is\\s+)?(?:fully\\s+)?(?:exhausted|consumed|finished|over|used\\s+up)|(?:have\\s+)?(?:consumed|used)\\s+100%\\s+of\\s+your|(?:Alert\\s*)?100%\\s*:|(?:ALERT!?\\s*)?100%\\s+of\\s+(?:your\\s+)?daily\\s+data)(?!.*(?:remaining|left)\\s*[1-9]))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3|0}", "{$2|$4|MB}"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:[Yy]ou\\s+(?:have\\s+)?used|[Dd]ata\\s+used|[Uu]sed)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+used)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Dd]aily\\s+[Qq]uota|[Qq]uota\\s+as\\s+per\\s+plan|రోజువారీ\\s+కోటా|[Dd]ata\\s+(?:[Ll]imit|[Qq]uota|[Pp]ack))\\s*:?\\s*|(?:/\\s*)?[Tt]otal\\s+|(?:remaining|left)\\s+of\\s+|(?:daily\\s+)?(?:high\\s+speed\\s+)?data\\s+(?:quota|pack|limit)\\s+of\\s+|daily\\s+high\\s+speed\\s+data\\s+of\\s+|(?:data\\s+pack|high\\s+speed\\s+data)\\s+(?:of\\s+|\\()|of\\s+total\\s+|of\\s+your\\s+|out\\s+of\\s+|used\\s+[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of|out\\s+of)\\s+|[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+used\\s+(?:of|out\\s+of)\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s*(?:per\\s+day|/day|daily)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Dd]ata\\s+(?:pack\\s+)?(?:is\\s+over|exhausted|finished|fully\\s+used|used\\s+up|limit\\s+reached)|[Dd]aily\\s+[Dd]ata\\s+pack\\s+is\\s+over|(?:your\\s+)?data\\s+is\\s+over|(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data(?:\\s+quota)?|high\\s+speed\\s+internet\\s+quota|daily\\s+high\\s+speed\\s+data).{0,80}?(?:exhausted|fully\\s+exhausted|is\\s+over|finished|consumed|used\\s+up)|(?:[Ii]nternet\\s+)?[Ss]peed\\s+(?:is\\s+now\\s+|will\\s+be\\s+|now\\s+)?(?:limited\\s+to|reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps|[Kk][Bb]\\s*ps)|(?:[Yy]our\\s+)?internet\\s+speed\\s+is\\s+now\\s+[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ss]peed\\s+(?:is\\s+now\\s+)?(?:reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ii]nternet\\s+[Ss]peed\\s+will\\s+be\\s+[Rr]educed)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+used|data\\s+quota(?!\\s+of)|quota(?!\\s+of)|data(?!\\s+quota\\s+of))|(?:Alert\\s*)?(\\d{1,3})%\\s*:",
+                            "fields": ["usedPercent"],
+                            "values": ["{$1|$2}"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "(?:(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+)?quota\\s+of\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:used\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+data)",
+                            "fields": ["usedPercent", "totalData", "totalDataUnit"],
+                            "values": ["{$1|$4}", "{$2|$5}", "{$3|$6}"],
+                            "priority": 7
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "AIRTEL|AIRTELINDIA|AIRTELIN|LM-AIRTEL|VM-AIRTEL|AD-AIRTEL|121|140121",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:[Pp]ack|[Pp]lan).*?(?:successfully\\s+activated|renewed|recharged|subscribed)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:pack|plan).*?(?:samapt\\s+ho\\s+gaya|expired|expir[ei]d)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "[Rr]echarge\\s+(?:now|karein).*?(Rs\\.?|INR)\\s*([\\d.]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "[Ll]ow\\s+[Bb]alance|[Bb]alance\\s+(?:is\\s+)?(?:low|insufficient|critically\\s+low)",
+                            "fields": ["statusType"],
+                            "values": ["LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?<![Dd]ata\\s)[Bb]al(?:ance)?\\s*(?:is|:)?\\s*(Rs\\.?|INR)?\\s*\\.?\\s*([\\d.]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["{$1|}", "$2", "LOW"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:Rs\\.\\s*(?:\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+has\\s+been\\s+successfully\\s+recharged|[Cc]redited\\s+with\\s+Rs\\.?\\s*\\.?\\s*[\\d,]+(?:\\.\\d+)?|[Rr]echarged\\s+with\\s+Rs\\.?\\s*[\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "405840|405854|405855|405856|405857|405858|405859|405860",
+            "version": "1",
+            "operatorName": "Reliance Jio",
+            "operatorNameEn": "Reliance Jio",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "JIOREL|JIOCIN|JIOMSG|JIO|JIOMS|LM-JIOREL|VM-JIOREL|AD-JIOREL|199|198",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:[Dd]aily\\s+[Qq]uota|[Qq]uota\\s+as\\s+per\\s+plan|రోజువారీ\\s+కోటా|[Dd]ata\\s+(?:[Ll]imit|[Qq]uota|[Pp]ack))\\s*:?\\s*|(?:/\\s*)?[Tt]otal\\s+|(?:remaining|left)\\s+of\\s+|(?:daily\\s+)?(?:high\\s+speed\\s+)?data\\s+(?:quota|pack|limit)\\s+of\\s+|daily\\s+high\\s+speed\\s+data\\s+of\\s+|(?:data\\s+pack|high\\s+speed\\s+data)\\s+(?:of\\s+|\\()|of\\s+total\\s+|of\\s+your\\s+|out\\s+of\\s+|used\\s+[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of|out\\s+of)\\s+|[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+used\\s+(?:of|out\\s+of)\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:[Yy]ou\\s+(?:have\\s+)?used|[Dd]ata\\s+used|[Uu]sed)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+used)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Rr]emaining\\s+(?:data\\s+)?|(?:data\\s+)?remaining\\s*[,:]?\\s*|(?:[Jj]io\\s+)?data\\s+balance\\s+is\\s+|[Cc]urrent\\s+(?:data\\s+)?[Bb]alance\\s*:?\\s*)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?=[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of\\s+)?(?:high[-\\s]?speed\\s+)?(?:data\\s+)?(?:remaining|left|balance))([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:(?:your\\s+)?(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data).{0,50}?(?:is\\s+)?(?:fully\\s+)?(?:exhausted|consumed|finished|over|used\\s+up)|(?:have\\s+)?(?:consumed|used)\\s+100%\\s+of\\s+your|(?:Alert\\s*)?100%\\s*:|(?:ALERT!?\\s*)?100%\\s+of\\s+(?:your\\s+)?daily\\s+data)(?!.*(?:remaining|left)\\s*[1-9]))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3|0}", "{$2|$4|MB}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:[Dd]ata\\s+(?:pack\\s+)?(?:is\\s+over|exhausted|finished|fully\\s+used|used\\s+up|limit\\s+reached)|[Dd]aily\\s+[Dd]ata\\s+pack\\s+is\\s+over|(?:your\\s+)?data\\s+is\\s+over|(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data(?:\\s+quota)?|high\\s+speed\\s+internet\\s+quota|daily\\s+high\\s+speed\\s+data).{0,80}?(?:exhausted|fully\\s+exhausted|is\\s+over|finished|consumed|used\\s+up)|(?:[Ii]nternet\\s+)?[Ss]peed\\s+(?:is\\s+now\\s+|will\\s+be\\s+|now\\s+)?(?:limited\\s+to|reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps|[Kk][Bb]\\s*ps)|(?:[Yy]our\\s+)?internet\\s+speed\\s+is\\s+now\\s+[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ss]peed\\s+(?:is\\s+now\\s+)?(?:reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ii]nternet\\s+[Ss]peed\\s+will\\s+be\\s+[Rr]educed)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Ii]nternet\\s+[Ss]peed\\s+will\\s+be\\s+[Rr]educed|[Hh]igh\\s+speed\\s+data\\s+(?:is\\s+)?(?:over|exhausted)|(?:will\\s+now\\s+be\\s+)?[Rr]educed\\s+to\\s+[\\d.]+\\s*(?:[Kk][Bb](?:ps)?|[Kk]bps)|(?:వేగం|[Ss]peed)\\s+(?:ఇప్పుడు|now)\\s+[\\d.]+\\s*(?:[Kk][Bb]|[Kk]bps))",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+used|data\\s+quota(?!\\s+of)|quota(?!\\s+of)|data(?!\\s+quota\\s+of))|(?:Alert\\s*)?(\\d{1,3})%\\s*:",
+                            "fields": ["usedPercent"],
+                            "values": ["{$1|$2}"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+హై\\s+స్పీడ్",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "ప్రస్తుత\\s+డేటా\\s+బ్యాలెన్స్\\s*:\\s*([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "(?:(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+)?quota\\s+of\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:used\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+data)",
+                            "fields": ["usedPercent", "totalData", "totalDataUnit"],
+                            "values": ["{$1|$4}", "{$2|$5}", "{$3|$6}"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s*(?:per\\s+day|/day|daily)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 10
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "JIOREL|JIOCIN|JIOMSG|JIO|JIOMS|LM-JIOREL|VM-JIOREL|AD-JIOREL|199|198",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Yy]our\\s+(?:Jio\\s+)?plan\\s+(?:of\\s+(?:Rs\\.?|INR)\\s*[\\d.]+\\s+)?(?:has\\s+been\\s+)?(?:successfully\\s+)?(?:activated|renewed|recharged|subscribed)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "[Pp]lan\\s+(?:validity\\s+)?(?:has\\s+)?expir",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "[Rr]echarge\\s+now.*?(Rs\\.?|INR)\\s*\\.?\\s*([\\d.]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:[Yy]our\\s+(?:account\\s+)?[Bb]alance\\s+is|(?:[Bb]al|[Bb]alance)\\s*:)\\s*(Rs\\.?|INR)?\\s*\\.?\\s*([\\d.]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:Rs\\.\\s*(?:\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+has\\s+been\\s+successfully\\s+recharged|[Cc]redited\\s+with\\s+Rs\\.?\\s*\\.?\\s*[\\d,]+(?:\\.\\d+)?|[Rr]echarged\\s+with\\s+Rs\\.?\\s*[\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "[Cc]redited\\s+with\\s+(Rs\\.?)\\s*\\.?\\s*([\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "[Yy]our\\s+(?:Jio\\s+)?plan\\s+(?:of\\s+)?(Rs\\.?)\\s*([\\d,]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "[Aa]mount\\s+payable\\s+(?:is\\s+)?(Rs\\.?)\\s*\\.?\\s*([\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "40451|40452|40453|40454|40455|40456|40457|40458|40459|40460|40461|40462|40463|40464|40465|40466|40467|40473",
+            "version": "1",
+            "operatorName": "BSNL",
+            "operatorNameEn": "BSNL",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "BSNL|BSNLSMS|MYBSNL|BSNLIN|LM-BSNLSM|VM-BSNLSM|123|1503",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:[Rr]emaining\\s+(?:data\\s+)?|(?:data\\s+)?remaining\\s*[,:]?\\s*|(?:[Jj]io\\s+)?data\\s+balance\\s+is\\s+|[Cc]urrent\\s+(?:data\\s+)?[Bb]alance\\s*:?\\s*)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?=[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of\\s+)?(?:high[-\\s]?speed\\s+)?(?:data\\s+)?(?:remaining|left|balance))([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:(?:your\\s+)?(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data).{0,50}?(?:is\\s+)?(?:fully\\s+)?(?:exhausted|consumed|finished|over|used\\s+up)|(?:have\\s+)?(?:consumed|used)\\s+100%\\s+of\\s+your|(?:Alert\\s*)?100%\\s*:|(?:ALERT!?\\s*)?100%\\s+of\\s+(?:your\\s+)?daily\\s+data)(?!.*(?:remaining|left)\\s*[1-9]))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3|0}", "{$2|$4|MB}"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:[Yy]ou\\s+(?:have\\s+)?used|[Dd]ata\\s+used|[Uu]sed)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+used)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s*(?:per\\s+day|/day|daily)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:(?:[Dd]aily\\s+[Qq]uota|[Qq]uota\\s+as\\s+per\\s+plan|రోజువారీ\\s+కోటా|[Dd]ata\\s+(?:[Ll]imit|[Qq]uota|[Pp]ack))\\s*:?\\s*|(?:/\\s*)?[Tt]otal\\s+|(?:remaining|left)\\s+of\\s+|(?:daily\\s+)?(?:high\\s+speed\\s+)?data\\s+(?:quota|pack|limit)\\s+of\\s+|daily\\s+high\\s+speed\\s+data\\s+of\\s+|(?:data\\s+pack|high\\s+speed\\s+data)\\s+(?:of\\s+|\\()|of\\s+total\\s+|of\\s+your\\s+|out\\s+of\\s+|used\\s+[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of|out\\s+of)\\s+|[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+used\\s+(?:of|out\\s+of)\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Dd]ata\\s+(?:pack\\s+)?(?:is\\s+over|exhausted|finished|fully\\s+used|used\\s+up|limit\\s+reached)|[Dd]aily\\s+[Dd]ata\\s+pack\\s+is\\s+over|(?:your\\s+)?data\\s+is\\s+over|(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data(?:\\s+quota)?|high\\s+speed\\s+internet\\s+quota|daily\\s+high\\s+speed\\s+data).{0,80}?(?:exhausted|fully\\s+exhausted|is\\s+over|finished|consumed|used\\s+up)|(?:[Ii]nternet\\s+)?[Ss]peed\\s+(?:is\\s+now\\s+|will\\s+be\\s+|now\\s+)?(?:limited\\s+to|reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps|[Kk][Bb]\\s*ps)|(?:[Yy]our\\s+)?internet\\s+speed\\s+is\\s+now\\s+[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ss]peed\\s+(?:is\\s+now\\s+)?(?:reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ii]nternet\\s+[Ss]peed\\s+will\\s+be\\s+[Rr]educed)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+used|data\\s+quota(?!\\s+of)|quota(?!\\s+of)|data(?!\\s+quota\\s+of))|(?:Alert\\s*)?(\\d{1,3})%\\s*:",
+                            "fields": ["usedPercent"],
+                            "values": ["{$1|$2}"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "(?:(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+)?quota\\s+of\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:used\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+data)",
+                            "fields": ["usedPercent", "totalData", "totalDataUnit"],
+                            "values": ["{$1|$4}", "{$2|$5}", "{$3|$6}"],
+                            "priority": 7
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "BSNL|BSNLSMS|MYBSNL|BSNLIN|LM-BSNLSM|VM-BSNLSM|123|1503",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Pp]lan\\s+[Vv]alidity\\s+(?:has\\s+)?(?:expired|lapsed|ended)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "[Pp]lan\\s+(?:validity\\s+)?(?:expires?|expiring)\\s+(?:on|soon)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "[Rr]echarge\\s+with.*?([\\d]+)",
+                            "fields": ["balance", "statusType"],
+                            "values": ["$1", "RECHARGE"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?<![Dd]ata\\s)[Bb]al(?:ance)?\\s*(?:is|:)?\\s*(Rs\\.?|INR)?\\s*\\.?\\s*([\\d.]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["{$1|}", "$2", "LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:Rs\\.\\s*(?:\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+has\\s+been\\s+successfully\\s+recharged|[Cc]redited\\s+with\\s+Rs\\.?\\s*\\.?\\s*[\\d,]+(?:\\.\\d+)?|[Rr]echarged\\s+with\\s+Rs\\.?\\s*[\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "40405|40406|40407|40408|40409|40412|40413|40414|40415|40416|40417|40418|40419|40426",
+            "version": "1",
+            "operatorName": "Vodafone Idea",
+            "operatorNameEn": "Vodafone Idea",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "VODA|IDEAIN|VIINDIA|VI|LM-VODA|VM-VODA|AD-VODA|VODAFONE|IDEA|199|144",
+                    "contentPatterns": [
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+left\\s+on\\s+your(?:\\s+Daily)?\\s+Data\\s+pack",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:[Rr]emaining\\s+(?:data\\s+)?|(?:data\\s+)?remaining\\s*[,:]?\\s*|(?:[Jj]io\\s+)?data\\s+balance\\s+is\\s+|[Cc]urrent\\s+(?:data\\s+)?[Bb]alance\\s*:?\\s*)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?=[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of\\s+)?(?:high[-\\s]?speed\\s+)?(?:data\\s+)?(?:remaining|left|balance))([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:(?:your\\s+)?(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data).{0,50}?(?:is\\s+)?(?:fully\\s+)?(?:exhausted|consumed|finished|over|used\\s+up)|(?:have\\s+)?(?:consumed|used)\\s+100%\\s+of\\s+your|(?:Alert\\s*)?100%\\s*:|(?:ALERT!?\\s*)?100%\\s+of\\s+(?:your\\s+)?daily\\s+data)(?!.*(?:remaining|left)\\s*[1-9]))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3|0}", "{$2|$4|MB}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Yy]ou\\s+(?:have\\s+)?used|[Dd]ata\\s+used|[Uu]sed)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+used)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:(?:[Dd]aily\\s+[Qq]uota|[Qq]uota\\s+as\\s+per\\s+plan|రోజువారీ\\s+కోటా|[Dd]ata\\s+(?:[Ll]imit|[Qq]uota|[Pp]ack))\\s*:?\\s*|(?:/\\s*)?[Tt]otal\\s+|(?:remaining|left)\\s+of\\s+|(?:daily\\s+)?(?:high\\s+speed\\s+)?data\\s+(?:quota|pack|limit)\\s+of\\s+|daily\\s+high\\s+speed\\s+data\\s+of\\s+|(?:data\\s+pack|high\\s+speed\\s+data)\\s+(?:of\\s+|\\()|of\\s+total\\s+|of\\s+your\\s+|out\\s+of\\s+|used\\s+[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of|out\\s+of)\\s+|[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+used\\s+(?:of|out\\s+of)\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Dd]ata\\s+(?:pack\\s+)?(?:is\\s+over|exhausted|finished|fully\\s+used|used\\s+up|limit\\s+reached)|[Dd]aily\\s+[Dd]ata\\s+pack\\s+is\\s+over|(?:your\\s+)?data\\s+is\\s+over|(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data(?:\\s+quota)?|high\\s+speed\\s+internet\\s+quota|daily\\s+high\\s+speed\\s+data).{0,80}?(?:exhausted|fully\\s+exhausted|is\\s+over|finished|consumed|used\\s+up)|(?:[Ii]nternet\\s+)?[Ss]peed\\s+(?:is\\s+now\\s+|will\\s+be\\s+|now\\s+)?(?:limited\\s+to|reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps|[Kk][Bb]\\s*ps)|(?:[Yy]our\\s+)?internet\\s+speed\\s+is\\s+now\\s+[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ss]peed\\s+(?:is\\s+now\\s+)?(?:reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ii]nternet\\s+[Ss]peed\\s+will\\s+be\\s+[Rr]educed)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+used|data\\s+quota(?!\\s+of)|quota(?!\\s+of)|data(?!\\s+quota\\s+of))|(?:Alert\\s*)?(\\d{1,3})%\\s*:",
+                            "fields": ["usedPercent"],
+                            "values": ["{$1|$2}"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "(?:(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+)?quota\\s+of\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:used\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+data)",
+                            "fields": ["usedPercent", "totalData", "totalDataUnit"],
+                            "values": ["{$1|$4}", "{$2|$5}", "{$3|$6}"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s*(?:per\\s+day|/day|daily)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 8
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "VODA|IDEAIN|VIINDIA|VI|LM-VODA|VM-VODA|AD-VODA|VODAFONE|IDEA|199|144",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:[Yy]our\\s+)?(?:Vi\\s+)?(?:pack|plan)\\s+(?:has\\s+been\\s+)?(?:successfully\\s+)?(?:renewed|activated|recharged|extended)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:[Yy]our\\s+)?Vi\\s+pack\\s+expires?\\s+soon",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:pack|plan)\\s+expires?",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?<![Dd]ata\\s)[Bb]alance[\\s\\xA0]*(?:is[\\s\\xA0]+|:[\\s\\xA0]*)?(Rs\\.?[\\s\\xA0]*|INR[\\s\\xA0]*|₹[\\s\\xA0]*)?([,\\d]+(?:\\.[\\d]+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["{$1|Rs.}", "$2", "LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:Rs\\.\\s*(?:\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+has\\s+been\\s+successfully\\s+recharged|[Cc]redited\\s+with\\s+Rs\\.?\\s*\\.?\\s*[\\d,]+(?:\\.\\d+)?|[Rr]echarged\\s+with\\s+Rs\\.?\\s*[\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "40468|40469",
+            "version": "1",
+            "operatorName": "MTNL",
+            "operatorNameEn": "MTNL",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "MTNL|MTNLIN|LM-MTNLIN|VM-MTNLIN|1500",
+                    "contentPatterns": [
+                        {
+                            "regex": "(?:(?:[Rr]emaining\\s+(?:data\\s+)?|(?:data\\s+)?remaining\\s*[,:]?\\s*|(?:[Jj]io\\s+)?data\\s+balance\\s+is\\s+|[Cc]urrent\\s+(?:data\\s+)?[Bb]alance\\s*:?\\s*)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?=[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of\\s+)?(?:high[-\\s]?speed\\s+)?(?:data\\s+)?(?:remaining|left|balance))([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:(?:your\\s+)?(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data).{0,50}?(?:is\\s+)?(?:fully\\s+)?(?:exhausted|consumed|finished|over|used\\s+up)|(?:have\\s+)?(?:consumed|used)\\s+100%\\s+of\\s+your|(?:Alert\\s*)?100%\\s*:|(?:ALERT!?\\s*)?100%\\s+of\\s+(?:your\\s+)?daily\\s+data)(?!.*(?:remaining|left)\\s*[1-9]))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3|0}", "{$2|$4|MB}"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:(?:[Yy]ou\\s+(?:have\\s+)?used|[Dd]ata\\s+used|[Uu]sed)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+used)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Dd]aily\\s+[Qq]uota|[Qq]uota\\s+as\\s+per\\s+plan|రోజువారీ\\s+కోటా|[Dd]ata\\s+(?:[Ll]imit|[Qq]uota|[Pp]ack))\\s*:?\\s*|(?:/\\s*)?[Tt]otal\\s+|(?:remaining|left)\\s+of\\s+|(?:daily\\s+)?(?:high\\s+speed\\s+)?data\\s+(?:quota|pack|limit)\\s+of\\s+|daily\\s+high\\s+speed\\s+data\\s+of\\s+|(?:data\\s+pack|high\\s+speed\\s+data)\\s+(?:of\\s+|\\()|of\\s+total\\s+|of\\s+your\\s+|out\\s+of\\s+|used\\s+[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+(?:of|out\\s+of)\\s+|[\\d.]+\\s*(?:TB|GB|MB|KB|T|G|M|K)\\s+used\\s+(?:of|out\\s+of)\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:[Dd]ata\\s+(?:pack\\s+)?(?:is\\s+over|exhausted|finished|fully\\s+used|used\\s+up|limit\\s+reached)|[Dd]aily\\s+[Dd]ata\\s+pack\\s+is\\s+over|(?:your\\s+)?data\\s+is\\s+over|(?:data\\s+pack|high\\s+speed\\s+data|daily\\s+(?:high\\s+speed\\s+)?data(?:\\s+quota)?|high\\s+speed\\s+internet\\s+quota|daily\\s+high\\s+speed\\s+data).{0,80}?(?:exhausted|fully\\s+exhausted|is\\s+over|finished|consumed|used\\s+up)|(?:[Ii]nternet\\s+)?[Ss]peed\\s+(?:is\\s+now\\s+|will\\s+be\\s+|now\\s+)?(?:limited\\s+to|reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps|[Kk][Bb]\\s*ps)|(?:[Yy]our\\s+)?internet\\s+speed\\s+is\\s+now\\s+[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ss]peed\\s+(?:is\\s+now\\s+)?(?:reduced\\s+to|now)\\s*[\\d.]+\\s*(?:[Kk]bps|[Mm]bps)|[Ii]nternet\\s+[Ss]peed\\s+will\\s+be\\s+[Rr]educed)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+used|data\\s+quota(?!\\s+of)|quota(?!\\s+of)|data(?!\\s+quota\\s+of))|(?:Alert\\s*)?(\\d{1,3})%\\s*:",
+                            "fields": ["usedPercent"],
+                            "values": ["{$1|$2}"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:(?:(?:have\\s+)?(?:used|consumed)\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+(?:daily\\s+)?(?:high\\s+speed\\s+)?(?:internet\\s+)?(?:data\\s+)?quota\\s+of\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:used\\s+)?(\\d{1,3})%\\s+of\\s+your\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+data)",
+                            "fields": ["usedPercent", "totalData", "totalDataUnit"],
+                            "values": ["{$1|$4}", "{$2|$5}", "{$3|$6}"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s*(?:per\\s+day|/day|daily)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 7
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "MTNL|MTNLIN|LM-MTNLIN|VM-MTNLIN|1500",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Pp]lan\\s+(?:validity\\s+)?(?:has\\s+)?expir",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "[Rr]echarge\\s+(?:now|your\\s+account)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?<![Dd]ata\\s)[Bb]alance[\\s\\xA0]*(?:is[\\s\\xA0]+|:[\\s\\xA0]*)?(Rs\\.?[\\s\\xA0]*|INR[\\s\\xA0]*|₹[\\s\\xA0]*)?([,\\d]+(?:\\.[\\d]+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["{$1|Rs.}", "$2", "LOW"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:Rs\\.\\s*(?:\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+has\\s+been\\s+successfully\\s+recharged|[Cc]redited\\s+with\\s+Rs\\.?\\s*\\.?\\s*[\\d,]+(?:\\.\\d+)?|[Rr]echarged\\s+with\\s+Rs\\.?\\s*[\\d,]+(?:\\.\\d+)?)",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "51010",
+            "version": "1",
+            "operatorName": "Telkomsel",
+            "operatorNameEn": "Telkomsel",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "TSEL|TELKOMSEL|3636|3637|817|363|LM-TSEL|VM-TSEL",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Pp]aket\\s+[\\w\\s]+?(?:[Ii]nternet\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)(?:\\s+[Ii]nternet)?(?:\\s+[Ss]elama\\s+\\d+\\s+[Hh]ari)?(?:\\s+[Aa]nda\\s+[Tt]elah\\s+[Aa]ktif)?",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:(?:[Aa]nda|[Kk]amu)\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:[Bb]erlaku|[Aa]ktif|[Tt]ersedia)|(?:dari\\s+(?:(?:kuota|total)\\s+)?|/\\s*|\\(\\s*total\\s+|[Tt]otal\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|[Kk]uota\\s+(?:(?:internet|data)\\s+)?(?:(?:Telkomsel|IM3|XL|Smartfren)\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)(?:\\s+(?:Anda|kamu))?\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+(?:internet\\s+)?(?:Anda|kamu)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+(?:data\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:sudah\\s+)?habis)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["{$1|$3|$5|$7|$9}", "{$2|$4|$6|$8|$10}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Ss]isa\\s+[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:[Kk]amu|[Aa]nda)(?:\\s+[Hh]anya)?|[Kk]uota\\s+(?:[Ii]nternet\\s*)?(?:[Kk]amu|[Aa]nda)\\s+[Tt]ersisa)\\s*([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:[Ss]isa\\s+(?:kuota\\s+)?(?:(?:internet|data)\\s+)?(?:3\\s+)?(?:Anda|kamu)?\\s*|[Ss]isa\\s+(?:sekitar\\s+)?|,\\s*sisa\\s+(?:kuota\\s+)?|[Tt]ersisa\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "[Tt]inggal\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:[Aa]nda|[Kk]amu)\\s+(?:[Ss]udah\\s+)?[Hh]abis|[Kk]uota(?:\\s+[\\w./-]+){0,10}\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+data\\s+(?:Anda|kamu)?\\s*habis)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["0", "MB"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:[Aa]kses\\s+[Ii]nternet\\s+[Tt]arif\\s+[Nn]on-[Pp]aket|[Kk]ecepatan\\s+(?:kini|sekarang|internet\\s+)?(?:diturunkan\\s+(?:ke|menjadi)\\s*|kini\\s+)?[\\d.]+\\s*[Kk]?[Bb]ps)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "(\\d{1,3})%\\s+(?:[Kk]uota|[Dd]ata)\\s+(?:[Ii]nternet\\s+)?(?:\\S+\\s+){0,3}?(?:[Kk]amu|[Aa]nda)\\s+(?:[Ss]udah\\s+|[Tt]elah\\s+)?(?:[Dd]igunakan|[Tt]erpakai)",
+                            "fields": ["usedPercent"],
+                            "values": ["$1"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "(?:[Bb]onus|[Gg]ratis|[Nn]ikmati\\s+[Bb]onus)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "(?:(?:[Aa]nda|[Kk]amu)\\s+(?:telah\\s+|sudah\\s+)?)?(?:[Tt]erpakai|[Dd]ipakai|[Dd]igunakan|[Mm]emakai)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 9
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "TSEL|TELKOMSEL|3636|3637|817|363|LM-TSEL|VM-TSEL",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Ii]si\\s+[Uu]lang\\s+(?:[Pp]ulsa\\s+)?(Rp)\\s*(\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+(?:[Tt]elah\\s+)?[Bb]erhasil",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "[Pp]embayaran\\s+[Aa]nda\\s+[Ss]enilai\\s+(Rp)(\\d+(?:,\\d{3})*(?:\\.\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "[Tt]agihan(?:\\s+[Hh]alo)?(?:\\s+[Aa]nda)?\\s+(Rp)\\.?\\s*(\\d+(?:[.,]\\d{3})*(?:[.,]\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:[Ss]aldo|[Ss]isa\\s+[Pp]ulsa|[Pp]ulsa)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:[Hh]anya\\s+|[Tt]inggal\\s+|[Ss]ekarang\\s+|[Dd]ibawah\\s+)?(Rp)\\s*([\\d]+(?:[.,]\\d{3})*)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Ll]ayanan|[Nn]omor|[Kk]artu)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:(?:[Tt]elah|[Ss]udah)\\s+)?(?:[Dd]iblokir|[Dd]ihentikan|[Dd]inonaktifkan|[Tt]idak\\s+[Aa]ktif|[Tt]ersuspend)",
+                            "fields": ["statusType"],
+                            "values": ["SUSPENDED"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:[Ll]ayanan|[Nn]omor|[Kk]artu)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:(?:[Tt]elah|[Ss]udah)\\s+)?(?:[Aa]ktif\\s+[Kk]embali|[Dd]ipulihkan|[Dd]iaktifkan\\s+[Kk]embali)",
+                            "fields": ["statusType"],
+                            "values": ["RESTORED"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "[Mm]asa\\s+[Aa]ktif\\s+[Kk]artu\\s+(?:[Aa]nda|[Kk]amu)\\s+[Dd]iperpanjang\\s+[Ss]elama\\s+\\d+\\s+[Hh]ari",
+                            "fields": ["statusType"],
+                            "values": ["RESTORED"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "[Pp]engisian\\s+(Rp)(?:[\\d,.]+)?\\s+[Ss]ukses",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "[Ss][Uu][Kk][Ss][Ee][Ss]\\s+[Ii]si\\s+[Vv]\\d+rb",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "(?:[Bb]eli\\s+)?[Pp]aket(?:\\s+\\w+)*\\s+(?:min\\s+)?(Rp)\\s*([\\d,]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "51001|51021|51089",
+            "version": "1",
+            "operatorName": "IOH",
+            "operatorNameEn": "IOH",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "INDOSAT|IOH|IM3OOH|3IND|3Topup|3Penting|BIMA3|TRIINDO|LM-INDOSAT|VM-INDOSAT|IM3|TRI|999|234",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Pp]aket\\s+[\\w\\s]+?(?:[Ii]nternet\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)(?:\\s+[Ii]nternet)?(?:\\s+[Ss]elama\\s+\\d+\\s+[Hh]ari)?(?:\\s+[Aa]nda\\s+[Tt]elah\\s+[Aa]ktif)?",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:(?:[Aa]nda|[Kk]amu)\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:[Bb]erlaku|[Aa]ktif|[Tt]ersedia)|(?:dari\\s+(?:(?:kuota|total)\\s+)?|/\\s*|\\(\\s*total\\s+|[Tt]otal\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|[Kk]uota\\s+(?:(?:internet|data)\\s+)?(?:(?:Telkomsel|IM3|XL|Smartfren)\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)(?:\\s+(?:Anda|kamu))?\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+(?:internet\\s+)?(?:Anda|kamu)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+(?:data\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:sudah\\s+)?habis)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["{$1|$3|$5|$7|$9}", "{$2|$4|$6|$8|$10}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Ss]isa\\s+[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:[Kk]amu|[Aa]nda)(?:\\s+[Hh]anya)?|[Kk]uota\\s+(?:[Ii]nternet\\s*)?(?:[Kk]amu|[Aa]nda)\\s+[Tt]ersisa)\\s*([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:[Ss]isa\\s+(?:kuota\\s+)?(?:(?:internet|data)\\s+)?(?:3\\s+)?(?:Anda|kamu)?\\s*|[Ss]isa\\s+(?:sekitar\\s+)?|,\\s*sisa\\s+(?:kuota\\s+)?|[Tt]ersisa\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "[Tt]inggal\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:[Aa]nda|[Kk]amu)\\s+(?:[Ss]udah\\s+)?[Hh]abis|[Kk]uota(?:\\s+[\\w./-]+){0,10}\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+data\\s+(?:Anda|kamu)?\\s*habis)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["0", "MB"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:[Aa]kses\\s+[Ii]nternet\\s+[Tt]arif\\s+[Nn]on-[Pp]aket|[Kk]ecepatan\\s+(?:kini|sekarang|internet\\s+)?(?:diturunkan\\s+(?:ke|menjadi)\\s*|kini\\s+)?[\\d.]+\\s*[Kk]?[Bb]ps)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "(\\d{1,3})%\\s+(?:[Kk]uota|[Dd]ata)\\s+(?:[Ii]nternet\\s+)?(?:\\S+\\s+){0,3}?(?:[Kk]amu|[Aa]nda)\\s+(?:[Ss]udah\\s+|[Tt]elah\\s+)?(?:[Dd]igunakan|[Tt]erpakai)",
+                            "fields": ["usedPercent"],
+                            "values": ["$1"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "(?:[Bb]onus|[Gg]ratis|[Nn]ikmati\\s+[Bb]onus)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "(?:(?:[Aa]nda|[Kk]amu)\\s+(?:telah\\s+|sudah\\s+)?)?(?:[Tt]erpakai|[Dd]ipakai|[Dd]igunakan|[Mm]emakai)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 9
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "INDOSAT|IOH|IM3OOH|3IND|3Topup|3Penting|BIMA3|TRIINDO|LM-INDOSAT|VM-INDOSAT|IM3|TRI|999|234",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Ii]si\\s+[Uu]lang\\s+(?:[Pp]ulsa\\s+)?(Rp)\\s*(\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+(?:[Tt]elah\\s+)?[Bb]erhasil",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "[Pp]embayaran\\s+[Aa]nda\\s+[Ss]enilai\\s+(Rp)(\\d+(?:,\\d{3})*(?:\\.\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "[Tt]agihan(?:\\s+[Hh]alo)?(?:\\s+[Aa]nda)?\\s+(Rp)\\.?\\s*(\\d+(?:[.,]\\d{3})*(?:[.,]\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:[Ss]aldo|[Ss]isa\\s+[Pp]ulsa|[Pp]ulsa)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:[Hh]anya\\s+|[Tt]inggal\\s+|[Ss]ekarang\\s+|[Dd]ibawah\\s+)?(Rp)\\s*([\\d]+(?:[.,]\\d{3})*)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Ll]ayanan|[Nn]omor|[Kk]artu)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:(?:[Tt]elah|[Ss]udah)\\s+)?(?:[Dd]iblokir|[Dd]ihentikan|[Dd]inonaktifkan|[Tt]idak\\s+[Aa]ktif|[Tt]ersuspend)",
+                            "fields": ["statusType"],
+                            "values": ["SUSPENDED"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:[Ll]ayanan|[Nn]omor|[Kk]artu)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:(?:[Tt]elah|[Ss]udah)\\s+)?(?:[Aa]ktif\\s+[Kk]embali|[Dd]ipulihkan|[Dd]iaktifkan\\s+[Kk]embali)",
+                            "fields": ["statusType"],
+                            "values": ["RESTORED"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "[Mm]asa\\s+[Aa]ktif\\s+[Kk]artu\\s+(?:[Aa]nda|[Kk]amu)\\s+[Dd]iperpanjang\\s+[Ss]elama\\s+\\d+\\s+[Hh]ari",
+                            "fields": ["statusType"],
+                            "values": ["RESTORED"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "[Pp]engisian\\s+(Rp)(?:[\\d,.]+)?\\s+[Ss]ukses",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "[Ss][Uu][Kk][Ss][Ee][Ss]\\s+[Ii]si\\s+[Vv]\\d+rb",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "(?:[Bb]eli\\s+)?[Pp]aket(?:\\s+\\w+)*\\s+(?:min\\s+)?(Rp)\\s*([\\d,]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "operatorCode": "51011|51008",
+            "version": "1",
+            "operatorName": "XLSmart",
+            "operatorNameEn": "XLSmart",
+            "rules": [
+                {
+                    "type": "DATA_USAGE",
+                    "typeDescription": "Data usage reminder",
+                    "senderPattern": "XL|AXIS|XLHOME|MYXL|LM-XL|VM-XL|AD-XL|818|817|838",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Pp]aket\\s+[\\w\\s]+?(?:[Ii]nternet\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)(?:\\s+[Ii]nternet)?(?:\\s+[Ss]elama\\s+\\d+\\s+[Hh]ari)?(?:\\s+[Aa]nda\\s+[Tt]elah\\s+[Aa]ktif)?",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "(?:[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:(?:[Aa]nda|[Kk]amu)\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:[Bb]erlaku|[Aa]ktif|[Tt]ersedia)|(?:dari\\s+(?:(?:kuota|total)\\s+)?|/\\s*|\\(\\s*total\\s+|[Tt]otal\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|[Kk]uota\\s+(?:(?:internet|data)\\s+)?(?:(?:Telkomsel|IM3|XL|Smartfren)\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)(?:\\s+(?:Anda|kamu))?\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+(?:internet\\s+)?(?:Anda|kamu)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+(?:data\\s+)?([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)\\s+(?:sudah\\s+)?habis)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["{$1|$3|$5|$7|$9}", "{$2|$4|$6|$8|$10}"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "(?:(?:[Ss]isa\\s+[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:[Kk]amu|[Aa]nda)(?:\\s+[Hh]anya)?|[Kk]uota\\s+(?:[Ii]nternet\\s*)?(?:[Kk]amu|[Aa]nda)\\s+[Tt]ersisa)\\s*([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)|(?:[Ss]isa\\s+(?:kuota\\s+)?(?:(?:internet|data)\\s+)?(?:3\\s+)?(?:Anda|kamu)?\\s*|[Ss]isa\\s+(?:sekitar\\s+)?|,\\s*sisa\\s+(?:kuota\\s+)?|[Tt]ersisa\\s+)([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K))",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["{$1|$3}", "{$2|$4}"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "[Tt]inggal\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Kk]uota\\s+(?:[Ii]nternet\\s*|[Bb]ulanan\\s+)?(?:[Aa]nda|[Kk]amu)\\s+(?:[Ss]udah\\s+)?[Hh]abis|[Kk]uota(?:\\s+[\\w./-]+){0,10}\\s+(?:sudah\\s+)?habis|[Kk]uota\\s+data\\s+(?:Anda|kamu)?\\s*habis)",
+                            "fields": ["remainingData", "remainingDataUnit"],
+                            "values": ["0", "MB"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:[Aa]kses\\s+[Ii]nternet\\s+[Tt]arif\\s+[Nn]on-[Pp]aket|[Kk]ecepatan\\s+(?:kini|sekarang|internet\\s+)?(?:diturunkan\\s+(?:ke|menjadi)\\s*|kini\\s+)?[\\d.]+\\s*[Kk]?[Bb]ps)",
+                            "fields": ["throttled"],
+                            "values": ["1"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "(\\d{1,3})%\\s+(?:[Kk]uota|[Dd]ata)\\s+(?:[Ii]nternet\\s+)?(?:\\S+\\s+){0,3}?(?:[Kk]amu|[Aa]nda)\\s+(?:[Ss]udah\\s+|[Tt]elah\\s+)?(?:[Dd]igunakan|[Tt]erpakai)",
+                            "fields": ["usedPercent"],
+                            "values": ["$1"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "(?:[Bb]onus|[Gg]ratis|[Nn]ikmati\\s+[Bb]onus)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["totalData", "totalDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "(?:(?:[Aa]nda|[Kk]amu)\\s+(?:telah\\s+|sudah\\s+)?)?(?:[Tt]erpakai|[Dd]ipakai|[Dd]igunakan|[Mm]emakai)\\s+([\\d.]+)\\s*(TB|GB|MB|KB|T|G|M|K)",
+                            "fields": ["usedData", "usedDataUnit"],
+                            "values": ["$1", "$2"],
+                            "priority": 9
+                        }
+                    ]
+                },
+                {
+                    "type": "PHONE_BILL",
+                    "typeDescription": "Phone bill reminder",
+                    "senderPattern": "XL|AXIS|XLHOME|MYXL|LM-XL|VM-XL|AD-XL|818|817|838",
+                    "contentPatterns": [
+                        {
+                            "regex": "[Ii]si\\s+[Uu]lang\\s+(?:[Pp]ulsa\\s+)?(Rp)\\s*(\\d+(?:,\\d{3})*(?:\\.\\d+)?)\\s+(?:[Tt]elah\\s+)?[Bb]erhasil",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 1
+                        },
+                        {
+                            "regex": "[Pp]embayaran\\s+[Aa]nda\\s+[Ss]enilai\\s+(Rp)(\\d+(?:,\\d{3})*(?:\\.\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 2
+                        },
+                        {
+                            "regex": "[Tt]agihan(?:\\s+[Hh]alo)?(?:\\s+[Aa]nda)?\\s+(Rp)\\.?\\s*(\\d+(?:[.,]\\d{3})*(?:[.,]\\d+)?)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 3
+                        },
+                        {
+                            "regex": "(?:[Ss]aldo|[Ss]isa\\s+[Pp]ulsa|[Pp]ulsa)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:[Hh]anya\\s+|[Tt]inggal\\s+|[Ss]ekarang\\s+|[Dd]ibawah\\s+)?(Rp)\\s*([\\d]+(?:[.,]\\d{3})*)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "LOW"],
+                            "priority": 4
+                        },
+                        {
+                            "regex": "(?:[Ll]ayanan|[Nn]omor|[Kk]artu)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:(?:[Tt]elah|[Ss]udah)\\s+)?(?:[Dd]iblokir|[Dd]ihentikan|[Dd]inonaktifkan|[Tt]idak\\s+[Aa]ktif|[Tt]ersuspend)",
+                            "fields": ["statusType"],
+                            "values": ["SUSPENDED"],
+                            "priority": 5
+                        },
+                        {
+                            "regex": "(?:[Ll]ayanan|[Nn]omor|[Kk]artu)\\s+(?:[Aa]nda|[Kk]amu)\\s+(?:(?:[Tt]elah|[Ss]udah)\\s+)?(?:[Aa]ktif\\s+[Kk]embali|[Dd]ipulihkan|[Dd]iaktifkan\\s+[Kk]embali)",
+                            "fields": ["statusType"],
+                            "values": ["RESTORED"],
+                            "priority": 6
+                        },
+                        {
+                            "regex": "[Mm]asa\\s+[Aa]ktif\\s+[Kk]artu\\s+(?:[Aa]nda|[Kk]amu)\\s+[Dd]iperpanjang\\s+[Ss]elama\\s+\\d+\\s+[Hh]ari",
+                            "fields": ["statusType"],
+                            "values": ["RESTORED"],
+                            "priority": 7
+                        },
+                        {
+                            "regex": "[Pp]engisian\\s+(Rp)(?:[\\d,.]+)?\\s+[Ss]ukses",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 8
+                        },
+                        {
+                            "regex": "[Ss][Uu][Kk][Ss][Ee][Ss]\\s+[Ii]si\\s+[Vv]\\d+rb",
+                            "fields": ["statusType"],
+                            "values": ["RECHARGE"],
+                            "priority": 9
+                        },
+                        {
+                            "regex": "(?:[Bb]eli\\s+)?[Pp]aket(?:\\s+\\w+)*\\s+(?:min\\s+)?(Rp)\\s*([\\d,]+)",
+                            "fields": ["balanceUnit", "balance", "statusType"],
+                            "values": ["$1", "$2", "RECHARGE"],
+                            "priority": 10
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<StringGc>
+<configVersion>20250324</configVersion>
+<featureEnabled>true</featureEnabled>
+<ignoreAppState>false</ignoreAppState>
+<maxCrashTime>2</maxCrashTime>
+<limitTimeWindow>3600000</limitTimeWindow>
+<stringGcState packageName="com.ss.android.ugc.aweme" systemState="true"/>
+</StringGc>

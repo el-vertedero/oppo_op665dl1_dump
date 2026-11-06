@@ -1,0 +1,27 @@
+on charger
+    setprop sys.charger.mode 1
+    start kpoc_charger
+
+on charger && property:ro.build.type=eng
+    setprop persist.vendor.pstore.model 1
+on charger && property:ro.build.type=userdebug
+    setprop persist.vendor.pstore.model 1
+
+# Start light service when charger mode is activated
+on property:sys.charger.mode=1 && property:apexd.status=activated
+    start vendor.light-charger
+
+service kpoc_charger /system_ext/bin/kpoc_charger
+    group system wakelock
+    capabilities BLOCK_SUSPEND SYS_ADMIN SYS_BOOT
+    user root
+
+# Light service definition for charger mode
+# Note: This is only used in charger mode. Normal mode uses lights-mtk-default.rc
+service vendor.light-charger /apex/com.mediatek.android.hardware.lights/bin/hw/android.hardware.lights-service.mediatek
+    class system
+    user system
+    group system
+    disabled
+    oneshot
+

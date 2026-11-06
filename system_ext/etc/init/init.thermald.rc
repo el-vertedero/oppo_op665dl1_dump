@@ -1,0 +1,14 @@
+service thermald /system_ext/bin/thermald
+    class main
+    user system
+    group system
+    disabled
+
+on property:ro.vendor.mtk_thermal_2_0=0
+    start thermald
+
+on property:ro.vendor.mtk_thermal_2_0=
+    start thermald
+
+on property:sys.boot_completed=1 && property:ro.vendor.config.oplus.low_ram=true
+    stop thermald

@@ -1,0 +1,136 @@
+<filter-conf>
+    <version>20260420</version>
+    <isOpen>1</isOpen>
+    <!-- added for notification start -->
+    <notification pkg="com.tianyancha.skyeye"/>
+    <notification pkg="com.zhaopin.social"/>
+    <notification pkg="com.tencent.tmgp.cf"/>
+    <notification pkg="cn.jj"/>
+    <notification pkg="com.taobao.trip"/>
+    <notification pkg="com.tencent.tmgp.harrypotter"/>
+    <notification pkg="com.meitu.meiyancamera"/>
+    <notification pkg="com.mfp.jelly.oppo"/>
+    <!-- update at 20230725 -->
+    <notification pkg="com.shopee.my"/>
+    <notification pkg="com.celcom.mycelcom"/>
+    <notification pkg="com.shopee.th"/>
+    <notification pkg="com.roblox.client"/>
+    <notification pkg="com.garena.game.kgth"/>
+    <notification pkg="com.alibaba.aliexpresshd"/>
+    <notification pkg="com.shopee.sg"/>
+    <notification pkg="com.flipkart.android"/>
+    <notification pkg="com.myntra.android"/>
+    <notification pkg="com.dts.freefiremax"/>
+    <notification pkg="com.shopee.id"/>
+    <notification pkg="com.kwai.bulldog"/>
+    <notification pkg="com.zhiliaoapp.musically.go"/>
+    <notification pkg="com.shopee.tw"/>
+    <notification pkg="com.pxmart.android"/>
+    <notification pkg="jp.co.ponos.battlecatstw"/>
+    <notification pkg="com.accuweather.android"/>
+    <notification pkg="com.dts.freefireth"/>
+    <notification pkg="com.vuclip.viu"/>
+    <notification pkg="com.ea.game.pvzfree_row"/>
+    <notification pkg="com.blizzard.diablo.immortal"/>
+    <notification pkg="com.neptune.domino"/>
+    <notification pkg="com.ea.gp.fifamobile"/>
+    <notification pkg="com.eco.note"/>
+    <notification pkg="com.bestbuy.android"/>
+    <notification pkg="com.shopee.vn"/>
+    <notification pkg="com.garena.game.kgvn"/>
+    <notification pkg="bubbleshooter.orig"/>
+    <notification pkg="com.vzw.hss.myverizon"/>
+    <notification pkg="org.xbmc.kodi"/>
+    <!-- update at 20230825 -->
+    <notification pkg="com.facebook.lite"/>
+    <notification pkg="com.epicgames.fortnite"/>
+    <notification pkg="com.iexceed.CBS"/>
+    <!-- update at 20231204 -->
+    <notification pkg="com.alibaba.wireless"/>
+    <notification pkg="com.netease.mc.nearme.gamecenter"/>
+    <notification pkg="com.taobao.idlefish"/>
+    <!-- update at 20240130 -->
+    <notification pkg="com.chucklefish.stardewvalley"/>
+    <!-- update at 20241120 -->
+    <notification pkg="com.pazugames.avatarworld"/>
+    <!-- added for notification end -->
+
+    <!-- added for lifeCycle start -->
+    <!-- update at 20231031 -->
+    <lifeCycle pkg="com.tencent.tmgp.speedmobile"/>
+    <lifeCycle pkg="com.oplus.camera"/>
+    <!-- added for lifeCycle end -->
+
+    <!-- added for windowDrawn start -->
+    <!-- update at 20231031 -->
+    <windowDrawn pkg="com.oplus.secondaryhome"/>
+    <!-- added for windowDrawn end -->
+
+    <!-- added for visibility start -->
+    <!-- update at 20231031 -->
+    <visibility pkg="com.google.android.apps.photos"/>
+    <visibility pkg="com.google.android.youtube"/>
+    <visibility pkg="org.videolan.vlc"/>
+    <visibility pkg="com.leoao.fitness"/>
+    <!-- added for visibility end -->
+
+    <!-- added for hintmask start -->
+    <!-- update at 20231031 -->
+    <hintmask activity="com.tencent.mm/.plugin.voip.ui.VideoActivity"/>
+    <hintmask activity="com.tencent.mobileqq/com.tencent.av.ui.VideoInviteFull"/>
+    <hintmask activity="com.tencent.mobileqq/com.tencent.av.ui.AVActivity"/>
+    <hintmask activity="com.tencent.mobileqq/com.tencent.av.ui.VideoInviteLock"/>
+    <hintmask activity="com.tencent.mobileqq/com.tencent.av.ui.VideoInviteActivity"/>
+    <hintmask activity="com.android.incallui/.OplusInCallActivity"/>
+    <!-- added for hintmask end -->
+
+    <!-- added for relaunch start -->
+    <!-- update at 20241011 -->
+    <relaunch activity="com.realmecomm.app/com.android.realme2.home.view.MainActivity" force="0"/>
+    <relaunch activity="com.tencent.qqlivei18n/com.tencent.qqliveinternational.videodetail.activity.VideoDetailActivity" force="0"/>
+    <!-- update at 20241012 -->
+    <relaunch activity="com.campmobile.snowcamera/com.linecorp.b612.android.activity.ActivityCamera" force="0"/>
+    <!-- update at 20241031 -->
+    <relaunch activity="com.campmobile.snow/com.linecorp.b612.android.activity.ActivityCamera" force="0"/>
+    <relaunch activity="com.smile.gifmaker/com.yxcorp.gifshow.v3.EditorActivity" force="0"/>
+    <relaunch activity="com.happyelements.AndroidClover.nearme.gamecenter/com.happyelements.AndroidClover.MainActivity" force="1"/>
+    <!-- update at 20241220 -->
+    <relaunch activity="com.kwai.bulldog/com.yxcorp.gifshow.tiny.TinyLaunchActivity" force="0"/>
+    <!-- update at 20250116, bugfix 8614252 -->
+    <relaunch activity="com.dianping.v1/.NovaMainActivity" force="0"/>
+    <!-- update at 20250116, bugfix 8604012、8603861-->
+    <relaunch activity="com.shuqi.controller/com.shuqi.community.PublishPostActivity" force="1"/>
+    <relaunch activity="com.dragon.read/.pages.main.MainFragmentActivity" force="1"/>
+    <!-- update at 20251204, bugfix 10605125  -->
+    <relaunch activity="com.vanke.activity/.six.activity.MainActivity" force="1"/>
+    <!-- update at 20251028, bugfix 10302158 -->
+    <relaunch activity="com.sdhs.easy.high.road/com.sdhs.easy.main.activity.MainActivity" force="1"/>
+    <!-- update at 20251203, bugfix 10551310 -->
+    <relaunch activity="com.zhihu.android/.vessay.media.activity.MediaActivity" force="1"/>
+    <!-- update at 20251212, bugfix 10658846 -->
+    <relaunch activity="com.ganji.android.haoche_c/com.cars.guazi.app.home.MainActivity" force="0"/>
+    <!-- update at 20251224, bugfix 10739869 -->
+    <relaunch activity="com.tencent.mm/.plugin.webview.ui.tools.MMWebViewUI" force="1"/>
+    <!-- update at 20251225, bugfix 10739752 -->
+    <relaunch activity="com.jifen.qukan/.SplashActivity" force="1"/>
+    <relaunch activity="com.jifen.qukan/com.jifen.qkbase.main.MainActivity" force="1"/>
+    <!-- added for relaunch end -->
+    <!-- update at 20251230, bugfix 10770115 -->
+    <relaunch activity="com.shuqi.controller/com.shuqi.community.PublishPostActivity" force="0"/>
+    <!-- update at 20260108, bugfix 10828993 -->
+    <relaunch activity="com.aliyun.tongyi/.discovery.AgentActivity" force="1"/>
+    <relaunch activity="com.aliyun.tongyi/.qrcode.TYScanQrActivity" force="1"/>
+    <!-- update at 20260127, bugfix 10939284 -->
+    <relaunch activity="com.tencent.qqgame.xq/.AppActivity" force="1"/>
+    <!-- update at 20260310, bugfix 11118155 -->
+    <relaunch activity="com.larus.nova/com.larus.bmhome.chat.ChatActivity" force="1"/>
+    <!-- update at 20260416, bugfix 11285528 -->
+    <relaunch activity="com.codoon.gps/.ui.SlideActivity" force="1"/>
+    <!-- update at 20260420, bugfix 11261880 -->
+    <relaunch activity="com.xt.retouch/com.xt.edit.EditActivity" force="0"/>
+    <relaunch activity="com.xt.retouch/.gallery.refactor.GalleryActivity2" force="0"/>
+    <!-- update at 20260420, bugfix 11274527 -->
+    <relaunch activity="cmtt.coordination.app/io.dcloud.PandoraEntryActivity" force="0"/>
+    <!-- added for relaunch end -->
+
+</filter-conf>

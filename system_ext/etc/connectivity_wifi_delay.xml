@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wifi_delay_romupdate>
+    <version>20250425</version>
+
+	<!-- Feature Define -->
+	<low_latency_aps_enabled>true</low_latency_aps_enabled>
+	<debug_mode>false</debug_mode>
+
+    <!-- Threshold Define -->
+    <threshold_list>
+        <threshold id="0">
+            <rssiLowerBound>-30</rssiLowerBound>
+            <rssiUpperBound>0</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+
+		<threshold id="1">
+            <rssiLowerBound>-48</rssiLowerBound>
+            <rssiUpperBound>-31</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>50</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>51</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>20</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>20</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="2">
+			    <chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+
+        <threshold id="2">
+            <rssiLowerBound>-55</rssiLowerBound>
+            <rssiUpperBound>-49</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>30</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>31</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>20</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>20</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="2">
+			    <chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>90</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>90</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+
+		<threshold id="3">
+            <rssiLowerBound>-64</rssiLowerBound>
+            <rssiUpperBound>-56</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>30</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>31</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>20</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>20</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="2">
+				<chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+					<txperLowerBound>0</txperLowerBound>
+					<txperUpperBound>50</txperUpperBound>
+					<delay>1</delay>
+				</txper>
+				<txper range="1">
+					<txperLowerBound>50</txperLowerBound>
+					<txperUpperBound>70</txperUpperBound>
+					<delay>3</delay>
+				</txper>
+				<txper range="2">
+					<txperLowerBound>70</txperLowerBound>
+					<txperUpperBound>100</txperUpperBound>
+					<delay>4</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+
+		<threshold id="4">
+            <rssiLowerBound>-69</rssiLowerBound>
+            <rssiUpperBound>-65</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>25</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>26</chLoadLowerBound>
+				<chLoadUpperBound>32</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="2">
+			    <chLoadLowerBound>33</chLoadLowerBound>
+				<chLoadUpperBound>44</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>40</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>40</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="3">
+			    <chLoadLowerBound>45</chLoadLowerBound>
+				<chLoadUpperBound>60</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>30</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>30</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>55</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="3">
+				    <txperLowerBound>55</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="4">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="4">
+			    <chLoadLowerBound>61</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>20</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>20</txperLowerBound>
+				    <txperUpperBound>30</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>30</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="3">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="4">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="5">
+				<chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+					<txperLowerBound>0</txperLowerBound>
+					<txperUpperBound>30</txperUpperBound>
+					<delay>1</delay>
+				</txper>
+				<txper range="1">
+					<txperLowerBound>30</txperLowerBound>
+					<txperUpperBound>50</txperUpperBound>
+					<delay>2</delay>
+				</txper>
+				<txper range="2">
+					<txperLowerBound>50</txperLowerBound>
+					<txperUpperBound>60</txperUpperBound>
+					<delay>3</delay>
+				</txper>
+				<txper range="3">
+					<txperLowerBound>60</txperLowerBound>
+					<txperUpperBound>100</txperUpperBound>
+					<delay>4</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+
+		<threshold id="5">
+            <rssiLowerBound>-74</rssiLowerBound>
+            <rssiUpperBound>-70</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>20</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>21</chLoadLowerBound>
+				<chLoadUpperBound>30</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>30</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>30</txperLowerBound>
+				    <txperUpperBound>80</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>80</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="2">
+			    <chLoadLowerBound>31</chLoadLowerBound>
+				<chLoadUpperBound>40</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>70</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>70</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="3">
+			    <chLoadLowerBound>41</chLoadLowerBound>
+				<chLoadUpperBound>60</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>70</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="3">
+				    <txperLowerBound>70</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="4">
+			    <chLoadLowerBound>61</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>30</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>30</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="3">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="5">
+				<chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+					<txperLowerBound>0</txperLowerBound>
+					<txperUpperBound>50</txperUpperBound>
+					<delay>1</delay>
+				</txper>
+				<txper range="1">
+					<txperLowerBound>50</txperLowerBound>
+					<txperUpperBound>100</txperUpperBound>
+					<delay>4</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+
+		<threshold id="6">
+            <rssiLowerBound>-95</rssiLowerBound>
+            <rssiUpperBound>-75</rssiUpperBound>
+			<chanLoad range="0">
+			    <chLoadLowerBound>0</chLoadLowerBound>
+				<chLoadUpperBound>20</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>0</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="1">
+			    <chLoadLowerBound>21</chLoadLowerBound>
+				<chLoadUpperBound>30</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>70</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>70</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="2">
+			    <chLoadLowerBound>31</chLoadLowerBound>
+				<chLoadUpperBound>40</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>70</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>70</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="3">
+			    <chLoadLowerBound>41</chLoadLowerBound>
+				<chLoadUpperBound>60</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>50</txperUpperBound>
+				    <delay>1</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>50</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="4">
+			    <chLoadLowerBound>61</chLoadLowerBound>
+				<chLoadUpperBound>70</chLoadUpperBound>
+				<txper range="0">
+				    <txperLowerBound>0</txperLowerBound>
+				    <txperUpperBound>30</txperUpperBound>
+				    <delay>2</delay>
+				</txper>
+				<txper range="1">
+				    <txperLowerBound>30</txperLowerBound>
+				    <txperUpperBound>60</txperUpperBound>
+				    <delay>3</delay>
+				</txper>
+				<txper range="2">
+				    <txperLowerBound>60</txperLowerBound>
+				    <txperUpperBound>100</txperUpperBound>
+				    <delay>4</delay>
+				</txper>
+			</chanLoad>
+			<chanLoad range="5">
+				<chLoadLowerBound>71</chLoadLowerBound>
+				<chLoadUpperBound>100</chLoadUpperBound>
+				<txper range="0">
+					<txperLowerBound>0</txperLowerBound>
+					<txperUpperBound>40</txperUpperBound>
+					<delay>3</delay>
+				</txper>
+				<txper range="1">
+					<txperLowerBound>40</txperLowerBound>
+					<txperUpperBound>100</txperUpperBound>
+					<delay>4</delay>
+				</txper>
+			</chanLoad>
+		</threshold>
+	</threshold_list>
+
+    <!-- Delay Map Define -->
+    <wifi_delay_map>
+        <!-- [id, delay, score] -->
+        0,30,320,
+        1,90,120,
+        2,160,0,
+        3,260,-120,
+        4,390,-200
+    </wifi_delay_map>
+
+    <!-- Station Count Threshold Define -->
+    <stationCountThreshold>10</stationCountThreshold>
+    <stationCountScore>-30</stationCountScore>
+
+</wifi_delay_romupdate>

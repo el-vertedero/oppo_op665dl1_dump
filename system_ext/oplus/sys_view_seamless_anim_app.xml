@@ -1,0 +1,98 @@
+<filter-conf>
+    <version>202607230000</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_view_seamless_anim_app</filter-name>
+    <pkg attr="tv.danmaku.bili">
+        <startFrom attr="tv.danmaku.bili.MainActivityV2" topCover="0.16" bottomCover="0.08" bgColor="1"/>
+        <startFrom attr="com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity" topCover="0.36" bottomCover="0" bgColor="1"/>
+        <startTo attr="com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity">
+            <view attr="tv.danmaku.bili.widget.ForegroundConstraintLayout" corner="3"/>
+            <view attr="com.bilibili.adcommon.widget.AdTintRelativeLayout" corner="3"/>
+            <view attr="com.bilibili.ad.comm.widget.AdTintRelativeLayout" corner="3"/>
+            <view attr="com.bilibili.ad.comm.widget.AdTintConstraintLayout" corner="3"/>
+            <view attr="com.bilibili.magicasakura.widgets.TintConstraintLayout" corner="3" matchParent="1"/>
+        </startTo>
+        <startTo attr="com.bilibili.video.story.StoryVideoActivity">
+            <view attr="tv.danmaku.bili.widget.ForegroundConstraintLayout" corner="3"/>
+            <view attr="com.bilibili.ad.comm.widget.AdTintConstraintLayout" corner="3"/>
+            <view attr="com.bilibili.magicasakura.widgets.TintConstraintLayout" corner="3" matchParent="1"/>
+        </startTo>
+        <startTo attr="com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3">
+            <view attr="tv.danmaku.bili.widget.ForegroundConstraintLayout" corner="3" matchParent="1"/>
+            <view attr="com.bilibili.ad.comm.widget.AdTintRelativeLayout" corner="3"/>
+            <view attr="com.bilibili.ad.comm.widget.AdTintConstraintLayout" corner="3" matchParent="1"/>
+            <view attr="com.bilibili.magicasakura.widgets.TintConstraintLayout" corner="3" matchParent="1"/>
+        </startTo>
+        <startTo attr="com.mall.ui.page.base.MallWebFragmentLoaderActivity">
+            <view attr="com.bilibili.ad.comm.widget.AdTintRelativeLayout" corner="3"/>
+        </startTo>
+        <startTo attr="com.mall.ui.page.base.MallFragmentLoaderActivity">
+            <view attr="com.bilibili.ad.comm.widget.AdTintRelativeLayout" corner="3"/>
+        </startTo>
+        <startTo attr="com.bilibili.lib.ui.ComposeActivity">
+            <view attr="tv.danmaku.bili.widget.ForegroundConstraintLayout" corner="3"/>
+        </startTo>
+        <startTo attr="com.bilibili.biligame.ui.gamedetail.GameDetailActivityV4">
+            <view attr="com.bilibili.ad.comm.widget.AdTintRelativeLayout" corner="3"/>
+        </startTo>
+        <startTo attr="com.bilibili.ad.imax.AdIMaxActivity">
+            <view attr="com.bilibili.ad.comm.widget.AdTintConstraintLayout" corner="3"/>
+        </startTo>
+    </pkg>
+
+    <pkg attr="com.xingin.xhs">
+        <startFrom attr="com.xingin.xhs.index.v2.IndexActivityV2" topCover="0.1" bottomCover="0.06" bgColor="1"/>
+        <startFrom attr="com.xingin.matrix.v2.profile.newpage.NewOtherUserActivity" bgColor="1"/>
+        <startFrom attr="com.xingin.matrix.notedetail.NoteDetailActivity" topCover="0.16" bgColor="1"/>
+        <startFrom attr="com.xingin.matrix.detail.activity.DetailFeedActivity" bgColor="1"/>
+        <startTo attr="com.xingin.matrix.notedetail.NoteDetailActivity">
+            <view attr="com.xingin.xhs.note.noteitem.child.NewNoteItemChildView" corner="3" matchParent="1"/>
+            <view attr="androidx.cardview.widget.CardView" corner="3"/>
+            <view attr="com.xingin.redview.card.NoteCardView" corner="3" matchParent="1"/>
+            <view attr="com.xingin.xhs.homepage.followfeed.page.feed.item.card.itembinder.child.v2.BiserialNoteItemChildViewV2" corner="3"/>
+        </startTo>
+        <startTo attr="com.xingin.matrix.detail.activity.DetailFeedActivity">
+            <view attr="com.xingin.xhs.note.noteitem.child.NewNoteItemChildView" corner="3" matchParent="1"/>
+            <view attr="androidx.cardview.widget.CardView" corner="3"/>
+            <view attr="com.xingin.redview.card.NoteCardView" corner="3" matchParent="1"/>
+            <view attr="com.xingin.xhs.homepage.followfeed.page.feed.item.card.itembinder.child.v2.BiserialNoteItemChildViewV2" corner="3"/>
+        </startTo>
+    </pkg>
+
+    <pkg attr="com.tencent.qqlive">
+        <startFrom attr="com.tencent.qqlive.ona.activity.SplashHomeActivity" topCover="0.1" bottomCover="0.08" bgColor="1"/>
+        <startTo attr="com.tencent.qqlive.ona.activity.VideoDetailActivity">
+            <view attr="com.tencent.qqlive.vectorlayoutimpl.un.tdf.view.VLPosterTopPicView2" corner="8" matchParent="1"/>
+        </startTo>
+        <startTo attr="com.tencent.qqlive.kmm.VideoDetailKmmActivityBk">
+            <view attr="com.tencent.qqlive.vectorlayoutimpl.un.tdf.view.VLPosterTopPicView2" corner="8" matchParent="1"/>
+            <view attr="com.tencent.qqlive.vectorlayoutimpl.un.tdf.view.NativePosterTopPicView" corner="8" matchParent="1"/>
+        </startTo>
+    </pkg>
+
+    <pkg attr="com.qiyi.video">
+        <startFrom attr="com.qiyi.video.WelcomeActivity" topCover="0.1" bgColor="2"/>
+        <startTo attr="org.iqiyi.video.activity.PlayerActivity">
+            <view attr="org.qiyi.basecard.common.widget.row.RelativeRowLayout" corner="6"/>
+        </startTo>
+    </pkg>
+
+    <pkg attr="com.xunmeng.pinduoduo">
+        <startFrom attr="com.xunmeng.pinduoduo.ui.activity.MainFrameActivity" topCover="0.16" bottomCover="0.08" bgColor="2"/>
+        <startFrom attr="com.xunmeng.pinduoduo.ui.activity.HomeActivity" topCover="0.16" bottomCover="0.08" bgColor="2"/>
+        <startFrom attr="com.xunmeng.pinduoduo.activity.NewPageActivity" topCover="0.2" bottomCover="0.08" bgColor="2"/>
+        <startTo attr="com.xunmeng.pinduoduo.activity.NewPageActivity">
+            <view attr="com.xunmeng.android_ui.component.ShadowRoundRectLayout" corner="1"/>
+        </startTo>
+    </pkg>
+
+    <pkg attr="com.taobao.idlefish">
+        <startFrom attr="com.taobao.idlefish.search_implement.SearchResultActivity" topCover="0.16" />
+        <startTo attr="com.taobao.idlefish.detail.DetailActivity">
+            <view attr="com.taobao.android.dinamicx.DXRootView" corner="7" matchParent="1"/>
+        </startTo>
+        <startTo attr="com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity">
+            <view attr="com.taobao.android.dinamicx.DXRootView" corner="7" matchParent="1"/>
+        </startTo>
+    </pkg>
+</filter-conf>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appconfig>
+    <!-- hide launch icon (only valid when app is system app) -->
+    <launch_hide pkg="com.oplus.aimemory"/>
+</appconfig>
