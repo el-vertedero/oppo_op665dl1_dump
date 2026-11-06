@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.replace_operator_name" args="array">
+		<StringList name="array" args="28405;Yettel BG;28403;VIVACOM"/>
+	</app_feature>
+</extend_features>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="carrier_allow_transfer_cs_call_bool" value="true"/>
+	<boolean name="carrier_allow_transfer_ims_call_bool" value="true"/>
+	<boolean name="support_2g_service_state_notify" value="true"/>
+</carrier_config>
+<!-- Timestamp 2026-01-15T16:04:15 #1194676 -->

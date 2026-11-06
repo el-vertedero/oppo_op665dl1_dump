@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="is_need_remove_2g_when_allow2g_closed" value="true"/>
+	<int name="allow2G_visible" value="0"/>
+</carrier_config>
+<!-- Timestamp 2025-07-28T19:32:43 #804840 -->

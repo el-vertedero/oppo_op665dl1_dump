@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.lockassistant.code_restrict"/>
+	<app_feature name="com.android.phone.show_hac_eu" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2025-06-11T10:32:12 #739699 -->

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="config_oplus_hide_4g_3g_2g" value="true"/>
+	<boolean name="config_oplus_hide_3g_2g" value="true"/>
+</carrier_config>
+<!-- Timestamp 2026-06-29T19:22:33 #1533994 -->

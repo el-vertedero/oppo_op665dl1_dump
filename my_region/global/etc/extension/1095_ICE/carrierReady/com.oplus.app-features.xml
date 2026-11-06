@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.systemui.hide_volte_icon"/>
+	<app_feature name="com.android.phone.simsettings.data_roaming_domestic_on_switch_control_national_dynamic"/>
+</extend_features>
+<!-- Timestamp 2025-05-30T09:29:14 #728655 -->

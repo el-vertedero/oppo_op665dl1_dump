@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oplus-config>
+	<oplus-feature name="oplus.software.radio.fetch_number_country_name"/>
+	<oplus-feature name="oplus.software.radio.custom_plmn_for_special_operator"/>
+	<oplus-feature name="oplus.software.radio.mix_sim_name_len_default_ten"/>
+	<oplus-feature name="oplus.software.radio.process_change_region"/>
+	<oplus-feature name="oplus.software.radio.sim_name_length_default_ten"/>
+	<oplus-feature name="oplus.software.radio.smart5g_sp_region_disable"/>
+	<oplus-feature name="oplus.software.radio.enable_sim_detect"/>
+	<oplus-feature name="oplus.software.wlan.log_euex"/>
+	<oplus-feature name="oplus.software.bt.switchlog_disable"/>
+	<oplus-feature name="oplus.software.radio.sa_apm_control"/>
+	<oplus-feature name="oplus.software.radio.sa_tac_control"/>
+	<oplus-feature name="oplus.software.radio.disable_nw_limit_notify"/>
+	<oplus-feature name="oplus.software.power.jobscheduler"/>
+	<oplus-feature name="oplus.software.radio.sa_pingpong_control_disabled"/>
+	<oplus-feature name="oplus.software.radio.offhotspot_simrefresh"/>
+	<oplus-feature name="oplus.software.radio.stream_identify"/>
+	<unavailable-oplus-feature name="oplus.software.radio.ai_link_boost"/>
+	<unavailable-oplus-feature name="oplus.software.radio.ai_link_boost_notification"/>
+	<unavailable-oplus-feature name="oplus.software.radio.omnisense_support"/>
+	<unavailable-oplus-feature name="oplus.software.radio.near_comm_shared_support"/>
+	<unavailable-oplus-feature name="oplus.software.radio.data_self_cure"/>
+	<unavailable-oplus-feature name="oplus.software.radio.data_self_cure_v4v6"/>
+	<unavailable-oplus-feature name="oplus.software.radio.critical_dns_recovery"/>
+	<unavailable-oplus-feature name="oplus.software.radio.hfp_comm_shared_support"/>
+</oplus-config>
+<!-- Timestamp 2026-05-12T20:45:42 #1468396 -->

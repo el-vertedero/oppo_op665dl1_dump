@@ -1,0 +1,2 @@
+com.oplus.imsserviceentitlement:ImsServiceEntitlement.apk::false
+com.nearme.instant.platform:Instant.apk::false

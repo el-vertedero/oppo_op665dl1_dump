@@ -1,0 +1,22 @@
+# build prop start
+ro.oplus.image.my_region.type=EUEX_all
+ro.oplus.image.my_region.date=2026-09-24 23:26:33
+ro.oplus.image.my_region.date.utc=1790263593
+ro.oplus.image.my_region.version_name=XEU0000
+ro.oplus.pipeline.region=EUEX
+ro.vendor.oplus.regionmark=EUEX
+ro.vendor.oplus.radio.always_send_plmn_name=true
+ro.vendor.oplus.radio.sar_regionmark=EUEX
+ro.vendor.oplus.nwopt=true
+persist.sys.rm_sensitive_data=1
+persist.vendor.rm_sensitive_data=1
+ro.vendor.oplus.radio.carrier_detect_mode=1
+ro.oplus.server_url_1=https://fourier-newds01-eu.allawnos.com/autotime/dateandtime.xml?number=
+ro.oplus.server_url_2=https://fourier-newds02-eu.allawnos.com/autotime/dateandtime.xml?number=
+ro.oplus.radio.user_nr_mode_by_sub=1
+ro.oem.key1=EUEX
+ro.oplus.phonemanager.disable_shortcuts=disabled
+persist.vendor.mtk_rtt_support=1
+persist.bluetooth.airpods_support=false
+ro.sys.ams.rus_sensitive_region=true
+ro.oplus.image.my_region.version=17.0.0371.2026092423211939915713.f3265ea4

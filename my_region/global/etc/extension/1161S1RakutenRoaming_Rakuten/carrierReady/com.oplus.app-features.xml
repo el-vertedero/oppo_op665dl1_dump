@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.systemui.softbank_voice_type"/>
+	<app_feature name="com.android.incallui.display_caller_id_name"/>
+	<app_feature name="com.oplus.blacklistapp.harass_intercept_anonymous_etc"/>
+	<app_feature name="com.android.contacts.harass_intercept_anonymous_etc"/>
+	<app_feature name="com.android.phone.add_harass_intercept_type"/>
+	<app_feature name="com.android.server.telecom.add_harass_intercept_type"/>
+	<app_feature name="com.android.incallui.add_harass_intercept_type"/>
+	<app_feature name="com.android.phone.change_volte_while_roaming">
+		<StringList args="key_roaming:2;key_home_mcc:440"/>
+	</app_feature>
+	<app_feature name="com.android.phone.disable_carrier_setting" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-05-26T09:57:55 #1487123 -->

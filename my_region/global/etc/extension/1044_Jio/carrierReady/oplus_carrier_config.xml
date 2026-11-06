@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="config_oplus_hide_3g_2g" value="true"/>
+	<boolean name="config_oplus_hide_2g_only" value="true"/>
+	<int name="volte_visible" value="0"/>
+	<boolean name="show_oplus_video_hold_bool" value="true"/>
+	<boolean name="allow_hold_video_call_bool" value="true"/>
+	<int name="allow2G_visible" value="0"/>
+</carrier_config>
+<!-- Timestamp 2025-06-25T10:24:18 #757731 -->

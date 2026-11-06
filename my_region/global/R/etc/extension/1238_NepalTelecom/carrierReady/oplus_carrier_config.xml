@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="show_oplus_video_hold_bool" value="true"/>
+	<boolean name="allow_hold_video_call_bool" value="true"/>
+</carrier_config>
+<!-- Timestamp 2026-07-06T10:16:24 #1539668 -->

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="carrier_volte_provisioning_required_bool" value="false"/>
+	<boolean name="imsserviceentitlement.ims_provisioning_bool" value="false"/>
+</carrier_config>
+<!-- Timestamp 2025-03-17T14:30:33 #615852 -->

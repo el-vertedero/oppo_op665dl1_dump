@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <versioncode>20251009</versioncode>
+    <filter-name>sys_deviceidle_eei_config</filter-name>
+
+	<restrictedApp enable="true"/>
+	<effectFrontPkg>com.smartviser.viserneo</effectFrontPkg>
+
+    <removeSystem>com.google.android.gms</removeSystem>
+    <removeUser>com.google.android.gsf</removeUser>
+    <removeUser>com.android.vending</removeUser>
+</filter-conf>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.network_list_visible_dynamic" args="String:show"/>
+	<app_feature name="com.android.phone.network_list_visible_5G_dynamic" args="String:show"/>
+	<app_feature name="com.android.phone.need_aggregation_network_lists_dynamic"/>
+	<app_feature name="com.android.phone.simsettings.data_roaming_domestic_on_switch_control_national_dynamic"/>
+	<app_feature name="com.android.phone.simsettings.disable_vowifi_on_airplaneon_dynamic"/>
+	<app_feature name="com.android.phone.customize_network_name_list_5g_dynamic" args="StringList:type">
+		<StringList name="type" args="oplus_5g_4g_3g_2g_auto;oplus_4g_3g_2g_auto;oplus_3g_2g_auto"/>
+	</app_feature>
+	<app_feature name="com.android.phone.customize_network_value_list_5g_dynamic" args="StringList:type">
+		<StringList name="type" args="33;20;18"/>
+	</app_feature>
+	<app_feature name="com.android.phone.customize_network_name_list_dynamic" args="StringList:type">
+		<StringList name="type" args="oplus_4g_3g_2g_auto;oplus_3g_2g_auto"/>
+	</app_feature>
+	<app_feature name="com.android.phone.customize_network_value_list_dynamic" args="StringList:type">
+		<StringList name="type" args="20;18"/>
+	</app_feature>
+	<app_feature name="com.android.phone.simsettings.cust_vowifi_title_summary_dynamic" args="StringList:array">
+		<StringList name="array" args="key_wfc_hint_summary;wifi_calling_hint;"/>
+	</app_feature>
+	<app_feature name="com.android.phone.network_mode_cust_hide_list">
+		<StringList args="oplus_2g_only_auto:hide;oplus_3g_2g_auto:hide"/>
+	</app_feature>
+	<app_feature name="com.android.phone.allow_2g_disable_dialog_summary" args="String:siminfo_enable_2g_dialog_summary_wind3"/>
+</extend_features>
+<!-- Timestamp 2026-04-15T09:43:37 #1432212 -->

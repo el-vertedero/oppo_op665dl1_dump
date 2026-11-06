@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<int name="allow2G_visible" value="0"/>
+	<int name="allow2G_status" value="1"/>
+</carrier_config>
+<!-- Timestamp 2025-07-28T19:32:50 #804836 -->

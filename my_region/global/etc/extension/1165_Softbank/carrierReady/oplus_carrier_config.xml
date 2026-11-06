@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="display_hd_plus_icon_bool" value="true"/>
+	<string name="gps.supl_host">supl.google.com</string>
+	<string name="gps.supl_ver">0x20004</string>
+	<string name="gps.es_extension_sec">300</string>
+	<string name="gps.lpp_profile">15</string>
+	<string name="gps.use_emergency_pdn_for_emergency_supl">1</string>
+	<int name="volte_visible" value="0"/>
+	<boolean name="allow_emergency_call_retry_init_slot_bool" value="false"/>
+	<int name="allow2G_status" value="0"/>
+</carrier_config>
+<!-- Timestamp 2026-03-06T14:54:28 #1317467 -->

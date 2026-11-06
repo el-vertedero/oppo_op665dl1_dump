@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<int name="vowifi_roaming_preferred_mode" value="1"/>
+	<boolean name="allow_hold_video_call_bool" value="true"/>
+	<int name="vowifi_status" value="1"/>
+	<int name="vowifi_preferred_mode" value="1"/>
+	<boolean name="display_hd_plus_icon_bool" value="true"/>
+	<int name="volte_visible" value="0"/>
+	<int name="allow2G_visible" value="0"/>
+	<int name="allow2G_status" value="0"/>
+</carrier_config>
+<!-- Timestamp 2025-06-25T16:00:37 #758423 -->

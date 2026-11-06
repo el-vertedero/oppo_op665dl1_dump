@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.network_mode_cust_hide_list">
+		<StringList args="oplus_3g_2g_auto:hide"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2025-06-25T16:04:40 #758909 -->

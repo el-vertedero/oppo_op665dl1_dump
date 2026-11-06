@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.simsettings.vowifi_perfer_mode_entry_value">
+		<StringList args="vowifi_perfer_ims,10,vowifi_perfer_wifi,2,vowifi_perfer_cellular,1"/>
+		<StringList args="en,vowifi_perfer_ims,10,vowifi_perfer_wifi,2,vowifi_perfer_cellular,1"/>
+		<StringList args="el,vowifi_perfer_ims,10,vowifi_perfer_wifi,2,vowifi_perfer_cellular,1"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2025-07-18T14:53:21 #791050 -->

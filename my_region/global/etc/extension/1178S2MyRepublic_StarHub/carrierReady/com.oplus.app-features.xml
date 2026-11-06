@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.apn_customized_config">
+		<StringList args="hide_apn_name;;default_apn_name;;default_apn;;default_apn_numeric;"/>
+	</app_feature>
+	<app_feature name="com.oplus.call.hide_vo5g_icon" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2025-10-23T10:22:45 #1032513 -->

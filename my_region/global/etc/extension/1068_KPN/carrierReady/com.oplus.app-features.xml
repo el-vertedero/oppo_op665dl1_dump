@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.simsettings.votle_affect_vowifi_dialog_dynamic"/>
+	<app_feature name="com.android.systemui.hide_volte_icon"/>
+	<app_feature name="com.android.phone.simsettings.disable_apn_preferences" args="StringList:array">
+		<StringList name="array" args="bearer"/>
+	</app_feature>
+	<app_feature name="com.android.phone.change_volte_while_roaming">
+		<StringList args="key_roaming:3;key_home_mcc:204"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2026-03-11T19:07:56 #1363799 -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<int name="vowifi_status" value="1"/>
+	<int name="vowifi_preferred_mode" value="1"/>
+	<boolean name="display_hd_audio_property_bool" value="false"/>
+	<int name="vowifi_preferred_hide_mode" value="1"/>
+	<boolean name="display_call_type_icon_bool" value="true"/>
+	<boolean name="com.google.android.dialer.display_wifi_calling_button_bool" value="true"/>
+</carrier_config>
+<!-- Timestamp 2025-05-23T14:33:56 #717315 -->

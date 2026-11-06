@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<feature name="com.google.android.contacts.feature.SIM_WRITE"/>
+	<feature name="com.android.systemui.lockscreen_shortcut_settings_enable"/>
+	<unavailable-feature name="oplus.obrain.support"/>
+	<feature name="com.google.android.feature.qsb_at_bottom"/>
+</permissions>
+<!-- Timestamp 2026-07-24T18:07:29 #1577216 -->

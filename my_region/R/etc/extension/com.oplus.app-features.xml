@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.heysynergy.func_brief_url_12.0" args="String:connect.realme.com"/>
+	<app_feature name="com.coloros.bootreg_support_taboola" args="boolean:true"/>
+	<app_feature name="com.android.systemui.other_pictorial_support" args="String:com.taboola.scoop"/>
+	<app_feature name="com.oplus.bootreg_support_taboola" args="boolean:true"/>
+	<app_feature name="com.android.systemui.use_chrome_country"/>
+	<app_feature name="com.android.systemui.use_chrome_opreator" args="boolean:true"/>
+	<app_feature name="com.coloros.bootreg.other_pictorial_support" args="String:com.taboola.scoop"/>
+	<app_feature name="com.android.launcher.COMMON_GDPR_REGION" args="boolean:true"/>
+	<app_feature name="com.coloros.bootreg_branch_privacy_policy_network_server_url" args="String:https://legal.poweredbybranch.com/#disco-ts-cs"/>
+	<app_feature name="com.coloros.bootreg_branch_agreements_network_server_url" args="String:https://legal.poweredbybranch.com/#disco-ts-cs"/>
+	<app_feature name="com.oplus.bootreg_lehua_region_support" args="String:EUEX"/>
+	<app_feature name="com.oplus.gallery3d.aihd_url" args="String:https://realme-ai-nl.allawntech.com/"/>
+	<app_feature name="com.android.phone.show_hac_eu" args="boolean:true"/>
+	<app_feature name="com.oplus.gallery3d.rm_editor_url" args="String:https://rl-videoclip-fr.allawntech.com"/>
+</extend_features>
+<!-- Timestamp 2026-06-11T17:06:28 #1511203 -->

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.disable_editing_vm_number_dynamic"/>
+</extend_features>
+<!-- Timestamp 2026-08-26T00:12:56 #591760df-545d-46ae-aad4-2b670431579a -->

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.display_vo5g_custom_title" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2025-12-23T20:14:05 #1154694 -->

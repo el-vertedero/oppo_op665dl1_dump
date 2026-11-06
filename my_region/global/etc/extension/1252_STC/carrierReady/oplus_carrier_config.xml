@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<int name="volte_visible" value="0"/>
+	<int name="smart5g_status" value="0"/>
+	<boolean name="display_hd_plus_icon_bool" value="true"/>
+</carrier_config>
+<!-- Timestamp 2026-07-06T11:31:00 #1539866 -->

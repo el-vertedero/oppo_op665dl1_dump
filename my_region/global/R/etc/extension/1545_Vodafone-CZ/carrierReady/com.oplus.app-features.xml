@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.simsettings.customize_vowifi_notification_dynamic" args="StringList:array">
+		<StringList name="array" args="key_title;vowifi_title_for_CZ_ZA_VDF"/>
+	</app_feature>
+	<app_feature name="com.android.phone.show_notification_when_register_vowifi"/>
+</extend_features>
+<!-- Timestamp 2025-07-18T14:53:21 #791050 -->

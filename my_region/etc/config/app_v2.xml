@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app version="1.0">
+  <disable pkg="com.android.fmradio" priority="9"/>
+  <disable pkg="com.android.mms" priority="9"/>
+  <disable pkg="com.caf.fmradio" priority="9"/>
+  <del_disable pkg="com.fin.topkredit" priority="9" name="Finmart.apk"/>
+  <del_disable pkg="com.finshell.fin" priority="9" name="FinShellPay.apk"/>
+  <del_disable pkg="com.fintech.uangmudah" priority="9" name="UangMudah.apk"/>
+  <del_enable pkg="com.oneplus.store" priority="9" name="EAOnePlusStore.apk"/>
+  <disable pkg="com.oplus.appbooster" priority="9"/>
+  <disable pkg="com.oplus.nearcomm" priority="9"/>
+  <enable pkg="com.taboola.scoop" priority="9"/>
+</app>

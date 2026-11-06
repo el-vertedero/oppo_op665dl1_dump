@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.phone.simsettings.update_volte_switch_title_dynamic"/>
+	<app_feature name="com.android.systemui.hide_volte_icon"/>
+	<app_feature name="com.android.phone.simsettings.show_vowifi_help_menu_dynamic"/>
+	<app_feature name="com.android.phone.simsettings.customize_vowifi_dialog_dynamic" args="StringList:array">
+		<StringList name="array" args="key_title;wifi_calling_enable_dialog_title;key_message;wifi_calling_enable_dialog_msg;key_positive_button;wifi_calling_positive_button;key_negative_button;wifi_calling_negative_button;key_dialog_type;first_ask_dialog"/>
+	</app_feature>
+	<app_feature name="com.android.phone.simsettings.click_control_center_vowifi_intent_dynamic"/>
+	<app_feature name="com.android.phone.simsettings.show_vowifi_tile_in_control_center_dynamic"/>
+	<app_feature name="com.android.phone.network_mode_cust_hide_list">
+		<StringList args="oplus_2g_only_auto:hide"/>
+	</app_feature>
+	<app_feature name="com.android.phone.simsettings.show_guide_to_vowifi_help_dynamic"/>
+	<app_feature name="com.android.systemui.show_volte_for_vo5g" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-04-02T14:18:40 #1411205 -->

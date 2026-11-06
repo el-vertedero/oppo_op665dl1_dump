@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.call.display_custom_vo5g_icon" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-03-07T12:17:07 #1317543 -->

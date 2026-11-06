@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.providers.contacts.preset_contacts" args="String: {&quot;version&quot;: 2,          &quot;operatorContactList&quot;: [                  {&quot;emails&quot;:[],&quot;contactName&quot;: &quot;Lycamobile Asistencia&quot;,&quot;phoneNumbers&quot;:[&quot;321&quot;],&quot;contactVersion&quot;: 2}               ]         }"/>
+</extend_features>

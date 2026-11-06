@@ -1,0 +1,23 @@
+{
+  "autoDownload": true,	
+  "unitName": "cloud_livephoto_matting",
+  "detectName": "ai_livephoto_matting",
+  "unitId": 185622557,
+  "unitType": "Plugin",
+  "unitVersion": 1006,
+  "publishVersion": 3,
+  "runningInfo": {
+    "internet": {
+      "access": true,
+      "necessary": false
+    }
+  },
+  "scenes": [
+    "ai_interact_segment",
+    "cloud_ai_remove"
+  ],
+  "disabled": false,
+  "isCloudApi": true,
+  "needLogin": true,
+  "disableType": 0
+}

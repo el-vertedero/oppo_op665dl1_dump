@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.trafficmonitor.disable_close_restrict_background" args="StringList:whitelist">
+		<StringList name="whitelist" args="com.coloros.lockassistant"/>
+	</app_feature>
+	<app_feature name="com.oplus.camera.camera_log_unlock_login_url.public.key" args="String:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsNYxEj4aGKpdp+Zy1MX4mGsR3hrpFScRjTKR5KyNrivHJJZyWPXgcbhIm3C/3bNqM1VF5T3fxyWo/aCRT/mFSB08YrMdS/bYab3Kio5ihmAeau8hc8zokSsPuFE81ZLVIvRzTe+qj6Qso+KvVDW/B5iBQx363MOnvZoEPjFU1JaVXOcx8usrGLs87cb6nbgTf0LFqxEv+NYC3IFZ+3xJ6zakZr1Q8pl53Z2RiJasJ0C8uRPSlWxEWQwLP13OdfbQ4/nrfI9v0nwjjVEajjSt7886Rvda9XjD1vmiFUXY/KVmRI87gp0/D6OJHsPXVY/7e/cn3C+Y2SEjBYLIsL6puwIDAQAB"/>
+	<app_feature name="com.oplus.aimemory.asr_server_supported_languages">
+		<StringList args="en-US"/>
+		<StringList args="en-GB"/>
+		<StringList args="en-AU"/>
+		<StringList args="en-NZ"/>
+		<StringList args="en-IN"/>
+		<StringList args="en-ZA"/>
+		<StringList args="hi-IN"/>
+		<StringList args="id-ID"/>
+		<StringList args="th-TH"/>
+		<StringList args="es-ES"/>
+		<StringList args="es-MX"/>
+		<StringList args="ar-AE"/>
+		<StringList args="ru-RU"/>
+		<StringList args="fi-FI"/>
+		<StringList args="ko-KR"/>
+		<StringList args="ja-JP"/>
+		<StringList args="zh-CN"/>
+		<StringList args="zh-TW"/>
+		<StringList args="bg-BG"/>
+		<StringList args="da-DK"/>
+		<StringList args="de-DE"/>
+		<StringList args="fr-FR"/>
+		<StringList args="nl-NL"/>
+		<StringList args="cs-CZ"/>
+		<StringList args="lv-LV"/>
+		<StringList args="ro-RO"/>
+		<StringList args="pt-PT"/>
+		<StringList args="pt-BR"/>
+		<StringList args="nb-NO"/>
+		<StringList args="sv-SE"/>
+		<StringList args="tr-TR"/>
+		<StringList args="el-GR"/>
+		<StringList args="hu-HU"/>
+		<StringList args="it-IT"/>
+		<StringList args="vi-VN"/>
+		<StringList args="pl-PL"/>
+		<StringList args="ms-MY"/>
+		<StringList args="fil-PH"/>
+	</app_feature>
+	<app_feature name="com.android.phone.simsettings.enable_non_primary_sa_switch" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-01-22T15:12:25 #1210370 -->

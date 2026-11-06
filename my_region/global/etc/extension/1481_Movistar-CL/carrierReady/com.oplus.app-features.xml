@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.call.display_voz4g_vozwifi_icon" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-01-08T20:09:58 #1176826 -->

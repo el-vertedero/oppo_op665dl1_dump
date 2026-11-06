@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<int name="volte_visible" value="0"/>
+	<int name="vowifi_status" value="0"/>
+	<int name="vowifi_preferred_hide_mode" value="1"/>
+	<int name="vo5g_visible" value="0"/>
+	<int name="allow2G_status" value="0"/>
+</carrier_config>
+<!-- Timestamp 2026-08-11T15:55:28 #1723721 -->

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.providers.contacts.load_sdn_contacts"/>
+</extend_features>
+<!-- Timestamp 2026-02-27T15:20:34 #1298634 -->

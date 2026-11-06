@@ -1,0 +1,9 @@
+<filter-conf>
+<version>2023111701</version>
+<isOpen>1</isOpen>
+<filter-name>sys_startup_policy_config</filter-name>	
+	<ForbidRestartService>0</ForbidRestartService>	
+	<DelayRestartService>
+        <delay_rs name = "activity_starting" time = "5:6" mem = "8" enable = "0" window = "5000" />
+    </DelayRestartService>
+</filter-conf>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<boolean name="display_hd_audio_property_bool" value="true"/>
+	<boolean name="display_call_type_icon_bool" value="false"/>
+	<int name="volte_visible" value="0"/>
+	<int name="vowifi_visible" value="0"/>
+	<int name="vowifi_status" value="0"/>
+</carrier_config>
+<!-- Timestamp 2025-10-22T20:11:53 #1032924 -->

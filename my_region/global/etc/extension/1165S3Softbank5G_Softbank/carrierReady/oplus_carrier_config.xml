@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<string name="gps.use_emergency_pdn_for_emergency_supl">1</string>
+	<string name="gps.lpp_profile">15</string>
+</carrier_config>
+<!-- Timestamp 2026-02-11T10:07:24 #1285930 -->

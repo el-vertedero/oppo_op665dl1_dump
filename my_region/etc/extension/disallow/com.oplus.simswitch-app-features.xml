@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.customize.special_disallowapp_by_pkg_path" args="StringList:pkgs">
+		<StringList name="pkgs" args="com.google.android.euicc=/my_carrier/priv-app/EuiccGoogle/EuiccGoogle.apk"/>
+		<StringList name="pkgs" args="com.heytap.browser=/my_carrier/app/Browser/Browser.apk"/>
+		<StringList name="pkgs" args="com.heytap.pictorial=/my_carrier/app/Pictorial/Pictorial.apk"/>
+		<StringList name="pkgs" args="com.oplus.omoji=/my_carrier/app/Omoji/Omoji.apk"/>
+		<StringList name="pkgs" args="com.android.mms=/my_carrier/priv-app/Mms/Mms.apk"/>
+		<StringList name="pkgs" args="com.coloros.assistantscreen=/my_carrier/app/AssistantScreen"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2024-01-26T15:13:28 #88075 -->

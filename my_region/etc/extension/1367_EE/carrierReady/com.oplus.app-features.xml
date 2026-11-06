@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.providers.contacts.preset_contacts" args="String:{&quot;version&quot;: 3,&quot;operatorContactList&quot;: [{&quot;emails&quot;: [&quot;support.uk@oppo.com&quot;],&quot;oldEmails&quot;: [&quot;support.uk@oppo.com&quot;],&quot;contactName&quot;: &quot;OPPO UK&quot;,&quot;phoneNumbers&quot;: [&quot;08009176121&quot;],&quot;oldPhoneNumbers&quot;: [&quot;08000294603&quot;],&quot;contactVersion&quot;: 3}]}"/>
+</extend_features>
+<!-- Timestamp 2024-09-28T10:39:24 #235430 -->

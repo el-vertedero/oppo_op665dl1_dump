@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.stk.orange_sim_test_dynamic"/>
+	<app_feature name="com.android.stk.hide_notification_title_dynamic"/>
+</extend_features>

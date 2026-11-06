@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.stk.orange_sim_test_dynamic"/>
+	<app_feature name="com.android.stk.hide_notification_title_dynamic"/>
+	<app_feature name="com.android.phone.simsettings.disable_vowifi_while_not_provision_dynamic" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-03-20T15:40:35 #1387086 -->

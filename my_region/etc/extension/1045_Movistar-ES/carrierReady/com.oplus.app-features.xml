@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.providers.contacts.load_sdn_contacts"/>
+	<app_feature name="com.android.contacts.display_sdn_function"/>
+	<app_feature name="com.android.phone.open_auto_wlan" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2025-11-24T16:24:31 #1088396 -->
