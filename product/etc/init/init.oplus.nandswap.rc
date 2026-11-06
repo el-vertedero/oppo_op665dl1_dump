@@ -1,0 +1,458 @@
+service init.oplus.nandswap_post-fs-data.sh /product/bin/init.oplus.nandswap.sh "post-fs-data"
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot
+
+on post-fs-data
+    start init.oplus.nandswap_post-fs-data.sh
+
+# Enable app per-application memory controller
+on post-fs-data
+    write /sys/fs/cgroup/apps/cgroup.subtree_control "+memory"
+# for memcg-V2
+# for root
+    chmod 0775 /sys/fs/cgroup/memory.active_app_info_list
+    chmod 0775 /sys/fs/cgroup/memory.aging_anon
+    chmod 0775 /sys/fs/cgroup/memory.anon_refault_snapshot_min_interval
+    chmod 0775 /sys/fs/cgroup/memory.app_score
+    chmod 0775 /sys/fs/cgroup/memory.app_uid
+    chmod 0775 /sys/fs/cgroup/memory.area_anon_refault_threshold
+    chmod 0775 /sys/fs/cgroup/memory.avail_buffers
+    chmod 0775 /sys/fs/cgroup/memory.compress_ratio
+    chmod 0775 /sys/fs/cgroup/memory.cpuload_threshold
+    chmod 0775 /sys/fs/cgroup/memory.empty_round_check_threshold
+    chmod 0775 /sys/fs/cgroup/memory.empty_round_skip_interval
+    chmod 0775 /sys/fs/cgroup/memory.erm_avail_buffer
+    chmod 0775 /sys/fs/cgroup/memory.flags
+    chmod 0775 /sys/fs/cgroup/memory.max_skip_interval
+    chmod 0775 /sys/fs/cgroup/memory.name
+    chmod 0775 /sys/fs/cgroup/memory.psi
+    chmod 0775 /sys/fs/cgroup/memory.stored_wm_ratio
+    chmod 0775 /sys/fs/cgroup/memory.swap_stat
+    chmod 0775 /sys/fs/cgroup/memory.swap_stat_array
+    chmod 0775 /sys/fs/cgroup/memory.swapd_max_reclaim_size
+    chmod 0775 /sys/fs/cgroup/memory.swapd_memcgs_param
+    chmod 0775 /sys/fs/cgroup/memory.swapd_nap_jiffies
+    chmod 0775 /sys/fs/cgroup/memory.swapd_pid
+    chmod 0775 /sys/fs/cgroup/memory.swapd_single_memcg_param
+    chmod 0775 /sys/fs/cgroup/memory.total_info_per_app
+    chmod 0775 /sys/fs/cgroup/memory.ub_ufs2zram_ratio
+    chmod 0775 /sys/fs/cgroup/memory.zram_critical_threshold
+    chmod 0775 /sys/fs/cgroup/memory.zram_used_limit_mb
+    chmod 0775 /sys/fs/cgroup/memory.zram_wm_ratio
+    chmod 0775 /sys/fs/cgroup/memory.force_shrink_anon
+    chmod 0775 /sys/fs/cgroup/memory.force_shrink_anon_percent
+    chmod 0775 /sys/fs/cgroup/memory.force_shrink_file
+    chmod 0775 /sys/fs/cgroup/memory.force_swapin
+    chmod 0775 /sys/fs/cgroup/memory.force_swapin_percent
+    chmod 0775 /sys/fs/cgroup/memory.force_swapout
+    chmod 0775 /sys/fs/cgroup/memory.force_swapout_percent
+    chmod 0775 /sys/fs/cgroup/memory.io_limit
+    chmod 0775 /sys/fs/cgroup/memory.io_limit_size
+    chmod 0775 /sys/fs/cgroup/memory.reclaim
+    chmod 0775 /sys/fs/cgroup/memory.stat
+    chown system system /sys/fs/cgroup/memory.active_app_info_list
+    chown system system /sys/fs/cgroup/memory.aging_anon
+    chown system system /sys/fs/cgroup/memory.anon_refault_snapshot_min_interval
+    chown system system /sys/fs/cgroup/memory.app_score
+    chown system system /sys/fs/cgroup/memory.app_uid
+    chown system system /sys/fs/cgroup/memory.area_anon_refault_threshold
+    chown system system /sys/fs/cgroup/memory.avail_buffers
+    chown system system /sys/fs/cgroup/memory.compress_ratio
+    chown system system /sys/fs/cgroup/memory.cpuload_threshold
+    chown system system /sys/fs/cgroup/memory.empty_round_check_threshold
+    chown system system /sys/fs/cgroup/memory.empty_round_skip_interval
+    chown system system /sys/fs/cgroup/memory.erm_avail_buffer
+    chown system system /sys/fs/cgroup/memory.flags
+    chown system system /sys/fs/cgroup/memory.max_skip_interval
+    chown system system /sys/fs/cgroup/memory.name
+    chown system system /sys/fs/cgroup/memory.psi
+    chown system system /sys/fs/cgroup/memory.stored_wm_ratio
+    chown system system /sys/fs/cgroup/memory.swap_stat
+    chown system system /sys/fs/cgroup/memory.swap_stat_array
+    chown system system /sys/fs/cgroup/memory.swapd_max_reclaim_size
+    chown system system /sys/fs/cgroup/memory.swapd_memcgs_param
+    chown system system /sys/fs/cgroup/memory.swapd_nap_jiffies
+    chown system system /sys/fs/cgroup/memory.swapd_pid
+    chown system system /sys/fs/cgroup/memory.swapd_single_memcg_param
+    chown system system /sys/fs/cgroup/memory.total_info_per_app
+    chown system system /sys/fs/cgroup/memory.ub_ufs2zram_ratio
+    chown system system /sys/fs/cgroup/memory.zram_critical_threshold
+    chown system system /sys/fs/cgroup/memory.zram_used_limit_mb
+    chown system system /sys/fs/cgroup/memory.zram_wm_ratio
+    chown system system /sys/fs/cgroup/memory.force_shrink_anon
+    chown system system /sys/fs/cgroup/memory.force_shrink_anon_percent
+    chown system system /sys/fs/cgroup/memory.force_shrink_file
+    chown system system /sys/fs/cgroup/memory.force_swapin
+    chown system system /sys/fs/cgroup/memory.force_swapin_percent
+    chown system system /sys/fs/cgroup/memory.force_swapout
+    chown system system /sys/fs/cgroup/memory.force_swapout_percent
+    chown system system /sys/fs/cgroup/memory.io_limit
+    chown system system /sys/fs/cgroup/memory.io_limit_size
+    chown system system /sys/fs/cgroup/memory.reclaim
+    chown system system /sys/fs/cgroup/memory.stat
+# for system
+    chmod 0775 /sys/fs/cgroup/system/memory.active_app_info_list
+    chmod 0775 /sys/fs/cgroup/system/memory.aging_anon
+    chmod 0775 /sys/fs/cgroup/system/memory.anon_refault_snapshot_min_interval
+    chmod 0775 /sys/fs/cgroup/system/memory.app_score
+    chmod 0775 /sys/fs/cgroup/system/memory.app_uid
+    chmod 0775 /sys/fs/cgroup/system/memory.area_anon_refault_threshold
+    chmod 0775 /sys/fs/cgroup/system/memory.avail_buffers
+    chmod 0775 /sys/fs/cgroup/system/memory.compress_ratio
+    chmod 0775 /sys/fs/cgroup/system/memory.cpuload_threshold
+    chmod 0775 /sys/fs/cgroup/system/memory.empty_round_check_threshold
+    chmod 0775 /sys/fs/cgroup/system/memory.empty_round_skip_interval
+    chmod 0775 /sys/fs/cgroup/system/memory.erm_avail_buffer
+    chmod 0775 /sys/fs/cgroup/system/memory.flags
+    chmod 0775 /sys/fs/cgroup/system/memory.max_skip_interval
+    chmod 0775 /sys/fs/cgroup/system/memory.name
+    chmod 0775 /sys/fs/cgroup/system/memory.psi
+    chmod 0775 /sys/fs/cgroup/system/memory.stored_wm_ratio
+    chmod 0775 /sys/fs/cgroup/system/memory.swap_stat
+    chmod 0775 /sys/fs/cgroup/system/memory.swap_stat_array
+    chmod 0775 /sys/fs/cgroup/system/memory.swapd_max_reclaim_size
+    chmod 0775 /sys/fs/cgroup/system/memory.swapd_memcgs_param
+    chmod 0775 /sys/fs/cgroup/system/memory.swapd_nap_jiffies
+    chmod 0775 /sys/fs/cgroup/system/memory.swapd_pid
+    chmod 0775 /sys/fs/cgroup/system/memory.swapd_single_memcg_param
+    chmod 0775 /sys/fs/cgroup/system/memory.total_info_per_app
+    chmod 0775 /sys/fs/cgroup/system/memory.ub_ufs2zram_ratio
+    chmod 0775 /sys/fs/cgroup/system/memory.zram_critical_threshold
+    chmod 0775 /sys/fs/cgroup/system/memory.zram_used_limit_mb
+    chmod 0775 /sys/fs/cgroup/system/memory.zram_wm_ratio
+    chmod 0775 /sys/fs/cgroup/system/memory.force_shrink_anon
+    chmod 0775 /sys/fs/cgroup/system/memory.force_shrink_anon_percent
+    chmod 0775 /sys/fs/cgroup/system/memory.force_shrink_file
+    chmod 0775 /sys/fs/cgroup/system/memory.force_swapin
+    chmod 0775 /sys/fs/cgroup/system/memory.force_swapin_percent
+    chmod 0775 /sys/fs/cgroup/system/memory.force_swapout
+    chmod 0775 /sys/fs/cgroup/system/memory.force_swapout_percent
+    chmod 0775 /sys/fs/cgroup/system/memory.reclaim
+    chmod 0775 /sys/fs/cgroup/system/memory.stat
+    chown system system /sys/fs/cgroup/system/memory.active_app_info_list
+    chown system system /sys/fs/cgroup/system/memory.aging_anon
+    chown system system /sys/fs/cgroup/system/memory.anon_refault_snapshot_min_interval
+    chown system system /sys/fs/cgroup/system/memory.app_score
+    chown system system /sys/fs/cgroup/system/memory.app_uid
+    chown system system /sys/fs/cgroup/system/memory.area_anon_refault_threshold
+    chown system system /sys/fs/cgroup/system/memory.avail_buffers
+    chown system system /sys/fs/cgroup/system/memory.compress_ratio
+    chown system system /sys/fs/cgroup/system/memory.cpuload_threshold
+    chown system system /sys/fs/cgroup/system/memory.empty_round_check_threshold
+    chown system system /sys/fs/cgroup/system/memory.empty_round_skip_interval
+    chown system system /sys/fs/cgroup/system/memory.erm_avail_buffer
+    chown system system /sys/fs/cgroup/system/memory.flags
+    chown system system /sys/fs/cgroup/system/memory.max_skip_interval
+    chown system system /sys/fs/cgroup/system/memory.name
+    chown system system /sys/fs/cgroup/system/memory.psi
+    chown system system /sys/fs/cgroup/system/memory.stored_wm_ratio
+    chown system system /sys/fs/cgroup/system/memory.swap_stat
+    chown system system /sys/fs/cgroup/system/memory.swap_stat_array
+    chown system system /sys/fs/cgroup/system/memory.swapd_max_reclaim_size
+    chown system system /sys/fs/cgroup/system/memory.swapd_memcgs_param
+    chown system system /sys/fs/cgroup/system/memory.swapd_nap_jiffies
+    chown system system /sys/fs/cgroup/system/memory.swapd_pid
+    chown system system /sys/fs/cgroup/system/memory.swapd_single_memcg_param
+    chown system system /sys/fs/cgroup/system/memory.total_info_per_app
+    chown system system /sys/fs/cgroup/system/memory.ub_ufs2zram_ratio
+    chown system system /sys/fs/cgroup/system/memory.zram_critical_threshold
+    chown system system /sys/fs/cgroup/system/memory.zram_used_limit_mb
+    chown system system /sys/fs/cgroup/system/memory.zram_wm_ratio
+    chown system system /sys/fs/cgroup/system/memory.force_shrink_anon
+    chown system system /sys/fs/cgroup/system/memory.force_shrink_anon_percent
+    chown system system /sys/fs/cgroup/system/memory.force_shrink_file
+    chown system system /sys/fs/cgroup/system/memory.force_swapin
+    chown system system /sys/fs/cgroup/system/memory.force_swapin_percent
+    chown system system /sys/fs/cgroup/system/memory.force_swapout
+    chown system system /sys/fs/cgroup/system/memory.force_swapout_percent
+    chown system system /sys/fs/cgroup/system/memory.reclaim
+    chown system system /sys/fs/cgroup/system/memory.stat
+# for apps
+    chmod 0775 /sys/fs/cgroup/apps/memory.active_app_info_list
+    chmod 0775 /sys/fs/cgroup/apps/memory.aging_anon
+    chmod 0775 /sys/fs/cgroup/apps/memory.anon_refault_snapshot_min_interval
+    chmod 0775 /sys/fs/cgroup/apps/memory.app_score
+    chmod 0775 /sys/fs/cgroup/apps/memory.app_uid
+    chmod 0775 /sys/fs/cgroup/apps/memory.area_anon_refault_threshold
+    chmod 0775 /sys/fs/cgroup/apps/memory.avail_buffers
+    chmod 0775 /sys/fs/cgroup/apps/memory.compress_ratio
+    chmod 0775 /sys/fs/cgroup/apps/memory.cpuload_threshold
+    chmod 0775 /sys/fs/cgroup/apps/memory.empty_round_check_threshold
+    chmod 0775 /sys/fs/cgroup/apps/memory.empty_round_skip_interval
+    chmod 0775 /sys/fs/cgroup/apps/memory.erm_avail_buffer
+    chmod 0775 /sys/fs/cgroup/apps/memory.flags
+    chmod 0775 /sys/fs/cgroup/apps/memory.max_skip_interval
+    chmod 0775 /sys/fs/cgroup/apps/memory.name
+    chmod 0775 /sys/fs/cgroup/apps/memory.psi
+    chmod 0775 /sys/fs/cgroup/apps/memory.stored_wm_ratio
+    chmod 0775 /sys/fs/cgroup/apps/memory.swap_stat
+    chmod 0775 /sys/fs/cgroup/apps/memory.swap_stat_array
+    chmod 0775 /sys/fs/cgroup/apps/memory.swapd_max_reclaim_size
+    chmod 0775 /sys/fs/cgroup/apps/memory.swapd_memcgs_param
+    chmod 0775 /sys/fs/cgroup/apps/memory.swapd_nap_jiffies
+    chmod 0775 /sys/fs/cgroup/apps/memory.swapd_pid
+    chmod 0775 /sys/fs/cgroup/apps/memory.swapd_single_memcg_param
+    chmod 0775 /sys/fs/cgroup/apps/memory.total_info_per_app
+    chmod 0775 /sys/fs/cgroup/apps/memory.ub_ufs2zram_ratio
+    chmod 0775 /sys/fs/cgroup/apps/memory.zram_critical_threshold
+    chmod 0775 /sys/fs/cgroup/apps/memory.zram_used_limit_mb
+    chmod 0775 /sys/fs/cgroup/apps/memory.zram_wm_ratio
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_shrink_anon
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_shrink_anon_percent
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_shrink_file
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_swapin
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_swapin_percent
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_swapout
+    chmod 0775 /sys/fs/cgroup/apps/memory.force_swapout_percent
+    chmod 0775 /sys/fs/cgroup/apps/memory.reclaim
+    chmod 0775 /sys/fs/cgroup/apps/memory.stat
+    chown system system /sys/fs/cgroup/apps/memory.active_app_info_list
+    chown system system /sys/fs/cgroup/apps/memory.aging_anon
+    chown system system /sys/fs/cgroup/apps/memory.anon_refault_snapshot_min_interval
+    chown system system /sys/fs/cgroup/apps/memory.app_score
+    chown system system /sys/fs/cgroup/apps/memory.app_uid
+    chown system system /sys/fs/cgroup/apps/memory.area_anon_refault_threshold
+    chown system system /sys/fs/cgroup/apps/memory.avail_buffers
+    chown system system /sys/fs/cgroup/apps/memory.compress_ratio
+    chown system system /sys/fs/cgroup/apps/memory.cpuload_threshold
+    chown system system /sys/fs/cgroup/apps/memory.empty_round_check_threshold
+    chown system system /sys/fs/cgroup/apps/memory.empty_round_skip_interval
+    chown system system /sys/fs/cgroup/apps/memory.erm_avail_buffer
+    chown system system /sys/fs/cgroup/apps/memory.flags
+    chown system system /sys/fs/cgroup/apps/memory.max_skip_interval
+    chown system system /sys/fs/cgroup/apps/memory.name
+    chown system system /sys/fs/cgroup/apps/memory.psi
+    chown system system /sys/fs/cgroup/apps/memory.stored_wm_ratio
+    chown system system /sys/fs/cgroup/apps/memory.swap_stat
+    chown system system /sys/fs/cgroup/apps/memory.swap_stat_array
+    chown system system /sys/fs/cgroup/apps/memory.swapd_max_reclaim_size
+    chown system system /sys/fs/cgroup/apps/memory.swapd_memcgs_param
+    chown system system /sys/fs/cgroup/apps/memory.swapd_nap_jiffies
+    chown system system /sys/fs/cgroup/apps/memory.swapd_pid
+    chown system system /sys/fs/cgroup/apps/memory.swapd_single_memcg_param
+    chown system system /sys/fs/cgroup/apps/memory.total_info_per_app
+    chown system system /sys/fs/cgroup/apps/memory.ub_ufs2zram_ratio
+    chown system system /sys/fs/cgroup/apps/memory.zram_critical_threshold
+    chown system system /sys/fs/cgroup/apps/memory.zram_used_limit_mb
+    chown system system /sys/fs/cgroup/apps/memory.zram_wm_ratio
+    chown system system /sys/fs/cgroup/apps/memory.force_shrink_anon
+    chown system system /sys/fs/cgroup/apps/memory.force_shrink_anon_percent
+    chown system system /sys/fs/cgroup/apps/memory.force_shrink_file
+    chown system system /sys/fs/cgroup/apps/memory.force_swapin
+    chown system system /sys/fs/cgroup/apps/memory.force_swapin_percent
+    chown system system /sys/fs/cgroup/apps/memory.force_swapout
+    chown system system /sys/fs/cgroup/apps/memory.force_swapout_percent
+    chown system system /sys/fs/cgroup/apps/memory.reclaim
+    chown system system /sys/fs/cgroup/apps/memory.stat
+# for inactive_apps
+    mkdir /sys/fs/cgroup/apps/inactive_apps
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.active_app_info_list
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.aging_anon
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.anon_refault_snapshot_min_interval
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.app_score
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.app_uid
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.area_anon_refault_threshold
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.avail_buffers
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.compress_ratio
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.cpuload_threshold
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.empty_round_check_threshold
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.empty_round_skip_interval
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.erm_avail_buffer
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.flags
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.max_skip_interval
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.name
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.psi
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.stored_wm_ratio
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swap_stat
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swap_stat_array
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swapd_max_reclaim_size
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swapd_memcgs_param
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swapd_nap_jiffies
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swapd_pid
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.swapd_single_memcg_param
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.total_info_per_app
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.ub_ufs2zram_ratio
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.zram_critical_threshold
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.zram_used_limit_mb
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.zram_wm_ratio
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_shrink_anon
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_shrink_anon_percent
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_shrink_file
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_swapin
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_swapin_percent
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_swapout
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.force_swapout_percent
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.reclaim
+    chmod 0775 /sys/fs/cgroup/apps/inactive_apps/memory.stat
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.active_app_info_list
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.aging_anon
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.anon_refault_snapshot_min_interval
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.app_score
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.app_uid
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.area_anon_refault_threshold
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.avail_buffers
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.compress_ratio
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.cpuload_threshold
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.empty_round_check_threshold
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.empty_round_skip_interval
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.erm_avail_buffer
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.max_skip_interval
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.name
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.psi
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.stored_wm_ratio
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swap_stat
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swap_stat_array
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swapd_max_reclaim_size
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swapd_memcgs_param
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swapd_nap_jiffies
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swapd_pid
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.swapd_single_memcg_param
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.total_info_per_app
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.ub_ufs2zram_ratio
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.zram_critical_threshold
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.zram_used_limit_mb
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.zram_wm_ratio
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_shrink_anon
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_shrink_anon_percent
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_shrink_file
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_swapin
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_swapin_percent
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_swapout
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.force_swapout_percent
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.reclaim
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.stat
+on property:sys.boot_completed=1
+# set inactive_apps_id
+    chown system system /sys/fs/cgroup/apps/inactive_apps
+    #write /sys/fs/cgroup/apps/inactive_apps/memory.flags "1"
+    chown system system /sys/fs/cgroup/apps/inactive_apps/memory.flags
+
+service init.oplus.nandswap.sh /product/bin/init.oplus.nandswap.sh "boot_completed"
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    restorecon_recursive /data/nandswap
+    exec - root system -- /bin/rm -rf /data/nandswap
+    mkdir /data/nandswap 0700 root root encryption=Require key=per_boot_ref
+
+    chown root system /dev/memcg/memory.active_app_info_list
+    chmod 0440 /dev/memcg/memory.active_app_info_list
+    chown root system /dev/memcg/memory.zram_wm_ratio
+    chmod 0660 /dev/memcg/memory.zram_wm_ratio
+    chown root system /dev/memcg/memory.compress_ratio
+    chmod 0660 /dev/memcg/memory.compress_ratio
+    chown root system /dev/memcg/memory.swapd_pid
+    chmod 0440 /dev/memcg/memory.swapd_pid
+    chown root system /dev/memcg/memory.avail_buffers
+    chmod 0660 /dev/memcg/memory.avail_buffers
+    chown root system /dev/memcg/memory.swapd_max_reclaim_size
+    chmod 0660 /dev/memcg/memory.swapd_max_reclaim_size
+    chown root system /dev/memcg/memory.area_anon_refault_threshold
+    chmod 0660 /dev/memcg/memory.area_anon_refault_threshold
+    chown root system /dev/memcg/memory.empty_round_skip_interval
+    chmod 0660 /dev/memcg/memory.empty_round_skip_interval
+    chown root system /dev/memcg/memory.max_skip_interval
+    chmod 0660 /dev/memcg/memory.max_skip_interval
+    chown root system /dev/memcg/memory.empty_round_check_threshold
+    chmod 0660 /dev/memcg/memory.empty_round_check_threshold
+    chown root system /dev/memcg/memory.anon_refault_snapshot_min_interval
+    chmod 0660 /dev/memcg/memory.anon_refault_snapshot_min_interval
+    chown root system /dev/memcg/memory.swapd_memcgs_param
+    chmod 0660 /dev/memcg/memory.swapd_memcgs_param
+    chown root system /dev/memcg/memory.zram_used_limit_mb
+    chmod 0660 /dev/memcg/memory.zram_used_limit_mb
+    chown root system /dev/memcg/memory.zram_critical_threshold
+    chmod 0660 /dev/memcg/memory.zram_critical_threshold
+    chown root system /dev/memcg/memory.cpuload_threshold
+    chmod 0660 /dev/memcg/memory.cpuload_threshold
+    chown root system /dev/memcg/memory.reclaim_exceed_sleep_ms
+    chmod 0660 /dev/memcg/memory.reclaim_exceed_sleep_ms
+    chown root system /dev/memcg/memory.swapd_bind
+    chmod 0660 /dev/memcg/memory.swapd_bind
+    chown root system /dev/memcg/memory.max_reclaimin_size_mb
+    chmod 0660 /dev/memcg/memory.max_reclaimin_size_mb
+    chown root system /dev/memcg/memory.swapd_shrink_parameter
+    chmod 0660 /dev/memcg/memory.swapd_shrink_parameter
+    chown root system /dev/memcg/memory.swapd_nap_jiffies
+    chmod 0660 /dev/memcg/memory.swapd_nap_jiffies
+    chown root system /dev/memcg/memory.total_info_per_app
+    chmod 0440 /dev/memcg/memory.total_info_per_app
+    chown root system /dev/memcg/apps/memory.swap_stat
+    chmod 0440 /dev/memcg/apps/memory.swap_stat
+    chown root system /dev/memcg/system/memory.swap_stat
+    chmod 0440 /dev/memcg/system/memory.swap_stat
+    chown root system /dev/memcg/memory.swap_stat
+    chmod 0440 /dev/memcg/memory.swap_stat
+    chown root system /dev/memcg/memory.app_score
+    chmod 0660 /dev/memcg/memory.app_score
+    chown root system /dev/memcg/apps/memory.app_score
+    chmod 0660 /dev/memcg/apps/memory.app_score
+    chown root system /dev/memcg/system/memory.app_score
+    chmod 0660 /dev/memcg/system/memory.app_score
+    chown root system /dev/memcg/memory.app_uid
+    chmod 0660 /dev/memcg/memory.app_uid
+    chown root system /dev/memcg/apps/memory.app_uid
+    chmod 0660 /dev/memcg/apps/memory.app_uid
+    chown root system /dev/memcg/system/memory.app_uid
+    chmod 0660 /dev/memcg/system/memory.app_uid
+    chown root system /dev/memcg/memory.ub_ufs2zram_ratio
+    chmod 0660 /dev/memcg/memory.ub_ufs2zram_ratio
+    chown root system /dev/memcg/apps/memory.ub_ufs2zram_ratio
+    chmod 0660 /dev/memcg/apps/memory.ub_ufs2zram_ratio
+    chown root system /dev/memcg/system/memory.ub_ufs2zram_ratio
+    chmod 0660 /dev/memcg/system/memory.ub_ufs2zram_ratio
+    chown root system /dev/memcg/memory.psi
+    chmod 0440 /dev/memcg/memory.psi
+    chown root system /dev/memcg/apps/memory.psi
+    chmod 0440 /dev/memcg/apps/memory.psi
+    chown root system /dev/memcg/system/memory.psi
+    chmod 0440 /dev/memcg/system/memory.psi
+    chown root system /dev/memcg/memory.stored_wm_ratio
+    chmod 0660 /dev/memcg/memory.stored_wm_ratio
+    chown root system /dev/memcg/apps/memory.stored_wm_ratio
+    chmod 0660 /dev/memcg/apps/memory.stored_wm_ratio
+    chown root system /dev/memcg/system/memory.stored_wm_ratio
+    chmod 0660 /dev/memcg/system/memory.stored_wm_ratio
+    chown root system /dev/memcg/memory.swapd_single_memcg_param
+    chmod 0440 /dev/memcg/memory.swapd_single_memcg_param
+    chown root system /dev/memcg/apps/memory.swapd_single_memcg_param
+    chmod 0440 /dev/memcg/apps/memory.swapd_single_memcg_param
+    chown root system /dev/memcg/system/memory.swapd_single_memcg_param
+    chmod 0440 /dev/memcg/system/memory.swapd_single_memcg_param
+
+    chown root system /dev/memcg/memory.force_shrink_anon
+    chmod 0660 /dev/memcg/memory.force_shrink_anon
+    chown root system /dev/memcg/apps/memory.force_shrink_anon
+    chmod 0660 /dev/memcg/apps/memory.force_shrink_anon
+    chown root system /dev/memcg/system/memory.force_shrink_anon
+    chmod 0660 /dev/memcg/system/memory.force_shrink_anon
+    chown root system /dev/memcg/memory.force_shrink_file
+    chmod 0666 /dev/memcg/memory.force_shrink_file
+    chown root system /dev/memcg/apps/memory.force_shrink_file
+    chmod 0660 /dev/memcg/apps/memory.force_shrink_file
+    chown root system /dev/memcg/system/memory.force_shrink_file
+    chmod 0666 /dev/memcg/system/memory.force_shrink_file
+    chown root system /sys/fs/cgroup/memory.force_shrink_file
+    chmod 0666 /sys/fs/cgroup/memory.force_shrink_file
+
+    chown root system /proc/nandswap/swap_ctl
+    chmod 0660 /proc/nandswap/swap_ctl
+    chown root system /proc/nandswap/fn_enable
+    chmod 0660 /proc/nandswap/fn_enable
+    chown root system /proc/nandswap/life_protect
+    chmod 0440 /proc/nandswap/life_protect
+    chown root system /proc/nandswap/stat_info
+    chmod 0440 /proc/nandswap/stat_info
+    chmod 0200 /proc/nandswap/swap_limit
+    chmod 0200 /proc/nandswap/dev_life
+
+    exec - system system -- /system/bin/vdc cryptfs encryptDev /dev/block/by-name/hybridswap hybridswap_crypto
+
+    start init.oplus.nandswap.sh

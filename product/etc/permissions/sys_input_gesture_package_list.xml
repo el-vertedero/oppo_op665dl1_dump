@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20260528</version>
+    <filter-name>gesture_switch_list</filter-name>
+    <!-- 多指手势识别不发cancel的名单 -->
+    <allowpackage>com.tencent.tmgp.speedmobile</allowpackage>
+    <allowpackage>com.tencent.tmgp.codev</allowpackage>
+    <allowpackage>com.tencent.tmgp.projectg</allowpackage>
+    <allowpackage>com.netease.aceracer.nearme.gamecenter</allowpackage>
+    <allowpackage>com.netease.aceracer.m4399</allowpackage>
+    <allowpackage>com.netease.aceracer</allowpackage>
+    <allowpackage>com.netease.sky</allowpackage>
+    <allowpackage>com.taiwanmobile.wali</allowpackage>
+    <allowpackage>com.gamestar.perfectpiano</allowpackage>
+    <allowpackage>com.yasigani_ni.multitouchchecker</allowpackage>
+    <allowpackage>com.dmitrybrant.android.multitouch</allowpackage>
+    <allowpackage>com.feeuniversalradio.multitouch</allowpackage>
+    <allowpackage>com.ferretking.testtouch</allowpackage>
+    <allowpackage>redpi.apps.touchscreencounter</allowpackage>
+    <allowpackage>org.amrgames.touchcounter</allowpackage>
+    <allowpackage>com.the511plus.MultiTouchTester</allowpackage>
+    <allowpackage>com.spencerstudios.screentest</allowpackage>
+    <allowpackage>multitouchpro.tests</allowpackage>
+    <allowpackage>com.jurajkusnier.multitouchtest</allowpackage>
+    <allowpackage>com.easylabs.multitouch</allowpackage>
+    <allowpackage>ru.griphondev.multitouch</allowpackage>
+    <allowpackage>com.gameloft.android.ANMP.GloftDMHM</allowpackage>
+    <allowpackage>com.antutu.ABenchMark</allowpackage>
+    <allowpackage>com.tencent.tmgp.pubgmhd</allowpackage>
+    <allowpackage>com.tencent.tmgp.cf</allowpackage>
+    <allowpackage>com.tencent.tmgp.sgame</allowpackage>
+    <allowpackage>com.tencent.tmgp.WePop</allowpackage>
+    <allowpackage>com.tencent.mf.uam</allowpackage>
+    <allowpackage>org.flos.phira</allowpackage>
+    <allowpackage>com.roblox.client</allowpackage>
+    <allowpackage>com.PigeonGames.Phigros</allowpackage>
+    <allowpackage>com.x1y9.probe</allowpackage>
+    <allowpackage>com.tencent.tmgp.cod</allowpackage>
+    <allowpackage>com.ztgame.bob</allowpackage>
+    <allowpackage>com.tencent.ig</allowpackage>
+    <allowpackage>com.tencent.nfsonline</allowpackage>
+    <allowpackage>com.pubg.imobile</allowpackage>
+    <allowpackage>com.tencent.game.rhythmmaster</allowpackage>
+    <allowpackage>com.tencent.tmgp.dfm</allowpackage>
+    <allowpackage>game.taptap.morizero.milthm</allowpackage>
+    <allowpackage>me.mugzone.malody</allowpackage>
+    <allowpackage>com.dts.freefiremax</allowpackage>
+    <allowpackage>android.view.surfacecontrol.cts</allowpackage>
+
+    <!-- 允许强制注入AKEY_EVENT_FLAG_FORCED_DISPATCH_BACK_EVENT 的名单 -->
+    <allowforceinjectbackpackage>com.oplus.cast</allowforceinjectbackpackage>
+    <allowforceinjectbackpackage>com.oplus.ocar</allowforceinjectbackpackage>
+    <allowforceinjectbackpackage>android.uid.system:1000</allowforceinjectbackpackage>
+
+    <!-- 提前通知截屏功能的开关 -->
+    <prenoticetostartscreenshot>1</prenoticetostartscreenshot>
+
+    <!-- 魔方设置页需要按显示顺序配置！！！！ -->
+    <action_support_fun>flash_memory;ring_mode;no_disturb;camera;ocrscanner;flash_light;recording;translate;screen_shot;nothing</action_support_fun>
+
+    <!-- 云杉禁用双击启动相机功能的应用场景 -->
+    <sprucedisable>
+        <pkg>com.google.android.googlequicksearchbox</pkg>
+        <activity>com.google.android.apps.search.lens.LensActivity</activity>
+    </sprucedisable>
+    <sprucedisable>
+        <pkg>com.coloros.ocrscanner</pkg>
+    </sprucedisable>
+    <sprucedisable>
+        <pkg>com.oplus.camera</pkg>
+    </sprucedisable>
+
+</filter-conf>

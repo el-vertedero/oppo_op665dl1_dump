@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20250908</version>
+    <filter-name>input_transwin_list</filter-name>
+    <!-- Feature9400826, transactivity 透明窗口点不动划不动名单
+    <transactivity>
+        <pkg>com.oplus.example</pkg>
+        <activity>com.tencent.example.UIPageFragmentActivity</activity>
+        <activity>com.tencent.example/.ui.LauncherUI</activity>
+    </transactivity>
+    -->
+    <transactivityswitch>1</transactivityswitch>
+    <transactivity>
+        <pkg>com.tencent.mm</pkg>
+        <activity>com.tencent.mm.framework.app.UIPageFragmentActivity</activity>
+    </transactivity>
+</filter-conf>

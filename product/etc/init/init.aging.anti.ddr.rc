@@ -1,0 +1,10 @@
+on property:sys.oplus_ftm_mode=997
+    write /dev/kmsg "sys.oplus_ftm_mode=997"
+    start rf_ddr_aging_sys
+
+service rf_ddr_aging_sys /system/bin/sh /system/bin/init.oplus.rf_ddr_aging.sh
+    class core
+    user system
+    group root system log
+    disabled
+    oneshot
