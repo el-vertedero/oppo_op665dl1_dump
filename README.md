@@ -1,0 +1,14 @@
+# sys_mssi_64_64only_cn_armv82-user 17 CP2A.260605.016 1790264162007 release-keys
+- manufacturer: oppo
+- platform: common
+- codename: OP665DL1
+- flavor: sys_mssi_64_64only_cn_armv82-user
+- release: 17
+- id: CP2A.260605.016
+- incremental: C.R5T3.45dac46-1fc9b82-1fc9d36
+- tags: release-keys
+- fingerprint: OPPO/CPH2913EEA/OP665DL1:17/CP2A.260605.016/C.R5T3.45dac46-1fc9b82-1fc9d36:user/release-keys
+- is_ab: true
+- brand: OPPO
+- branch: sys_mssi_64_64only_cn_armv82-user-17-CP2A.260605.016-1790264162007-release-keys
+- repo: oppo_op665dl1_dump

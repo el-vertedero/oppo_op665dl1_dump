@@ -1,0 +1,96 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system.brand=oplus
+ro.product.system.device=ossi
+ro.product.system.manufacturer=oplus
+ro.product.system.model=ossi
+ro.product.system.name=ossi
+ro.system.product.cpu.abilist=arm64-v8a
+ro.system.product.cpu.abilist32=
+ro.system.product.cpu.abilist64=arm64-v8a
+ro.system.build.date=Thu Sep 24 23:45:30 CST 2026
+ro.system.build.date.utc=1790264730
+# Removed by post_process_props.py because overridden by ro.system.build.fingerprint?=alps/hal_mgvi_64_64only_armv82/mgvi_64_64only_armv82:17/CP2A.260605.016/1790264730546:user/release-keys
+#ro.system.build.fingerprint?=oplus/ossi/ossi:17/CP2A.260605.016/1790264730546:user/release-keys
+ro.system.build.fingerprint=alps/hal_mgvi_64_64only_armv82/mgvi_64_64only_armv82:17/CP2A.260605.016/1790264730546:user/release-keys
+ro.system.build.id=CP2A.260605.016
+ro.system.build.uuid=U1-nkX_9Y_FGxOHnbg8SBCQJBtdC-RcBJ7T6YYQwRjw
+ro.system.build.tags=release-keys
+ro.system.build.type=user
+ro.system.build.version.incremental=1790264730546
+ro.system.build.version.release=17
+ro.system.build.version.release_or_codename=17
+ro.system.build.version.sdk=37
+ro.system.build.version.sdk_full=37.0
+####################################
+# from gen_build_prop.py:generate_build_info
+####################################
+# begin build properties
+ro.build.id=CP2A.260605.016
+ro.build.uuid=U1-nkX_9Y_FGxOHnbg8SBCQJBtdC-RcBJ7T6YYQwRjw
+ro.build.display.id=CP2A.260605.016 release-keys
+ro.build.version.incremental=1790264730546
+ro.build.version.sdk=37
+ro.build.version.sdk_full=37.0
+ro.build.version.preview_sdk=0
+ro.build.version.preview_sdk_fingerprint=REL
+ro.build.version.codename=REL
+ro.build.version.all_codenames=REL
+ro.build.version.known_codenames=Base,Base11,Cupcake,Donut,Eclair,Eclair01,EclairMr1,Froyo,Gingerbread,GingerbreadMr1,Honeycomb,HoneycombMr1,HoneycombMr2,IceCreamSandwich,IceCreamSandwichMr1,JellyBean,JellyBeanMr1,JellyBeanMr2,Kitkat,KitkatWatch,Lollipop,LollipopMr1,M,N,NMr1,O,OMr1,P,Q,R,S,Sv2,Tiramisu,UpsideDownCake,VanillaIceCream,Baklava,CANARY,CinnamonBun
+ro.build.version.release=17
+ro.build.version.release_or_codename=17
+ro.build.version.release_or_preview_display=17
+ro.build.version.security_patch=2026-10-01
+ro.build.version.base_os=
+ro.build.version.min_supported_target_sdk=28
+ro.build.date=Thu Sep 24 23:45:30 CST 2026
+ro.build.date.utc=1790264730
+ro.build.type=user
+ro.build.user=root
+ro.build.host=kvm-slave-build-s-vendor-14065390
+ro.build.tags=release-keys
+ro.build.flavor=hal_mgvi_64_64only_armv82-user
+# ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
+# use ro.product.cpu.abilist instead.
+ro.product.cpu.abi=arm64-v8a
+ro.product.locale=en-US
+ro.wifi.channels=
+# Do not try to parse description or thumbprint
+ro.build.description=hal_mgvi_64_64only_armv82-user 17 CP2A.260605.016 1790264730546 release-keys
+# end build properties
+####################################
+# from variable ADDITIONAL_SYSTEM_PROPERTIES
+####################################
+ro.treble.enabled=true
+ro.llndk.api_level=202604
+ro.actionable_compatible_property.enabled=true
+ro.postinstall.fstab.prefix=/system
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=1
+ro.allow.mock.location=0
+ro.debuggable=0
+net.bt.name=Android
+ro.force.debuggable=0
+ro.vendor.qti.va_aosp.support=1
+####################################
+# from variable PRODUCT_SYSTEM_PROPERTIES
+####################################
+ro.apex.updatable=true
+apexd.config.compressed_apex=false
+####################################
+# from variable PRODUCT_SYSTEM_DEFAULT_PROPERTIES
+####################################
+####################################
+# Adding footer from :applied_backported_fixes
+# with path out_hal/soong/.intermediates/build/make/backported_fixes/applied_backported_fixes/gen/applied_backported_fixes.prop
+####################################
+# The following backported fixes have been applied
+# https://issuetracker.google.com/issues/350037023 with alias 1
+# https://issuetracker.google.com/issues/385124056 with alias 4
+# https://issuetracker.google.com/issues/398591036 with alias 5
+# https://issuetracker.google.com/issues/452390376 with alias 6
+ro.build.backported_fixes.alias_bitset.long_list=114
+# end of file

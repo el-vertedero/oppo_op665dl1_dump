@@ -1,0 +1,13 @@
+# Soft dependencies extracted from modules themselves.
+softdep mali_kbase_mt6995_a17 pre: memory_group_manager
+softdep oplus_bsp_uff_fp_driver pre:mtk_disp_notify
+softdep slbc_mt6995 pre: emi-slb.ko
+softdep slbc_mt6995 pre: tinysys-scmi.ko
+softdep mtk_sec_heap pre: apusys
+softdep sspm_v3 pre: tinysys-scmi.ko
+softdep mtk_cm_mgr_mt6995 pre: thermal_interface.ko
+softdep mt6995_mt6681 pre: snd-soc-audiodsp-common
+softdep mt6995_mt6681 pre: mtk-soc-offload-common
+softdep mt6995_mt6681 pre: snd-soc-mtk-scp-ultra
+softdep audio_ipi pre: adsp-v4
+softdep oplus_camera_leds_mt6379_26015 pre: oplus_camera_flashlight_notify

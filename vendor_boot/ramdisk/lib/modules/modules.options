@@ -1,0 +1,1 @@
+options bootprof.ko load_sequential=1
