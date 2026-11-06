@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<extend_features>
+
+    <app_feature name="oplus_operator_chrome_bookmarksfolder" args="String:M1">
+    </app_feature>
+
+    <app_feature name="oplus_operator_chrome_bookmarks" args="StringList:bookmarks">
+        <StringList name="bookmarks" args="M1 Shop|http://www.m1.com.sg"/>
+		<StringList name="bookmarks" args="Facebook|http://www.facebook.com"/>
+		<StringList name="bookmarks" args="Channel NewsAsia|http://www.channelnewsasia.com"/>
+    </app_feature>
+
+	
+</extend_features>

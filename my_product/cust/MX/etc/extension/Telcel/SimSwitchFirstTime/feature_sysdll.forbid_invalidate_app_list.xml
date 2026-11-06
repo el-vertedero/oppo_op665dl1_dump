@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+	<app_feature name="oplus_forbid_invalidate_app_list" args="StringList:payjoy">
+		<StringList name="payjoy" args="com.payjoy.access"/>
+		<StringList name="payjoy" args="co.sitic.pp"/>
+	</app_feature>
+</extend_features>

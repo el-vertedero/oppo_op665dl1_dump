@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes' ?>
+<root>
+    <pulseConfig>
+        <!-- XML配置版本号，用于版本对比更新 -->
+        <version>20251228</version>
+        <mode name="pulse_config">
+            <!-- ==================== Panel 0 配置 ==================== -->
+            <!-- panel ID: 0=主屏, 1=副屏 -->
+            <panelid>0</panelid>
+            <!-- pulse功能使能开关: 0=关闭, 1=开启 -->
+            <enable>1</enable>
+            <!-- debug log开关: 0=关闭, 1=开启 -->
+            <debug_enable>0</debug_enable>
+            <!-- panelnit识别开关: 0=关闭, 1=开启 -->
+            <panelnit_enable>1</panelnit_enable>
+            <!-- 灰阶识别开关: 0=关闭, 1=开启 -->
+            <gray_enable>1</gray_enable>
+            <!-- 埋点开关: 0=关闭, 1=开启 -->
+            <tracking_switch>1</tracking_switch>
+            <!-- 是否忽略0灰阶: 0=不忽略, 1=忽略 -->
+            <ignore0>0</ignore0>
+            <!-- panelnit亮度等级阈值 (7个值，从大到小排序，最后一位为minpanelnit) -->
+            <panelnit_level>199 0</panelnit_level>
+            <!-- 不同亮度对应的Y低灰阶分界线 (6个值) -->
+            <Y_l_level>0</Y_l_level>
+            <!-- 不同亮度对应的Y高灰阶分界线 (6个值) -->
+            <Y_h_level>11</Y_h_level>
+            <!-- 不同亮度对应的灰阶SUM百分比阈值 (6个值) -->
+            <sum_level>100</sum_level>
+            <!-- 不同亮度对应的灰阶MAX百分比阈值 (6个值) -->
+            <max_level>50</max_level>
+        </mode>
+    </pulseConfig>
+</root>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="oplus_sim_switch_parameter" args="StringList:carrier">
+        <StringList name="carrier" args="name=com.trustonic.telecoms.standard.dlc|reboot_model=none_reboot|target_name=dlc|clean_model=none_cleaned"/>
+        <StringList name="carrier" args="name=Vodacom|display_name=Vodacom|public_name=za-all|switch_model=everytime|complete_notification=disable_all|"/>
+        <StringList name="carrier" args="name=MTN|display_name=MTN|public_name=za-all|switch_model=everytime|complete_notification=disable_all"/>	
+    </app_feature>
+</extend_features>

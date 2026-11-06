@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="oplus_appfunction_schema_comparison" args="schemaComparison">
+        <StringList name="schemaComparison" args="getUncategorizedDeviceState:Uncategorized"/>
+        <StringList name="schemaComparison" args="getAppsDeviceState:AppsDeviceState"/>
+        <StringList name="schemaComparison" args="getPermissionsDeviceState:Permissions"/>
+        <StringList name="schemaComparison" args="getDeviceStateMetadata:Metadata"/>
+        <StringList name="schemaComparison" args="getBatteryDeviceState:Battery"/>
+        <StringList name="schemaComparison" args="getMobileDataUsageDeviceState:MobileDataUsage"/>
+        <StringList name="schemaComparison" args="setDeviceStateItem:setDeviceState"/>
+        <StringList name="schemaComparison" args="getStorageDeviceState:Storage"/>
+        <StringList name="schemaComparison" args="offsetNumericDeviceStateItemByValue:offsetNumeric"/>
+        <StringList name="schemaComparison" args="adjustNumericDeviceStateItemByPercentage:adjustNumeric"/>
+        <StringList name="schemaComparison" args="getWellbeingDeviceState:getWellbeing"/>
+        <StringList name="schemaComparison" args="launchBarcodeScannerWithResult:BarcodeScanner"/>
+        <StringList name="schemaComparison" args="openDeviceSetupTips:DeviceSetupTips"/>
+        <StringList name="schemaComparison" args="isSystemUpToDate:SystemUpToDate"/>
+        <StringList name="schemaComparison" args="openHelpService:HelpService"/>
+        <StringList name="schemaComparison" args="launchDocumentScannerWithResult:DocumentScanner"/>
+        <StringList name="schemaComparison" args="launchBackupSettings:BackupSettings"/>
+        <StringList name="schemaComparison" args="launchFitDataScreen:FitDataScreen"/>
+        <StringList name="schemaComparison" args="extendScreenTime:ScreenTime"/>
+        <StringList name="schemaComparison" args="getDeviceStateItem:getDeviceState"/>
+    </app_feature>
+</extend_features>

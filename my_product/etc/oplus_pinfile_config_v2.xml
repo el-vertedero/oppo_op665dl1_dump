@@ -1,0 +1,6 @@
+<pin_file_config_v2>
+<!--  default  -->
+    <group>
+        <item>/vendor/lib64/egl/mt6995/libGLES_mali.so</item>
+    </group>
+</pin_file_config_v2>

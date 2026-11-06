@@ -1,0 +1,11 @@
+<oplus-config>
+    <!-- ZhangYelin @GAMEECO.COOLEFFECT.PM, 2026/05/29, Add for play mode feature start -->
+    <oplus-feature name="oplus.software.game.playmode_enable"/>
+    <!-- end -->
+    <!-- ZhangYelin @GAMEECO.COOLEFFECT.OFRC, 2026/05/29, Add for ofrc feature start -->
+    <oplus-feature name="oplus.software.display.game.ofrc_enable"/>
+    <!-- end -->
+    <!-- ZhangYelin @GAMEECO.COOLEFFECT.VULKAN, 2026/05/29, Add for vulkan feature start -->
+    <oplus-feature name="oplus.software.display.game.support_vulkan"/>
+    <!-- end -->
+</oplus-config>

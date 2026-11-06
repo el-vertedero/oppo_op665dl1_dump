@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="oplus_sim_switch_parameter" args="StringList:carrier">
+        <StringList name="carrier" args="name=sg-starhub|display_name=StarHub|switch_model=only_first|slot_model=physial_slot|clean_model=none_cleaned"/>
+		<StringList name="carrier" args="name=sg-singtel|display_name=Singtel|switch_model=only_first|slot_model=physial_slot|clean_model=none_cleaned"/>
+        <StringList name="carrier" args="name=sg-m1|display_name=M1|switch_model=only_first|slot_model=physial_slot|clean_model=none_cleaned"/>
+		<StringList name="carrier" args="name=hk-3hk|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-cmhk|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-csl|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-smartone|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-cu|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-trident|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-cm|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-nw|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-chktl|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-pccw|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-pm|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-citic|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-3|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-gfi|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-sun|target_name=hk-all"/>
+        <StringList name="carrier" args="name=hk-gfi3hk|target_name=hk-all"/>
+    </app_feature>
+</extend_features>

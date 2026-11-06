@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.systemui.sep_show_spn" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2025-08-26T17:09:52 #942799 -->

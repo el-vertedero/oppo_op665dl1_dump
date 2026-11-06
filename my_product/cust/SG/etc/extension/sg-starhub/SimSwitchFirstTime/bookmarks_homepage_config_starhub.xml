@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<extend_features>
+
+    <app_feature name="oplus_operator_chrome_bookmarksfolder" args="String:StarHub">
+    </app_feature>
+
+    <app_feature name="oplus_operator_chrome_bookmarks" args="StringList:bookmarks">
+        <StringList name="bookmarks" args="StarHub|http://www.starhub.com/"/>
+    </app_feature>
+	
+</extend_features>

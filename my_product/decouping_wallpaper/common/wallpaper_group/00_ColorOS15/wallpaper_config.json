@@ -1,0 +1,19 @@
+{
+  "group": "ColorOS15",
+  "title": "ColorOS15",
+  "version": 3,
+  "wallpapers": [
+    {
+      "thumbPath": "./ColorOS1507_dark_purple.webp",
+      "originPath": "./ColorOS1507_dark_purple.webp"
+    },
+    {
+      "thumbPath": "./ColorOS1508_dark_green.webp",
+      "originPath": "./ColorOS1508_dark_green.webp"
+    },
+    {
+      "thumbPath": "./ColorOS1509_dark_pink.webp",
+      "originPath": "./ColorOS1509_dark_pink.webp"
+    }
+  ]
+}

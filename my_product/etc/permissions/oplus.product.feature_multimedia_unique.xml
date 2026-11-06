@@ -1,0 +1,38 @@
+<oplus-config>
+    <!-- video start -->
+    <!-- nigaopeng@MM.MEDIASERVER.IMAGE, 2020/06/15, Add for heif capture feature start -->
+    <oplus-feature name="oplus.software.camera.heic_support" />
+    <!-- nigaopeng@MM.MEDIASERVER.IMAGE, 2020/06/15, Add for heif capture feature end -->
+    <!-- wangbuqing@MULTIMEDIA.MEDIASERVER.RECORDER, 2021/11/12, Add for osie and sr feature start -->
+    <oplus-feature name="oplus.software.video.sr_support"/>
+    <oplus-feature name="oplus.software.video.osie_support"/>
+    <!-- wangbuqing@MULTIMEDIA.MEDIASERVER.RECORDER, 2021/11/12, Add for osie and sr feature end -->
+    <!-- video end -->
+
+    <!-- audio start -->
+    <!-- zhangjiaquan@MULTIMEDIA.AUDIOSERVER.FRAMEWORK, 2024/06/17, Add for vocal prominence 2.0 -->
+    <oplus-feature name="oplus.hardware.audio.voice_isolation_support_v2" />
+    <!-- JinYuntao@MULTIMEDIA.AUDIODRIVER, 2024/05/09, add for analog headphone unsupport feature start -->
+    <oplus-feature name="oplus.hardware.audio.analog_headphone_unsupport"/>
+    <!-- JinYuntao@MULTIMEDIA.AUDIODRIVER, 2024/05/09, add for analog headphone unsupport feature end -->
+    <!-- Yuntao.Jin@MULTIMEDIA.AUDIODRIVER, 2024/12/12, Add for camera sound focus record -->
+    <oplus-feature name="oplus.software.audio.record.sound_focus_support"/>
+    <!-- Zehua.Zhang@MULTIMEDIA.AUDIOSERVER.FRAMEWORK.2023/05/15. Add for media control -->
+    <oplus-feature name="oplus.software.audio.media_control"/>
+    <!-- #endif /* OPLUS_FEATURE_OPLUS_MEDIA_CONTROL */ -->
+    <!-- #ifdef OPLUS_FEATURE_SPATIALIZER_AUDIO -->
+    <!-- zhanglixia@MULTIMEDIA.AUDIOSERVER.FRAMEWORK.2023/05/19. Add for spk oplus spatializer -->
+    <oplus-feature name="oplus.software.spatializer_speaker"/>
+    <!-- #endif /* OPLUS_FEATURE_SPATIALIZER_AUDIO */ -->
+    <!-- WangDong4@MULTIMEDIA.AUDIOSERVER.BASE, 2024/03/06, add for multi-application volume adjustment -->
+    <oplus-feature name="oplus.software.multi_app.volume.adjust.support"/>
+    <!-- Lvhongzhou@MULTIMEDIA.AUDIOSERVER.FRAMEWORK.2023/8/17. Add for speaker channel reserve -->
+    <oplus-feature name="oplus.software.audio.dualspk_support"/>
+    <!-- zhanglixia, 2023/05/30, Add for bluetooth volume sync -->
+    <oplus-feature name="oplus.software.bluetooth_volume_sync"/>
+    <!-- Mengdie.Zhou@MULTIMEDIA.AUDIOSERVER.EFFECT.2024/06/29. Add for audio effect combined -->
+    <oplus-feature name="oplus.software.audio.effect.combined"/>
+    <!-- Zehua.Zhang@MULTIMEDIA.AUDIOSERVER.FRAMEWORK.2023/05/15. Add for volume default adjust -->
+    <oplus-feature name="oplus.software.audio.volume_default_adjust"/>
+    <!-- audio end -->
+</oplus-config>

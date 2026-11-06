@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus.simsettings.restrict_hide" args="StringList:whitelist">
+		<StringList name="whitelist" args="com.trustonic.telecoms.standard.dlc"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2024-12-06T22:03:31 #283806 -->

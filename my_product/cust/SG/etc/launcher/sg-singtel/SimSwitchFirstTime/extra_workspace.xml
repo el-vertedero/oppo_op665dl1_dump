@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+
+
+    <folder
+        launcher:folderTitle="Singtel Apps"
+        launcher:screen="-1"
+        launcher:x="1"
+        launcher:y="0">
+
+        <favorite
+            launcher:className="com.singtel.miotvgo.MainLoading"
+            launcher:packageName="com.singtel.miotvgo"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.singtel.mysingtel.MainActivity"
+            launcher:packageName="com.singtel.mysingtel"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.singtel.mwallet.activity.IntroActivity"
+            launcher:packageName="com.SingTel.mWallet"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.singtel.cast.view.splash.activity.SplashActivity"
+            launcher:packageName="com.singtel.play"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="1" />
+
+        <favorite
+            launcher:className="com.iwhalecloud.bol.MainActivity"
+            launcher:packageName="com.singtel.hi"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="1" />
+    </folder>
+</favorites>

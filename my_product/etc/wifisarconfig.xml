@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <Events>
+        <SarVersion>2.0</SarVersion>
+        <Event name="COUNTRY0" index="0"/>
+        <Event name="COUNTRY1" index="1"/>
+        <Event name="COUNTRY2" index="2"/>
+        <Event name="ISHEADSAR" index="3"/>
+        <Event name="ISMODEM4G" index="4"/>
+        <Event name="ISMODEM5G" index="5"/>
+        <Event name="ISWIFI2G" index="6"/>
+        <Event name="ISWIFI5G" index="7"/>
+        <Event name="ISWIFI6G" index="8"/>
+        <Event name="ISBTTXING" index="9"/>
+    </Events>
+    <regions>
+        <version>V2.18</version>
+        <region list="Region CE">TW,ID,VN,TH,SG,LK,PK,BD,MM,NP,LA,HK,KH,PH,MY,AE,OM,BH,QA,KW,SA,EG,DZ,TZ,GH,KE,MA,ZA,NG,TN,ZM,YE,AF,PS,LB,SY,IQ,JO,IL,JP,BR</region>
+        <region list="Region EU">TR,RU,KZ,UZ,UA,LI,BG,EE,HR,CY,LV,LT,MT,GR,CZ,SK,PL,RO,HU,MD,CH,RS,BA,KV,MK,ME,GB,NO,IS,DE,IE,IT,ES,PT,NL,DK,SE,FI,LU,BE,AT,SI,FR,AU,NZ</region>
+        <region list="Region FCC">CA,US,DM,DO,CR,CO,HN,SV,GT,VE,EC,BO,PA,PY,UY,AR,PE,MX,CL</region>
+    </regions>
+    <indexs>
+        <index list="Scenario_Index_1">4,6</index>
+        <index list="Scenario_Index_2">6</index>
+        <index list="Scenario_Index_3">7</index>
+    </indexs>
+    <SpecialScenarios>
+        <SpecialScenario condition="Version">V1</SpecialScenario>
+    </SpecialScenarios>
+</configs>

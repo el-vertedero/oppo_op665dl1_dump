@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.wirelesssettings.forced_connect_network"/>
+	<app_feature name="com.android.launcher.notify_cota_scan_with_observer"/>
+	<app_feature name="com.android.launcher.packages_to_hide" args="StringList:pkgs">
+		<StringList name="pkgs" args="com.coloros.ocrscanner"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2026-09-23T23:35:10 #038def0c-43c4-4c09-9052-c970e59ea8da -->

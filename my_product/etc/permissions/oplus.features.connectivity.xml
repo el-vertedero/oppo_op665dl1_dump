@@ -1,0 +1,36 @@
+<oplus-config>
+
+    <!-- ZhangZhiLin@CONNECTIVITY.BT.Basic.Feature, 2021/06/30,add for bt sar feature  -->
+    <oplus-feature name="oplus.software.bt.sar_support" />
+
+    <!-- liangenglin@CONNECTIVITY.WIFI.NETWORK, 2023/04/14 -->
+    <oplus-feature name="oplus.software.wlan.fdd_v3_mode" />
+
+    <!-- WangJiahao@CONNECTIVITY.WIFI.NETWORK, 2024/08/16, add for dynamic edccav2 -->
+    <!-- Notice: if config dynamic_edcca_v2, should not config dynamic_edcca and need update wifiedccaconfig.xml -->
+    <oplus-feature name="oplus.software.wlan.dynamic_edcca_v2" />
+
+    <!-- LiXiong@CONNECTIVITY.WIFI.NETWORK, 2026/05/27, add for 11b enhance -->
+    <oplus-feature name="oplus.software.wlan.24g_11b_enhance" />
+
+    <!-- CaoShifeng@CONNECTIVITY.WIFI.HARDWARE, 2024/07/26, add for low power txrate -->
+    <oplus-feature name="oplus.software.wlan.lp_txrate" />
+
+    <!-- DengJia@CONNECTIVITY.WIFI.BASIC.SOFTAP.10084878, 2025/10/09, add for accelerating real-time data packet in SAP mode -->
+    <oplus-feature name="oplus.software.wlan.sap_accelerate_enable" />
+
+    <!-- DengJia@CONNECTIVITY.WIFI.BASIC.SOFTAP.11720578, 2026/08/03, add for MTK SAP Fair Link -->
+    <oplus-feature name="oplus.software.wlan.smart_sap_mtk_fair_link" />
+
+    <!-- fangbinghua@CONNECTIVITY.WIFI.HARDWARE.RSSI.5627579, 2023/09/06 -->
+    <oplus-feature name="oplus.software.wlan.rssi_issue_tracker" />
+
+    <!-- XiTao@CONNECTIVITY.WIFI.HARDWARE.PLATFORM.9450092, 2025/06/26, wifi game chip,maybe china fem -->
+    <oplus-feature name="oplus.software.wlan.game_chip" />
+
+    <!-- MaoHuashu@CONNECTIVITY.WIFI.SMART.SOFTAP.11718707, 2026/06/12, Smart SoftAP EDCCA Manager for anti-interference TX -->
+    <oplus-feature name="oplus.software.wlan.smart_sap_tx_anti_interference" />
+
+    <!-- WangXia@CONNECTIVITY.WIFI.NETWORK, 2026/09/06, add for passive scan for TR -->
+    <oplus-feature name="oplus.software.wlan.force_passive_scan" />
+</oplus-config>

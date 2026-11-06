@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.launcher.notify_cota_scan_with_observer"/>
+</extend_features>
+<!-- Timestamp 2026-05-08T17:28:16 #1457252 -->

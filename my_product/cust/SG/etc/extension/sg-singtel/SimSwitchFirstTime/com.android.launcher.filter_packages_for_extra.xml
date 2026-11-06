@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+    <app_feature name="com.android.launcher.filter_packages_for_extra" args="StringList:packageName">
+        <StringList name="packageName" args="com.singtel.miotvgo"/>
+		<StringList name="packageName" args="com.singtel.mysingtel"/>
+		<StringList name="packageName" args="com.SingTel.mWallet"/>
+		<StringList name="packageName" args="com.singtel.play"/>
+		<StringList name="packageName" args="com.singtel.hiaccount"/>
+		</app_feature>
+</extend_features>

@@ -1,0 +1,9 @@
+com.aiunit.aon:AONService.apk::false
+com.coloros.systemclone:SystemClone.apk::false
+com.oplus.remotecontrol:RemoteControl.apk::false
+com.oplus.consumerIRApp:ConsumerIRApp.apk::false
+com.oplus.camera:OplusCamera.apk::false
+com.oplus.aicall:AICallAssistant.apk::false
+com.heytap.health.international:Health.apk::false
+com.oplus.ebadge:ElectronicBadge.apk::false
+com.oplus.audio.effectcenter:AudioEffectCenter.apk::false

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus.operator.browser.bookmarks" args="StringList:bookmarks">
+		<StringList name="bookmarks" args="Singtel Apps|http://www.singtel.com/apps;My Portal|http://myportal.singtel.com/"/>
+	</app_feature>
+</extend_features>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- This is a place for vendor-specific config values. The format and
+     filtering rules are the same as those in regionlock_config*.xml files. This
+     file is read after any specific config file from the assets folder, so it
+     must use explicit filters for regionlock data if that is desired. -->
+<regionlock_config_list>
+    <regionlock_config region="AP">
+        <major_version>1</major_version>
+        <minor_version>1</minor_version>
+        <brand>0</brand>
+        <operator>0</operator>
+        <operator_type>1</operator_type>
+        <policy_bitmask>a91a40001000da0000101855000000003e7f9be5f93e30400000000000000406</policy_bitmask>
+        <blacklist_mcc>334744732724716424422426427419602606603605604620621418416415417425425410470414401250</blacklist_mcc>
+        <reserve_data></reserve_data>
+        <signature>b492b560e44bac17b00f84b84e37a032bc29cc8f485e9a5dac773b85911c02cdbd05ff044b011efeedd0c2582ff301a0ebba08361853c337c00e0ba3db73e77e593a44abb52363745e7652556f97585dde3ff1f2ed6233c79dcf326fc13b0bc784a5f9838faf6331e994ad148d5c79d1714d4862c6b80704c8e2cde5d2aa9191f13a3fa805333c60b346e5bd1470b44b59e82b052ecfa93ceec09157af062807034791bf88ddab09ea79048e1d958cc1b460e827f7ee3fd032c17bd8f5b2d3003ab633a30216de32e3803ea911a415c9cab3f3b79ed1448aac4a9b218036d96a74bd490be8ccd6d6b82a3b688df2b6d42c1b8794021178dc82dfe5d605475af6</signature>
+    </regionlock_config>
+</regionlock_config_list>

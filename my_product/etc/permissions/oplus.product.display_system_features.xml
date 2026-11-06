@@ -1,0 +1,4 @@
+<permissions>
+    <!-- WCG 2.0 version feature -->
+    <feature name="oplus.software.display.wcg_2.0_support" />
+</permissions>

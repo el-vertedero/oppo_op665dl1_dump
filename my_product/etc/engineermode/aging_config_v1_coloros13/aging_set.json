@@ -1,0 +1,792 @@
+{
+	"aging_set": {
+		"aging_total_fail_max_count": 3,
+		"aging_total_dump_max_count": 5,
+		"aging_total_pmic_abnormal_reboot_max_count": 5,
+		"test_stage_fail_intercept_flag": 1,
+		"aging_initialized": {
+			"aging_set_item_summary": "aging_initialized",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_is_final": true,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_fg_items": [
+				{
+					"aging_initialized": {
+						"aging_item_enable": true,
+						"aging_spmi_platform": "dx6"
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_1": {
+			"aging_set_item_summary": "aging_set_1",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 20,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 900,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "camera",
+			"aging_set_item_fg_items": [
+				{
+					"camera_sat_aging": {
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_2": {
+			"aging_set_item_summary": "aging_set_2",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 25,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "video",
+			"aging_set_item_fg_items": [
+				{
+					"video_wallpaper_aging": {
+						"aging_item_id": 10031,
+						"aging_item_enable": true,
+						"aging_item_summary": "video_wallpaper",
+						"aging_item_duration_per_round": 300,
+						"aging_item_cycle_times": 1,
+						"aging_item_exclusive_item": false
+					}
+				},
+				{
+					"video_corrupt_aging": {
+						"aging_item_id": 20060,
+						"aging_item_enable": true,
+						"aging_item_summary": "video_corrupt_test",
+						"aging_item_duration_per_round": 500,
+						"aging_item_cycle_times": 5,
+						"aging_item_exclusive_item": false,
+						"process_mode": 1,
+						"base_save_dir" : "/sdcard/Android/media/com.oplus.engineermode/",
+						"psnr_threshold": 38.00,
+						"mse_threshold": 5.00,
+						"sim_ratio_threshold" : 0.98,
+						"sig_ratio_threshold" : 0.005,
+						"max_cons_corrupt": 5,
+						"need_detect_video" : [
+							"D1_hevc_960x544_30fps.mp4",
+							"D2_avc_640x480_30fps.mp4",
+							"D3_av1_640_360_25fps.mp4",
+							"D4_vp9_480x854_30fps.mp4"
+						],
+						"test_vvc_enable" : true,
+						"need_detect_vvc_video" : [
+							"D5_vvc_1280x720_30fps.mp4"
+						]
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_3": {
+			"aging_set_item_summary": "aging_set_3",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 15,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "aging_pre_test",
+			"aging_set_item_fg_items": [
+				{
+					"aging_pre_test": {
+						"aging_pre_test_interrupt_mode": false,
+						"aging_item_enable": true,
+						"item_switch_wifi": true,
+						"item_switch_bt": true,
+						"item_switch_gps": true,
+						"item_switch_touch_panel": true,
+						"item_switch_sub_touch_panel": false,
+						"item_switch_fingerprint": true,
+						"item_switch_camera": true,
+						"item_switch_sensor": true,
+						"item_switch_small_board": true,
+						"item_switch_mic": true,
+						"item_switch_smart_pa": true,
+						"item_switch_air_interface": true,
+						"item_switch_wcn_abnormal_detect": false,
+						"item_switch_ese2": false
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_4": {
+			"aging_set_item_summary": "aging_set_4",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 120,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "charge",
+			"aging_set_item_fg_items": [
+				{
+					"charge_aging": {
+						"aging_item_enable": true,
+						"charge_full": true,
+						"charge_target": 100,
+						"ufcs_charger_support": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_5": {
+			"aging_set_item_summary": "aging_set_5",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 0,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_fg_items": [
+				{
+					"factory_mode_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"factory_mode_aging_hight": {
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_6": {
+			"aging_set_item_summary": "aging_set_6",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 4,
+			"aging_set_time_out_mins": 210,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "video",
+			"aging_set_item_fg_items": [
+				{
+					"video_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"gpu_aging": {
+						"aging_item_cycle_times": 1,
+						"aging_item_enable": true
+					}
+				},
+				{
+					"gpu_mssv_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"lcd_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"idle_aging": {
+						"aging_item_duration_per_round": 120,
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": [
+				{
+					"sensor_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"back_light_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"fingerprint_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"smart_pa_aging": {
+						"aging_item_enable": false
+					}
+				},
+				{
+					"vibrator_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"wcn_aging": {
+						"aging_item_enable": true
+					}
+				}
+			]
+		},
+		"aging_set_7": {
+			"aging_set_item_summary": "aging_set_7",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 10,
+			"aging_set_time_out_mins": 30,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_fg_items": [
+				{
+					"reboot_aging": {
+						"aging_item_cycle_times": 1,
+						"aging_item_enable": true
+					}
+				},
+				{
+					"aging_pre_test": {
+						"aging_item_enable": true,
+						"aging_pre_test_interrupt_mode": false,
+						"aging_item_cycle_times": 1,
+						"aging_item_exclusive_item": true,
+						"item_switch_wifi": true,
+						"item_switch_bt": true,
+						"item_switch_gps": true,
+						"item_switch_sub_touch_panel": false,
+						"item_switch_fingerprint": true,
+						"item_switch_camera": true,
+						"item_switch_sensor": true,
+						"item_switch_small_board": true,
+						"item_switch_mic": true,
+						"item_switch_smart_pa": true,
+						"item_switch_air_interface": true,
+						"item_switch_wcn_abnormal_detect": false,
+						"item_switch_ese2": false
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_8": {
+			"aging_set_item_summary": "aging_set_8",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 30,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_is_log_disable": true,
+			"aging_set_item_fg_items": [
+				{
+					"idle_aging": {
+						"aging_item_duration_per_round": 1200,
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_9": {
+			"aging_set_item_summary": "aging_set_9",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 15,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "aging_pre_test",
+			"aging_set_item_is_log_disable": true,
+			"aging_set_item_fg_items": [
+				{
+					"aging_pre_test": {
+						"aging_pre_test_interrupt_mode": false,
+						"aging_item_enable": true,
+						"item_switch_wifi": true,
+						"item_switch_bt": true,
+						"item_switch_gps": true,
+						"item_switch_touch_panel": true,
+						"item_switch_sub_touch_panel": false,
+						"item_switch_fingerprint": true,
+						"item_switch_camera": true,
+						"item_switch_sensor": true,
+						"item_switch_small_board": true,
+						"item_switch_mic": true,
+						"item_switch_smart_pa": true,
+						"item_switch_air_interface": true,
+						"item_switch_wcn_abnormal_detect": false,
+						"item_switch_ese2": false
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_10": {
+			"aging_set_item_summary": "aging_set_10",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 85,
+			"aging_set_item_duration_per_round": 2100,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "modem",
+			"aging_set_item_fg_items": [
+				{
+					"camera_auto_aging": {
+						"aging_item_enable": false
+					}
+				},
+				{
+					"explorer_camera_aging": {
+						"aging_item_enable": true,
+						"aging_items_setting": [
+							{
+								"item_id": 400001,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400002,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400003,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400004,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400005,
+								"item_switch": true,
+								"item_toggle": false,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400006,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400007,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400008,
+								"item_switch": true,
+								"item_toggle": false,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400009,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400010,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400011,
+								"item_switch": true,
+								"item_toggle": false,
+								"item_duration": 10000
+							},
+							{
+								"item_id": 400012,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400031,
+								"item_switch": true,
+								"item_toggle": false,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400032,
+								"item_switch": false,
+								"item_toggle": false,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400033,
+								"item_switch": false,
+								"item_toggle": false,
+								"item_duration": 5000
+							},
+							{
+								"item_id": 400034,
+								"item_switch": true,
+								"item_toggle": true,
+								"item_duration": 60000
+							}
+						]
+					}
+				},
+				{
+					"camera_isp_slt_aging": {
+						"aging_item_enable": false
+					}
+				},
+				{
+					"idle_aging": {
+						"aging_item_duration_per_round": 300,
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": [
+				{
+					"sensor_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"back_light_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"fingerprint_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"vibrator_aging": {
+						"aging_item_enable": true
+					}
+				},
+				{
+					"wcn_aging": {
+						"aging_item_enable": true
+					}
+				}
+			]
+		},
+		"aging_set_11": {
+			"aging_set_item_summary": "aging_set_11",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 45,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 1200,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "modem",
+			"aging_set_item_fg_items": [
+				{
+					"pa_aging": {
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_12": {
+			"aging_set_item_summary": "aging_set_12",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 0,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 180,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "display",
+			"aging_set_item_fg_items": [
+				{
+					"pixel_aging": {
+						"aging_item_enable": true,
+						"aging_item_duration_per_round": 1200
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_13":{
+			"aging_set_item_summary": "aging_set_13",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 15,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 200,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "sensor",
+			"aging_set_item_fg_items": [
+				{
+					"sensor_hw_check_aging": {
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_14": {
+			"aging_set_item_summary": "aging_set_14",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_item_enable": true,
+			"aging_set_time_out_mins": 15,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "npu",
+			"aging_set_item_fg_items": [
+				{
+					"npu_aging": {
+						"aging_item_enable": false,
+						"aging_qcom_ignore_freq": "384.00,979.20,1939.20",
+						"aging_mtk_ignore_freq": "0000000"
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_15":{
+			"aging_set_item_summary": "aging_set_15",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_item_enable": false,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_fg_items": [
+				{
+					"icc_dpdt_aging_test": {
+						"aging_item_enable": false,
+						"aging_item_cycle_times": 2
+					}
+				},
+				{
+					"icc_flash_aging_test": {
+						"aging_item_enable": false,
+						"aging_item_cycle_times": 2
+					}
+				},
+				{
+					"icc_spi_aging_test": {
+						"aging_item_enable": false,
+						"aging_item_cycle_times": 2
+					}
+				},
+				{
+					"icc_flash_flip_aging_test": {
+						"aging_item_enable": false,
+						"aging_item_cycle_times": 2
+					}
+				}
+			],
+			"aging_set_item_bg_items": [
+				{
+					"side_key_aging": {
+						"aging_item_enable": false,
+						"aging_item_update_power_outage_times": 6,
+						"aging_item_update_power_outage_switch": true,
+						"aging_item_update_hard_reset_times": 6,
+						"aging_item_update_hard_reset_switch": true,
+						"aging_item_update_soft_reset_times": 6,
+						"aging_item_update_soft_reset_switch": true,
+						"aging_item_cali_power_outage_times": 6,
+						"aging_item_cali_power_outage_switch": true,
+						"aging_item_cali_hard_reset_times": 6,
+						"aging_item_cali_hard_reset_switch": true,
+						"aging_item_cali_soft_reset_times": 6,
+						"aging_item_cali_soft_reset_switch": true
+					}
+				}
+			]
+		},
+		"aging_set_16": {
+			"aging_set_item_summary": "aging_set_16",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 30,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 200,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_fg_items": [
+				{
+					"npu_slt_aging": {
+						"aging_item_id": 10033,
+						"aging_item_enable": true,
+						"aging_item_summary": "npu_slt",
+						"aging_item_duration_per_round": 60,
+						"aging_item_cycle_times": 1,
+						"aging_item_exclusive_item": false,
+						"aging_item_external_item": false,
+						"aging_apu_test_enable": true,
+						"aging_apu_test_duration": 5
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_17": {
+			"aging_set_item_summary": "aging_set_17",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 40,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 200,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_fg_items": [
+				{
+					"adsp_dvfs_aging": {
+						"aging_item_cycle_times": 1,
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": [
+				{
+					"vts_c2v1_dec_aging": {
+						"aging_item_id": 23456,
+						"aging_item_enable": true,
+						"aging_item_summary": "vts dec test",
+						"aging_item_independence_thread": false,
+						"aging_item_duration_per_round": 0,
+						"aging_item_cycle_times": 1,
+						"aging_item_exclusive_item": false,
+						"vts_c2_v1_dec_delay": 10
+					}
+				}
+			]
+		},
+		"aging_set_18": {
+			"aging_set_item_summary": "aging_set_18",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 5,
+			"aging_set_time_out_mins": 15,
+			"aging_set_item_duration_per_round": 30,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_is_log_disable": true,
+			"aging_set_item_fg_items": [
+				{
+					"camera_isp_slt_aging": {
+						"aging_item_cycle_times": 1,
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_19": {
+			"aging_set_item_summary": "aging_set_19",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 15,
+			"aging_set_item_duration_per_round": 30,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "modem",
+			"aging_set_item_is_log_disable": true,
+			"aging_set_item_fg_items": [
+				{
+					"reboot_aging": {
+						"aging_item_cycle_times": 1,
+						"aging_item_enable": true
+					}
+				},
+				{
+					"camera_anti_test": {
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_20": {
+			"aging_set_item_summary": "aging_set_20",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 10,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "stability",
+			"aging_set_item_fg_items": [
+				{
+					"mcdi_test": {
+						"aging_item_enable": true
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_21": {
+			"aging_set_item_summary": "aging_set_21",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 20,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 120,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "aging",
+			"aging_set_item_fg_items": [
+				{
+					"scp_dvfs_aging": {
+						"aging_item_id": 10039,
+						"aging_item_enable": true,
+						"aging_item_summary": "scp_dvfs",
+						"aging_item_scp_dvfs_rounds": 1,
+						"aging_item_cycle_times": 1,
+						"aging_item_exclusive_item": false,
+						"aging_item_external_item": false
+				  }
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_set_22": {
+			"aging_set_item_summary": "aging_set_22",
+			"aging_set_item_cycle_times": 1,
+			"aging_set_time_out_mins": 150,
+			"aging_set_item_enable": true,
+			"aging_set_item_duration_per_round": 150,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_log_type": "aging",
+			"aging_set_item_fg_items": [
+				{
+					"fingerprint_aging": {
+						"aging_item_id": 10037,
+						"aging_item_enable": true,
+						"aging_item_summary": "fingerprint",
+						"aging_item_duration_per_round": 150,
+						"anti_item_cycle_times": 10,
+						"anti_item_test_times": 10,
+						"aging_item_exclusive_item": false,
+						"aging_item_external_item": false
+					}
+				}
+			],
+			"aging_set_item_bg_items": []
+		},
+		"aging_uninitialized": {
+			"aging_set_item_summary": "aging_uninitialized",
+			"aging_set_item_enable": true,
+			"aging_set_item_cycle_times": 1,
+			"aging_set_item_duration_per_round": 60,
+			"aging_set_item_is_final": true,
+			"aging_set_item_interrupt_aging": false,
+			"aging_set_item_fg_items": [
+				{
+					"aging_uninitialized": {
+						"aging_item_enable": true,
+						"aging_spmi_platform": "dx6"
+					}
+				}
+			],
+			"aging_set_item_bg_items": [
+				{
+					"adsp_crash_aging": {
+						"aging_item_enable": true
+					}
+				}
+			]
+		}
+	}
+}

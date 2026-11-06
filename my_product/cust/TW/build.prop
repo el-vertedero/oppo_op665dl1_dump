@@ -1,0 +1,3 @@
+persist.sys.oplus.bt.chre_ble_scan=true
+ro.oplus.radio.user_nr_mode_by_sub=1
+persist.sys.oplus.region=TW

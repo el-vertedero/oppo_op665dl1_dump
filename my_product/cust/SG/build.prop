@@ -1,0 +1,8 @@
+ro.oplus.radio.global_regionlock.log=true
+ro.oplus.radio.global_regionlock.cert=1661243252453,SG
+ro.oplus.radio.global_regionlockflag=13
+ro.oplus.radio.global_regionlockupgrade=true
+ro.oplus.radio.global_regionlock.info=SG
+ro.oplus.radio.global_regionlock.enabled=true
+persist.sys.oplus.bt.chre_ble_scan=true
+persist.sys.oplus.region=SG

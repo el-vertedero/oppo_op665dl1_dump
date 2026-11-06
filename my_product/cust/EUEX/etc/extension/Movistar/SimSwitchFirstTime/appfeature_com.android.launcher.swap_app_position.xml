@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="com.android.launcher.swap_app_position">
+        <StringList args="com.facebook.katana/.LoginActivity"/>
+        <StringList args="com.coloros.video/com.heytap.video.splash.VideoSplashActivity"/>
+        <StringList args="com.instagram.android/.activity.MainTabActivity"/>
+        <StringList args="com.coloros.weather2/com.oplus.weather.main.view.WeatherMainActivity"/>
+    </app_feature>
+</extend_features>

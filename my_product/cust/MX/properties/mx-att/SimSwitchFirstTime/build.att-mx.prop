@@ -1,0 +1,7 @@
+persist.sys.custombootanimpath=my_product/media/bootanimation/ATT_MX
+persist.sys.commonbootsoundpath=my_product/media/bootanimation/ATT_MX/poweron.ogg
+ro.sys.custommedia.sourcepath=my_product/media_simswitch/ATT_MX
+ro.sys.custommedia.default_ringtone=City_Lights.ogg
+ro.sys.custommedia.default_notification=ATT_CHAT_IN.ogg
+ro.sys.custommedia.default_alarm=City_Lights.ogg
+ro.boot.sound.wait.audio=true

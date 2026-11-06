@@ -1,0 +1,17 @@
+<filter-conf>
+    <version>20260113</version>
+    <enable>true</enable>
+    <common-enable>true</common-enable>
+    <filter-name>sys_background_vsync_config</filter-name>
+    <common>
+        <item procName="" updateFramerateThreshold="6" targetFramerate="0,0" /> <!-- 全局配置 -->
+    </common>
+    <special>
+        <item procName="com.ss.android.ugc.aweme:minigame0" updateFramerateThreshold="6" targetFramerate="1,1" /> <!-- 抖音小游戏进程 -->
+        <item procName="com.ss.android.ugc.aweme:minigame1" updateFramerateThreshold="6" targetFramerate="1,1" /> <!-- 抖音小游戏进程 -->
+        <item procName="com.ss.android.ugc.aweme:minigame2" updateFramerateThreshold="6" targetFramerate="1,1" /> <!-- 抖音小游戏进程 -->
+        <item procName="com.ss.android.ugc.aweme:minigame3" updateFramerateThreshold="6" targetFramerate="1,1" /> <!-- 抖音小游戏进程 -->
+        <item procName="com.luna.music" updateFramerateThreshold="6" targetFramerate="1,1" /> <!-- 汽水音乐 -->
+        <item procName="com.baidu.tieba" updateFramerateThreshold="6" targetFramerate="1,1" /> <!-- 百度贴吧 -->
+    </special>
+</filter-conf>

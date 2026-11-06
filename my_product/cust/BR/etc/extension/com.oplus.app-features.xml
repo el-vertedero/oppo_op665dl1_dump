@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.launcher.packages_to_hide" args="StringList:pkgs">
+		<StringList name="pkgs" args="com.coloros.ocrscanner"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2026-09-23T23:35:10 #9604deb1-7512-479d-b535-79926e47ab33 -->

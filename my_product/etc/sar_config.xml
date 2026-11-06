@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configs>
+  <version>1</version>
+  <Policys>
+    <Policy condition="TESTCARD &amp;&amp; OTA">16</Policy>
+    <Policy condition="TESTCARD &amp;&amp; !OTA">0</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; !WIFI2G &amp;&amp; !WIFI5G &amp;&amp; !BT">3</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; !WIFI2G &amp;&amp; !WIFI5G &amp;&amp; !BT">5</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; WIFI2G &amp;&amp; !WIFI5G &amp;&amp; !BT">8</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; !WIFI2G &amp;&amp; WIFI5G &amp;&amp; !BT">8</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; !WIFI2G &amp;&amp; !WIFI5G &amp;&amp; BT">8</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; WIFI2G &amp;&amp; !WIFI5G &amp;&amp; BT">8</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; WIFI2G &amp;&amp; WIFI5G &amp;&amp; !BT">8</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; !WIFI2G &amp;&amp; WIFI5G &amp;&amp; BT">8</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; WIFI2G &amp;&amp; !WIFI5G &amp;&amp; !BT">10</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; !WIFI2G &amp;&amp; WIFI5G &amp;&amp; !BT">10</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; !WIFI2G &amp;&amp; !WIFI5G &amp;&amp; BT">10</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; WIFI2G &amp;&amp; !WIFI5G &amp;&amp; BT">10</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; WIFI2G &amp;&amp; WIFI5G &amp;&amp; !BT">10</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; !WIFI2G &amp;&amp; WIFI5G &amp;&amp; BT">10</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; !HEAD &amp;&amp; WIFI2G &amp;&amp; WIFI5G &amp;&amp; BT">13</Policy>
+    <Policy condition="!TESTCARD &amp;&amp; HEAD &amp;&amp; WIFI2G &amp;&amp; WIFI5G &amp;&amp; BT">15</Policy>
+  </Policys>
+  <Events>
+    <Event class="HeadNearEvent" name="HEAD">1</Event>
+    <Event class="WIFI2p4GEvent" name="WIFI2G">3</Event>
+    <Event class="WIFI5GEvent" name="WIFI5G">2</Event>
+    <Event class="BluetoothEvent" name="BT">6</Event>
+    <Event class="TestCardEvent" name="TESTCARD">0</Event>
+    <Event class="SwtpEvent" name="OTA">4</Event>
+  </Events>
+  <ScenarioMap>
+    <Scenario event_mask="0" sns_channel="1">1</Scenario>
+    <Scenario event_mask="0" sns_channel="2">2</Scenario>
+    <Scenario event_mask="0" sns_channel="3">3</Scenario>
+    <Scenario event_mask="0" sns_channel="0">4</Scenario>
+    <Scenario event_mask="2" sns_channel="0">5</Scenario>
+    <Scenario event_mask="8" sns_channel="1">6</Scenario>
+    <Scenario event_mask="4" sns_channel="1">6</Scenario>
+    <Scenario event_mask="64" sns_channel="1">6</Scenario>
+    <Scenario event_mask="72" sns_channel="1">6</Scenario>
+    <Scenario event_mask="12" sns_channel="1">6</Scenario>
+    <Scenario event_mask="68" sns_channel="1">6</Scenario>
+    <Scenario event_mask="8" sns_channel="2">7</Scenario>
+    <Scenario event_mask="4" sns_channel="2">7</Scenario>
+    <Scenario event_mask="64" sns_channel="2">7</Scenario>
+    <Scenario event_mask="72" sns_channel="2">7</Scenario>
+    <Scenario event_mask="12" sns_channel="2">7</Scenario>
+    <Scenario event_mask="68" sns_channel="2">7</Scenario>
+    <Scenario event_mask="8" sns_channel="3">8</Scenario>
+    <Scenario event_mask="4" sns_channel="3">8</Scenario>
+    <Scenario event_mask="64" sns_channel="3">8</Scenario>
+    <Scenario event_mask="72" sns_channel="3">8</Scenario>
+    <Scenario event_mask="12" sns_channel="3">8</Scenario>
+    <Scenario event_mask="68" sns_channel="3">8</Scenario>
+    <Scenario event_mask="8" sns_channel="0">9</Scenario>
+    <Scenario event_mask="4" sns_channel="0">9</Scenario>
+    <Scenario event_mask="64" sns_channel="0">9</Scenario>
+    <Scenario event_mask="72" sns_channel="0">9</Scenario>
+    <Scenario event_mask="12" sns_channel="0">9</Scenario>
+    <Scenario event_mask="68" sns_channel="0">9</Scenario>
+    <Scenario event_mask="10" sns_channel="0">10</Scenario>
+    <Scenario event_mask="6" sns_channel="0">10</Scenario>
+    <Scenario event_mask="66" sns_channel="0">10</Scenario>
+    <Scenario event_mask="74" sns_channel="0">10</Scenario>
+    <Scenario event_mask="14" sns_channel="0">10</Scenario>
+    <Scenario event_mask="70" sns_channel="0">10</Scenario>
+    <Scenario event_mask="76" sns_channel="1">11</Scenario>
+    <Scenario event_mask="76" sns_channel="2">12</Scenario>
+    <Scenario event_mask="76" sns_channel="3">13</Scenario>
+    <Scenario event_mask="76" sns_channel="0">14</Scenario>
+    <Scenario event_mask="78" sns_channel="0">15</Scenario>
+    <Scenario event_mask="1" sns_channel="0">16</Scenario>
+  </ScenarioMap>
+</Configs>

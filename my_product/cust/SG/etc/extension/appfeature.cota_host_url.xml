@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="com.oplus.cota.cota_host_url" args="String:https://cota-service-sg.allawnos.com" />
+    <app_feature name="com.oplus.cota.cota_biz_name" args="String:cota-crypto-sg.allawnos.com" />
+</extend_features>

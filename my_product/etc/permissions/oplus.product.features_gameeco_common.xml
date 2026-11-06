@@ -1,0 +1,5 @@
+<oplus-config>
+    <!-- ZhangYelin@GAMEECO.COOLEFFECT.COOLEX, 2022/07/19, Add for coolex feature start -->
+    <oplus-feature name="oplus.software.coolex.support"/>
+    <!-- end -->
+</oplus-config>

@@ -1,0 +1,20 @@
+[
+  {"sensorIdx":2, "sensorMode":0, "cdrStart":0, "cdrEnd":254, "cdrStep":4, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":8, "passRatioThresh":0.5, "halfHightWidthThresh":8, "delayMs":200},
+  {"sensorIdx":2, "sensorMode":2, "cdrStart":0, "cdrEnd":254, "cdrStep":4, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":8, "passRatioThresh":0.5, "halfHightWidthThresh":8, "delayMs":200},
+  {"sensorIdx":2, "sensorMode":3, "cdrStart":0, "cdrEnd":254, "cdrStep":4, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":8, "passRatioThresh":0.5, "halfHightWidthThresh":8, "delayMs":200},
+  {"sensorIdx":2, "sensorMode":7, "cdrStart":0, "cdrEnd":254, "cdrStep":4, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":8, "passRatioThresh":0.5, "halfHightWidthThresh":8, "delayMs":200},
+
+  {"sensorIdx":1, "sensorMode":0, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":17, "passRatioThresh":0.35, "halfHightWidthThresh":15, "delayMs":200},
+  {"sensorIdx":1, "sensorMode":2, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":17, "passRatioThresh":0.35, "halfHightWidthThresh":15, "delayMs":200},
+  {"sensorIdx":1, "sensorMode":4, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":17, "passRatioThresh":0.35, "halfHightWidthThresh":15, "delayMs":200},
+  {"sensorIdx":1, "sensorMode":12, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":17, "passRatioThresh":0.35, "halfHightWidthThresh":15, "delayMs":200},
+  {"sensorIdx":1, "sensorMode":13, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":17, "passRatioThresh":0.35, "halfHightWidthThresh":15, "delayMs":200},
+
+  {"sensorIdx":4, "sensorMode":0, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":25, "passRatioThresh":0.5, "halfHightWidthThresh":23, "delayMs":200},
+  {"sensorIdx":4, "sensorMode":2, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":25, "passRatioThresh":0.5, "halfHightWidthThresh":23, "delayMs":200},
+  {"sensorIdx":4, "sensorMode":11, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":25, "passRatioThresh":0.5, "halfHightWidthThresh":23, "delayMs":200},
+  {"sensorIdx":4, "sensorMode":12, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":25, "passRatioThresh":0.5, "halfHightWidthThresh":23, "delayMs":200},
+  {"sensorIdx":4, "sensorMode":16, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":25, "passRatioThresh":0.5, "halfHightWidthThresh":23, "delayMs":200},
+
+  {"sensorIdx":16, "sensorMode":0, "cdrStart":0, "cdrEnd":31, "cdrStep":1, "eqStart":-31, "eqEnd":31, "eqStep":1, "cdrThresh":63, "eqThresh":21, "passRatioThresh":0.5, "halfHightWidthThresh":20, "delayMs":200}
+]

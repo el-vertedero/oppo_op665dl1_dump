@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <bands>
+        <band list="BAND_2G">0</band>
+        <band list="BAND_5G">1</band>
+    </bands>
+    <indexs>
+        <index list="In_Scenario_Index_1_For_2G">0xd4 0xd4 0xd4</index>
+        <index list="In_Scenario_Index_2_For_2G">0xca 0xca 0xca</index>
+        <index list="In_Scenario_Index_3_For_2G">0xc5 0xc5 0xc5</index>
+        <index list="In_Scenario_Index_4_For_2G">0xc3 0xc3 0xc3</index>
+        <index list="In_Scenario_Index_1_For_5G">0xcc 0xcd 0xcf 0xd2</index>
+        <index list="In_Scenario_Index_2_For_5G">0xc7 0xc8 0xca 0xcd</index>
+        <index list="In_Scenario_Index_3_For_5G">0xbd 0xbe 0xc0 0xc3</index>
+        <index list="In_Scenario_Index_4_For_5G">0xbb 0xbc 0xbf 0xc2</index>
+        <index list="In_Scenario_Backuprestore_For_2G">0xe3 0xe3 0xe3</index>
+        <index list="In_Scenario_Backuprestore_For_5G">0xe0 0xe0 0xe0 0xe0</index>
+        <index list="Out_Scenario_For_2G">0xc1 0xc1 0xc1</index>
+        <index list="Out_Scenario_For_5G">0xbb 0xbc 0xbf 0xc2</index>
+        <index list="Reset_Cmd_For_2G_BW20">driver set_chip EdccaThEtsi2GCbw20 0xc1</index>
+        <index list="Reset_Cmd_For_2G_BW40">driver set_chip EdccaThEtsi2GCbw40 0xc1</index>
+        <index list="Reset_Cmd_For_2G_BW80">driver set_chip EdccaThEtsi2GCbw80 0xc1</index>
+        <index list="Reset_Cmd_For_5G_BW20">driver set_chip EdccaThEtsi5GCbw20 0xbb</index>
+        <index list="Reset_Cmd_For_5G_BW40">driver set_chip EdccaThEtsi5GCbw40 0xbc</index>
+        <index list="Reset_Cmd_For_5G_BW80">driver set_chip EdccaThEtsi5GCbw80 0xbf</index>
+        <index list="Reset_Cmd_For_5G_BW160">driver set_chip EdccaThEtsi5GCbw160 0xc2</index>
+    </indexs>
+</configs>

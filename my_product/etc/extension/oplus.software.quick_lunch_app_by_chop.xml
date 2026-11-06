@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="oplus.software.quick_lunch_app_by_chop" args="boolean:true"/>
+</extend_features>

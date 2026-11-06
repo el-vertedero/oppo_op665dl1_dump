@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+    <interface_feature name="oplus.software.android.add_persistent_app" type="twice" args="StringList:package">
+        <StringList name="package" args="co.sitic.pp"/>
+    </interface_feature>
+</extend_features>

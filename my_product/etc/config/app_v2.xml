@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app version="1.0">
+  <enable pkg="com.google.android.mosey" priority="7"/>
+  <enable pkg="com.oplus.aiassistant" priority="7" memory="12,16,24,32"/>
+  <enable pkg="com.oplus.aimemory" priority="7"/>
+  <enable pkg="com.oplus.matrix" priority="7"/>
+</app>

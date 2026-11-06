@@ -1,0 +1,4 @@
+ro.oplus.internet.whether.force.connect=1
+ro.setupwizard.require_network=any
+ro.vendor.oplus.radio.esim.feature=1
+persist.sys.oplus.bt.chre_ble_scan=true

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oplus-config>
+	<oplus-feature name="oplus.software.radio.pcdr_common_nr_scan_abort"/>
+	<oplus-feature name="oplus.software.radio.sido_nr_icon_pingpong_opt"/>
+	<oplus-feature name="oplus.software.radio.pcdr_rach_enhance"/>
+	<oplus-feature name="oplus.software.radio.sido_rat_enhance_nr_backoff_opt"/>
+	<oplus-feature name="oplus.software.radio.pcdr_cell_coverage_opt"/>
+	<oplus-feature name="oplus.software.radio.sido_rat_enhance_lte_backoff_opt"/>
+	<oplus-feature name="oplus.software.radio.enable_weak_signal_backoff"/>
+	<oplus-feature name="oplus.software.radio.pcdr_lte_ftai_clear"/>
+	<oplus-feature name="oplus.software.radio.sido_secure_signaling_boost_opt"/>
+	<oplus-feature name="oplus.software.radio.pcdr_dsda_prefer_idle"/>
+	<oplus-feature name="oplus.software.radio.sido_gw_lte_pingpong_lte_poor_signal_opt"/>
+	<oplus-feature name="oplus.software.radio.pcdr_lte_fast_return_to_nr_accurate_meas_recovery_opt"/>
+	<oplus-feature name="oplus.software.radio.cybersense_residence_enabled"/>
+	<oplus-feature name="oplus.software.radio.jio_ailinkboost_dialog"/>
+	<oplus-feature name="oplus.software.radio.ims_rtp_redun_support"/>
+	<oplus-feature name="oplus.software.radio.ims_rtp_redun_setting_support"/>
+</oplus-config>
+<!-- Timestamp 2026-06-11T10:37:37 #1511777 -->

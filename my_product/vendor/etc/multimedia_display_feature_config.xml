@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<filter-conf>
+    <version>20260821</version>
+    <toggle>1</toggle>
+    <features>
+        <feature name="BindCore" enable="1">
+            <!-- big core index, start from 0 -->
+            <bigcore_id>3</bigcore_id>
+            <bigcore_id>4</bigcore_id>
+            <bigcore_id>5</bigcore_id>
+            <bigcore_id>6</bigcore_id>
+            <bigcore_id>7</bigcore_id>
+        </feature>
+
+        <feature name="GpuSwFence" enable="1">
+        </feature>
+
+        <feature name="AutoTimeStampSmooth" enable="1">
+            <layer name="plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity"></layer>
+            <layer name="plugin.ting.TingFlutterActivity"></layer>
+            <layer name="plugin.lite.ui.WxaLiteAppLiteUI"></layer>
+            <layer name="plugin.topstory.ui.home.TopStoryHomeUI"></layer>
+            <layer name="plugin.appbrand.ui.AppBrandPluginUI"></layer>
+            <layer name="SurfaceView[com.baidu.searchbox/com.baidu.searchbox.godeye.CodeScannerActivity](BLAST)"></layer>
+            <layer name="SurfaceView[com.tencent.mm/com.tencent.mm.plugin.textstatus.ui.TextStatusDoWhatActivityV2](BLAST)"></layer>
+            <layer name="plugin.appbrand.ui.AppBrandUI"></layer>
+        </feature>
+
+        <feature name="DynamicBuffer" enable="1">
+            <MML>enable</MML>
+            <FPS>60</FPS>
+            <application name="com.pubg.imobile"></application>
+            <application name="com.king.candycrushsaga"></application>
+            <application name="com.ludo.king"></application>
+            <application name="com.dts.freefiremax"></application>
+            <application name="com.kiloo.subwaysurf"></application>
+            <application name="com.supercell.clashofclans"></application>
+            <application name="com.roblox.client"></application>
+            <application name="com.activision.callofduty.shooter"></application>
+            <application name="com.chess"></application>
+            <application name="com.miniclip.carrom"></application>
+            <application name="com.miniclip.eightballpool"></application>
+            <application name="com.block.juggle"></application>
+            <application name="com.supercell.clashroyale"></application>
+            <application name="com.miniclip.cricketleague"></application>
+            <application name="com.dream11.fantasy.cricket.football.kabaddi"></application>
+            <application name="in.dreamgamestudios.games.sports.dreamcricket3d"></application>
+            <application name="jp.konami.pesam"></application>
+            <application name="com.ea.gp.fifamobile"></application>
+            <application name="com.playrix.township"></application>
+            <application name="com.Rohit.IndianBikes"></application>
+            <application name="com.nautilus.realcricket"></application>
+            <application name="com.JindoBlu.TwoPlayerGamesChallenge"></application>
+            <application name="io.supercent.pizzaidle"></application>
+            <application name="com.GybeGames.ColorBlockJam"></application>
+            <application name="com.vitastudio.mahjong"></application>
+            <application name="com.matteljv.uno"></application>
+            <application name="com.moonactive.coinmaster"></application>
+            <application name="com.fugo.wow"></application>
+            <application name="com.gamovation.chessclubpilot"></application>
+            <application name="com.miHoYo.GenshinImpact"></application>
+            <application name="com.gameloft.android.ANMP.GloftA9HM"></application>
+            <application name="games.vaveda.militaryoverturn"></application>
+            <application name="com.king.candycrushsodasaga"></application>
+            <application name="com.ansangha.drdriving"></application>
+            <application name="com.vincentb.MobControl"></application>
+            <application name="com.innersloth.spacemafia"></application>
+            <application name="easy.sudoku.puzzle.solver.free"></application>
+            <application name="com.prison.escape.journey.simulator"></application>
+            <application name="com.fingersoft.hillclimb"></application>
+            <application name="com.nekki.shadowfightarena"></application>
+            <application name="com.mojang.minecraftpe"></application>
+            <application name="com.ea.games.r3_row"></application>
+            <application name="com.ru.huntingsniper"></application>
+            <application name="com.popclub.android"></application>
+            <application name="com.fun.lastwar.gp"></application>
+            <application name="com.run.tower.defense"></application>
+            <application name="com.unept.leveldevil"></application>
+            <application name="com.dreamgames.royalmatch"></application>
+            <application name="com.imangi.templerun2"></application>
+            <application name="io.voodoo.holeio"></application>
+            <application name="com.dts.freefireth"></application>
+            <application name="com.mobile.legends"></application>
+            <application name="com.coloros.musiclink"></application>
+            <application name="com.outfit7.mytalkingtom2"></application>
+            <application name="com.tencent.ig"></application>
+            <application name="com.outfit7.mytalkingtomfree"></application>
+            <application name="com.ketchapp.knifehit"></application>
+            <application name="com.outfit7.mytalkingangelafree"></application>
+            <application name="com.ction.playergames"></application>
+            <application name="com.zhiliaoapp.musically"></application>
+            <application name="com.dvloper.granny"></application>
+            <application name="com.ss.android.ugc.trill"></application>
+            <application name="com.google.android.apps.photos"></application>
+            <application name="net.mobigame.zombietsunami"></application>
+            <application name="com.snapchat.android"></application>
+            <application name="bubbleshooter.orig"></application>
+            <application name="com.lenovo.anyshare.gps"></application>
+            <application name="com.azurgames.stackball"></application>
+            <application name="com.king.farmheroessaga"></application>
+            <application name="com.google.android.apps.docs"></application>
+            <application name="com.zhiliaoapp.musically.go"></application>
+            <application name="com.wildspike.wormszone"></application>
+            <application name="fi.twomenandadog.zombiecatchers"></application>
+            <application name="com.PlayMax.playergames"></application>
+            <application name="com.appsomniacs.da2"></application>
+            <application name="com.supercell.hayday"></application>
+            <application name="com.amanotes.beathopper"></application>
+            <application name="jp.garud.ssimulator"></application>
+            <application name="com.google.android.apps.magazines"></application>
+            <application name="com.football.soccer.league"></application>
+            <application name="com.opera.browser"></application>
+            <application name="com.truecaller"></application>
+            <application name="com.lemon.lvoverseas"></application>
+            <application name="io.voodoo.paper2"></application>
+        </feature>
+
+        <feature name="OplusFeature2Flag" enable="1">
+            <disableDeepcache>0</disableDeepcache>
+            <syncMmlpqHdrToGPU>1</syncMmlpqHdrToGPU>
+            <useAospBrightnessPath>1</useAospBrightnessPath>
+        </feature>
+
+
+        <feature name="curtain" enable="1">
+            <application name="com.instagram.android">
+                <scene type="FuzzyLayer">
+                    <layer>TransparentModalActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>MainActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>ModalActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.google.android.youtube">
+                <scene type="FuzzyLayer">
+                    <layer>WatchWhileActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>InternalMainActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>HomeActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+        </feature>
+
+        <feature name="HdrGeneric" enable="1">
+         </feature>
+
+    </features>
+</filter-conf>

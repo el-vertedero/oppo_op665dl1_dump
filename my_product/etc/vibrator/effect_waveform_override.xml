@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vibration_effect_map>
+<effect effect_id="302" waveform_id="302" duration="45" type="RTP" usage="TOUCH" desc="effect_emulation_keyboard_down"/>
+<effect effect_id="304" waveform_id="304" duration="45" type="RTP" usage="TOUCH" desc="effect_weak_emulation_keyboard_down"/>
+</vibration_effect_map>

@@ -1,0 +1,123 @@
+{
+    "version": 2026052901,
+    "feature": {
+        "colorx": {
+            "cx_package_name": "com.oppo.colorx",
+            "coolex_white_list_v2": [
+                {
+                    "pkg": "com.tencent.ig",
+                    "graphic_api": "gles"
+                }
+            ],
+            "ofrc_1_5_white_list": [
+                {
+                    "pkg": "com.tencent.ig",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.pubg.krmobile",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.vng.pubgmobile",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.rekoo.pubgm",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.levelinfinite.sgameGlobal",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.levelinfinite.sgameGlobal.midaspay",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.mobile.legends",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.mobile.legends:UnityKillsMe",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.pubg.imobile",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.ngame.allstar.eu",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.garena.game.kgtw",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.garena.game.kgvn",
+                    "graphic_api": "gles"
+                },
+                {
+                    "pkg": "com.garena.game.kgth",
+                    "graphic_api": "gles"
+                }
+            ],
+            "rus_file": {
+                "sys_coolex_gamedata_ig_memc": [
+                    "com.tencent.ig",
+                    "com.pubg.krmobile",
+                    "com.vng.pubgmobile",
+                    "com.rekoo.pubgm"
+                ],
+                "sys_coolex_gamedata_wzryi_memc": [
+                    "com.levelinfinite.sgameGlobal",
+                    "com.levelinfinite.sgameGlobal.midaspay"
+                ],
+                "sys_coolex_gamedata_mobilelegends_memc": [
+                    "com.mobile.legends",
+                    "com.mobile.legends:UnityKillsMe"
+                ],
+                "sys_coolex_gamedata_bgmi_memc": [
+                    "com.pubg.imobile"
+                ],
+                "sys_coolex_gamedata_allstar_memc": [
+                    "com.ngame.allstar.eu",
+                    "com.garena.game.kgtw",
+                    "com.garena.game.kgvn",
+                    "com.garena.game.kgth"
+                ],
+                "sys_coolex_gamedata_common_memc": [
+                    "com.tencent.ig",
+                    "com.pubg.krmobile",
+                    "com.vng.pubgmobile",
+                    "com.rekoo.pubgm",
+                    "com.levelinfinite.sgameGlobal",
+                    "com.levelinfinite.sgameGlobal.midaspay",
+                    "com.mobile.legends",
+                    "com.mobile.legends:UnityKillsMe",
+                    "com.pubg.imobile",
+                    "com.ngame.allstar.eu",
+                    "com.garena.game.kgtw",
+                    "com.garena.game.kgvn",
+                    "com.garena.game.kgth"
+                ],
+                "sys_coolex_gamedata_colorx_common_config": [
+                    "com.tencent.ig",
+                    "com.pubg.krmobile",
+                    "com.vng.pubgmobile",
+                    "com.rekoo.pubgm",
+                    "com.levelinfinite.sgameGlobal",
+                    "com.levelinfinite.sgameGlobal.midaspay",
+                    "com.mobile.legends",
+                    "com.mobile.legends:UnityKillsMe",
+                    "com.pubg.imobile",
+                    "com.ngame.allstar.eu",
+                    "com.garena.game.kgtw",
+                    "com.garena.game.kgvn",
+                    "com.garena.game.kgth"
+                ]
+            }
+        }
+    }
+}

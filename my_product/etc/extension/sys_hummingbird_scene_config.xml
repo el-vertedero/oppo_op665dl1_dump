@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="hmbird_multimedia">
+    <filter-conf>
+        <version>20260728</version>
+        <filter-name>sys_hummingbird_multimedia_config</filter-name>
+        <loglevel>3</loglevel>
+        <delaytime>3000</delaytime>
+    </filter-conf>
+
+    <!-- Camera base sceneIds reported by CamHmbirdSceneCtrl::updateScene(). -->
+    <scene id="50" description="video_4k60" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="900000" soft_freq_min_c1="700000" soft_freq_min_c2="800000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="51" description="video_4k120" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="900000" soft_freq_min_c1="700000" soft_freq_min_c2="800000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="52" description="video_720p30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="800000" soft_freq_min_c1="400000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="53" description="video_1080p30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="800000" soft_freq_min_c1="400000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="54" description="video_1080p60" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="55" description="video_1080p120" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="56" description="video_4k30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="57" description="video_8k30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="58" description="video_pro_1080p24" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="59" description="video_pro_1080p30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="60" description="video_pro_1080p60" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="61" description="video_pro_1080p120" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="62" description="video_pro_4k24" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="63" description="video_pro_4k30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="64" description="video_pro_4k60" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="65" description="video_pro_4k120" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="66" description="video_pro_8k24" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="67" description="video_pro_8k30" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+
+    <!-- VIDEO_RECORD_START is emitted only when mIsVideoMode is true. -->
+    <scene id="70" description="video_4k60_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="900000" soft_freq_min_c1="700000" soft_freq_min_c2="800000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="71" description="video_4k120_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="900000" soft_freq_min_c1="700000" soft_freq_min_c2="800000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="72" description="video_720p30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="800000" soft_freq_min_c1="400000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="73" description="video_1080p30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="800000" soft_freq_min_c1="400000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="74" description="video_1080p60_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="75" description="video_1080p120_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="76" description="video_4k30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="77" description="video_8k30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="78" description="video_pro_1080p24_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="79" description="video_pro_1080p30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="800000" soft_freq_min_c1="400000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="80" description="video_pro_1080p60_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="81" description="video_pro_1080p120_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="82" description="video_pro_4k24_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="83" description="video_pro_4k30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="84" description="video_pro_4k60_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="85" description="video_pro_4k120_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="86" description="video_pro_8k24_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="87" description="video_pro_8k30_record" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;90:95:10" mtl_c2="2;90:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,85,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+
+    <!-- TAKE_PHOTO_START is emitted for photo scenes. -->
+    <scene id="92" description="photo_take_photo" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;85:95:10" mtl_c2="2;85:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="600000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,1,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="93" description="high_pixel_photo_take_photo" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;85:95:10" mtl_c2="2;85:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,1,100" freq_policy="0 0 0" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7" mtk_mm="1 0"/>
+            </sched>
+        </baseconfig>
+    </scene>
+
+    <!-- CLICK_THUMBNAIL maps to PHOTO_PROCESS for photo scenes. -->
+    <scene id="94" description="photo_process" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;85:95:10" mtl_c2="2;85:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,1,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="95" description="high_pixel_photo_process" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;85:95:10" mtl_c2="2;85:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,1,100" freq_policy="0 0 0" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7" mtk_mm="1 0"/>
+            </sched>
+        </baseconfig>
+    </scene>
+	<scene id="101" description="photo" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;85:95:10" mtl_c2="2;85:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="600000" soft_freq_min_c2="300000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,25,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7"/>
+            </sched>
+        </baseconfig>
+    </scene>
+    <scene id="102" description="high_pixel_photo" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;80:90:10" mtl_c1="2;85:95:10" mtl_c2="2;85:95:10"
+                    soft_freq_min_c0="700000" soft_freq_min_c1="800000" soft_freq_min_c2="900000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,25,100" freq_policy="1 1 1" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="1 7" mtk_mm="1 0"/>
+            </sched>
+        </baseconfig>
+    </scene>
+	<scene id="100" description="pre_open" delay="0">
+        <fullwindow description="full window status">
+            <packagename value="com.oplus.camera">
+            </packagename>
+        </fullwindow>
+        <baseconfig>
+            <sched param_fps="0" bpf="1">
+                <cpu silver_min="" silver_max="" gold_min="" gold_max=""
+                    prime_min="" prime_max="" titanium_min="" titanium_max=""
+                    mtl_c0="2;60:80:10" mtl_c1="2;70:85:10" mtl_c2="2;80:90:10"
+                    soft_freq_min_c0="1600000" soft_freq_min_c1="1800000" soft_freq_min_c2="2000000"
+                    soft_freq_max_c0="" soft_freq_max_c1="" soft_freq_max_c2=""
+                    apply_freq_im_c0="" apply_freq_im_c1="" apply_freq_im_c2=""/>
+                <hmbird state="true" fps="60" resv="0xf8" excs="0x0" phr="1,1,100" freq_policy="0 0 0" coefficient="1024,1024,1024"
+                    camBoostEnable="false" camBoostThr="30000000" uxPagePool="uxmem_opt_scx_enable 1" kswapd0Boost="0 0"/>
+            </sched>
+        </baseconfig>
+    </scene>
+</config>

@@ -1,0 +1,23 @@
+{
+  "autoDownload": true,
+  "disabled": false,
+  "disableType": 0,
+  "globalPublishVersion": 1030964,
+  "oaa": [
+    17834126,
+    17834127
+  ],
+  "oapApi": "vision_image_antispam_oversea",
+  "oapId": 1052765,
+  "oapName": "oap_vision_image_antispam_oversea",
+  "oapVersion": 1003,
+  "optOaa": [],
+  "priority": 10,
+  "publishVersion": 7,
+  "scenes": [
+    "ai_lvm_all",
+    "local_call_inpaint_oap"
+  ],
+  "unitType": "OAP",
+  "preinstall": true
+}

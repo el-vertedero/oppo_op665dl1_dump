@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+<version>20260522</version>
+<filter-name>display_frc_white_list</filter-name>
+<!-- Config package DSR -->
+<mConfigMEMCDSRPackage type="1">com.ngame.allstar.eu</mConfigMEMCDSRPackage>
+<!-- Aerna of Valor -->
+<mConfigMEMCDSRPackage type="1">com.garena.game.kgtw</mConfigMEMCDSRPackage>
+<!-- Aerna of Valor -->
+<mConfigMEMCDSRPackage type="1">com.garena.game.kgvn</mConfigMEMCDSRPackage>
+<!-- Aerna of Valor -->
+<mConfigMEMCDSRPackage type="1">com.garena.game.kgth</mConfigMEMCDSRPackage>
+<!-- Aerna of Valor -->
+<mConfigMEMCDSRPackage type="1">com.pubg.imobile</mConfigMEMCDSRPackage>
+<!-- BGMI -->
+<mConfigMEMCDSRPackage type="1">com.levelinfinite.sgameGlobal</mConfigMEMCDSRPackage>
+<!-- Honor of Kings -->
+<mConfigMEMCDSRPackage type="1">com.levelinfinite.sgameGlobal.midaspay</mConfigMEMCDSRPackage>
+<!-- Honor of Kings -->
+<mConfigMEMCDSRPackage type="1">com.mobile.legends</mConfigMEMCDSRPackage>
+<!-- MLBB -->
+<mConfigMEMCDSRPackage type="1">com.mobile.legends:UnityKillsMe</mConfigMEMCDSRPackage>
+<!-- MLBB -->
+<mConfigMEMCDSRPackage type="1">com.tencent.ig</mConfigMEMCDSRPackage>
+<!-- PUBG MOBILE -->
+<mConfigMEMCDSRPackage type="1">com.pubg.krmobile</mConfigMEMCDSRPackage>
+<!-- PUBG MOBILE -->
+<mConfigMEMCDSRPackage type="1">com.vng.pubgmobile</mConfigMEMCDSRPackage>
+<!-- PUBG MOBILE -->
+<mConfigMEMCDSRPackage type="1">com.rekoo.pubgm</mConfigMEMCDSRPackage>
+<!-- PUBG MOBILE -->
+</filter-conf>

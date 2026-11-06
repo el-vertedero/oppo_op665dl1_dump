@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configs>
+  <version>3</version>
+    <Policys>
+        <Policy condition="!TESTCARD" action = "AntFixAction">255</Policy>
+        <Policy condition="TESTCARD &amp;&amp; OTA" action = "AntFixAction">9</Policy>
+        <Policy condition="HEAD" action = "DcdcSleepAction">15</Policy>
+        <Policy condition="!HEAD" action = "DcdcSleepAction">14</Policy>
+        <Policy condition="GAME_ON &amp;&amp; USBTOWARD_ON == 3" action = "ImbAction">1</Policy>
+        <Policy condition="GAME_ON &amp;&amp; USBTOWARD_ON != 3" action = "ImbAction">0</Policy>
+        <Policy condition="!GAME_ON" action = "ImbAction">0</Policy>
+        <Policy condition="Camera != 1 &amp;&amp; Camera != 24"  action = "MtplLimitAction">0</Policy>
+        <Policy condition="Camera == 1"  action = "MtplLimitAction">1</Policy>
+        <Policy condition="Camera == 24"  action = "MtplLimitAction">1</Policy>
+    </Policys>
+    <Events>
+        <Event class="SwtpEvent" name="OTA">4</Event>
+        <Event class="TestCardEvent" name="TESTCARD">0</Event>
+        <Event class="HeadNearEvent" name="HEAD">1</Event>
+        <Event class="UsbTowardEvent" name="USBTOWARD_ON">30</Event>
+        <Event class="GameModeEvent" name="GAME_ON">31</Event>
+        <Event class="CameraStateEventExt" name="Camera">35</Event>
+    </Events>
+</Configs>

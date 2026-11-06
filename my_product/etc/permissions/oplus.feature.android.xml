@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<oplus-config>
+	<oplus-feature name="oplus.software.wake_up_arouse_support"/>
+	<oplus-feature name="oplus.software.gesture_proximitysensor"/>
+	<oplus-feature name="oplus.software.scroll.animation_opt"/>
+	<oplus-feature name="oplus.software.vibrator_lmvibrator"/>
+	<oplus-feature name="oplus.software.vibrator_richctap"/>
+	<oplus-feature name="oplus.hardware.vibrator_oplus_v1"/>
+	<oplus-feature name="oplus.hardware.vibrator_xlinear_type"/>
+	<oplus-feature name="oplus.hardware.vibrator_style_switch"/>
+	<oplus-feature name="oplus.software.vibrator_luxunvibrator"/>
+	<oplus-feature name="oplus.software.vibration_keyboard_convert"/>
+	<oplus-feature name="oplus.software.app_resolution_switch"/>
+	<oplus-feature name="oplus.typecotg.connection.menu.support"/>
+	<oplus-feature name="oplus.software.dynamic_report_rate"/>
+	<oplus-feature name="oplus.hardware.type.rear_IR"/>
+</oplus-config>

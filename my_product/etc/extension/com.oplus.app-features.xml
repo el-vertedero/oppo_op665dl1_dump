@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus.power.wirelesschgwhenwired.support"/>
+	<app_feature name="oplus.power.onwirelesscharger.support"/>
+	<app_feature name="os.charge.settings.wirelesscharge.support"/>
+	<app_feature name="os.charge.settings.wirelesschargingcoil.position" args="float:0.451"/>
+	<app_feature name="os.charge.settings.wirelesscharging.power" args="int:50"/>
+	<app_feature name="pre.open.camera.from.launcher"/>
+	<app_feature name="com.oplus.cast.audio_capture_use_audio_policy" args="int:1"/>
+	<app_feature name="com.oplus.systemui.panoramic_aod.enable" args="boolean:true"/>
+	<app_feature name="com.oplus.battery.life.mode.notificate" args="int:1"/>
+	<app_feature name="com.oplus.fullscene_plc_charge.support" args="boolean:true"/>
+	<app_feature name="os.charge.settings.batterysettings.batteryhealth"/>
+	<app_feature name="com.oplus.battery.whitelist_vowifi" args="boolean:true"/>
+	<app_feature name="com.aiunit.aon.bias" args="float:2.5"/>
+	<app_feature name="com.aiunit.aon.blink_scale" args="float:1"/>
+	<app_feature name="com.aiunit.aon.focal_length" args="float:166"/>
+	<app_feature name="com.oplus.dmp.aiask_enable" args="int:1"/>
+	<app_feature name="com.oplus.cast.unlimit_refresh_rate" args="int:1"/>
+	<app_feature name="com.aiunit.aon.fov_factor" args="float:0.75"/>
+	<app_feature name="com.aiunit.aon.is_cpu_support_only" args="boolean:true"/>
+	<app_feature name="com.oplus.settings.support_allow_disable_app_market" args="boolean:true"/>
+	<app_feature name="com.android.settings.sale_encry_info_support" args="boolean:true"/>
+	<app_feature name="oplus.memory.snapshot_scale" args="String:8-0.7|12-0.7|16-0.7"/>
+	<app_feature name="com.android.settings.resolution_auto"/>
+	<app_feature name="oplus.hardware.display.bright_protect_eyes" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-08-21T02:47:42 #5d1dc686-bc4d-476f-8051-c92067fa5e30 -->

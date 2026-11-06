@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus.operator.browser.homepage" args="String:https://www.euskaltel.com/"/>
+</extend_features>

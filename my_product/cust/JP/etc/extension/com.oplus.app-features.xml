@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.android.systemui.keyguard_support_esimcard"/>
+</extend_features>
+<!-- Timestamp 2026-05-13T18:52:16 #1469163 -->

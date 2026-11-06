@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+/***************************************************************
+** Copyright (C), 2025, OPLUS Mobile Comm Corp., Ltd
+**
+** File : multimedia_display_demura_config.xml
+** Description : APDMR RUS Config
+** Version : 1.0
+** Date : 2025/04/21
+** Author : Display
+******************************************************************/
+-->
+
+<root>
+    <!-- must update version when you commit this file -->
+    <version>20260810</version>
+
+    <!-- 0:disable, 1:enbale -->
+    <DemuraGlobalStatus>1</DemuraGlobalStatus>
+
+    <!-- station blacklist -->
+    <Blacklist>
+        <!-- using for file missing or damage then disable demura -->
+        <Station SN="FAILEDSN"> </Station>
+    </Blacklist>
+
+    <!-- 部分帧率下关闭 Demura 功能 -->
+    <FpsBlackList>
+        <!-- <fps>165</fps> 表示165hz下关闭Demura -->
+        <Fps fps="144">
+            <Dbv>0-10000</Dbv>
+        </Fps>
+    </FpsBlackList>
+
+    <!-- Nits blacklist -->
+    <NitsBlackList>
+        <!-- 屏幕背光亮度在10nit至10000nit之间关闭DMR -->
+        <range>831-10000</range>
+    </NitsBlackList>
+
+    <!-- app blacklist -->
+    <AppBlackList>
+        <!-- Sniper Game Of Commando Strike -->
+        <application name="com.critical.strikes.nearme.gamecenter" />
+        <!-- Ninja Assassin -->
+        <application name="com.FatcatStudio.NinjaAssassin" />
+        <!-- Impossible Track Speed Bump -->
+        <application name="com.speed.car.bump.challenge.nearme.gamecenter" />
+        <!-- Bistro Cook 2 App -->
+        <application name="com.cookfrombis.nearme.gamecenter" />
+        <!-- Life Quotes -->
+        <application name="com.nimdee2.lifequote.nearme.gamecenter" />
+        <!-- Tank Battle Game -->
+        <application name="com.tankbattle.games.free.nearme.gamecenter" />
+        <!-- Offroad Jeep Driving -->
+        <application name="com.indian.mountain.jeep.drive.nearme.gamecenter" />
+        <!-- Lords Mobile -->
+        <application name="com.igg.android.lordsmobile" />
+        <!-- Vision11 -->
+        <application name="com.008Vision11" />
+        <!-- Pen�?Lat Air Minum -->
+        <application name="com.gameskraft.rummyculture" />
+        <!-- Army Sniper Shooter -->
+        <application name="com.sniper.warsurvival.nearme.gamecenter" />
+        <!-- Royal Match -->
+        <application name="com.dreamgames.royalmatch" />
+        <!-- Mobile Legends: Bang Bang -->
+        <application name="com.mobile.legends" />
+        <!-- Ace2Three Rummy Plus -->
+        <application name="air.com.ace2three.mobile.cash" />
+        <!-- Water Sort Puzzle: Color Sort -->
+        <application name="water.sorting.games.liquid.color.sort.puzzle" />
+        <!-- Callbreak - Permainan Kad -->
+        <application name="com.callbreak.card.game.player.tash" />
+        <!-- Pokémon GO -->
+        <application name="com.nianticlabs.pokemongo" />
+        <!-- AAGame -->
+        <application name="agame.bestall.time" />
+        <!-- Lucky 100 -->
+        <application name="com.indiangame.luckygame" />
+        <!-- Coin Master -->
+        <application name="com.moonactive.coinmaster" />
+        <!-- Squad Busters -->
+        <application name="com.supercell.squad" />
+        <!-- Block Puzzle Legend -->
+        <application name="blockpuzzle.jewelgames.jewelslegend" />
+        <!-- Draw & Win -->
+        <application name="com.draw.nearme.gamecenter" />
+        <!-- League11 - Sports Fantasy App -->
+        <application name="com.league11" />
+        <!-- Yalla Ludo - Ludo&Domino -->
+        <application name="com.yalla.yallagames" />
+        <!-- ทอยบลาสต์ (Toy Blast) -->
+        <application name="net.peakgames.amy" />
+        <!-- Clash Royale -->
+        <application name="com.supercell.clashroyale" />
+        <!-- 夢想小鎮 -->
+        <application name="com.playrix.township" />
+        <!-- eFootball PES 2020 -->
+        <application name="jp.konami.pesam" />
+        <!-- Battlegrounds Mobile India -->
+        <application name="com.pubg.imobile" />
+        <!-- Garena Free Fire: रैम्पेज -->
+        <application name="com.dts.freefireth" />
+        <!-- Rummy Time - Rummy Cash Game -->
+        <application name="com.rummytime.googleplay" />
+        <!-- Zen Color - Tô màu theo số -->
+        <application name="happy.paint.coloring.color.number" />
+        <!-- RozRummy - Indian Rummy Online -->
+        <application name="com.rozclient.game" />
+        <!-- DRAGON BALL LEGENDS -->
+        <application name="com.bandainamcoent.dblegends_ww" />
+        <!-- Travel Town - Merge Adventure -->
+        <application name="io.randomco.travel" />
+        <!-- रम्मी, 29, लूडो, कॉल ब्रेक -->
+        <application name="io.yarsa.games.cardgame" />
+        <!-- Free Fire MAX -->
+        <application name="com.dts.freefiremax" />
+        <!-- Marvel Contest of Champions -->
+        <application name="com.kabam.marvelbattle" />
+        <!-- Tile Family: Match Puzzle Game -->
+        <application name="com.tile.match.blockpuzzle" />
+        <!-- Spades Solitaire - Card Games -->
+        <application name="com.spades.solitaire.online.plus.offline.free.card.games" />
+        <!-- Dream11: फैंटसी क्रिकेट ऐप -->
+        <application name="com.dream11.fantasy.cricket.football.kabaddi" />
+        <!-- Clash of Clans -->
+        <application name="com.supercell.clashofclans" />
+        <!-- 卡通農場 (Hay Day） -->
+        <application name="com.supercell.hayday" />
+        <!-- ईंटों ब्रेकर क्वेस्ट -->
+        <application name="com.mobirix.swipebrick2" />
+        <!-- Candy Crush Saga -->
+        <application name="com.king.candycrushsaga" />
+        <!-- Stuff Sort - Sorting Master -->
+        <application name="onetap.game.good.sort" />
+        <!-- Love Paradise - Merge Makeover -->
+        <application name="com.love.paradise.makeover.story.merge" />
+        <!-- Tower War - Tactical Conquest -->
+        <application name="games.vaveda.militaryoverturn" />
+        <!-- FIFA Soccer -->
+        <application name="com.ea.gp.fifamobile" />
+		<!-- Brawl Stars -->
+        <application name="com.supercell.brawlstars" />
+        <!-- Genshin Impact -->
+        <application name="com.miHoYo.GenshinImpact" />
+        <!-- PUBG MOBILE -->
+        <application name="com.tencent.ig" />
+		<application name="com.pubg.krmobile" />
+		<application name="com.vng.pubgmobile" />
+		<application name="com.rekoo.pubgm" />
+        <!-- YouTube -->
+        <application name="app.rvx.android.youtube" />
+        <application name="com.google.android.youtube" />
+        <application name="app.revanced.android.youtube" />
+        <application name="com.google.android.apps.youtube.mango" />
+        <!-- Tiktok -->
+        <application name="com.ss.android.ugc.trill" />
+        <application name="com.zhiliaoapp.musically" />
+        <application name="com.zhiliaoapp.musically.go" />
+        <application name="com.ss.android.ugc.aweme" />
+        <application name="com.ss.android.ugc.aweme.lite" />
+        <application name="com.ss.android.ugc.aweme.mobile" />
+        <!-- instagram -->
+        <application name="com.aeroinsta.android" />
+        <application name="com.instagram.android" />
+        <application name="com.instagram.android:999" />
+        <application name="com.instagram.lite" />
+    </AppBlackList>
+</root>

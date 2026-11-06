@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="oplus.software.show.flashlight_notification_packages" args="StringList:packages">
+		<StringList name="packages" args="com.oplus.gesture"/>
+    </app_feature>
+</extend_features>

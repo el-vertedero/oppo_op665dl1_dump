@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+	<app_feature name="oplus.software.default_assistant" args="int:2;String:com.yandex.browser;boolean:true"/>
+</extend_features>

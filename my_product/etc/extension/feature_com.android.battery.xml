@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extend_features>
+    <!-- indicate if the device is support life mode 1.0：1 2.0：2 -->
+    <app_feature name="com.oplus.battery.life.mode.notificate" args="int:1"/>
+    <!-- indicate if the device is support battery health -->
+    <app_feature name="os.charge.settings.batterysettings.batteryhealth"/>
+</extend_features>

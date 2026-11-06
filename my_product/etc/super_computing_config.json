@@ -1,0 +1,31 @@
+{
+	"version":"2025080101",
+	"settings": [
+		{
+			"type": "0",
+			"typeName": "card_supercomputing_platform_title_new",
+			"title": "technique_soc_title"
+		}
+	],
+	"certificate": [],
+	"technique": [
+		{
+			"comment": "##24811【行业认证】发布前请先确认JSON格式是否合法,title和content的内容从压缩包中的string_super_computing开头的文件获取，image标签是对应的图片在压缩包中，使用全名称##",
+			"title": "technique_memory_gen_title",
+			"content": "technique_memory_gen_content",
+			"image":"icon_mem.png"
+		},
+		{
+			"comment": "",
+			"title": "technique_file_title",	
+			"content": "technique_file_content",
+			"image":"icon_file.png"
+		},
+		{
+			"comment": "",
+			"title": "technique_soc_title",
+			"content": "technique_soc_content",
+			"image":"icon_caculate.png"
+		}
+	]
+}

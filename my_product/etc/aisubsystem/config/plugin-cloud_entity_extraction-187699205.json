@@ -1,0 +1,16 @@
+{
+  "unitType": "Plugin",
+  "unitName": "cloud_entity_extraction",
+  "scenes": [
+    "flash_memory"
+  ],
+  "disableType": 0,
+  "disabled": false,
+  "unitId": 187699205,
+  "detectName": "cloud_entity_extraction",
+  "priority": 20,
+  "preinstall": true,
+  "needLogin": false,
+  "isCloudApi": true,
+  "unitVersion": 1011
+}

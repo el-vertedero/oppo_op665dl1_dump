@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="oplus_sim_switch_parameter" args="StringList:carrier">
+        <StringList name="carrier" args="name=Telcel|display_name=Telcel|switch_model=everytime|complete_notification=disable_all"/>
+        <StringList name="carrier" args="name=AT&amp;T|display_name=AT&amp;T|target_name=ATT|switch_model=everytime|complete_notification=disable_all|overridable_model=overridable"/>
+        <StringList name="carrier" args="name=Movistar|display_name=Movistar|switch_model=everytime|complete_notification=disable_all"/>
+        <StringList name="carrier" args="name=com.trustonic.telecoms.standard.dlc|reboot_model=none_reboot|target_name=dlc|clean_model=none_cleaned"/>
+    </app_feature>
+</extend_features>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- OutDoor Expressiveness-->
+    <version>20260528</version>
+
+    <lux_table name="outdoor_expressiveness">
+        <!-- add for test lux level, nit values -->
+        <lux>0,2.5</lux>
+        <lux>2,8.5</lux>
+        <lux>4,19</lux>
+        <lux>6,27</lux>
+        <lux>8,30</lux>
+        <lux>10,33</lux>
+        <lux>15,43</lux>
+        <lux>20,50</lux>
+        <lux>25,67</lux>
+        <lux>30,80</lux>
+        <lux>40,82</lux>
+        <lux>60,85</lux>
+        <lux>95,86</lux>
+        <lux>100,87</lux>
+        <lux>200,95</lux>
+        <lux>300,100</lux>
+        <lux>400,110</lux>
+        <lux>500,120</lux>
+        <lux>600,130</lux>
+        <lux>700,140</lux>
+        <lux>800,150</lux>
+        <lux>900,160</lux>
+        <lux>1000,170</lux>
+        <lux>1100,180</lux>
+        <lux>1200,190</lux>
+        <lux>1300,200</lux>
+        <lux>1400,210</lux>
+        <lux>1500,220</lux>
+        <lux>1600,230</lux>
+        <lux>1700,240</lux>
+        <lux>1800,250</lux>
+        <lux>1900,260</lux>
+        <lux>2000,270</lux>
+        <lux>4000,517</lux>
+        <lux>5000,664</lux>
+        <lux>6000,772</lux>
+        <lux>7000,860</lux>
+        <lux>8000,1100</lux>
+        <lux>9000,1100</lux>
+        <lux>10000,1100</lux>
+        <lux>15000,1100</lux>
+        <lux>30000,1100</lux>
+        <lux>40000,1100</lux>
+        <lux>65000,1250</lux>
+        <lux>90000,1500</lux>
+        <lux>115000,1650</lux>
+        <lux>140000,2000</lux>
+    </lux_table>
+</root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config name="scene_event">
+    <filter-conf>
+        <version>2026051120</version>
+        <filter-name>sys_osense_scene_event_config</filter-name>
+    </filter-conf>
+
+	<!-- 相机HAL启动场景 -->
+    <event id="6000" name="HAL_CAMERA_OPEN" maxWorkDurationMs="-1" source_caller="cameraserver_vnd">
+        <key-thread name="hal_provider" owner="cameraserver_vnd" sched_policy="ux" priority="HEAVY" max_thread_count="16" />
+        <key-thread name="NodeThread" owner="cameraserver_vnd" sched_policy="ux" priority="HEAVY" max_thread_count="16" />
+        <key-thread name="CTMThread" owner="cameraserver_vnd" sched_policy="ux" priority="HEAVY" max_thread_count="16" />
+        <key-thread name="3AThread" owner="cameraserver_vnd" sched_policy="ux" priority="HEAVY" max_thread_count="8" />
+        <key-thread name="HalTemporaryThread" owner="cameraserver_vnd" sched_policy="ux" priority="HEAVY" max_thread_count="12" />
+    </event>
+
+    <!-- CameraUi 线程 begin 退出后台时的临时ux,会在app内部生命周期结束后进行取消-->
+    <event id="6100" name="SYSTEM_CAMERA_APP_RUNNING" maxWorkDurationMs="-1" source_caller="system_app">
+        <key-thread name="UIThread" owner="self" sched_policy="ux" priority="LISTPICK"/>
+        <key-thread name="RenderThread" owner="self" sched_policy="ux" priority="LISTPICK"/>
+    </event>
+    <!-- CameraUi 线程 end -->
+
+</config>

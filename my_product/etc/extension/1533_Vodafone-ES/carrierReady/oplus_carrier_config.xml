@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carrier_config>
+	<int name="carrier_oplus_auto_nr_mode" value="3"/>
+	<int name="carrier_oplus_auto_nr_mode_sub" value="3"/>
+</carrier_config>
+<!-- Timestamp 2026-09-14T23:04:06 #46176892-1459-4501-8514-cd8d33b7e8f8 -->

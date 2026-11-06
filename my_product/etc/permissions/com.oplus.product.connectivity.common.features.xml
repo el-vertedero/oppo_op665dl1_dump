@@ -1,0 +1,116 @@
+<oplus-config>
+<!--  WIFI begin -->
+<!-- WangJian@CONNECTIVITY.WIFI.ARCHITECHURE, 2020/06/16   -->
+    <oplus-feature name="oplus.software.wlan.assistant" />
+
+    <oplus-feature name="oplus.software.wlan.dual_sta" />
+
+    <oplus-feature name="oplus.software.wlan.auto_reconnect" />
+
+    <oplus-feature name="oplus.software.wlan.connection_selfcure" />
+
+<!-- Xiazijian@CONNECTIVITY.WIFI.BASIC.SWITCH, 2022/02/16, Add for hidden camera detection-->
+    <oplus-feature name="oplus.software.wlan.sniffer_capture_with_udp" />
+
+<!-- ZhaoXiang@CONNECTIVITY.WIFI.CONNECT.SMARTWIFI.3055896, 2022/2/25, Add for network switch between wifi and cell -->
+    <oplus-feature name="oplus.software.wlan.seamless_switch" />
+
+<!-- XuFenghua@CONNECTIVITY.WIFI.P2P.SMARTMCC.2371952, 2022/8/16, OPLUS_FEATURE_WIFI_CAPCENTER_SMARTMCC -->
+    <oplus-feature name="oplus.software.wlan_smart_mcc_enable" />
+
+    <oplus-feature name="oplus.software.wlan_btc_support_fdd_2x2" />
+
+<!-- liangenglin@CONNECTIVITY.WIFI.NETWORK, 2022/08/24, Add for wifi low latency  -->
+    <oplus-feature name="oplus.software.wlan.low_latency_v2" />
+
+<!-- ZhengDeng@CONNECTIVITY.WIFI.BASIC.P2P.3615099, 2022/09/15, add for AP-GC CONNECT -->
+    <oplus-feature name="oplus.software.wlan.ap_gc_connect" />
+
+<!-- LiuZixuan@CONNECTIVITY.WIFI.CONNECT.SAP.5470030, 2023/10/16, Add for SAP 5G160M feature -->
+    <oplus-feature name="oplus.software.wlan.5g_160M_softap" />
+
+<!-- LiuZixuan@CONNECTIVITY.WIFI.CONNECT.SAP.5470030, 2023/10/16, Add for SAP 5G160M feature -->
+    <oplus-feature name="oplus.software.wlan.5g_160M_station_for_phone_clone" />
+
+    <oplus-feature name="oplus.software.wlan.dbs" />
+
+    <oplus-feature name="oplus.software.wlan.wifi6" />
+
+    <!--oplus-feature name="oplus.software.wlan.smart_gear" /-->
+    <oplus-feature name="oplus.software.wlan.smart_gear" />
+
+    <!-- LiXiong@CONNECTIVITY.WIFI.NETWORK.ROUTERBOOST, 2020/09/27   -->
+    <oplus-feature name="oplus.software.wlan.routerboost" />
+
+    <!-- Zhouhuiquan@CONNECTIVITY.WIFI.CONNECT.3574191, 2022/10/20, Add for wifi connection self cure v3 -->
+    <oplus-feature name="oplus.software.wlan.connection_selfcure_v3" />
+
+    <!-- XiaSong@CONNECTIVITY.WIFI.HARDWARE.PKAT.1460037, 2021/12/3 -->
+    <oplus-feature name="oplus.software.wlan.pkat" />
+
+    <!-- XiaSong@CONNECTIVITY.WIFI.HARDWARE.POWER.2792204, 2021/12/19, add for MTK BAR -->
+    <!--
+    <oplus-feature name="oplus.software.wlan.bar" />
+    -->
+
+    <!-- Zhouhuiquan@CONNECTIVITY.WIFI.CONNECT.SMARTANTENNA, 2022/12/09, Add for wifi SmartAntenna implement -->
+    <oplus-feature name="oplus.software.wlan.smart_antenna" />
+
+    <!-- SunZhao@CONNECTIVITY.WIFI.NETSHARE, 2022/12/03, add for netshare -->
+    <oplus-feature name="oplus.software.wlan.net_share" />
+
+    <!-- Liuzuofa@CONNECTIVITY.WIFI.SOFTAP.4470594, 2023/6/12 -->
+    <oplus-feature name="oplus.software.wlan.atpc" />
+
+    <!-- WuJie@CONNECTIVITY.WIFI.BASIC.P2P.7433693, 2024/11/29, add for P2P 5G160M -->
+    <oplus-feature name="oplus.software.wlan.p2p.5g160m" />
+    <oplus-feature name="oplus.software.wlan.precac.v1" />
+
+    <!-- WuJie@CONNECTIVITY.WIFI.BASIC.SAP.8464026, 2025/03/25, add for fast share SAP 5G160M -->
+    <oplus-feature name="oplus.software.wlan.share_sap_5g160m" />
+
+    <!-- ZhengDeng@CONNECTIVITY.WIFI.BASIC.P2P.3615099, 2022/09/15, add for AP-GC CONNECT -->
+    <oplus-feature name="oplus.software.wlan.ap_gc_connect" />
+
+    <!-- YuanZhiqiang@CONNECTIVITY.WIFI.HARDWARE.POWER.6267506, 2023/09/21, add for CCK fix rate -->
+    <oplus-feature name="oplus.software.wlan.fixedrate" />
+
+    <!-- CaoShifeng@CONNECTIVITY.WIFI.QOE, 2023/10/17, add for wifi qoe -->
+    <oplus-feature name="oplus.software.wlan.qoe_estimate" />
+
+    <!--LiFenfen@CONNECTIVITY.WIFI.HARDWARE.SAR.TXDUTY.6535627, 2024/01/06, Add for wifi SAR tx/idle function to raise tx power -->
+    <oplus-feature name="oplus.software.wlan.sar.txduty" />
+
+    <!--SunZhao@CONNECTIVITY.WIFI.BASE.SOFTAP.7082759, 2024/05/21, add for DFS pre-cac -->
+    <oplus-feature name="oplus.software.wlan.softap.precac" />
+
+    <!-- Lixiong@CONNECTIVITY.WIFI.NETWORK, 2024/07/26, add for fast_retry -->
+    <oplus-feature name="oplus.software.wlan.fast_retry" />
+
+    <!-- JinXuexue@CONNECTIVITY.WIFI.NETWORK.7059396, 2024/05/28 -->
+    <oplus-feature name="oplus.software.wlan.roam_opt" />
+
+    <!-- JinXuexue@CONNECTIVITY.WIFI.NETWORK.8345345, 2025/05/01 -->
+    <oplus-feature name="oplus.software.wlan.qoe_roaming" />
+
+    <!-- SunZhao@CONNECTIVITY.WIFI.BASE.P2P, 2025/07/05, add for P2P softAP concurrent -->
+    <oplus-feature name="oplus.software.wlan.p2p_softap_concurrent" />
+
+    <!-- DengJia@CONNECTIVITY.WIFI.BASIC.SOFTAP.10084878, 2025/10/09, add for accelerating real-time data packet in SAP mode -->
+    <oplus-feature name="oplus.software.wlan.sap_accelerate_enable" />
+<!--  WIFI end -->
+
+<!--  BT begin -->
+<!-- GaoShangxiu@CONNECTIVITY.BT.ARCHITECHURE, 2020/07/14   -->
+    <oplus-feature name="oplus.software.bt.ble_scan_strategymode" />
+
+<!-- GaoShangxiu@CONNECTIVITY.BT.Audio.Feature.1621909, 2021/10/02,add for support Binuural Record -->
+    <oplus-feature name="oplus.software.bt.binaural_record" />
+<!--  BT end -->
+
+<!--  NFC begin -->
+<!-- huangruhong@CONNECTIVITY.NFC.ARCHITECHURE, 2020/08/18,add for felica(NFC Card Emulation) toggle feature  -->
+    <oplus-feature name="oplus.software.nfc.felica_support" />
+<!--  NFC end -->
+
+</oplus-config>

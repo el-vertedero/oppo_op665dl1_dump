@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+    <app_feature name="com.oplus.aod.support_app_host" args="String:https://aodscene-service-fr.allawnos.com"/>
+</extend_features>

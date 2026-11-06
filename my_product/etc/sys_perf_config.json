@@ -1,0 +1,176 @@
+[
+    {
+        "filter_name": "sys_perf_config"
+    },
+    {
+        "version": 202609017
+    },
+    {
+        "scroll_animation_opt": true,
+        "common_only": false,
+        "pre_anim_strategy": 1,
+        "pre_anim_blacklist": [
+            "com.kyk.world",
+            "com.shopify.arrive",
+            "com.quark.browser",
+            "com.android.launcher",
+            "com.max.xiaoheihe",
+            "org.telegram.messenger",
+            "uz.unnarsx.cherrygram",
+            "com.heytap.themestore",
+            "org.telegram.messenger.web",
+            "com.coloros.weather2",
+            "com.greenpoint.android.mc10086.activity",
+            "com.coloros.gallery3d"
+        ],
+        "pre_anim_whitelist": [
+
+        ],
+        "frame_insert_default_num": 3,
+        "frame_insert_list": {
+            "com.sankuai.meituan": {
+                "com.sankuai.waimai.business.page.kingkong.KingKongActivity": 0
+            },
+            "com.xueqiu.android": {
+                "com.xueqiu.android.common.imagebrowse.inner.ui.ImageBrowseActivity": 0
+            },
+            "com.netease.newsreader.activity": {
+                "com.netease.newsreader.article.framework.view.NewsPageActivity": 0
+            },
+            "com.max.xiaoheihe": {
+                "com.max.xiaoheihe.module.bbs.post.ui.activitys.WebNewsPostPageActivity": 0
+            },
+            "uz.unnarsx.cherrygram": {
+                "uz.unnarsx.cherrygram.CG_Icon_Cherry": 0
+            },
+            "com.taobao.idlefish": {
+                "*": 0
+            },
+            "com.kyk.world": {
+                "*": 0
+            },
+            "com.shopify.arrive": {
+                "*": 0
+            },
+            "com.android.launcher": {
+                "*": 0
+            },
+            "com.heytap.themestore": {
+                "*": 0
+            },
+            "com.coloros.weather2": {
+                "*": 0
+            },
+            "com.greenpoint.android.mc10086.activity": {
+                "*": 0
+            },
+            "com.sina.weibo": {
+                "com.sina.weibo.preview.MediaPreviewActivity": 0
+            },
+            "com.coloros.gallery3d": {
+                "*": 0
+            },
+            "com.pupumall.customer": {
+                "com.pupumall.proteus.base.pagev2.activity.PPReactContainerActivity": 0
+            },
+            "org.telegram.messenger": {
+                "org.telegram.messenger.DefaultIcon": 0
+            }
+        },
+        "scroll_changed_enable_list": {
+            "com.sina.weibo": [
+                "com.sina.weibo.VisitorMainTabActivity"
+            ],
+            "com.xunmeng.pinduoduo": [
+                "com.xunmeng.pinduoduo.activity.NewPageActivity"
+            ],
+            "com.sankuai.meituan": [
+                "com.meituan.android.pt.homepage.activity.MainActivity",
+                "com.sankuai.waimai.business.restaurant.poicontainer.WMRestaurantActivity"
+            ],
+            "com.tencent.mobileqq": [
+                "com.qzone.feed.ui.activity.QZoneFriendFeedActivity",
+                "com.tencent.mobileqq.activity.SplashActivity"
+            ],
+            "com.dragon.read": [
+                "com.dragon.read.pages.main.MainFragmentActivity"
+            ],
+            "com.ct.client": [
+                "com.ct.client.activity.MainActivity"
+            ],
+            "com.tencent.qqmusic": [
+                "com.tencent.qqmusic.activity.AppStarterActivity"
+            ]
+        },
+        "gc_supression_enable": true,
+        "gc_supression_blacklist": {
+
+        },
+        "st_buffer_opt_enable": true,
+        "st_buffer_opt_strategy": 2,
+        "st_buffer_opt_blacklist": {
+
+        },
+        "st_buffer_opt_whitelist": {
+            "com.eg.android.AlipayGphone": [
+                "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity"
+            ],
+            "ctrip.android.view": [
+                "ctrip.android.hotel.list.flutter.map.HotelListMixMapActivity"
+            ],
+            "com.taobao.idlefish": [
+                "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity"
+            ],
+            "com.jiemian.news": [
+                "com.jiemian.news.base.MainActivity"
+            ],
+            "com.taobao.taobao": [
+                "com.taobao.android.detail.alittdetail.TTDetailActivity"
+            ],
+            "dji.mimo": [
+                "dji.lomo.main.activity.MainActivity"
+            ],
+            "com.tencent.docs": [
+                "com.tencent.docs.DocsFlutterActivity"
+            ]
+        },
+        "input_opt_enable": true,
+        "input_opt_strategy": 2,
+        "input_opt_blacklist": {
+
+        },
+        "input_opt_whitelist": {
+            "com.taobao.idlefish": [
+                "com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity"
+            ],
+            "com.tencent.mm": [
+                "com.tencent.mm.plugin.brandservice.ui.flutter.BizFlutterTLFlutterViewActivity",
+                "com.tencent.mm.plugin.ting.TingFlutterActivity",
+                "com.tencent.mm.plugin.lite.ui.WxaLiteAppLiteUI",
+                "com.tencent.mm.plugin.topstory.ui.home.TopStoryHomeUI"
+            ],
+            "com.yiche.price": [
+                "com.yiche.price.MainActivity"
+            ],
+            "ctrip.android.view": [
+                "ctrip.android.flutter.containers.TransparentTripFlutterActivity"
+            ],
+            "com.daimajia.gold": [
+                "im.juejin.android.modules.flutter.impl.MyFlutterActivity"
+            ],
+            "com.taobao.taobao": [
+                "com.taobao.tao.TBMainActivity",
+                "com.taobao.tao.welcome.Welcome"
+            ],
+            "com.koudai.weidian.buyer": [
+                "com.vdian.android.wdb.main.ui.activity.MainTabsActivity"
+            ],
+            "com.bwcreation.phone_temperature_new": [
+                "com.bwcreation.phone_temperature_new.MainActivity"
+            ],
+            "com.bigbasket.mobileapp": [
+                "com.bigbasket.mobileapp.flutter.FlutterContainerActivity"
+            ]
+        }
+    }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+    <app_feature name="athena.kill.global.whitelist.operator.pkg" args="StringList:apps">
+        <StringList name="apps" args="com.promobitech.nuovo;com.afwsamples.testdpc"/>
+    </app_feature>
+    <app_feature name="oplus_device_owner_disallow_recovery_packages" args="StringList:apps" >
+        <StringList name="apps" args="com.promobitech.nuovo;com.afwsamples.testdpc"/>
+    </app_feature>
+</extend_features>

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "wallpapers": [
+    {
+      "liveName": "Mars_1.mp4",
+      "staticName": "product_wallpaper1.webp"
+    },
+    {
+      "liveName": "Mars_2.mp4",
+      "staticName": "product_wallpaper2.webp"
+    },
+    {
+      "liveName": "Mars_3.mp4",
+      "staticName": "product_wallpaper3.webp"
+    }
+  ]
+}

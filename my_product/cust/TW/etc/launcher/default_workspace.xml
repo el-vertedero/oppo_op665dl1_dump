@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Please DO NOT EDIT below template:
+Repo Name:	Oplus_Custom_Android_Material_Config
+File Path:	Oplus_Custom_Android_Material_Config\region_module\TW\res\copy_modules\etc\launcher\default_workspace_rsa4.1_tier2tier3.xml
+  -->
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+
+    <!-- Left screen [0] -->
+    <appwidget
+        launcher:className="com.coloros.widget.launcher.LauncherWidgetTwo"
+        launcher:packageName="com.coloros.alarmclock"
+        launcher:screen="0"
+        launcher:spanX="4"
+        launcher:spanY="2"
+        launcher:x="0"
+        launcher:y="0" />
+
+    <!-- 手机管家-->
+    <favorite
+        launcher:className="com.coloros.phonemanager.FakeActivity"
+        launcher:packageName="com.coloros.phonemanager"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="4" />
+
+    <!--  Gemini  -->
+    <favorite
+        launcher:className="com.google.android.apps.bard.shellapp.BardEntryPointActivity"
+        launcher:packageName="com.google.android.apps.bard"
+        launcher:screen="0"
+        launcher:x="1"
+        launcher:y="4" />
+
+    <!--  软件商店  -->
+    <resolve
+        launcher:screen="0"
+        launcher:x="2"
+        launcher:y="4">
+        <favorite
+            launcher:className="com.oplus.external.ui.LaunchActivity"
+            launcher:packageName="com.heytap.market" />
+        <favorite
+            launcher:className="com.heytap.market.activity.MainActivity"
+            launcher:packageName="com.heytap.market" />
+        <favorite
+            launcher:className="com.oppo.market.activity.MainActivity"
+            launcher:packageName="com.heytap.market" />
+        <favorite
+            launcher:className="com.oppo.market.activity.MainActivity"
+            launcher:packageName="com.oppo.market" />
+        <favorite
+            launcher:className="com.applovin.array.app.store.SplashActivity"
+            launcher:packageName="com.heytap.market" />
+    </resolve>
+
+    <!--  OPPO浏览器  -->
+    <resolve
+        launcher:screen="0"
+        launcher:x="3"
+        launcher:y="4">
+        <favorite
+            launcher:className="com.android.browser.BrowserActivity"
+            launcher:packageName="com.heytap.browser" />
+
+        <favorite
+            launcher:className="com.android.browser.BrowserActivity"
+            launcher:packageName="com.coloros.browser" />
+    </resolve>
+
+    <favorite
+        launcher:className="com.facebook.katana.LoginActivity"
+        launcher:packageName="com.facebook.katana"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="5" />
+
+    <!--instagram-->
+    <favorite
+        launcher:className="com.instagram.android.activity.MainTabActivity"
+        launcher:packageName="com.instagram.android"
+        launcher:screen="0"
+        launcher:x="1"
+        launcher:y="5" />
+
+    <!--  Play商店  -->
+    <favorite
+        launcher:className="com.android.vending.AssetBrowserActivity"
+        launcher:packageName="com.android.vending"
+        launcher:screen="0"
+        launcher:x="2"
+        launcher:y="5" />
+
+    <folder
+        launcher:folderTitle="Google"
+        launcher:screen="0"
+        launcher:x="3"
+        launcher:y="5">
+        <favorite
+            launcher:className="com.google.android.googlequicksearchbox.SearchActivity"
+            launcher:packageName="com.google.android.googlequicksearchbox"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.google.android.gm.ConversationListActivityGmail"
+            launcher:packageName="com.google.android.gm"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.google.android.maps.MapsActivity"
+            launcher:packageName="com.google.android.apps.maps"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity"
+            launcher:packageName="com.google.android.youtube"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="1" />
+
+        <favorite
+            launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            launcher:packageName="com.google.android.apps.docs"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="1" />
+
+        <resolve
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="1">
+            <favorite
+                launcher:className="com.google.android.apps.youtube.music.activities.MusicActivity"
+                launcher:packageName="com.google.android.apps.youtube.music" />
+            <favorite
+                launcher:className="com.android.music.activitymanagement.TopLevelActivity"
+                launcher:packageName="com.google.android.music" />
+        </resolve>
+
+        <favorite
+            launcher:className="com.google.android.youtube.videos.EntryPoint"
+            launcher:packageName="com.google.android.videos"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="2" />
+
+        <!--  Duo/Meet  -->
+        <favorite
+            launcher:className="com.google.android.apps.tachyon.MainActivity"
+            launcher:packageName="com.google.android.apps.tachyon"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="2" />
+
+        <favorite
+            launcher:className="com.google.android.apps.photos.home.HomeActivity"
+            launcher:packageName="com.google.android.apps.photos"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="2" />
+
+        <favorite
+            launcher:className="com.google.android.apps.subscriptions.red.LauncherActivity"
+            launcher:packageName="com.google.android.apps.subscriptions.red"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="3" />
+
+        <!--  Wallet  -->
+        <resolve
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="3">
+            <favorite
+                launcher:className="com.google.commerce.tapandpay.android.wallet.WalletActivity"
+                launcher:packageName="com.google.android.apps.walletnfcrel" />
+            <favorite
+                launcher:className="com.google.commerce.tapandpay.android.cardlist.CardListActivity"
+                launcher:packageName="com.google.android.apps.walletnfcrel" />
+            <favorite
+                launcher:className="com.google.android.apps.wallet.GooglePayActivity"
+                launcher:packageName="com.google.android.apps.walletnfcrel" />
+        </resolve>
+
+        <favorite
+            launcher:className="com.google.android.apps.nbu.files.home.HomeActivity"
+            launcher:packageName="com.google.android.apps.nbu.files"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="3" />
+
+        <favorite
+            launcher:className="com.android.contacts.activities.PeopleActivity"
+            launcher:packageName="com.google.android.contacts"
+            launcher:screen="0"
+            launcher:x="3"
+            launcher:y="3" />
+
+        <favorite
+            launcher:className="com.android.calendar.AllInOneCalendarActivity"
+            launcher:packageName="com.google.android.calendar"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="4" />
+
+        <favorite
+            launcher:className="com.google.android.apps.chromecast.app.DiscoveryActivity"
+            launcher:packageName="com.google.android.apps.chromecast.app"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="4" />
+
+        <!--Google Pay-->
+        <favorite
+            launcher:className="com.google.android.apps.nbu.paisa.user.launcher.LauncherActivity"
+            launcher:packageName="com.google.android.apps.nbu.paisa.user"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="4"/>
+
+        <!--Google fitbit-->
+        <favorite
+            launcher:className="com.google.android.apps.fitbit.app.main.MainComposeActivity"
+            launcher:packageName="com.fitbit.FitbitMobile"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="5"/>
+
+        <!-- Find My Device -->
+        <favorite
+            launcher:className="com.google.android.apps.adm.activities.MainActivity"
+            launcher:packageName="com.google.android.apps.adm"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="5" />
+
+        <!-- Assistant -->
+        <favorite
+            launcher:className="com.google.android.apps.googleassistant.AssistantActivity"
+            launcher:packageName="com.google.android.apps.googleassistant"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="5" />
+
+        <!-- Safety -->
+        <favorite
+            launcher:className="com.google.android.apps.safetyhub.home.HomeActivity"
+            launcher:packageName="com.google.android.apps.safetyhub"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="6" />
+    </folder>
+
+    <!-- Left screen [1] -->
+
+    <folder
+        launcher:folderTitle="Work &amp; Productivity"
+        launcher:screen="1"
+        launcher:spanX="2"
+        launcher:spanY="2"
+        launcher:x="0"
+        launcher:y="0">
+        <!-- AI 笔记 -->
+        <favorite
+            launcher:className="com.oplus.aipaper.feature.home.activity.AINoteHomeActivity"
+            launcher:packageName="com.oplus.aipaper"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="0" />
+
+        <!-- 录音-->
+        <favorite
+            launcher:className="oppo.multimedia.soundrecorder.RecorderActivity"
+            launcher:packageName="com.coloros.soundrecorder"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="2" />
+
+        <!-- 便签 -->
+        <favorite
+            launcher:className="com.nearme.note.main.MainActivity"
+            launcher:packageName="com.coloros.note"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="1" />
+
+        <!--    翻译    -->
+        <favorite
+            launcher:className="com.coloros.translate.ui.MainActivity"
+            launcher:packageName="com.coloros.translate"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="2" />
+
+        <!--  文档  -->
+        <favorite
+            launcher:className="andes.oplus.documentsreader.launcher.activity.MainViewActivity"
+            launcher:packageName="andes.oplus.documentsreader"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="0" />
+
+        <!--  文件管理  -->
+        <favorite
+            launcher:className="com.coloros.filemanager.Main"
+            launcher:packageName="com.coloros.filemanager"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="1" />
+
+        <!--  日历  -->
+        <favorite
+            launcher:className="com.android.calendar.AllInOneActivity"
+            launcher:packageName="com.oplus.calendar"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="0" />
+
+        <!-- AI Studio -->
+        <favorite
+            launcher:className="com.oplus.ai.magicstudio.MainActivity"
+            launcher:packageName="com.oplus.ai.magicstudio"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="1" />
+
+        <favorite
+            launcher:className="com.coloros.relax.function.MainActivity"
+            launcher:packageName="com.coloros.relax"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="2" />
+
+        <!--   红外遥控   -->
+        <favorite
+            launcher:className="com.oplus.consumerIRApp.navigation.HomeActivity"
+            launcher:packageName="com.oplus.consumerIRApp"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="3" />
+
+        <resolve
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="3">
+            <favorite
+                launcher:className="com.coloros.compass.flat.FlatCompass"
+                launcher:packageName="com.coloros.compass2" />
+            <favorite
+                launcher:className="com.coloros.compass.flat.FlatCompass"
+                launcher:packageName="com.coloros.compass" />
+        </resolve>
+
+        <resolve
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="3">
+            <favorite
+                launcher:className="com.android.calculator2.Calculator"
+                launcher:packageName="com.coloros.calculator" />
+            <favorite
+                launcher:className="com.android.calculator2.Calculator"
+                launcher:packageName="com.android.calculator2" />
+        </resolve>
+
+        <favorite
+            launcher:className="com.coloros.backuprestore.activity.BootActivity"
+            launcher:packageName="com.coloros.backuprestore"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="4" />
+
+        <favorite
+            launcher:className="com.coloros.onekeylockscreen.OppoLockScreen"
+            launcher:packageName="com.coloros.onekeylockscreen"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="4" />
+
+        <resolve
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="4">
+            <!-- MTK FMRadio -->
+            <favorite
+                launcher:className="com.android.fmradio.FmMainActivity"
+                launcher:packageName="com.android.fmradio" />
+            <!-- Qualcomm FMRadio -->
+            <favorite
+                launcher:className="com.caf.fmradio.FMRadio"
+                launcher:packageName="com.caf.fmradio" />
+        </resolve>
+
+        <!--    使用技巧    -->
+        <resolve
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="4">
+            <favorite
+                launcher:className="com.coloros.operationtips.activities.WelcomeActivity"
+                launcher:packageName="com.coloros.operationtips" />
+            <favorite
+                launcher:className="com.oplus.tips.MainActivity"
+                launcher:packageName="com.oplus.tips" />
+        </resolve>
+
+        <!--    禅定模式    -->
+        <favorite
+            launcher:className="com.oneplus.brickmode.activity.MainControlActivity"
+            launcher:packageName="com.oneplus.brickmode"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="5" />
+
+        <favorite
+            launcher:className="com.android.stk.OppoStkLauncherActivity1"
+            launcher:packageName="com.android.stk"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="5" />
+
+        <favorite
+            launcher:className="com.android.stk.OppoStkLauncherActivity2"
+            launcher:packageName="com.android.stk"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="5" />
+
+        <favorite
+            launcher:className="com.android.stk.StkLauncherActivityI"
+            launcher:packageName="com.android.stk"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="6" />
+
+        <favorite
+            launcher:className="com.android.stk.StkLauncherActivityII"
+            launcher:packageName="com.android.stk"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="6" />
+
+        <favorite
+            launcher:className="com.android.stk.OplusStkLauncherActivity1"
+            launcher:packageName="com.android.stk"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="6" />
+
+        <favorite
+            launcher:className="com.android.stk.OplusStkLauncherActivity2"
+            launcher:packageName="com.android.stk"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="7" />
+
+        <!--  电话本  -->
+        <favorite
+            launcher:className="com.android.contacts.PeopleActivityAlias"
+            launcher:packageName="com.android.contacts"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="7" />
+
+        <!--  时钟  -->
+        <favorite
+            launcher:className="com.coloros.alarmclock.AlarmClock"
+            launcher:packageName="com.coloros.alarmclock"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="1" />
+
+        <!--逍遥游-->
+        <favorite
+            launcher:className="com.redteamobile.roaming.MainActivity"
+            launcher:packageName="com.redteamobile.roaming"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="7" />
+
+        <!--  OPPO信息  -->
+        <favorite
+            launcher:className="com.android.mms.ui.ConversationList"
+            launcher:packageName="com.android.mms"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="2" />
+    </folder>
+
+    <!--  设置  -->
+    <favorite
+        launcher:className="com.oppo.settings.SettingsActivity"
+        launcher:packageName="com.android.settings"
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="0" />
+
+    <!--  天气  -->
+    <resolve
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="0">
+        <favorite
+            launcher:className="com.coloros.weather.OppoMainActivity"
+            launcher:packageName="com.coloros.weather2" />
+        <favorite
+            launcher:className="com.coloros.weather.OppoMainActivity"
+            launcher:packageName="com.coloros.weather" />
+    </resolve>
+
+    <!--  主题商店  -->
+    <resolve
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="1">
+        <favorite
+            launcher:className="com.nearme.themespace.activities.ThemeActivity"
+            launcher:packageName="com.oplus.themestore" />
+        <favorite
+            launcher:className="com.nearme.themespace.activities.ThemeActivity"
+            launcher:packageName="com.heytap.themestore" />
+        <favorite
+            launcher:className="com.nearme.themespace.activities.ThemeActivity"
+            launcher:packageName="com.nearme.themespace" />
+        <favorite
+            launcher:className="com.nearme.themespace.activities.ThemeActivity"
+            launcher:packageName="com.nearme.themestore" />
+    </resolve>
+
+    <folder
+        launcher:folderTitle="Featured"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="1">
+        <!--    游戏中心    -->
+        <resolve
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="0">
+            <favorite
+                launcher:className="com.nearme.gamecenter.ui.activity.SplashActivity"
+                launcher:packageName="com.heytap.gamecenter" />
+            <favorite
+                launcher:className="com.nearme.gamecenter.ui.activity.SplashActivity"
+                launcher:packageName="com.nearme.gamecenter" />
+        </resolve>
+
+        <!--  音乐  -->
+        <resolve
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="0">
+            <favorite
+                launcher:className="com.nearme.music.local.ui.LocalMusicActivity"
+                launcher:packageName="com.heytap.music" />
+            <favorite
+                launcher:className="com.oppo.music.MainListActivity"
+                launcher:packageName="com.oppo.music" />
+        </resolve>
+
+        <favorite
+            launcher:className="com.coloros.musiclink.ui.MainActivity"
+            launcher:packageName="com.coloros.musiclink"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="1" />
+
+        <favorite
+            launcher:className="com.redteamobile.roaming.MainActivity"
+            launcher:packageName="com.redteamobile.roaming"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="2" />
+
+        <resolve
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="1">
+            <favorite
+                launcher:className="com.oppo.usercenter.vip.UCVIPMainActivity"
+                launcher:packageName="com.oneplus.member" />
+            <favorite
+                launcher:className="com.platform.usercenter.vip.UCVIPMainActivity"
+                launcher:packageName="com.heytap.usercenter" />
+            <favorite
+                launcher:className="com.oppo.usercenter.vip.UCVIPMainActivity"
+                launcher:packageName="com.oppo.usercenter" />
+            <favorite
+                launcher:className="com.platform.usercenter.vip.UCVIPMainActivity"
+                launcher:packageName="com.oplus.vip" />
+            <favorite
+                launcher:className="com.oppo.usercenter.vip.UCVIPMainActivity"
+                launcher:packageName="com.oplus.member" />
+        </resolve>
+
+        <!--  OPPO社区  -->
+        <favorite
+            launcher:className="com.oppo.community.global.LauncherActivity"
+            launcher:packageName="com.oppo.community.global"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="2" />
+
+        <favorite
+            launcher:className="com.oppo.store.InitActivity"
+            launcher:packageName="com.oppo.store"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="0" />
+
+        <resolve
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="1">
+            <favorite
+                launcher:className="com.heytap.mall.view.SplashActivity"
+                launcher:packageName="com.heytap.mall" />
+            <favorite
+                launcher:className="com.heytap.store.view.SplashActivity"
+                launcher:packageName="com.heytap.store"/>
+        </resolve>
+
+        <!--健康-->
+        <favorite
+            launcher:className="com.heytap.health.launch.LaunchActivity"
+            launcher:packageName="com.heytap.health.international"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="0" />
+    </folder>
+
+    <!--  相册  -->
+    <favorite
+        launcher:className="com.oppo.gallery3d.app.Gallery"
+        launcher:packageName="com.coloros.gallery3d"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="2" />
+
+    <!-- third app start -->
+    <favorite
+        launcher:className="com.oppo.video.VideoListActivity"
+        launcher:packageName="com.coloros.video"
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="2" />
+
+    <!--  Games  -->
+    <resolve
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="2">
+        <favorite
+            launcher:className="com.coloros.gamespaceui.activity.StartActivity"
+            launcher:packageName="com.coloros.gamespaceui" />
+        <favorite
+            launcher:className="com.oplus.games.ui.main.MainGameActivity"
+            launcher:packageName="com.oplus.games" />
+        <favorite
+            launcher:className="com.coloros.gamespaceui.activity.StartActivity"
+            launcher:packageName="com.oplus.games" />
+    </resolve>
+
+    <favorite
+        launcher:className="testName"
+        launcher:packageName="com.oplus.aiassistant"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="2" />
+
+    <!--  Netflix  -->
+    <favorite
+        launcher:className="com.netflix.mediaclient.ui.launch.UIWebViewActivity"
+        launcher:packageName="com.netflix.mediaclient"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="3" />
+
+    <!--  TikTok  -->
+    <resolve
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="3">
+        <favorite
+            launcher:className="com.ss.android.ugc.aweme.splash.SplashActivity"
+            launcher:packageName="com.zhiliaoapp.musically" />
+
+        <favorite
+            launcher:className="com.ss.android.ugc.aweme.splash.SplashActivity"
+            launcher:packageName="com.ss.android.ugc.trill" />
+    </resolve>
+
+    <favorite
+        launcher:className="com.linkedin.android.authenticator.LaunchActivity"
+        launcher:packageName="com.linkedin.android"
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="3" />
+
+    <folder
+        launcher:folderTitle="More Apps"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="3">
+        <!--Booking-->
+        <favorite
+            launcher:className="com.booking.startup.HomeActivity"
+            launcher:packageName="com.booking"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="0" />
+
+        <!--Trip.com-->
+        <favorite
+            launcher:className="com.ctrip.ibu.myctrip.main.module.home.IBUHomeActivity"
+            launcher:packageName="ctrip.english"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="0" />
+
+        <!--  Agoda  -->
+        <favorite
+            launcher:className="com.agoda.mobile.consumer.screens.splash.AppLauncherActivity"
+            launcher:packageName="com.agoda.mobile.consumer"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="1" />
+
+        <favorite
+            launcher:className="com.vega.main.MainActivity"
+            launcher:packageName="com.lemon.lvoverseas"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="0" />
+
+        <favorite
+            launcher:className="com.spotify.music.MainActivity"
+            launcher:packageName="com.spotify.music"
+            launcher:screen="0"
+            launcher:x="2"
+            launcher:y="1" />
+
+        <!--WPS-->
+        <favorite
+            launcher:className="cn.wps.moffice.main.cloud.drive.collection.CollectFileActivity"
+            launcher:packageName="cn.wps.moffice_eng"
+            launcher:screen="0"
+            launcher:x="1"
+            launcher:y="4" />
+    </folder>
+
+    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+    <resolve
+        launcher:container="-101"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="0">
+        <favorite
+            launcher:className="com.android.dialer.app.settings.DialerSettingsActivity"
+            launcher:packageName="com.google.android.dialer" />
+        <favorite
+            launcher:className="com.android.contacts.DialtactsActivityAlias"
+            launcher:packageName="com.android.contacts" />
+    </resolve>
+
+    <favorite
+        launcher:className="com.google.android.apps.messaging.ui.ConversationListActivity"
+        launcher:packageName="com.google.android.apps.messaging"
+        launcher:container="-101"
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="0"/>
+
+    <favorite
+        launcher:className="com.google.android.apps.chrome.Main"
+        launcher:packageName="com.android.chrome"
+        launcher:container="-101"
+        launcher:screen="2"
+        launcher:x="2"
+        launcher:y="0"/>
+
+    <resolve
+        launcher:container="-101"
+        launcher:screen="3"
+        launcher:x="3"
+        launcher:y="0">
+        <favorite
+            launcher:className="com.oplus.camera.Camera"
+            launcher:packageName="com.oplus.camera" />
+        <favorite
+            launcher:className="com.oppo.camera.Camera"
+            launcher:packageName="com.oppo.camera" />
+        <favorite
+            launcher:className="com.oneplus.camera.CameraActivity"
+            launcher:packageName="com.oneplus.camera" />
+    </resolve>
+</favorites>

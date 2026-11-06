@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<extend_features>
+
+    <app_feature name="oplus_operator_chrome_bookmarksfolder" args="String:SINGTEL">
+    </app_feature>
+
+    <app_feature name="oplus_operator_chrome_bookmarks" args="StringList:bookmarks">
+        <StringList name="bookmarks" args="My Portal|http://myportal.singtel.com/"/>
+        <StringList name="bookmarks" args="Singtel Apps|http://www.singtel.com/apps"/>
+    </app_feature>
+
+</extend_features>

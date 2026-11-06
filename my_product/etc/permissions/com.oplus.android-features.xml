@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<feature name="android.hardware.telephony.euicc"/>
+	<feature name="oplus.software.vibration_alarm_clock"/>
+	<feature name="oplus.software.vibration_ringtone"/>
+	<feature name="oplus.software.vibration_ring_mute"/>
+	<feature name="oplus.software.vibration_threestage_key"/>
+	<feature name="android.hardware.telephony.euicc.mep"/>
+	<feature name="oplus.obrain.support"/>
+	<feature name="com.google.android.feature.AER_OPTIMIZED"/>
+</permissions>
+<!-- Timestamp 2026-06-30T20:50:56 #1536479 -->

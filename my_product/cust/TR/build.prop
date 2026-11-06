@@ -1,0 +1,12 @@
+persist.sys.oplus.bt.chre_ble_scan=true
+ro.com.google.rlz_ap_whitelist=
+ro.com.google.rlzbrandcode=
+ro.com.google.clientidbase.pg3=
+ro.com.google.clientidbase.ms=
+ro.com.google.clientidbase.ms.a2=
+ro.com.google.clientidbase.rs.a2=
+ro.com.google.clientidbase.rs.a3=
+ro.com.google.clientidbase.cr=
+ro.com.google.clientidbase.pg2=
+ro.vendor.oplus.euex.country=TR
+ro.vendor.oplus.version=eu

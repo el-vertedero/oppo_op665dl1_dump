@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <filter-conf>
+        <version>2026033101</version>
+        <filter-name>sys_multiwindow_frame_config</filter-name>
+    </filter-conf>
+
+    <config name="multiWindowRefreshConfig" type="bundle">
+	    <!--子功能开关配置-->
+        <item name="feature_switch" type="bool" value="true"/>
+        <item name="zoom_switch" type="bool" value="true"/>
+        <item name="split_switch" type="bool" value="true"/>
+        <item name="overlay_switch" type="bool" value="true"/>
+		<item name="switchBoost_switch" type="bool" value="true"/>
+		<!--是否启用黑名单配置-->
+        <item name="zoom_blackList_switch" type="bool" value="false"/>
+		<item name="split_blackList_switch" type="bool" value="false"/>
+		<item name="overlay_blackList_switch" type="bool" value="true"/>
+		<item name="switchBoost_blackList_switch" type="bool" value="false"/>
+		<!--Mode对应的限制帧率配置-->
+        <item name="level1" type="string" value="144-72|120-60|90-60|60-60"/>
+		<item name="level2" type="string" value="144-36|120-30|90-30|60-30"/>
+		<item name="level3" type="string" value="144-15|120-15|90-15|60-15"/>
+    </config>
+
+    <config name="zoomPkgList" type="stringList">
+        <item name="com.test.app1"/>
+        <item name="com.test.app2"/>
+    </config>
+	
+	<config name="splitPkgList" type="stringList">
+        <item name="com.test.app3"/>
+        <item name="com.test.app4"/>
+    </config>
+	
+	<config name="overlayPkgList" type="stringList">
+        <item name="com.tencent.mobileqq"/>
+        <item name="com.tencent.mm"/>
+    </config>
+	
+	<config name="switchBoostPkgList" type="stringList">
+        <item name="com.test.app7"/>
+        <item name="com.test.app8"/>
+    </config>
+</resources>

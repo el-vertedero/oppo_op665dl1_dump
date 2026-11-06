@@ -1,0 +1,124 @@
+[
+  {
+    "inspirationTypeName": "templates_entry",
+    "templates": [
+      {
+        "clockInfo": "",
+        "wallpaper": "",
+        "aiImage": "",
+        "previewSimplified": "",
+        "previewTraditional": "",
+        "previewEng": "",
+        "inspirationThemeName": ""
+      }
+    ]
+  },
+  {
+    "inspirationTypeName": "color_os",
+    "templates": [
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"clockStyle\\\":0,\\\"extraMessageType\\\":1,\\\"primaryColor\\\":0,\\\"coloringType\\\":1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,1.0],\\\"timeFamilyName\\\":\\\"fonts/tunable/OPPOSans4.0.ttf\\\",\\\"timeFontWeight\\\":730,\\\"timeFontWeightRate\\\":67,\\\"portTimeFontHeight\\\":660,\\\"landTimeFontHeight\\\":500,\\\"darkWallpaperColor\\\":-12371632,\\\"lightWallpaperColor\\\":-1188101,\\\"versionCode\\\":0,\\\"showColon\\\":true}\",\"pkg\":\"com.oplus.keyguard.clock.digital\"}",
+        "wallpaper": "common/wallpaper_group/00_ColorOS15/ColorOS1507_dark_purple.webp",
+        "playableMediaType": 8,
+        "aiImage": "color_os/color_os_wallpaper_ai.webp",
+        "previewSimplified": "color_os/color_os_preview_7.webp",
+        "previewTraditional": "color_os/color_os_preview_traditional_7.webp",
+        "previewEng": "color_os/color_os_preview_eng_7.webp",
+        "previewSimplifiedScaleLarge": "color_os/color_os_preview_7_n.webp",
+        "previewTraditionalScaleLarge": "color_os/color_os_preview_traditional_7_n.webp",
+        "previewEngScaleLarge": "color_os/color_os_preview_eng_7_n.webp",
+        "inspirationThemeName": "big_clock",
+        "colorType": 0
+      },
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"clockStyle\\\":0,\\\"extraMessageType\\\":1,\\\"primaryColor\\\":0,\\\"coloringType\\\":1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,1.0],\\\"timeFamilyName\\\":\\\"fonts/tunable/OPPOSans4.0.ttf\\\",\\\"timeFontWeight\\\":730,\\\"timeFontWeightRate\\\":67,\\\"portTimeFontHeight\\\":660,\\\"landTimeFontHeight\\\":500,\\\"darkWallpaperColor\\\":-12371632,\\\"lightWallpaperColor\\\":-1188101,\\\"versionCode\\\":0,\\\"showColon\\\":true}\",\"pkg\":\"com.oplus.keyguard.clock.digital\"}",
+        "wallpaper": "common/wallpaper_group/00_ColorOS15/ColorOS1508_dark_green.webp",
+        "playableMediaType": 8,
+        "aiImage": "color_os/color_os_wallpaper_ai.webp",
+        "previewSimplified": "color_os/color_os_preview_8.webp",
+        "previewTraditional": "color_os/color_os_preview_traditional_8.webp",
+        "previewEng": "color_os/color_os_preview_eng_8.webp",
+        "previewSimplifiedScaleLarge": "color_os/color_os_preview_8_n.webp",
+        "previewTraditionalScaleLarge": "color_os/color_os_preview_traditional_8_n.webp",
+        "previewEngScaleLarge": "color_os/color_os_preview_eng_8_n.webp",
+        "inspirationThemeName": "big_clock",
+        "colorType": 2
+      },
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"clockStyle\\\":0,\\\"extraMessageType\\\":1,\\\"primaryColor\\\":0,\\\"coloringType\\\":1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,1.0],\\\"timeFamilyName\\\":\\\"fonts/tunable/OPPOSans4.0.ttf\\\",\\\"timeFontWeight\\\":730,\\\"timeFontWeightRate\\\":67,\\\"portTimeFontHeight\\\":660,\\\"landTimeFontHeight\\\":500,\\\"darkWallpaperColor\\\":-12371632,\\\"lightWallpaperColor\\\":-1188101,\\\"versionCode\\\":0,\\\"showColon\\\":true}\",\"pkg\":\"com.oplus.keyguard.clock.digital\"}",
+        "wallpaper": "common/wallpaper_group/00_ColorOS15/ColorOS1509_dark_pink.webp",
+        "playableMediaType": 8,
+        "aiImage": "color_os/color_os_wallpaper_ai.webp",
+        "previewSimplified": "color_os/color_os_preview_9.webp",
+        "previewTraditional": "color_os/color_os_preview_traditional_9.webp",
+        "previewEng": "color_os/color_os_preview_eng_9.webp",
+        "previewSimplifiedScaleLarge": "color_os/color_os_preview_9_n.webp",
+        "previewTraditionalScaleLarge": "color_os/color_os_preview_traditional_9_n.webp",
+        "previewEngScaleLarge": "color_os/color_os_preview_eng_9_n.webp",
+        "inspirationThemeName": "big_clock",
+        "colorType": 4
+      }
+    ]
+  },
+  {
+    "inspirationTypeName": "present",
+    "templates": [
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"materialResColoringType\\\":1,\\\"materialResIndex\\\":16,\\\"materialResTintColor\\\":-1,\\\"materialResTintColorDepthHSL\\\":[0.0,0.0,0.0],\\\"clockStyle\\\":0,\\\"timeFamilyName\\\":\\\"NuovoRomaSerif.ttf\\\",\\\"timeFontWeight\\\":700,\\\"coloringType\\\":1,\\\"primaryColor\\\":-1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,0.0],\\\"extraMessageType\\\":1,\\\"versionCode\\\":1}\",\"pkg\":\"com.oplus.keyguard.clock.magazine\"}",
+        "wallpaper": "common/wallpaper_group/11_Present/Present01.webp",
+        "aiImage": "present/present_wallpaper_ai_1.webp",
+        "difference": "{\"textType\":0,\"textContent\":\"Follow\nthe\nwind\",\"textTypeface\": \"Hanyi_Goose_Head_Song.ttf\",\"textSize\":80,\"textAlignment\": \"CENTER\",\"textOrientation \":0}",
+        "previewSimplified": "present/present_preview_1.webp",
+        "previewTraditional": "present/present_preview_traditional_1.webp",
+        "previewEng": "present/present_preview_eng_1.webp",
+        "previewSimplifiedScaleLarge": "present/present_preview_1_1.1.webp",
+        "previewTraditionalScaleLarge": "present/present_preview_traditional_1_1.1.webp",
+        "previewEngScaleLarge": "present/present_preview_eng_1_1.1.webp",
+        "inspirationThemeName": "fashion"
+      },
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"materialResColoringType\\\":1,\\\"materialResIndex\\\":16,\\\"materialResTintColor\\\":-1,\\\"materialResTintColorDepthHSL\\\":[0.0,0.0,0.0],\\\"clockStyle\\\":2,\\\"timeFamilyName\\\":\\\"OPPOGaladaRegularExport.ttf\\\",\\\"timeFontWeight\\\":700,\\\"coloringType\\\":1,\\\"primaryColor\\\":-1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,0.0],\\\"extraMessageType\\\":1,\\\"versionCode\\\":1}\",\"pkg\":\"com.oplus.keyguard.clock.magazine\"}",
+        "wallpaper": "common/wallpaper_group/11_Present/Present02.webp",
+        "aiImage": "present/present_wallpaper_ai_2.webp",
+        "difference": "{\"textType\":0,\"textContent\":\"Reach\nBeyond\",\"textTypeface\": \"Galada-Regular.ttf\",\"textSize\":80,\"textAlignment\": \"LEFT\",\"textOrientation \":0}",
+        "previewSimplified": "present/present_preview_2.webp",
+        "previewTraditional": "present/present_preview_traditional_2.webp",
+        "previewEng": "present/present_preview_eng_2.webp",
+        "previewSimplifiedScaleLarge": "present/present_preview_2_1.1.webp",
+        "previewTraditionalScaleLarge": "present/present_preview_traditional_2_1.1.webp",
+        "previewEngScaleLarge": "present/present_preview_eng_2_1.1.webp",
+        "inspirationThemeName": "fashion"
+      },
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"clockStyle\\\":2,\\\"timeFamilyName\\\":\\\"OPPOShenqiRegularExport.ttf\\\",\\\"timeFontWeight\\\":700,\\\"coloringType\\\":1,\\\"primaryColor\\\":-1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,0.0],\\\"extraMessageType\\\":1,\\\"materialResColoringType\\\":1,\\\"materialResIndex\\\":16,\\\"materialResTintColor\\\":-1,\\\"materialResTintColorDepthHSL\\\":[0.0,0.0,0.0],\\\"versionCode\\\":1}\",\"pkg\":\"com.oplus.keyguard.clock.magazine\"}",
+        "wallpaper": "common/wallpaper_group/11_Present/Present03.webp",
+        "aiImage": "present/present_wallpaper_ai_3.webp",
+        "difference": "{\"textType\":0,\"textContent\":\"SUNNY\nPAW\",\"textTypeface\": \"Banana_Wide_Brush_Inspiration.ttf\",\"textSize\":110,\"textAlignment\": \"CENTER\",\"textOrientation \":0}",
+        "previewSimplified": "present/present_preview_3.webp",
+        "previewTraditional": "present/present_preview_traditional_3.webp",
+        "previewEng": "present/present_preview_eng_3.webp",
+        "previewSimplifiedScaleLarge": "present/present_preview_3_1.1.webp",
+        "previewTraditionalScaleLarge": "present/present_preview_traditional_3_1.1.webp",
+        "previewEngScaleLarge": "present/present_preview_eng_3_1.1.webp",
+        "inspirationThemeName": "fashion"
+      }
+    ]
+  },
+  {
+    "inspirationTypeName": "with_the_light",
+    "templates": [
+      {
+        "clockInfo": "{\"clockStyleConfig\":\"{\\\"clockStyle\\\":7,\\\"extraMessageType\\\":1,\\\"primaryColor\\\":0,\\\"coloringType\\\":1,\\\"primaryColorDepthHSL\\\":[0.0,0.0,1.0],\\\"timeFamilyName\\\":\\\"fonts/tunable/OPPODigit00.ttf\\\",\\\"timeFontWeight\\\":703,\\\"timeFontWeightRate\\\":67,\\\"portTimeFontHeight\\\":550,\\\"landTimeFontHeight\\\":500,\\\"darkWallpaperColor\\\":-10277086,\\\"lightWallpaperColor\\\":-17493,\\\"versionCode\\\":0,\\\"showColon\\\":false}\",\"pkg\":\"com.oplus.keyguard.clock.digital\"}",
+        "wallpaper": "common/wallpaper_group/12_WithTheLight/WithTheLight01.webp",
+        "aiImage": "with_the_light/with_the_light_wallpaper_ai_1.webp",
+        "previewSimplified": "with_the_light/with_the_light_preview_1.webp",
+        "previewTraditional": "with_the_light/with_the_light_preview_traditional_1.webp",
+        "previewEng": "with_the_light/with_the_light_preview_eng_1.webp",
+        "previewSimplifiedScaleLarge": "with_the_light/with_the_light_preview_1_1.1.webp",
+        "previewTraditionalScaleLarge": "with_the_light/with_the_light_preview_traditional_1_1.1.webp",
+        "previewEngScaleLarge": "with_the_light/with_the_light_preview_eng_1_1.1.webp",
+        "inspirationThemeName": "big_clock"
+      }
+    ]
+  }
+]

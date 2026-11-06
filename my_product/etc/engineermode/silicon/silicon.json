@@ -1,0 +1,108 @@
+{
+  "segments": [
+    {
+      "discharge_loads": [
+        {
+          "current": {
+            "current": 500,
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": true
+          }
+        }
+      ],
+      "end": 5,
+      "delay": 0,
+      "name": "放电段1",
+      "need_confirm_delay": false,
+      "start": 30
+    },
+    {
+      "discharge_loads": [
+        {
+          "hbm": {
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": true
+          }
+        },
+        {
+          "pa": {
+            "bands": {
+              "band_name": "NR78",
+              "check_state": true,
+              "ChannelTypeH": false,
+              "ChannelTypeL": false,
+              "ChannelTypeM": false,
+              "selected_ant": [
+                {
+                  "ant_id": "ant10",
+                  "check_state": true
+                }
+              ]
+            },
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": true
+          }
+        },
+        {
+          "music": {
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": true
+          }
+        },
+        {
+          "vibrate": {
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": false
+          }
+        },
+        {
+          "camera": {
+            "cycle_times": 0,
+            "photo_interval": 3,
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": true
+          }
+        },
+        {
+          "downloader": {
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": false
+          }
+        },
+        {
+          "slide_boost": {
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": false
+          }
+        },
+        {
+          "app_startup": {
+            "launch_app_interval": 1,
+            "packages": [
+              "com.coloros.gallery3d",
+              "com.oplus.camera",
+              "com.heytap.music"
+            ],
+            "cycle": 3,
+            "cycle_interval": 5,
+            "enable": false
+          }
+        }
+      ],
+      "end": 0,
+      "delay": 30,
+      "name": "放电段2",
+      "need_confirm_delay": false,
+      "start": 5
+    }
+  ],
+  "rounds": 10
+}

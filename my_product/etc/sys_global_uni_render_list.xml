@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-conf>
+    <version>20260706</version>
+    <filter-name>sys_global_uni_render_list</filter-name>
+    <func_switch value="1"/>
+    <support_anim_level value="1|2|3|4"/>
+    <support_device_type value="1"/>
+	<Application enable="1" packageName="com.android.launcher"/>
+</filter-conf>

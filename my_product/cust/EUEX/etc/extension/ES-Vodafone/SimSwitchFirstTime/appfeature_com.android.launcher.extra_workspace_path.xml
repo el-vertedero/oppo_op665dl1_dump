@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extend_features>
+    <app_feature name="com.android.launcher.extra_workspace_path" args="String:/my_product/cust/EUEX/etc/launcher/Vodafone/extra_workspace.xml">
+    </app_feature>
+    <app_feature name="com.android.launcher.disable_load_extra_workspace_after_enter_launcher">
+    </app_feature>
+</extend_features>

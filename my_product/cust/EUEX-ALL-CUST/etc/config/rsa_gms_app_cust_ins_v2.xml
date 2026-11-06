@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app version="1.0">
+  <del_disable pkg="com.instagram.android" priority="9" name="InstagramStub.apk"/>
+</app>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-conf>
+    <version>2026072901</version>
+    <filter-name>sys_custom_memory_nirvana_config</filter-name>
+
+    <config name="strategyConfig" type="subconfig">
+        <config name="HIGH_FREE" type="bundle">
+            <item name="ExpectedBgCountMap" type="string" value="6-8|8-12|12-12|16-30|24-42"/>
+            <item name="CamExpectedBgCount" type="string" value="6-8|8-12|12-12|16-25|24-37"/>
+        </config>
+    </config>
+
+</filter-conf>

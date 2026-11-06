@@ -1,0 +1,17 @@
+{
+  "comment": "alipay_support",
+  "version": 20260625,
+  "public": [
+    {
+      "ifaaModel": "OPPO-R26015",
+      "oppoModel": [
+	   "PMX110",
+	   "CPH2913"
+      ],
+      "bioType": [
+        "ultrasonic_fingerprint"
+      ],
+      "ifaaVersion": "4"
+    }
+  ]
+}

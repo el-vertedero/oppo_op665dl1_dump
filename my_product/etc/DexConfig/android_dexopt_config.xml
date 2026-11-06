@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20260904</version>
+    <filter-name>android_dexopt_config</filter-name>
+    <sences name="aot-crash"           on="true"/>
+
+    <sences name="abort"  on="true"/>
+    <abort  name="start-app"  temp="38" loading="80"/>
+    <abort  name="second-dex" temp="38" loading="90"/>
+
+    <vdex-layout enabled="true">
+        <packages>
+            <package>com.ss.android.ugc.aweme</package>
+            <package>com.smile.gifmaker</package>
+            <package>com.xingin.xhs</package>
+            <package>com.phoenix.read</package>
+            <package>com.tencent.mm</package>
+            <package>com.eg.android.AlipayGphone</package>
+            <package>com.taobao.taobao</package>
+            <package>com.jingdong.app.mall</package>
+            <package>com.sankuai.meituan</package>
+            <package>com.xunmeng.pinduoduo</package>
+        </packages>
+    </vdex-layout>
+
+    <disable-plugin-verify on="true">
+        <package name="com.tencent.mm">
+            <plugin path-pattern="/data/user/.*/com.tencent.mm/tinker/.*apk" on="true"/>
+        </package>
+    </disable-plugin-verify>
+
+</filter-conf>

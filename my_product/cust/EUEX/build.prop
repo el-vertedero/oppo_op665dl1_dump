@@ -1,0 +1,17 @@
+ro.oplus.browser.clientid=ms-android-oppo-a1-terr2-cbo3
+ro.oplus.internet.whether.force.connect=1
+ro.oplus.internet.whether.force.connect=1
+ro.setupwizard.require_network=any
+ro.oplus.radio.global_regionlock.info=EU
+ro.oplus.radio.global_regionlock.log=true
+ro.oplus.radio.global_regionlock.enabled=true
+ro.oplus.radio.global_regionlock.cert=1661243390038,EU
+ro.oplus.radio.global_regionlockupgrade=true
+ro.oplus.radio.global_regionlockflag=3
+persist.sys.oplus.bt.chre_ble_scan=true
+ro.com.google.clientidbase.ms=android-oppo-a1-terr2-rao3
+ro.com.google.clientidbase.ms.a2=android-oppo-a2-terr2-rao3
+ro.com.google.clientidbase.rs.a2=android-oppo-a2-terr2-uxo3
+ro.com.google.clientidbase.rs.a3=android-oppo-a3-terr2-uxo3
+ro.com.google.clientidbase.cr=android-oppo-a1-terr2-rco3
+ro.vendor.oplus.version=eu

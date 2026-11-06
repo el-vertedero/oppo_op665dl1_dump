@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<extend_features>
+    <app_feature name="allow_content_suggestions_packages" args="StringList:packages">
+        <StringList name="packages" args="com.coloros.gallery3d=64:AA:FA:F1:D5:BC:91:55:A9:E4:17:A8:49:E4:F8:ED:A1:D0:D1:34:16:67:C2:8E:D7:C4:43:C7:6F:82:0B:9A"/>
+        <StringList name="packages" args="com.oplus.screenshot=C9:30:5E:E3:8A:28:E5:EE:0E:46:9B:7F:66:16:4A:F4:DC:68:0D:61:41:B8:F5:6A:09:0E:6D:E2:55:78:B6:51"/>
+    </app_feature>
+</extend_features>

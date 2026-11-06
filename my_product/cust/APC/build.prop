@@ -1,0 +1,8 @@
+ro.oplus.custom.uninstall.time=1735178908
+ro.oplus.radio.global_regionlockupgrade=true
+ro.oplus.radio.global_regionlock.info=AP
+ro.oplus.radio.global_regionlock.log=true
+ro.oplus.radio.global_regionlock.enabled=true
+ro.oplus.radio.global_regionlock.cert=1661243252453,SG
+ro.oplus.radio.global_regionlockflag=12
+persist.sys.oplus.bt.chre_ble_scan=true

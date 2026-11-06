@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- add for RUS turn on/off DBI and update DBI Model Parameters -->
+    <version>20260610</version>
+
+    <!-- DBI enable -->
+    <dbi_enable>1</dbi_enable>
+
+    <!-- Control whether to enable DBI counting whitelist -->
+    <app_list enable="0">
+    </app_list>
+
+    <!-- DBI cwb freq -->
+    <capture_interval>5</capture_interval>
+</root>

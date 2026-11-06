@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus.operator.browser.bookmarks" args="StringList:bookmarks">
+		<StringList name="bookmarks" args="Channel NewsAsia|http://www.channelnewsasia.com;Facebook|https://www.facebook.com;M1 Shop|https://www.m1.com.sg"/>
+	</app_feature>
+</extend_features>

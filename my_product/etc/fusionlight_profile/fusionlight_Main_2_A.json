@@ -1,0 +1,530 @@
+{
+  "CCTLowLuxLimit": 30,
+  "CCTHighLuxLimit": 31,
+  "CCTCoeffLIR_V2_1": [
+    {
+      "Level": 0,
+      "Component": 0,
+      "ChannelR": "0.02461771",
+      "ChannelG": "0.05453451",
+      "ChannelB": "0.01953112",
+      "ChannelC": "0.0254633"
+    },
+    {
+      "Level": 0,
+      "Component": 1,
+      "ChannelR": "0.00178593",
+      "ChannelG": "0.06409625",
+      "ChannelB": "0.03148317",
+      "ChannelC": "0.02880578"
+    },
+    {
+      "Level": 0,
+      "Component": 2,
+      "ChannelR": "-0.07218367",
+      "ChannelG": "-0.00597579",
+      "ChannelB": "0.28520104",
+      "ChannelC": "0.02679784"
+    },
+    {
+      "Level": 1,
+      "Component": 0,
+      "ChannelR": "0.02461771",
+      "ChannelG": "0.05453451",
+      "ChannelB": "0.01953112",
+      "ChannelC": "0.0254633"
+    },
+    {
+      "Level": 1,
+      "Component": 1,
+      "ChannelR": "0.00178593",
+      "ChannelG": "0.06409625",
+      "ChannelB": "0.03148317",
+      "ChannelC": "0.02880578"
+    },
+    {
+      "Level": 1,
+      "Component": 2,
+      "ChannelR": "-0.07218367",
+      "ChannelG": "-0.00597579",
+      "ChannelB": "0.28520104",
+      "ChannelC": "0.02679784"
+    },
+    {
+      "Level": 2,
+      "Component": 0,
+      "ChannelR": "0.02461771",
+      "ChannelG": "0.05453451",
+      "ChannelB": "0.01953112",
+      "ChannelC": "0.0254633"
+    },
+    {
+      "Level": 2,
+      "Component": 1,
+      "ChannelR": "0.00178593",
+      "ChannelG": "0.06409625",
+      "ChannelB": "0.03148317",
+      "ChannelC": "0.02880578"
+    },
+    {
+      "Level": 2,
+      "Component": 2,
+      "ChannelR": "-0.07218367",
+      "ChannelG": "-0.00597579",
+      "ChannelB": "0.28520104",
+      "ChannelC": "0.02679784"
+    }
+  ],
+  "CCTCoeffHIR_V2_1": [
+    {
+      "Level": 0,
+      "Component": 0,
+      "ChannelR": "0.02461771",
+      "ChannelG": "0.05453451",
+      "ChannelB": "0.01953112",
+      "ChannelC": "0.0254633"
+    },
+    {
+      "Level": 0,
+      "Component": 1,
+      "ChannelR": "0.00178593",
+      "ChannelG": "0.06409625",
+      "ChannelB": "0.03148317",
+      "ChannelC": "0.02880578"
+    },
+    {
+      "Level": 0,
+      "Component": 2,
+      "ChannelR": "-0.07218367",
+      "ChannelG": "-0.00597579",
+      "ChannelB": "0.28520104",
+      "ChannelC": "0.02679784"
+    },
+    {
+      "Level": 1,
+      "Component": 0,
+      "ChannelR": "0.02461771",
+      "ChannelG": "0.05453451",
+      "ChannelB": "0.01953112",
+      "ChannelC": "0.0254633"
+    },
+    {
+      "Level": 1,
+      "Component": 1,
+      "ChannelR": "0.00178593",
+      "ChannelG": "0.06409625",
+      "ChannelB": "0.03148317",
+      "ChannelC": "0.02880578"
+    },
+    {
+      "Level": 1,
+      "Component": 2,
+      "ChannelR": "-0.07218367",
+      "ChannelG": "-0.00597579",
+      "ChannelB": "0.28520104",
+      "ChannelC": "0.02679784"
+    },
+    {
+      "Level": 2,
+      "Component": 0,
+      "ChannelR": "0.02461771",
+      "ChannelG": "0.05453451",
+      "ChannelB": "0.01953112",
+      "ChannelC": "0.0254633"
+    },
+    {
+      "Level": 2,
+      "Component": 1,
+      "ChannelR": "0.00178593",
+      "ChannelG": "0.06409625",
+      "ChannelB": "0.03148317",
+      "ChannelC": "0.02880578"
+    },
+    {
+      "Level": 2,
+      "Component": 2,
+      "ChannelR": "-0.07218367",
+      "ChannelG": "-0.00597579",
+      "ChannelB": "0.28520104",
+      "ChannelC": "0.02679784"
+    }
+  ],
+  "CCTCoeffSuperHIR_V2_1": [
+    {
+      "Level": 0,
+      "Component": 0,
+      "ChannelR": "-0.02213699",
+      "ChannelG": "0.19120232",
+      "ChannelB": "-0.15419069",
+      "ChannelC": "0.00087881"
+    },
+    {
+      "Level": 0,
+      "Component": 1,
+      "ChannelR": "-0.02881551",
+      "ChannelG": "0.20146371",
+      "ChannelB": "-0.14849702",
+      "ChannelC": "-0.00156062"
+    },
+    {
+      "Level": 0,
+      "Component": 2,
+      "ChannelR": "-0.04626689",
+      "ChannelG": "0.08918543",
+      "ChannelB": "0.09957341",
+      "ChannelC": "-0.01721420"
+    },
+    {
+      "Level": 1,
+      "Component": 0,
+      "ChannelR": "-0.02213699",
+      "ChannelG": "0.19120232",
+      "ChannelB": "-0.15419069",
+      "ChannelC": "0.00087881"
+    },
+    {
+      "Level": 1,
+      "Component": 1,
+      "ChannelR": "-0.02881551",
+      "ChannelG": "0.20146371",
+      "ChannelB": "-0.14849702",
+      "ChannelC": "-0.00156062"
+    },
+    {
+      "Level": 1,
+      "Component": 2,
+      "ChannelR": "-0.04626689",
+      "ChannelG": "0.08918543",
+      "ChannelB": "0.09957341",
+      "ChannelC": "-0.01721420"
+    },
+    {
+      "Level": 2,
+      "Component": 0,
+      "ChannelR": "-0.02213699",
+      "ChannelG": "0.19120232",
+      "ChannelB": "-0.15419069",
+      "ChannelC": "0.00087881"
+    },
+    {
+      "Level": 2,
+      "Component": 1,
+      "ChannelR": "-0.02881551",
+      "ChannelG": "0.20146371",
+      "ChannelB": "-0.14849702",
+      "ChannelC": "-0.00156062"
+    },
+    {
+      "Level": 2,
+      "Component": 2,
+      "ChannelR": "-0.04626689",
+      "ChannelG": "0.08918543",
+      "ChannelB": "0.09957341",
+      "ChannelC": "-0.01721420"
+    }
+  ],
+  "CZeroThresholdSegment": 1,
+  "CZeroThreshold": [
+    {
+      "Level": 0,
+      "CZeroMin": 0
+    },
+    {
+      "Level": 1,
+      "CZeroMin": 180
+    }
+  ],
+  "LuxCoeffLirScreenOff": [
+    {
+      "Level": 0,
+      "ChannelR": "0.0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0.0",
+      "ChannelC": "0.0"
+    },
+    {
+      "Level": 1,
+      "ChannelR": "0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0",
+      "ChannelC": "0"
+    }
+  ],
+  "LuxCoeffHirScreenOff": [
+    {
+      "Level": 0,
+      "ChannelR": "0.0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0.0",
+      "ChannelC": "0.0"
+    },
+    {
+      "Level": 1,
+      "ChannelR": "0.00279675",
+      "ChannelG": "0.07298660",
+      "ChannelB": "0.00568807",
+      "ChannelC": "0.02835632"
+    }
+  ],
+  "LuxCoeffSuperHirScreenOff": [
+    {
+      "Level": 0,
+      "ChannelR": "0.0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0.0",
+      "ChannelC": "0.0"
+    },
+    {
+      "Level": 1,
+      "ChannelR": "-0.04235133",
+      "ChannelG": "0.22151596",
+      "ChannelB": "-0.16050162",
+      "ChannelC": "-0.00018375"
+    }
+  ],
+  "ChannelCountThresholdSegment": 0,
+  "ChannelCountThreshold": [
+    {
+      "Level": 0,
+      "RMax": -1,
+      "GMax": 200,
+      "BMax": -1,
+      "CMax": -1
+    }
+  ],
+  "LuxCoeffLirChCountPolicy": [
+    {
+      "Level": 0,
+      "ChannelR": "0.0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0.0",
+      "ChannelC": "0.0"
+    }
+  ],
+  "LuxCoeffHirChCountPolicy": [
+    {
+      "Level": 0,
+      "ChannelR": "0.0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0.0",
+      "ChannelC": "0.0"
+    }
+  ],
+  "LuxCoeffSuperHirChCountPolicy": [
+    {
+      "Level": 0,
+      "ChannelR": "0.0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0.0",
+      "ChannelC": "0.0"
+    }
+  ],
+  "LinearityBrightnessRange": [
+    {
+      "Level": 0,
+      "BrightnessMin": 0,
+      "BrightnessMax": 4095
+    },
+    {
+      "Level": 1,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 2,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 3,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 4,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 5,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 6,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 7,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    },
+    {
+      "Level": 8,
+      "BrightnessMin": 0,
+      "BrightnessMax": 0
+    }
+  ],
+  "IRThreshold_V2_1": [
+    {
+      "Level": 0,
+      "IR_Ratio_Min": -1.0,
+      "IR_Ratio_Max": 0.0
+    },
+    {
+      "Level": 1,
+      "IR_Ratio_Min": 0.0,
+      "IR_Ratio_Max": 0.4
+    },
+    {
+      "Level": 2,
+      "IR_Ratio_Min": 0.4,
+      "IR_Ratio_Max": 20.0
+    }
+  ],
+  "IRBrightness_V2_1": [
+    {
+      "Level": 0,
+      "BrightnessMin": 0,
+      "BrightnessMax": 800
+    },
+    {
+      "Level": 1,
+      "BrightnessMin": 800,
+      "BrightnessMax": 3515
+    },
+    {
+      "Level": 2,
+      "BrightnessMin": 3515,
+      "BrightnessMax": 4095
+    }
+  ],
+  "LuxCoeffLIR_V2_1": [
+    {
+      "Level": 0,
+      "ChannelR": "0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0",
+      "ChannelC": "0"
+    },
+    {
+      "Level": 1,
+      "ChannelR": "0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0",
+      "ChannelC": "0"
+    },
+    {
+      "Level": 2,
+      "ChannelR": "0",
+      "ChannelG": "0.114726413",
+      "ChannelB": "0",
+      "ChannelC": "0"
+    }
+  ],
+  "LuxCoeffHIR_V2_1": [
+    {
+      "Level": 0,
+      "ChannelR": "0.00279675",
+      "ChannelG": "0.07298660",
+      "ChannelB": "0.00568807",
+      "ChannelC": "0.02835632"
+    },
+    {
+      "Level": 1,
+      "ChannelR": "0.00279675",
+      "ChannelG": "0.07298660",
+      "ChannelB": "0.00568807",
+      "ChannelC": "0.02835632"
+    },
+    {
+      "Level": 2,
+      "ChannelR": "0.00279675",
+      "ChannelG": "0.07298660",
+      "ChannelB": "0.00568807",
+      "ChannelC": "0.02835632"
+    }
+  ],
+  "LuxCoeffSuperHIR_V2_1": [
+    {
+      "Level": 0,
+      "ChannelR": "-0.04235133",
+      "ChannelG": "0.22151596",
+      "ChannelB": "-0.16050162",
+      "ChannelC": "-0.00018375"
+    },
+    {
+      "Level": 1,
+      "ChannelR": "-0.04235133",
+      "ChannelG": "0.22151596",
+      "ChannelB": "-0.16050162",
+      "ChannelC": "-0.00018375"
+    },
+    {
+      "Level": 2,
+      "ChannelR": "-0.04235133",
+      "ChannelG": "0.22151596",
+      "ChannelB": "-0.16050162",
+      "ChannelC": "-0.00018375"
+    }
+  ],
+  "CommonConfig": {
+    "VersionCode": "2025090920",
+    "Project": "26205",
+    "Platform": "MT6995",
+    "LCDManufacture": {
+      "ManufactureId": 2,
+      "DisplayStage": 5,
+      "PanelResourceIndex": 0
+    },
+    "SensorModule": {
+      "SensorModuleId": 10
+    },
+    "ApolloBrightnessSupported": false,
+    "ApolloBrightnessMax": 8191,
+    "NormalModeBrightnessMax": 3515,
+    "BrightnessMax": 4095,
+    "CWBSupported": true,
+    "ScreenshotThreadSupported": false,
+    "ScreenShotRect": {
+      "LeftTopX": 732,
+      "LeftTopY": 100,
+      "RightBottomX": 770,
+      "RightBottomY": 137
+    },
+    "ScreenResolution": {
+      "Width": 1272,
+      "Height": 2772
+    },
+    "ScreenPanel": {
+      "ScreenPanelID": 0,
+      "ScreenPanelDescription": "Main"
+    },
+    "TriggerScreenShotDelay": 2000,
+    "ValidEventPeriod": 90,
+    "SamplePeriodMillis": 200,
+    "SmoothQueueSupported": false,
+    "LowLightAccuracy": 1.5,
+    "FusionRGBSupported": true,
+    "FixInvalidBLeakEnabled": false,
+    "RawLuxTriggerCompensateSupported": false,
+    "ScreenOffCalLuxSupported": true,
+    "ActiveScreenshotThresholdSupported": false,
+    "FODForceSFScreenShotSupported": false,
+    "FODLinearityParasSegmentSupported": false,
+    "FODCWBWithMaxBrightnessSupported": false,
+    "MaxBrightnessForFOD": 3515,
+    "ScreenshotMatchImproveSupported": false,
+    "ChannelCountPolicySupported": true,
+    "SupportCWBScreenshotWeighted": false,
+    "IRRatioFormulaType": 2,
+    "MedianFilteringSupported": true,
+    "LuxFilterNum": 7,
+    "LuxFilterIndex": -1,
+    "LuxDeltaMax": 100,
+    "CCTQuadraticAlgoSupported": false,
+    "SupportScreenshotAlgorithm_V2_1": true,
+    "BlackFrame30Support": true
+  }
+}

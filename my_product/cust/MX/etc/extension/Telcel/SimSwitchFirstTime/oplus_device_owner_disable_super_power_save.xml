@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus_device_owner_disable_super_power_save" args="StringList:packages">
+		<StringList name="packages" args="com.google.android.apps.devicelock"/>
+	</app_feature>
+</extend_features>
+<!-- Timestamp 2024-10-08T22:18:05 #237470 -->

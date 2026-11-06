@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <!-- Shared library required on the device to get Google Dialer updates from
+         Play Store. This will be deprecated once Google Dialer play store
+         updates stop supporting pre-O devices. -->
+    <library name="com.google.android.dialer.support"
+             file="/my_product/cust/MEA/apps_extension/MTN/SimSwitchFirstTime/framework/com.google.android.dialer.support.jar" />
+</permissions>

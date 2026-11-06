@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LegalInfos version="1.0">
+	<MODEL_CPH2913>
+		<CE r_new_style="true"  r_new_icon_style="true"/>
+		<MAS/>
+		<MEXICO mex_laboratory="ANCE" />
+		<KSA number="2026-000274" new_style="true" />
+		<IMG drawable="@drawable/regulatory_image_japan_jate_telec" region="JPN"/>
+		<IMG drawable="@drawable/regulatory_image_japan_mic_nfc" region="JPN1"/>
+	</MODEL_CPH2913>
+</LegalInfos>

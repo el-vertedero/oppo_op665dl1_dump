@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<settings_provider_config>
+    <settings_item name="oplus_customize_screen_resolution_adjust" value="1" category="secure"/>
+</settings_provider_config>

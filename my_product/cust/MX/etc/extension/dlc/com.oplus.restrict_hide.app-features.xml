@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="oplus.simsettings.restrict_hide" args="StringList:whitelist">
+        <StringList name="whitelist" args="com.trustonic.telecoms.standard.dlc"/>
+    </app_feature>
+	
+	<app_feature name="oplus.custom.safe_center_hide_app_list" args="StringList:whitelist">
+        <StringList name="whitelist" args="com.trustonic.telecoms.standard.dlc"/>
+    </app_feature>
+
+    <app_feature name="athena.kill.general.whitelist.carrier" args="StringList:apps">
+        <StringList name="apps" args="com.trustonic.telecoms.standard.dlc"/>
+    </app_feature>
+</extend_features>
