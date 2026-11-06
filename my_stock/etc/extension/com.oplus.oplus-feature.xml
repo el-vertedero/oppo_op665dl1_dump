@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oplus-config>
+	<oplus-feature name="oplus.software.vip_preload"/>
+	<oplus-feature name="oplus.software.parallel_preload"/>
+	<oplus-feature name="oplus.software.next_preload"/>
+	<oplus-feature name="oplus.software.sau_preload"/>
+	<oplus-feature name="oplus.software.resolver_share_email"/>
+	<oplus-feature name="oplus.software.uxicon_exp"/>
+	<oplus-feature name="oplus.software.pms_install_statistics_no_silent"/>
+	<oplus-feature name="oplus.software.pms_device_owner_uninstall_policy"/>
+	<oplus-feature name="oplus.software.support_fluid_entry"/>
+	<oplus-feature name="oplus.software.fluid_replace_ntf"/>
+	<unavailable-oplus-feature name="os.tool.midas"/>
+	<oplus-feature name="oplus.software.memory_nirvana.enable"/>
+	<oplus-feature name="oplus.software.flexible_freeform.support"/>
+	<oplus-feature name="oplus.software.pocketstudio.support"/>
+	<oplus-feature name="oplus.software.pms_oplus_otadexopt_disabled"/>
+	<oplus-feature name="oplus.software.screen_sharing_protection"/>
+	<oplus-feature name="oplus.software.gsa_gameload"/>
+	<oplus-feature name="oplus.software.highload_pause_hyb_swapd"/>
+	<oplus-feature name="oplus.software.osense.compress.enable"/>
+	<oplus-feature name="oplus.software.binder.thread_pool_expand"/>
+	<oplus-feature name="oplus.software.pms_support_shortcut_extras"/>
+	<oplus-feature name="oplus.software.quick_boot"/>
+	<oplus-feature name="oplus.software.adaptive_smooth_animation"/>
+	<oplus-feature name="oplus.software.psi_multi_window_clean"/>
+</oplus-config>
+<!-- Timestamp 2025-11-20T20:07:03 #1085989 -->

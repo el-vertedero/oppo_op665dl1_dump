@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-conf>
+    <version>20250601</version>
+	<phoneName>
+	    <verify_switch>true</verify_switch>
+	    <domain_url>https://euler-saas-cn.heytapmobi.com/audit-platform/innerapi/product/receive/text</domain_url>
+	    <app_key>com.android.settings</app_key>
+		<app_secret>CImNpjSbXn</app_secret>
+	</phoneName>
+</filter-conf>
+ 

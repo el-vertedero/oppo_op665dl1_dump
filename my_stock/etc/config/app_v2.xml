@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app version="1.0">
+  <disable pkg="com.android.contacts" priority="10"/>
+  <disable pkg="com.android.incallui" priority="10"/>
+  <disable pkg="com.android.mms" priority="10"/>
+  <del_disable pkg="com.coloros.musiclink" priority="10" name="MusicLink.apk"/>
+  <disable pkg="com.google.android.euicc" priority="10"/>
+  <enable pkg="com.google.android.euicc" priority="6"/>
+  <disable pkg="com.google.android.mosey" priority="10"/>
+  <del_disable pkg="com.heytap.wallet" priority="10" name="GlobalWallet.apk"/>
+  <disable pkg="com.mediatek.ims.rcsua.service" priority="10"/>
+  <disable pkg="com.mediatek.presence" priority="10"/>
+  <disable pkg="com.mediatek.rcs.provisioning" priority="10"/>
+  <disable pkg="com.oplus.acc.gac" priority="10"/>
+  <disable pkg="com.oplus.aiassistant" priority="10"/>
+  <disable pkg="com.oplus.aimemory" priority="10"/>
+  <disable pkg="com.oplus.aipaint" priority="10"/>
+  <disable pkg="com.oplus.aiwidgets" priority="10"/>
+  <disable pkg="com.oplus.beaconlink" priority="10" memory="4"/>
+  <disable pkg="com.oplus.beidouservice" priority="10"/>
+  <disable pkg="com.oplus.blacklistapp" priority="10"/>
+  <disable pkg="com.oplus.matrix" priority="10"/>
+  <disable pkg="com.oplus.nearcomm" priority="10"/>
+  <disable pkg="com.oplus.phonenoareainquire" priority="10"/>
+  <disable pkg="com.oplus.qualityprotect" priority="10"/>
+  <disable pkg="com.oplus.rsmcsatellite" priority="10"/>
+  <disable pkg="com.oplus.ttsatellite" priority="10"/>
+</app>

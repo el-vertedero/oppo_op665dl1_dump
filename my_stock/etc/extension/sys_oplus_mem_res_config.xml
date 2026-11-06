@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-conf>
+    <version>2026071701</version>
+	<filter-name>sys_oplus_mem_res_config</filter-name>
+	
+	<group name="screen_off_compact">
+        <scene name="default">
+            <!-- 是否使能灭屏碎片压缩 -->
+            <item key="enable">
+                <case><scalar type="bool">true</scalar></case>
+            </item>
+			<!-- 碎片化分数门限。仅当 order4_frag_score 严格大于 该值时才允许整理 -->
+			<item key="frag_score_threshold">
+                <case><scalar type="int">80</scalar></case>
+            </item>
+            <!-- 允许执行灭屏整理的温度上限 -->
+			<item key="temp_limit">
+                <case><scalar type="int">38001</scalar></case>
+            </item>
+            <!-- 每个自然日最多执行碎片整理的次数。 -->
+			<item key="daily_limit">
+                <case><scalar type="int">6</scalar></case>
+				<!--<case memGbMin="12" memGbMax="16"><scalar type="int">30</scalar></case>-->
+            </item>
+			<!-- 灭屏后延迟多久发起一次条件检查（毫秒） -->
+			<item key="delay_ms">
+                <case><scalar type="long">3001</scalar></case>
+            </item>
+            <!-- 两次成功触发整理之间的最小时间间隔（毫秒） -->
+			<item key="min_interval_ms">
+				<case><scalar type="long">3600000</scalar></case>
+            </item>
+        </scene>
+    </group>
+	
+	<group name="free_maint">
+		<scene name="default">
+            <!-- 对应内核节点 /sys/kernel/oplus_mm/erm/min_batch_kb -->
+			<item key="min_batch_kb">
+				<case><scalar type="long">1024</scalar></case>
+			</item>
+            <!-- free boost 暂停温度阈值。设备温度 高于 该值时关闭（写 0）；降至 ≤ 该值 时恢复（若无其它 pause 原因） -->
+			<item key="pause_temp">
+				<case><scalar type="int">45000</scalar></case>
+			</item>
+            <!-- free boost 暂停 CPU 负载阈值。负载 高于 该值时暂停；降至 ≤ 该值 时恢复 -->
+            <item key="pause_load">
+				<case><scalar type="int">100</scalar></case>
+			</item>
+            <!-- 是否在 游戏包存在可见窗口 时暂停 free boost -->
+            <item key="pause_game">
+				<case><scalar type="bool">true</scalar></case>
+			</item>
+            <!-- 是否在 相机/bigapp 存在可见窗口 时暂停 free boost -->
+            <item key="pause_camera">
+				<case><scalar type="bool">true</scalar></case>
+			</item>
+        </scene>
+	</group>
+
+	<group name="power_control">
+		<scene name="default">
+            <!-- 按 线程 comm 名 配置 uclamp.max，-1 表示按上两项动态计算；0~1024 为固定 util -->
+			<item key="thread_uclamp_max">
+				<case>
+					<map>
+						<entry key="osense.compress" type="int">180</entry>
+                        <entry key="erm_reclaimd" type="int">256</entry>
+					</map>
+				</case>
+			</item>
+            <!-- 动态 uclamp.max 计算的比例分子。与分母、CPU cluster capacity 共同决定 -1 配置项的实际 util -->
+			<item key="thread_uclamp_dynamic_numerator">
+				<case><scalar type="int">4</scalar></case>
+			</item>
+            <!-- 动态 uclamp.max 计算的比例分母。 -->
+			<item key="thread_uclamp_dynamic_denominator">
+				<case><scalar type="int">6</scalar></case>
+			</item>
+            <!-- 是否启用 ThreadEnergyMonitor，对 MM 相关线程做能耗采样（供 DCS/压测等使用） -->
+			<item key="monitor_mm_energy">
+				<case><scalar type="bool">true</scalar></case>
+			</item>
+		</scene>
+	</group>
+		
+	<group name="critical_mem">
+		<scene name="default">
+            <!-- 是否使能检测极低内存和积极压缩场景 -->
+			<item key="switch">
+				<case><scalar type="bool">true</scalar></case>
+			</item>
+            <!--  -->
+			<item key="pollingInv">
+				<case><scalar type="long">60000</scalar></case>
+			</item>
+            <!--  -->
+			<item key="cMemThdStr">
+				<case><scalar type="string">2|600-3|600-4|600-6|800-8|1200-12|1600-16|2000-24|2800</scalar></case>
+			</item>
+            <!--  -->
+			<item key="cMemBgCntThdStr">
+				<case><scalar type="string">2|2-3|2-4|2-6|2-8|3-12|4-16|5-24|6</scalar></case>
+			</item>
+            <!--  -->
+			<item key="activeSwapMemThdStr">
+				<case><scalar type="string">2|600-3|600-4|800-6|1200-8|1600-12|2000-16|2400-24|2800</scalar></case>
+			</item>
+            <!--  -->
+			<item key="activeSwapBgCntThdStr">
+				<case><scalar type="string">2|2-3|2-4|2-6|2-8|5-12|6-16|7-24|8</scalar></case>
+			</item>
+		</scene>
+	</group>
+</filter-conf>

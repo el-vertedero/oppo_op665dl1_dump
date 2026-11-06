@@ -1,0 +1,677 @@
+<filter-conf>   
+<version>2025070416</version>
+    <isOpen>1</isOpen>    
+	<filter-name>morph_icons_whitelist<morph>1</morph></filter-name>
+	<package_name>com.nearme.gamecenter<morph>1</morph></package_name>
+	<package_name>com.coloros.gallery3d<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.heytap.market<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.android.settings<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.android.contacts<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.android.mms<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.heytap.browser<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oplus.camera<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oneplus.bbs<morph>1</morph></package_name>
+	<package_name>com.heytap.reader<shortcut>1</shortcut><morph>1</morph></package_name>
+	<package_name>com.finshell.wallet<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.heytap.themestore<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.heytap.yoli<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.coloros.digitalwellbeing<morph>1</morph></package_name>
+	<package_name>com.coloros.weather2<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.coloros.note<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.oplus.tips<morph>1</morph></package_name>
+	<package_name>com.heytap.music<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.heytap.health<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>andes.oplus.documentsreader<morph>1</morph></package_name>
+	<package_name>com.oplus.play<morph>1</morph></package_name>
+	<package_name>com.coloros.filemanager<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.coloros.translate<morph>1</morph></package_name>
+	<package_name>com.coloros.soundrecorder<morph>1</morph></package_name>
+	<package_name>com.coloros.compass2<morph>1</morph></package_name>
+	<package_name>com.oplus.consumerIRApp<morph>1</morph></package_name>
+	<package_name>com.android.email<morph>1</morph></package_name>
+	<package_name>com.coloros.calculator<morph>1</morph></package_name>
+	<package_name>com.coloros.shortcuts<morph>1</morph></package_name>
+	<package_name>com.coloros.familyguard<morph>1</morph></package_name>
+	<package_name>com.oneplus.brickmod<morph>1</morph></package_name>
+	<package_name>com.coloros.backuprestore<morph>1</morph></package_name>
+	<package_name>com.redteamobile.roaming<morph>1</morph></package_name>
+	<package_name>com.ss.android.ugc.aweme<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.xunmeng.pinduoduo<morph>1</morph></package_name>
+	<package_name>com.eg.android.AlipayGphone<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.smile.gifmaker<morph>1</morph></package_name>
+	<package_name>com.baidu.searchbox<morph>1</morph></package_name>
+	<package_name>com.taobao.taobao<morph>1</morph></package_name>
+	<package_name>com.kuaishou.nebula<morph>1</morph></package_name>
+	<package_name>com.autonavi.minimap<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.tencent.mobileqq<morph>1</morph></package_name>
+	<package_name>com.ss.android.ugc.aweme.lite<morph>1</morph></package_name>
+	<package_name>com.jingdong.app.mall<morph>1</morph></package_name>
+	<package_name>com.sankuai.meituan<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oplus.games<morph>1</morph></package_name>
+	<package_name>com.xingin.xhs<morph>1</morph></package_name>
+	<package_name>com.dragon.read<morph>1</morph></package_name>
+	<package_name>com.tencent.mtt<morph>1</morph></package_name>
+	<package_name>com.kugou.android<morph>1</morph></package_name>
+	<package_name>com.phoenix.read<morph>1</morph></package_name>
+	<package_name>com.baidu.BaiduMap<morph>1</morph></package_name>
+	<package_name>com.tmri.app.main<morph>1</morph></package_name>
+	<package_name>com.ss.android.article.news<morph>1</morph></package_name>
+	<package_name>com.android.bankabc<morph>1</morph></package_name>
+	<package_name>com.tencent.qqlive<morph>1</morph></package_name>
+	<package_name>com.greenpoint.android.mc10086.activity<morph>1</morph></package_name>
+	<package_name>com.qiyi.video<morph>1</morph></package_name>
+	<package_name>com.snda.wifilocating<morph>1</morph></package_name>
+	<package_name>tv.danmaku.bili<morph>1</morph></package_name>
+	<package_name>com.ss.android.article.video<morph>1</morph></package_name>
+	<package_name>com.taobao.idlefish<morph>1</morph></package_name>
+	<package_name>com.tencent.mm<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.quark.browser<morph>1</morph></package_name>
+	<package_name>com.shizhuang.duapp<morph>1</morph></package_name>
+	<package_name>com.UCMobile<morph>1</morph></package_name>
+	<package_name>com.ss.android.ugc.live<morph>1</morph></package_name>
+	<package_name>com.lemon.lv<morph>1</morph></package_name>
+	<package_name>com.sina.weibo<morph>1</morph></package_name>
+	<package_name>com.tencent.qqmusic<morph>1</morph></package_name>
+	<package_name>com.oplus.safecenter<morph>1</morph></package_name>
+	<package_name>com.coloros.alarmclock<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.coloros.calendar<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.teamtalk.im<morph>1</morph></package_name>
+	<package_name>com.alibaba.wireless<morph>1</morph></package_name>
+	<package_name>com.cat.readall<morph>1</morph></package_name>
+	<package_name>com.chinamworld.main<morph>1</morph></package_name>
+	<package_name>com.kmxs.reader<morph>1</morph></package_name>
+	<package_name>com.tencent.news<morph>1</morph></package_name>
+	<package_name>com.xs.fm<morph>1</morph></package_name>
+	<package_name>com.oppo.store<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.nearme.gamercenter<shortcut>1</shortcut></package_name>
+	<package_name>com.oppo.community<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.android.incallui<morph>1</morph></package_name>
+<package_name>com.oplus.tips<morph>1</morph></package_name>
+<package_name>com.oneplus.brickmod<morph>1</morph></package_name>
+<package_name>com.oplus.consumerIRApp<morph>1</morph></package_name>
+<package_name>com.android.phone<morph>1</morph></package_name>
+<package_name>com.heytap.speechassist<morph>1</morph></package_name>
+<package_name>com.oplus.aimemory<morph>1</morph></package_name>
+<package_name>com.oplus.ai.magicstudio<morph>1</morph></package_name>
+<package_name>com.android.email<morph>1</morph></package_name>
+<package_name>com.coloros.backuprestore<morph>1</morph></package_name>
+<package_name>com.coloros.soundrecorder<morph>1</morph></package_name>
+<package_name>com.coloros.compass2<morph>1</morph></package_name>
+<package_name>andes.oplus.documentsreader<morph>1</morph></package_name>
+<package_name>com.coloros.calendar<morph>1</morph></package_name>
+<package_name>com.coloros.alarmclock<morph>1</morph></package_name>
+<package_name>com.coloros.translate<morph>1</morph></package_name>
+<package_name>com.coloros.calculator<morph>1</morph></package_name>
+<package_name>om.caf.fmradio<morph>1</morph></package_name>
+<package_name>com.coloros.phonemanager<morph>1</morph></package_name>
+<package_name>com.coloros.onekeylockscreen<morph>1</morph></package_name>
+<package_name>com.heytap.cloud<morph>1</morph></package_name>
+<package_name>com.redteamobile.roaming<morph>1</morph></package_name>
+<package_name>com.oplus.vip<morph>1</morph></package_name>
+<package_name><morph>1</morph></package_name>
+<package_name>com.oplus.games<morph>1</morph></package_name>
+<package_name>com.coloros.musiclink<morph>1</morph></package_name>
+<package_name>com.oneplus.bbs<morph>1</morph></package_name>
+<package_name>com.oneplus.store<morph>1</morph></package_name>
+<package_name>com.google.android.googlequicksearchbox<morph>1</morph></package_name>
+<package_name>com.android.chrome<morph>1</morph></package_name>
+<package_name>com.google.android.apps.docs<morph>1</morph></package_name>
+<package_name>com.google.android.apps.bard<morph>1</morph></package_name>
+<package_name>com.google.android.gm<morph>1</morph></package_name>
+<package_name>com.google.android.apps.adm<morph>1</morph></package_name>
+<package_name>com.google.android.apps.chromecast.app<morph>1</morph></package_name>
+<package_name>com.google.android.apps.subscriptions.red<morph>1</morph></package_name>
+<package_name>com.google.android.videos<morph>1</morph></package_name>
+<package_name>com.google.android.apps.maps<morph>1</morph></package_name>
+<package_name>com.google.android.apps.tachyon<morph>1</morph></package_name>
+<package_name>com.google.android.apps.photos<morph>1</morph></package_name>
+<package_name>com.android.vending<morph>1</morph></package_name>
+<package_name>com.google.android.apps.nbu.files<morph>1</morph></package_name>
+<package_name>com.google.android.youtube<morph>1</morph></package_name>
+<package_name>com.google.android.apps.youtube.music<morph>1</morph></package_name>
+<package_name>com.google.android.apps.messaging<morph>1</morph></package_name>
+<package_name>com.google.android.apps.nbu.paisa.user<morph>1</morph></package_name>
+<package_name>com.google.android.apps.podcasts<morph>1</morph></package_name>
+<package_name>com.google.android.keep<morph>1</morph></package_name>
+<package_name>com.google.android.apps.magazines<morph>1</morph></package_name>
+<package_name>com.google.android.calendar<morph>1</morph></package_name>
+<package_name>com.fitbit.FitbitMobile<morph>1</morph></package_name>
+<package_name>com.google.android.apps.translate<morph>1</morph></package_name>
+<package_name>com.amazon.mp3<morph>1</morph></package_name>
+<package_name>com.amazon.avod.thirdpartyclient<morph>1</morph></package_name>
+<package_name>com.spotify.music<morph>1</morph></package_name>
+<package_name>com.netflix.mediaclient<morph>1</morph></package_name>
+<package_name>com.qiyi.video<morph>1</morph></package_name>
+<package_name>com.zing.mp3<morph>1</morph></package_name>
+<package_name>com.zhiliaoapp.musically<morph>1</morph></package_name>
+<package_name>com.snapchat.android<morph>1</morph></package_name>
+<package_name>com.kwai.video<morph>1</morph></package_name>
+<package_name>com.newleaf.app.android.victor<morph>1</morph></package_name>
+<package_name>live.shorttv.apps<morph>1</morph></package_name>
+<package_name>com.bilibili.app.in<morph>1</morph></package_name>
+<package_name>com.facebook.katana<morph>1</morph></package_name>
+<package_name>com.instagram.android<morph>1</morph></package_name>
+<package_name>com.linkedin.android<morph>1</morph></package_name>
+<package_name>com.zing.zalo<morph>1</morph></package_name>
+<package_name>com.amazon.mShop.android.shopping<morph>1</morph></package_name>
+<package_name>com.myntra.android<morph>1</morph></package_name>
+<package_name>com.lazada.android<morph>1</morph></package_name>
+<package_name>com.shopee.id<morph>1</morph></package_name>
+<package_name>com.einnovation.temu<morph>1</morph></package_name>
+<package_name>com.alibaba.aliexpresshd<morph>1</morph></package_name>
+<package_name>com.miravia.android<morph>1</morph></package_name>
+<package_name>com.qpon.platform<morph>1</morph></package_name>
+<package_name>cn.wps.moffice_eng<morph>1</morph></package_name>
+<package_name>com.microsoft.office.officehubrow<morph>1</morph></package_name>
+<package_name>com.truecaller<morph>1</morph></package_name>
+<package_name>app.source.getcontact<morph>1</morph></package_name>
+<package_name>ae.uaepass.mainapp<morph>1</morph></package_name>
+<package_name>com.agoda.mobile.consumer<morph>1</morph></package_name>
+<package_name>com.booking<morph>1</morph></package_name>
+<package_name>ctrip.english<morph>1</morph></package_name>
+<package_name>com.epi<morph>1</morph></package_name>
+<package_name>com.xb.topnews<morph>1</morph></package_name>
+<package_name>com.phonepe.app<morph>1</morph></package_name>
+<package_name>com.finshell.fin<morph>1</morph></package_name>
+<package_name>com.block.juggle<morph>1</morph></package_name>
+<package_name>com.games.yikegames<morph>1</morph></package_name>
+<package_name>com.fullmetalgamedev.aquablockspuzzleseas<morph>1</morph></package_name>
+<package_name>com.bitmango.go.bubblepop<morph>1</morph></package_name>
+<package_name>com.katanlabs.matchballgame<morph>1</morph></package_name>
+<package_name>com.fullmetalgamedev.fruitshooting<morph>1</morph></package_name>
+<package_name>com.instagram.lite<morph>1</morph></package_name>
+<package_name>com.instagram.barcelona<morph>1</morph></package_name>
+<package_name>com.facebook.lite<morph>1</morph></package_name>
+<package_name>com.facebook.orca<morph>1</morph></package_name>
+<package_name>com.whatsapp<morph>1</morph></package_name>
+<package_name>com.whatsapp.w4b<morph>1</morph></package_name>
+<package_name>org.telegram.messenger<morph>1</morph></package_name>
+<package_name>org.thunderdog.challegram<morph>1</morph></package_name>
+<package_name>com.twitter.android<morph>1</morph></package_name>
+<package_name>com.ubercab<morph>1</morph></package_name>
+<package_name>jp.naver.line.android<morph>1</morph></package_name>
+<package_name>com.discord<morph>1</morph></package_name>
+<package_name>us.zoom.videomeetings<morph>1</morph></package_name>
+<package_name>com.zhiliaoapp.musically.go<morph>1</morph></package_name>
+<package_name>com.reddit.frontpage<morph>1</morph></package_name>
+<package_name>com.pinterest<morph>1</morph></package_name>
+<package_name>tv.twitch.android.app<morph>1</morph></package_name>
+<package_name>com.duolingo<morph>1</morph></package_name>
+<package_name>com.grabtaxi.passenger<morph>1</morph></package_name>
+<package_name>com.mojang.minecraftpe<morph>1</morph></package_name>
+<package_name>com.roblox.client<morph>1</morph></package_name>
+<package_name>com.microsoft.teams<morph>1</morph></package_name>
+<package_name>com.azure.authenticator<morph>1</morph></package_name>
+<package_name>com.microsoft.office.outlook<morph>1</morph></package_name>
+<package_name>com.microsoft.office.word<morph>1</morph></package_name>
+<package_name>com.microsoft.office.excel<morph>1</morph></package_name>
+<package_name>com.microsoft.office.powerpoint<morph>1</morph></package_name>
+<package_name>com.microsoft.office.onenote<morph>1</morph></package_name>
+<package_name>com.microsoft.todos<morph>1</morph></package_name>
+<package_name>com.microsoft.emmx<morph>1</morph></package_name>
+<package_name>com.microsoft.skydrive<morph>1</morph></package_name>
+<package_name>com.deepseek.chat<morph>1</morph></package_name>
+<package_name>com.openai.chatgpt<morph>1</morph></package_name>
+<package_name>com.figma.mirror<morph>1</morph></package_name>
+<package_name>com.valvesoftware.android.steam.community<morph>1</morph></package_name>
+<package_name>com.picsart.studio<morph>1</morph></package_name>
+<package_name>com.flipkart.android<morph>1</morph></package_name>
+<package_name>net.one97.paytm<morph>1</morph></package_name>
+<package_name>com.olacabs.customer<morph>1</morph></package_name>
+<package_name>in.swiggy.android<morph>1</morph></package_name>
+<package_name>com.application.zomato<morph>1</morph></package_name>
+<package_name>in.mohalla.sharechat<morph>1</morph></package_name>
+<package_name>com.mxtech.videoplayer.ad<morph>1</morph></package_name>
+<package_name>in.startv.hotstar<morph>1</morph></package_name>
+<package_name>com.dts.freefireth<morph>1</morph></package_name>
+<package_name>com.pubg.imobile<morph>1</morph></package_name>
+<package_name>com.ludo.king<morph>1</morph></package_name>
+<package_name>com.kiloo.subwaysurf<morph>1</morph></package_name>
+<package_name>com.gojek.app<morph>1</morph></package_name>
+<package_name>com.vidio.android<morph>1</morph></package_name>
+<package_name>com.mobile.legends<morph>1</morph></package_name>
+<package_name>com.higgsltd.higgsslot<morph>1</morph></package_name>
+<package_name>com.supercell.clashofclans<morph>1</morph></package_name>
+<package_name>com.squareup.cash<morph>1</morph></package_name>
+<package_name>com.yahoo.mobile.client.android.mail<morph>1</morph></package_name>
+<package_name>com.walmart.android<morph>1</morph></package_name>
+<package_name>com.particlenews.newsbreak<morph>1</morph></package_name>
+<package_name>com.google.android.GoogleCamera<morph>1</morph></package_name>
+<package_name>com.life360.android.safetymapd<morph>1</morph></package_name>
+<package_name>com.pandora.android<morph>1</morph></package_name>
+<package_name>com.chase.sig.android<morph>1</morph></package_name>
+<package_name>com.niksoftware.snapseed<morph>1</morph></package_name>
+<package_name>com.lemon.lvoverseas<morph>1</morph></package_name>
+<package_name>com.shein.shein<morph>1</morph></package_name>
+<package_name>com.devsisters.cookieadventure<morph>1</morph></package_name>
+<package_name>com.speakenglish.speak<morph>1</morph></package_name>
+<package_name>flipboard.app<morph>1</morph></package_name>
+<package_name>com.strava<morph>1</morph></package_name>
+<package_name>me.lyft.android<morph>1</morph></package_name>
+<package_name>com.airbnb.android<morph>1</morph></package_name>
+<package_name>com.google.android.apps.fitness<morph>1</morph></package_name>
+<package_name>com.myfitnesspal.android<morph>1</morph></package_name>
+<package_name>com.Slack<morph>1</morph></package_name>
+<package_name>com.amazon.kindle<morph>1</morph></package_name>
+<package_name>com.audible.application<morph>1</morph></package_name>
+<package_name>com.waze<morph>1</morph></package_name>
+<package_name>com.doordash.driverapp<morph>1</morph></package_name>
+<package_name>com.ubercab.eats<morph>1</morph></package_name>
+<package_name>com.grubhub.android<morph>1</morph></package_name>
+<package_name>com.postmates.android<morph>1</morph></package_name>
+<package_name>com.calm.android<morph>1</morph></package_name>
+<package_name>com.getsomeheadspace.android<morph>1</morph></package_name>
+<package_name>com.zhiliaoapp.musically.shop<morph>1</morph></package_name>
+<package_name>com.ebay.mobile<morph>1</morph></package_name>
+<package_name>com.contextlogic.wish<morph>1</morph></package_name>
+<package_name>com.dropbox.android<morph>1</morph></package_name>
+<package_name>com.evernote<morph>1</morph></package_name>
+<package_name>com.canva.editor<morph>1</morph></package_name>
+<package_name>com.zhiliaoapp.musically.music<morph>1</morph></package_name>
+<package_name>com.oplus.play<morph>1</morph></package_name>
+<package_name>com.coloros.shortcuts<morph>1</morph></package_name>
+<package_name>com.coloros.familyguard<morph>1</morph></package_name>
+<package_name>com.coloros.translate<morph>1</morph></package_name>
+<package_name>com.tencent.mm<morph>1</morph></package_name>
+<package_name>com.xunmeng.pinduoduo<morph>1</morph></package_name>
+<package_name>com.smile.gifmaker<morph>1</morph></package_name>
+<package_name>com.baidu.searchbox<morph>1</morph></package_name>
+<package_name>com.taobao.taobao<morph>1</morph></package_name>
+<package_name>com.kuaishou.nebula<morph>1</morph></package_name>
+<package_name>com.tencent.mobileqq<morph>1</morph></package_name>
+<package_name>com.ss.android.ugc.aweme.lite<morph>1</morph></package_name>
+<package_name>com.jingdong.app.mall<morph>1</morph></package_name>
+<package_name>com.xingin.xhs<morph>1</morph></package_name>
+<package_name>com.dragon.read<morph>1</morph></package_name>
+<package_name>com.tencent.mtt<morph>1</morph></package_name>
+<package_name>com.kugou.android<morph>1</morph></package_name>
+<package_name>com.phoenix.read<morph>1</morph></package_name>
+<package_name>com.baidu.BaiduMap<morph>1</morph></package_name>
+<package_name>com.tmri.app.main<morph>1</morph></package_name>
+<package_name>com.ss.android.article.news<morph>1</morph></package_name>
+<package_name>com.tencent.qqlive<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.sgame<morph>1</morph></package_name>
+<package_name>com.greenpoint.android.mc10086.activity<morph>1</morph></package_name>
+<package_name>com.snda.wifilocating<morph>1</morph></package_name>
+<package_name>tv.danmaku.bili<morph>1</morph></package_name>
+<package_name>com.ss.android.article.video<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.pubgmhd<morph>1</morph></package_name>
+<package_name>com.taobao.idlefish<morph>1</morph></package_name>
+<package_name>com.quark.browser<morph>1</morph></package_name>
+<package_name>com.shizhuang.duapp<morph>1</morph></package_name>
+<package_name>com.UCMobile<morph>1</morph></package_name>
+<package_name>com.ss.android.ugc.live<morph>1</morph></package_name>
+<package_name>com.lemon.lv<morph>1</morph></package_name>
+<package_name>com.sina.weibo<morph>1</morph></package_name>
+<package_name>com.tencent.qqmusic<morph>1</morph></package_name>
+<package_name>com.alibaba.android.rimet<morph>1</morph></package_name>
+<package_name>com.ss.android.article.lite<morph>1</morph></package_name>
+<package_name>com.icbc<morph>1</morph></package_name>
+<package_name>com.larus.nova<morph>1</morph></package_name>
+<package_name>com.baidu.homework<morph>1</morph></package_name>
+<package_name>com.baidu.searchbox.lite<morph>1</morph></package_name>
+<package_name>com.tencent.android.qqdownloader<morph>1</morph></package_name>
+<package_name>com.MobileTicket<morph>1</morph></package_name>
+<package_name>com.netease.cloudmusic<morph>1</morph></package_name>
+<package_name>com.youku.phone<morph>1</morph></package_name>
+<package_name>com.netease.party.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.yitong.mbank.psbc<morph>1</morph></package_name>
+<package_name>com.google.android.gms<morph>1</morph></package_name>
+<package_name>com.alibaba.wireless<morph>1</morph></package_name>
+<package_name>com.chinamworld.bocmbci<morph>1</morph></package_name>
+<package_name>com.unionpay<morph>1</morph></package_name>
+<package_name>com.baidu.netdisk<morph>1</morph></package_name>
+<package_name>com.kuaiduizuoye.scan<morph>1</morph></package_name>
+<package_name>com.tencent.map<morph>1</morph></package_name>
+<package_name>com.luna.music<morph>1</morph></package_name>
+<package_name>com.sinovatech.unicom.ui<morph>1</morph></package_name>
+<package_name>com.wuba<morph>1</morph></package_name>
+<package_name>com.moonshot.kimichat<morph>1</morph></package_name>
+<package_name>cn.gov.tax.its<morph>1</morph></package_name>
+<package_name>me.ele<morph>1</morph></package_name>
+<package_name>com.tencent.wework<morph>1</morph></package_name>
+<package_name>com.happyelements.AndroidAnimal<morph>1</morph></package_name>
+<package_name>com.ct.client<morph>1</morph></package_name>
+<package_name>com.kwai.videoeditor<morph>1</morph></package_name>
+<package_name>com.tencent.karaoke<morph>1</morph></package_name>
+<package_name>com.ximalaya.ting.android<morph>1</morph></package_name>
+<package_name>com.dz.hmjc<morph>1</morph></package_name>
+<package_name>com.cmri.universalapp<morph>1</morph></package_name>
+<package_name>com.achievo.vipshop<morph>1</morph></package_name>
+<package_name>com.sgcc.wsgw.cn<morph>1</morph></package_name>
+<package_name>com.ss.android.ugc.livelite<morph>1</morph></package_name>
+<package_name>com.cainiao.wireless<morph>1</morph></package_name>
+<package_name>com.iflytek.inputmethod<morph>1</morph></package_name>
+<package_name>com.tencent.androidqqmail<morph>1</morph></package_name>
+<package_name>com.moji.mjweather<morph>1</morph></package_name>
+<package_name>com.dianping.v1<morph>1</morph></package_name>
+<package_name>com.sohu.sohuvideo<morph>1</morph></package_name>
+<package_name>cmb.pb<morph>1</morph></package_name>
+<package_name>cn.wps.moffice.lite<morph>1</morph></package_name>
+<package_name>com.mt.mtxx.mtxx<morph>1</morph></package_name>
+<package_name>com.xt.retouch<morph>1</morph></package_name>
+<package_name>com.sdu.didi.psnger<morph>1</morph></package_name>
+<package_name>com.xs.fm.lite<morph>1</morph></package_name>
+<package_name>com.tencent.wemeet.app<morph>1</morph></package_name>
+<package_name>com.taptap<morph>1</morph></package_name>
+<package_name>com.sankuai.meituan.takeoutnew<morph>1</morph></package_name>
+<package_name>com.meta.box<morph>1</morph></package_name>
+<package_name>com.ss.android.auto<morph>1</morph></package_name>
+<package_name>com.yueme.itv<morph>1</morph></package_name>
+<package_name>com.hpbr.bosszhipin<morph>1</morph></package_name>
+<package_name>ctrip.android.view<morph>1</morph></package_name>
+<package_name>com.tencent.jkchess<morph>1</morph></package_name>
+<package_name>com.android.permissioncontroller<morph>1</morph></package_name>
+<package_name>com.clover.daysmatter<morph>1</morph></package_name>
+<package_name>com.sohu.inputmethod.sogou<morph>1</morph></package_name>
+<package_name>com.hunantv.imgo.activity<morph>1</morph></package_name>
+<package_name>com.zhihu.android<morph>1</morph></package_name>
+<package_name>com.seetong.app.seetong<morph>1</morph></package_name>
+<package_name>com.minitech.miniworld.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.netease.mc.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.taobao.litetao<morph>1</morph></package_name>
+<package_name>com.jingyao.easybike<morph>1</morph></package_name>
+<package_name>com.tmall.wireless<morph>1</morph></package_name>
+<package_name>com.tongcheng.android<morph>1</morph></package_name>
+<package_name>com.lingan.seeyou<morph>1</morph></package_name>
+<package_name>com.videogo<morph>1</morph></package_name>
+<package_name>com.hicorenational.antifraud<morph>1</morph></package_name>
+<package_name>com.jd.jrapp<morph>1</morph></package_name>
+<package_name>com.baidu.haokan<morph>1</morph></package_name>
+<package_name>com.xtc.watch<morph>1</morph></package_name>
+<package_name>com.tencent.KiHan<morph>1</morph></package_name>
+<package_name>com.xingye.app<morph>1</morph></package_name>
+<package_name>com.wuba.zhuanzhuan<morph>1</morph></package_name>
+<package_name>com.xiaomi.smarthome<morph>1</morph></package_name>
+<package_name>cn.hsa.app<morph>1</morph></package_name>
+<package_name>com.chaoxing.mobile<morph>1</morph></package_name>
+<package_name>com.xhey.xcamera<morph>1</morph></package_name>
+<package_name>com.meitu.meiyancamera<morph>1</morph></package_name>
+<package_name>com.tencent.gamehelper.smoba<morph>1</morph></package_name>
+<package_name>com.sohu.newsclient<morph>1</morph></package_name>
+<package_name>com.fenbi.android.leo<morph>1</morph></package_name>
+<package_name>com.tencent.zebra<morph>1</morph></package_name>
+<package_name>com.pingan.carowner<morph>1</morph></package_name>
+<package_name>com.intsig.camscanner<morph>1</morph></package_name>
+<package_name>com.qiyi.video.lite<morph>1</morph></package_name>
+<package_name>com.kwai.hisense<morph>1</morph></package_name>
+<package_name>com.bankcomm.Bankcomm<morph>1</morph></package_name>
+<package_name>com.immomo.momo<morph>1</morph></package_name>
+<package_name>cn.xuexi.android<morph>1</morph></package_name>
+<package_name>cn.soulapp.android<morph>1</morph></package_name>
+<package_name>com.pingan.paces.ccms<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.dfm<morph>1</morph></package_name>
+<package_name>com.microsoft.appmanager<morph>1</morph></package_name>
+<package_name>com.tencent.gamehelper.pg<morph>1</morph></package_name>
+<package_name>com.shoujiduoduo.ringtone<morph>1</morph></package_name>
+<package_name>com.netease.dwrg.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.tencent.hunyuan.app.chat<morph>1</morph></package_name>
+<package_name>com.xunlei.downloadprovider<morph>1</morph></package_name>
+<package_name>com.eduyun.app.factory.ykt<morph>1</morph></package_name>
+<package_name>com.tencent.mf.uam<morph>1</morph></package_name>
+<package_name>com.le123.ysdq<morph>1</morph></package_name>
+<package_name>com.baidu.wenku<morph>1</morph></package_name>
+<package_name>com.cubic.autohome<morph>1</morph></package_name>
+<package_name>com.qihoo.namiso<morph>1</morph></package_name>
+<package_name>com.taobao.live<morph>1</morph></package_name>
+<package_name>com.tencent.weishi<morph>1</morph></package_name>
+<package_name>com.tencent.mobileqq<morph>1</morph></package_name>
+<package_name>com.fido.asm<morph>1</morph></package_name>
+<package_name>com.Qunar<morph>1</morph></package_name>
+<package_name>com.anjuke.android.app<morph>1</morph></package_name>
+<package_name>com.handsgo.jiakao.android<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.cf<morph>1</morph></package_name>
+<package_name>com.msxf.ayh<morph>1</morph></package_name>
+<package_name>com.jxedt<morph>1</morph></package_name>
+<package_name>com.eggflower.read<morph>1</morph></package_name>
+<package_name>com.yek.android.kfc.activitys<morph>1</morph></package_name>
+<package_name>com.chif.weather<morph>1</morph></package_name>
+<package_name>com.huawei.health<morph>1</morph></package_name>
+<package_name>io.dcloud.H576E6CC7<morph>1</morph></package_name>
+<package_name>com.tplink.ipc<morph>1</morph></package_name>
+<package_name>com.m4399.gamecenter<morph>1</morph></package_name>
+<package_name>com.gotokeep.keep<morph>1</morph></package_name>
+<package_name>com.duowan.kiwi<morph>1</morph></package_name>
+<package_name>com.unionpay.tsmservice<morph>1</morph></package_name>
+<package_name>com.wepie.snake.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.ygkj.chelaile.standard<morph>1</morph></package_name>
+<package_name>com.shuqi.controller<morph>1</morph></package_name>
+<package_name>com.baidu.tieba<morph>1</morph></package_name>
+<package_name>com.baidu.duer.superapp<morph>1</morph></package_name>
+<package_name>com.zhaopin.social<morph>1</morph></package_name>
+<package_name>cn.gov.chinatax.gt4.app<morph>1</morph></package_name>
+<package_name>com.cmbchina.ccd.pluto.cmbActivity<morph>1</morph></package_name>
+<package_name>com.tencent.letsgo<morph>1</morph></package_name>
+<package_name>com.ziipin.softkeyboard<morph>1</morph></package_name>
+<package_name>com.zqer.zyweather<morph>1</morph></package_name>
+<package_name>com.kwai.m2u<morph>1</morph></package_name>
+<package_name>com.lu.ashionweather<morph>1</morph></package_name>
+<package_name>com.pingan.lifeinsurance<morph>1</morph></package_name>
+<package_name>com.netease.sky.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.cod<morph>1</morph></package_name>
+<package_name>com.chinatelecom.bestpayclient<morph>1</morph></package_name>
+<package_name>com.lofter.android<morph>1</morph></package_name>
+<package_name>com.yipiao<morph>1</morph></package_name>
+<package_name>com.snda.lantern.wifilocating<morph>1</morph></package_name>
+<package_name>com.tianyancha.skyeye<morph>1</morph></package_name>
+<package_name>com.meitu.wink<morph>1</morph></package_name>
+<package_name>cn.kuwo.player<morph>1</morph></package_name>
+<package_name>com.qqgame.hlddz<morph>1</morph></package_name>
+<package_name>com.hexin.plat.android<morph>1</morph></package_name>
+<package_name>com.hupu.shihuo<morph>1</morph></package_name>
+<package_name>com.xueersi.abczone<morph>1</morph></package_name>
+<package_name>com.chinalife.ebz<morph>1</morph></package_name>
+<package_name>com.kugou.android.lite<morph>1</morph></package_name>
+<package_name>com.tencent.qqpimsecure<morph>1</morph></package_name>
+<package_name>com.cmcc.cmvideo<morph>1</morph></package_name>
+<package_name>com.jooan.qiaoanzhilian<morph>1</morph></package_name>
+<package_name>com.vivo.easyshare<morph>1</morph></package_name>
+<package_name>com.yitong.zjrc.mfs.android<morph>1</morph></package_name>
+<package_name>com.tencent.lolm<morph>1</morph></package_name>
+<package_name>com.fenbi.android.solar<morph>1</morph></package_name>
+<package_name>com.qihoo.cleandroid_cn<morph>1</morph></package_name>
+<package_name>com.tencent.ig<morph>1</morph></package_name>
+<package_name>com.sinyee.babybus.recommendapp<morph>1</morph></package_name>
+<package_name>com.bankcomm.maidanba<morph>1</morph></package_name>
+<package_name>com.qidian.QDReader<morph>1</morph></package_name>
+<package_name>com.ss.android.yumme.video<morph>1</morph></package_name>
+<package_name>com.ex.bfxtg.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.taobao.trip<morph>1</morph></package_name>
+<package_name>com.miHoYo.Yuanshen<morph>1</morph></package_name>
+<package_name>com.citiccard.mobilebank<morph>1</morph></package_name>
+<package_name>com.youdao.dict<morph>1</morph></package_name>
+<package_name>com.ccb.longjiLife<morph>1</morph></package_name>
+<package_name>com.netease.gl<morph>1</morph></package_name>
+<package_name>net.huanci.hsjpro<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.speedmobile<morph>1</morph></package_name>
+<package_name>com.cib.cibmb<morph>1</morph></package_name>
+<package_name>com.lianjia.beike<morph>1</morph></package_name>
+<package_name>com.sdu.didi.gsui<morph>1</morph></package_name>
+<package_name>com.kwai.theater<morph>1</morph></package_name>
+<package_name>com.yiyou.ga<morph>1</morph></package_name>
+<package_name>com.masseffect.suki<morph>1</morph></package_name>
+<package_name>com.gorgeous.lite<morph>1</morph></package_name>
+<package_name>com.yoosee<morph>1</morph></package_name>
+<package_name>com.okcam.ookcam<morph>1</morph></package_name>
+<package_name>com.nxy.sc<morph>1</morph></package_name>
+<package_name>com.google.android.marvin.talkback<morph>1</morph></package_name>
+<package_name>com.glodon.drawingexplorer<morph>1</morph></package_name>
+<package_name>com.chinamobile.mcloud<morph>1</morph></package_name>
+<package_name>com.ecitic.bank.mobile<morph>1</morph></package_name>
+<package_name>com.android.wifi.dialog<morph>1</morph></package_name>
+<package_name>com.lalamove.huolala.client<morph>1</morph></package_name>
+<package_name>com.cctv.yangshipin.app.androidp<morph>1</morph></package_name>
+<package_name>com.zmzx.college.search<morph>1</morph></package_name>
+<package_name>com.jzzs.ParentsHelper<morph>1</morph></package_name>
+<package_name>com.sup.android.superb<morph>1</morph></package_name>
+<package_name>com.duoduo.child.story<morph>1</morph></package_name>
+<package_name>com.xmcy.hykb<morph>1</morph></package_name>
+<package_name>com.android.clock.sd<morph>1</morph></package_name>
+<package_name>com.hanweb.android.zhejiang.activity<morph>1</morph></package_name>
+<package_name>cn.gov.pbc.dcep<morph>1</morph></package_name>
+<package_name>cn.jj<morph>1</morph></package_name>
+<package_name>com.jiaohua_browser<morph>1</morph></package_name>
+<package_name>cn.com.spdb.mobilebank.per<morph>1</morph></package_name>
+<package_name>com.mihoyo.hyperion<morph>1</morph></package_name>
+<package_name>com.wepie.weplay<morph>1</morph></package_name>
+<package_name>cn.com.chsi.chsiapp<morph>1</morph></package_name>
+<package_name>csii.com.qny<morph>1</morph></package_name>
+<package_name>com.parallel.odyssey<morph>1</morph></package_name>
+<package_name>com.bee.weathesafety<morph>1</morph></package_name>
+<package_name>com.kugou.android.ringtone<morph>1</morph></package_name>
+<package_name>com.A17zuoye.mobile.homework<morph>1</morph></package_name>
+<package_name>com.qq.reader<morph>1</morph></package_name>
+<package_name>com.qqgame.happymj<morph>1</morph></package_name>
+<package_name>com.fuzhoudream.haveskineveryday<morph>1</morph></package_name>
+<package_name>com.tencent.transfer<morph>1</morph></package_name>
+<package_name>com.csii.mobilebank<morph>1</morph></package_name>
+<package_name>com.youloft.calendar<morph>1</morph></package_name>
+<package_name>cn.damai<morph>1</morph></package_name>
+<package_name>cn.jthj.turbobunny<morph>1</morph></package_name>
+<package_name>com.mi.health<morph>1</morph></package_name>
+<package_name>com.sf.activity<morph>1</morph></package_name>
+<package_name>com.ideaflow.zmcy<morph>1</morph></package_name>
+<package_name>com.pbyw.wadmm.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.kuaiyin.player<morph>1</morph></package_name>
+<package_name>com.outfit7.talkingtomgoldrun.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>cn.TuHu.android<morph>1</morph></package_name>
+<package_name>com.meta.box.assist64<morph>1</morph></package_name>
+<package_name>com.yitong.mbank<morph>1</morph></package_name>
+<package_name>com.blockchainvault<morph>1</morph></package_name>
+<package_name>com.koudai.weidian.buyer<morph>1</morph></package_name>
+<package_name>com.hnnx.pmbank<morph>1</morph></package_name>
+<package_name>com.babycloud.hanju<morph>1</morph></package_name>
+<package_name>com.miHoYo.hkrpg<morph>1</morph></package_name>
+<package_name>com.woodleaves.read<morph>1</morph></package_name>
+<package_name>com.jsmcc<morph>1</morph></package_name>
+<package_name>com.example.businesshall<morph>1</morph></package_name>
+<package_name>com.sunboxsoft.charge.institute<morph>1</morph></package_name>
+<package_name>com.zuoyebang.knowledge<morph>1</morph></package_name>
+<package_name>com.yixingangqin.net.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.max.xiaoheihe<morph>1</morph></package_name>
+<package_name>com.yiche.autoeasy<morph>1</morph></package_name>
+<package_name>com.netease.uu<morph>1</morph></package_name>
+<package_name>cn.com.cmbc.newmbank<morph>1</morph></package_name>
+<package_name>com.huaxiaozhu.rider<morph>1</morph></package_name>
+<package_name>com.baidu.searchbox.tomas<morph>1</morph></package_name>
+<package_name>com.iexbdiyc.wnwfsl<morph>1</morph></package_name>
+<package_name>com.sankuai.meituan.meituanwaimaibusiness<morph>1</morph></package_name>
+<package_name>com.ss.android.article.daziban<morph>1</morph></package_name>
+<package_name>com.ai.obc.cbn.app<morph>1</morph></package_name>
+<package_name>com.dayunlinks.cloudbirds<morph>1</morph></package_name>
+<package_name>com.iflytek.oshall.ahzwfw<morph>1</morph></package_name>
+<package_name>com.umetrip.android.msky.app<morph>1</morph></package_name>
+<package_name>com.dw.btime<morph>1</morph></package_name>
+<package_name>com.cyclotron.in<morph>1</morph></package_name>
+<package_name>com.iflytek.elpmobile.smartlearning<morph>1</morph></package_name>
+<package_name>com.duowan.mobile<morph>1</morph></package_name>
+<package_name>com.jiongji.andriod.card<morph>1</morph></package_name>
+<package_name>com.baidu.input<morph>1</morph></package_name>
+<package_name>com.tianqiyubao2345<morph>1</morph></package_name>
+<package_name>com.jjwxc.reader<morph>1</morph></package_name>
+<package_name>cn.com.hkgt.gasapp<morph>1</morph></package_name>
+<package_name>com.midea.ai.appliances<morph>1</morph></package_name>
+<package_name>com.mampod.ergedd<morph>1</morph></package_name>
+<package_name>com.baidu.newapp<morph>1</morph></package_name>
+<package_name>com.huawei.hwid<morph>1</morph></package_name>
+<package_name>com.mm.android.lc<morph>1</morph></package_name>
+<package_name>com.netease.yhtj.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.tencent.wetype<morph>1</morph></package_name>
+<package_name>com.cs_credit_bank<morph>1</morph></package_name>
+<package_name>com.gh.gamecenter<morph>1</morph></package_name>
+<package_name>com.fenqile.fenqile<morph>1</morph></package_name>
+<package_name>com.ahrcu.mobilebank<morph>1</morph></package_name>
+<package_name>me.yidui<morph>1</morph></package_name>
+<package_name>com.nearme.gamecenter.ddz.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.hanweb.android.sdzwfw.activity<morph>1</morph></package_name>
+<package_name>com.xiwei.logistics<morph>1</morph></package_name>
+<package_name>com.didapinche.booking<morph>1</morph></package_name>
+<package_name>drama.dachuangnanningltd.home<morph>1</morph></package_name>
+<package_name>com.ubestkid.beilehu.android<morph>1</morph></package_name>
+<package_name>com.mygolbs.mybus<morph>1</morph></package_name>
+<package_name>com.tencent.tmgp.supercell.clashofclans<morph>1</morph></package_name>
+<package_name>com.chaozh.iReader.dj<morph>1</morph></package_name>
+<package_name>com.kuaikan.comic<morph>1</morph></package_name>
+<package_name>com.kingpoint.gmcchh<morph>1</morph></package_name>
+<package_name>com.eastmoney.android.berlin<morph>1</morph></package_name>
+<package_name>cn.ninegame.gamemanager<morph>1</morph></package_name>
+<package_name>com.bytedance.ls.merchant<morph>1</morph></package_name>
+<package_name>com.sankuai.meituan.dispatch.crowdsource<morph>1</morph></package_name>
+<package_name>com.ganji.android<morph>1</morph></package_name>
+<package_name>com.ecolog.gtsaugus<morph>1</morph></package_name>
+<package_name>air.tv.douyu.android<morph>1</morph></package_name>
+<package_name>com.ucmobile.lite<morph>1</morph></package_name>
+<package_name>com.wifi.masterkey.lite<morph>1</morph></package_name>
+<package_name>com.huawei.smarthome<morph>1</morph></package_name>
+<package_name>com.ss.android.lark<morph>1</morph></package_name>
+<package_name>com.jieyatzhj02.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.jym.gcmall<morph>1</morph></package_name>
+<package_name>com.excean.dualaid<morph>1</morph></package_name>
+<package_name>com.xingjiabi.shengsheng<morph>1</morph></package_name>
+<package_name>com.lingyue.zebraloan<morph>1</morph></package_name>
+<package_name>com.tencent.nfsonline<morph>1</morph></package_name>
+<package_name>com.seewo.easicare.pro<morph>1</morph></package_name>
+<package_name>com.wudaokou.hippo<morph>1</morph></package_name>
+<package_name>com.ssimulator.net.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>im.weshine.keyboard<morph>1</morph></package_name>
+<package_name>com.zidongdianji<morph>1</morph></package_name>
+<package_name>com.neuqsoft.newggfwmobile<morph>1</morph></package_name>
+<package_name>com.gstarmc.android<morph>1</morph></package_name>
+<package_name>com.lion.market<morph>1</morph></package_name>
+<package_name>com.mendon.riza<morph>1</morph></package_name>
+<package_name>com.hnnx.eBank.android<morph>1</morph></package_name>
+<package_name>net.evecom.android.mztapp<morph>1</morph></package_name>
+<package_name>com.qihoo.appstore<morph>1</morph></package_name>
+<package_name>pi.browser<morph>1</morph></package_name>
+<package_name>com.tencent.weread<morph>1</morph></package_name>
+<package_name>com.ydtx.camera<morph>1</morph></package_name>
+<package_name>com.meelive.ingkee<morph>1</morph></package_name>
+<package_name>com.depreseclipse.avert<morph>1</morph></package_name>
+<package_name>com.mosheng<morph>1</morph></package_name>
+<package_name>com.juanvision.EseeNetProj<morph>1</morph></package_name>
+<package_name>com.tencent.apps.valorant<morph>1</morph></package_name>
+<package_name>com.job.android<morph>1</morph></package_name>
+<package_name>com.julanling.app<morph>1</morph></package_name>
+<package_name>com.cebbank.mobile.cemb<morph>1</morph></package_name>
+<package_name>com.taobao.etao<morph>1</morph></package_name>
+<package_name>com.zengame.zrttddz.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.sofunny.Sausage<morph>1</morph></package_name>
+<package_name>com.jco.aiview<morph>1</morph></package_name>
+<package_name>com.xunmeng.merchant<morph>1</morph></package_name>
+<package_name>com.youxi.wnwfttl<morph>1</morph></package_name>
+<package_name>com.yitong.mbank.psbc.creditcard<morph>1</morph></package_name>
+<package_name>com.huawei.appmarket<morph>1</morph></package_name>
+<package_name>com.jxnxs.mobile.bank<morph>1</morph></package_name>
+<package_name>com.tencent.qt.qtl<morph>1</morph></package_name>
+<package_name>com.ai.marki<morph>1</morph></package_name>
+<package_name>com.netease.mail<morph>1</morph></package_name>
+<package_name>com.baidu.baidutranslate<morph>1</morph></package_name>
+<package_name>com.upgadata.up7723<morph>1</morph></package_name>
+<package_name>com.p1.mobile.putong<morph>1</morph></package_name>
+<package_name>com.sankuai.movie<morph>1</morph></package_name>
+<package_name>com.sankuai.meituan.merchant<morph>1</morph></package_name>
+<package_name>cn.wenyu.bodian<morph>1</morph></package_name>
+<package_name>com.yangcong345.android.phone<morph>1</morph></package_name>
+<package_name>com.netease.mobimail<morph>1</morph></package_name>
+<package_name>com.tuyoo.doudizhu.android3d.nearme.gamecenter<morph>1</morph></package_name>
+<package_name>com.ganji.android.haoche_c<morph>1</morph></package_name>
+<package_name>com.njh.biubiu<morph>1</morph></package_name>
+<package_name>com.sankuai.youxuan<morph>1</morph></package_name>
+<package_name>cn.com.pansky.sxzgyl<morph>1</morph></package_name>
+<package_name>com.alibaba.ailabs.tg<morph>1</morph></package_name>
+<package_name>com.baidu.appsearch<morph>1</morph></package_name>
+<package_name>com.bokecc.dance<morph>1</morph></package_name>
+	<package_name>com.oneplus.note<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.oneplus.backuprestore<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>com.oplus.themestore<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oneplus.soundrecorder<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oneplus.calculator<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oneplus.filemanager<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oneplus.brickmode<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oneplus.gallery<morph>1</morph><shortcut>1</shortcut><fg_redraw>1</fg_redraw></package_name>
+	<package_name>net.oneplus.weather<morph>1</morph><shortcut>1</shortcut></package_name>
+	<package_name>com.oplus.member<morph>1</morph><shortcut>1</shortcut></package_name>
+<package_name>com.oneplus.mall<morph>1</morph><shortcut>1</shortcut></package_name>
+<package_name>com.oplus.phonemanager<morph>1</morph><shortcut>1</shortcut></package_name>
+<package_name>net.oneplus.forums<morph>1</morph><shortcut>1</shortcut></package_name>
+	</filter-conf>

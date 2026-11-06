@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packageMappingConfig>
+    <pkgMappingItem
+        sourcePkgName="com.fido.fido2client"
+        targetPkgName="com.oplus.credential"
+        priority="10" />
+    <pkgMappingItem
+        sourcePkgName="com.oplus.nas"
+        targetPkgName="com.oplus.subsys"
+        priority="10" />
+</packageMappingConfig>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<migrateConfig>
+    <crossUpdateMigrateItem
+        targetPkgName="com.oplus.credential"
+        targetApkPath="/system_ext/app/OplusCredentialCN/OplusCredentialCN/OplusCredentialCN.apk"
+        isSystemApp="true"
+        priority="10">
+        <mirrorSourcePkg sourcePkgName="com.fido.fido2client">
+            <ceFile migrateAllFromSource="false" fixPermissionWhenMig="true">
+                <copyAction
+                    sourcePath="/shared_prefs/account.xml"
+                    targetPath="/shared_prefs/account.xml"
+                    fixPermissionWhenMig="true" />
+                <copyAction
+                    sourcePath="/shared_prefs/config.xml"
+                    targetPath="/shared_prefs/config.xml"
+                    fixPermissionWhenMig="true" />
+            </ceFile>
+        </mirrorSourcePkg>
+    </crossUpdateMigrateItem>
+    <crossUpdateMigrateItem
+        targetPkgName="com.oplus.subsys"
+        targetApkPath="/system_ext/app/SubsystemApp/SubsystemApp.apk"
+        isSystemApp="true"
+        priority="10">
+        <migrateSourcePkg
+            sourcePkgName="com.oplus.nas"
+            deleteSourcePkg="false">
+            <deFile migrateAllFromSource="false" fixPermissionWhenMig="true">
+                <copyAction sourcePath="/databases/SharedDataStat.db" targetPath="/databases/SharedDataStat.db" fixPermissionWhenMig="true" />
+                <copyAction sourcePath="/databases/SharedDataStat.db-wal" targetPath="/databases/SharedDataStat.db-wal" fixPermissionWhenMig="true" />
+                <copyAction sourcePath="/databases/linkboost.db" targetPath="/databases/linkboost.db" fixPermissionWhenMig="true" />
+                <copyAction sourcePath="/databases/linkboost.db-wal" targetPath="/databases/linkboost.db-wal" fixPermissionWhenMig="true" />
+                <copyAction sourcePath="/shared_prefs/WeakNetSharedPreferenceManager.xml" targetPath="/shared_prefs/WeakNetSharedPreferenceManager.xml" fixPermissionWhenMig="true" />
+            </deFile>
+        </migrateSourcePkg>
+    </crossUpdateMigrateItem>
+</migrateConfig>

@@ -1,0 +1,18 @@
+<filter-conf>
+<filter-name>sys_oomadj_config</filter-name>
+<version>2026081000</version>
+
+	<recentTaskAdj enable="true" targetAdj="430#435#704#705#706"> </recentTaskAdj>
+	
+	<OomAdjRule type="upgrade" userId="all" pkg="com.heytap.quicksearchbox" proc="com.heytap.quicksearchbox" adj="710" />
+	<OomAdjRule type="upgrade" userId="all" pkg="com.heytap.health" proc="com.heytap.health:transport" adj="800" />
+	<OomAdjRule type="upgrade" userId="all" pkg="com.oppo.instant.local.service" proc="com.oppo.instant.local.service" adj="480" runningMem="10"/>
+	<OomAdjRule type="upgrade" userId="main" pkg="com.tencent.mm" proc="com.tencent.mm:push" adj="450" afterProcActive="43200"/>
+	<OomAdjRule type="upgrade" userId="main" pkg="com.tencent.mm" proc="com.tencent.mm" adj="455" afterAppInteractive="3600"/>
+	<OomAdjRule type="upgrade" userId="main" pkg="com.teamtalk.im" proc="com.teamtalk.im" adj="780" afterAppInteractive="3600"/>
+	<OomAdjRule type="upgrade" userId="all" pkg="com.oplus.stdid" proc="com.oplus.stdid" adj="200" />
+	<match minMem="12">
+		<OomAdjRule type="upgrade" userId="main" pkg="com.tencent.tmgp.dfm" proc="com.tencent.tmgp.dfm" adj="460" afterAppInteractive="300"/>
+		<OomAdjRule type="upgrade" userId="main" pkg="com.tencent.tmgp.sgame" proc="com.tencent.tmgp.sgame" adj="460" afterAppInteractive="300"/>
+	</match>
+</filter-conf>

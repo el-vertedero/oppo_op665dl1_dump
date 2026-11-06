@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <filter-conf>
+        <version>2026050701</version>
+        <filter-name>sys_omq_prioritize_message_config</filter-name>
+    </filter-conf>
+
+    <config name="omqConfig" type="bundle">
+        <item name="feature_switch" type="bool" value="true"/>
+		<item name="scene_type" type="string" value="launch|scroll|danmu"/>
+		<item name="message_type" type="string" value="0|1"/>
+        <item name="preempt_counter" type="int" value="2"/>
+		<!--order: blacklist、 whitelist、 system application-->
+        <item name="blackList_switch" type="bool" value="false"/>
+		<item name="whiteList_switch" type="bool" value="false"/>
+    </config>
+
+    <config name="blackList" type="stringList">
+        <item name="com.test.app1"/>
+    </config>
+
+    <config name="whiteList" type="stringList">
+		<item name="com.test.app2"/>
+    </config>
+	
+</resources>
+

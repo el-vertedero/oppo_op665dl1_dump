@@ -1,0 +1,13 @@
+<filter-conf>
+<version>202505271600</version>
+	<!--Control the frequency of backup BS log 201905121800 18:00-->
+	<frequency>0</frequency>
+	<!--Control the OppoPowerConsumedMonitorService enable or not -->
+	<pcmenable>true</pcmenable>
+	<!--Control whether can get android log when powerlost fast on standby -->
+	<CanGetAndroidLog>true</CanGetAndroidLog>
+	<!--Control whether can get android log when CPU Exception -->
+	<CanGetCpuExpLog>false</CanGetCpuExpLog>
+    <!--Control the Threshold of standby  -->
+	<StandByCurrent>59.0</StandByCurrent>
+</filter-conf>

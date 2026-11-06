@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extend_features>
+	<app_feature name="com.oplus.bootreg_global_search_feature_user_agreement" args="String:https://actimg.heytapimg.com/cdo-activity/static-page/channel73/index.html?lang="/>
+	<app_feature name="com.oplus.bootreg_global_search_feature_privacy_policy" args="String:https://actimg.heytapimg.com/cdo-activity/static-page/channel74/index.html?lang="/>
+	<app_feature name="oplus.software.alwaysalive.enable" args="boolean:false"/>
+	<app_feature name="com.oplus.ota.show_version_type" args="int:2"/>
+	<app_feature name="com.oplus.ota.new_appointment_url" args="String:https://gauss-otarecruit-eu.allawnos.com/recruit/url"/>
+	<app_feature name="com.oplus.ota.pubkey_ver" args="String:1615897067573"/>
+	<app_feature name="com.oplus.ota.pubkey" args="String:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh8/EThsK3f0WyyPgrtXb/D0Xni6UZNppaQHUqHWo976cybl92VxmehE0ISObnxERaOtrlYmTPIxkVC9MMueDvTwZ1l0KxevZVKU0sJRxNR9AFcw6D7k9fPzzpNJmhSlhpNbt3BEepdgibdRZbacF3NWy3ejOYWHgxC+I/Vj1v7QU5gD+1OhgWeRDcwuV4nGY1ln2lvkRj8EiJYXfkSq/wUI5AvPdNXdEqwou4FBcf6mD84G8pKDyNTQwwuk9lvFlcq4mRqgYaFg9DAgpDgqVK4NTJWM7tQS1GZuRA6PhupfDqnQExyBFhzCefHkEhcFywNyxlPe953NWLFWwbGvFKwIDAQAB"/>
+	<app_feature name="com.oplus.ota.component_update_url" args="String:https://component-ota-eu.allawnos.com"/>
+	<app_feature name="com.oplus.ota.recruit_promote_url" args="String:https://gauss-otarecruit-eu.allawnos.com"/>
+	<app_feature name="com.oplus.ota.brand" args="String:oppo"/>
+	<app_feature name="os.tool.onetrace.thermal.ostats" args="boolean:false"/>
+	<app_feature name="os.tool.onetrace.thermal.detect" args="boolean:false"/>
+	<app_feature name="os.tool.onetrace.thermal.metric" args="boolean:false"/>
+	<app_feature name="os.tool.onetrace.performance.ottrace" args="boolean:false"/>
+	<app_feature name="os.tool.onetrace.performance.ood" args="boolean:false"/>
+	<app_feature name="com.android.settings.privacy_statement_biometric_unlock"/>
+	<app_feature name="com.android.settings.euex_version"/>
+	<app_feature name="com.android.settings.system_stable_plan.disable"/>
+	<app_feature name="com.android.settings.auth_base_url" args="String:https://spk-service-eu.allawnos.com/"/>
+	<app_feature name="com.android.settings.region_picker"/>
+	<app_feature name="com.oplus.aod.support_app_host" args="String:https://aodscene-service-fr.allawnos.com"/>
+	<app_feature name="com.oplus.uxdesign.icons.host" args="String:https://gui-server-eu.allawnos.com"/>
+	<app_feature name="com.oplus.uxdesign.language.host" args="String:https://lang-server-eu.allawnos.com"/>
+	<app_feature name="com.oplus.uxdesign.uxcolor.host" args="String:https://globalcolor-service-eu.allawnos.com"/>
+	<app_feature name="com.oplus.deepthinker.startup.defer.time" args="long:600000"/>
+	<app_feature name="com.oplus.efficient.conference.pagelist" args="StringList:pageList">
+		<StringList name="pageList" args="{&quot;version&quot;:&quot;0001&quot;,&quot;content&quot;:[{&quot;packageName&quot;:&quot;com.alibaba.android.rimet&quot;,&quot;pageName&quot;:[&quot;com.alibaba.android.teleconf.mozi.activity.TeleVideoConfActivity&quot;,&quot;com.alibaba.android.gray.teleconf.mozi.activity.TeleVideoConfActivity&quot;,&quot;com.alibaba.android.teleconf.activities.TeleConfHomeV2Activity&quot;]},{&quot;packageName&quot;:&quot;com.tencent.wework&quot;,&quot;pageName&quot;:[&quot;com.tencent.wework.multitalk.controller.VoipCallActivity&quot;,&quot;com.tencent.wework.multitalk.controller.meeting.MeetingVideoFullScreen&quot;,&quot;com.tencent.wemeet.sdk.meeting.inmeeting.InMeetingActivity&quot;]},{&quot;packageName&quot;:&quot;com.tencent.wemeet.app&quot;,&quot;pageName&quot;:[&quot;com.tencent.wemeet.sdk.meeting.inmeeting.InMeetingActivity&quot;]},{&quot;packageName&quot;:&quot;us.zoom.videomeetings&quot;,&quot;pageName&quot;:[&quot;com.zipow.videobox.ConfActivityNormal&quot;,&quot;com.zipow.videobox.conference.ui.ZmFoldableConfActivity&quot;]},{&quot;packageName&quot;:&quot;com.tencent.mm&quot;,&quot;pageName&quot;:[&quot;com.tencent.mm.plugin.multitalk.ui.MultiTalkMainUI&quot;]},{&quot;packageName&quot;:&quot;com.ss.android.lark&quot;,&quot;pageName&quot;:[&quot;com.ss.android.vc.meeting.module.multi.ByteRTCMeetingActivityInstance&quot;]},{&quot;packageName&quot;:&quot;com.larksuite.meeting.cn&quot;,&quot;pageName&quot;:[&quot;com.ss.android.vc.meeting.module.multi.ByteRTCMeetingActivity&quot;]},{&quot;packageName&quot;:&quot;com.microsoft.teams&quot;,&quot;pageName&quot;:[&quot;com.microsoft.skype.teams.views.activities.InCallActivity&quot;]},{&quot;packageName&quot;:&quot;com.google.android.apps.meetings&quot;,&quot;pageName&quot;:[&quot;com.google.android.libraries.communications.conference.ui.callui.SingleCallActivity&quot;]}]}"/>
+	</app_feature>
+	<app_feature name="com.oplus.romupdate.is_log_print_limit" args="boolean:true"/>
+	<app_feature name="com.oplus.romupdate.is_exp" args="boolean:true"/>
+	<app_feature name="com.oplus.romupdate.pubkey_ver" args="String:1608798196783"/>
+	<app_feature name="com.oplus.romupdate.pubkey" args="String:MIIBIDANBgkqhkiG9w0BAQEFAAOCAQ0AMIIBCAKCAQEAt5qKfUJiYPvJxO0E3FzvqR2dwXc0Xmii3oh9XohF9RoQpLlZEskYk+Otq2iwqpYXa4UqMbUXHoQM5JQAqEiqYHPRJskhuW4HFdJPA2H74hFYiAwm25hyGGQ42gG5YX4eUaVWX4SFpGWPmRWc5lZo6MVqjwiU+LNyujN7f609YSE/TPjcqVTrmxaM6vttKwQLtHLb0HOBoWe/iS4kVYd4VwQ1xlLzEDupNPNOLPoMmNibrjC26QZ7CsqKsoIKNH/hOGF/eNz4rY+4APp0zVJIT2687Fij4CGNL/HxFdpQCStIkU+DmR7llCULy8na+FU6ZyfeSUYssxNGzcEd/eeXEwIBAw=="/>
+	<app_feature name="com.oplus.romupdate.url" args="String:https://rus-service-eu.allawnos.com/post/"/>
+	<app_feature name="com.oplus.dcs.tech.url" args="String:https://obus-dctech-fr.heytapmobile.com"/>
+	<app_feature name="com.oplus.dcs.data.url" args="String:https://obus-dc-eu.heytapmobile.com"/>
+	<app_feature name="com.oplusos.sau.print_log" args="boolean:false"/>
+	<app_feature name="com.oplusos.sau.forbidSilent" args="boolean:true"/>
+	<app_feature name="com.oplusos.sau.showToast" args="boolean:true"/>
+	<app_feature name="com.oplusos.sau.popUpDialog" args="boolean:true"/>
+	<app_feature name="com.oplusos.sau.opex.url" args="String:https://opex-service-eu.allawnos.com/"/>
+	<app_feature name="com.oplusos.sau.url" args="String:https://sau-server-eu.allawnos.com/post/"/>
+	<app_feature name="com.oplusos.sau.opex.pubkey" args="String:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5j8QHA2FWysJd5NSz7IRlYhW3vcAri6AeLK/+X5lnWu9xeFTLd2zkjvasGPJR6kJVMQ5+AXdBCq5oR8umHqKRsMDB4doGhECfjauFm7uVmJJRfgL2cg5wPHWuAZfnWshlhuYZ1S1sTu4RIHQD7uQGxrXZzmkY+JlHB5byaekMuSwz3uJ9gwZ9WLP8LXh+MGC1ECJ476rnPehJom3/Mxxj+WTilMhDO2Ws61tskkDINdL1Qmj0ziia4hYziyLmDDDcrhDKB/tOpYioByFnDuyaEySLunR7bp4XDFcUfptCXwEML12LzUlpifDxdj6ZZeHkpk9ZYs59JfNynXVBbcJcQIDAQAB"/>
+	<app_feature name="com.oplusos.sau.opex.pubkey_ver" args="String:1631002593566"/>
+	<app_feature name="com.oplus.sau.pubkey" args="String:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhrQng+JDKPH2rsErGoqwlelKiECTk7Bdvly+z3NnQTc5ZL9s7YZ7d1NEyyV01/NH5fKR4fM7sYu5a4cxhxpFwIMwhfha3yphPO25KbyP+LkHIYMiHu7egpP3/26bnPUQmsjeWXdWsbfWMmdosd2kpaJtYBjFN3XAWkButHMj+i4GVIrzlizgm/1pX88cWzFh9yWctcjYg6+yHPawliTOU3CwgHRxKTOvY3ow6H7GzJu/VejQ72u/ZL3L84GyYW4XuXkMfDhHR68oEKaI3Y9kXymojLwcRXkxz+SkGdWuXPiiLBvoV53MKth39vwsYAOFPRdjMHp03GuWGsEIXZuVWQIDAQAB"/>
+	<app_feature name="com.oplusos.sau.downloadByDialog" args="boolean:true"/>
+	<app_feature name="com.oplus.sau.pubkey_ver" args="String:1621324463104"/>
+	<app_feature name="com.oplus.ota.cellular_download_choice_type" args="int:1"/>
+	<app_feature name="com.oplus.ota.show_appointment_entry" args="boolean:true"/>
+	<app_feature name="com.oplus.ota.print_log" args="boolean:false"/>
+	<app_feature name="oplus.af.enable.quick_connect_swicth_statet" args="int:0"/>
+	<app_feature name="com.android.launcher.DEFAULT_DRAWER_MODE"/>
+	<app_feature name="com.oplus.wirelesssettings.vcomm_more_all" args="String:https://support.oppo.com/en/vcomm-help/"/>
+	<app_feature name="com.opus.systemui.disable_qs_list" args="String:weixinpay,osie,lris"/>
+	<app_feature name="com.oplus.cast.notification_uniformization"/>
+	<app_feature name="com.oplus.cast.virtualDisplay_uniformization"/>
+	<app_feature name="com.oplus.cast.oplus_projection_2.0"/>
+	<app_feature name="com.oplus.feature.hq_doc_scan_enable" args="boolean:true"/>
+	<app_feature name="com.oplus.dsf.groupkey" args="boolean:false"/>
+	<app_feature name="com.oplus.cast.COUI_OS15"/>
+	<app_feature name="com.oplus.ai.magicstuido.enable_h5_account"/>
+	<app_feature name="com.oppo.quicksearchbox.entrance_blacklist" args="String:{&quot;DrawerSwitch&quot;:{&quot;model&quot;:[&quot;CPH2573&quot;,&quot;CPH2575&quot;,&quot;CPH2581&quot;,&quot;CPH2583&quot;,&quot;CPH2585&quot;,&quot;CPH2609&quot;,&quot;CPH2611&quot;,&quot;CPH2645&quot;,&quot;CPH2647&quot;,&quot;CPH2649&quot;,&quot;CPH2651&quot;,&quot;CPH2653&quot;,&quot;CPH2655&quot;,&quot;CPH2657&quot;,&quot;CPH2659&quot;,&quot;CPH2671&quot;,&quot;CPH2691&quot;,&quot;CPH2723&quot;,&quot;CPH2745&quot;,&quot;CPH2747&quot;,&quot;CPH2749&quot;,&quot;CPH2765&quot;,&quot;CPH2767&quot;,&quot;CPH2769&quot;,&quot;CPH2771&quot;,&quot;CPH2791&quot;,&quot;CPH2797&quot;,&quot;CPH2803&quot;,&quot;CPH2809&quot;,&quot;CPH2841&quot;,&quot;CPH2873&quot;,&quot;CPH2911&quot;,&quot;CPH2913&quot;,&quot;CPH2945&quot;,&quot;CPH2947&quot;,&quot;CPH2969&quot;,&quot;CPH3003&quot;,&quot;CPH3005&quot;,&quot;OPG07&quot;,&quot;RMX5011&quot;,&quot;RMX5210&quot;,&quot;RMX5341&quot;,&quot;RMX5342&quot;,&quot;RMX5343&quot;,&quot;RMX8888&quot;],&quot;carrier&quot;:[],&quot;OS_Version&quot;:[]},&quot;DockSwitch&quot;:{&quot;model&quot;:[&quot;CPH2573&quot;,&quot;CPH2575&quot;,&quot;CPH2581&quot;,&quot;CPH2583&quot;,&quot;CPH2585&quot;,&quot;CPH2609&quot;,&quot;CPH2611&quot;,&quot;CPH2645&quot;,&quot;CPH2647&quot;,&quot;CPH2649&quot;,&quot;CPH2651&quot;,&quot;CPH2653&quot;,&quot;CPH2655&quot;,&quot;CPH2657&quot;,&quot;CPH2659&quot;,&quot;CPH2671&quot;,&quot;CPH2691&quot;,&quot;CPH2723&quot;,&quot;CPH2745&quot;,&quot;CPH2747&quot;,&quot;CPH2749&quot;,&quot;CPH2765&quot;,&quot;CPH2767&quot;,&quot;CPH2769&quot;,&quot;CPH2771&quot;,&quot;CPH2791&quot;,&quot;CPH2797&quot;,&quot;CPH2803&quot;,&quot;CPH2809&quot;,&quot;CPH2841&quot;,&quot;CPH2873&quot;,&quot;CPH2911&quot;,&quot;CPH2913&quot;,&quot;CPH2945&quot;,&quot;CPH2947&quot;,&quot;CPH2969&quot;,&quot;CPH3003&quot;,&quot;CPH3005&quot;,&quot;OPG07&quot;,&quot;RMX5011&quot;,&quot;RMX5210&quot;,&quot;RMX5341&quot;,&quot;RMX5342&quot;,&quot;RMX5343&quot;,&quot;RMX8888&quot;],&quot;carrier&quot;:[],&quot;OS_Version&quot;:[]},&quot;PullDownSwitch&quot;:{&quot;model&quot;:[],&quot;carrier&quot;:[],&quot;OS_Version&quot;:[]},&quot;MoreAppsDisabled&quot;:{&quot;model&quot;:[&quot;CPH2573&quot;,&quot;CPH2575&quot;,&quot;CPH2581&quot;,&quot;CPH2583&quot;,&quot;CPH2585&quot;,&quot;CPH2609&quot;,&quot;CPH2611&quot;,&quot;CPH2645&quot;,&quot;CPH2647&quot;,&quot;CPH2649&quot;,&quot;CPH2651&quot;,&quot;CPH2653&quot;,&quot;CPH2655&quot;,&quot;CPH2657&quot;,&quot;CPH2659&quot;,&quot;CPH2671&quot;,&quot;CPH2691&quot;,&quot;CPH2723&quot;,&quot;CPH2745&quot;,&quot;CPH2747&quot;,&quot;CPH2749&quot;,&quot;CPH2765&quot;,&quot;CPH2767&quot;,&quot;CPH2769&quot;,&quot;CPH2771&quot;,&quot;CPH2791&quot;,&quot;CPH2797&quot;,&quot;CPH2803&quot;,&quot;CPH2809&quot;,&quot;CPH2841&quot;,&quot;CPH2873&quot;,&quot;CPH2911&quot;,&quot;CPH2913&quot;,&quot;CPH2945&quot;,&quot;CPH2947&quot;,&quot;CPH2969&quot;,&quot;CPH3003&quot;,&quot;CPH3005&quot;,&quot;OPG07&quot;,&quot;RMX5011&quot;,&quot;RMX5210&quot;,&quot;RMX5341&quot;,&quot;RMX5342&quot;,&quot;RMX5343&quot;,&quot;RMX8888&quot;],&quot;carrier&quot;:[],&quot;OS_Version&quot;:[]}}"/>
+	<app_feature name="com.oppo.quicksearchbox.pull_default_entrance" args="String:[[[&quot;OPPO&quot;],[],[],[],[],[],[]],[[&quot;Realme&quot;],[],[&quot;40-max&quot;],[],[],[],[]]]"/>
+	<app_feature name="com.oplus.beaconlink.heytap_account_url" args="String:https://muc.heytap.com/agreement/privacy-policy/account/europe/privacyPolicy_%s.html"/>
+	<app_feature name="com.oplus.battery.power_save_mode_tile" args="boolean:true"/>
+	<app_feature name="com.oplus.screenrecorder.area_record" args="boolean:true"/>
+	<app_feature name="com.oplus.linker.ability_level" args="int:0"/>
+	<app_feature name="com.oplus.directservice.aitoolbox_enable" args="boolean:true"/>
+	<app_feature name="com.oplus.calculator.use_system_alpha_adjust" args="boolean:true"/>
+	<app_feature name="com.oplus.mediaturbo.video_enduring_2.0" args="boolean:true"/>
+	<app_feature name="athena.kill.support_tap_renew" args="boolean:true"/>
+	<app_feature name="com.android.launcher.packages_no_app_mono_icon" args="StringList:pkgs">
+		<StringList name="pkgs" args="com.cashkaro"/>
+		<StringList name="pkgs" args="com.bewakoof.bewakoof"/>
+	</app_feature>
+	<app_feature name="com.oplus.mediaturbo.export_app" args="boolean:true"/>
+	<app_feature name="os.graphic.gallery.photoeditor.aibesttake" args="int:1"/>
+	<app_feature name="com.oplus.battery.autostart_limit_num" args="String:8|10-16|15-24|20"/>
+	<app_feature name="athena.kill.adjust.priority.accord.memory" args="boolean:true"/>
+	<app_feature name="com.oplus.wallpapers.home_page_reflection_effect" args="boolean:true"/>
+	<app_feature name="com.oplus.wallpapers.ai_copywriter" args="boolean:true"/>
+	<app_feature name="com.oplus.aimemory.feedback_channel_email" args="String:support_MindSpace_eu@oppo.com"/>
+	<app_feature name="com.oplus.aimemory.asr_url" args="String:wss://bot-asr-fr.heytapmobile.com:443/"/>
+	<app_feature name="com.oplus.aimemory.asr_app_id" args="String:appid504ba67a208"/>
+	<app_feature name="com.oplus.aimemory.asr_sec_id" args="String:83ebf4106e664438bc98e7cfcf759a1e"/>
+	<app_feature name="com.oplus.aimemory.asr_sec_key" args="String:b01b4a35c4a10885ffeb1aafc0cfcd93"/>
+	<app_feature name="com.oplus.aimemory.asr_package_name" args="String:com.oppo.appid504ba67a208"/>
+	<app_feature name="com_oplus_soundrecord_aigc_settings" args="int:0"/>
+	<app_feature name="com.oplus.icons.icon_config" args="String:{&quot;smooth_corner&quot;: 30, &quot;smooth_corner_g2&quot;: 53.57143, &quot;smooth_weight&quot;: 0.99,&quot;smooth_weight_g2&quot;: 3.0, &quot;min_corner&quot;: 30}"/>
+	<app_feature name="com.oplus.wallpapers.os_version_type" args="String:FULL_WEIGHT"/>
+	<app_feature name="com.oplus.wallpapers.livephoto_wallpaper" args="boolean:true"/>
+	<app_feature name="com.oplus.ambient.livealert.setting_switch" args="boolean:true"/>
+	<app_feature name="com.android.launcher.recent_lock_limit_num" args="String:8|10-16|15-24|20"/>
+	<app_feature name="com.oplus.ridermode.light_os" args="int:0"/>
+	<app_feature name="com.oplus.wallpapers.keyguard_style_switch" args="boolean:true"/>
+	<app_feature name="com.oplus.appcompat.texture_effect.Enable" args="boolean:true"/>
+	<app_feature name="com.android.systemui.support_status_bar_chip" args="boolean:true"/>
+	<app_feature name="com.oplus.systemui.livealert_effect_light.enable" args="boolean:true"/>
+	<app_feature name="com.android.incallui.support_call_record_prompt_mcc">
+		<StringList args="525"/>
+		<StringList args="454"/>
+		<StringList args="410"/>
+		<StringList args="470"/>
+	</app_feature>
+	<app_feature name="com.android.settings.miit_website" args="String:https://jwxkggfw.miit.gov.cn/zwfwggfwhlw/V/ECVLD?token=api2llsecret"/>
+	<app_feature name="com.oplus.wallpapers.ai_smart_layout" args="boolean:true"/>
+	<app_feature name="com.oplus.systemui.enable_lightfeature_notificationshade" args="boolean:true"/>
+	<app_feature name="com.oplus.virtual_device.fuyao_remote_camera" args="int:1"/>
+	<app_feature name="com.oplus.wallpapers.weather_mountain_wallpaper" args="boolean:true"/>
+	<app_feature name="com.oplus.systemui.media_immersive_fullscreen" args="boolean:true"/>
+	<app_feature name="com.oplus.dfs.3rd_crossdevice_filemanager" args="int:1"/>
+	<app_feature name="com.oplus.ota.three_brand_differentiation" args="boolean:true"/>
+	<app_feature name="com.oplus.customize.coreapp.skip_cert_auth" args="StringList:skipList">
+		<StringList name="skipList" args="skip_package:com.oplus.oemconfig/skip_sign_sha256:C9305EE38A28E5EE0E469B7F66164AF4DC680D6141B8F56A090E6DE25578B651;skip_package:com.oneplus.oemconfig/skip_sign_sha256:C9305EE38A28E5EE0E469B7F66164AF4DC680D6141B8F56A090E6DE25578B651"/>
+	</app_feature>
+	<app_feature name="com.android.settings.disable_multi_user_low_mem" args="boolean:true"/>
+</extend_features>
+<!-- Timestamp 2026-08-05T15:07:40 #1586858 -->

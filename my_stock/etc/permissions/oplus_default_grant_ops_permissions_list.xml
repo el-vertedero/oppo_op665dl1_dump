@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packages>
+	<default-grant-ops-permissions package="com.coloros.backuprestore" sha256-cert-digest="159E6F37C336F2F41272542DBC1DC85721DD567ED4AC68AC13F2E43003CE0DCE">
+		<permission name="android.permission.WRITE_SETTINGS"/>
+		<permission name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+		<permission name="android.permission.PACKAGE_USAGE_STATS"/>
+		<permission name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	</default-grant-ops-permissions>
+	<default-grant-ops-permissions package="com.opuls.metis" sha256-cert-digest="B0:A9:BB:FC:05:EE:E5:E7:D0:A2:C9:7C:03:05:86:E1:5B:B3:30:11:52:07:8F:54:47:3B:B8:2D:F6:D8:C8:18">
+		<permission name="android.permission.PACKAGE_USAGE_STATS"/>
+	</default-grant-ops-permissions>
+	<default-grant-ops-permissions package="com.nearme.instant.platform" sha256-cert-digest="0E76297AE23CDB91DC06240A42BBE04B438951D68EF6E43E1EA0BDE6C76D4250">
+		<permission name="android.permission.PACKAGE_USAGE_STATS"/>
+	</default-grant-ops-permissions>
+	<default-grant-ops-permissions package="com.nearme.instant.card" sha256-cert-digest="0E76297AE23CDB91DC06240A42BBE04B438951D68EF6E43E1EA0BDE6C76D4250">
+		<permission name="android.permission.PACKAGE_USAGE_STATS"/>
+	</default-grant-ops-permissions>
+	<default-grant-ops-permissions package="com.oplus.pantanal.ums" sha256-cert-digest="64AAFAF1D5BC9155A9E417A849E4F8EDA1D0D1341667C28ED7C443C76F820B9A">
+		<permission name="android.permission.PACKAGE_USAGE_STATS"/>
+	</default-grant-ops-permissions>
+</packages>
+<!-- Timestamp 2026-07-24T14:56:39 #1576495 -->

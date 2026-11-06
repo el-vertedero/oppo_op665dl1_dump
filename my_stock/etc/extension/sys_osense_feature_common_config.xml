@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <filter-conf>
+        <!-- <project>8350R</project> -->
+        <version>2026040901</version>
+        <filter-name>sys_osense_feature_common_config</filter-name>
+    </filter-conf>
+
+    <feature name="AppMng">
+        <config name="policyEnabled_config" type="bundle">
+            <item name="POLICY_CLEAN" type="bool" value="true"/>
+            <item name="POLICY_OFREEZER" type="bool" value="true"/>
+            <item name="POLICY_PRELOAD" type="bool" value="true"/>
+        </config>
+
+        <config name="appmngBqConfig" type="bundle">
+            <item name="maxHistoryFiles" type="int" value="30"/>
+            <item name="eventSize" type="int" value="3000"/>
+            <item name="tuningSwitch" type="bool" value="false"/>
+            <item name="DCSLog" type="bool" value="true"/>
+            <item name="zipTrigger" type="bool" value="false"/>
+            <item name="version" type="int" value="1"/>
+        </config>
+
+        <config name="defaultBigAppList_config" type="stringList">
+            <item name="com.oplus.camera"/>
+        </config>
+		
+		<config name="defaultTopAppList_config" type="stringList">
+            <item name="com.tencent.mm"/>
+            <item name="com.tencent.mobileqq"/>
+            <item name="com.ss.android.ugc.aweme"/>
+        </config>
+		
+		<config name="reentrantConfig" type="bundle">
+            <item name="reentrantSwitch" type="bool" value="true"/>
+        </config>
+
+        <config name="requestConfig" type="bundle">
+            <item name="dcsThreshold" type="int" value="300"/>
+            <item name="dcsPeriod" type="int" value="600000"/>
+        </config>
+		
+		<config name= "atomicCleanProcessWhiteList" type="stringList">
+            <item name="com.coloros.smartsidebar:edgepanel"/>
+            <item name="com.xunmeng.pinduoduo:titan"/>
+            <item name="com.tencent.mm:push"/>
+            <item name="com.taobao.taobao:channel"/>
+			<item name="com.oplus.trafficmonitor:network_control"/>
+            <item name="android.camera.cts"/>
+			<item name="android.process.media"/>
+        </config>
+		
+        <config name="osenseRefreshConfig" type="bundle">
+            <item name="switch" type="bool" value="true"/>
+        </config>
+		
+        <config name="skipLimitRefreshList" type="stringList">
+            <item name="com.android.launcher"/>
+			<item name="com.android.systemui"/>
+			<item name="com.qqgame.happymj"/>
+			<item name="com.coloros.assistantscreen"/>
+        </config>
+		
+        <config name="bloConfig" type="bundle">
+            <item name="switch" type="bool" value="true"/>
+			<!-- enhanced config -->
+			<item name="enhancedSwitch" type="bool" value="true"/>
+			<item name="enhancedHomeDur" type="int" value="6000"/>
+			<item name="enhancedAppDur" type="int" value="30000"/>
+			<item name="enhancedGameDur" type="int" value="90000"/>
+			<item name="enhancedAppCount" type="int" value="7"/>
+			<item name="enhancedDisAppCount" type="int" value="6"/>
+			<!-- strict config -->
+			<item name="strictSwitch" type="bool" value="true"/>
+			<item name="strictHomeDur" type="int" value="3000"/>
+			<item name="strictAppDur" type="int" value="5000"/>
+			<item name="strictGameDur" type="int" value="30000"/>
+			<item name="strictAppCount" type="int" value="4"/>
+			<item name="strictDisAppCount" type="int" value="3"/>
+			<item name="fastSwitchTimeout" type="int" value="4500"/>
+			<item name="fastSwitchExitDelay" type="int" value="2000"/>
+			<item name="fastSwitchCnt" type="int" value="4"/>
+			<!-- perf with morebg config -->
+			<item name="perfSwitch" type="bool" value="true"/>
+			<item name="perfHomeDur" type="int" value="6000"/>
+			<item name="perfAppDur" type="int" value="30000"/>
+			<item name="perfGameDur" type="int" value="60000"/>
+			<item name="perfAppCount" type="int" value="5"/>
+			<item name="perfDisAppCount" type="int" value="4"/>
+			<item name="moreBgAppCount" type="int" value="20"/>
+			<item name="moreBgDisAppCount" type="int" value="16"/>
+			<item name="moreBgExitDelay" type="int" value="14400000"/>
+        </config>
+    </feature>
+    <feature name="Memory">
+	    <config name="psiConfig" type="bundle">
+            <item name="memConfig" type="string" value="0 50000 0 70000 1 50000 1 70000"/>
+            <item name="ioConfig" type="string" value="0 30000 0 50000 1 30000"/>
+            <item name="zramReadWindow" type="long" value="500"/>
+        </config>
+		
+        <config name="psiMemConfig" type="bundle">
+            <item name="2" type="string" value="0 70000 0 150000 1 70000 1 150000"/>
+            <item name="3" type="string" value="0 70000 0 150000 1 70000 1 150000"/>
+            <item name="4" type="string" value="0 70000 0 150000 1 70000 1 150000"/>
+            <item name="6" type="string" value="0 70000 0 150000 1 70000 1 150000"/>
+			<item name="8" type="string" value="0 70000 0 150000 1 70000 1 150000"/>
+        </config>
+		
+        <config name="zramReadWindowConfig" type="bundle">
+            <item name="12" type="long" value="0"/>
+            <item name="16" type="long" value="0"/>
+            <item name="24" type="long" value="0"/>
+        </config>
+
+        <config name="osenseCompressConfig" type="bundle">
+            <item name="Enable" type="bool" value="true"/>
+            <item name="RegisterAbortHandler" type="bool" value="true"/>
+            <item name="AllowCompressOnBigCore" type="bool" value="true"/>
+            <item name="SupportAbortKernelVersion" type="string" value="606|601|515|510|504|419"/>
+        </config>
+
+        <config name="dynamicSwappinessConfig" type="bundle">
+            <item name="MultiWinShrinkFileFeatureEnable" type="bool" value="true"/>
+            <item name="MultiWinSwappiness" type="int" value="60"/>
+            <item name="MultiWinMinFileMB" type="int" value="1000"/>
+            <item name="MultiWinSwappinessTimeout" type="int" value="30000"/>
+        </config>
+    </feature>
+    <feature name="CPU">
+    </feature>
+    <feature name="IO">
+    </feature>
+</resources>
