@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <Panel Panel_ID="0" LutSize="17" LutBit="12" DualInterpolation="1" GammaBit="12" DebugLevel="0" DarkColorVersion="3.0" Bt2020_ColorSpace="1">
+        <BacklightInfo max_nit="4095" m100_nit="1584" m87_nit="1400" m5_nit="277" m2_5nit="227" m2_nit="196" m1_nit="2">
+            <PGC_Config brightness="510" config="0"></PGC_Config>
+            <PGC_Config brightness="1580" config="0"></PGC_Config>
+            <PGC_Config brightness="2180" config="0"></PGC_Config>
+            <PGC_Config brightness="4095" config="0"></PGC_Config>
+        </BacklightInfo>
+
+        <Odf2nitXyOffset>
+            <Offset Index="0" x="0.002529478"  y="0.001296955"/>
+            <Offset Index="1" x="0.001873856"  y="0.002721356"/>
+            <Offset Index="2" x="0.00149068"   y="0.002153746"/>
+            <Offset Index="3" x="0.001012269"  y="0.002955455"/>
+            <Offset Index="4" x="-0.000124659" y="0.003086526"/>
+            <Offset Index="5" x="0.001010817"  y="0.005975244"/>
+            <Offset Index="6" x="-0.005132765" y="0.005723336"/>
+            <Offset Index="7" x="-0.004353722" y="0.009393954"/>
+        </Odf2nitXyOffset>
+
+        <LTMInfo Frame="6" Mdealy="100">
+            <LuxLevel Index="1" sLux="10000"/>
+            <LuxLevel Index="2" sLux="40000"/>
+            <LuxLevel Index="3" sLux="100000"/>
+        </LTMInfo>
+        <SensorInfo enable="1" Temp_x_min="0.28" Temp_x_max="0.36" Temp_y_min="0.29" Temp_y_max="0.37"
+            CCT_min="3500" CCT_max="7500"
+            Mdealy="300" Transition_threshold="0.001" Transition_step="0.0005"
+            StretchedExp_delay="0.65" StretchedExp_tau="2.0" StretchedExp_beta="2.5"
+            StretchedExp_tend="6.0" StretchedExp_min_steps="24"
+            Enable_duration_ms="4000" Restore_duration_ms="2000">
+            <LtmRgbOffset Gamut="sRGB" Level="1" R_x="0.01033" R_y="-0.00315" G_x="-0.00211" G_y="0.02270" B_x="-0.00184" B_y="-0.00155"/>
+            <LtmRgbOffset Gamut="sRGB" Level="2" R_x="0.02067" R_y="-0.00630" G_x="-0.00423" G_y="0.04541" B_x="-0.00368" B_y="-0.00310"/>
+            <LtmRgbOffset Gamut="sRGB" Level="3" R_x="0.03100" R_y="-0.00945" G_x="-0.00634" G_y="0.06812" B_x="-0.00552" B_y="-0.00465"/>
+            <LtmRgbOffset Gamut="P3" Level="1" R_x="0.01033" R_y="-0.00315" G_x="-0.00211" G_y="0.02270" B_x="-0.00184" B_y="-0.00155"/>
+            <LtmRgbOffset Gamut="P3" Level="2" R_x="0.02067" R_y="-0.00630" G_x="-0.00423" G_y="0.04541" B_x="-0.00368" B_y="-0.00310"/>
+            <LtmRgbOffset Gamut="P3" Level="3" R_x="0.03100" R_y="-0.00945" G_x="-0.00634" G_y="0.06812" B_x="-0.00552" B_y="-0.00465"/>
+            <DarkColorRgbOffset Gamut="sRGB" R_x="0.02067" R_y="-0.00630" G_x="-0.00423" G_y="0.04541" B_x="-0.00368" B_y="-0.00310"/>
+            <DarkColorRgbOffset Gamut="P3" R_x="0.02067" R_y="-0.00630" G_x="-0.00423" G_y="0.04541" B_x="-0.00368" B_y="-0.00310"/>
+        </SensorInfo>
+        <RGBW_Gamma>
+            <mode Index="1">
+                <Global_gamma_calibration>1</Global_gamma_calibration>
+                <White_gamma_offset_0>0</White_gamma_offset_0>
+                <White_gamma_offset_16>0</White_gamma_offset_16>
+                <White_gamma_offset_208>0</White_gamma_offset_208>
+                <White_gamma_offset_224>0.02</White_gamma_offset_224>
+                <White_gamma_offset_240>0.04</White_gamma_offset_240>
+                <White_gamma_offset_255>0.05</White_gamma_offset_255>
+                <White_gamma>2.19</White_gamma>
+                <White_gamma_compensation>1</White_gamma_compensation>
+                <Color_mode>1</Color_mode>
+                <Final_gamma_compensation_0>0</Final_gamma_compensation_0>
+                <Final_gamma_compensation_16>0</Final_gamma_compensation_16>
+                <Final_gamma_compensation_32>0</Final_gamma_compensation_32>
+                <Final_gamma_compensation_160>0</Final_gamma_compensation_160>
+                <Final_gamma_compensation_176>0.01</Final_gamma_compensation_176>
+                <Final_gamma_compensation_192>0.02</Final_gamma_compensation_192>
+                <Final_gamma_compensation_208>0.03</Final_gamma_compensation_208>
+                <Final_gamma_compensation_224>0.05</Final_gamma_compensation_224>
+                <Final_gamma_compensation_240>0.05</Final_gamma_compensation_240>
+                <Final_gamma_compensation_255>0.01</Final_gamma_compensation_255>
+                <RGB_gamma_compensation>1</RGB_gamma_compensation>
+                <Red_gamma_offset_160>0</Red_gamma_offset_160>
+                <Red_gamma_offset_192>0</Red_gamma_offset_192>
+                <Red_gamma_offset_224>0</Red_gamma_offset_224>
+                <Red_gamma_offset_255>0</Red_gamma_offset_255>
+                <Green_gamma_offset_160>0</Green_gamma_offset_160>
+                <Green_gamma_offset_192>0</Green_gamma_offset_192>
+                <Green_gamma_offset_224>0</Green_gamma_offset_224>
+                <Green_gamma_offset_255>0</Green_gamma_offset_255>
+                <Blue_gamma_offset_160>0</Blue_gamma_offset_160>
+                <Blue_gamma_offset_192>0</Blue_gamma_offset_192>
+                <Blue_gamma_offset_224>0</Blue_gamma_offset_224>
+                <Blue_gamma_offset_255>0</Blue_gamma_offset_255>
+                <White_grey_compensation>1</White_grey_compensation>
+                <White_x_offset_16>0</White_x_offset_16>
+                <White_y_offset_16>0</White_y_offset_16>
+                <White_x_offset_32>0</White_x_offset_32>
+                <White_y_offset_32>0</White_y_offset_32>
+                <White_x_offset_48>0</White_x_offset_48>
+                <White_y_offset_48>0</White_y_offset_48>
+                <White_x_offset_64>0</White_x_offset_64>
+                <White_y_offset_64>0</White_y_offset_64>
+                <White_x_offset_80>0</White_x_offset_80>
+                <White_y_offset_80>0</White_y_offset_80>
+                <White_x_offset_96>0</White_x_offset_96>
+                <White_y_offset_96>0</White_y_offset_96>
+                <White_x_offset_112>0</White_x_offset_112>
+                <White_y_offset_112>0</White_y_offset_112>
+                <White_x_offset_128>0</White_x_offset_128>
+                <White_y_offset_128>0</White_y_offset_128>
+                <White_x_offset_144>0</White_x_offset_144>
+                <White_y_offset_144>0</White_y_offset_144>
+                <White_x_offset_160>0</White_x_offset_160>
+                <White_y_offset_160>0</White_y_offset_160>
+                <White_x_offset_176>0</White_x_offset_176>
+                <White_y_offset_176>0</White_y_offset_176>
+                <White_x_offset_192>0</White_x_offset_192>
+                <White_y_offset_192>0</White_y_offset_192>
+                <White_x_offset_208>0</White_x_offset_208>
+                <White_y_offset_208>0</White_y_offset_208>
+                <White_x_offset_224>0</White_x_offset_224>
+                <White_y_offset_224>0</White_y_offset_224>
+                <White_x_offset_240>0</White_x_offset_240>
+                <White_y_offset_240>0</White_y_offset_240>
+                <White_x_offset_255>0</White_x_offset_255>
+                <White_y_offset_255>0</White_y_offset_255>
+            </mode>
+            <mode Index="2">
+                <Global_gamma_calibration>1</Global_gamma_calibration>
+                <White_gamma_offset_0>0</White_gamma_offset_0>
+                <White_gamma_offset_16>0</White_gamma_offset_16>
+                <White_gamma_offset_208>0.02</White_gamma_offset_208>
+                <White_gamma_offset_224>0.06</White_gamma_offset_224>
+                <White_gamma_offset_240>0.12</White_gamma_offset_240>
+                <White_gamma_offset_255>0.1</White_gamma_offset_255>
+                <White_gamma>2.20</White_gamma>
+                <White_gamma_compensation>1</White_gamma_compensation>
+                <Color_mode>1</Color_mode>
+                <Final_gamma_compensation_0>0</Final_gamma_compensation_0>
+                <Final_gamma_compensation_16>0</Final_gamma_compensation_16>
+                <Final_gamma_compensation_32>0</Final_gamma_compensation_32>
+                <Final_gamma_compensation_160>0</Final_gamma_compensation_160>
+                <Final_gamma_compensation_176>0</Final_gamma_compensation_176>
+                <Final_gamma_compensation_192>0.02</Final_gamma_compensation_192>
+                <Final_gamma_compensation_208>0.048</Final_gamma_compensation_208>
+                <Final_gamma_compensation_224>0.08</Final_gamma_compensation_224>
+                <Final_gamma_compensation_240>0.12</Final_gamma_compensation_240>
+                <Final_gamma_compensation_255>0.03</Final_gamma_compensation_255>
+                <RGB_gamma_compensation>1</RGB_gamma_compensation>
+                <Red_gamma_offset_160>0</Red_gamma_offset_160>
+                <Red_gamma_offset_192>0</Red_gamma_offset_192>
+                <Red_gamma_offset_224>0</Red_gamma_offset_224>
+                <Red_gamma_offset_255>0</Red_gamma_offset_255>
+                <Green_gamma_offset_160>0</Green_gamma_offset_160>
+                <Green_gamma_offset_192>0</Green_gamma_offset_192>
+                <Green_gamma_offset_224>0</Green_gamma_offset_224>
+                <Green_gamma_offset_255>0</Green_gamma_offset_255>
+                <Blue_gamma_offset_160>0</Blue_gamma_offset_160>
+                <Blue_gamma_offset_192>0</Blue_gamma_offset_192>
+                <Blue_gamma_offset_224>0</Blue_gamma_offset_224>
+                <Blue_gamma_offset_255>0</Blue_gamma_offset_255>
+                <White_grey_compensation>1</White_grey_compensation>
+                <White_x_offset_16>0</White_x_offset_16>
+                <White_y_offset_16>0</White_y_offset_16>
+                <White_x_offset_32>0</White_x_offset_32>
+                <White_y_offset_32>0</White_y_offset_32>
+                <White_x_offset_48>0</White_x_offset_48>
+                <White_y_offset_48>0</White_y_offset_48>
+                <White_x_offset_64>0</White_x_offset_64>
+                <White_y_offset_64>0</White_y_offset_64>
+                <White_x_offset_80>0</White_x_offset_80>
+                <White_y_offset_80>0</White_y_offset_80>
+                <White_x_offset_96>0</White_x_offset_96>
+                <White_y_offset_96>0</White_y_offset_96>
+                <White_x_offset_112>0</White_x_offset_112>
+                <White_y_offset_112>0</White_y_offset_112>
+                <White_x_offset_128>0</White_x_offset_128>
+                <White_y_offset_128>0</White_y_offset_128>
+                <White_x_offset_144>0</White_x_offset_144>
+                <White_y_offset_144>0</White_y_offset_144>
+                <White_x_offset_160>0</White_x_offset_160>
+                <White_y_offset_160>0</White_y_offset_160>
+                <White_x_offset_176>0</White_x_offset_176>
+                <White_y_offset_176>0</White_y_offset_176>
+                <White_x_offset_192>0</White_x_offset_192>
+                <White_y_offset_192>0</White_y_offset_192>
+                <White_x_offset_208>0</White_x_offset_208>
+                <White_y_offset_208>0</White_y_offset_208>
+                <White_x_offset_224>0</White_x_offset_224>
+                <White_y_offset_224>0</White_y_offset_224>
+                <White_x_offset_240>0</White_x_offset_240>
+                <White_y_offset_240>0</White_y_offset_240>
+                <White_x_offset_255>0</White_x_offset_255>
+                <White_y_offset_255>0</White_y_offset_255>
+            </mode>
+            <mode Index="3">
+                <Global_gamma_calibration>1</Global_gamma_calibration>
+                <White_gamma_offset_0>0.1</White_gamma_offset_0>
+                <White_gamma_offset_16>0.16</White_gamma_offset_16>
+                <White_gamma_offset_208>0.03</White_gamma_offset_208>
+                <White_gamma_offset_224>0.08</White_gamma_offset_224>
+                <White_gamma_offset_240>0.10</White_gamma_offset_240>
+                <White_gamma_offset_255>0.1</White_gamma_offset_255>
+                <White_gamma>2.12</White_gamma>
+                <White_gamma_compensation>1</White_gamma_compensation>
+                <Color_mode>1</Color_mode>
+                <Final_gamma_compensation_0>0</Final_gamma_compensation_0>
+                <Final_gamma_compensation_16>0</Final_gamma_compensation_16>
+                <Final_gamma_compensation_32>0</Final_gamma_compensation_32>
+                <Final_gamma_compensation_160>0</Final_gamma_compensation_160>
+                <Final_gamma_compensation_176>0</Final_gamma_compensation_176>
+                <Final_gamma_compensation_192>0</Final_gamma_compensation_192>
+                <Final_gamma_compensation_208>0.02</Final_gamma_compensation_208>
+                <Final_gamma_compensation_224>0.05</Final_gamma_compensation_224>
+                <Final_gamma_compensation_240>0.09</Final_gamma_compensation_240>
+                <Final_gamma_compensation_255>0.1</Final_gamma_compensation_255>
+                <RGB_gamma_compensation>1</RGB_gamma_compensation>
+                <Red_gamma_offset_160>0</Red_gamma_offset_160>
+                <Red_gamma_offset_192>0</Red_gamma_offset_192>
+                <Red_gamma_offset_224>0</Red_gamma_offset_224>
+                <Red_gamma_offset_255>0</Red_gamma_offset_255>
+                <Green_gamma_offset_160>0</Green_gamma_offset_160>
+                <Green_gamma_offset_192>0</Green_gamma_offset_192>
+                <Green_gamma_offset_224>0</Green_gamma_offset_224>
+                <Green_gamma_offset_255>0</Green_gamma_offset_255>
+                <Blue_gamma_offset_160>0</Blue_gamma_offset_160>
+                <Blue_gamma_offset_192>0</Blue_gamma_offset_192>
+                <Blue_gamma_offset_224>0</Blue_gamma_offset_224>
+                <Blue_gamma_offset_255>0</Blue_gamma_offset_255>
+                <White_grey_compensation>1</White_grey_compensation>
+                <White_x_offset_16>0</White_x_offset_16>
+                <White_y_offset_16>0</White_y_offset_16>
+                <White_x_offset_32>0</White_x_offset_32>
+                <White_y_offset_32>0</White_y_offset_32>
+                <White_x_offset_48>0</White_x_offset_48>
+                <White_y_offset_48>0</White_y_offset_48>
+                <White_x_offset_64>0</White_x_offset_64>
+                <White_y_offset_64>0</White_y_offset_64>
+                <White_x_offset_80>0</White_x_offset_80>
+                <White_y_offset_80>0</White_y_offset_80>
+                <White_x_offset_96>0</White_x_offset_96>
+                <White_y_offset_96>0</White_y_offset_96>
+                <White_x_offset_112>0</White_x_offset_112>
+                <White_y_offset_112>0</White_y_offset_112>
+                <White_x_offset_128>0</White_x_offset_128>
+                <White_y_offset_128>0</White_y_offset_128>
+                <White_x_offset_144>0</White_x_offset_144>
+                <White_y_offset_144>0</White_y_offset_144>
+                <White_x_offset_160>0</White_x_offset_160>
+                <White_y_offset_160>0</White_y_offset_160>
+                <White_x_offset_176>0</White_x_offset_176>
+                <White_y_offset_176>0</White_y_offset_176>
+                <White_x_offset_192>0</White_x_offset_192>
+                <White_y_offset_192>0</White_y_offset_192>
+                <White_x_offset_208>0</White_x_offset_208>
+                <White_y_offset_208>0</White_y_offset_208>
+                <White_x_offset_224>0</White_x_offset_224>
+                <White_y_offset_224>0</White_y_offset_224>
+                <White_x_offset_240>0</White_x_offset_240>
+                <White_y_offset_240>0</White_y_offset_240>
+                <White_x_offset_255>0</White_x_offset_255>
+                <White_y_offset_255>0</White_y_offset_255>
+            </mode>
+
+        </RGBW_Gamma>
+        <PQ_Feature  Type="BasicColorMode" Factory_mode="2">
+            <PQ_modes PQModeID="0" ColorSpace="SRGB" RenderIntent="303" Category="Natural">
+                <mode Name="LsRGB_max" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.648 0.330 0.3000 0.6000 0.1450 0.056 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.648 0.330 0.3000 0.6000 0.1450 0.056 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="LsRGB_100nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.648 0.330 0.3000 0.6000 0.1450 0.05600 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.648 0.330 0.3000 0.6000 0.1450 0.0560 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3035 0.3135</RGBW_Game_Enhance_xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>2</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="LsRGB_2nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.655  0.328  0.300 0.600 0.1430 0.0550 0.3035 0.3135 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.655  0.328  0.300 0.600 0.1430 0.0550 0.3035 0.3135  0.454545</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>3</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="LsRGB_ltm" GenerateType="Odf_Noraml">
+                    <LtmLevel Index="1" Lux="10000">
+                        <RGBW_100xy>0.6573 0.3248 0.2978 0.6247 0.14416 0.0559 0.3025 0.3135 0.4545454</RGBW_100xy>
+                        <RGBW_75xy>0.6573 0.3248 0.2978 0.6247 0.14416 0.0559 0.3025 0.3135 0.4545454</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="2" Lux="40000">
+                        <RGBW_100xy>0.6676 0.3216 0.2957 0.6474 0.1423 0.0543 0.3025 0.3135 0.4545454</RGBW_100xy>
+                        <RGBW_75xy>0.6676 0.3216 0.2957 0.6474 0.1423 0.0543 0.3025 0.3135 0.4545454</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="3" Lux="100000">
+                        <RGBW_100xy>0.6780 0.3185 0.2936 0.6701 0.1404 0.0528 0.3025 0.3135 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.6780 0.3185 0.2936 0.6701 0.1404 0.0528 0.3025 0.3135 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="LsRGB_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_LsRGB.txt">
+                </mode>
+                <mode Name="LsRGB_DarkColor" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="0" displayMode="0">
+                </mode>
+                <mode Name="LsRGB_DarkColor_1" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="0" displayMode="0">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="1" ColorSpace="P3" RenderIntent="304" Category="Natural">
+                <mode Name="Vivid_max" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.682 0.320 0.2650 0.6900 0.1460 0.0560 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.682 0.320 0.2650 0.6900 0.1460 0.0560 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_100nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.682 0.320 0.2650 0.6900 0.1460 0.0560 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.682 0.3190 0.265 0.6900 0.1460 0.0560 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3035 0.3135</RGBW_Game_Enhance_xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>2</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_2nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.686  0.319  0.2650 0.6900 0.1440 0.0520 0.3035 0.314 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.686 0.318 0.2650 0.690 0.1440 0.0500 0.3035 0.314 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>3</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_ltm" GenerateType="Odf_Noraml">
+                    <LtmLevel Index="1" Lux="10000">
+                        <RGBW_100xy>0.6933 0.3168 0.262 0.722 0.1441 0.0559 0.3025 0.3135 0.4545454</RGBW_100xy>
+                        <RGBW_75xy>0.6933 0.3168 0.262 0.722 0.1441 0.0559 0.3025 0.3135 0.4545454</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="2" Lux="40000">
+                        <RGBW_100xy>0.7036 0.3136 0.2617 0.7344 0.1423 0.0543 0.3025 0.3135 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.7036 0.3136 0.2617 0.7344 0.1423 0.0543 0.3025 0.3135 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="3" Lux="100000">
+                        <RGBW_100xy>0.7140 0.3105 0.2596 0.7571 0.1404 0.0528 0.3025 0.3135 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.7140 0.3105 0.2596 0.7571 0.1404 0.0528 0.3025 0.3135 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_Vivid.txt">
+                </mode>
+                <mode Name="Vivid_DarkColor" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="1" displayMode="0">
+                </mode>
+                <mode Name="Vivid_DarkColor_1" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="1" displayMode="0">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="2" ColorSpace="SRGB" RenderIntent="301" Category="Standard">
+                <mode Name="Nature_max" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.648 0.330 0.3000 0.6000 0.1450 0.056 0.3075 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.648 0.330 0.300 0.6000 0.1450 0.0560 0.3075 0.3155 0.454545</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Nature_100nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.648 0.330 0.3000 0.6000 0.1450 0.0560 0.3075 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.648 0.330 0.300 0.6000 0.1450 0.0560 0.3075 0.3155  0.454545</RGBW_75xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3075 0.3155</RGBW_Game_Enhance_xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>2</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Nature_2nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.655  0.328  0.300 0.600 0.1430 0.0550 0.3065 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.655 0.328 0.300 0.600 0.1430 0.0550 0.3065 0.3155  0.454545</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>3</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Nature_ltm" GenerateType="Odf_Noraml">
+                    <LtmLevel Index="1" Lux="10000">
+                        <RGBW_100xy>0.6573 0.3248 0.2978 0.6247 0.14416 0.0559 0.3075 0.3175 0.4545454</RGBW_100xy>
+                        <RGBW_75xy>0.6573 0.3248 0.2978 0.6247 0.14416 0.0559 0.3075 0.3175 0.4545454</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="2" Lux="40000">
+                        <RGBW_100xy>0.6676 0.3216 0.2957 0.6474 0.1423 0.0543 0.3075 0.3175 0.4545454</RGBW_100xy>
+                        <RGBW_75xy>0.6676 0.3216 0.2957 0.6474 0.1423 0.0543 0.3075 0.3175 0.4545454</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="3" Lux="100000">
+                        <RGBW_100xy>0.6780 0.3185 0.2936 0.6701 0.1404 0.0528 0.3075 0.3175 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.6780 0.3185 0.2936 0.6701 0.1404 0.0528 0.3075 0.3175 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Nature_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_Nature.txt">
+                </mode>
+                <mode Name="Nature_DarkColor" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3075" White_y="0.3155" colorSpace="0" displayMode="2">
+                </mode>
+                <mode Name="Nature_DarkColor_1" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3075" White_y="0.3155" colorSpace="0" displayMode="2">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="3" ColorSpace="P3" RenderIntent="302" Category="Standard">
+                <mode Name="Cinema_max" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.683  0.320 0.265  0.689  0.145  0.055  0.3075 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.683  0.320 0.265  0.689  0.145  0.054  0.3075 0.3155 0.454545</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_100nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.683 0.320 0.2650 0.689 0.1450 0.055 0.3075 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.683  0.320 0.2650 0.689 0.1450 0.055 0.3075 0.3155 0.454545</RGBW_75xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3075 0.3155</RGBW_Game_Enhance_xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>2</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_2nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.686  0.319  0.2650 0.6900 0.1440 0.0540 0.3065 0.3155 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.686 0.318 0.2650 0.6900 0.1430 0.0520 0.3065 0.3155 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>3</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_ltm" GenerateType="Odf_Noraml">
+                    <LtmLevel Index="1" Lux="10000">
+                        <RGBW_100xy>0.6933 0.3168 0.262 0.722 0.1441 0.0559 0.3075 0.3175 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.6933 0.3168 0.262 0.722 0.1441 0.0559 0.3075 0.3175 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="2" Lux="40000">
+                        <RGBW_100xy>0.7036 0.3136 0.2617 0.7344 0.1423 0.0543 0.3075 0.3175 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.7036 0.3136 0.2617 0.7344 0.1423 0.0543 0.3075 0.3175 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <LtmLevel Index="3" Lux="100000">
+                        <RGBW_100xy>0.7140 0.3105 0.2596 0.7571 0.1404 0.0528 0.3075 0.3175 0.454545</RGBW_100xy>
+                        <RGBW_75xy>0.7140 0.3105 0.2596 0.7571 0.1404 0.0528 0.3075 0.3175 0.454545</RGBW_75xy>
+                    </LtmLevel>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_Cinema.txt">
+                </mode>
+                <mode Name="Cinema_DarkColor" GenerateType="so" So_Name="libDarkColor.so" White_x="0.309" White_y="0.313" colorSpace="1" displayMode="2">
+                </mode>
+                <mode Name="Cinema_DarkColor_1" GenerateType="so" So_Name="libDarkColor.so" White_x="0.309" White_y="0.313" colorSpace="1" displayMode="2">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="4" ColorSpace="SRGB" RenderIntent="307" Category="Vivid">
+                <mode Name="EsRGB_max" GenerateType="Odf_EnSRGB">
+                    <RGBW_xy>0.675 0.325 0.278 0.674 0.136 0.046 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                    <totalMappings>20</totalMappings>
+                    <skinProtectEnable>1</skinProtectEnable>
+                    <Transition_times>10</Transition_times>
+                </mode>
+                <mode Name="EsRGB_100nit" GenerateType="Odf_EnSRGB">
+                    <RGBW_xy>0.675 0.325 0.278 0.674 0.136 0.046 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3035 0.3135</RGBW_Game_Enhance_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsRGB_2nit" GenerateType="Odf_EnSRGB">
+                    <RGBW_xy>0.675 0.325 0.278 0.674 0.136 0.046 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsRGB_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_EsRGB.txt">
+                </mode>
+                <mode Name="EsRGB_DarkColor" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="0" displayMode="1">
+                </mode>
+                <mode Name="EsRGB_DarkColor_1" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="0" displayMode="1">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="5" ColorSpace="P3" RenderIntent="308" Category="Vivid">
+                <mode Name="EsP3_max" GenerateType="Odf_EnP3">
+                    <RGBW_xy>0.684 0.315 0.260 0.710 0.136 0.046 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsP3_100nit" GenerateType="Odf_EnP3">
+                    <RGBW_xy>0.684 0.315 0.260 0.710 0.136 0.046 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3035 0.3135</RGBW_Game_Enhance_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsP3_2nit" GenerateType="Odf_EnP3">
+                    <RGBW_xy>0.684 0.315 0.260 0.710 0.136 0.046 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsP3_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_EP3.txt">
+                </mode>
+                <mode Name="EsP3_DarkColor" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="1" displayMode="1">
+                </mode>
+                <mode Name="EsP3_DarkColor_1" GenerateType="so" So_Name="libDarkColor.so" White_x="0.3050" White_y="0.3140" colorSpace="1" displayMode="1">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="6" ColorSpace="BT2020" RenderIntent="354" Hdr_renderintent="258" Dolby_renderintent="310">
+                <mode Name="Vivid_max" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_100nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3035 0.3135</RGBW_Game_Enhance_xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>2</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_2nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.7090 0.2920 0.1700  0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.7090 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>3</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Vivid_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_Vivid.txt">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="7" ColorSpace="BT2020" RenderIntent="352" Hdr_renderintent="257" Dolby_renderintent="309">
+                <mode Name="Cinema_max" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3075 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3075 0.3155  0.454545</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>1</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_100nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3075 0.3155 0.454545</RGBW_100xy>
+                    <RGBW_75xy>0.7080 0.2920 0.1700 0.7970 0.1310 0.0460 0.3075 0.3155  0.454545</RGBW_75xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3075 0.3155</RGBW_Game_Enhance_xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>2</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_2nit" GenerateType="Odf_Noraml">
+                    <RGBW_100xy>0.7090 0.2920 0.1700 0.7970 0.1310 0.0460 0.3075 0.3155 0.4545454</RGBW_100xy>
+                    <RGBW_75xy>0.7090 0.2920 0.1700 0.7970 0.1310 0.0460 0.3075 0.3155 0.4545454</RGBW_75xy>
+                    <White_gamma>2.2</White_gamma>
+                    <RGBW_Gamma_Index>3</RGBW_Gamma_Index>
+                </mode>
+                <mode Name="Cinema_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_Cinema.txt">
+                </mode>
+            </PQ_modes>
+            <PQ_modes PQModeID="8" ColorSpace="BT2020" RenderIntent="358" Hdr_renderintent="259" Dolby_renderintent="311">
+                <mode Name="EsBT2020_max" GenerateType="Odf_EnBT2020">
+                    <RGBW_xy>0.7090 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsBT2020_100nit" GenerateType="Odf_EnBT2020">
+                    <RGBW_xy>0.7090 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <RGBW_Game_Enhance_xy>0.6903 0.3093 0.2444 0.7196 0.1366 0.0478 0.3035 0.3135</RGBW_Game_Enhance_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsBT2020_2nit" GenerateType="Odf_EnBT2020">
+                    <RGBW_xy>0.7090 0.2920 0.1700 0.7970 0.1310 0.0460 0.3035 0.3135 0.4545454545</RGBW_xy>
+                    <SKIN_RGBW_xy>0.64  0.33  0.30  0.60  0.15  0.06  0.3035 0.3135  0.4545454</SKIN_RGBW_xy>
+                    <Skin_Ellipse>0.026  0.013  0.252  0.515  -24  0.04  0.02  0.252  0.515  -24</Skin_Ellipse>
+                </mode>
+                <mode Name="EsP3_DarkGame" GenerateType="txt" Txt_Name="Dark_Eye_Protect_EP3.txt">
+                </mode>
+            </PQ_modes>
+            <RenderIntentFixList>
+                <Fix FromCategory="Vivid" ToRenderIntent="258" FixedRenderIntent="259"/>
+                <Fix FromCategory="Vivid" ToRenderIntent="310" FixedRenderIntent="311"/>
+            </RenderIntentFixList>
+        </PQ_Feature>
+        <PQ_Feature PQ_PQModeID="1" Type="SpecialColorMode">
+             <PQ_modes PQModeID="0" Type="ReadColorMode">
+                 <mode Name="LightColor"  Index="1" GenerateType="txt" Txt_Name="Lut3D_LightColor.txt"></mode>
+                 <mode Name="Black"  Index="2" GenerateType="txt" Txt_Name="Lut3D_Black.txt"></mode>
+             </PQ_modes>
+             <PQ_modes PQModeID="1" Type="GameColorMode_2">
+                 <mode Name="COMP3" Index="1" GenerateType="txt" Txt_Name="Game_COMP3.txt"></mode>
+                 <mode Name="MOBA"  Index="2" GenerateType="txt" Txt_Name="Game_MOBA.txt"></mode>
+                 <mode Name="FPS"   Index="3" GenerateType="txt" Txt_Name="Game_FPS.txt"></mode>
+                 <mode Name="RPG"   Index="4" GenerateType="txt" Txt_Name="Game_RPG.txt"></mode>
+                 <mode Name="OTOME" Index="5" GenerateType="txt" Txt_Name="Game_OTOME.txt"></mode>
+             </PQ_modes>
+             <PQ_modes PQModeID="2" Type="GameFilter">
+                 <mode Name="OTOME_Fliter" Index="1"  GenerateType="txt" Txt_Name="Game_OTOME_Fliter.txt"></mode>
+                 <mode Name="MOBA_Fliter"  Index="2"  GenerateType="txt" Txt_Name="Game_MOBA_Fliter.txt"></mode>
+                 <mode Name="FPS_Fliter"   Index="3"  GenerateType="txt" Txt_Name="Game_FPS_Fliter.txt"></mode>
+                 <mode Name="HighDynamicRange_Fliter" Index="4"  GenerateType="txt" Txt_Name="Game_HighDynamicRange_Fliter.txt"></mode>
+                 <mode Name="ColorInvert_Fliter" Index="5"  GenerateType="txt" Txt_Name="Game_ColorInvert_Fliter.txt"></mode>
+                 <mode Name="Vivid_Fliter" Index="6"  GenerateType="txt" Txt_Name="Game_Vivid_Fliter.txt"></mode>
+                 <mode Name="OldMovie_Fliter" Index="7"  GenerateType="txt" Txt_Name="Game_OldMovie_Fliter.txt"></mode>
+                 <mode Name="NightVision_Fliter" Index="8" GenerateType="txt" Txt_Name="Game_NightVision_Fliter.txt"></mode>
+                 <mode Name="Game_RPG_Fliter" Index="9" GenerateType="txt" Txt_Name="Game_RPG.txt"></mode>
+             </PQ_modes>
+        </PQ_Feature>
+	</Panel>
+</root>

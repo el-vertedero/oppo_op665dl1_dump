@@ -1,0 +1,642 @@
+{
+  "algoTraversalRely": {
+    "rely": [
+      {
+        "relyId": 1,
+        "condition": {
+          "or": {
+            "eq": [
+              "tripodEnable",
+              1
+            ],
+            "not_eq": [
+              "tripodEnable",
+              0
+            ]
+          }
+        },
+        "relyResult": {
+          "eq": [
+            "captureMode",
+            "APS_CAPMODE_REAR_NIGHT"
+          ]
+        }
+      },
+      {
+        "relyId": 1,
+        "condition": {
+          "and": {
+            "eq": [
+              "captureMode",
+              "APS_CAPMODE_REAR_NORMAL"
+            ],
+            "or1": {
+              "eq": [
+                "highPicSizeEnable",
+                1
+              ],
+              "not_eq": [
+                "highPicSizeEnable",
+                0
+              ]
+            }
+          }
+        },
+        "relyResult": {
+          "eq": [
+            "multiCameraMode",
+            "USE_SINGLE_MODE"
+          ]
+        }
+      },
+      {
+        "relyId": 1,
+        "condition": {
+          "or": {
+            "eq": [
+              "paramsHolder->open_supertext",
+              1
+            ],
+            "not_eq": [
+              "paramsHolder->open_supertext",
+              0
+            ]
+          }
+        },
+        "relyResult": {
+          "eq": [
+            "captureMode",
+            "APS_CAPMODE_SUPER_TEXT"
+          ]
+        }
+      },
+      {
+        "relyId": 1,
+        "condition": {
+          "or": {
+            "eq": [
+              "highPicSizeEnable",
+              1
+            ],
+            "not_eq": [
+              "highPicSizeEnable",
+              0
+            ]
+          }
+        },
+        "relyResult": {
+          "eq": [
+            "captureMode",
+            "APS_CAPMODE_REAR_NORMAL"
+          ]
+        }
+      },
+      {
+        "relyId": 1,
+        "condition": {
+          "eq": [
+            "isSupportHR2Dol",
+            true
+          ]
+        },
+        "relyResult": {
+          "eq": [
+            "captureMode",
+            "APS_CAPMODE_REAR_NORMAL"
+          ]
+        }
+      },
+      {
+        "relyId": 1,
+        "condition": {
+          "eq": [
+            "currentPipeline",
+            0
+          ]
+        },
+        "relyResult": {
+          "lt": [
+            "zoomRatio",
+            1.0
+          ]
+        }
+      },
+      {
+        "relyId": 1,
+        "condition": {
+          "eq": [
+            "currentPipeline",
+            2
+          ]
+        },
+        "relyResult": {
+          "gt": [
+            "zoomRatio",
+            3.0
+          ]
+        }
+      },
+      {
+        "relyId": 0,
+        "condition": {
+          "eq": [
+            "currentPipeline",
+            0
+          ]
+        },
+        "relyResult": {
+          "lt": [
+            "zoomRatio",
+            1.0
+          ]
+        }
+      },
+      {
+        "relyId": 0,
+        "condition": {
+          "eq": [
+            "currentPipeline",
+            2
+          ]
+        },
+        "relyResult": {
+          "gt": [
+            "zoomRatio",
+            10.0
+          ]
+        }
+      }
+    ],
+    "conditionalFilter": [
+      {
+        "condition": {
+          "and": {
+            "or": {
+              "eq": [
+                "currentPipeline",
+                0
+              ],
+              "eq1": [
+                "currentPipeline",
+                1
+              ],
+              "eq2": [
+                "currentPipeline",
+                2
+              ],
+              "eq3": [
+                "currentPipeline",
+                3
+              ],
+              "eq4": [
+                "currentPipeline",
+                4
+              ],
+              "not_eq": [
+                "currentPipeline",
+                0
+              ],
+              "not_eq1": [
+                "currentPipeline",
+                1
+              ],
+              "not_eq2": [
+                "currentPipeline",
+                2
+              ],
+              "not_eq3": [
+                "currentPipeline",
+                3
+              ]
+            },
+            "or1": {
+              "eq": [
+                "cameraId",
+                1
+              ],
+              "not_eq": [
+                "cameraId",
+                0
+              ],
+              "eq1": [
+                "highPicSizeEnable",
+                1
+              ],
+              "not_eq1": [
+                "highPicSizeEnable",
+                0
+              ],
+              "eq2": [
+                "multiCameraMode",
+                0
+              ],
+              "eq3": [
+                "captureMode",
+                "APS_CAPMODE_REAR_BOKEH"
+              ],
+              "eq4": [
+                "captureMode",
+                "APS_CAPMODE_FRONT_BOKEH"
+              ]
+            }
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "and": {
+            "or": {
+              "eq": [
+                "isSupportHR2Dol",
+                true
+              ],
+              "not_eq": [
+                "isSupportHR2Dol",
+                false
+              ]
+            },
+            "or1": {
+              "eq": [
+                "motionCaptureEnable",
+                1
+              ],
+              "not_eq": [
+                "motionCaptureEnable",
+                0
+              ]
+            }
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "and": {
+            "or": {
+              "eq": [
+                "currentPipeline",
+                0
+              ],
+              "eq1": [
+                "currentPipeline",
+                1
+              ],
+              "eq2": [
+                "currentPipeline",
+                2
+              ]
+            },
+            "eq": [
+              "paramsHolder->full_bining_qbc_open",
+              true
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "eq": [
+              "paramsHolder->key_is_telephoto->false",
+              true
+            ]
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "and": {
+            "or": {
+              "eq": [
+                "aecDolState",
+                0
+              ],
+              "eq1": [
+                "aecDolState",
+                1
+              ],
+              "eq2": [
+                "aecDolState",
+                2
+              ],
+              "eq3": [
+                "aecDolState",
+                3
+              ],
+              "eq4": [
+                "aecDolState",
+                4
+              ]
+            },
+            "eq": [
+              "paramsHolder->full_bining_qbc_open",
+              true
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "and": {
+            "eq": [
+              "aiSceneValue",
+              29
+            ],
+            "elt": [
+              "zoomRatio",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "sensorSupportDcg",
+              true
+            ],
+            "not_eq": [
+              "sensorSupportDcg",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "isSupportMasterModeMAXHQ",
+              true
+            ],
+            "not_eq": [
+              "isSupportMasterModeMAXHQ",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "sensorSupportIzoomQbc",
+              true
+            ],
+            "not_eq": [
+              "sensorSupportIzoomQbc",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "sensorSupport2expIzoomQbc",
+              true
+            ],
+            "not_eq": [
+              "sensorSupport2expIzoomQbc",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "hrDebugMode",
+              1
+            ],
+            "eq1": [
+              "hrDebugMode",
+              2
+            ],
+            "eq2": [
+              "hrDebugMode",
+              3
+            ],
+            "eq3": [
+              "hrDebugMode",
+              4
+            ],
+            "eq4": [
+              "hrDebugMode",
+              5
+            ],
+            "eq5": [
+              "hrDebugMode",
+              6
+            ],
+            "eq6": [
+              "hrDebugMode",
+              7
+            ],
+            "eq7": [
+              "hrDebugMode",
+              8
+            ],
+            "eq8": [
+              "hrDebugMode",
+              9
+            ],
+            "eq9": [
+              "hrDebugMode",
+              10
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "isSupportHR2Dol",
+              true
+            ],
+            "not_eq": [
+              "isSupportHR2Dol",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "and": {
+              "eq": [
+                "currentPipeline",
+                0
+              ],
+              "gt": [
+                "zoomRatio",
+                3.0
+              ]
+            },
+            "and1": {
+              "eq": [
+                "currentPipeline",
+                1
+              ],
+              "lt": [
+                "zoomRatio",
+                1.0
+              ]
+            },
+            "and2": {
+              "eq": [
+                "currentPipeline",
+                2
+              ],
+              "lt": [
+                "zoomRatio",
+                3.0
+              ]
+            }
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "and": {
+              "eq": [
+                "logicCameraId",
+                2
+              ],
+              "eq1": [
+                "isSupportHR2Dol",
+                true
+              ]
+            },
+            "and1": {
+              "eq": [
+                "logicCameraId",
+                3
+              ],
+              "eq1": [
+                "isSupportHR2Dol",
+                true
+              ]
+            },
+            "and2": {
+              "eq": [
+                "logicCameraId",
+                4
+              ],
+              "eq1": [
+                "isSupportHR2Dol",
+                true
+              ]
+            }
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "logicCameraId",
+              2
+            ],
+            "eq1": [
+              "logicCameraId",
+              3
+            ],
+            "eq2": [
+              "logicCameraId",
+              4
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "sensorSupportRemosic",
+              true
+            ],
+            "not_eq": [
+              "sensorSupportRemosic",
+              false
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "or": {
+            "eq": [
+              "isFromMainMenu",
+              false
+            ],
+            "not_eq": [
+              "isFromMainMenu",
+              true
+            ]
+          }
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "egt": [
+              "currentPipeline",
+              3
+            ]
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "egt": [
+              "NeedTest",
+              false
+            ]
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "eq": [
+              "notNeedTest",
+              true
+            ]
+        },
+        "filterResult": false
+      },
+      {
+        "condition": {
+          "eq": [
+              "paramsHolder->depth_of_field_fusion_enable",
+              true
+            ]
+        },
+        "filterResult": false
+      }
+    ]
+  },
+  "fallBackThreshold": {
+    "wide": 1.0,
+    "tele": 3.0
+  }
+}

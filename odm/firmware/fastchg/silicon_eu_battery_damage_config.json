@@ -1,0 +1,432 @@
+{
+    "ocv_table": [
+        {
+            "soc": 100,
+            "voltage": 4485.3
+        },
+        {
+            "soc": 99,
+            "voltage": 4467.8
+        },
+        {
+            "soc": 98,
+            "voltage": 4456.93
+        },
+        {
+            "soc": 97,
+            "voltage": 4447.63
+        },
+        {
+            "soc": 96,
+            "voltage": 4439.37
+        },
+        {
+            "soc": 95,
+            "voltage": 4430.49
+        },
+        {
+            "soc": 94,
+            "voltage": 4421.4
+        },
+        {
+            "soc": 93,
+            "voltage": 4412.7
+        },
+        {
+            "soc": 92,
+            "voltage": 4402.75
+        },
+        {
+            "soc": 91,
+            "voltage": 4393.53
+        },
+        {
+            "soc": 90,
+            "voltage": 4383.78
+        },
+        {
+            "soc": 89,
+            "voltage": 4373.7
+        },
+        {
+            "soc": 88,
+            "voltage": 4363.58
+        },
+        {
+            "soc": 87,
+            "voltage": 4353.54
+        },
+        {
+            "soc": 86,
+            "voltage": 4342.51
+        },
+        {
+            "soc": 85,
+            "voltage": 4331.25
+        },
+        {
+            "soc": 84,
+            "voltage": 4318.7
+        },
+        {
+            "soc": 83,
+            "voltage": 4302.79
+        },
+        {
+            "soc": 82,
+            "voltage": 4278.67
+        },
+        {
+            "soc": 81,
+            "voltage": 4256.37
+        },
+        {
+            "soc": 80,
+            "voltage": 4240.07
+        },
+        {
+            "soc": 79,
+            "voltage": 4226.56
+        },
+        {
+            "soc": 78,
+            "voltage": 4212.83
+        },
+        {
+            "soc": 77,
+            "voltage": 4200.28
+        },
+        {
+            "soc": 76,
+            "voltage": 4187.74
+        },
+        {
+            "soc": 75,
+            "voltage": 4174.39
+        },
+        {
+            "soc": 74,
+            "voltage": 4162.2
+        },
+        {
+            "soc": 73,
+            "voltage": 4149.43
+        },
+        {
+            "soc": 72,
+            "voltage": 4136.8
+        },
+        {
+            "soc": 71,
+            "voltage": 4122.05
+        },
+        {
+            "soc": 70,
+            "voltage": 4106.19
+        },
+        {
+            "soc": 69,
+            "voltage": 4087.85
+        },
+        {
+            "soc": 68,
+            "voltage": 4069.72
+        },
+        {
+            "soc": 67,
+            "voltage": 4051.84
+        },
+        {
+            "soc": 66,
+            "voltage": 4034.7
+        },
+        {
+            "soc": 65,
+            "voltage": 4017.08
+        },
+        {
+            "soc": 64,
+            "voltage": 3998.78
+        },
+        {
+            "soc": 63,
+            "voltage": 3981.24
+        },
+        {
+            "soc": 62,
+            "voltage": 3963.99
+        },
+        {
+            "soc": 61,
+            "voltage": 3946.82
+        },
+        {
+            "soc": 60,
+            "voltage": 3929.74
+        },
+        {
+            "soc": 59,
+            "voltage": 3915.27
+        },
+        {
+            "soc": 58,
+            "voltage": 3902.26
+        },
+        {
+            "soc": 57,
+            "voltage": 3888.49
+        },
+        {
+            "soc": 56,
+            "voltage": 3875.7
+        },
+        {
+            "soc": 55,
+            "voltage": 3862.85
+        },
+        {
+            "soc": 54,
+            "voltage": 3847.69
+        },
+        {
+            "soc": 53,
+            "voltage": 3833.47
+        },
+        {
+            "soc": 52,
+            "voltage": 3820.09
+        },
+        {
+            "soc": 51,
+            "voltage": 3805.39
+        },
+        {
+            "soc": 50,
+            "voltage": 3791.64
+        },
+        {
+            "soc": 49,
+            "voltage": 3779.66
+        },
+        {
+            "soc": 48,
+            "voltage": 3768.25
+        },
+        {
+            "soc": 47,
+            "voltage": 3756.12
+        },
+        {
+            "soc": 46,
+            "voltage": 3743.39
+        },
+        {
+            "soc": 45,
+            "voltage": 3730.86
+        },
+        {
+            "soc": 44,
+            "voltage": 3718.15
+        },
+        {
+            "soc": 43,
+            "voltage": 3705.7
+        },
+        {
+            "soc": 42,
+            "voltage": 3693.81
+        },
+        {
+            "soc": 41,
+            "voltage": 3680.46
+        },
+        {
+            "soc": 40,
+            "voltage": 3668.17
+        },
+        {
+            "soc": 39,
+            "voltage": 3655.87
+        },
+        {
+            "soc": 38,
+            "voltage": 3642.69
+        },
+        {
+            "soc": 37,
+            "voltage": 3629.94
+        },
+        {
+            "soc": 36,
+            "voltage": 3615.48
+        },
+        {
+            "soc": 35,
+            "voltage": 3603.02
+        },
+        {
+            "soc": 34,
+            "voltage": 3590.68
+        },
+        {
+            "soc": 33,
+            "voltage": 3578.9
+        },
+        {
+            "soc": 32,
+            "voltage": 3565.41
+        },
+        {
+            "soc": 31,
+            "voltage": 3554.34
+        },
+        {
+            "soc": 30,
+            "voltage": 3542.89
+        },
+        {
+            "soc": 29,
+            "voltage": 3532.49
+        },
+        {
+            "soc": 28,
+            "voltage": 3521.02
+        },
+        {
+            "soc": 27,
+            "voltage": 3509.19
+        },
+        {
+            "soc": 26,
+            "voltage": 3498.28
+        },
+        {
+            "soc": 25,
+            "voltage": 3489.2
+        },
+        {
+            "soc": 24,
+            "voltage": 3475.99
+        },
+        {
+            "soc": 23,
+            "voltage": 3466.51
+        },
+        {
+            "soc": 22,
+            "voltage": 3456.19
+        },
+        {
+            "soc": 21,
+            "voltage": 3444.79
+        },
+        {
+            "soc": 20,
+            "voltage": 3433.3
+        },
+        {
+            "soc": 19,
+            "voltage": 3421.49
+        },
+        {
+            "soc": 18,
+            "voltage": 3408.99
+        },
+        {
+            "soc": 17,
+            "voltage": 3397.08
+        },
+        {
+            "soc": 16,
+            "voltage": 3383.98
+        },
+        {
+            "soc": 15,
+            "voltage": 3371.22
+        },
+        {
+            "soc": 14,
+            "voltage": 3357.49
+        },
+        {
+            "soc": 13,
+            "voltage": 3343.13
+        },
+        {
+            "soc": 12,
+            "voltage": 3329.95
+        },
+        {
+            "soc": 11,
+            "voltage": 3316.74
+        },
+        {
+            "soc": 10,
+            "voltage": 3303.0
+        },
+        {
+            "soc": 9,
+            "voltage": 3289.88
+        },
+        {
+            "soc": 8,
+            "voltage": 3276.0
+        },
+        {
+            "soc": 7,
+            "voltage": 3263.01
+        },
+        {
+            "soc": 6,
+            "voltage": 3249.06
+        },
+        {
+            "soc": 5,
+            "voltage": 3234.3
+        },
+        {
+            "soc": 4,
+            "voltage": 3218.43
+        },
+        {
+            "soc": 3,
+            "voltage": 3201.63
+        },
+        {
+            "soc": 2,
+            "voltage": 3181.29
+        },
+        {
+            "soc": 1,
+            "voltage": 3158.22
+        },
+        {
+            "soc": 0,
+            "voltage": 3124.58
+        }
+    ],
+    "params": {
+        "relax_abnormal_leak": 1,
+        "relax_current_check_min": -60,
+        "relax_current_check_max": 60,
+        "relax_temp_check_min": 160,
+        "relax_temp_check_max": 450,
+        "cv_abnormal_leak": 1,
+        "cv_voltage": 4500,
+        "cv_current": -188,
+        "cv_enter_vol": -50,
+        "cv_enter_curr": -500,
+        "cv_temp_check_min": 160,
+        "cv_temp_check_max": 450,
+        "volt_diff_abnormal_leak": 0,
+        "volt_diff_allow_current": 60,
+        "volt_diff_start": 200,
+        "volt_diff_confirm": 250,
+        "batt_resistance_mR": 50,
+        "relax_debounce_minutes": 30,
+        "batt_num": 1,
+        "relax_f1_leak_enable": 1,
+        "v2t_func_para_a": 9.009218791670973,
+        "v2t_func_para_b": 4553.771735985029
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "_comment": "Add for PreCache2.0",
+    "_owner": "W9043427",
+    "enable": 1,
+    "enableRE": 1,
+    "record": 0,
+    "version": 20260915,
+    "maxKeySize": 10240,
+    "maxValueSize": 20971520,
+    "maxTotalSize": 104857600,
+    "name": "com.android.systemui",
+    "replayThreadCount": 5,
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.android.systemui/cache"
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.android.systemui/rt"
+        }
+    },
+
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.android.systemui/re"
+        }
+    }
+}

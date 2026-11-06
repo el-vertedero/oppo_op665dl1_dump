@@ -1,0 +1,53 @@
+{
+  "AlgoSetting": {
+    "LogLevel": 1,
+    "processType": 0,
+    "DumpRangeIdx": 0,
+    "FrontCamNum": 1,
+    "RearCamNum": 3,
+    "SwitchFrameNum": 7,
+    "CoherentIoFdEnable": 1,
+    "VideoAIProcPars": [
+      { "comment":"cam0 front",
+        "processEnable": 1,
+        "BoostValue4K": 17,
+        "BoostValue1080P": 0,
+        "Mode4KInputSize": [4096, 2560],
+        "BinNumber": 8,
+        "NrStrength": [0, 51, 76, 102, 127, 153, 178, 204],
+        "DetailStrength": [153, 140, 127, 114, 102, 89, 76, 63],
+        "ISOBinIndex":[800, 1600, 3200, 6400, 9200, 12800, 19200, 25600]
+      },
+      { "comment":"cam1 wide",
+        "processEnable": 1,
+        "BoostValue4K": 25,
+        "BoostValue1080P": 0,
+        "Mode4KInputSize": [4096, 2560],
+        "BinNumber": 8,
+        "NrStrength": [0, 51, 76, 102, 127, 153, 178, 204],
+        "DetailStrength": [153, 140, 127, 114, 102, 89, 76, 63],
+        "ISOBinIndex":[800, 1600, 3200, 6400, 9200, 12800, 19200, 25600]
+      },
+      { "comment":"cam2 ultra wide",
+        "processEnable": 1,
+        "BoostValue4K": 25,
+        "BoostValue1080P": 0,
+        "Mode4KInputSize": [4096, 2560],
+        "BinNumber": 8,
+        "NrStrength": [0, 51, 76, 102, 127, 153, 178, 204],
+        "DetailStrength": [153, 140, 127, 114, 102, 89, 76, 63],
+        "ISOBinIndex":[800, 1600, 3200, 6400, 9200, 12800, 19200, 25600]
+      },
+      { "comment":"cam3 tele",
+        "processEnable": 1,
+        "BoostValue4K": 25,
+        "BoostValue1080P": 0,
+        "Mode4KInputSize": [4096, 2560],
+        "BinNumber": 8,
+        "NrStrength": [0, 51, 76, 102, 127, 153, 178, 204],
+        "DetailStrength": [153, 140, 127, 114, 102, 89, 76, 63],
+        "ISOBinIndex":[800, 1600, 3200, 6400, 9200, 12800, 19200, 25600]
+      }
+    ]
+}
+}

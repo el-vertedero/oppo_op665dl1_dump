@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audio_config>
+    <feature name="USB_SPEECH_ECHO_DELAY" config="yes"/>
+    <feature name="GOODIX_LVIMFS" config="All"/>
+    <feature name="OPLUS_KTV" config="KTV_V2_PCM"/>
+    <feature name="OPLUS_IV_DATA_SUPPORT" config="yes"/>
+    <feature name="OPLUS_RECORD_MUTE_TIME_MS" config="120"/>
+    <feature name="OPLUS_USB_KTV_SUPPORT" config="yes"/>
+    <feature name="OPLUS_AGING_CALIB_RETRY_SUPPORT" config="yes"/>
+    <feature name="OPLUS_ANCMIC_SUPPORT" config="TRUE"/>
+    <feature name="OPLUS_RECORD_FADE_IN_TIME_MS" config="60"/>
+    <feature name="OPLUS_SURROUND_RECORD_TYPE" config="lvacfs"/>
+    <feature name="OPLUS_SMARTPA_PM_SUPPORT" config="yes"/>
+    <feature name="OPLUS_AUDIO_DETECT_SUPPORT" config="V3"/>
+    <feature name="OPLUS_PCM_OPEN_WORKAROUND" config="yes"/>
+    <feature name="OPLUS_BYPASS_MICSWAP_SUPPORT" config="no"/>
+    <feature name="gvoice_adsp_supoort_mode" config="0011"/>
+    <feature name="OPLUS_HDR_RUS" config="no"/>
+    <feature name="oplus_lvve_err_fb" config="yes"/>
+    <feature name="oplus_voice_call_fb" config="OPVE,FB_VER_20,ERR_FB,CALL_INFO"/>
+    <feature name="OPLUS_USE_OLD_DUMP_VERSION" config="yes"/>
+    <feature name="OPLUS_FEEDBACK_DEBUG_SUPPORT" config="yes"/>
+    <feature name="OPLUS_RECORD_INFO_FB" config="yes,mic_num=4"/>
+    <feature name="OPLUS_MMI_MAINHL_ID" config="15"/>
+    <feature name="OPLUS_EM_MMI_NO_TINYPLAY" config="yes"/>
+    <feature name="OPLUS_EM_CALIBRATED_RESULT_CHECK" config="yes"/>
+    <feature name="OPLUS_ENGINEERING_SINGLEMIC_TEST_SUPPORT" config="yes"/>
+    <feature name="OPLUS_ASR_RECORD_MIX_SUPPORT" config="yes"/>
+    <!-- adsp load monitor config start -->
+    <feature name="OPLUS_ADSP_LOAD_MONITOR_SUPPORT" config="yes"/>
+    <!-- default value 500ms -->
+    <feature name="OPLUS_ADSP_LOAD_MONITOR_SET_PERIOD" config="500"/>
+    <!-- default value 90 -->
+    <feature name="OPLUS_ADSP_LOAD_MONITOR_SET_LOAD_THRESHOLD" config="82"/>
+    <!-- default value 2 -->
+    <feature name="OPLUS_ADSP_LOAD_MONITOR_SET_FB_COUNT_THRESHOLD" config="2"/>
+    <!-- bit mask: 0x1:SMARTPA_PM, 0x02:AUD_DET -->
+    <feature name="OPLUS_ADSP_LOAD_MONITOR_DYNAMIC_BYPASS_ALGO" config="3"/>
+    <!-- adsp load monitor config end -->
+    <feature name="OPLUS_FB_MEMORY_LEAK_CHECK" config="yes"/>
+    <feature name="OPLUS_AUDIO_DAEMON_HAL" config="yes"/>
+    <feature name="SKIP_PLAYBACK_NORMAL_INTERRUPT_RATE_ADAPTION" config="yes"/>
+    <feature name="SKIP_CAPTURE_NORMAL_INTERRUPT_RATE_ADAPTION" config="yes"/>
+    <feature name="OPLUS_AUDIO_PPS" config="yes"/>
+    <!-- SGEN_MODE_I32_I33_ON -->
+    <feature name="FTM_SPK_SgenMode" config="59"/>
+    <feature name="OPLUS_SIA_PA_SUPPORT" config="false"/>
+    <feature name="OPLUS_RINGTONE_PLAYBACK" config="yes"/>
+    <!-- AUDIO_DEVICE_OUT_EARPIECE|AUDIO_DEVICE_OUT_SPEAKER 0x3 -->
+    <feature name="OPLUS_AUDIO_VOCAL_HIGHLIGH_DEV_MASK" config="0x3"/>
+    <feature name="OPLUS_FOURMIC_SUPPORT" config="TRUE"/>
+    <feature name="OPLUS_FOURTH_MIC_POSITION" config="BottomR"/>
+    <feature name="OPLUS_UNIDIRECTIONAL_RECORD_SUPPORT" config="TRUE"/>
+    <feature name="PHONECALL_SKIP_AURISYS_CONFIG" config="yes"/>
+    <feature name="OPLUS_RECORD_MIC_NUM" config="2"/>
+    <feature name="OPLUS_RECORD_MIC_REF_NUM" config="2"/>
+    <feature name="OPLUS_RECORD_ALGO_TYPE" config="LVACFS"/>
+    <feature name="OPLUS_VOICE_OPVE" config="yes"/>
+    <feature name="OPLUS_HFCALL_SUPPORT" config="yes"/>
+    <feature name="SKIP_PLAYBACK_NORMAL_INTERRUPT_RATE_ADAPTE" config="yes"/>
+    <feature name="OPLUS_AUDIO_UAD_SUPPORT" config="no"/>
+    <feature name="voice_isolation_enable" config="true"/>
+    <feature name="OPLUS_AUDIO_WIRELESS_CHARGING_SUPPORT" config="yes"/>
+    <!-- Major version(1 digit), Minor version (2 digtis) -->
+    <feature name="OPLUS_RECORD_VERSION" config="410"/>
+    <feature name="OPLUS_AUDIO_LANDSCAPE_OPVE_AVC_SUPPORT" config="yes"/>
+    <feature name="OPLUS_TFA98XX_V6_PA_SUPPORT" config="yes"/>
+    <feature name="OPLUS_VOICE_TRANSLATION_SUPPORT" config="yes"/>
+    <feature name="OPLUS_TFA_PA_SUPPORT" config="true"/>
+    <feature name="OPLUS_SMART_PA_AUTO_CALIB_SUPPORT" config="yes"/>
+    <feature name="SPK_LIB_PATH" config="odm/lib64/libtfa98xx_extamp_intf.so"/>
+    <feature name="OPLUS_AUDIO_HAL_POP_NOISE_OPTIMIZATION" config="yes"/>
+    <feature name="SKIP_SPEECH_ADSP_PROC_DELAY" config="yes"/>
+    <feature name="DMIC_DATA_AMP_CONFIG_COEFF" config="1.5"/>
+    <feature name="OPLUS_RECORD_4CH_NO_BACK_SUPPORT" config="yes"/>
+    <feature name="OPLUS_ENGINEERING_ADCAGING_SUPPORT" config="HDR1"/>
+    <feature name="Set_SpeechCall_CRS_State" config="1"/>
+    <feature name="OPLUS_SMART_PA_CALIB_PARAM_SUPPORT" config="yes"/>
+    <feature name="SPK_DEFAULT_DATA" config="6000,6000"/>
+    <feature name="AGING_ADSP_CRASH_CHECK_SUPPORT" config="yes"/>
+    <feature name="isHACSupported" config="true"/>
+    <feature name="OPLUS_AUDIO_DUMPSYS_CONFIG" config="yes,log=true,level=4,pcmdump=true,slice_ms=500,file_num=5,file_size=400,check_root_version=false"/>
+</audio_config>

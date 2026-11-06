@@ -1,0 +1,1399 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sys_thermal_control_list>
+<version>2026090716</version>
+    <filter-name>sys_thermal_control_list</filter-name>
+    <featureConfigItem>
+        <feature_enable_item booleanVal="true" />
+        <feature_safety_test_enable_item booleanVal="true" />
+        <safety_test_config_item stringVal="01111,10111,11011,11101,11110,00111,01011,01101,01110,10011,10101,10110,11001,11010,11100,11111" />
+        <category_msg_delay_item intVal="3" />
+        <ota_mode_item intVal="0" />
+        <non_big_version_ota_item intVal="1" />
+        <racing_mode_item intVal="-4" />
+        <normal_mode_item intVal="0" />
+        <powersave_mode_item intVal="1" />
+        <safety_thermal_level_item intVal="10" />
+        <game_powersave_mode_item intVal="1" />
+        <aging_thermal_control_enable_item booleanVal="true" />
+        <aging_cpu_level_item intVal="4" />
+        <ambient_temp_low_limit_item intVal="0" />
+        <ambient_temp_upper_limit_item intVal="28" />
+        <app_switch_safety_mode_level_item intVal="5" />
+        <high_temp_safety_level_item intVal="15" />
+        <high_perf_mode_item intVal="-1" />
+        <wifihotspot_auto_close_enable_item  booleanVal="false" />
+        <wireless_charge_hightemp_battery_item intVal="30" />
+        <cpu_strictly_ctrl_delay_item intVal="3" />
+        <max_category_protect_count intVal="10" />
+    </featureConfigItem>
+    <feature name="level">
+        <config name="thermal_cpulevel">
+            <level index="0" maxCpuCore="-1,-1,-1" maxCpuFreq="2000000,3400000,3350000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="2000000,3400000,3350000"/>
+            <level index="1" maxCpuCore="-1,-1,-1" maxCpuFreq="1900000,3200000,2600000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1900000,3400000,3050000"/>
+            <level index="2" maxCpuCore="-1,-1,-1" maxCpuFreq="1700000,3000000,2450000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1900000,3200000,2750000"/>
+            <level index="3" maxCpuCore="-1,-1,-1" maxCpuFreq="1400000,2800000,2450000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1400000,3000000,2450000"/>
+            <level index="4" maxCpuCore="-1,-1,-1" maxCpuFreq="1300000,2600000,2300000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1300000,2800000,2450000"/>
+            <level index="5" maxCpuCore="-1,-1,-1" maxCpuFreq="1500000,2400000,1850000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1500000,2800000,2300000"/>
+            <level index="6" maxCpuCore="-1,-1,-1" maxCpuFreq="1300000,2000000,1700000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1300000,2600000,2300000"/>
+            <level index="7" maxCpuCore="-1,-1,-1" maxCpuFreq="1300000,1900000,1550000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1300000,2400000,2150000"/>
+            <level index="8" maxCpuCore="-1,-1,-1" maxCpuFreq="1100000,1900000,1250000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1100000,2200000,1850000"/>
+            <level index="9" maxCpuCore="-1,-1,-1" maxCpuFreq="1100000,1600000,1100000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="1100000,2000000,1700000"/>
+            <level index="10" maxCpuCore="-1,-1,-1" maxCpuFreq="800000,1400000,1000000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="800000,1600000,1400000"/>
+            <level index="11" maxCpuCore="-1,-1,-1" maxCpuFreq="800000,1200000,900000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="800000,1400000,1100000"/>
+            <level index="12" maxCpuCore="-1,-1,-1" maxCpuFreq="700000,1100000,800000" boostCpuCoreCeiling="-1,-1,-1" boostCeiling="700000,1300000,900000"/>
+            <level index="13" maxCpuCore="2,-1,-1" maxCpuFreq="700000,1400000,700000" boostCpuCoreCeiling="2,-1,-1" boostCeiling="700000,1400000,700000"/>
+            <level index="14" maxCpuCore="-1,-1,0"  maxCpuFreq="700000,900000,700000" boostCpuCoreCeiling="-1,-1,0" boostCeiling="700000,900000,700000"/>
+            <level index="15" maxCpuCore="-1,2,0"   maxCpuFreq="600000,800000,700000" boostCpuCoreCeiling="-1,2,0" boostCeiling="600000,800000,700000"/>
+        </config>
+
+        <config name="thermal_gpulevel">
+            <level index="0" maxGpuCore="-1" maxGpuFreq="1430000000" />
+            <level index="1" maxGpuCore="-1" maxGpuFreq="1092000000" />
+            <level index="2" maxGpuCore="-1" maxGpuFreq="702000000" />
+            <level index="3" maxGpuCore="-1" maxGpuFreq="572000000" />
+            <level index="4" maxGpuCore="-1" maxGpuFreq="338000000" />
+        </config>
+
+        <config name="app_type">
+            <activity name="com.ss.android.ugc.aweme.shortvideo.ui.scan.ScanNewActivity" complex="20002" />
+            <item name="com.oppo.launcher" complex="5001" />
+            <item name="com.android.launcher" complex="5001" />
+            <item name="com.tencent.tmgp.sgame" type="4" />
+            <item name="com.tencent.tmgp.pubgmhd" type="4" />
+            <item name="com.tencent.tmgp.dfm" type="4" />
+            <item name="com.tencent.KiHan" type="4" />
+            <item name="com.tencent.mf.uam" type="4" />
+            <item name="com.tencent.jkchess" type="4" />
+            <item name="com.miHoYo.Yuanshen" type="4" />
+            <item name="com.netease.party.nearme.gamecenter" type="4" />
+            <item name="com.tencent.tmgp.cf" type="4" />
+            <item name="com.tencent.tmgp.cod" type="4" />
+            <item name="com.tencent.lolm" type="4" />
+            <item name="com.miHoYo.hkrpg" type="4" />
+            <item name="com.pi.czrxdfirst" type="4" />
+            <item name="com.tencent.tmgp.codev" type="4" />
+            <item name="com.netease.dwrg.nearme.gamecenter" type="4" />
+            <item name="com.netease.mc.nearme.gamecenter" type="4" />
+            <item name="com.minitech.miniworld.nearme.gamecenter" type="4" />
+            <item name="com.miHoYo.Nap" type="4" />
+            <item name="com.netease.sky.nearme.gamecenter" type="4" />
+            <item name="com.kurogame.mingchao" type="4" />
+            <item name="com.netease.yyslscn" type="4" />
+            <item name="com.tencent.tmgp.speedmobile" type="4" />
+            <item name="com.tencent.nfsonline" type="4" />
+            <item name="com.netease.l22.nearme.gamecenter" type="4" />
+        </config>
+        <config name="feature_list_item">
+            <component name="category_msg_delay_item">
+                <pkg name="com.coloros.gallery3d" delayTime="2"/>
+                <pkg name="com.oplus.camera" delayTime="0"/>
+            </component>
+            <component name="cpu_strictly_ctrl_delay_item">
+                <pkg name="com.coloros.gallery3d" delayTime="0"/>
+            </component>
+        </config>
+        <config name="mode_policy_offset">
+            <item name="outdoor" enable="true" order="10" lux="2000" interval="180" tempOffset="0">
+                <subitem name="com.oppo.camera-com.oplus.camera-com.oplus.camera_scene_153">
+                    <override tempGear="5" brightness="15" />
+                    <override tempGear="6" brightness="1" />
+                    <override tempGear="7" brightness="1" />
+                    <override tempGear="8" brightness="3" />
+                    <override tempGear="9" brightness="4" />
+                    <override tempGear="10" brightness="6" />
+                    <override tempGear="11" brightness="6" />
+                    <override tempGear="12" brightness="6" />
+                    <override tempGear="13" brightness="6" />
+                </subitem>
+            </item>
+        </config>
+    </feature>
+    <thermalPolicyConfigItem>
+        <globalPolicy>
+            <globalPolicy>
+                <gear_config tempGear="0" cpu="0" gpu="-1" restrict="0" brightness="0" charge="30" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="0" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="1" cpu="2" gpu="-1" restrict="0" brightness="0" charge="7" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="0" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="2" cpu="2" gpu="-1" restrict="0" brightness="0" charge="7" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="0" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="3" cpu="5" gpu="-1" restrict="0" brightness="0" charge="7" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="0" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="4" cpu="5" gpu="-1" restrict="0" brightness="0" charge="7" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="2" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="5" cpu="5" gpu="-1" restrict="0" brightness="0" charge="5" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="2" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="6" cpu="6" gpu="-1" restrict="0" brightness="0" charge="3" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="3" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="7" cpu="6" gpu="-1" restrict="0" brightness="15" charge="3" modem="0" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="3" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" cpuPower="-1" ipaweight="-1" boostBreak2="5" boostBreak1="20" />
+                <gear_config tempGear="8" cpu="7" gpu="0" restrict="1" brightness="15" charge="3" modem="1" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="3" disTorch="0" disFrameInsert="0" fps="0" refreshRate="0" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="5" boostBreak1="10" />
+                <gear_config tempGear="9" cpu="9" gpu="1" restrict="3" brightness="4" charge="2" modem="3" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="3" disTorch="0" disFrameInsert="0" fps="0" refreshRate="3" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="3" boostBreak1="10" />
+                <gear_config tempGear="10" cpu="10" gpu="1" restrict="7" brightness="4" charge="2" modem="4" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="4" disTorch="0" disFrameInsert="0" fps="0" refreshRate="3" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="11" cpu="11" gpu="2" restrict="6" brightness="10" charge="2" modem="5" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="4" disTorch="0" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="12" cpu="12" gpu="3" restrict="0" brightness="10" charge="2" modem="6" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="4" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="13" cpu="14" gpu="3" restrict="0" brightness="10" charge="2" modem="6" disFlashlight="0" stopCameraVideo="0" cameraBrightness="0" disCamera="0" disWifiHotSpot="4" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="14" cpu="15" gpu="4" restrict="5" brightness="10" charge="2" modem="6" disFlashlight="1" stopCameraVideo="1" cameraBrightness="0" disCamera="1" disWifiHotSpot="1" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="15" cpu="15" gpu="4" restrict="5" brightness="10" charge="2" modem="6" disFlashlight="1" stopCameraVideo="1" cameraBrightness="0" disCamera="1" disWifiHotSpot="1" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="16" cpu="15" gpu="4" restrict="5" brightness="10" charge="2" modem="6" disFlashlight="1" stopCameraVideo="1" cameraBrightness="0" disCamera="1" disWifiHotSpot="1" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="17" cpu="15" gpu="4" restrict="5" brightness="10" charge="2" modem="6" disFlashlight="1" stopCameraVideo="1" cameraBrightness="0" disCamera="1" disWifiHotSpot="1" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="18" cpu="15" gpu="4" restrict="5" brightness="10" charge="2" modem="6" disFlashlight="1" stopCameraVideo="1" cameraBrightness="0" disCamera="1" disWifiHotSpot="1" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+                <gear_config tempGear="19" cpu="15" gpu="4" restrict="5" brightness="10" charge="2" modem="6" disFlashlight="1" stopCameraVideo="1" cameraBrightness="0" disCamera="1" disWifiHotSpot="1" disTorch="1" disFrameInsert="0" fps="0" refreshRate="1" disVideoSR="1" disOSIE="1" disHBMHB="1" cpuPower="-1" ipaweight="-1" boostBreak2="-1" boostBreak1="-1" />
+            </globalPolicy>
+        </globalPolicy>
+        <safetyTest>
+            <safety_test>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="5" cpu="6" gpu="0" brightness="2" charge="1"  refreshRate="1" disVideoSR="1" />
+                <gear_config tempGear="6" cpu="7" gpu="0" brightness="3" charge="1"  refreshRate="1" disVideoSR="1" />
+                <gear_config tempGear="7" cpu="8" gpu="1" brightness="4" charge="1"  refreshRate="1" disVideoSR="1" />
+                <gear_config tempGear="8" cpu="9" gpu="2" brightness="5" charge="1"  disVideoSR="1" refreshRate="1" />
+                <gear_config tempGear="9" cpu="11" gpu="2" brightness="6" charge="1" disFlashlight="1"  disVideoSR="1" refreshRate="1" />
+                <gear_config tempGear="10" cpu="14" gpu="4" brightness="11" charge="1" disFlashlight="1" stopCameraVideo="1" disVideoSR="1" refreshRate="1" />
+                <gear_config tempGear="11" cpu="15" gpu="4" restrict="5" brightness="11" charge="1" disFlashlight="1" stopCameraVideo="1" disCamera="1" disWifiHotSpot="1" disTorch="1" disVideoSR="1" />
+            </safety_test>
+        </safetyTest>
+        <screenOff>
+            <screen_off>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" restrict="2" charge="0" />
+                <gear_config tempGear="6" cpu="9" gpu="3" restrict="2" charge="0"  />
+                <gear_config tempGear="8" cpu="9" gpu="3" restrict="0" charge="0"  disHBMHB="0" />
+                <gear_config tempGear="10" cpu="9" gpu="3" restrict="0" charge="0" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="9" gpu="3" restrict="4" charge="0" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="9" charge="0"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="0" disFlashlight="0" stopCameraVideo="0" disCamera="0" />
+            </screen_off>
+        </screenOff>
+        <specificActivity>
+            <activity_20002>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="12" speedChargeAdd="1" />
+                <gear_config tempGear="3" charge="7" speedChargeAdd="2" />
+                <gear_config tempGear="4" charge="6" speedChargeAdd="2" />
+                <gear_config tempGear="5" cpu="5" charge="4"  speedChargeAdd="4" />
+                <gear_config tempGear="6" charge="4" speedChargeAdd="2" />
+                <gear_config tempGear="7" cpu="7" charge="4" boostBreak2="10" boostBreak1="20"/>
+                <gear_config tempGear="8" cpu="9"  boostBreak2="5" boostBreak1="10"/>
+                <gear_config tempGear="9" cpu="10" boostBreak2="3" boostBreak1="8"/>
+                <gear_config tempGear="10" cpu="11" />
+                <gear_config tempGear="11" cpu="12" disFlashlight="1" stopCameraVideo="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="14" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" />
+            </activity_20002>
+        </specificActivity>
+        <specific>
+            <com.protopop.brightridge>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" fps="50" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" fps="45" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" fps="40" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="40" disHBMHB="0" />
+            </com.protopop.brightridge>
+            <com.android.settings-com.android.mms-com.android.contacts-com.coloros.calendar-com.coloros.weather2>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" speedChargeAdd="1" />
+                <gear_config tempGear="5" speedChargeAdd="1" />
+                <gear_config tempGear="6" speedChargeAdd="1" />
+                <gear_config tempGear="7" speedChargeAdd="1" />
+                <gear_config tempGear="8" />
+                <gear_config tempGear="9" />
+                <gear_config tempGear="10" disWifiHotSpot="0" />
+                <gear_config tempGear="11" disWifiHotSpot="0" />
+                <gear_config tempGear="13" cpu="12" disWifiHotSpot="0" disTorch="0" />
+                <gear_config tempGear="14" />
+            </com.android.settings-com.android.mms-com.android.contacts-com.coloros.calendar-com.coloros.weather2>
+            <com.oplus.ota>
+                <gear_config tempGear="0" />
+                <gear_config tempGear="1" />
+                <gear_config tempGear="2" />
+                <gear_config tempGear="3" />
+                <gear_config tempGear="4" />
+                <gear_config tempGear="5" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" />
+                <gear_config tempGear="8" />
+                <gear_config tempGear="9" cpu="10" />
+                <gear_config tempGear="10" cpu="11" />
+                <gear_config tempGear="11" />
+                <gear_config tempGear="13" />
+                <gear_config tempGear="14" />
+            </com.oplus.ota>
+            <ai.nreal.nebula.universal>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="4" cpu="0" charge="3" />
+                <gear_config tempGear="5" cpu="7" charge="2" />
+                <gear_config tempGear="6" cpu="7" charge="2" />
+                <gear_config tempGear="7" cpu="8" charge="2" disVideoSR="1" disOSIE="1" />
+                <gear_config tempGear="8" cpu="8" charge="2" disHBMHB="0" />
+                <gear_config tempGear="9" cpu="8" charge="2" refreshRate="0" />
+                <gear_config tempGear="10" cpu="9" charge="2" refreshRate="0" />
+                <gear_config tempGear="11" cpu="10" charge="2"  refreshRate="0" />
+                <gear_config tempGear="12" cpu="11" restrict="4" charge="2" disTorch="0" refreshRate="0" />
+                <gear_config tempGear="14" charge="2" />
+            </ai.nreal.nebula.universal>
+            <com.baidu.BaiduMap-com.autonavi.minimap-com.tencent.map-com.ovital.ovitalMap-com.google.android.apps.maps>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="12" />
+                <gear_config tempGear="3" charge="5" />
+                <gear_config tempGear="4" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" cpu="7" />
+                <gear_config tempGear="7" cpu="8" />
+                <gear_config tempGear="8" cpu="9" charge="2"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="11" charge="2" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="12" charge="2" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="14" restrict="0" charge="2" stopCameraVideo="1"  disHBMHB="0" />
+                <gear_config tempGear="12" cpu="14" charge="2" stopCameraVideo="1"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="15" charge="2" disHBMHB="0" />
+            </com.baidu.BaiduMap-com.autonavi.minimap-com.tencent.map-com.ovital.ovitalMap-com.google.android.apps.maps>
+            <com.sdu.didi.psnger-com.huaxiaozhu.rider-com.jingyao.easybike-com.ichinait.gbpassenger-com.xiaolachuxing.driver>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="12" />
+                <gear_config tempGear="3" charge="5" />
+                <gear_config tempGear="4" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" />
+                <gear_config tempGear="8" cpu="9" charge="2"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="11" charge="2" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="12" charge="2" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="12" restrict="0" charge="2" stopCameraVideo="1"  disHBMHB="0" />
+                <gear_config tempGear="12" cpu="14" charge="2" stopCameraVideo="1"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="15" charge="2" disHBMHB="0" />
+            </com.sdu.didi.psnger-com.huaxiaozhu.rider-com.jingyao.easybike-com.ichinait.gbpassenger-com.xiaolachuxing.driver>
+            <com.tencent.tmgp.sgame-com.tencent.tmgp.sgamece>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.tmgp.sgame-com.tencent.tmgp.sgamece>
+            <com.tencent.tmgp.pubgmhd-com.tencent.ig-com.tencent.tmgp.projectg-com.pubg.krmobile-com.vng.pubgmobile-com.rekoo.pubgm-com.tencent.igce-com.tencent.iglite-com.pubg.imobile>
+                <gear_config tempGear="0" />
+                <gear_config tempGear="2" cpu="-1" charge="7" />
+                <gear_config tempGear="3" cpu="-1" charge="6" />
+                <gear_config tempGear="4" cpu="-1" charge="6" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="5" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" charge="4" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.tmgp.pubgmhd-com.tencent.ig-com.tencent.tmgp.projectg-com.pubg.krmobile-com.vng.pubgmobile-com.rekoo.pubgm-com.tencent.igce-com.tencent.iglite-com.pubg.imobile>
+            <com.tencent.tmgp.codev-com.vgamecrty.projv>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.tmgp.codev-com.vgamecrty.projv>
+            <com.tencent.lolm-com.riotgames.league.wildrift-com.riotgames.internal.wildrift.trunk-com.riotgames.internal.wildrift.test-com.riotgames.league.wildriftvn-com.riotgames.league.wildrifttw>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.lolm-com.riotgames.league.wildrift-com.riotgames.internal.wildrift.trunk-com.riotgames.internal.wildrift.test-com.riotgames.league.wildriftvn-com.riotgames.league.wildrifttw>
+            <com.tencent.jkchess>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.jkchess>
+            <com.miHoYo.Yuanshen-com.miHoYo.ys.bilibili-com.miHoYo.yuanshencb-com.miHoYo.GenshinImpact-com.miHoYo.Nap>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.miHoYo.Yuanshen-com.miHoYo.ys.bilibili-com.miHoYo.yuanshencb-com.miHoYo.GenshinImpact-com.miHoYo.Nap>
+            <com.HoYoverse.hkrpgoversea-com.miHoYo.hkrpg-com.miHoYo.hkrpgcb-com.miHoYo.hkrpg.bilibili>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.HoYoverse.hkrpgoversea-com.miHoYo.hkrpg-com.miHoYo.hkrpgcb-com.miHoYo.hkrpg.bilibili>
+            <com.xiaoji.egggame>
+                <gear_config tempGear="2" cpu="-1" gpu="-1" restrict="0" charge="11" disFlashlight="0" stopCameraVideo="0"  disCamera="0" disWifiHotSpot="0" disTorch="0" fps="0" refreshRate="0" disVideoSR="0" disOSIE="0" disHBMHB="0" />
+                <gear_config tempGear="4" cpu="-1" charge="4" />
+                <gear_config tempGear="5" cpu="-1" charge="3" />
+                <gear_config tempGear="6" cpu="-1" charge="2" />
+                <gear_config tempGear="7" cpu="4" charge="2" />
+                <gear_config tempGear="8" cpu="6" charge="2" disHBMHB="0" />
+                <gear_config tempGear="9" cpu="6" charge="2" fps="0" refreshRate="0" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="6" charge="2" fps="60" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="7" charge="2" stopCameraVideo="1" disTorch="1" fps="50" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="7" charge="2" stopCameraVideo="1"  fps="50" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.xiaoji.egggame>
+            <com.tencent.tmgp.speedmobile-com.tencent.KiHan-com.tencent.tmgp.WePop>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.tmgp.speedmobile-com.tencent.KiHan-com.tencent.tmgp.WePop>
+            <com.tencent.tmgp.cf-com.tencent.tmgp.cod-com.tencent.mf.uam-com.tencent.mf.uamty-com.aqtw.zz-com.tencent.tmgp.gnyx>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.tmgp.cf-com.tencent.tmgp.cod-com.tencent.mf.uam-com.tencent.mf.uamty-com.aqtw.zz-com.tencent.tmgp.gnyx>
+            <com.youzu.bs-com.youzu.bs.nearme.gamecenter-com.tencent.tmgp.supercell.brawlstars-com.netease.x19-com.netease.mc.nearme.gamecenter-com.tencent.tmgp.wdsj666-com.ztgame.bob.op.nearme.gamecenter-com.ztgame.bob>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.youzu.bs-com.youzu.bs.nearme.gamecenter-com.tencent.tmgp.supercell.brawlstars-com.netease.x19-com.netease.mc.nearme.gamecenter-com.tencent.tmgp.wdsj666-com.ztgame.bob.op.nearme.gamecenter-com.ztgame.bob>
+            <com.bairimeng.dmmdzz-com.bairimeng.dmmdzz.nearme.gamecenter-com.tencent.tmgp.bairimeng.dmmdzz-com.ChillyRoom.DungeonShooter-com.ChillyRoom.nearme.gamecenter-com.tencent.tmgp.yqqskp>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.bairimeng.dmmdzz-com.bairimeng.dmmdzz.nearme.gamecenter-com.tencent.tmgp.bairimeng.dmmdzz-com.ChillyRoom.DungeonShooter-com.ChillyRoom.nearme.gamecenter-com.tencent.tmgp.yqqskp>
+            <com.netease.moba-com.tencent.tmgp.kaopu.jzpaj-com.netease.moba.early-com.netease.moba.nearme.gamecenter-com.netease.moba.bili-com.pwrd.xsmdl.laohu-com.tencent.tmgp.xsmdl-com.pwrd.smdl-com.xsmdl.nearme.gamecenter-com.yingxiong.dftk.yx-com.tencent.tmgp.dftkzjzg-com.yingxiong.dftk.nearme.gamecenter-com.miHoYo.bh3-com.miHoYo.bh3.nearme.gamecenter-com.tencent.tmgp.bh3>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.netease.moba-com.tencent.tmgp.kaopu.jzpaj-com.netease.moba.early-com.netease.moba.nearme.gamecenter-com.netease.moba.bili-com.pwrd.xsmdl.laohu-com.tencent.tmgp.xsmdl-com.pwrd.smdl-com.xsmdl.nearme.gamecenter-com.yingxiong.dftk.yx-com.tencent.tmgp.dftkzjzg-com.yingxiong.dftk.nearme.gamecenter-com.miHoYo.bh3-com.miHoYo.bh3.nearme.gamecenter-com.tencent.tmgp.bh3>
+            <com.epicgames.fortnite-com.supercell.brawlstars-com.supercell.clashroyale-com.supercell.clashofclans-com.supercell.clashofclans.nearme.gamecenter-com.tencent.tmgp.supercell.clashofclans>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.epicgames.fortnite-com.supercell.brawlstars-com.supercell.clashroyale-com.supercell.clashofclans-com.supercell.clashofclans.nearme.gamecenter-com.tencent.tmgp.supercell.clashofclans>
+            <com.tencent.tmgp.dnf-com.kurogame.mingchao-com.kurogame.mingchao.bilibili-com.kurogame.mingchao.bytedance.gamecenter-com.netease.yhtj.nearme.gamecenter-com.netease.yhtj-com.netease.l22-com.netease.nshm--com.netease.nshm.nearme.gamecenter>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.tencent.tmgp.dnf-com.kurogame.mingchao-com.kurogame.mingchao.bilibili-com.kurogame.mingchao.bytedance.gamecenter-com.netease.yhtj.nearme.gamecenter-com.netease.yhtj-com.netease.l22-com.netease.nshm--com.netease.nshm.nearme.gamecenter>
+            <com.garena.game.kgvn-com.garena.game.kgth-com.garena.game.kgtw-com.ngame.allstar.eu-com.tencent.ngjp-com.ngame.allstar.india-com.mobile.legends-com.vng.mlbbvn>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.garena.game.kgvn-com.garena.game.kgth-com.garena.game.kgtw-com.ngame.allstar.eu-com.tencent.ngjp-com.ngame.allstar.india-com.mobile.legends-com.vng.mlbbvn>
+            <com.dts.freefireth-com.dts.freefiremax>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.dts.freefireth-com.dts.freefiremax>
+            <com.vng.codmvn-com.activision.callofduty.shooter-com.garena.game.codm-com.tencent.tmgp.kr.codm>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="-1" charge="5" />
+                <gear_config tempGear="3" cpu="-1" charge="3" />
+                <gear_config tempGear="4" cpu="-1" charge="3" />
+                <gear_config tempGear="5" cpu="-1" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="-1" brightness="0" />
+                <gear_config tempGear="7" cpu="-1" brightness="0" />
+                <gear_config tempGear="8" cpu="-1" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" modem="4" />
+                <gear_config tempGear="10" cpu="-1" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="-1" gpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="1" gpu="0" refreshRate="0" restrict="0" brightness="6" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="2" restrict="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="50" disHBMHB="0" />
+            </com.vng.codmvn-com.activision.callofduty.shooter-com.garena.game.codm-com.tencent.tmgp.kr.codm>
+            <com.oppo.daydreamvideo-com.market.heydemo>
+                <gear_config tempGear="0" charge="501" brightness="0" />
+                <gear_config tempGear="2" cpu="9" gpu="1" charge="501" brightness="0" refreshRate="0" />
+                <gear_config tempGear="3" cpu="10" gpu="3" charge="501" brightness="0" refreshRate="0" />
+                <gear_config tempGear="4" cpu="11" gpu="3" charge="501" brightness="0" refreshRate="0" />
+                <gear_config tempGear="10" cpu="11" gpu="3" charge="501" brightness="6" refreshRate="0" />
+            </com.oppo.daydreamvideo-com.market.heydemo>
+            <com.kuaishou.nebula-com.ss.android.ugc.aweme.lite-com.funnypuri.client-com.ss.android.ugc.aweme-com.smile.gifmaker-com.ss.android.ugc.live-com.zhiliaoapp.musically.go-com.kugou.fanxing-in.mohalla.video.lite-com.facebook.katana-com.instagram.android-com.snapchat.android-com.ss.android.ugc.trill>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="12" speedChargeAdd="1" />
+                <gear_config tempGear="3" charge="7" speedChargeAdd="2" />
+                <gear_config tempGear="4" charge="6" speedChargeAdd="2" />
+                <gear_config tempGear="5" cpu="5" charge="4"  speedChargeAdd="4" />
+                <gear_config tempGear="6" charge="4" speedChargeAdd="2" />
+                <gear_config tempGear="7" cpu="7" charge="4" boostBreak2="10" boostBreak1="20"/>
+                <gear_config tempGear="8" cpu="9"  boostBreak2="5" boostBreak1="10"/>
+                <gear_config tempGear="9" cpu="10" boostBreak2="3" boostBreak1="8"/>
+                <gear_config tempGear="10" cpu="11" />
+                <gear_config tempGear="11" cpu="12" disFlashlight="1" stopCameraVideo="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="14" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" />
+            </com.kuaishou.nebula-com.ss.android.ugc.aweme.lite-com.funnypuri.client-com.ss.android.ugc.aweme-com.smile.gifmaker-com.ss.android.ugc.live-com.zhiliaoapp.musically.go-com.kugou.fanxing-in.mohalla.video.lite-com.facebook.katana-com.instagram.android-com.snapchat.android-com.ss.android.ugc.trill>
+            <com.lemon.lv>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="1" />
+                <gear_config tempGear="3" cpu="1" />
+                <gear_config tempGear="4" cpu="2" />
+                <gear_config tempGear="5" cpu="4" />
+                <gear_config tempGear="6" cpu="5" gpu="0" />
+                <gear_config tempGear="7" cpu="5" gpu="0" />
+                <gear_config tempGear="8" gpu="1" />
+                <gear_config tempGear="9" />
+                <gear_config tempGear="10" cpu="9" />
+                <gear_config tempGear="11" cpu="10" />
+                <gear_config tempGear="12" cpu="12" />
+                <gear_config tempGear="13" cpu="12" gpu="4" />
+                <gear_config tempGear="14" />
+            </com.lemon.lv>
+            <com.oppo.camera-com.oplus.camera>
+                <gear_config tempGear="0" cpu="0" />
+                <gear_config tempGear="2" cpu="1" charge="5" />
+                <gear_config tempGear="3" cpu="1" charge="3" />
+                <gear_config tempGear="4" cpu="1" charge="3" />
+                <gear_config tempGear="5" cpu="1" charge="3" />
+                <gear_config tempGear="6" cpu="4" brightness="3" />
+                <gear_config tempGear="7" cpu="4" brightness="3" />
+                <gear_config tempGear="8" cpu="4" brightness="6" disWifiHotSpot="2" refreshRate="3" disHBMHB="0" />
+                <gear_config tempGear="9" cpu="8" brightness="6" disWifiHotSpot="3" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="8" brightness="6" charge="2" disWifiHotSpot="3" refreshRate="1" disHBMHB="0" boostBreak2="2" boostBreak1="3"/>
+                <gear_config tempGear="11" cpu="9" restrict="4" brightness="8" charge="2" disFlashlight="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="12" brightness="11" charge="2" disFlashlight="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="14" gpu="4" brightness="11" charge="2" disFlashlight="1" stopCameraVideo="0" disHBMHB="0" />
+                <gear_config tempGear="14" cpu="14" brightness="11" charge="2" stopCameraVideo="0" disCamera="0" disHBMHB="0" />
+                <gear_config tempGear="15" cpu="14" brightness="11" charge="2" stopCameraVideo="1" disCamera="1" disHBMHB="0" />
+            </com.oppo.camera-com.oplus.camera>
+            <com.baidu.netdisk-com.xunlei.downloadprovider-com.coolapk.market-com.baidu.youavideo>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" />
+                <gear_config tempGear="3" charge="5" />
+                <gear_config tempGear="4" charge="2" />
+                <gear_config tempGear="5" cpu="8" charge="2" />
+                <gear_config tempGear="6" cpu="9" charge="2" />
+                <gear_config tempGear="7" cpu="10" restrict="1" charge="2"  disVideoSR="1" disOSIE="1" />
+                <gear_config tempGear="9" cpu="10" charge="2" disHBMHB="0" />
+                <gear_config tempGear="10" charge="2" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="12" charge="2" stopCameraVideo="1"  disHBMHB="0" />
+                <gear_config tempGear="12" charge="2" stopCameraVideo="1"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" disHBMHB="0" />
+            </com.baidu.netdisk-com.xunlei.downloadprovider-com.coolapk.market-com.baidu.youavideo>
+            <com.oppo.launcher-com.android.launcher>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="2" charge="30" speedChargeAdd="1" />
+                <gear_config tempGear="4" cpu="2" charge="12" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="3" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="5" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="7" cpu="5" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="8" cpu="6" />
+                <gear_config tempGear="9" cpu="7" boostBreak2="3" />
+                <gear_config tempGear="10" cpu="7" boostBreak2="0" boostBreak1="3" />
+                <gear_config tempGear="11" cpu="7" />
+                <gear_config tempGear="12" />
+                <gear_config tempGear="13" cpu="12" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" />
+            </com.oppo.launcher-com.android.launcher>
+            <com.eg.android.AlipayGphone-com.teamtalk.im-com.larksuite.suite-com.alibaba.android.rimet>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="9" />
+                <gear_config tempGear="3" />
+                <gear_config tempGear="4" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" cpu="7" />
+                <gear_config tempGear="8" cpu="8"  />
+                <gear_config tempGear="9" />
+                <gear_config tempGear="10" />
+                <gear_config tempGear="11" cpu="10" stopCameraVideo="1"  disTorch="1" />
+                <gear_config tempGear="12" cpu="10" stopCameraVideo="1"  />
+                <gear_config tempGear="13" cpu="15" stopCameraVideo="1"  />
+                <gear_config tempGear="14" />
+            </com.eg.android.AlipayGphone-com.teamtalk.im-com.larksuite.suite-com.alibaba.android.rimet>
+            <com.tencent.mm-com.tencent.mobileqq-com.whatsapp>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="12"  speedChargeAdd="1"/>
+                <gear_config tempGear="3" charge="9"  speedChargeAdd="1" />
+                <gear_config tempGear="4" charge="8" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="5" charge="6" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="5" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="7" cpu="6" speedChargeAdd="1" boostBreak2="10" boostBreak1="20"/>
+                <gear_config tempGear="8" cpu="8"  boostBreak2="6" boostBreak1="10"/>
+                <gear_config tempGear="9" boostBreak2="6" boostBreak1="8"/>
+                <gear_config tempGear="10" boostBreak2="1" boostBreak1="2"/>
+                <gear_config tempGear="11" cpu="10" stopCameraVideo="1"  disTorch="1" />
+                <gear_config tempGear="12" cpu="10" stopCameraVideo="1"  />
+                <gear_config tempGear="13" cpu="15" stopCameraVideo="1"  />
+                <gear_config tempGear="14" />
+            </com.tencent.mm-com.tencent.mobileqq-com.whatsapp>
+            <com.android.chrome-com.heytap.browser-com.UCMobile-com.tencent.mtt-com.quark.browser-com.baidu.browser-com.cat.readall>
+                <gear_config tempGear="0" modem="0" />
+                <gear_config tempGear="1" charge="30" modem="0" />
+                <gear_config tempGear="2" charge="30" modem="0" />
+                <gear_config tempGear="3" charge="7" speedChargeAdd="2" modem="0" />
+                <gear_config tempGear="4" charge="7" speedChargeAdd="2" modem="0" />
+                <gear_config tempGear="5" charge="7" speedChargeAdd="1" modem="0" />
+                <gear_config tempGear="6" charge="7" modem="0" />
+                <gear_config tempGear="7" charge="5" modem="0" />
+                <gear_config tempGear="8" charge="5" modem="2" />
+                <gear_config tempGear="9" modem="3" />
+                <gear_config tempGear="10" modem="4" />
+                <gear_config tempGear="11" modem="5" />
+                <gear_config tempGear="13" cpu="12" modem="6" disTorch="0" />
+                <gear_config tempGear="14" modem="6" />
+            </com.android.chrome-com.heytap.browser-com.UCMobile-com.tencent.mtt-com.quark.browser-com.baidu.browser-com.cat.readall>
+            <com.zhihu.android-com.baidu.searchbox-com.xingin.xhs>
+                <gear_config tempGear="0" />
+                <gear_config tempGear="1" charge="30" />
+                <gear_config tempGear="2" charge="30" />
+                <gear_config tempGear="3" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="4" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="5" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="6" charge="5" />
+                <gear_config tempGear="7" charge="2" />
+                <gear_config tempGear="8" charge="2" />
+                <gear_config tempGear="9" />
+                <gear_config tempGear="10" />
+                <gear_config tempGear="11" />
+                <gear_config tempGear="13" cpu="12" disTorch="0" />
+                <gear_config tempGear="14" />
+            </com.zhihu.android-com.baidu.searchbox-com.xingin.xhs>
+            <com.tencent.qqlive-com.youku.phone-com.qiyi.video-com.tencent.qqsports-com.google.android.youtube-com.netflix.mediaclient-com.amazon.avod.thirdpartyclient-com.phoenix.read>
+                <gear_config tempGear="0" />
+                <gear_config tempGear="2" cpu="0" charge="30" />
+                <gear_config tempGear="3" charge="10" speedChargeAdd="1" />
+                <gear_config tempGear="4" charge="9" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="6" charge="7" />
+                <gear_config tempGear="6" charge="5" speedChargeAdd="2" />
+                <gear_config tempGear="7" cpu="8" charge="5" />
+                <gear_config tempGear="8" cpu="10" />
+                <gear_config tempGear="9" cpu="12" />
+                <gear_config tempGear="10" cpu="12" />
+                <gear_config tempGear="11" cpu="12" disFlashlight="1" stopCameraVideo="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="14" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" />
+            </com.tencent.qqlive-com.youku.phone-com.qiyi.video-com.tencent.qqsports-com.google.android.youtube-com.netflix.mediaclient-com.amazon.avod.thirdpartyclient-com.phoenix.read>
+            <com.tencent.weishi>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="12" />
+                <gear_config tempGear="3" charge="12" />
+                <gear_config tempGear="4" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="2" />
+                <gear_config tempGear="6" charge="2" />
+                <gear_config tempGear="7" cpu="7" charge="2" />
+                <gear_config tempGear="8" cpu="8" charge="2"  />
+                <gear_config tempGear="9" cpu="8" charge="2" />
+                <gear_config tempGear="10" cpu="9" charge="2" />
+                <gear_config tempGear="11" cpu="10" charge="2" stopCameraVideo="1"  />
+                <gear_config tempGear="12" cpu="10" charge="2" stopCameraVideo="1"  disTorch="0" />
+                <gear_config tempGear="13" cpu="15" charge="2" stopCameraVideo="1"  />
+                <gear_config tempGear="14" charge="2" />
+            </com.tencent.weishi>
+            <org.zwanoo.android.speedtest-org.zwanoo.android.speedtest.china-com.oplus.autotest.nct-com.huawei.smarthome-make.more.r2d2.cellular_z-cn.nokia.speedtest5g-com.ruijie.wifim-com.huawei.genexcloud.speedtest-net.he.networktools-com.ugreen.nas-com.synology.DSfile>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="0" charge="5" />
+                <gear_config tempGear="4" cpu="0" charge="3"/>
+                <gear_config tempGear="7" cpu="9" />
+                <gear_config tempGear="8" cpu="10"  />
+                <gear_config tempGear="9" cpu="11" />
+                <gear_config tempGear="10" cpu="11" disWifiHotSpot="0" />
+                <gear_config tempGear="11" disWifiHotSpot="0" />
+                <gear_config tempGear="12" cpu="11" disWifiHotSpot="0" disTorch="0"/>
+                <gear_config tempGear="14" disWifiHotSpot="0" />
+            </org.zwanoo.android.speedtest-org.zwanoo.android.speedtest.china-com.oplus.autotest.nct-com.huawei.smarthome-make.more.r2d2.cellular_z-cn.nokia.speedtest5g-com.ruijie.wifim-com.huawei.genexcloud.speedtest-net.he.networktools-com.ugreen.nas-com.synology.DSfile>
+            <com.lunarlabs.panda>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="0" charge="5" fps="60" refreshRate="1" />
+                <gear_config tempGear="4" cpu="0" charge="3" fps="60" refreshRate="1" />
+                <gear_config tempGear="6" fps="60" refreshRate="1" />
+                <gear_config tempGear="7" cpu="9" fps="60" refreshRate="1" />
+                <gear_config tempGear="8" cpu="10" fps="60" refreshRate="1" />
+                <gear_config tempGear="9" cpu="11" fps="60" refreshRate="1" />
+                <gear_config tempGear="10" cpu="11" fps="60" refreshRate="1" />
+                <gear_config tempGear="11" fps="60" />
+                <gear_config tempGear="12" cpu="11" disTorch="0" fps="60" />
+                <gear_config tempGear="14" fps="60" />
+            </com.lunarlabs.panda>
+            <com.heytap.market-com.android.vending-com.oplus.logtrial-com.heytap.ocsp.client-com.oplus.logkit>
+                <gear_config tempGear="0" modem="0" />
+                <gear_config tempGear="2" cpu="0" modem="0" />
+                <gear_config tempGear="3" charge="5" modem="0" />
+                <gear_config tempGear="4" charge="2" modem="0" />
+                <gear_config tempGear="5" cpu="8" charge="2" modem="0" />
+                <gear_config tempGear="6" cpu="9" charge="2" modem="0" />
+                <gear_config tempGear="7" cpu="10" restrict="1" charge="2" modem="0" disVideoSR="1" disOSIE="1" />
+                <gear_config tempGear="8" cpu="10" charge="2" modem="2" disHBMHB="0" />
+                <gear_config tempGear="9" cpu="10" charge="2" modem="3" disHBMHB="0" />
+                <gear_config tempGear="10" charge="2" modem="4" disWifiHotSpot="0" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="12" charge="2" modem="5" disWifiHotSpot="0" stopCameraVideo="1"  disHBMHB="0" />
+                <gear_config tempGear="12" charge="2" modem="6" disWifiHotSpot="0" stopCameraVideo="1"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" modem="6" disHBMHB="0" />
+            </com.heytap.market-com.android.vending-com.oplus.logtrial-com.heytap.ocsp.client-com.oplus.logkit>
+            <com.primatelabs.parkdale-com.primatelabs.parkdale.corporate-com.primatelabs.geekbench5.corporate-com.primatelabs.geekbench5-com.antutu.ABenchMark-com.futuremark.pcmark.android.benchmark-com.futuremark.dmandroid.application-com.antutu.benchmark.full-com.ludashi.benchmark-com.ludashi.benchmark2-com.ludashi.benchmark.play-net.kishonti.gfxbench-net.kishonti.gfxbench.v50006.corporate-net.kishonti.gfxbench.gl.v50000.corporate-com.primatelabs.geekbench6.corporate-com.andromeda.androbench2-com.glbenchmark.glbenchmark27-com.primatelabs.geekbench7-com.primatelabs.geekbench6-org.benchmark.demo>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="0" />
+                <gear_config tempGear="5" cpu="0" />
+                <gear_config tempGear="6" cpu="0" />
+                <gear_config tempGear="7" cpu="0" />
+                <gear_config tempGear="8" cpu="0" restrict="0" />
+                <gear_config tempGear="9" cpu="0" restrict="1" />
+                <gear_config tempGear="10" cpu="0" gpu="2" restrict="0" />
+                <gear_config tempGear="11" cpu="0" restrict="4" />
+                <gear_config tempGear="12" cpu="0" />
+                <gear_config tempGear="13" cpu="14" />
+                <gear_config tempGear="14" cpu="14" />
+            </com.primatelabs.parkdale-com.primatelabs.parkdale.corporate-com.primatelabs.geekbench5.corporate-com.primatelabs.geekbench5-com.antutu.ABenchMark-com.futuremark.pcmark.android.benchmark-com.futuremark.dmandroid.application-com.antutu.benchmark.full-com.ludashi.benchmark-com.ludashi.benchmark2-com.ludashi.benchmark.play-net.kishonti.gfxbench-net.kishonti.gfxbench.v50006.corporate-net.kishonti.gfxbench.gl.v50000.corporate-com.primatelabs.geekbench6.corporate-com.andromeda.androbench2-com.glbenchmark.glbenchmark27-com.primatelabs.geekbench7-com.primatelabs.geekbench6-org.benchmark.demo>
+            <com.oplus.engineermode-com.oplus.engineercamera>
+                <gear_config tempGear="0" brightness="0" />
+                <gear_config tempGear="3" cpu="0" brightness="0" charge="0" />
+                <gear_config tempGear="4" cpu="6" brightness="0" charge="11" />
+                <gear_config tempGear="6" brightness="0" charge="7" />
+                <gear_config tempGear="7" brightness="0" charge="7" />
+                <gear_config tempGear="8" brightness="0" charge="7" />
+                <gear_config tempGear="9" brightness="0" charge="7" />
+                <gear_config tempGear="10" brightness="0" charge="7" />
+                <gear_config tempGear="11" restrict="0" brightness="0" charge="4" />
+                <gear_config tempGear="13" cpu="12" restrict="4" brightness="0" charge="4" disTorch="0" />
+                <gear_config tempGear="14" restrict="0" brightness="12" charge="4" />
+                <gear_config tempGear="16" brightness="12" charge="4" />
+            </com.oplus.engineermode-com.oplus.engineercamera>
+            <com.coloros.gallery3d>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" />
+                <gear_config tempGear="4" />
+                <gear_config tempGear="5" />
+                <gear_config tempGear="6" cpu="5" />
+                <gear_config tempGear="7" cpu="5" />
+                <gear_config tempGear="8" cpu="6" disWifiHotSpot="2" />
+                <gear_config tempGear="9" cpu="8" disWifiHotSpot="2" />
+                <gear_config tempGear="10" cpu="9" refreshRate="1" />
+                <gear_config tempGear="11" />
+                <gear_config tempGear="12" />
+                <gear_config tempGear="13" />
+                <gear_config tempGear="14" />
+            </com.coloros.gallery3d>
+            <com.coloros.oshare-com.oplus.oshare>
+                <gear_config tempGear="0" cpu="13" gpu="4" brightness="0" />
+                <gear_config tempGear="3" cpu="13" gpu="4" charge="2" brightness="0" thermalSerious="0"/>
+                <gear_config tempGear="5" cpu="13" gpu="4" restrict="1" brightness="11" charge="2" thermalSerious="0" />
+                <gear_config tempGear="6" cpu="13" gpu="4" brightness="11" charge="2" thermalSerious="1300" wifi="6"/>
+                <gear_config tempGear="8" cpu="14" gpu="4" restrict="0" brightness="11" charge="2"  disHBMHB="0" thermalSerious="1300" wifi="6"/>
+                <gear_config tempGear="9" cpu="14" gpu="4" restrict="0" brightness="11" charge="2"  disHBMHB="0" thermalSerious="1300" wifi="6"/>
+                <gear_config tempGear="11" cpu="14" gpu="4" restrict="0" brightness="11" charge="2" disWifiHotSpot="0" disHBMHB="0" thermalSerious="1300" wifi="6"/>
+                <gear_config tempGear="13" cpu="14" gpu="4" restrict="0" brightness="11" charge="2" disWifiHotSpot="0" disHBMHB="0" thermalSerious="1300" wifi="6"/>
+            </com.coloros.oshare-com.oplus.oshare>
+            <com.coloros.backuprestore>
+                <gear_config tempGear="0" brightness="0" />
+                <gear_config tempGear="1" cpu="5" gpu="4" brightness="0" />
+                <gear_config tempGear="3" cpu="5" gpu="4" brightness="0" charge="2" thermalSerious="0" />
+                <gear_config tempGear="5" cpu="7" gpu="4" restrict="1" brightness="11" charge="2" thermalSerious="0" />
+                <gear_config tempGear="6" cpu="7" gpu="4" charge="2" brightness="11" thermalSerious="1300" />
+                <gear_config tempGear="8" cpu="10" gpu="4" restrict="0" charge="2"  brightness="11" disHBMHB="0" thermalSerious="1300" />
+                <gear_config tempGear="9" cpu="12" gpu="4" restrict="0" charge="2"  brightness="11" disHBMHB="0" thermalSerious="1300" />
+                <gear_config tempGear="11" cpu="14" gpu="4" restrict="0" charge="2" brightness="11" disWifiHotSpot="0" disHBMHB="0" thermalSerious="1300" />
+            </com.coloros.backuprestore>
+            <com.taobao.taobao-com.xunmeng.pinduoduo-com.sankuai.meituan-com.jingdong.app.mall-me.ele>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" charge="7" speedChargeAdd="2" />
+                <gear_config tempGear="4" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="6" charge="3" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="7" speedChargeAdd="1" />
+                <gear_config tempGear="7" cpu="7" charge="2" speedChargeAdd="1"  />
+                <gear_config tempGear="8" cpu="8" charge="2" />
+                <gear_config tempGear="9" cpu="10" refreshRate="3" />
+                <gear_config tempGear="10" cpu="11" />
+                <gear_config tempGear="11" cpu="12" />
+            </com.taobao.taobao-com.xunmeng.pinduoduo-com.sankuai.meituan-com.jingdong.app.mall-me.ele>
+            <com.sina.weibo-com.ss.android.article.news-com.ss.android.article.lite>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="4" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="6" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="7" />
+                <gear_config tempGear="7" cpu="7"  charge="2" />
+                <gear_config tempGear="8" cpu="8"  charge="2" />
+                <gear_config tempGear="9" cpu="10" />
+                <gear_config tempGear="10" cpu="11" />
+                <gear_config tempGear="11" cpu="12" />
+            </com.sina.weibo-com.ss.android.article.news-com.ss.android.article.lite>
+        </specific>
+        <specificScene>
+            <com.tencent.mm_scene_103-com.tencent.mobileqq_scene_103-com.alibaba.android.rimet_scene_103-com.whatsapp_scene_103>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="10" speedChargeAdd="2" />
+                <gear_config tempGear="3" charge="8" speedChargeAdd="3" />
+                <gear_config tempGear="4" charge="6" speedChargeAdd="3" />
+                <gear_config tempGear="5" cpu="6" charge="4" speedChargeAdd="3"/>
+                <gear_config tempGear="6" charge="3" speedChargeAdd="2"/>
+                <gear_config tempGear="7" cpu="8" charge="3" boostBreak2="10" boostBreak1="20"/>
+                <gear_config tempGear="8" cpu="9" boostBreak2="6" boostBreak1="10"/>
+                <gear_config tempGear="9" cpu="10" boostBreak2="6" boostBreak1="8"/>
+                <gear_config tempGear="10" />
+                <gear_config tempGear="11" stopCameraVideo="1"  disTorch="1" />
+                <gear_config tempGear="12" cpu="14" stopCameraVideo="1"  />
+                <gear_config tempGear="13" cpu="15" stopCameraVideo="1"  />
+                <gear_config tempGear="14" />
+            </com.tencent.mm_scene_103-com.tencent.mobileqq_scene_103-com.alibaba.android.rimet_scene_103-com.whatsapp_scene_103>
+            <com.ss.android.ugc.aweme_scene_105-com.smile.gifmaker_scene_105-com.kugou.fanxing_scene_105-com.facebook.katana_scene_105>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="10"/>
+                <gear_config tempGear="3" charge="10" />
+                <gear_config tempGear="4" charge="7" />
+                <gear_config tempGear="5" cpu="6" charge="5" />
+                <gear_config tempGear="6" charge="4" />
+                <gear_config tempGear="7" cpu="8" charge="4" />
+                <gear_config tempGear="8" cpu="9" charge="4"  />
+                <gear_config tempGear="9" cpu="12" charge="2" />
+                <gear_config tempGear="10" cpu="12" charge="2" />
+                <gear_config tempGear="11" cpu="15" charge="1" disFlashlight="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="15" charge="1" disFlashlight="1" />
+                <gear_config tempGear="13" cpu="15" gpu="4" charge="1" disFlashlight="1" />
+                <gear_config tempGear="14" charge="1" />
+            </com.ss.android.ugc.aweme_scene_105-com.smile.gifmaker_scene_105-com.kugou.fanxing_scene_105-com.facebook.katana_scene_105>
+            <com.coloros.backuprestore_scene_150>
+                <gear_config tempGear="0" cpu="13" gpu="4" brightness="0" />
+                <gear_config tempGear="3" cpu="13" gpu="4" charge="2" brightness="0" thermalSerious="0" />
+                <gear_config tempGear="5" cpu="13" gpu="4" restrict="1" brightness="11" charge="2" thermalSerious="0" />
+                <gear_config tempGear="6" cpu="13" gpu="4" brightness="11" charge="2" thermalSerious="1300" />
+                <gear_config tempGear="8" cpu="13" gpu="4" restrict="0" brightness="11" charge="2"  disHBMHB="0" thermalSerious="1300" />
+                <gear_config tempGear="9" cpu="15" gpu="4" restrict="0" brightness="11" charge="2"  disHBMHB="0" thermalSerious="1300" wifi="14"/>
+                <gear_config tempGear="11" cpu="15" gpu="4" restrict="0" brightness="11" charge="2" disWifiHotSpot="0" disHBMHB="0" thermalSerious="1300" wifi="10"/>
+                <gear_config tempGear="13" cpu="15" gpu="4" restrict="0" brightness="11" charge="2" disWifiHotSpot="0" disHBMHB="0" thermalSerious="1300" wifi="6"/>
+            </com.coloros.backuprestore_scene_150>
+            <com.oplus.camera_scene_153>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="1" charge="5" />
+                <gear_config tempGear="3" cpu="1" charge="3" />
+                <gear_config tempGear="4" cpu="1" charge="3" />
+                <gear_config tempGear="5" cpu="1" charge="3" />
+                <gear_config tempGear="6" cpu="4" brightness="3" />
+                <gear_config tempGear="7" cpu="4" brightness="3" />
+                <gear_config tempGear="8" cpu="4" brightness="6" disWifiHotSpot="2" refreshRate="3"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="8" brightness="6" disWifiHotSpot="3" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="8" brightness="6" charge="2" disWifiHotSpot="3" refreshRate="1"  disHBMHB="0" boostBreak2="2" boostBreak1="3"/>
+                <gear_config tempGear="11" cpu="8" restrict="4" brightness="8" charge="2" disFlashlight="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="8" brightness="11" charge="2" disFlashlight="1" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="8" gpu="4" brightness="11" charge="2" disFlashlight="1" stopCameraVideo="0" disHBMHB="0" />
+                <gear_config tempGear="14" cpu="14" brightness="11" charge="2" stopCameraVideo="0" disCamera="0" disHBMHB="0" />
+                <gear_config tempGear="15" cpu="14" brightness="11" charge="2" stopCameraVideo="1" disCamera="1" disHBMHB="0" />
+            </com.oplus.camera_scene_153>
+            <com.tencent.mm_scene_301>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="2" charge="10"/>
+                <gear_config tempGear="3" cpu="6" charge="10" />
+                <gear_config tempGear="4" cpu="6" charge="7" />
+                <gear_config tempGear="5" cpu="6" charge="5" />
+                <gear_config tempGear="6" charge="4" />
+                <gear_config tempGear="7" cpu="8" charge="4" />
+                <gear_config tempGear="8" cpu="9" charge="4"  />
+                <gear_config tempGear="9" cpu="12" charge="2" />
+                <gear_config tempGear="10" cpu="12" charge="2" />
+                <gear_config tempGear="11" cpu="15" charge="1" disFlashlight="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="15" charge="1" disFlashlight="1" />
+                <gear_config tempGear="13" cpu="15" gpu="4" charge="1" disFlashlight="1" />
+                <gear_config tempGear="14" charge="1" />
+            </com.tencent.mm_scene_301>
+            <com.tencent.mm_scene_302>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="1" charge="12"  speedChargeAdd="1"/>
+                <gear_config tempGear="3" cpu="6" charge="9"  speedChargeAdd="1" />
+                <gear_config tempGear="4" cpu="6" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="6" charge="6" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="6" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="7" cpu="7" speedChargeAdd="1" boostBreak2="10" boostBreak1="20"/>
+                <gear_config tempGear="8" cpu="9"  boostBreak2="6" boostBreak1="10"/>
+                <gear_config tempGear="9" boostBreak2="6" boostBreak1="8"/>
+                <gear_config tempGear="10" boostBreak2="1" boostBreak1="2"/>
+                <gear_config tempGear="11" cpu="10" stopCameraVideo="1"  disTorch="1" />
+                <gear_config tempGear="12" cpu="10" stopCameraVideo="1"  />
+                <gear_config tempGear="13" cpu="15" stopCameraVideo="1"  />
+                <gear_config tempGear="14" />
+            </com.tencent.mm_scene_302>
+        </specificScene>
+        <scene>
+            <scene_16>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" />
+                <gear_config tempGear="8" cpu="10" charge="2"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="12" charge="2" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="12" charge="2" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="14" restrict="0" charge="2" stopCameraVideo="1"  disHBMHB="0" />
+                <gear_config tempGear="12" cpu="14" charge="2" stopCameraVideo="1"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="15" charge="2" disHBMHB="0" />
+            </scene_16>
+            <scene_101>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="9" />
+                <gear_config tempGear="3" />
+                <gear_config tempGear="4" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" cpu="8" />
+                <gear_config tempGear="8" cpu="10"  />
+                <gear_config tempGear="9" cpu="11" />
+                <gear_config tempGear="10" cpu="12" />
+                <gear_config tempGear="11" cpu="12" disFlashlight="1" stopCameraVideo="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="14" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" />
+            </scene_101>
+            <scene_102>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="3"  />
+                <gear_config tempGear="3" charge="3"  />
+                <gear_config tempGear="5" charge="3"  />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7"  />
+                <gear_config tempGear="8" cpu="6"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="8" charge="2" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="12" gpu="3" charge="2" disFlashlight="1" stopCameraVideo="1"  disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="14" gpu="3" charge="2" disFlashlight="1" stopCameraVideo="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="15" charge="2" disFlashlight="1" stopCameraVideo="1" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" disHBMHB="0" />
+            </scene_102>
+            <scene_103>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="9" />
+                <gear_config tempGear="3" />
+                <gear_config tempGear="4" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" cpu="8" />
+                <gear_config tempGear="8" cpu="10"  />
+                <gear_config tempGear="9" cpu="12" />
+                <gear_config tempGear="10" cpu="12" />
+                <gear_config tempGear="11" cpu="14" disFlashlight="1" stopCameraVideo="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="14" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" />
+            </scene_103>
+            <scene_104>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="5" />
+                <gear_config tempGear="3" cpu="0" charge="3" />
+                <gear_config tempGear="4" cpu="0" charge="3" />
+                <gear_config tempGear="5" cpu="0" brightness="0" charge="3"  />
+                <gear_config tempGear="6" cpu="0" brightness="0" />
+                <gear_config tempGear="7" cpu="0" brightness="0" />
+                <gear_config tempGear="8" cpu="0" gpu="0" brightness="12" charge="2" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="0" gpu="0" brightness="2" charge="2" disHBMHB="0" modem="4" refreshRate="0" />
+                <gear_config tempGear="10" cpu="0" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="0" refreshRate="0" restrict="0" brightness="2" charge="2" fps="0" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="2" charge="2" disFlashlight="1" brightness="6" stopCameraVideo="1" fps="30" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="15" gpu="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="30" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="30" disHBMHB="0" />
+            </scene_104>
+            <scene_105>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" />
+                <gear_config tempGear="3" charge="5" />
+                <gear_config tempGear="4" charge="3" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7"  />
+                <gear_config tempGear="8" cpu="9" charge="2"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="12" charge="2" />
+                <gear_config tempGear="10" cpu="12" charge="2" />
+                <gear_config tempGear="11" cpu="14" charge="2" disFlashlight="1" disTorch="1" />
+                <gear_config tempGear="12" cpu="14" charge="2" disFlashlight="1" />
+                <gear_config tempGear="13" cpu="15" gpu="4" charge="2" disFlashlight="1" />
+                <gear_config tempGear="14" charge="2" />
+            </scene_105>
+            <scene_150>
+                <gear_config tempGear="0" brightness="0" />
+                <gear_config tempGear="3" charge="2" brightness="0" thermalSerious="0" />
+                <gear_config tempGear="5" cpu="12" gpu="4" restrict="1" brightness="11" charge="2" thermalSerious="0" />
+                <gear_config tempGear="6" cpu="14" gpu="4" brightness="11" charge="2" thermalSerious="1300" />
+                <gear_config tempGear="8" cpu="15" gpu="4" restrict="0" brightness="11" charge="2"  disHBMHB="0" thermalSerious="1300" />
+            </scene_150>
+            <scene_151>
+                <gear_config tempGear="0" brightness="0" />
+                <gear_config tempGear="3" charge="2" brightness="0" thermalSerious="0" />
+                <gear_config tempGear="4" cpu="7" gpu="4" brightness="11" charge="2" thermalSerious="1300" />
+                <gear_config tempGear="5" cpu="8" gpu="4" brightness="11" charge="2" thermalSerious="1300" />
+                <gear_config tempGear="6" cpu="9" gpu="4" restrict="1" brightness="11" charge="2" thermalSerious="1300" />
+                <gear_config tempGear="7" cpu="10" gpu="4" brightness="11" charge="2" thermalSerious="1300" />
+                <gear_config tempGear="8" cpu="11" gpu="4" restrict="0" brightness="11" charge="2" disHBMHB="0" thermalSerious="1300" />
+                <gear_config tempGear="9" cpu="14" gpu="4" restrict="0" brightness="11" charge="2"  disHBMHB="0" thermalSerious="1300" />
+            </scene_151>
+        </scene>
+        <category>
+            <category_4>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="5" />
+                <gear_config tempGear="3" cpu="0" charge="3" />
+                <gear_config tempGear="4" cpu="0" charge="3" />
+                <gear_config tempGear="5" cpu="0" brightness="0" charge="3" />
+                <gear_config tempGear="6" cpu="0" brightness="0" />
+                <gear_config tempGear="7" cpu="0" brightness="0" />
+                <gear_config tempGear="8" cpu="0" gpu="0" brightness="12" charge="2"  disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="0" gpu="0" brightness="2" charge="2" disHBMHB="0" modem="4" refreshRate="0" />
+                <gear_config tempGear="10" cpu="0" gpu="0" brightness="2" charge="2" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="2" refreshRate="0" restrict="0" brightness="2" charge="2" fps="0" disHBMHB="0" />
+                <gear_config tempGear="12" charge="2" disFlashlight="1" brightness="6" stopCameraVideo="1" fps="60" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="15" gpu="4" charge="2" brightness="8" disFlashlight="1" stopCameraVideo="1" fps="30" disHBMHB="0" />
+                <gear_config tempGear="14" charge="2" fps="30" disHBMHB="0" />
+            </category_4>
+            <category_9>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" charge="5" />
+                <gear_config tempGear="4" cpu="6" charge="3" />
+                <gear_config tempGear="5" cpu="8" charge="3" />
+                <gear_config tempGear="6" cpu="8" />
+                <gear_config tempGear="7" cpu="9" charge="2" />
+                <gear_config tempGear="8" cpu="10" charge="2"  />
+                <gear_config tempGear="9" cpu="11" charge="2" />
+                <gear_config tempGear="10" cpu="12" charge="2" />
+                <gear_config tempGear="11" cpu="14" charge="2" />
+                <gear_config tempGear="12" cpu="14" charge="2" disTorch="0" />
+                <gear_config tempGear="13" charge="2" stopCameraVideo="1" />
+                <gear_config tempGear="15" charge="2" />
+            </category_9>
+            <category_11>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="2" charge="5" />
+                <gear_config tempGear="5" cpu="2" charge="3" />
+                <gear_config tempGear="6" cpu="2" />
+                <gear_config tempGear="7" cpu="2" />
+                <gear_config tempGear="8" cpu="2" charge="2"  disHBMHB="0" />
+                <gear_config tempGear="9" cpu="2" charge="2" disHBMHB="0" />
+                <gear_config tempGear="10" cpu="12" charge="2" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="14" restrict="0" charge="2" stopCameraVideo="1"  disHBMHB="0" />
+                <gear_config tempGear="12" cpu="14" charge="2" stopCameraVideo="1"  disTorch="0" disHBMHB="0" />
+                <gear_config tempGear="15" charge="2" disHBMHB="0" />
+            </category_11>
+            <category_12-category_14>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="4" cpu="0" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" cpu="7" charge="2" />
+                <gear_config tempGear="8" cpu="9" charge="2" />
+                <gear_config tempGear="9" cpu="10" charge="2" />
+                <gear_config tempGear="10" cpu="12" charge="2" />
+                <gear_config tempGear="11" cpu="12" charge="2" stopCameraVideo="1" />
+                <gear_config tempGear="12" cpu="14" charge="2" stopCameraVideo="1" disTorch="0" />
+                <gear_config tempGear="13" cpu="15" charge="2" stopCameraVideo="1" />
+                <gear_config tempGear="14" charge="2" />
+            </category_12-category_14>
+            <category_16>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="4" cpu="0" charge="5" />
+                <gear_config tempGear="5" cpu="6" charge="3" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" cpu="8" charge="2" />
+                <gear_config tempGear="8" cpu="10" charge="2"  />
+                <gear_config tempGear="9" cpu="11" charge="2" />
+                <gear_config tempGear="10" cpu="12" charge="2" />
+                <gear_config tempGear="11" cpu="12" charge="2" stopCameraVideo="1"  />
+                <gear_config tempGear="12" cpu="14" charge="2" stopCameraVideo="1"  disTorch="0" />
+                <gear_config tempGear="13" cpu="15" charge="2" stopCameraVideo="1"  />
+                <gear_config tempGear="14" charge="2" />
+            </category_16>
+            <category_13>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="2" cpu="0" charge="5" />
+                <gear_config tempGear="3" cpu="0" charge="3" />
+                <gear_config tempGear="4" cpu="0" charge="3" />
+                <gear_config tempGear="5" cpu="0" charge="3" />
+                <gear_config tempGear="6" cpu="0" />
+                <gear_config tempGear="7" cpu="0" />
+                <gear_config tempGear="8" cpu="0" disHBMHB="0" />
+                <gear_config tempGear="9"  disHBMHB="0" />
+                <gear_config tempGear="10" cpu="9" disHBMHB="0" />
+                <gear_config tempGear="11" cpu="10"  disHBMHB="0" />
+                <gear_config tempGear="12" cpu="15" disFlashlight="1"  disHBMHB="0" />
+                <gear_config tempGear="13" cpu="15" gpu="4" disFlashlight="1" stopCameraVideo="1" disHBMHB="0" />
+                <gear_config tempGear="14" disHBMHB="0" />
+            </category_13>
+        </category>
+        <default>
+            <common_config>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="1" speedChargeAdd="2"/>
+                <gear_config tempGear="2" speedChargeAdd="2"/>
+                <gear_config tempGear="3" speedChargeAdd="1" />
+                <gear_config tempGear="4" speedChargeAdd="1" />
+                <gear_config tempGear="5" speedChargeAdd="1" />
+                <gear_config tempGear="6" />
+                <gear_config tempGear="7" />
+                <gear_config tempGear="8" />
+                <gear_config tempGear="9" />
+                <gear_config tempGear="10" />
+                <gear_config tempGear="11" />
+                <gear_config tempGear="12" />
+                <gear_config tempGear="13" />
+                <gear_config tempGear="14" />
+            </common_config>
+        </default>
+        <complexscene>
+            <ocar_casting_common>
+                <gear_config tempGear="0" cpu="0" />
+                <gear_config tempGear="5" wirelesscharge="0" />
+                <gear_config tempGear="6" wirelesscharge="1" />
+                <gear_config tempGear="7" wirelesscharge="1"/>
+                <gear_config tempGear="8" wirelesscharge="1"/>
+                <gear_config tempGear="9" wirelesscharge="1"/>
+                <gear_config tempGear="10" wirelesscharge="1"/>
+                <gear_config tempGear="11" wirelesscharge="1"/>
+                <gear_config tempGear="12" wirelesscharge="1"/>
+                <gear_config tempGear="13" wirelesscharge="1"/>
+                <gear_config tempGear="14" wirelesscharge="1"/>
+                <gear_config tempGear="15" wirelesscharge="1"/>
+            </ocar_casting_common>
+            <float_window_scene_101-float_window_scene_102>
+                <gear_config tempGear="0" cpu="1" charge="15" />
+                <gear_config tempGear="1" cpu="2" charge="7" />
+                <gear_config tempGear="2" cpu="3" charge="5" />
+                <gear_config tempGear="3" cpu="6" charge="3" />
+                <gear_config tempGear="4" cpu="6" charge="3" />
+                <gear_config tempGear="5" cpu="6" charge="2" />
+                <gear_config tempGear="6" cpu="7" charge="2" brightness="3" />
+                <gear_config tempGear="7" cpu="7" charge="2" brightness="3" />
+                <gear_config tempGear="8" cpu="8" charge="2" brightness="6" />
+                <gear_config tempGear="9" cpu="9" charge="1" brightness="6" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="10" charge="1" brightness="6" />
+                <gear_config tempGear="11" cpu="11" charge="1" brightness="10" />
+                <gear_config tempGear="12" cpu="12" charge="1" brightness="10" />
+                <gear_config tempGear="13" cpu="14" charge="1" brightness="10" />
+                <gear_config tempGear="14" charge="1" brightness="10" />
+            </float_window_scene_101-float_window_scene_102>
+            <float_window_scene_103-float_window_scene_105-float_window_scene_16>
+                <gear_config tempGear="0" cpu="2" charge="15" />
+                <gear_config tempGear="1" cpu="3" charge="7" />
+                <gear_config tempGear="2" cpu="4" charge="5" />
+                <gear_config tempGear="3" cpu="7" charge="3" />
+                <gear_config tempGear="4" cpu="7" charge="3" />
+                <gear_config tempGear="5" cpu="7" charge="2"/>
+                <gear_config tempGear="6" cpu="8" charge="2" brightness="3" />
+                <gear_config tempGear="7" cpu="8" charge="1" brightness="3" />
+                <gear_config tempGear="8" cpu="9" charge="1" brightness="6" />
+                <gear_config tempGear="9" cpu="9" charge="1" brightness="6" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="11" gpu="3" refreshRate="1" charge="1" brightness="6" />
+                <gear_config tempGear="11" cpu="12" gpu="4" charge="1" brightness="10" />
+                <gear_config tempGear="12" cpu="14" charge="1" brightness="10" />
+                <gear_config tempGear="13" cpu="15" charge="1" brightness="10" />
+                <gear_config tempGear="14" charge="1" brightness="10" />
+            </float_window_scene_103-float_window_scene_105-float_window_scene_16>
+            <float_window_scene_104>
+                <gear_config tempGear="0" cpu="0" charge="15" />
+                <gear_config tempGear="1" cpu="0" charge="7" />
+                <gear_config tempGear="2" cpu="0" charge="5" />
+                <gear_config tempGear="3" cpu="0" charge="3" />
+                <gear_config tempGear="4" cpu="0" charge="3" />
+                <gear_config tempGear="5" cpu="0" charge="2" brightness="0" />
+                <gear_config tempGear="6" cpu="0" charge="2" brightness="0" />
+                <gear_config tempGear="7" cpu="0" charge="1" brightness="0" />
+                <gear_config tempGear="8" cpu="0" charge="1" brightness="12" modem="4" />
+                <gear_config tempGear="9" cpu="0" charge="1" brightness="2" boostBreak2="-1" modem="4" />
+                <gear_config tempGear="10" cpu="0" gpu="3" refreshRate="1" charge="1" brightness="2" />
+                <gear_config tempGear="11" cpu="1" gpu="4" charge="1" brightness="2" />
+                <gear_config tempGear="12" cpu="3" charge="1" brightness="6" />
+                <gear_config tempGear="13" cpu="15" charge="1" brightness="8" />
+                <gear_config tempGear="14" charge="1" brightness="10" />
+            </float_window_scene_104>
+            <category_5001_fw_common-category_5001_fw_scene_101-category_5001_fw_scene_102-category_5001_fw_scene_103-category_5001_fw_scene_104-category_5001_fw_scene_105-category_5001_fw_scene_16>
+                <gear_config tempGear="0" charge="15" />
+                <gear_config tempGear="3" cpu="2" charge="3" />
+                <gear_config tempGear="4" cpu="2" charge="3" />
+                <gear_config tempGear="5" cpu="3" charge="2" />
+                <gear_config tempGear="6" cpu="5" charge="2" brightness="3" />
+                <gear_config tempGear="7" cpu="5" charge="1" brightness="3" />
+                <gear_config tempGear="8" cpu="6" charge="1" brightness="6" />
+                <gear_config tempGear="9" cpu="7" charge="1" brightness="6" boostBreak2="3" />
+                <gear_config tempGear="10" cpu="7" charge="1" brightness="6" />
+                <gear_config tempGear="11" cpu="7" charge="1" brightness="10" />
+                <gear_config tempGear="12" charge="1" brightness="10" />
+                <gear_config tempGear="13" cpu="12" charge="1" brightness="10" disFlashlight="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" charge="1" brightness="10" />
+            </category_5001_fw_common-category_5001_fw_scene_101-category_5001_fw_scene_102-category_5001_fw_scene_103-category_5001_fw_scene_104-category_5001_fw_scene_105-category_5001_fw_scene_16>
+            <category_4_fw_common-category_4_fw_scene_101-category_4_fw_scene_102>
+                <gear_config tempGear="0" charge="15" />
+                <gear_config tempGear="2" cpu="0" charge="3" />
+                <gear_config tempGear="3" cpu="0" charge="2" />
+                <gear_config tempGear="4" cpu="0" charge="2" />
+                <gear_config tempGear="5" cpu="0" brightness="0" charge="1" />
+                <gear_config tempGear="6" cpu="0" brightness="0" charge="1" />
+                <gear_config tempGear="7" cpu="0" brightness="0" charge="1" />
+                <gear_config tempGear="8" cpu="0" gpu="0" brightness="12" charge="1" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="0" gpu="0" brightness="2" charge="1" disHBMHB="0" modem="4" refreshRate="0" boostBreak2="-1"/>
+                <gear_config tempGear="10" cpu="0" gpu="0" brightness="2" charge="1" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="2" gpu="0" refreshRate="3" restrict="0" brightness="2" charge="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="9" gpu="2" refreshRate="1" restrict="4" brightness="6" charge="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="9" gpu="2" refreshRate="1" restrict="4" brightness="8" charge="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" gpu="4" charge="1" fps="50" />
+            </category_4_fw_common-category_4_fw_scene_101-category_4_fw_scene_102>
+            <category_4_fw_scene_103-category_4_fw_scene_104-category_4_fw_scene_105-category_4_fw_scene_16>
+                <gear_config tempGear="0" charge="15" />
+                <gear_config tempGear="2" cpu="2" charge="3" />
+                <gear_config tempGear="3" cpu="2" charge="2" />
+                <gear_config tempGear="4" cpu="2" charge="2" />
+                <gear_config tempGear="5" cpu="0" brightness="0" charge="1" />
+                <gear_config tempGear="6" cpu="0" brightness="0" charge="1" />
+                <gear_config tempGear="7" cpu="0" brightness="0" charge="1" />
+                <gear_config tempGear="8" cpu="0" gpu="0" brightness="12" charge="1" disHBMHB="0" modem="4" />
+                <gear_config tempGear="9" cpu="0" gpu="0" brightness="2" charge="1" disHBMHB="0" modem="4" refreshRate="0" boostBreak2="-1"/>
+                <gear_config tempGear="10" cpu="0" gpu="0" brightness="2" charge="1" disHBMHB="0" refreshRate="0" />
+                <gear_config tempGear="11" cpu="2" gpu="0" refreshRate="3" restrict="0" brightness="2" charge="1" disTorch="1" disHBMHB="0" />
+                <gear_config tempGear="12" cpu="9" gpu="2" refreshRate="1" restrict="4" brightness="6" charge="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="13" cpu="9" gpu="2" refreshRate="1" restrict="4" brightness="8" charge="1" fps="0" disHBMHB="0" />
+                <gear_config tempGear="14" gpu="4" charge="1" fps="50" />
+            </category_4_fw_scene_103-category_4_fw_scene_104-category_4_fw_scene_105-category_4_fw_scene_16>
+            <category_16_fw_common-category_16_fw_scene_101-category_16_fw_scene_102>
+                <gear_config tempGear="0" cpu="1" charge="15" />
+                <gear_config tempGear="1" cpu="3" charge="5" speedChargeAdd="2" />
+                <gear_config tempGear="2" cpu="3" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="3" cpu="6" charge="4" speedChargeAdd="0" />
+                <gear_config tempGear="4" cpu="6" charge="2" speedChargeAdd="0" />
+                <gear_config tempGear="5" cpu="6" charge="2" speedChargeAdd="0" />
+                <gear_config tempGear="6" cpu="7" charge="2" brightness="3" />
+                <gear_config tempGear="7" cpu="7" charge="2" brightness="3" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="8" cpu="8" charge="1" brightness="6" boostBreak2="5" boostBreak1="10" />
+                <gear_config tempGear="9" cpu="10" charge="1" brightness="6" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="11" charge="1" brightness="6" />
+                <gear_config tempGear="11" cpu="12" charge="1" brightness="10" />
+                <gear_config tempGear="12" cpu="12" charge="1" brightness="10" />
+                <gear_config tempGear="13" cpu="15" charge="1" brightness="10" />
+            </category_16_fw_common-category_16_fw_scene_101-category_16_fw_scene_102>
+            <category_16_fw_scene_103-category_16_fw_scene_104-category_16_fw_scene_105-category_16_fw_scene_16>
+                <gear_config tempGear="0" cpu="2" charge="15" />
+                <gear_config tempGear="1" cpu="4" charge="5" speedChargeAdd="2" />
+                <gear_config tempGear="2" cpu="4" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="3" cpu="6" charge="4" speedChargeAdd="0" />
+                <gear_config tempGear="4" cpu="6" charge="2" speedChargeAdd="0" />
+                <gear_config tempGear="5" cpu="7" charge="2" speedChargeAdd="0" />
+                <gear_config tempGear="6" cpu="7" charge="2" brightness="3" />
+                <gear_config tempGear="7" cpu="8" charge="2" brightness="3" boostBreak2="10" boostBreak1="20" />
+                <gear_config tempGear="8" cpu="9" charge="1" brightness="6" boostBreak2="5" boostBreak1="10" />
+                <gear_config tempGear="9" cpu="10" charge="1" brightness="6" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="11" refreshRate="1" charge="1" brightness="6" />
+                <gear_config tempGear="11" cpu="12" charge="1" brightness="10" />
+                <gear_config tempGear="12" cpu="12" charge="1" brightness="10" />
+                <gear_config tempGear="13" cpu="15" charge="1" brightness="10" />
+            </category_16_fw_scene_103-category_16_fw_scene_104-category_16_fw_scene_105-category_16_fw_scene_16>
+            <category_5_fw_common-category_5_fw_scene_101-category_5_fw_scene_102>
+                <gear_config tempGear="0" cpu="1" />
+                <gear_config tempGear="2" cpu="3" charge="7" speedChargeAdd="0" />
+                <gear_config tempGear="3" cpu="6" charge="7" speedChargeAdd="0" />
+                <gear_config tempGear="4" cpu="6" charge="5" speedChargeAdd="0" />
+                <gear_config tempGear="5" cpu="7" charge="4" speedChargeAdd="0" />
+                <gear_config tempGear="6" cpu="7" charge="3" speedChargeAdd="0" brightness="3" />
+                <gear_config tempGear="7" cpu="9" charge="2" brightness="3" />
+                <gear_config tempGear="8" cpu="10" charge="2" brightness="6" />
+                <gear_config tempGear="9" cpu="11" charge="1" brightness="6" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="12" charge="1" brightness="6" refreshRate="1" />
+                <gear_config tempGear="11" cpu="14" charge="1" brightness="10" />
+                <gear_config tempGear="12" cpu="15" charge="1" brightness="10" />
+            </category_5_fw_common-category_5_fw_scene_101-category_5_fw_scene_102>
+            <category_5_fw_scene_103-category_5_fw_scene_104-category_5_fw_scene_105-category_5_fw_scene_16>
+                <gear_config tempGear="0" cpu="2" />
+                <gear_config tempGear="2" cpu="4" charge="10" speedChargeAdd="0" />
+                <gear_config tempGear="3" cpu="6" charge="7" speedChargeAdd="0" />
+                <gear_config tempGear="4" cpu="7" charge="6" speedChargeAdd="0" />
+                <gear_config tempGear="5" cpu="7" charge="4" speedChargeAdd="0" />
+                <gear_config tempGear="6" cpu="8" charge="3" speedChargeAdd="0" brightness="3" />
+                <gear_config tempGear="7" cpu="10" charge="2" brightness="3" />
+                <gear_config tempGear="8" cpu="10" charge="2" brightness="6" />
+                <gear_config tempGear="9" cpu="11" charge="1" brightness="6" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="12" charge="1" refreshRate="1" brightness="6" />
+                <gear_config tempGear="11" cpu="14" charge="1" brightness="10" />
+                <gear_config tempGear="12" cpu="15" charge="1" brightness="10" />
+            </category_5_fw_scene_103-category_5_fw_scene_104-category_5_fw_scene_105-category_5_fw_scene_16>
+            <category_12_fw_common-category_12_fw_scene_101-category_12_fw_scene_102>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="6" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="4" cpu="6" charge="5" speedChargeAdd="0" />
+                <gear_config tempGear="5" cpu="7" charge="2" speedChargeAdd="0" />
+                <gear_config tempGear="6" cpu="7" charge="2" speedChargeAdd="0" brightness="3" />
+                <gear_config tempGear="7" cpu="8" gpu="1" charge="1" speedChargeAdd="1" brightness="3" />
+                <gear_config tempGear="8" cpu="9" gpu="2" charge="1" brightness="6" />
+                <gear_config tempGear="9" cpu="10" gpu="3" charge="1" brightness="6" />
+                <gear_config tempGear="10" cpu="11" gpu="3" charge="1" refreshRate="1" brightness="6" />
+                <gear_config tempGear="11" cpu="12" brightness="10" />
+            </category_12_fw_common-category_12_fw_scene_101-category_12_fw_scene_102>
+            <category_12_fw_scene_103-category_12_fw_scene_104-category_12_fw_scene_105-category_12_fw_scene_16>
+                <gear_config tempGear="0"/>
+                <gear_config tempGear="3" cpu="6" charge="7" speedChargeAdd="1" />
+                <gear_config tempGear="4" cpu="7" charge="5" speedChargeAdd="0" />
+                <gear_config tempGear="5" cpu="7" charge="2" speedChargeAdd="0" />
+                <gear_config tempGear="6" cpu="8" charge="2" speedChargeAdd="0" brightness="3" />
+                <gear_config tempGear="7" cpu="9" gpu="1" charge="2" speedChargeAdd="1" brightness="3" />
+                <gear_config tempGear="8" cpu="10" gpu="2" charge="1" brightness="6" />
+                <gear_config tempGear="9" cpu="11" gpu="3" charge="1" brightness="6" />
+                <gear_config tempGear="10" cpu="11" gpu="3" charge="1" refreshRate="1" brightness="6" />
+                <gear_config tempGear="11" cpu="12" charge="1" brightness="10" />
+            </category_12_fw_scene_103-category_12_fw_scene_104-category_12_fw_scene_105-category_12_fw_scene_16>
+            <category_7_fw_common-category_7_fw_scene_101-category_7_fw_scene_102>
+                <gear_config tempGear="0" cpu="1" charge="9" />
+                <gear_config tempGear="2" cpu="3" charge="7"  speedChargeAdd="1"/>
+                <gear_config tempGear="3" cpu="5" charge="6"  speedChargeAdd="1" />
+                <gear_config tempGear="4" cpu="6" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="6" charge="3" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="6" brightness="3" charge="3" speedChargeAdd="1" />
+                <gear_config tempGear="7" cpu="7" gpu="1" brightness="3" charge="2" speedChargeAdd="1" boostBreak2="10" boostBreak1="20"/>
+                <gear_config tempGear="8" cpu="8" gpu="1" brightness="6" charge="2" boostBreak2="6" boostBreak1="10"/>
+                <gear_config tempGear="9" cpu="9" gpu="2" brightness="6" charge="1" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="11" gpu="3" brightness="6" charge="1" refreshRate="1" />
+                <gear_config tempGear="11" cpu="12" gpu="4" brightness="10" charge="1" stopCameraVideo="1"  disTorch="1" />
+                <gear_config tempGear="12" cpu="12" gpu="4" brightness="10" charge="1" stopCameraVideo="1"  />
+                <gear_config tempGear="13" cpu="14" gpu="4" brightness="10" charge="1" stopCameraVideo="1"  />
+                <gear_config tempGear="14" cpu="15" brightness="10" />
+            </category_7_fw_common-category_7_fw_scene_101-category_7_fw_scene_102>
+            <category_7_fw_scene_103-category_7_fw_scene_104-category_7_fw_scene_105-category_7_fw_scene_16>
+                <gear_config tempGear="0" cpu="2" />
+                <gear_config tempGear="2" cpu="4" charge="9"  speedChargeAdd="1"/>
+                <gear_config tempGear="3" cpu="6" charge="6"  speedChargeAdd="1" />
+                <gear_config tempGear="4" cpu="6" charge="5" speedChargeAdd="1" />
+                <gear_config tempGear="5" cpu="7" charge="3" speedChargeAdd="1" />
+                <gear_config tempGear="6" cpu="7" brightness="3" charge="3" speedChargeAdd="1" />
+                <gear_config tempGear="7" cpu="8" gpu="1" brightness="3" charge="2" speedChargeAdd="1" />
+                <gear_config tempGear="8" cpu="8" gpu="2" brightness="6" charge="2" />
+                <gear_config tempGear="9" cpu="9" gpu="2" brightness="6" charge="1" boostBreak2="-1" />
+                <gear_config tempGear="10" cpu="11" gpu="2" brightness="6" charge="1" refreshRate="1" />
+                <gear_config tempGear="11" cpu="12" gpu="3" brightness="10" charge="1" stopCameraVideo="1"  disTorch="1" />
+                <gear_config tempGear="12" cpu="14" gpu="4" brightness="10" charge="1" stopCameraVideo="1" />
+                <gear_config tempGear="13" cpu="14" gpu="4" brightness="10" charge="1" stopCameraVideo="1" />
+                <gear_config tempGear="14" cpu="15" brightness="10" />
+            </category_7_fw_scene_103-category_7_fw_scene_104-category_7_fw_scene_105-category_7_fw_scene_16>
+        </complexscene>
+</thermalPolicyConfigItem>
+</sys_thermal_control_list>

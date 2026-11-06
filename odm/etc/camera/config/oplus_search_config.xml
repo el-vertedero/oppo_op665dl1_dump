@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<search-infos>
+
+    <version>20260716</version>
+
+    <!-- 一级设置项 start -->
+
+    <!-- 镜头焦段 -->
+    <info>
+        <index_key>pref_lens_focal_length_setting</index_key>
+        <index_title>@string/camera_lens_focal_length</index_title>
+        <index_summary>@string/camera_lens_focal_length</index_summary>
+        <index_keywords>@string/camera_lens_focal_length</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_lens_focal_length</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 锁定镜头 -->
+    <info>
+        <index_key>pref_video_lock_lens_key</index_key>
+        <index_title>@string/camera_video_lock_lens_title</index_title>
+        <index_summary>@string/camera_video_lock_lens_title</index_summary>
+        <index_keywords>@string/camera_video_lock_lens_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_lock_lens_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 锁定白平衡 -->
+    <info>
+        <index_key>pref_video_lock_wb_key</index_key>
+        <index_title>@string/camera_video_lock_wb_title</index_title>
+        <index_summary>@string/camera_video_lock_wb_title</index_summary>
+        <index_keywords>@string/camera_video_lock_wb_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_lock_wb_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 自动调整帧率 -->
+    <info>
+        <index_key>pref_video_auto_fps_setting</index_key>
+        <index_title>@string/camera_video_auto_fps_title</index_title>
+        <index_summary>@string/camera_video_auto_fps_title</index_summary>
+        <index_keywords>@string/camera_video_auto_fps_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_auto_fps_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 码率 -->
+    <info>
+        <index_key>pre_camera_video_bitrate</index_key>
+        <index_title>@string/camera_video_bitrate_title</index_title>
+        <index_summary>@string/camera_video_bitrate_title</index_summary>
+        <index_keywords>@string/camera_video_bitrate_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_bitrate_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 录制中拍照 -->
+    <info>
+        <index_key>pref_live_shot_type_key</index_key>
+        <index_title>@string/camera_live_shot_type_title</index_title>
+        <index_summary>@string/camera_live_shot_type_title</index_summary>
+        <index_keywords>@string/camera_live_shot_type_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_live_shot_type_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 照片查看方向 -->
+    <info>
+        <index_key>pref_photo_preview_rotate_key</index_key>
+        <index_title>@string/camera_photo_rotate</index_title>
+        <index_summary>@string/camera_photo_rotate</index_summary>
+        <index_keywords>@string/camera_photo_rotate</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_photo_rotate</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 智能推荐 -->
+    <info>
+        <index_key>pref_camera_intelligent_recommendation_key</index_key>
+        <index_title>@string/ai_scene_preset_recommend</index_title>
+        <index_summary>@string/ai_scene_preset_recommend</index_summary>
+        <index_keywords>@string/ai_scene_preset_recommend</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/ai_scene_preset_recommend</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- LUMO 凝光影像系统 -->
+    <info>
+        <index_key>pref_lumo_guide_key</index_key>
+        <index_title>@string/lumo_guide_page_title1</index_title>
+        <index_summary>@string/lumo_guide_page_title1</index_summary>
+        <index_keywords>@string/lumo_guide_page_title1</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/lumo_guide_page_title1</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 一级设置项 end -->
+
+    <!-- 二级设置项 start -->
+
+    <!-- 构图辅助 -> 参考线 -->
+    <info>
+        <index_key>pref_composition_assistant_key-pref_camera_reference_line</index_key>
+        <index_title>@string/camera_setting_reference_line</index_title>
+        <index_summary>@string/camera_setting_reference_line</index_summary>
+        <index_keywords>@string/camera_setting_reference_line</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_composition_assistant_title;@string/camera_setting_reference_line</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 构图辅助 -> 中心指示 -->
+    <info>
+        <index_key>pref_composition_assistant_key-pref_assist_center_indicator</index_key>
+        <index_title>@string/camera_setting_center_indicator</index_title>
+        <index_summary>@string/camera_setting_center_indicator</index_summary>
+        <index_keywords>@string/camera_setting_center_indicator</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_composition_assistant_title;@string/camera_setting_center_indicator</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 构图辅助 -> 水平仪 -->
+    <info>
+        <index_key>pref_composition_assistant_key-pref_assist_gradienter</index_key>
+        <index_title>@string/camera_setting_gradienter</index_title>
+        <index_summary>@string/camera_setting_gradienter</index_summary>
+        <index_keywords>@string/camera_setting_gradienter</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_composition_assistant_title;@string/camera_setting_gradienter</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 构图辅助 -> 智能水平校正 -->
+    <info>
+        <index_key>pref_composition_assistant_key-pref_auto_horizontal_correct</index_key>
+        <index_title>@string/camera_setting_auto_horizontal_correct</index_title>
+        <index_summary>@string/camera_setting_auto_horizontal_correct</index_summary>
+        <index_keywords>@string/camera_setting_auto_horizontal_correct</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_composition_assistant_title;@string/camera_setting_auto_horizontal_correct</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 格式 -> 标准 -->
+    <info>
+        <index_key>pref_format_settings_key-standard</index_key>
+        <index_title>@string/camera_setting_standard_resolution</index_title>
+        <index_summary>@string/camera_setting_standard_resolution</index_summary>
+        <index_keywords>@string/camera_setting_standard_resolution</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_capture_format;@string/camera_setting_standard_resolution</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 格式 -> 超清优先 -->
+    <info>
+        <index_key>pref_format_settings_key-high</index_key>
+        <index_title>@string/camera_setting_high_resolution_new</index_title>
+        <index_summary>@string/camera_setting_high_resolution_new</index_summary>
+        <index_keywords>@string/camera_setting_high_resolution_new</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_capture_format;@string/camera_setting_high_resolution_new</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 格式 -> 高效图片存储 -->
+    <info>
+        <index_key>pref_format_settings_key-pref_heif_format_key</index_key>
+        <index_title>@string/camera_heif_format_title</index_title>
+        <index_summary>@string/camera_heif_format_title</index_summary>
+        <index_keywords>@string/camera_heif_format_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_capture_format;@string/camera_heif_format_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 格式 -> 高效视频存储 -->
+    <info>
+        <index_key>pref_format_settings_key-pref_hevc_video_key</index_key>
+        <index_title>@string/camera_hevc_video_title</index_title>
+        <index_summary>@string/camera_hevc_video_title</index_summary>
+        <index_keywords>@string/camera_hevc_video_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_capture_format;@string/camera_hevc_video_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 拍摄模式 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_capture_mode_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_capture_mode</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_capture_mode</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_capture_mode</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_capture_mode</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 闪光灯 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_flash_torch_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_flash_torch</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_flash_torch</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_flash_torch</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_flash_torch</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 风格效果 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_style_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_style</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_style</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_style</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_style</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 美化效果 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_effects_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_effects</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_effects</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_effects</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_effects</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 曝光调整 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_global_ev_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_global_ev</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_global_ev</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_global_ev</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_global_ev</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 自动微距 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_auto_macro_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_auto_macro</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_auto_macro</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_auto_macro</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_auto_macro</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 实况照片 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_livephoto_key</index_key>
+        <index_title>@string/camera_live_photo</index_title>
+        <index_summary>@string/camera_live_photo</index_summary>
+        <index_keywords>@string/camera_live_photo</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_live_photo</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> AI 超清望远 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_aihd_sdsr_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_tele_sdsr_v2</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_tele_sdsr_v2</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_tele_sdsr_v2</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_tele_sdsr_v2</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 人像模式缩放 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_portrait_zoom_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_portrait_zoom</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_portrait_zoom</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_portrait_zoom</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_portrait_zoom</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 专业辅助 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_pro_mode_key</index_key>
+        <index_title>@string/camera_pro_preserve</index_title>
+        <index_summary>@string/camera_pro_preserve</index_summary>
+        <index_keywords>@string/camera_pro_preserve</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_pro_preserve</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 人脸测光 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_lux_priority_key</index_key>
+        <index_title>@string/camera_stting_preserve_settings_lux_priority</index_title>
+        <index_summary>@string/camera_stting_preserve_settings_lux_priority</index_summary>
+        <index_keywords>@string/camera_stting_preserve_settings_lux_priority</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_stting_preserve_settings_lux_priority</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 保留设置 -> 照片格式 -->
+    <info>
+        <index_key>pref_preserve_settings_key-pref_preserve_master_mode_photo_format_key</index_key>
+        <index_title>@string/camera_setting_preserve_settings_photo_format</index_title>
+        <index_summary>@string/camera_setting_preserve_settings_photo_format</index_summary>
+        <index_keywords>@string/camera_setting_preserve_settings_photo_format</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_preserve_settings;@string/camera_setting_preserve_settings_photo_format</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 长按快门 -> 长按快门 -->
+    <info>
+        <index_key>pref_long_process_choice_key_v2-pref_long_process_choice_key</index_key>
+        <index_title>@string/camera_setting_long_press_shutter</index_title>
+        <index_summary>@string/camera_setting_long_press_shutter</index_summary>
+        <index_keywords>@string/camera_setting_long_press_shutter</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_long_press_shutter;@string/camera_setting_long_press_shutter</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 长按快门 -> 无影抓拍 -->
+    <info>
+        <index_key>pref_long_process_choice_key_v2-pref_burst_shot_type2</index_key>
+        <index_title>@string/multi_frame_burst_shot_name</index_title>
+        <index_summary>@string/multi_frame_burst_shot_name</index_summary>
+        <index_keywords>@string/multi_frame_burst_shot_name</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_long_press_shutter;@string/multi_frame_burst_shot_name</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 长按快门 -> 传统连拍 -->
+    <info>
+        <index_key>pref_long_process_choice_key_v2-pref_burst_shot_type1</index_key>
+        <index_title>@string/single_frame_burst_shot_name</index_title>
+        <index_summary>@string/single_frame_burst_shot_name</index_summary>
+        <index_keywords>@string/single_frame_burst_shot_name</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_long_press_shutter;@string/single_frame_burst_shot_name</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 辅助快门 -> 触屏拍照 -->
+    <info>
+        <index_key>pref_shutter_help_key-pref_camera_tap_shutter_key</index_key>
+        <index_title>@string/camera_tap_shutter_title</index_title>
+        <index_summary>@string/camera_tap_shutter_title</index_summary>
+        <index_keywords>@string/camera_tap_shutter_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_auxiliary_shutter_way;@string/camera_tap_shutter_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 辅助快门 -> 手势拍照 -->
+    <info>
+        <index_key>pref_shutter_help_key-pref_camera_gesture_shutter_key</index_key>
+        <index_title>@string/camera_gesture_shutter_title</index_title>
+        <index_summary>@string/camera_gesture_shutter_title</index_summary>
+        <index_keywords>@string/camera_gesture_shutter_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_auxiliary_shutter_way;@string/camera_gesture_shutter_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 文字与二维码扫描 -> 实时文本检测 -->
+    <info>
+        <index_key>pref_image_scanning_key-pref_super_text_two_key</index_key>
+        <index_title>@string/camera_super_text_two</index_title>
+        <index_summary>@string/camera_super_text_two</index_summary>
+        <index_keywords>@string/camera_super_text_two</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_image_scanning_title;@string/camera_super_text_two</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 文字与二维码扫描 -> 扫描二维码 -->
+    <info>
+        <index_key>pref_image_scanning_key-pref_qr_code_scanner_key</index_key>
+        <index_title>@string/camera_qrcode_title</index_title>
+        <index_summary>@string/camera_qrcode_title</index_summary>
+        <index_keywords>@string/camera_qrcode_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_image_scanning_title;@string/camera_qrcode_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 文字与二维码扫描 -> 智能超级文本 -->
+    <info>
+        <index_key>pref_image_scanning_key-pref_asd_detect_super_text</index_key>
+        <index_title>@string/ai_scene_super_text_capture</index_title>
+        <index_summary>@string/ai_scene_super_text_capture</index_summary>
+        <index_keywords>@string/ai_scene_super_text_capture</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_image_scanning_title;@string/ai_scene_super_text_capture</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 自动调整帧率 -> 关闭 -->
+    <info>
+        <index_key>pref_video_auto_fps_setting-off</index_key>
+        <index_title>@string/camera_video_auto_fps_off</index_title>
+        <index_summary>@string/camera_video_auto_fps_off</index_summary>
+        <index_keywords>@string/camera_video_auto_fps_off</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_auto_fps_title;@string/camera_video_auto_fps_off</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 自动调整帧率 -> 仅用于 30 fps -->
+    <info>
+        <index_key>pref_video_auto_fps_setting-30</index_key>
+        <index_title>@string/camera_video_auto_fps_30</index_title>
+        <index_summary>@string/camera_video_auto_fps_30</index_summary>
+        <index_keywords>@string/camera_video_auto_fps_30</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_auto_fps_title;@string/camera_video_auto_fps_30</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 自动调整帧率 -> 用于 30 fps 与 60 fps -->
+    <info>
+        <index_key>pref_video_auto_fps_setting-60</index_key>
+        <index_title>@string/camera_video_auto_fps_60</index_title>
+        <index_summary>@string/camera_video_auto_fps_60</index_summary>
+        <index_keywords>@string/camera_video_auto_fps_60</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_video_auto_fps_title;@string/camera_video_auto_fps_60</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 关于相机 -> 开放源代码许可 -->
+    <info>
+        <index_key>pref_about_key-pref_about_setting_open_source_license</index_key>
+        <index_title>@string/camera_sub_setting_open_source_license</index_title>
+        <index_summary>@string/camera_sub_setting_open_source_license</index_summary>
+        <index_keywords>@string/camera_sub_setting_open_source_license</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_about;@string/camera_sub_setting_open_source_license</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 收集个人信息明示清单 -> 地理位置 -->
+    <info>
+        <index_key>pref_privacy_collection_personal_information_list-pref_geographical_location_key</index_key>
+        <index_title>@string/person_info_list_content</index_title>
+        <index_summary>@string/person_info_list_content</index_summary>
+        <index_keywords>@string/person_info_list_content</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_person_info_list;@string/person_info_list_content</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 隐私 -> 个人信息保护政策 -->
+    <info>
+        <index_key>pref_privacy_key-pref_privacy_setting_privacy_policy</index_key>
+        <index_title>@string/privacy_policy_link</index_title>
+        <index_summary>@string/privacy_policy_link</index_summary>
+        <index_keywords>@string/privacy_policy_link</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_privacy;@string/privacy_policy_link</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 隐私 -> 扫一扫 -->
+    <info>
+        <index_key>pref_privacy_key-pref_mode_breeno_scan_switch</index_key>
+        <index_title>@string/camera_mode_breeno_scan</index_title>
+        <index_summary>@string/camera_mode_breeno_scan</index_summary>
+        <index_keywords>@string/camera_mode_breeno_scan</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_privacy;@string/camera_mode_breeno_scan</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 隐私 -> LUMO 凝光影像大模型服务 -->
+    <info>
+        <index_key>pref_privacy_key-pref_lumo_large_model_service_switch</index_key>
+        <index_title>@string/camera_lumo_large_model_service_title</index_title>
+        <index_summary>@string/camera_lumo_large_model_service_summary</index_summary>
+        <index_keywords>@string/camera_lumo_large_model_service_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_privacy;@string/camera_lumo_large_model_service_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 隐私 -> 位置信息服务 -->
+    <info>
+        <index_key>pref_privacy_key-pref_camera_location_service_key</index_key>
+        <index_title>@string/camera_location_service_title</index_title>
+        <index_summary>@string/camera_location_service_title</index_summary>
+        <index_keywords>@string/camera_location_service_title</index_keywords>
+        <index_screen_title>@string/camera_app_name;@string/camera_setting_privacy;@string/camera_location_service_title</index_screen_title>
+        <index_target_package>com.oplus.camera</index_target_package>
+        <index_target_action>oplus.intent.action.APPLICATION_INFO_SETTINGS_ENTRANCE</index_target_action>
+    </info>
+
+    <!-- 二级设置项 end -->
+
+</search-infos>

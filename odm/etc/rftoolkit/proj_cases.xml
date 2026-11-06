@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RFTOOLKIT>
+    <TestCase mode="NPT" auto_qurry_antenna_ext="true" set_npt_power="TRUE">
+        <RAT name="GSM"  pwrcheck="false">
+            <Band type="Any">
+                <Channel type="Low">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 0,101 </Antenna><!--ant1,0/ant4,6 -->
+                </Channel>
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 0,101 </Antenna><!--ant1,0/ant4,6 -->
+                </Channel>
+                <Channel type="High">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 0,101 </Antenna><!--ant1,0/ant4,6 -->
+                </Channel>
+            </Band>
+        </RAT>
+        <RAT name="LTE">
+           <Band type="Any">
+                <Channel type="Mid">
+                     <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+            <Band number="1,3,4,7,38,40,41,66">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 4,6 </Antenna> <!-- Tx0 Ant4 & Ant6 -->
+                     <Antenna paIndex="1"> 7,5 </Antenna> <!-- Tx1 Ant7 & Ant5 -->
+                </Channel>
+            </Band>
+            <Band number="42,48">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 6,9 </Antenna> <!-- Tx0 Ant6 & Ant9 -->
+                     <Antenna paIndex="1"> 8,10 </Antenna> <!-- Tx1 Ant8 & Ant10 -->
+                </Channel>
+            </Band>
+        </RAT>
+        <RAT name="NR5G">
+           <Band type="Any">
+                <Channel type="Mid">
+                     <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+            <Band number="1,3,7,38,40,41,66">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 4,6 </Antenna> <!-- Tx0 Ant4 & Ant6 -->
+                     <Antenna paIndex="1"> 7,5 </Antenna> <!-- Tx1 Ant7 & Ant5 -->
+                </Channel>
+            </Band>
+            <Band number="48,77,78">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 6,9 </Antenna> <!-- Tx0 Ant6 & Ant9 -->
+                     <Antenna paIndex="1"> 8,10 </Antenna> <!-- Tx1 Ant8 & Ant10 -->
+                </Channel>
+            </Band>
+            <Band number="79">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                     <Antenna paIndex="0"> 11,0 </Antenna> <!-- Tx0 Ant11 & Ant0 -->
+                     <Antenna paIndex="1"> 10,7 </Antenna> <!-- Tx1 Ant10 & Ant7 -->
+                </Channel>
+            </Band>
+        </RAT>
+    </TestCase>
+    <TestCase mode="Expert, Factory, CustomService, Diagnostic, RSETEST, CLSS">
+        <RAT name="GSM" pwrcheck="false">
+            <Band type="Any">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+        </RAT>
+        <RAT name="LTE">
+            <Band type="Any">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+        </RAT>
+        <RAT name="NR5G">
+            <Band type="Any">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+        </RAT>
+    </TestCase>
+    <TestCase mode="QtTest">
+        <RAT name="NR5G" Hdelay="970" Ldelay="30" strategy="VccAging">
+             <Band number="28">
+                 <Channel type="Low">
+                     <SubBand>0</SubBand>
+                 </Channel>
+                 <Channel type="Mid">
+                     <SubBand>0</SubBand>
+                 </Channel>
+             </Band>
+            <Band type="Any">
+                <Channel type="Low">
+                    <SubBand>0</SubBand>
+                </Channel>
+                <Channel type="High">
+                    <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+        </RAT>
+        <RAT name="LTE" Hdelay="970" Ldelay="30" strategy="VccAging">
+             <Band number="28">
+                 <Channel type="Low">
+                     <SubBand>0</SubBand>
+                 </Channel>
+                 <Channel type="Mid">
+                     <SubBand>0</SubBand>
+                 </Channel>
+             </Band>
+            <Band type="Any">
+                <Channel type="Low">
+                    <SubBand>0</SubBand>
+                </Channel>
+                <Channel type="High">
+                    <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+        </RAT>
+        <RAT name="GSM" pwrcheck="false">
+            <Band type="Any">
+                <Channel type="Mid">
+                    <SubBand>0</SubBand>
+                </Channel>
+            </Band>
+        </RAT>
+    </TestCase>
+</RFTOOLKIT>

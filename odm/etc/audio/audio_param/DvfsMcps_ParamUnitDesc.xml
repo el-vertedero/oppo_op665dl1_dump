@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="DvfsMcps">
+			<Category name="Common"/>
+			<Category name="MT6993"/>
+			<Category name="MT6995"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<!-- default for task-->
+		<Param name="default_low" type="uint_array"/>
+		<Param name="default_mid" type="uint_array"/>
+		<Param name="default_high" type="uint_array"/>
+		<!-- mixer thread -->
+		<Param name="mixer_thread" type="uint_array"/>
+		<!-- device -->
+		<Param name="device_a2dp" type="uint_array"/>
+		<Param name="device_bledl" type="uint_array"/>
+		<Param name="device_bleul" type="uint_array"/>
+		<Param name="device_usbdl" type="uint_array"/>
+		<Param name="device_usbul" type="uint_array"/>
+		<!-- decoder -->
+		<Param name="mp3_decoder" type="uint_array"/>
+		<Param name="aac_decoder" type="uint_array"/>
+		<Param name="aac_decoder_high" type="uint_array"/>
+		<Param name="flac_decoder" type="uint_array"/>
+		<Param name="flac_decoder_high" type="uint_array"/>
+		<Param name="opus_decoder" type="uint_array"/>
+		<Param name="bt_sph_decoder" type="uint_array"/>
+		<!-- encoder -->
+		<Param name="sbc_encoder" type="uint_array"/>
+		<Param name="aac_encoder" type="uint_array"/>
+		<Param name="lc3_decoder" type="uint_array"/>
+		<Param name="lc3_encoder" type="uint_array"/>
+		<Param name="ldac_encoder" type="uint_array"/>
+		<Param name="lhdcv3_encoder" type="uint_array"/>
+		<Param name="lhdcv5_encoder" type="uint_array"/>
+		<Param name="lhdcv5_encoder_high" type="uint_array"/>
+		<Param name="bt_sph_encoder" type="uint_array"/>
+		<!-- internal utility -->
+		<Param name="blisrc" type="uint_array"/>
+		<Param name="blisrc_mid" type="uint_array"/>
+		<Param name="blisrc_high" type="uint_array"/>
+		<Param name="shifter" type="uint_array"/>
+		<Param name="channelcvt" type="uint_array"/>
+		<!-- aurisys -->
+		<Param name="aurisys_demo" type="uint_array"/>
+		<Param name="mtk_bessound" type="uint_array"/>
+		<Param name="mtk_dcrflt" type="uint_array"/>
+		<Param name="hifire" type="uint_array"/>
+		<Param name="nxp_record" type="uint_array"/>
+		<Param name="smartpa_awinic" type="uint_array"/>
+		<Param name="smartpa_awinic_dual" type="uint_array"/>
+		<Param name="goodix_sph_VOIP_DL" type="uint_array"/>
+		<Param name="goodix_sph_VOIP_UL" type="uint_array"/>
+		<Param name="goodix_sph_SPH_DL" type="uint_array"/>
+		<Param name="goodix_sph_SPH_UL" type="uint_array"/>
+		<Param name="smartpa_tfaxxxx" type="uint_array"/>
+		<Param name="smartpa_tfaxxxx_d" type="uint_array"/>
+		<Param name="opve_sph_VOIP_DL" type="uint_array"/>
+		<Param name="opve_sph_VOIP_UL" type="uint_array"/>
+		<Param name="opve_sph_SPK_DL" type="uint_array"/>
+		<Param name="opve_sph_SPK_UL" type="uint_array"/>
+		<Param name="opve_sph_BT_DL" type="uint_array"/>
+		<Param name="opve_sph_BT_UL" type="uint_array"/>
+		<Param name="opve_sph_USB_DL" type="uint_array"/>
+		<Param name="opve_sph_USB_UL" type="uint_array"/>
+		<Param name="opve_sph_RCV_DL" type="uint_array"/>
+		<Param name="opve_sph_RCV_UL" type="uint_array"/>
+		<Param name="audio_detect" type="uint_array"/>
+		<Param name="smartpa_pm" type="uint_array"/>
+	</ParamUnit>
+</ParamUnitDesc>

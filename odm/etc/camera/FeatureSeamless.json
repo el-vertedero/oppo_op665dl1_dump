@@ -1,0 +1,472 @@
+{
+    "forceStartWith1Dol": {
+        "opModes": ["0x8001", "0x8009", "0x8019", "0x8010", "0x8011"],
+        "ExclusizeCameraModeName": ["macro_closeup_mode"],
+        "MemoryThreshold": 1.0,
+        "TemperatureLevel": 12
+    },
+    "isStartWith1Dol": {
+        "Main": false,
+        "UWide": false,
+        "Tele": false,
+        "Front": false,
+        "TelePhoto": false
+    },
+    "CamMainRules":
+    [
+        {
+            "opModes": ["0x8001", "0x8019", "0x80ad"],
+            "SupportDynamicInitByZoom": false,
+            "ZoomRatioThd": 6,
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, 1.99],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 380],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [2, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 380],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [380, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8009","0x80ac"],
+            "SupportDynamicInitByZoom": false,
+            "ZoomRatioThd": 6,
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [70000000, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 400],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [400, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8028", "0x80a7", "0x8021", "0x80B3", "0x800B"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8010"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 415],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [415, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8011"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [2, 2],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 415],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 415],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [415, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        }
+    ],
+    "CamUWideRules": [
+        {
+            "opModes": ["0x8001", "0x8019", "0x80ad"],
+            "SupportDynamicInitByZoom": false,
+            "ZoomRatioThd": 6,
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 380],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [380, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8009", "0x80ac"],
+            "SupportDynamicInitByZoom": false,
+            "ZoomRatioThd": 6,
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [70000000, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 365],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [365, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8028", "0x80a7", "0x8021", "0x80B3", "0x800B"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        }
+    ],
+    "CamTeleRules": [
+        {
+            "opModes": ["0x8001", "0x8019", "0x80ad"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 1,
+                    "ZoomRatio": [13.19, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 340],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_CROP_4X_16CELL"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, 5.99],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 380],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [6, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 380],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_CROP_2X_4CELL"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [380, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8009", "0x80ac"],
+            "SupportDynamicInitByZoom": false,
+            "ZoomRatioThd": 13.1,
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [70000000, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 385],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [385, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8028", "0x80a7", "0x8021", "0x80B3", "0x800B"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8010"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 365],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [365, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        }
+    ],
+    "CamFrontRules": [
+        {
+            "opModes": ["0x8001", "0x8009", "0x8019"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 270],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 1,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [270, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_BIN"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8028", "0x80a7", "0x8021", "0x80B3", "0x800B"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        }
+    ],
+    "CamTelePhotoRules": [
+        {
+            "opModes": ["0x8001"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 385],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [70, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_LBMF_2EXP_BAYER"
+                },
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [385, "INT_MAX"],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, 70],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        },
+        {
+            "opModes": ["0x8028", "0x80a7", "0x8021"],
+            "ScenarioCfgs":
+            [
+                {
+                    "ExposureNums": 2,
+                    "ZoomRatio": [0, "FLT_MAX"],
+                    "ShutterThd": [0, "INT_MAX"],
+                    "LuxidxThd": [0, 0],
+                    "LightLuxTolerance": 20,
+                    "LightLuxChgRatio": 1.5,
+                    "LightLuxThd": [0, "INT_MAX"],
+                    "Scenario": "MTK_SEAMLESS_FEATURE_SENSOR_SCENARIO_DCG_AP_MERGE_2EXP_BAYER"
+                }
+            ]
+        }
+    ]
+}

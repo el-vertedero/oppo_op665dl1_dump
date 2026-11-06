@@ -1,0 +1,43 @@
+version:
+  model: "1.8.11"
+  soc: dx6
+
+modelOptions:
+  promptTokenBatchSize: 320
+  genTokenBatchSize: 1
+  cacheSize: 512
+  hiddenSize: 896
+  numHead: 14
+  numLayer: 24
+  maxTokenLength: 4096
+  modelInputType: FP16
+  modelOutputType: INT16
+  cacheType: INT16
+  maskType: FP16
+  rotEmbType: INT16
+  rotEmbBase: 1000000.0
+  splitMask: true
+  # modelOutputQuantScale: 0.001117317471653223
+
+runtimeOptions:
+  dequantizeVitOutput: false
+  vitOutputQuantScale: 1.0
+  specialTokens:
+    bosId: 151644
+    eosId: 151645
+    addBos: false
+  imageTokenSize: 256
+  startTokenIndex: 1
+  tokenizerPath:
+    - /odm/etc/camera/ai_composition/vocab_i2t.bin
+    - /odm/etc/camera/ai_composition/added_tokens.yaml
+  tokenEmbPath: /odm/etc/camera/ai_composition/embedding_fp16.bin
+  dlaPromptPaths:
+    - /odm/etc/camera/ai_composition/res_prompt.dla
+  dlaGenPaths:
+    - /odm/etc/camera/ai_composition/res_gen.dla
+  sharedWeightsPaths:
+    - /odm/etc/camera/ai_composition/share.dlx
+  clipPath: /odm/etc/camera/ai_composition/res_vision.dla
+  cachePaths:
+    - /odm/etc/camera/ai_composition/overture.bin

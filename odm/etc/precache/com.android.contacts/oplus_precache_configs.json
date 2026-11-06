@@ -1,0 +1,29 @@
+{
+    "_comment": "Add for PreCache2.0 - Contacts warmup",
+    "_owner": "80417597",
+    "enable": 1,
+    "record": 0,
+    "version": 20260725,
+    "replayThreadCount": 1,
+    "maxKeySize": 1024,
+    "maxValueSize": 2097152,
+    "maxTotalSize": 4194304,
+    "name": "com.android.contacts",
+
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.android.contacts/cache",
+        "layerPath": ""
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.android.contacts/rt"
+        }
+    },
+
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.android.contacts/re"
+        }
+    }
+}

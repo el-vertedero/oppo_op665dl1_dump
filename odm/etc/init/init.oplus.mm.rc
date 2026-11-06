@@ -1,0 +1,15 @@
+on init
+# mm_osvelte: bad proc
+     chown system system /sys/kernel/oplus_mm/osvelte/common/add_bad_proc
+     chown system system /sys/kernel/oplus_mm/osvelte/common/enable_bad_proc
+
+service init_oplus_mm-vnd /vendor/bin/sh /odm/bin/init.oplus.mm-vnd.sh
+    class core
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    write /sys/kernel/mm/lru_gen/enabled 1
+    start init_oplus_mm-vnd

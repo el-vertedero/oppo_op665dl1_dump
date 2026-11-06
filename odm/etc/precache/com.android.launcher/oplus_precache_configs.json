@@ -1,0 +1,29 @@
+{
+    "_comment": "PreCache2.0 for system launcher",
+    "_owner": "W9082075",
+    "id": 0,
+    "enable": 0,
+    "enableRE": 1,
+    "record": 0,
+    "version": 20260728,
+    "maxKeySize": 10240,
+    "maxValueSize": 20971520,
+    "maxTotalSize": 41943040,
+    "name": "com.android.launcher",
+
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.android.launcher/cache"
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.android.launcher/rt"
+        }
+    },
+
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.android.launcher/re"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "_comment": "Add for PreCache2.0",
+    "_owner": "W8030299",
+    "enable": 1,
+    "enableRE": 1,
+    "record": 0,
+    "version": 20260908,
+    "maxKeySize": 1024,
+    "maxValueSize": 8388608,
+    "maxTotalSize": 16777216,
+    "replayThreadCount": 2,
+    "name": "com.coloros.gallery3d",
+
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.coloros.gallery3d/cache"
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.coloros.gallery3d/rt"
+        }
+    },
+
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.coloros.gallery3d/re"
+        }
+    }
+}

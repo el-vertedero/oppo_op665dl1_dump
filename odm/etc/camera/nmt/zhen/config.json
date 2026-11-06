@@ -1,0 +1,13 @@
+{
+  "module_config_files": [
+    "../common/mose_tokenizer.json",
+    "../common/common.json",
+    "../common/split.json",
+    "../common/postprocess.json",
+    "preprocess.json",
+    "../common/regex.json",
+    "pipeline.json"
+  ],
+  "resource_dir": "../common/"
+}
+

@@ -1,0 +1,5 @@
+on property:persist.sys.oplus.workqueue_record.enable=true
+    write /proc/workqueue_record ${persist.sys.oplus.workqueue_record.config}
+
+on property:persist.sys.oplus.workqueue_record.enable=false
+    write /proc/workqueue_record 0

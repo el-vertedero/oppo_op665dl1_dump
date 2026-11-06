@@ -1,0 +1,17 @@
+service cpu_selftest /odm/bin/hw/cpu_selftest
+    class hal
+    user root
+    group root system readproc inet
+    disabled
+    oneshot
+    capabilities SYS_NICE SYS_RESOURCE
+
+on post-fs-data
+    mkdir /data/vendor/cpu_selftest 0777 root root
+
+on property:sys.oplus.cpu_selftest.enable=1
+    mkdir /data/vendor/cpu_selftest 0777 root root
+    start cpu_selftest
+
+on property:sys.oplus.cpu_selftest.enable=0
+    stop cpu_selftest

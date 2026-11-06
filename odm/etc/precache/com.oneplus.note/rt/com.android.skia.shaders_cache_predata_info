@@ -1,0 +1,128 @@
+CacheDate:20260817114120
+Process:com.oneplus.note
+VkDriverVersion:234881024
+VkVendorID:5045
+VkDeviceID:4042293250
+VkUUID:f8838c3d-4575ad3e-d86523dd-a61bcbae
+GpuCapsKey:57086155558522
+OTA Version:PMX110_11.A.01_0010_202608170509
+PreCacheVersion:0
+BuildID:CP2A.260605.016
+OS Version:V17.0.0
+Preject:26015
+CleanedSize:0
+aosp[count:113 mem:1819873] oplus[count:113 mem:1819873]
+Total Hashes:
+    [0  ] KeySize:1   KeyHash:3858283909    ValueSize:32     CodeHash:0
+    [1  ] KeySize:4   KeyHash:886438756     ValueSize:517980 CodeHash:0
+    [2  ] KeySize:44  KeyHash:3046087434    ValueSize:8856   CodeHash:388926721
+    [3  ] KeySize:56  KeyHash:3282688378    ValueSize:2072   CodeHash:364473245
+    [4  ] KeySize:56  KeyHash:42382277      ValueSize:2136   CodeHash:3316481344
+    [5  ] KeySize:56  KeyHash:3786272592    ValueSize:2264   CodeHash:21053133
+    [6  ] KeySize:56  KeyHash:400525126     ValueSize:2112   CodeHash:2456717935
+    [7  ] KeySize:68  KeyHash:384688735     ValueSize:3468   CodeHash:1798910030
+    [8  ] KeySize:68  KeyHash:2154760644    ValueSize:9396   CodeHash:1179742006
+    [9  ] KeySize:68  KeyHash:1870983577    ValueSize:8364   CodeHash:2125550647
+    [10 ] KeySize:76  KeyHash:2236911859    ValueSize:3532   CodeHash:2299234402
+    [11 ] KeySize:76  KeyHash:2101332416    ValueSize:5396   CodeHash:2376556444
+    [12 ] KeySize:80  KeyHash:4004982096    ValueSize:13500  CodeHash:2746256772
+    [13 ] KeySize:80  KeyHash:2364166025    ValueSize:13500  CodeHash:2746256772
+    [14 ] KeySize:80  KeyHash:4051262943    ValueSize:13476  CodeHash:2940028277
+    [15 ] KeySize:80  KeyHash:2343831473    ValueSize:13476  CodeHash:2940028277
+    [16 ] KeySize:80  KeyHash:967780235     ValueSize:14084  CodeHash:3747467554
+    [17 ] KeySize:84  KeyHash:572028346     ValueSize:2440   CodeHash:2686737540
+    [18 ] KeySize:84  KeyHash:3348454893    ValueSize:2440   CodeHash:2686737540
+    [19 ] KeySize:84  KeyHash:133298650     ValueSize:2860   CodeHash:1255100571
+    [20 ] KeySize:84  KeyHash:2098039606    ValueSize:2752   CodeHash:1498152190
+    [21 ] KeySize:84  KeyHash:450999004     ValueSize:3140   CodeHash:1517070425
+    [22 ] KeySize:84  KeyHash:465568468     ValueSize:2976   CodeHash:2895536021
+    [23 ] KeySize:88  KeyHash:1229557640    ValueSize:14724  CodeHash:2261628180
+    [24 ] KeySize:96  KeyHash:1101742976    ValueSize:3740   CodeHash:505791351
+    [25 ] KeySize:96  KeyHash:107077742     ValueSize:3416   CodeHash:4002093448
+    [26 ] KeySize:96  KeyHash:131714192     ValueSize:3716   CodeHash:2325324816
+    [27 ] KeySize:100 KeyHash:1671217103    ValueSize:14840  CodeHash:522770501
+    [28 ] KeySize:100 KeyHash:274290538     ValueSize:2976   CodeHash:4108276750
+    [29 ] KeySize:100 KeyHash:3005254595    ValueSize:3608   CodeHash:4007781042
+    [30 ] KeySize:108 KeyHash:2416106178    ValueSize:4700   CodeHash:4022355031
+    [31 ] KeySize:108 KeyHash:2184221721    ValueSize:13772  CodeHash:3380632120
+    [32 ] KeySize:108 KeyHash:796779077     ValueSize:39528  CodeHash:844658338
+    [33 ] KeySize:108 KeyHash:649680490     ValueSize:14084  CodeHash:2870110866
+    [34 ] KeySize:108 KeyHash:3114398362    ValueSize:14472  CodeHash:741543725
+    [35 ] KeySize:112 KeyHash:552852123     ValueSize:24736  CodeHash:178939008
+    [36 ] KeySize:112 KeyHash:809825691     ValueSize:23988  CodeHash:1115537586
+    [37 ] KeySize:116 KeyHash:2639698908    ValueSize:4796   CodeHash:3374779495
+    [38 ] KeySize:116 KeyHash:2031846160    ValueSize:3444   CodeHash:4263099716
+    [39 ] KeySize:116 KeyHash:1637358853    ValueSize:3444   CodeHash:4263099716
+    [40 ] KeySize:116 KeyHash:3792903602    ValueSize:3444   CodeHash:4263099716
+    [41 ] KeySize:116 KeyHash:2832239700    ValueSize:4084   CodeHash:4088992109
+    [42 ] KeySize:116 KeyHash:2296415950    ValueSize:4084   CodeHash:4088992109
+    [43 ] KeySize:116 KeyHash:3931032409    ValueSize:5096   CodeHash:3063023217
+    [44 ] KeySize:124 KeyHash:1942777225    ValueSize:3704   CodeHash:1894737946
+    [45 ] KeySize:124 KeyHash:1312540149    ValueSize:3984   CodeHash:3642079806
+    [46 ] KeySize:124 KeyHash:885214176     ValueSize:24740  CodeHash:3165254766
+    [47 ] KeySize:124 KeyHash:421128303     ValueSize:25220  CodeHash:2605946378
+    [48 ] KeySize:124 KeyHash:218678967     ValueSize:25220  CodeHash:2605946378
+    [49 ] KeySize:124 KeyHash:743721161     ValueSize:24612  CodeHash:2704474051
+    [50 ] KeySize:124 KeyHash:1758085547    ValueSize:4016   CodeHash:966265491
+    [51 ] KeySize:124 KeyHash:2724569784    ValueSize:4404   CodeHash:3886842822
+    [52 ] KeySize:128 KeyHash:1043974352    ValueSize:14812  CodeHash:2932830076
+    [53 ] KeySize:128 KeyHash:151616464     ValueSize:39844  CodeHash:4158151336
+    [54 ] KeySize:132 KeyHash:1950638227    ValueSize:5632   CodeHash:4266135452
+    [55 ] KeySize:132 KeyHash:2542313881    ValueSize:48100  CodeHash:1116228101
+    [56 ] KeySize:132 KeyHash:3492111695    ValueSize:48100  CodeHash:3581782354
+    [57 ] KeySize:132 KeyHash:948725786     ValueSize:47992  CodeHash:3870925376
+    [58 ] KeySize:132 KeyHash:3028002765    ValueSize:48684  CodeHash:1600079389
+    [59 ] KeySize:132 KeyHash:3508278173    ValueSize:48576  CodeHash:1754155657
+    [60 ] KeySize:132 KeyHash:3794865697    ValueSize:31544  CodeHash:3932498974
+    [61 ] KeySize:132 KeyHash:1501019217    ValueSize:32320  CodeHash:4272251444
+    [62 ] KeySize:132 KeyHash:1831397095    ValueSize:32212  CodeHash:2859132336
+    [63 ] KeySize:132 KeyHash:3272365765    ValueSize:16496  CodeHash:3615054285
+    [64 ] KeySize:132 KeyHash:582068005     ValueSize:10236  CodeHash:885881948
+    [65 ] KeySize:132 KeyHash:3863120049    ValueSize:24272  CodeHash:489531181
+    [66 ] KeySize:132 KeyHash:1222542193    ValueSize:5512   CodeHash:325346227
+    [67 ] KeySize:132 KeyHash:2608302022    ValueSize:5512   CodeHash:325346227
+    [68 ] KeySize:132 KeyHash:276754486     ValueSize:5512   CodeHash:325346227
+    [69 ] KeySize:132 KeyHash:3662968038    ValueSize:6948   CodeHash:1046917507
+    [70 ] KeySize:132 KeyHash:3019714910    ValueSize:6948   CodeHash:2142011175
+    [71 ] KeySize:132 KeyHash:1398346846    ValueSize:6732   CodeHash:1254325066
+    [72 ] KeySize:132 KeyHash:864182768     ValueSize:8108   CodeHash:3727513291
+    [73 ] KeySize:132 KeyHash:212666845     ValueSize:8964   CodeHash:453862104
+    [74 ] KeySize:132 KeyHash:1350778625    ValueSize:8500   CodeHash:1677809856
+    [75 ] KeySize:132 KeyHash:1386248644    ValueSize:5512   CodeHash:31060072
+    [76 ] KeySize:132 KeyHash:1396808964    ValueSize:5512   CodeHash:31060072
+    [77 ] KeySize:132 KeyHash:2237527667    ValueSize:5512   CodeHash:31060072
+    [78 ] KeySize:132 KeyHash:2612987465    ValueSize:6732   CodeHash:2410950268
+    [79 ] KeySize:132 KeyHash:2988836928    ValueSize:8948   CodeHash:2556340208
+    [80 ] KeySize:132 KeyHash:3844251995    ValueSize:8484   CodeHash:2968587237
+    [81 ] KeySize:132 KeyHash:3896815876    ValueSize:5512   CodeHash:1517817108
+    [82 ] KeySize:132 KeyHash:4196806672    ValueSize:5512   CodeHash:1517817108
+    [83 ] KeySize:132 KeyHash:3147114815    ValueSize:5512   CodeHash:1517817108
+    [84 ] KeySize:132 KeyHash:3163918885    ValueSize:6732   CodeHash:2837251382
+    [85 ] KeySize:132 KeyHash:3603758015    ValueSize:8108   CodeHash:432889898
+    [86 ] KeySize:132 KeyHash:2096327925    ValueSize:8964   CodeHash:1219546021
+    [87 ] KeySize:132 KeyHash:2881021974    ValueSize:8484   CodeHash:2883157002
+    [88 ] KeySize:132 KeyHash:492243821     ValueSize:5496   CodeHash:3575602461
+    [89 ] KeySize:132 KeyHash:2357953128    ValueSize:5496   CodeHash:3575602461
+    [90 ] KeySize:132 KeyHash:399769116     ValueSize:8948   CodeHash:1551926973
+    [91 ] KeySize:132 KeyHash:1193425760    ValueSize:8484   CodeHash:1911729503
+    [92 ] KeySize:132 KeyHash:363736013     ValueSize:6724   CodeHash:3932765845
+    [93 ] KeySize:132 KeyHash:3884274130    ValueSize:6724   CodeHash:3932765845
+    [94 ] KeySize:132 KeyHash:3452726066    ValueSize:12984  CodeHash:452217316
+    [95 ] KeySize:140 KeyHash:3589627149    ValueSize:15924  CodeHash:4016281034
+    [96 ] KeySize:152 KeyHash:3222447294    ValueSize:14584  CodeHash:2640649760
+    [97 ] KeySize:156 KeyHash:1852120276    ValueSize:16184  CodeHash:4150270417
+    [98 ] KeySize:156 KeyHash:1389831154    ValueSize:7280   CodeHash:2564877403
+    [99 ] KeySize:156 KeyHash:2719343247    ValueSize:4296   CodeHash:516761333
+    [100] KeySize:156 KeyHash:3384389673    ValueSize:4344   CodeHash:2960972257
+    [101] KeySize:156 KeyHash:3966707176    ValueSize:4396   CodeHash:420632234
+    [102] KeySize:172 KeyHash:299828335     ValueSize:6464   CodeHash:2945833973
+    [103] KeySize:172 KeyHash:442573186     ValueSize:4524   CodeHash:290313996
+    [104] KeySize:172 KeyHash:2815322124    ValueSize:5000   CodeHash:699338716
+    [105] KeySize:180 KeyHash:3746556739    ValueSize:15792  CodeHash:3801366039
+    [106] KeySize:208 KeyHash:3530807173    ValueSize:7256   CodeHash:626503219
+    [107] KeySize:208 KeyHash:222542901     ValueSize:8152   CodeHash:3039760739
+    [108] KeySize:208 KeyHash:1363498144    ValueSize:8736   CodeHash:1621340012
+    [109] KeySize:208 KeyHash:453708717     ValueSize:12304  CodeHash:742548245
+    [110] KeySize:208 KeyHash:2366091766    ValueSize:12304  CodeHash:742548245
+    [111] KeySize:208 KeyHash:3604690599    ValueSize:12996  CodeHash:3586008306
+    [112] KeySize:208 KeyHash:3506786806    ValueSize:12888  CodeHash:923665291

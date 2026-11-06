@@ -1,0 +1,29 @@
+{
+    "_comment": "Add for PreCache2.0",
+    "_owner": "80303972",
+    "id": 1,
+    "enable": 1,
+    "record": 0,
+    "version": 20260907,
+    "maxKeySize": 1024,
+    "maxValueSize": 2097152,
+    "maxTotalSize": 4194304,
+    "replayThreadCount": 2,
+    "name": "com.coloros.smartsidebar:ui",
+
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.coloros.smartsidebar/cache"
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.coloros.smartsidebar/rt"
+        }
+    },
+
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.coloros.smartsidebar/re"
+        }
+    }
+}

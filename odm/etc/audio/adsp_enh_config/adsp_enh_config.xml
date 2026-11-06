@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<enh_config>
+    <uplink_process>
+        <exec_times default_time="12000">
+            <exec_time device_type="EARPIECE" band_type="NB" time="16000"/>
+            <exec_time device_type="EARPIECE" band_type="WB" time="16000"/>
+            <exec_time device_type="EARPIECE" band_type="SWB" time="16000"/>
+            <exec_time device_type="WIRED_HEADSET" band_type="NB" time="12000"/>
+            <exec_time device_type="WIRED_HEADSET" band_type="WB" time="12000"/>
+            <exec_time device_type="WIRED_HEADSET" band_type="SWB" time="12000"/>
+            <exec_time device_type="SPEAKER" band_type="NB" time="12000"/>
+            <exec_time device_type="SPEAKER" band_type="WB" time="12000"/>
+            <exec_time device_type="SPEAKER" band_type="SWB" time="12000"/>
+            <exec_time device_type="BLUETOOTH_SCO" band_type="NB" time="12000"/>
+            <exec_time device_type="BLUETOOTH_SCO" band_type="WB" time="12000"/>
+            <exec_time device_type="BLUETOOTH_SCO" band_type="SWB" time="12000"/>
+            <exec_time device_type="BLE_HEADSET" band_type="NB" time="12000"/>
+            <exec_time device_type="BLE_HEADSET" band_type="WB" time="12000"/>
+            <exec_time device_type="BLE_HEADSET" band_type="SWB" time="12000"/>
+            <exec_time device_type="USB_ACCESSORY" band_type="NB" time="4000"/>
+            <exec_time device_type="USB_ACCESSORY" band_type="WB" time="12000"/>
+            <exec_time device_type="USB_ACCESSORY" band_type="SWB" time="12000"/>
+        </exec_times>
+    </uplink_process>
+    <downlink_process>
+        <exec_times default_time="6000">
+            <exec_time device_type="EARPIECE" band_type="NB" time="6000"/>
+            <exec_time device_type="EARPIECE" band_type="WB" time="6000"/>
+            <exec_time device_type="EARPIECE" band_type="SWB" time="6000"/>
+            <exec_time device_type="WIRED_HEADSET" band_type="NB" time="6000"/>
+            <exec_time device_type="WIRED_HEADSET" band_type="WB" time="6000"/>
+            <exec_time device_type="WIRED_HEADSET" band_type="SWB" time="6000"/>
+            <exec_time device_type="SPEAKER" band_type="NB" time="6000"/>
+            <exec_time device_type="SPEAKER" band_type="WB" time="6000"/>
+            <exec_time device_type="SPEAKER" band_type="SWB" time="6000"/>
+            <exec_time device_type="BLUETOOTH_SCO" band_type="NB" time="6000"/>
+            <exec_time device_type="BLUETOOTH_SCO" band_type="WB" time="6000"/>
+            <exec_time device_type="BLUETOOTH_SCO" band_type="SWB" time="6000"/>
+            <exec_time device_type="BLE_HEADSET" band_type="NB" time="6000"/>
+            <exec_time device_type="BLE_HEADSET" band_type="WB" time="6000"/>
+            <exec_time device_type="BLE_HEADSET" band_type="SWB" time="6000"/>
+            <exec_time device_type="USB_ACCESSORY" band_type="NB" time="2000"/>
+            <exec_time device_type="USB_ACCESSORY" band_type="WB" time="6000"/>
+            <exec_time device_type="USB_ACCESSORY" band_type="SWB" time="6000"/>
+        </exec_times>
+    </downlink_process>
+</enh_config>

@@ -1,0 +1,53 @@
+{
+    "module": "oppo_dualDepthCapture",
+    "product": {
+        "name": "mars",
+        "productID": 7
+    },
+    "calib_params":{
+        "comment_calib":"only the Hasselblad_Len_Table_phone parameter is modifiable, and the array elements must be monotonically increasing",
+        "Hasselblad_Len_Table_phone": [35, 50, 68, 81, 117],
+        "zoomMode_to_Len_lut": [3, 0, 2, 5],
+        "Phone_Len": [1.0, 1.5, 2.0, 3.0, 3.6],
+        "focusComp": false,
+        "relativeComp": true
+    },
+    "nearObjects_params":{
+        "comment":"Parameter adjustment range: [0.0, 1.0]; Minimum blur intensity: nearObjectsConf=0.0, distSmoothConf=0.0, smooth_ness=1.0",
+        "nearObjectsConf": 0.0,
+        "distSmoothConf": 0.2,
+        "smooth_ness": 0.85
+    },
+    "distSmooth_params": {
+        "comment": "Distance smooth parameters for different zoom ratios and scenes",
+        "default": {
+            "threshold": 500.0,
+            "scaleFactor": 3.0,
+            "minValue": 300.0,
+            "maxValue": 500.0
+        },
+        "zoom_1x_2x_no_portrait": {
+            "threshold": 150.0,
+            "scaleFactor": 1.5,
+            "minValue": 100.0,
+            "maxValue": 150.0
+        },
+        "zoom_3x_6x_no_portrait": {
+            "threshold": 150.0,
+            "scaleFactor": 2.0,
+            "minValue": 100.0,
+            "maxValue": 150.0
+        },
+        "zoom_10x_plus": {
+            "threshold": 4000.0,
+            "scaleFactor": 5.5,
+            "minValue": 1000.0,
+            "maxValue": 4000.0
+        }
+    },
+    "spotTrigger_Params":{
+        "indoorLightSourceFixSpotThr": 5,
+        "indoorImgCalcIdxSpotThr": 5,
+        "dayInputYThr": 220
+    }
+}

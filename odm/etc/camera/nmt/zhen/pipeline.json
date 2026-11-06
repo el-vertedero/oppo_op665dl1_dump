@@ -1,0 +1,23 @@
+{
+  "desc": "bpe modules",
+  "base": "pipeline",
+  "modules": [
+    {
+      "name": "bpe-zh",
+      "base": "bpe",
+      "description": "bpe segmentor",
+      "config": {
+        "bpe_code_file": "./bpe_zh2en_40k-1014_.code"
+      }
+    },
+    {
+      "name": "overall-process",
+      "description": "full process",
+      "config": {
+        "sub_modules": [
+          "preprocess-zh_zh2en", "translate", "postprocess-en-yunbei"
+        ]
+      }
+    }
+  ]
+}

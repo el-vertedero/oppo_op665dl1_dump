@@ -1,0 +1,19 @@
+{
+  "desc": "common modules",
+  "modules": [
+    {
+      "name": "translate",
+      "base": "hook",
+      "description": "翻译回调"
+    },
+    {
+      "name": "hyphen2sp",
+      "description": "—转成空格",
+      "base": "regex",
+      "config": {
+        "regex": "—",
+        "replace": " "
+      }
+    }
+  ]
+}

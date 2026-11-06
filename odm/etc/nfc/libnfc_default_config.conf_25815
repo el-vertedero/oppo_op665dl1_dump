@@ -1,0 +1,157 @@
+###############################################################################
+#TMS RF configuration ALM/PLM settings
+# This section needs to be updated with the correct values based on the platform
+# RF_LMA_TB_A
+# item0 (GAIN, FDT, LMA, RFU, RFU)
+# item1 (GAIN, FDT, LMA, RFU, RFU)
+# item2 (GAIN, FDT, LMA, RFU, RFU)
+# item3 (GAIN, FDT, LMA, RFU, RFU)
+# item4 (GAIN, FDT, LMA, RFU, RFU)
+# item5 (GAIN, FDT, LMA, RFU, RFU)
+# item6 (GAIN, FDT, LMA, RFU, RFU)
+# item7 (GAIN, FDT, LMA, RFU, RFU)
+# item8 (GAIN, FDT, LMA, RFU, RFU)
+# item9 (GAIN, FDT, LMA, RFU, RFU)
+# itemA (GAIN, FDT, LMA, RFU, RFU)
+# itemB (GAIN, FDT, LMA, RFU, RFU)
+# itemC (GAIN, FDT, LMA, RFU, RFU)
+# itemD (GAIN, FDT, LMA, RFU, RFU)
+# itemE (GAIN, FDT, LMA, RFU, RFU)
+# itemF (GAIN, FDT, LMA, RFU, RFU)
+# item10 (GAIN, FDT, LMA, RFU, RFU)
+# item11 (GAIN, FDT, LMA, RFU, RFU)
+TMS_RF_CONF_BLK_11={
+        20, 02, 5E, 01,
+        A2, 6A, 5A,
+        0F, 00, E0, 00, 04,
+        0F, 00, 60, 00, 04,
+        0F, 00, 40, 00, 04,
+        0F, 00, 30, 00, 04,
+        0F, 01, 20, 00, 04,
+        0F, 01, 1E, 00, 04,
+        0F, 01, 1C, 00, 04,
+        0F, 01, 1B, 00, 04,
+        0F, 01, 19, 00, 04,
+        0F, 01, 18, 00, 04,
+        0F, 02, 16, 00, 04,
+        0F, 02, 14, 00, 04,
+        0F, 02, 12, 00, 04,
+        0F, 02, 0F, 00, 04,
+        0F, 02, 0D, 00, 04,
+        0F, 02, 0B, 00, 04,
+        0F, 02, 0A, 00, 04,
+        0F, 02, 04, 00, 04
+}
+
+
+###############################################################################
+# TMS RF power off configuration ALM/PLM settings
+# This section needs to be updated with the correct values based on the platform
+# RF_OFF_LMA_TB_A
+# item0 (GAIN, FDT, LMA, RFU, RFU)
+# item1 (GAIN, FDT, LMA, RFU, RFU)
+# item2 (GAIN, FDT, LMA, RFU, RFU)
+# item3 (GAIN, FDT, LMA, RFU, RFU)
+# item4 (GAIN, FDT, LMA, RFU, RFU)
+# item5 (GAIN, FDT, LMA, RFU, RFU)
+# item6 (GAIN, FDT, LMA, RFU, RFU)
+# item7 (GAIN, FDT, LMA, RFU, RFU)
+# item8 (GAIN, FDT, LMA, RFU, RFU)
+# item9 (GAIN, FDT, LMA, RFU, RFU)
+# itemA (GAIN, FDT, LMA, RFU, RFU)
+# itemB (GAIN, FDT, LMA, RFU, RFU)
+# itemC (GAIN, FDT, LMA, RFU, RFU)
+# itemD (GAIN, FDT, LMA, RFU, RFU)
+# itemE (GAIN, FDT, LMA, RFU, RFU)
+# itemF (GAIN, FDT, LMA, RFU, RFU)
+# item10 (GAIN, FDT, LMA, RFU, RFU)
+# item11 (GAIN, FDT, LMA, RFU, RFU)
+TMS_RF_CONF_BLK_14={
+        20, 02, 5E, 01,
+        A2, 6D, 5A,
+        0F, 01, E0, 00, 04,
+        0F, 01, 60, 00, 04,
+        0F, 01, 40, 00, 04,
+        0F, 01, 30, 00, 04,
+        0F, 01, 20, 00, 04,
+        0F, 01, 1E, 00, 04,
+        0F, 01, 1C, 00, 04,
+        0F, 01, 1B, 00, 04,
+        0F, 01, 19, 00, 04,
+        0F, 01, 18, 00, 04,
+        0F, 01, 16, 00, 04,
+        0F, 01, 14, 00, 04,
+        0F, 01, 12, 00, 04,
+        0F, 01, 0F, 00, 04,
+        0F, 02, 0D, 00, 04,
+        0F, 02, 0B, 00, 04,
+        0F, 02, 0A, 00, 04,
+        0F, 02, 04, 00, 04
+}
+TMS_RF_CONF_BLK_3={
+        20, 02, 2E, 01,
+        A0, 68, 2A, 51, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
+        00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
+        00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00
+}
+
+TMS_RF_CONF_BLK_18={
+        20, 02, 24, 05,
+        A2, 89, 02, 04, 64,
+        A2, 51, 0C, 03, 1E, 04, 05, 00, 00, 00 ,00 , 05, A0, 00, 10, 
+        A2, 1E, 01, 02,
+        A2, 14, 01, 02,
+        A2, 1F, 04, 00, 02, 00, 03
+}
+###############################################################################
+# A00C cfg version 8byte: [0] 天线差异,[1-2]RFU,[3]发布版本号,[4-7]RF配置文件内容校验
+# A06A PICCA开关机相位
+# A070 PICCA开关机相位
+# A00D FDT kv_picc_other_param.para_A
+# A262 增加灭屏卡模拟开场控制,（解决宝马车钥匙灭屏2cm刷卡的问题），第1字节最高位1控制开场，默认0关闭，第2-3字节对应开场时间，0x0067对应103ms
+OPLUS_CONF_EXTN={
+        20, 02, F6, 13,
+        A0, 0C, 08, 00, 00, 00, 00, 00, DC, C1, B2,
+        A0, 6A, 32, 00, 02,
+        00, 00, 00, 08,
+        00, 00, 00, 19,
+        00, 00, 00, 12,
+        00, 00, 00, 21,
+        00, 00, 00, 03,
+        00, 00, 00, 15,
+        00, 00, 00, 0F,
+        00, 00, 00, 1B,
+        00, 00, 00, 09,
+        00, 00, 00, 1E,
+        00, 00, 00, 06,
+        00, 00, 00, 0C,
+        A0, 70, 32, 00, 02,
+        00, 00, 00, 08,
+        00, 00, 00, 19,
+        00, 00, 00, 12,
+        00, 00, 00, 21,
+        00, 00, 00, 03,
+        00, 00, 00, 15,
+        00, 00, 00, 0F,
+        00, 00, 00, 1B,
+        00, 00, 00, 09,
+        00, 00, 00, 1E,
+        00, 00, 00, 06,
+        00, 00, 00, 0C,
+        A0, 0D, 06, 60, 1A, 00, 00, 30, 30,
+        A0, 0D, 06, 61, 1A, 00, 00, 30, 30,
+        A0, 0D, 06, 66, 1A, 00, 00, 30, 30,
+        A0, 0D, 06, 6B, 1A, 00, 00, 30, 30,
+        A0, 0D, 06, 60, 1B, 00, 00, 30, 30,
+        A0, 0D, 06, C1, 56, 70, 59, 19, E8,
+        A0, 0D, 06, 8E, 23, 35, 08, 00, C0,
+        A0, 0D, 06, 80, 25, 10, C0, 05, 00,
+        A0, 0D, 06, 8E, 25, 10, 80, 05, 00,
+        A2, 8D, 04, 05, 00, 05, 00,
+        A2, 62, 04, 00, 00, 67, 00,
+        A2, 97, 06, 00, 06, 08, 11, 06, 00,
+        A2, 4A, 01, 00,
+        A0, 0D, 06, 41, 32, 00, 00, 17, 09,
+        A0, 85, 04, 40, 02, 00, 00,
+        00, 02, F4, 01
+}

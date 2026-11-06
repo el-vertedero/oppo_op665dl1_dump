@@ -1,0 +1,46 @@
+{
+    "module": "previewSeg",
+    "comment":
+    [   
+        "BrandID 1 for oupo, 2 for yijia, 3 for zhenwo",
+        "QCOM performanceMode(BALANCED , HIGH_PERFORMANCE , POWER_SAVER , SYSTEM_SETTINGS , SUSTAINED_HIGH_PERFORMANCE ,",
+        "BURST , LOW_POWER_SAVER , HIGH_POWER_SAVER , LOW_BALANCED)",
+        "MTK nnapi and neuron delegate performanceMode(kLowPower , kFastSingleAnswer , kSustainedSpeed)",
+        "MTK neuron runtime performance(NEURONRUNTIME_PREFER_PERFORMANCE,NEURONRUNTIME_PREFER_POWER)",
+        "QCOM SegMode(DSP, GPU, CPU)",
+        "MTK SegMode(CPU, NNAPI, NEURON_DELEGATE, NEURON_RUNTIME)",
+        "MTK BoostValue mode(int(0~100), 101 Hint to notify the underlying scheduler to use the profiled boost value.)",
+        "MTK Scale: for MTK neuron runtime dequanti",
+        "MTK ZeroPoint: for MTK neuron runtime dequanti",
+        "OdnnRuntime: CPU_FLOAT32, GPU_FLOAT32_16_HYBRID, DSP_FIXED8_TF, GPU_FLOAT16, AIP_FIXED8_TF, AIP_FIXED_TF, CPU, GPU, DSP",
+        "OdnnBoostValue: [0, 110] Example:  low power  30 or 50 ; normal performance 70; high performance 100;super performance 110;",
+        "OdnnLogLevel: ERROR, WARING, INFO, DEBUG, PRINTF",
+        "OdnnPriority: NORMAL, HIGH, LOW",
+        "OdnnProfilingLevel: OFF, BASIC, DETAILED"
+    ],
+    "product": "DX-6",
+    "VENDOR": "ODNN_MTK",
+    "ODNN_VERSION": "1.2.8.0227",
+    "MTK_VERSION":"10.0",
+    "MTK_SOC": "mt6995",
+    "param":
+    [
+        {
+            "product_name": "DX-6",
+            "BrandID": 1,
+            "SegMode": "NEURON_RUNTIME",
+            "Resolution":224,
+            "PerformanceMode":"NEURONRUNTIME_PREFER_POWER",
+            "BoostValue":30,
+            "DynamicFrames": true,
+            "DropFrames": false,
+            "Scale":0.22675946354866028,
+            "ZeroPoint":127,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 100,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "module": "segdepth_Petmatting",
+    "comment": [
+        "QCOM performanceMode(BALANCED , HIGH_PERFORMANCE , POWER_SAVER , SYSTEM_SETTINGS , SUSTAINED_HIGH_PERFORMANCE ,",
+        "BURST , LOW_POWER_SAVER , HIGH_POWER_SAVER , LOW_BALANCED)",
+        "QCOM runtime(CPU_FLOAT32, GPU_FLOAT32_16_HYBRID, GPU_FLOAT16, DSP_FIXED8_TF, AIP_FIXED8_TF)",
+        "MTK performanceMode(kLowPower , kFastSingleAnswer , kSustainedSpeed)",
+        "WinTFLite runtime(UNKNOWN)",
+        "WinTFLite performanceMode(UNKNOWN)",
+        "MTK runtime(FLOAT, UINT8)",
+        "ImageWidth/ImageHeight(576, 768)",
+        "ROIMode(inner, outer)",
+        "OdnnRuntime: CPU_FLOAT32, GPU_FLOAT32_16_HYBRID, DSP_FIXED8_TF, GPU_FLOAT16, AIP_FIXED8_TF, AIP_FIXED_TF, CPU, GPU, DSP",
+        "OdnnBoostValue: [0, 110] Example:  low power  30 or 50 ; normal performance 70; high performance 100;super performance 110;",
+        "OdnnLogLevel: ERROR, WARING, INFO, DEBUG, PRINTF",
+        "OdnnPriority: NORMAL, HIGH, LOW",
+        "OdnnProfilingLevel: OFF, BASIC, DETAILED"
+    ],
+    "product": "6995",
+    "VENDOR": "MTK",
+    "BrandModels": "BrandA_oplus",
+    "ODNN_VERSION": "v1.1.0.0903",
+    "QNN_VERSION": "10.0.0",
+    "param": [
+        {
+            "product_name": "6995",
+            "PetMattingVersion": "2",
+            "PetMattingRuntime": "DSP_FIXED8_TF",
+            "PetMattingPerformanceMode": "BALANCED",
+            "PetMattingImageWidth": 2304,
+            "PetMattingImageHeight": 3072,
+            "PetMattingInputDelta": 0.003921568859368563,
+            "PetMattingInputOffset": 0,
+            "PetMattingOutputDelta": 0.006169578526169062,
+            "PetMattingOutputOffset": 6,
+            "PetMattingROIMode": "inner",
+            "NeonPerformanceMode":0,
+            "BokehLutPerformanceMode":0,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 60,
+            "OdnnInitBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF"
+        }
+    ]
+}

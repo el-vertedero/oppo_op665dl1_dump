@@ -1,0 +1,394 @@
+{
+	"26205": {
+		"platform_config": {
+			"sensor_arch": "mtk_sensor_arch_2_0"
+		},
+		"sensor_config": {
+			"android.sensor.accelerometer": {
+				"type": 1,
+				"support": "true",
+				"module": "icm456xy",
+				"icm456xy": {
+					"mode": "batch_cali|factory_cali",
+					"offset_x": 0.0,
+					"offset_y": 0.0,
+					"offset_z": 0.0
+				}
+			},
+			"android.sensor.magnetic_field": {
+				"type": 2,
+				"support": "true",
+				"module": "akm09919"
+			},
+			"android.sensor.gyroscope": {
+				"type": 4,
+				"support": "true",
+				"module": "icm456xy",
+				"icm456xy": {
+					"mode": "batch_cali|factory_cali",
+					"radian_threshold": 0.05,
+					"offset_x": 0.0,
+					"offset_y": 0.0,
+					"offset_z": 0.0
+				}
+			},
+			"qti.sensor.consumer_ir":{
+				"type":33171999,
+				"support":"true"
+			},
+			"android.sensor.step_counter": {
+				"type": 19,
+				"support": "true"
+			},
+			"qti.sensor.rgb_rear":{
+				"type":33171052,
+				"support":"true",
+				"module":"sip5009",
+				"sip5009":{
+					"mode":"factory_cali",
+					"R_cali":1000,
+					"G_cali":1000,
+					"B_cali":1000,
+					"C_cali":1000,
+					"W_cali":1000,
+					"F_cali":1000
+				}
+			},
+			"qti.sensor.spectral_rear":{
+				"type":33171059,
+				"support":"true",
+				"module":"si5009",
+				"si5009":{
+					"mode":"factory_cali|is_wavelength_cali",
+					"XL_cali_gain1":1000,
+					"XL_cali_gain2":1000,
+					"Y_cali_gain1":1000,
+					"Y_cali_gain2":1000,
+					"Z_cali_gain1":1000,
+					"Z_cali_gain2":1000,
+					"NIR_cali_gain1":1000,
+					"NIR_cali_gain2":1000,
+					"VIS_cali_gain1":1000,
+					"VIS_cali_gain2":1000,
+					"F1_cali_gain1":1000,
+					"F1_cali_gain2":1000,
+					"F2_cali_gain1":1000,
+					"F2_cali_gain2":1000,
+					"F3_cali_gain1":1000,
+					"F3_cali_gain2":1000,
+					"F4_cali_gain1":1000,
+					"F4_cali_gain2":1000,
+					"F5_cali_gain1":1000,
+					"F5_cali_gain2":1000,
+					"F6_cali_gain1":1000,
+					"F6_cali_gain2":1000,
+					"F7_cali_gain1":1000,
+					"F7_cali_gain2":1000,
+					"F8_cali_gain1":1000,
+					"F8_cali_gain2":1000,
+					"F_cali_gain1":1000,
+					"F_cali_gain2":1000,
+					"wavelength_cali":0
+				}
+			},
+			"qti.sensor.flicker_rear":{
+				"type":33171054,
+				"support":"true"
+			},
+			"android.sensor.light": {
+				"type": 5,
+				"support": "true",
+				"module": "module_ignore",
+				"module_ignore":{
+					"mode":"no_aftersale"
+				}
+			},
+			"android.sensor.proximity": {
+				"type": 8,
+				"support": "true",
+				"module": "tcs3775",
+				"tcs3775": {
+					"mode": "ignore_mean|under_screen|factory_cali",
+					"ps0_offset": 0,
+					"ps0_distance_delta": 110,
+					"ps0_offset_lp": 0,
+					"ps0_distance_1cm_delta": 110
+				}
+			},
+			"qti.sensor.rgb": {
+				"type": 33171001,
+				"support": "true",
+				"module": "module_ignore",
+				"module_ignore": {
+					"mode": "factory_cali|is_clock_cali",
+					"clock": -1,
+					"R_cali": 1000,
+					"G_cali": 1000,
+					"B_cali": 1000,
+					"C_cali": 1000,
+					"W_cali": 1000,
+					"F_cali": 1000
+				}
+			},
+			"qti.sensor.rgb_gain":{
+				"type":33171995,
+				"support":"true",
+				"module":"module_ignore",
+				"module_ignore":{
+					"mode":"factory_cali|support_five_channel",
+					"Gain_1024_R":1000,
+					"Gain_1024_G":1000,
+					"Gain_1024_B":1000,
+					"Gain_1024_C":1000,
+					"Gain_1024_W":1000,
+					"Gain_2048_R":1000,
+					"Gain_2048_G":1000,
+					"Gain_2048_B":1000,
+					"Gain_2048_C":1000,
+					"Gain_2048_W":1000
+				}
+			},
+ 			"android.sensor.pwm_rgb":{
+ 				"type":33171070,
+ 				"support":"true",
+				"module":"tcs3775",
+				"tcs3775":{
+ 					"mode":"hight_speed_pwm|support_multi_bri|clock_cali_60hz|gain_cali|support_nine_bri",
+ 					"leak_cali_bri_min_boe":962,
+ 					"leak_cali_bri_mid_boe":1087,
+ 					"leak_cali_bri_max_boe":3515,
+ 					"leak_cali_bri_min_tma":773,
+ 					"leak_cali_bri_mid_tma":1153,
+ 					"leak_cali_bri_max_tma":3515,
+ 					"gain_cali_bri_boe":962,
+ 					"gain_cali_bri_tma":3515,
+ 					"leak_cali_bri_0_tma":290,
+ 					"leak_cali_bri_1_tma":634,
+ 					"leak_cali_bri_2_tma":879,
+ 					"leak_cali_bri_3_tma":1064,
+ 					"leak_cali_bri_4_tma":1274,
+ 					"leak_cali_bri_5_tma":1646,
+ 					"leak_cali_bri_6_tma":2227,
+ 					"leak_cali_bri_7_tma":3020,
+ 					"leak_cali_bri_8_tma":3515,
+ 					"W_VIEW_R_0":-1,
+ 					"W_VIEW_G_0":-1,
+ 					"W_VIEW_B_0":-1,
+ 					"W_VIEW_C_0":-1,
+ 					"W_VIEW_R_1":-1,
+ 					"W_VIEW_G_1":-1,
+ 					"W_VIEW_B_1":-1,
+ 					"W_VIEW_C_1":-1,
+ 					"W_VIEW_R_2":-1,
+ 					"W_VIEW_G_2":-1,
+ 					"W_VIEW_B_2":-1,
+ 					"W_VIEW_C_2":-1,
+ 					"W_VIEW_R_3":-1,
+ 					"W_VIEW_G_3":-1,
+ 					"W_VIEW_B_3":-1,
+ 					"W_VIEW_C_3":-1,
+ 					"W_VIEW_R_4":-1,
+ 					"W_VIEW_G_4":-1,
+ 					"W_VIEW_B_4":-1,
+ 					"W_VIEW_C_4":-1,
+ 					"W_VIEW_R_5":-1,
+ 					"W_VIEW_G_5":-1,
+ 					"W_VIEW_B_5":-1,
+ 					"W_VIEW_C_5":-1,
+ 					"W_VIEW_R_6":-1,
+ 					"W_VIEW_G_6":-1,
+ 					"W_VIEW_B_6":-1,
+ 					"W_VIEW_C_6":-1,
+ 					"W_VIEW_R_7":-1,
+ 					"W_VIEW_G_7":-1,
+ 					"W_VIEW_B_7":-1,
+ 					"W_VIEW_C_7":-1,
+ 					"W_VIEW_R_8":-1,
+ 					"W_VIEW_G_8":-1,
+ 					"W_VIEW_B_8":-1,
+ 					"W_VIEW_C_8":-1
+ 				}
+ 			},
+			"android.sensor.black_frame_phone_origin_data":{
+				"type":33171093,
+				"support":"true",
+				"module":"tcs3775",
+				"tcs3775":{
+					"mode":"factory_cali|support_five_channel",
+					"mode_dc1":1,
+					"pwm_mode_bri_0":612,
+					"pwm_mode_bri_1":729,
+					"pwm_mode_bri_2":989,
+					"pwm_mode_bri_3":1154,
+					"pwm_mode_bri_4":3515,
+
+					"mode_dc2":1,
+					"dc_mode_bri_0":612,
+					"dc_mode_bri_1":729,
+					"dc_mode_bri_2":989,
+					"dc_mode_bri_3":1154,
+					"dc_mode_bri_4":3515,
+
+					"R_MIN_0":-1,
+					"G_MIN_0":-1,
+					"B_MIN_0":-1,
+					"W_MIN_0":-1,
+					"F_MIN_0":-1,
+					"R_MAX_0":-1,
+					"G_MAX_0":-1,
+					"B_MAX_0":-1,
+					"W_MAX_0":-1,
+					"F_MAX_0":-1,
+
+					"R_MIN_1":-1,
+					"G_MIN_1":-1,
+					"B_MIN_1":-1,
+					"W_MIN_1":-1,
+					"F_MIN_1":-1,
+					"R_MAX_1":-1,
+					"G_MAX_1":-1,
+					"B_MAX_1":-1,
+					"W_MAX_1":-1,
+					"F_MAX_1":-1,
+
+					"R_MIN_2":-1,
+					"G_MIN_2":-1,
+					"B_MIN_2":-1,
+					"W_MIN_2":-1,
+					"F_MIN_2":-1,
+					"R_MAX_2":-1,
+					"G_MAX_2":-1,
+					"B_MAX_2":-1,
+					"W_MAX_2":-1,
+					"F_MAX_2":-1,
+
+					"R_MIN_3":-1,
+					"G_MIN_3":-1,
+					"B_MIN_3":-1,
+					"W_MIN_3":-1,
+					"F_MIN_3":-1,
+					"R_MAX_3":-1,
+					"G_MAX_3":-1,
+					"B_MAX_3":-1,
+					"W_MAX_3":-1,
+					"F_MAX_3":-1,
+
+					"R_MIN_4":-1,
+					"G_MIN_4":-1,
+					"B_MIN_4":-1,
+					"W_MIN_4":-1,
+					"F_MIN_4":-1,
+					"R_MAX_4":-1,
+					"G_MAX_4":-1,
+					"B_MAX_4":-1,
+					"W_MAX_4":-1,
+					"F_MAX_4":-1,
+
+					"R_MIN_5":-1,
+					"G_MIN_5":-1,
+					"B_MIN_5":-1,
+					"W_MIN_5":-1,
+					"F_MIN_5":-1,
+					"R_MAX_5":-1,
+					"G_MAX_5":-1,
+					"B_MAX_5":-1,
+					"W_MAX_5":-1,
+					"F_MAX_5":-1,
+
+					"R_MIN_6":-1,
+					"G_MIN_6":-1,
+					"B_MIN_6":-1,
+					"W_MIN_6":-1,
+					"F_MIN_6":-1,
+					"R_MAX_6":-1,
+					"G_MAX_6":-1,
+					"B_MAX_6":-1,
+					"W_MAX_6":-1,
+					"F_MAX_6":-1,
+
+					"R_MIN_7":-1,
+					"G_MIN_7":-1,
+					"B_MIN_7":-1,
+					"W_MIN_7":-1,
+					"F_MIN_7":-1,
+					"R_MAX_7":-1,
+					"G_MAX_7":-1,
+					"B_MAX_7":-1,
+					"W_MAX_7":-1,
+					"F_MAX_7":-1,
+
+					"R_MIN_8":-1,
+					"G_MIN_8":-1,
+					"B_MIN_8":-1,
+					"W_MIN_8":-1,
+					"F_MIN_8":-1,
+					"R_MAX_8":-1,
+					"G_MAX_8":-1,
+					"B_MAX_8":-1,
+					"W_MAX_8":-1,
+					"F_MAX_8":-1,
+
+					"R_MIN_9":-1,
+					"G_MIN_9":-1,
+					"B_MIN_9":-1,
+					"W_MIN_9":-1,
+					"F_MIN_9":-1,
+					"R_MAX_9":-1,
+					"G_MAX_9":-1,
+					"B_MAX_9":-1,
+					"W_MAX_9":-1,
+					"F_MAX_9":-1
+				}
+			},
+			"android.sensor.black_frame_dark_count":{
+				"type":33171094,
+				"support":"true",
+				"module":"module_ignore",
+				"module_ignore":{
+					"mode":"factory_cali|support_five_channel",
+					"DARK_COUNT_GAIN0_R":-1,
+					"DARK_COUNT_GAIN0_G":-1,
+					"DARK_COUNT_GAIN0_B":-1,
+					"DARK_COUNT_GAIN0_W":-1,
+					"DARK_COUNT_GAIN0_F":-1,
+					"DARK_COUNT_GAIN1_R":-1,
+					"DARK_COUNT_GAIN1_G":-1,
+					"DARK_COUNT_GAIN1_B":-1,
+					"DARK_COUNT_GAIN1_W":-1,
+					"DARK_COUNT_GAIN1_F":-1
+				}
+			},
+			"android.sensor.black_frame_dark_delay":{
+				"type":33171095,
+				"support":"true",
+				"module":"module_ignore",
+				"module_ignore":{
+					"mode":"factory_cali",
+					"DARK_DELAY":0,
+					"dbv":3515
+				}
+			},
+			"qti.sensor.screen_sn":{
+				"type":33171996,
+				"support":"true"
+			},
+			"qti.sensor.free_fall":{
+				"type":33171009,
+				"support":"true",
+				"module":"module_ignore",
+				"module_ignore":{
+					"mode":"virtual_sensor"
+				}
+			},
+			"android.sensor.sar":{
+				"type":65608,
+				"support":"true",
+				"module":"module_ignore",
+				"module_ignore":{
+					"mode":"dual_channel"
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,36 @@
+{
+    "module": "render_param",
+    "product": "mars",
+    "VERSION": "0.0.1",
+    "calib_params":
+    {
+        "Hasselblad_Len_Table_phone": [23, 45, 63, 78, 114, 0],
+        "zoomMode_to_Len_lut": [3, 0, 2, 5],
+        "Phone_Len": [1.0, 1.5, 2.0, 3.0, 3.64, 0.0]
+    },
+    "render_res_scale":
+    {
+        "high": 1.0,
+        "mid": 0.75,
+        "low": 0.5
+    },
+    "light_spots":
+    {
+        "8bit":
+        {
+            "sigmoid_bias": 0.95,
+            "sigmoid_scale": 40.0,
+            "weight_offset": 0.1,
+            "gamma": 2.2,
+            "high_luminance_thresh": 250.0
+        },
+        "10bit":
+        {
+            "sigmoid_bias": 0.75,
+            "sigmoid_scale": 40.0,
+            "weight_offset": 0.2,
+            "gamma": 2.2,
+            "high_luminance_thresh": 230.0
+        }
+    }
+}

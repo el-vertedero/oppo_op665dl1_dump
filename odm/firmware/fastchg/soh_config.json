@@ -1,0 +1,287 @@
+{
+  "_file_checksum" : 13832,
+  "_file_tag" : "OPLUS_SOH_CONFIG_V1.0",
+  "_file_version" : "V1.0_20260309",
+  "_module_checksums" :
+  {
+    "cycle_config" : 40631,
+    "cycle_soh_table" : 15079,
+    "data_sources" : 64000,
+    "fcc_soh" : 48380,
+    "validity_scoring_configs" : 28643
+  },
+  "cycle_config" :
+  {
+    "cycle_1_reduce_ui_cc_t" : 50,
+    "cycle_1_reduce_ui_soh_t" : 4320000,
+    "cycle_2_reduce_ui_cc_t" : 40,
+    "cycle_2_reduce_ui_soh_t" : 3456000,
+    "cycle_3_reduce_ui_soh_t" : 1728000,
+    "cycle_4_reduce_ui_cc_t" : 40,
+    "cycle_4_reduce_ui_soh_t" : 3456000
+  },
+  "cycle_soh_table" :
+  [
+    {
+      "cycle" : 0,
+      "soh" : 10000
+    },
+    {
+      "cycle" : 400,
+      "soh" : 9700
+    },
+    {
+      "cycle" : 800,
+      "soh" : 9100
+    },
+    {
+      "cycle" : 1200,
+      "soh" : 8500
+    },
+    {
+      "cycle" : 1800,
+      "soh" : 8000
+    },
+    {
+      "cycle" : 2000,
+      "soh" : 7720
+    },
+    {
+      "cycle" : 3000,
+      "soh" : 7000
+    }
+  ],
+  "data_sources" :
+  [
+    {
+      "enabled" : true,
+      "final_weight" : 50,
+      "max_records" : 10,
+      "name" : "batt_soh",
+      "sysfs_path" : "/sys/class/power_supply/battery/soh",
+      "tag" : "batt_soh_history",
+      "time_weight_max" : 40,
+      "time_weight_min" : 1,
+      "time_weight_valid_days" : 180,
+      "value_type" : "percentage",
+      "weight_cc_soh" : 15,
+      "weight_fcc_soh" : 10,
+      "weight_hist_soh" : 15,
+      "weight_weighted_soh" : 60
+    },
+    {
+      "enabled" : false,
+      "final_weight" : 20,
+      "max_records" : 10,
+      "name" : "batt_fcc_soh",
+      "sysfs_path" : "/sys/class/power_supply/battery/fcc",
+      "tag" : "batt_fcc_soh_history",
+      "time_weight_max" : 10,
+      "time_weight_min" : 1,
+      "time_weight_valid_days" : 180,
+      "value_type" : "percentage",
+      "weight_cc_soh" : 15,
+      "weight_fcc_soh" : 10,
+      "weight_hist_soh" : 15,
+      "weight_weighted_soh" : 60
+    },
+    {
+      "enabled" : true,
+      "final_weight" : 20,
+      "max_records" : 10,
+      "name" : "batt_qmax",
+      "sysfs_path" : "/sys/class/power_supply/battery/qmax",
+      "tag" : "batt_qmax_history",
+      "time_weight_max" : 10,
+      "time_weight_min" : 1,
+      "time_weight_valid_days" : 180,
+      "value_type" : "percentage",
+      "weight_cc_soh" : 15,
+      "weight_fcc_soh" : 10,
+      "weight_hist_soh" : 15,
+      "weight_weighted_soh" : 60
+    },
+    {
+      "enabled" : true,
+      "final_weight" : 10,
+      "max_records" : 10,
+      "name" : "r_soh",
+      "sysfs_path" : "",
+      "tag" : "batt_r_soh_history",
+      "time_weight_max" : 40,
+      "time_weight_min" : 1,
+      "time_weight_valid_days" : 180,
+      "value_type" : "percentage",
+      "weight_cc_soh" : 15,
+      "weight_fcc_soh" : 10,
+      "weight_hist_soh" : 15,
+      "weight_weighted_soh" : 60
+    }
+  ],
+  "debug_enable" : false,
+  "disable_final_weight" : true,
+  "fcc_soh" :
+  {
+    "capacity_factor" : 95,
+    "temp_max_valid" : 45,
+    "temp_min_valid" : 20
+  },
+  "validity_scoring_configs" :
+  {
+    "cc_soh" :
+    [
+      {
+        "diff_threshold" : 0,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 3,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 5,
+        "score" : 85
+      },
+      {
+        "diff_threshold" : 8,
+        "score" : 75
+      },
+      {
+        "diff_threshold" : 10,
+        "score" : 60
+      },
+      {
+        "diff_threshold" : 15,
+        "score" : 40
+      },
+      {
+        "diff_threshold" : 999999,
+        "score" : 20
+      }
+    ],
+    "default_validity_scoring" :
+    [
+      {
+        "diff_threshold" : 0,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 3,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 5,
+        "score" : 85
+      },
+      {
+        "diff_threshold" : 8,
+        "score" : 75
+      },
+      {
+        "diff_threshold" : 10,
+        "score" : 60
+      },
+      {
+        "diff_threshold" : 15,
+        "score" : 40
+      },
+      {
+        "diff_threshold" : 999999,
+        "score" : 20
+      }
+    ],
+    "fcc_soh" :
+    [
+      {
+        "diff_threshold" : 0,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 3,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 5,
+        "score" : 90
+      },
+      {
+        "diff_threshold" : 8,
+        "score" : 80
+      },
+      {
+        "diff_threshold" : 10,
+        "score" : 70
+      },
+      {
+        "diff_threshold" : 15,
+        "score" : 60
+      },
+      {
+        "diff_threshold" : 999999,
+        "score" : 20
+      }
+    ],
+    "hist_soh" :
+    [
+      {
+        "diff_threshold" : 0,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 3,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 5,
+        "score" : 90
+      },
+      {
+        "diff_threshold" : 8,
+        "score" : 80
+      },
+      {
+        "diff_threshold" : 10,
+        "score" : 60
+      },
+      {
+        "diff_threshold" : 15,
+        "score" : 40
+      },
+      {
+        "diff_threshold" : 999999,
+        "score" : 20
+      }
+    ],
+    "weighted_soh" :
+    [
+      {
+        "diff_threshold" : 0,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 3,
+        "score" : 100
+      },
+      {
+        "diff_threshold" : 5,
+        "score" : 85
+      },
+      {
+        "diff_threshold" : 8,
+        "score" : 75
+      },
+      {
+        "diff_threshold" : 10,
+        "score" : 60
+      },
+      {
+        "diff_threshold" : 15,
+        "score" : 40
+      },
+      {
+        "diff_threshold" : 999999,
+        "score" : 20
+      }
+    ]
+  }
+}

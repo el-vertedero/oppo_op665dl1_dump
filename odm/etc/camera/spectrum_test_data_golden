@@ -1,0 +1,101 @@
+{
+	"spectrum_test_data" : 
+	{
+		"test_3000k_data" : 
+		{
+			"cct_mean" : "3049",
+			"f1_data" : "72",
+			"f2_data" : "324",
+			"f3_data" : "870",
+			"f4_data" : "1547",
+			"f5_data" : "830",
+			"f6_data" : "4412",
+			"f7_data" : "2454",
+			"f8_data" : "310",
+			"gain" : "256",
+			"lux_mean" : "693",
+			"nir_data" : "260",
+			"vis_data" : "4417",
+			"xl_data" : "4211",
+			"y_data" : "3612",
+			"z_data" : "1022"
+		},
+		"test_4500k_data" : 
+		{
+			"cct_mean" : "4444",
+			"f1_data" : "75",
+			"f2_data" : "542",
+			"f3_data" : "1149",
+			"f4_data" : "1815",
+			"f5_data" : "937",
+			"f6_data" : "3218",
+			"f7_data" : "1732",
+			"f8_data" : "227",
+			"gain" : "256",
+			"lux_mean" : "687",
+			"nir_data" : "214",
+			"vis_data" : "4120",
+			"xl_data" : "3693",
+			"y_data" : "3621",
+			"z_data" : "1771"
+		},
+		"test_5000k_data" : 
+		{
+			"cct_mean" : "4973",
+			"f1_data" : "384",
+			"f2_data" : "1056",
+			"f3_data" : "1876",
+			"f4_data" : "2575",
+			"f5_data" : "901",
+			"f6_data" : "3952",
+			"f7_data" : "3011",
+			"f8_data" : "432",
+			"gain" : "256",
+			"lux_mean" : "669",
+			"nir_data" : "274",
+			"vis_data" : "4931",
+			"xl_data" : "3486",
+			"y_data" : "3609",
+			"z_data" : "1902"
+		},
+		"test_6000k_data" : 
+		{
+			"cct_mean" : "5936",
+			"f1_data" : "76",
+			"f2_data" : "692",
+			"f3_data" : "1260",
+			"f4_data" : "1970",
+			"f5_data" : "1031",
+			"f6_data" : "2508",
+			"f7_data" : "1348",
+			"f8_data" : "198",
+			"gain" : "256",
+			"lux_mean" : "686",
+			"nir_data" : "187",
+			"vis_data" : "3965",
+			"xl_data" : "3368",
+			"y_data" : "3636",
+			"z_data" : "2231"
+		},
+		"test_6500k_data" : 
+		{
+			"cct_mean" : "6411",
+			"f1_data" : "860",
+			"f2_data" : "1391",
+			"f3_data" : "2403",
+			"f4_data" : "3033",
+			"f5_data" : "1008",
+			"f6_data" : "3344",
+			"f7_data" : "3802",
+			"f8_data" : "1652",
+			"gain" : "256",
+			"lux_mean" : "708",
+			"nir_data" : "1683",
+			"vis_data" : "6122",
+			"xl_data" : "3360",
+			"y_data" : "3868",
+			"z_data" : "2356"
+		},
+		"ver" : "10"
+	}
+}

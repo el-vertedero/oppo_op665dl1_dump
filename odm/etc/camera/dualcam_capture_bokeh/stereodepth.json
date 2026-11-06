@@ -1,0 +1,114 @@
+{
+    "module": "stereodepth",
+    "comment": [
+        "BrandID 1 for oupo, 2 for yijia, 3 for zhenwo",
+        "OdnnRuntime: CPU_FLOAT32, GPU_FLOAT32_16_HYBRID, DSP_FIXED8_TF, GPU_FLOAT16, AIP_FIXED8_TF, AIP_FIXED_TF, CPU, GPU, DSP",
+        "OdnnBoostValue: [0, 110] Example:  low power  30 or 50 ; normal performance 70; high performance 100;super performance 110;",
+        "OdnnLogLevel: ERROR, WARING, INFO, DEBUG, PRINTF",
+        "OdnnPriority: NORMAL, HIGH, LOW",
+        "OdnnProfilingLevel: OFF, BASIC, DETAILED"
+    ],
+    "product": "6995",
+    "VENDOR": "MTK",
+    "QNN_VERSION": "10.0.0",
+    "slantEnable": 1,
+    "slantQuant": 1,
+    "param": 
+	{
+	    "BigSize":
+		{
+            "product_name": "6995",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 30,
+            "OdnnInitBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF",
+            "modelWidth": 768,
+			"modelHeight": 1024,
+			"modelChannel": 6,
+			"modelOutWidth":768,
+			"modelOutHeight":1024
+        },
+	    "Near":
+		{
+            "product_name": "6995",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 30,
+            "OdnnInitBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF",
+            "modelWidth": 624,
+			"modelHeight": 832,
+			"modelChannel": 6,
+			"modelOutWidth":624,
+			"modelOutHeight":832
+        },
+	    "SuperFar":
+		{
+            "product_name": "6995",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 30,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF",
+            "modelWidth": 1024,
+			"modelHeight": 768,
+			"modelChannel": 6,
+			"modelOutWidth":1024,
+			"modelOutHeight":768
+        },
+		"SmallSize":
+		{
+			"product_name": "6995",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 30,
+            "OdnnInitBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF",
+            "modelWidth": 384,
+			"modelHeight": 512,
+			"modelChannel": 6,
+			"modelOutWidth":384,
+			"modelOutHeight":512
+		},
+		"Slant":
+		{
+			"product_name": "6995",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 30,
+            "OdnnInitBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF",
+            "modelWidth": 768,
+			"modelHeight": 1024,
+			"modelChannel": 6,
+			"modelOutWidth":768,
+			"modelOutHeight":1024
+		},
+		"SlantWH1024x768":
+		{
+			"product_name": "6995",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 30,
+            "OdnnInitBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF",
+            "modelWidth": 1024,
+			"modelHeight": 768,
+			"modelChannel": 6,
+			"modelOutWidth":1024,
+			"modelOutHeight":768
+		}
+    }
+}

@@ -1,0 +1,5 @@
+wave_he_short_f0_130_0.bin:0-4
+wave_he_short_f0_130_1.bin:5-40
+wave_he_short_f0_130_2.bin:41-68
+wave_he_short_f0_130_3.bin:69-86
+wave_he_short_f0_130_4.bin:87-100

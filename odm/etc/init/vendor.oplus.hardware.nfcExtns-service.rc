@@ -1,0 +1,5 @@
+service nfcExtnsService /odm/bin/hw/vendor.oplus.hardware.nfcExtns-service
+    interface aidl vendor.oplus.hardware.nfcExtns.INfcExtns/default
+    user system
+    group nfc system
+    disabled

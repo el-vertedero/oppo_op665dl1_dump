@@ -1,0 +1,22 @@
+{
+  "_comment": "Add for PreCache2.0",
+  "_owner": "W9013202",
+  "enable": 1,
+  "record": 0,
+  "replayThreadCount": 5,
+  "version": 20260818,
+  "maxKeySize": 1024,
+  "maxValueSize": 6291456,
+  "maxTotalSize": 12582912,
+  "name": "com.coloros.assistantscreen",
+
+  "layerInfo": {
+    "dataWritePath": "/data/user_de/0/com.coloros.assistantscreen/cache"
+  },
+
+  "WarmUp": {
+    "RT": {
+      "dataReadPath": "/odm/etc/precache/com.coloros.assistantscreen/rt"
+    }
+  }
+}

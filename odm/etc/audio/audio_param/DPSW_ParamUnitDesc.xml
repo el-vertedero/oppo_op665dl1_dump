@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="DPSW">
+			<Category name="Common"/>
+			<Category name="MT6995"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="SPK" type="int"/>
+		<Param name="BT_A2DP" type="int"/>
+		<Param name="HP" type="int"/>
+	</ParamUnit>
+</ParamUnitDesc>

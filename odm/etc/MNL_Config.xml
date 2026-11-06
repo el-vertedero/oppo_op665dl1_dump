@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mnl_config version="21111601.6.00.00" type="gps">
+    <feature>PMTK_DIS_CFG_KPI
+        <version>1.0</version>
+        <config>1</config>
+        <format>840,841,842,843 (Disable:1, Enable:0)</format>
+        <setting>0,0,0,0</setting>
+    </feature>
+    <feature>CoTMS
+        <version>5.2</version>
+        <config>1</config>
+        <format>RTS,TEP</format>
+        <setting>3,4,1</setting>
+    </feature>
+</mnl_config>

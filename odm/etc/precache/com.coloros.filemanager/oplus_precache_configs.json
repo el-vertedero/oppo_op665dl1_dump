@@ -1,0 +1,29 @@
+{
+    "_comment": "Add for PreCache2.0 - FileManager warmup (Mars/MT6995/26015, OS V17.0.0)",
+    "_owner": "80420803",
+    "enable": 1,
+    "record": 0,
+    "version": 20260812,
+    "replayThreadCount": 1,
+    "maxKeySize": 1024,
+    "maxValueSize": 2097152,
+    "maxTotalSize": 4194304,
+    "name": "com.coloros.filemanager",
+
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.coloros.filemanager/cache",
+        "layerPath": ""
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.coloros.filemanager/rt"
+        }
+    },
+
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.coloros.filemanager/re"
+        }
+    }
+}

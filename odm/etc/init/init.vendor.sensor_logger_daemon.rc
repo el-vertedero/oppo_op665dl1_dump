@@ -1,0 +1,68 @@
+service insmod_oplus_data_record /odm/bin/insmod_oplus_data_record.sh
+    class core
+    user root
+    group root
+    oneshot
+    stdio_to_kmsg
+    seclabel u:r:vendor_modprobe:s0
+    disabled
+
+service sensor_logger_qxdm_start /system/vendor/bin/diag_mdlog -c -u -s 50 -t 2 -x 0x4000 -g 0x4000 -o /data/vendor/oplus/log/device_log/sensor -f /vendor/odm/etc/alwayson.cfg
+    class core
+    user system
+    group system sdcard_rw sdcard_r media_rw
+    disabled
+    oneshot
+
+service sensor_logger_qxdm_drain  /odm/bin/oplus_sensor_logger_daemon -o
+    class core
+    user system
+    group system misc sdcard_rw sdcard_r input
+    disabled
+    oneshot
+
+service sensor_logger_data_start  /odm/bin/oplus_sensor_logger_daemon -s
+    class core
+    user system
+    group system misc sdcard_rw sdcard_r input
+    disabled
+    oneshot
+
+service sensor_logger_data_stop  /odm/bin/oplus_sensor_logger_daemon -t
+    class core
+    user system
+    group system misc sdcard_rw sdcard_r input
+    disabled
+    oneshot
+
+service sensor_logger_qxdm_stop /system/vendor/bin/diag_mdlog -c -u -s 50 -t 2 -x 0x4000 -g 0x4000 -k
+    class core
+    user system
+    group system sdcard_rw sdcard_r media_rw
+    disabled
+    oneshot
+
+on property:ro.oplus.image.my_engineering.type=preversion
+    start insmod_oplus_data_record
+
+on post-fs-data
+    mkdir /data/vendor/oplus 0777 system system
+    mkdir /data/vendor/oplus/log 0777 system system
+    mkdir /data/vendor/oplus/log/device_log 0777 system system
+    mkdir /data/vendor/oplus/log/device_log/sensor 0777 system system
+on boot
+    chown root root /odm/bin/insmod_oplus_data_record.sh
+    chmod 0755 /odm/bin/insmod_oplus_data_record.sh
+    chown system system /odm/bin/oplus_sensor_logger_daemon
+    chmod 0777 /odm/bin/oplus_sensor_logger_daemon
+    chmod 0777 /data/vendor/oplus/log/device_log/sensor
+    chown system system /data/vendor/oplus/log/device_log/sensor
+    chmod 0666 /dev/data_record
+    chown system system /dev/data_record
+    chmod 0666 /sys/class/data_record/data_record/data_record
+    chown system system /sys/class/data_record/data_record/data_record
+    chmod 0666 /sys/devices/virtual/data_record/data_record/data_record
+    chown system system /sys/devices/virtual/data_record/data_record/data_record
+    chmod 0666 /sys/devices/platform/odm/odm:data_record/data_record
+    chown system system /sys/devices/platform/odm/odm:data_record/data_record
+

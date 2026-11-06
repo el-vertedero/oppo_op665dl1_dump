@@ -1,0 +1,754 @@
+{
+  "_comment" : "hashCode: 341190642, layerIndex: -1, vs: 0, fs: 0",
+  "displaySettings" : 
+  {
+    "clip" : 
+    [
+      [ 0, 0, 1272, 2772 ]
+    ],
+    "colorTransform" : [ "I" ],
+    "currentLuminanceNits" : [ 109.15994262695312 ],
+    "deviceHandlesColorTransform" : [ 1 ],
+    "dimmingStage" : [ "LINEAR" ],
+    "effectParameters" : [],
+    "isLauncherVisible" : [ 0 ],
+    "isNavBarVisible" : [ 1 ],
+    "isSplitLayerVisible" : [ 0 ],
+    "isStartingWindowVisible" : [ 0 ],
+    "isSurfaceViewVisible" : [ 0 ],
+    "isTransitionSnapVisible" : [ 0 ],
+    "isVirtual" : [ 0 ],
+    "isWFD" : [ "NULL" ],
+    "isZoomVisible" : [ 0 ],
+    "mUVOrientation" : [ 0 ],
+    "maxLuminance" : [ 1000.0 ],
+    "namePlusId" : [ "MTKDEV (4627039422300187648)" ],
+    "orientation" : [ "ROT_0" ],
+    "outputDataspace" : [ "DISPLAY_P3" ],
+    "physicalDisplay" : 
+    [
+      [ 0, 0, 1272, 2772 ]
+    ],
+    "renderIntent" : [ "TONE_MAP_COLORIMETRIC" ],
+    "supportUndoPremultipliedAlpha" : [ "NULL" ],
+    "targetHdrSdrRatio" : [ 1.0 ],
+    "targetLuminanceNits" : [ 109.15994262695312 ],
+    "tonemapStrategy" : [ "Libtonemap" ]
+  },
+  "layerSettings" : 
+  {
+    "layer_0" : 
+    {
+      "alpha" : [ 0.9951171875 ],
+      "backgroundBlurRadius" : [ 0 ],
+      "backgroundBlurScale" : [ 1.0 ],
+      "blurColor" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "blurParam" : 
+      [
+        {
+          "arcylic" : 
+          {
+            "blurColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+          },
+          "blurType" : 0,
+          "isBlurShot" : 0,
+          "material" : 
+          {
+            "blendColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+            "blendMode" : 0,
+            "mixColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+          },
+          "scaleForBlurShot" : 1.0,
+          "smoothCornerType" : 0,
+          "smoothCornerWeight" : 1.0,
+          "zoom" : 
+          {
+            "tileMode" : 0,
+            "zoomFactor" : 1.0
+          }
+        }
+      ],
+      "blurRegionTransform" : [ "I" ],
+      "blurRegions" : [],
+      "borderSettings.color" : [ 0 ],
+      "borderSettings.strokeWidth" : [ 0.0 ],
+      "boxShadowSettings" : [],
+      "captureSkipHdrUniform" : [ 0 ],
+      "colorTransform" : [ "I" ],
+      "currentScale" : [ 1.0 ],
+      "disableBlending" : [ 0 ],
+      "edgeExtensionEffect" : 
+      [
+        {
+          "bottom" : 0,
+          "left" : 0,
+          "right" : 0,
+          "top" : 0
+        }
+      ],
+      "edrDatas" : [],
+      "edrEffectType" : [ 0 ],
+      "edrEnable" : [ 0 ],
+      "edrKneePoints" : [],
+      "edrScaleReduces" : [],
+      "edrType" : [ 0 ],
+      "effectParameters" : [],
+      "enableDither" : [ 0 ],
+      "geometry.boundaries" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2772.0 ]
+      ],
+      "geometry.originalBounds" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2772.0 ]
+      ],
+      "geometry.otherCrop" : 
+      [
+        [ -12716.1298828125, -27720.0, 12723.8701171875, 27720.0 ]
+      ],
+      "geometry.otherRoundedCornersRadii" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.positionTransform" : 
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -3.8704867362976074,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry.roundedCornersCrop" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.roundedCornersRadii" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.roundedType" : [ 0 ],
+      "geometry.roundedWeight" : [ 2.0 ],
+      "layerId" : [ 495 ],
+      "loadShaderCache" : [ 0 ],
+      "lutSourceIsHwc" : [ 1 ],
+      "luts" : [ "null" ],
+      "mSkipGpuColorManager" : [ 0 ],
+      "mUVOrientation" : [ 0 ],
+      "name" : [ "VRI-com.android.settings/com.android.settings.Settings#495" ],
+      "postProcessEffect" : [ "null" ],
+      "postProcessTarget" : [ "Self" ],
+      "postProcessUniforms" : [ "null" ],
+      "renderCommandBuffer" : [ "null" ],
+      "renderResourceCache" : [ "null" ],
+      "resizerEnable" : [ 0 ],
+      "sfPqSetting" : [ "null" ],
+      "shadow.ambientColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+      "shadow.boundaries" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "shadow.casterIsTranslucent" : [ 0 ],
+      "shadow.isFlexibleLayer" : [ 0 ],
+      "shadow.isZoomWindowLayer" : [ 0 ],
+      "shadow.length" : [ 0.0 ],
+      "shadow.lightPos" : [ 0.0, 0.0, 0.0 ],
+      "shadow.lightRadius" : [ 0.0 ],
+      "shadow.spotColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+      "shadowOffsetX" : [ 0.0 ],
+      "shadowOffsetY" : [ 0.0 ],
+      "shadowOn" : [ 0 ],
+      "skipContentDraw" : [ 0 ],
+      "source.buffer" : 
+      [
+        {
+          "format" : 1,
+          "h" : 2772,
+          "id" : 32688996089903,
+          "isDolbyVision" : false,
+          "usage" : 2816,
+          "w" : 1272
+        }
+      ],
+      "source.buffer.isOpaque" : [ 1 ],
+      "source.buffer.maxLuminanceNits" : [ 0.0 ],
+      "source.buffer.textureTransform" : [ "I" ],
+      "source.buffer.usePremultipliedAlpha" : [ 1 ],
+      "source.buffer.useTextureFiltering" : [ 0 ],
+      "source.solidColor" : 
+      [
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "sourceDataspace" : [ "DISPLAY_P3" ],
+      "stretchEffect" : 
+      [
+        {
+          "height" : 0.0,
+          "mappedChildBounds" : [ 0.0, 0.0, 0.0, 0.0 ],
+          "maxAmountX" : 0.0,
+          "maxAmountY" : 0.0,
+          "vectorX" : 0.0,
+          "vectorY" : 0.0,
+          "width" : 0.0
+        }
+      ],
+      "transformMatrix4x4" : [ "I" ],
+      "vppinfo" : [ "NULL" ],
+      "warpEffect" : 
+      [
+        {
+          "bottomLeftCorner" : [ -1.0, -1.0 ],
+          "bottomRightCorner" : [ 1.0, -1.0 ],
+          "enabled" : 0,
+          "handleA" : [ -0.33333331346511841, 1.0 ],
+          "handleB" : [ 0.33333331346511841, 1.0 ],
+          "handleC" : [ 1.0, 0.33333331346511841 ],
+          "handleD" : [ 1.0, -0.33333331346511841 ],
+          "handleE" : [ 0.33333331346511841, -1.0 ],
+          "handleF" : [ -0.33333331346511841, -1.0 ],
+          "handleG" : [ -1.0, -0.33333331346511841 ],
+          "handleH" : [ -1.0, 0.33333331346511841 ],
+          "params" : 
+          [
+            -1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.33333331346511841,
+            1.0,
+            0.33333331346511841,
+            1.0,
+            1.0,
+            0.33333331346511841,
+            1.0,
+            -0.33333331346511841,
+            0.33333331346511841,
+            -1.0,
+            -0.33333331346511841,
+            -1.0,
+            -1.0,
+            -0.33333331346511841,
+            -1.0,
+            0.33333331346511841
+          ],
+          "topLeftCorner" : [ -1.0, 1.0 ],
+          "topRightCorner" : [ 1.0, 1.0 ]
+        }
+      ],
+      "whitePointNits" : [ 109.15994262695312 ]
+    },
+    "layer_1" : 
+    {
+      "alpha" : [ 0.2047119140625 ],
+      "backgroundBlurRadius" : [ 0 ],
+      "backgroundBlurScale" : [ 1.0 ],
+      "blurColor" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "blurParam" : 
+      [
+        {
+          "arcylic" : 
+          {
+            "blurColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+          },
+          "blurType" : 0,
+          "isBlurShot" : 0,
+          "material" : 
+          {
+            "blendColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+            "blendMode" : 0,
+            "mixColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+          },
+          "scaleForBlurShot" : 1.0,
+          "smoothCornerType" : 0,
+          "smoothCornerWeight" : 1.0,
+          "zoom" : 
+          {
+            "tileMode" : 0,
+            "zoomFactor" : 1.0
+          }
+        }
+      ],
+      "blurRegionTransform" : [ "I" ],
+      "blurRegions" : 
+      [
+        {
+          "alpha" : 0.2047119140625,
+          "blurColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+          "blurParam" : 
+          {
+            "arcylic" : 
+            {
+              "blurColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+            },
+            "blurType" : 2,
+            "isBlurShot" : 0,
+            "material" : 
+            {
+              "blendColor" : [ 1.0, 1.0, 1.0, 1.0 ],
+              "blendMode" : 1,
+              "mixColor" : [ 0.88232421875, 0.88232421875, 0.88232421875, 0.7998046875 ]
+            },
+            "scaleForBlurShot" : 1.0,
+            "smoothCornerType" : 1,
+            "smoothCornerWeight" : 3.0,
+            "zoom" : 
+            {
+              "tileMode" : 0,
+              "zoomFactor" : 1.0
+            }
+          },
+          "blurRadius" : 150,
+          "bottom" : 2606.0,
+          "cornerRadiusBLX" : 0.0,
+          "cornerRadiusBLY" : 0.0,
+          "cornerRadiusBRX" : 0.0,
+          "cornerRadiusBRY" : 0.0,
+          "cornerRadiusTLX" : 98.0,
+          "cornerRadiusTLY" : 98.0,
+          "cornerRadiusTRX" : 98.0,
+          "cornerRadiusTRY" : 98.0,
+          "left" : 0.0,
+          "right" : 1272.0,
+          "top" : 1491.0
+        }
+      ],
+      "borderSettings.color" : [ 0 ],
+      "borderSettings.strokeWidth" : [ 0.0 ],
+      "boxShadowSettings" : [],
+      "captureSkipHdrUniform" : [ 0 ],
+      "colorTransform" : [ "I" ],
+      "currentScale" : [ 1.0 ],
+      "disableBlending" : [ 0 ],
+      "edgeExtensionEffect" : 
+      [
+        {
+          "bottom" : 0,
+          "left" : 0,
+          "right" : 0,
+          "top" : 0
+        }
+      ],
+      "edrDatas" : [],
+      "edrEffectType" : [ 0 ],
+      "edrEnable" : [ 0 ],
+      "edrKneePoints" : [],
+      "edrScaleReduces" : [],
+      "edrType" : [ 0 ],
+      "effectParameters" : [],
+      "enableDither" : [ 0 ],
+      "geometry.boundaries" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2606.0 ]
+      ],
+      "geometry.originalBounds" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2606.0 ]
+      ],
+      "geometry.otherCrop" : 
+      [
+        [ -12716.1298828125, -28404.0, 12723.8701171875, 27036.0 ]
+      ],
+      "geometry.otherRoundedCornersRadii" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.positionTransform" : 
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -3.8704867362976074,
+          0.0,
+          1.0,
+          0.0,
+          684.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry.roundedCornersCrop" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.roundedCornersRadii" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.roundedType" : [ 0 ],
+      "geometry.roundedWeight" : [ 2.0 ],
+      "layerId" : [ 497 ],
+      "loadShaderCache" : [ 0 ],
+      "lutSourceIsHwc" : [ 1 ],
+      "luts" : [ "null" ],
+      "mSkipGpuColorManager" : [ 0 ],
+      "mUVOrientation" : [ 0 ],
+      "name" : [ "VRI-InputMethod#497" ],
+      "postProcessEffect" : [ "null" ],
+      "postProcessTarget" : [ "Self" ],
+      "postProcessUniforms" : [ "null" ],
+      "renderCommandBuffer" : [ "null" ],
+      "renderResourceCache" : [ "null" ],
+      "resizerEnable" : [ 0 ],
+      "sfPqSetting" : [ "null" ],
+      "shadow.ambientColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+      "shadow.boundaries" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "shadow.casterIsTranslucent" : [ 0 ],
+      "shadow.isFlexibleLayer" : [ 0 ],
+      "shadow.isZoomWindowLayer" : [ 0 ],
+      "shadow.length" : [ 0.0 ],
+      "shadow.lightPos" : [ 0.0, 0.0, 0.0 ],
+      "shadow.lightRadius" : [ 0.0 ],
+      "shadow.spotColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+      "shadowOffsetX" : [ 0.0 ],
+      "shadowOffsetY" : [ 0.0 ],
+      "shadowOn" : [ 0 ],
+      "skipContentDraw" : [ 0 ],
+      "source.buffer" : 
+      [
+        {
+          "format" : 1,
+          "h" : 2606,
+          "id" : 48520245542912,
+          "isDolbyVision" : false,
+          "usage" : 2816,
+          "w" : 1272
+        }
+      ],
+      "source.buffer.isOpaque" : [ 0 ],
+      "source.buffer.maxLuminanceNits" : [ 0.0 ],
+      "source.buffer.textureTransform" : [ "I" ],
+      "source.buffer.usePremultipliedAlpha" : [ 1 ],
+      "source.buffer.useTextureFiltering" : [ 0 ],
+      "source.solidColor" : 
+      [
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "sourceDataspace" : [ "142671872" ],
+      "stretchEffect" : 
+      [
+        {
+          "height" : 0.0,
+          "mappedChildBounds" : [ 0.0, 0.0, 0.0, 0.0 ],
+          "maxAmountX" : 0.0,
+          "maxAmountY" : 0.0,
+          "vectorX" : 0.0,
+          "vectorY" : 0.0,
+          "width" : 0.0
+        }
+      ],
+      "transformMatrix4x4" : [ "I" ],
+      "vppinfo" : [ "NULL" ],
+      "warpEffect" : 
+      [
+        {
+          "bottomLeftCorner" : [ -1.0, -1.0 ],
+          "bottomRightCorner" : [ 1.0, -1.0 ],
+          "enabled" : 0,
+          "handleA" : [ -0.33333331346511841, 1.0 ],
+          "handleB" : [ 0.33333331346511841, 1.0 ],
+          "handleC" : [ 1.0, 0.33333331346511841 ],
+          "handleD" : [ 1.0, -0.33333331346511841 ],
+          "handleE" : [ 0.33333331346511841, -1.0 ],
+          "handleF" : [ -0.33333331346511841, -1.0 ],
+          "handleG" : [ -1.0, -0.33333331346511841 ],
+          "handleH" : [ -1.0, 0.33333331346511841 ],
+          "params" : 
+          [
+            -1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.33333331346511841,
+            1.0,
+            0.33333331346511841,
+            1.0,
+            1.0,
+            0.33333331346511841,
+            1.0,
+            -0.33333331346511841,
+            0.33333331346511841,
+            -1.0,
+            -0.33333331346511841,
+            -1.0,
+            -1.0,
+            -0.33333331346511841,
+            -1.0,
+            0.33333331346511841
+          ],
+          "topLeftCorner" : [ -1.0, 1.0 ],
+          "topRightCorner" : [ 1.0, 1.0 ]
+        }
+      ],
+      "whitePointNits" : [ 109.15994262695312 ]
+    },
+    "layer_2" : 
+    {
+      "alpha" : [ 1.0 ],
+      "backgroundBlurRadius" : [ 0 ],
+      "backgroundBlurScale" : [ 1.0 ],
+      "blurColor" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "blurParam" : 
+      [
+        {
+          "arcylic" : 
+          {
+            "blurColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+          },
+          "blurType" : 0,
+          "isBlurShot" : 0,
+          "material" : 
+          {
+            "blendColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+            "blendMode" : 0,
+            "mixColor" : [ 0.0, 0.0, 0.0, 0.0 ]
+          },
+          "scaleForBlurShot" : 1.0,
+          "smoothCornerType" : 0,
+          "smoothCornerWeight" : 1.0,
+          "zoom" : 
+          {
+            "tileMode" : 0,
+            "zoomFactor" : 1.0
+          }
+        }
+      ],
+      "blurRegionTransform" : [ "I" ],
+      "blurRegions" : [],
+      "borderSettings.color" : [ 0 ],
+      "borderSettings.strokeWidth" : [ 0.0 ],
+      "boxShadowSettings" : [],
+      "captureSkipHdrUniform" : [ 0 ],
+      "colorTransform" : [ "I" ],
+      "currentScale" : [ 1.0 ],
+      "disableBlending" : [ 0 ],
+      "edgeExtensionEffect" : 
+      [
+        {
+          "bottom" : 0,
+          "left" : 0,
+          "right" : 0,
+          "top" : 0
+        }
+      ],
+      "edrDatas" : [],
+      "edrEffectType" : [ 0 ],
+      "edrEnable" : [ 0 ],
+      "edrKneePoints" : [],
+      "edrScaleReduces" : [],
+      "edrType" : [ 0 ],
+      "effectParameters" : [],
+      "enableDither" : [ 0 ],
+      "geometry.boundaries" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2772.0 ]
+      ],
+      "geometry.originalBounds" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2772.0 ]
+      ],
+      "geometry.otherCrop" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2772.0 ]
+      ],
+      "geometry.otherRoundedCornersRadii" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "geometry.positionTransform" : 
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1259.098388671875,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry.roundedCornersCrop" : 
+      [
+        [ 0.0, 0.0, 1272.0, 2772.0 ]
+      ],
+      "geometry.roundedCornersRadii" : 
+      [
+        [ 176.0, 176.0, 176.0, 176.0, 176.0, 176.0, 176.0, 176.0 ]
+      ],
+      "geometry.roundedType" : [ 1 ],
+      "geometry.roundedWeight" : [ 2.5 ],
+      "layerId" : [ 502 ],
+      "loadShaderCache" : [ 0 ],
+      "lutSourceIsHwc" : [ 1 ],
+      "luts" : [ "null" ],
+      "mSkipGpuColorManager" : [ 0 ],
+      "mUVOrientation" : [ 0 ],
+      "name" : 
+      [
+        "VRI-com.oplus.notificationmanager/com.oplus.notificationmanager.qssettings.QsCenterActivity#502"
+      ],
+      "postProcessEffect" : [ "null" ],
+      "postProcessTarget" : [ "Self" ],
+      "postProcessUniforms" : [ "null" ],
+      "renderCommandBuffer" : [ "null" ],
+      "renderResourceCache" : [ "null" ],
+      "resizerEnable" : [ 0 ],
+      "sfPqSetting" : [ "null" ],
+      "shadow.ambientColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+      "shadow.boundaries" : 
+      [
+        [ 0.0, 0.0, 0.0, 0.0 ]
+      ],
+      "shadow.casterIsTranslucent" : [ 0 ],
+      "shadow.isFlexibleLayer" : [ 0 ],
+      "shadow.isZoomWindowLayer" : [ 0 ],
+      "shadow.length" : [ 0.0 ],
+      "shadow.lightPos" : [ 0.0, 0.0, 0.0 ],
+      "shadow.lightRadius" : [ 0.0 ],
+      "shadow.spotColor" : [ 0.0, 0.0, 0.0, 0.0 ],
+      "shadowOffsetX" : [ 0.0 ],
+      "shadowOffsetY" : [ 0.0 ],
+      "shadowOn" : [ 0 ],
+      "skipContentDraw" : [ 0 ],
+      "source.buffer" : 
+      [
+        {
+          "format" : 1,
+          "h" : 2772,
+          "id" : 66705137074196,
+          "isDolbyVision" : false,
+          "usage" : 2816,
+          "w" : 1272
+        }
+      ],
+      "source.buffer.isOpaque" : [ 1 ],
+      "source.buffer.maxLuminanceNits" : [ 0.0 ],
+      "source.buffer.textureTransform" : [ "I" ],
+      "source.buffer.usePremultipliedAlpha" : [ 1 ],
+      "source.buffer.useTextureFiltering" : [ 0 ],
+      "source.solidColor" : 
+      [
+        [ 0.0, 0.0, 0.0 ]
+      ],
+      "sourceDataspace" : [ "142671872" ],
+      "stretchEffect" : 
+      [
+        {
+          "height" : 0.0,
+          "mappedChildBounds" : [ 0.0, 0.0, 0.0, 0.0 ],
+          "maxAmountX" : 0.0,
+          "maxAmountY" : 0.0,
+          "vectorX" : 0.0,
+          "vectorY" : 0.0,
+          "width" : 0.0
+        }
+      ],
+      "transformMatrix4x4" : [ "I" ],
+      "vppinfo" : [ "NULL" ],
+      "warpEffect" : 
+      [
+        {
+          "bottomLeftCorner" : [ -1.0, -1.0 ],
+          "bottomRightCorner" : [ 1.0, -1.0 ],
+          "enabled" : 0,
+          "handleA" : [ -0.33333331346511841, 1.0 ],
+          "handleB" : [ 0.33333331346511841, 1.0 ],
+          "handleC" : [ 1.0, 0.33333331346511841 ],
+          "handleD" : [ 1.0, -0.33333331346511841 ],
+          "handleE" : [ 0.33333331346511841, -1.0 ],
+          "handleF" : [ -0.33333331346511841, -1.0 ],
+          "handleG" : [ -1.0, -0.33333331346511841 ],
+          "handleH" : [ -1.0, 0.33333331346511841 ],
+          "params" : 
+          [
+            -1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            -1.0,
+            -1.0,
+            -1.0,
+            -0.33333331346511841,
+            1.0,
+            0.33333331346511841,
+            1.0,
+            1.0,
+            0.33333331346511841,
+            1.0,
+            -0.33333331346511841,
+            0.33333331346511841,
+            -1.0,
+            -0.33333331346511841,
+            -1.0,
+            -1.0,
+            -0.33333331346511841,
+            -1.0,
+            0.33333331346511841
+          ],
+          "topLeftCorner" : [ -1.0, 1.0 ],
+          "topRightCorner" : [ 1.0, 1.0 ]
+        }
+      ],
+      "whitePointNits" : [ 109.15994262695312 ]
+    }
+  },
+  "outputBuffer" : 
+  [
+    {
+      "format" : 1,
+      "h" : 2772,
+      "id" : 6622839570584,
+      "isDolbyVision" : false,
+      "usage" : 6912,
+      "w" : 1272
+    }
+  ]
+}

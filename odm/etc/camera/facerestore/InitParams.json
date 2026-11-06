@@ -1,0 +1,490 @@
+{
+    "proj":"mars_dx6_26015",
+    "cameraMode": 0,
+    "face_restore_capmode_front_all":
+    {
+        "_comment frMethodMode": "1: yuv single-frame, 2.p010 refer, 3.raw refer, 4.AIGC facesr and BGSR, 5. AIGC facesr",
+        "frMethodMode":3,
+        "faceSupportConfigs":{
+            "supportFaceNum":3,
+            "supportGroupFaceNum":30,
+            "supportFaceSizeRange":[200,4000],
+            "faceSRBlurRange":[0, 100],
+            "motionBlurRange":[35, 95],
+            "isMotionBlurThreshold":[100, 100]
+        },
+        "alphaFusionParams":{
+            "sceneNum":4,
+            "sceneBlurLevel":[10,50,80],
+            "sceneAlphaValues":[1.0,1.0,1.0,1.0]
+        },
+        "faceFusionWeight":1.3,
+        "postFinetuneParams":
+        {
+            "slightModelSuperBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.6, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.3, "tooth": 0.0, "hair": 0.0, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":2048,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":5
+                }
+            },
+            "slightModelBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.2, "right_brow": 0.2, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.1},
+                "fusionWeightsConfig":{"nose": 0.45, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.25, "tooth": 0.0, "hair": 0.0, "skin": 0.4},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":1408,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":5
+                }
+            },
+            "slightModelMidFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":5
+                }
+            },
+            "slightModelSmallFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            },
+            "severeModelSuperBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.2, "left_brow": 0.3, "right_brow": 0.3, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.2},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":2048,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":5
+                }
+            },
+            "severeModelBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.2, "left_brow": 0.3, "right_brow": 0.3, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.1, "tooth": 0.0, "hair": 0.0, "skin": 0.2},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":1408,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":5
+                }
+            },
+            "severeModelMidFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.3, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.3},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":5
+                }
+            },
+            "severeModelSmallFace":{
+                "sharpWeightsConfig":{"nose": 0.2, "left_brow": 0.2, "right_brow": 0.2, "left_eye": 0.3, "right_eye": 0.3, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.2, "tooth": 0.0, "hair": 0.2, "skin": 0.2},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.2,
+                    "eyeExpandRatioY":1.2,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            },
+            "groupModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":1536,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "multiFace":{
+                "sharpWeightsConfig":{"nose": 0.2, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.1, "skin": 0.2},
+                "fusionWeightsConfig":{"nose": 0.4, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":2048,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":11
+                }
+            }
+        },
+        "CVNoiseParams":{
+            "addCVNoiseOnGPModel":0,
+            "addCVNoiseOnBigMidFaceModel":1,
+            "addCVNoiseOnSmallFaceModel":0,
+            "addCVNoiseOnGroupModel":0,
+            "ISOList":[400.0, 800.0, 1600.0, 3200.0, 4800.0, 6400.0, 8000.0, 15000.0],
+            "weightListSmallFace":[0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "weightListBigFace":[0.3, 0.3, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "lrgbDarkThreshList":[0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],
+            "lrgbBrightThreshList":[0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "smallFaceThresh":120,
+            "modelingNoiseIsoList":[3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0]
+        }
+    },
+    "face_restore_capmode_rear_main":
+    {
+        "_comment frMethodMode": "1: yuv single-frame, 2.p010 refer, 3.raw refer, 4.AIGC facesr and BGSR, 5. AIGC facesr",
+        "frMethodMode":3,
+        "faceSupportConfigs":{
+            "supportFaceNum":3,
+            "supportGroupFaceNum":30,
+            "supportFaceSizeRange":[150,3300],
+            "faceSRBlurRange":[0, 100],
+            "motionBlurRange":[0, 70],
+            "isMotionBlurThreshold":[99, 99]
+        },
+        "alphaFusionParams":{
+            "sceneNum":4,
+            "sceneBlurLevel":[10,50,80],
+            "sceneAlphaValues":[1.0,1.0,1.0,1.0]
+        },
+        "faceFusionWeight":1.2,
+        "postFinetuneParams":
+        {
+            "slightModelSuperBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":2048,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "slightModelBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":1408,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "slightModelMidFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.3, "right_brow": 0.3, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.3},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.2, "right_brow": 0.2, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "severeModelBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.3, "right_brow": 0.3, "left_eye": 0.3, "right_eye": 0.3, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.4, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":1408,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "severeModelMidFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.3},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.3, "right_brow": 0.3, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.4, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "superSevereModelBigFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":1408,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "superSevereModelMidFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "slightModelSmallFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.3, "right_brow": 0.3, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.3},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.5},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            },
+            "severeModelSmallFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.2, "right_brow": 0.2, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":896,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            },
+            "slightModelSuperSmallFace":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":448,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            },
+            "dpModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.5, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":1,
+                    "maxProcessSize":1536,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "groupModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":1536,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            }
+        },
+        "CVNoiseParams":{
+            "addCVNoiseOnGPModel":1,
+            "addCVNoiseOnBigMidFaceModel":0,
+            "addCVNoiseOnSmallFaceModel":0,
+            "addCVNoiseOnGroupModel":0,
+            "ISOList":[400.0, 800.0, 1600.0, 3200.0, 4800.0, 6400.0, 8000.0, 15000.0],
+            "weightListSmallFace":[0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "weightListBigFace":[0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "lrgbDarkThreshList":[0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],
+            "lrgbBrightThreshList":[0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "smallFaceThresh":120,
+            "modelingNoiseIsoList":[3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0]
+        }
+    },
+    "face_restore_capmode_rear_tele":
+    {
+        "_comment frMethodMode": "1: yuv single-frame, 2.p010 refer, 3.raw refer, 4.AIGC facesr and BGSR, 5. AIGC facesr",
+        "frMethodMode":3,
+        "faceSupportConfigs":{
+            "supportFaceNum":3,
+            "supportFaceSizeRange":[200,4000],
+            "faceSRBlurRange":[0, 100],
+            "motionBlurRange":[0, 70],
+            "isMotionBlurThreshold":[99, 99]
+        },
+        "alphaFusionParams":{
+            "sceneNum":4,
+            "sceneBlurLevel":[11,51,81],
+            "sceneAlphaValues":[1.0,1.0,1.0,1.0]
+        },
+        "faceFusionWeight":1.05,
+        "postFinetuneParams":
+        {
+            "AModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":1408,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "BModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":1024,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":7
+                }
+            },
+            "CModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":768,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            },
+            "DModel":{
+                "sharpWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "fusionWeightsConfig":{"nose": 0.0, "left_brow": 0.0, "right_brow": 0.0, "left_eye": 0.0, "right_eye": 0.0, "left_eyeball": 0.0,"right_eyeball": 0.0, "lip": 0.0, "tooth": 0.0, "hair": 0.0, "skin": 0.0},
+                "commonConfig":{
+                    "doPostFinetune":0,
+                    "maxProcessSize":512,
+                    "eyeExpandRatioX":1.5,
+                    "eyeExpandRatioY":1.5,
+                    "eyeShiftRatio":0.05,
+                    "usmWeight":1.0,
+                    "usmRadius":3,
+                    "smoothKernelSize":9
+                }
+            }
+        },
+        "CVNoiseParams":{
+            "addCVNoiseOnGPModel":0,
+            "addCVNoiseOnBigMidFaceModel":0,
+            "addCVNoiseOnSmallFaceModel":0,
+            "addCVNoiseOnGroupModel":0,
+            "ISOList":[400.0, 800.0, 1600.0, 3200.0, 4800.0, 6400.0, 8000.0, 15000.0],
+            "weightListSmallFace":[0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "weightListBigFace":[0.1, 0.2, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "lrgbDarkThreshList":[0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],
+            "lrgbBrightThreshList":[0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+            "smallFaceThresh":120,
+            "modelingNoiseIsoList":[3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0, 3200.0]
+        }
+    },
+    "face_restore_capmode_end":
+    {
+        "_comment frMethodMode": "1: yuv single-frame, 2.p010 refer, 3.raw refer, 4.AIGC facesr and BGSR, 5. AIGC facesr",
+        "frMethodMode":1,
+        "faceSupportConfigs":{
+            "supportFaceNum":3,
+            "supportFaceSizeRange":[200,2000],
+            "faceSRBlurRange":[0, 1],
+            "motionBlurRange":[0, 1],
+            "isMotionBlurThreshold":[99, 99]
+        },
+        "alphaFusionParams":{
+            "sceneNum":4,
+            "sceneBlurLevel":[10,50,80],
+            "sceneAlphaValues":[1.0,1.0,1.0,1.0]
+        },
+        "faceFusionWeight":1.05
+    }
+}

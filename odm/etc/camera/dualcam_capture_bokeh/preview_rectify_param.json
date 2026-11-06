@@ -1,0 +1,217 @@
+{
+    "module": "rectify_param",
+    "product": "mars",
+    "VERSION": "0.0.3",
+    "process_image_size":
+    {
+        "image_size_min": 234,
+        "enable": false,
+        "rectify_input":
+        {
+            "aspect_4_3": [ 320, 240 ],
+            "aspect_1_1": [ 240, 240 ],
+            "aspect_16_9": [ 416, 234 ],
+            "aspect_full": [ 528, 240 ]
+        },
+        "unrectified_depth":
+        {
+            "aspect_4_3": [ 320, 240 ],
+            "aspect_1_1": [ 240, 240 ],
+            "aspect_16_9": [ 416, 234 ],
+            "aspect_full": [ 528, 240 ]
+        },
+        "opticalflow":
+        {
+            "aspect_4_3": [ 320, 240 ],
+            "aspect_1_1": [ 240, 240 ],
+            "aspect_16_9": [ 416, 234 ],
+            "aspect_full": [ 528, 240 ]
+        },
+        "ai_stereo":
+        {
+            "1x": "square",
+            "2x": "square",
+            "3x": "baseline",
+            "6x": "vertical",
+            "6x_fallback_3x": "vertical"
+        }
+    },
+    "ois_param":
+    {
+        "ultrawide":
+        {
+            "periscope": false,
+            "ois_on": false,
+            "hall_coeff": [ 0, 0, 0 ],
+            "sensor_read_time": 0,
+            "sampling_delay": 0,
+            "gain_adjust": 1.0
+        },
+        "wide":
+        {
+            "periscope": false,
+            "ois_on": true,
+            "hall_coeff": [ 9.8213607E-06, -1.030487E-05, 0.0 ],
+            "sensor_read_time": 0.0079232,
+            "sampling_delay": 0.0,
+            "gain_adjust": 1.0
+        },
+        "tele":
+        {
+            "periscope": true,
+            "ois_on": true,
+          "hall_coeff": [ -5.507136E-06, -5.508615E-06, 5.508615E-06 ],
+            "sensor_read_time": 0.0099808,
+            "sampling_delay": 0.0,
+            "gain_adjust": 1.0
+        },
+        "ultratele":
+        {
+            "periscope": false,
+            "ois_on": false,
+            "hall_coeff": [ 0, 0, 0 ],
+            "sensor_read_time": 0,
+            "sampling_delay": 0,
+            "gain_adjust": 1.0
+        }
+    },
+    "image_info":
+    {
+        "sensor_crop":
+        {
+            "1x":
+            {
+                "master": [ 4096, 3072 ],
+                "slave": [ 3264, 2448 ]
+            },
+            "2x":
+            {
+                "master": [ 2048, 1536 ],
+                "slave": [ 3264, 2448 ]
+            },
+            "3x":
+            {
+                "master": [ 4096, 3072 ],
+                "slave": [ 1824, 1368 ]
+            },
+            "6x":
+            {
+                "master": [ -1, -1 ],
+                "slave": [ -1, -1 ]
+            },
+            "6x_fallback_3x":
+            {
+                "master": [ -1, -1 ],
+                "slave": [ -1, -1 ]
+            }
+        }
+    },
+    "camera_module_info":
+    {
+        "camera_placement":
+        {
+            "1x":
+            {
+                "use_design_value": false,
+                "x": 0.0,
+                "y": 18.85
+            },
+            "2x":
+            {
+                "use_design_value": false,
+                "x": 0.0,
+                "y": 18.85
+            },
+            "3x":
+            {
+                "use_design_value": false,
+                "x": 20.5,
+                "y": 0.0
+            },
+            "6x":
+            {
+                "use_design_value": false,
+                "x": 20.5,
+                "y": 0.0
+            },
+            "6x_fallback_3x":
+            {
+                "use_design_value": false,
+                "x": 20.5,
+                "y": 0.0
+            }
+        },
+        "rectify_optimize_type":
+        {
+            "comment": [
+              "Image transformation elements optimized for parallelization",
+              "0: Compatibility with zhufeng",
+              "1: Optimize the extrinsic parameters Yaw/Pitch",
+              "2: Optimize in the X/Y direction of the rectified image",
+              "3: Optimize in the Y direction of the rectified image"
+            ],
+            "1x": 3,
+            "2x": 3,
+            "3x": 2,
+            "6x": 2,
+            "6x_fallback_3x": 2
+        }
+    },
+    "distortion_param_kp":
+    {
+        "1x":
+        {
+            "master":{
+                "fixed_kp": false
+            },
+            "slave":{
+                "fixed_kp": true,
+                "coeff": [ 0.0083, -0.0585, 0.024 ]
+            }
+        },
+        "2x":
+        {
+            "master":{
+                "fixed_kp": false
+            },
+            "slave":{
+                "fixed_kp": true,
+                "coeff": [ 0.0083, -0.0585, 0.024 ]
+            }
+        },
+        "3x":
+        {
+            "master":{
+                "fixed_kp": false
+            },
+            "slave":{
+                "fixed_kp": false
+            }
+        },
+        "6x":
+        {
+            "master":{
+                "fixed_kp": false
+            },
+            "slave":{
+                "fixed_kp": false
+            }
+        },
+        "6x_fallback_3x":
+        {
+            "master":{
+                "fixed_kp": false
+            },
+            "slave":{
+                "fixed_kp": false
+            }
+        }
+    },
+    "rectify_disparity_offset": {
+        "1x": 1.0,
+        "2x": 1.0,
+        "3x": 0,
+        "6x": 0,
+        "6x_fallback_3x": 0
+    }
+}

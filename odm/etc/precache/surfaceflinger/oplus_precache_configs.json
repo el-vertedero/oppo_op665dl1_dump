@@ -1,0 +1,21 @@
+{
+    "_comment": "Add for PreCache2.0 Unified Rendering",
+    "_owner": "W9082075",
+    "enable": 1,
+    "record": 0,
+    "version": 20260812,
+    "maxKeySize": 10240,
+    "maxValueSize": 20971520,
+    "maxTotalSize": 41943040,
+    "name": "surfaceflinger",
+
+    "layerInfo": {
+        "dataWritePath": "/data/misc/surfaceflinger/unirender_cache/file/rt_precache"
+    },
+
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/surfaceflinger"
+        }
+    }
+}

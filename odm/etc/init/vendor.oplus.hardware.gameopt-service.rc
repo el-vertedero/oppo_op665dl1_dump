@@ -1,0 +1,21 @@
+service gameopt_hal_service-1-0 /odm/bin/hw/vendor.oplus.hardware.gameopt-service
+    class hal
+    user root
+    group system readproc root
+    capabilities SYS_NICE SYS_ADMIN
+    interface aidl vendor.oplus.hardware.gameopt.IGameOptHalService/default
+    disabled
+    oneshot
+
+on property:vendor.oplus.gameopt.sde.enable=1
+    chmod 0660 /proc/mtkfb
+    write /proc/mtkfb trace:on
+    write /sys/kernel/tracing/events/sde/enable 1
+
+on property:vendor.oplus.gameopt.sde.enable=0
+    chmod 0660 /proc/mtkfb
+    write /proc/mtkfb trace:off
+    write /sys/kernel/tracing/events/sde/enable 0
+
+on property:vendor.oplus.gameopt.perfdog.timerslack=*
+    write /proc/${vendor.oplus.gameopt.perfdog.tid}/timerslack_ns ${vendor.oplus.gameopt.perfdog.timerslack}

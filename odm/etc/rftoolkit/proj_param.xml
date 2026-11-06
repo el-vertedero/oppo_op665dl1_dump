@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RFTOOLKIT version="V2">
+    <GeneralMode mode="NPT, Expert, Factory, CustomService, Diagnostic, RSETEST, CLSS">
+        <RAT name="LTE">
+            <GeneralConfig name="Power">
+                <!-- by db/100 -->
+                <default>2600</default>
+                <Band number="41">
+                    <default>2700</default>
+                </Band>
+                <Band number="1,3" endc="true">
+                    <default>2000</default>
+                </Band>
+            </GeneralConfig>
+        </RAT>
+        <RAT name="NR5G">
+            <GeneralConfig name="Power">
+                <!-- by db/100 -->
+                <Band number="41,78">
+                    <default>2700</default>
+                </Band>
+                <Band number="41" endc="true">
+                    <default>2000</default>
+                </Band>
+                <Band type="Any">
+                    <default>2600</default>
+                </Band>
+            </GeneralConfig>
+        </RAT>
+    </GeneralMode>
+    <GeneralMode mode="QtTest">
+        <RAT name="LTE">
+            <GeneralConfig name="Power">
+                <!-- by db/100 -->
+                <default>2600</default>
+                <Band number="41">
+                    <default>2700</default>
+                </Band>
+                <Band number="1,3" endc="true">
+                    <default>2000</default>
+                </Band>
+            </GeneralConfig>
+            <GeneralConfig name="MinPower">
+                <Band type="Any">
+                    <default>-2500</default>
+                </Band>
+            </GeneralConfig>
+        </RAT>
+        <RAT name="NR5G">
+            <GeneralConfig name="Power">
+                <!-- by db/100 -->
+                <Band number="41,78">
+                    <default>2700</default>
+                </Band>
+                <Band number="41" endc="true">
+                    <default>2000</default>
+                </Band>
+                <Band type="Any">
+                    <default>2600</default>
+                </Band>
+            </GeneralConfig>
+            <GeneralConfig name="MinPower">
+                <Band type="Any">
+                    <default>-2500</default>
+                </Band>
+            </GeneralConfig>
+        </RAT>
+    </GeneralMode>
+</RFTOOLKIT>

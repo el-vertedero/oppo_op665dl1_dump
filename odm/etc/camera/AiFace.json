@@ -1,0 +1,251 @@
+{
+    "Module": "AiFaceV03",
+    "AIParamComment":
+    [
+        "########################MTK Neuropilot Options####################",
+        "AccelerationMode(NP_ACCELERATION_CPU,NP_ACCELERATION_NNAPI,NP_ACCELERATION_NEURON)",
+        "AcceleratorName(none,mtk-neuron,mtk-mdla,mtk-vpu)",
+        "ExecutionPreference(kUndefined,kLowPower,kFastSingleAnswer,kSustainedSpeed)",
+        "######################MTK NeuronRuntime Options###################",
+        "DeviceKind(kEnvOptNullDevice,kEnvOptCModelDevice,kEnvOptHardware)",
+        "MDLACoreOption(Auto,Single,Dual)",
+        "RuntimeAPIQoSPreference(NEURONRUNTIME_PREFER_PERFORMANCE,NEURONRUNTIME_PREFER_POWER)",
+        "RuntimeAPIQoSPriority(NEURONRUNTIME_PRIORITY_LOW,NEURONRUNTIME_PRIORITY_MED,NEURONRUNTIME_PRIORITY_HIGH)",
+        "RuntimeAPIQoSBoostValue(NEURONRUNTIME_BOOSTVALUE_PROFILED=101,NEURONRUNTIME_BOOSTVALUE_MAX=100,NEURONRUNTIME_BOOSTVALUE_MIN=0)",
+        "######################QCOM NeuronRuntime Options##################",
+        "PerformanceProfile_t(BALANCED,HIGH_PERFORMANCE,POWER_SAVER,SYSTEM_SETTINGS,SUSTAINED_HIGH_PERFORMANCE,BURST,LOW_POWER_SAVER,HIGH_POWER_SAVER,LOW_BALANCED)"
+    ],
+    "GeneralParamComment":
+    [
+        "decrption(true,false)",
+        "runAiModel(true,false)",
+        "useHistMatch(true,false)",
+        "Country(China)",
+        "Stratery(RECTS_IN_ONE,RECTS_ONEBYONE)",
+        "SourceOfFace(RECT,FFD)",
+        "pointsNum(0,296)",
+        "netWidth(640,448,704)",
+        "netHeight(448,320,448)",
+        "Acceleration(LOOP_UNROLLING,NEON)"
+    ],
+    "SelectionParamComment":
+    [
+        "Product(2303)",
+        "Platform(MTK,QCOM,COMMON)",
+        "AiSdk(NEUROPILOT,NEURON_RUNTIME,SNPE,ODNN)"
+    ],
+    "Product": "2303",
+    "Platform": "COMMON",
+    "AiSdk": "ODNN",
+    "ParamGroup":
+    [
+        {
+            "Product": "2303",
+            "Platform": "COMMON",
+            "AiSdk": "ODNN",
+            "PerformanceProfileT": 30,
+            "decrption": true,
+            "runAiModel": true,
+            "useHistMatch": false,
+            "unifySkinOnly": true,
+            "Country": "China",
+            "Stratery": "RECTS_ONEBYONE",
+            "SourceOfFace": "RECT",
+            "pointsNum": 0,
+            "downscaleHighResEnable": true,
+            "netWidth": 704,
+            "netHeight": 448,
+            "deblemish_x2": true,
+            "shadow_x2": true,
+            "facewarp_size_ratio": 1,
+            "unifySkinEnable": true,
+            "faceShineEnable": true,
+            "EyeRedEnable": true,
+            "EyeRedAiModelEnable": true,
+            "unifyRatio": 1.0,
+            "unifyNetScale": 1.0,
+            "faceshineRatio": 0.25,
+            "faceshineRatio_internal": 0.5,
+            "faceshineRatio_external": 0.5,
+            "amplifyDiff": false,
+            "wholeInference": false,
+            "maskFlag": true,
+            "skinCorrectionFlag": false,
+            "skinPreferFlag": true,
+            "lipEnhanceEnable": false,
+            "lipsPinkLevel": 7.5,
+            "aisceEnable": true,
+            "aiScePostProcessEnable": true,
+            "colorSpaceP3": true,
+            "rearFaceNoSCE": true,
+            "net_aisce_width": 512,
+            "net_aisce_height": 512,
+            "net_aisce_channel": 3,
+            "duv_config1_by_GslFaceVsWhite":
+            {
+                "config": [-200, -32, -20, -14, -7, -1, 0, 1, 3, 8, 14, 20, 32, 200],
+                "min":    [-180, -12,  -6,  -3,  0,  0, 0, 1, 2, 4,  4,  4,  4,   4],
+                "max":    [   8,   8,   8,   8,  8,  8, 8, 8, 8, 8,  8, 12, 22, 190]
+            },
+            "duv_config_flash_by_GslFaceVsWhite":
+            {
+                "config": [-200, -32, -20, -14, -7, -1, 0, 1, 3, 8, 14, 20, 32, 200],
+                "min":    [-178, -10,   0,   0,  0,  0, 0, 1, 2, 4,  4,  4,  4,   4],
+                "max":    [   8,   8,   8,   8,  8,  8, 8, 8, 8, 8,  8, 12, 22, 190]
+            },
+            "dict_ctemp_config_by_GslFaceVsWhite":
+            {
+                "default":
+                {
+                    "config": [-200, -50, -30, -24, -14, -10, -5, -2,  0,  3,  6, 14, 24, 30, 40, 200],
+                    "min":    [-182, -32, -14, -12,  -8,  -6, -4, -2,  0,  0,  0,  0,  0,  0,  0,   0],
+                    "max":    [  20,  20,  20,  20,  20,  20, 20, 20, 20, 20, 20, 20, 20, 24, 26, 186]
+                },
+                "mixlight":
+                {
+                    "config": [-200, -50, -30, -24, -14, -10, -5, -2,  0,  3,  6, 14, 24, 30, 40, 200],
+                    "min":    [-175, -25, -14, -12,  -8,  -6, -4, -2,  0,  0,  0,  0,  0,  0,  0,   0],
+                    "max":    [  20,  20,  20,  20,  20,  20, 20, 20, 20, 20, 20, 20, 20, 24, 26, 186]
+                },
+                "flash":
+                {
+                    "config": [-200, -50, -30, -24, -14, -10,  -5,  -2,   0,   3,   6, 14, 24, 30, 40, 200],
+                    "min":    [-175, -25, -14, -12, -10, -10, -10, -10, -10, -10, -10,  0,  0,  0,  0,   0],
+                    "max":    [   9,   9,   9,   9,   9,   9,   9,   9,   9,   9,  12, 20, 20, 20, 22, 182]
+                },
+                "sunset":
+                {
+                    "config": [-200, -50, -30, -24, -14, -10, -5, -2,  0,  3,  6, 14, 24, 30, 40, 200],
+                    "min":    [-182, -32, -12,  -6,  -6,  -6, -4, -2,  0,  0,  0,  0,  0,  0,  0,   0],
+                    "max":    [  20,  20,  20,  20,  20,  20, 20, 20, 20, 20, 20, 20, 20, 24, 26, 186]
+                }
+            },
+            "fix_config_actualFace_duv_cast_ps":
+            {
+                "in_duv":    [ -25, -24, -14, -10,  -7, -3,  0,  1,  3,  8, 14, 24, 25],
+                "out_duv":   [ -25, -24,  -8,  -4,  -2,  0,  3,  4,  6, 11, 16, 24, 25],
+                "in_ctemp":  [-200, -30, -24, -14, -10, -5, -1,  0,  3, 10, 18, 30, 50, 200],
+                "out_ctemp": [-201, -31, -26, -16, -12, -8, -5, -4, -2,  5, 11, 18, 35, 185]
+            },
+            "dict_awb_config_by_CameraID":
+            {
+                "CameraID_0":
+                {
+                    "Cct": [ 1500,   2350,  2856,   4150,  5000,  6500,   7500, 12000],
+                    "Rpg": [ 1.01,  0.832, 0.702,  0.556, 0.494, 0.426, 0.4104, 0.335],
+                    "Bpg": [0.218, 0.2805,  0.34, 0.4521, 0.554, 0.651,  0.707,  0.91]
+                },
+                "CameraID_1":
+                {
+                    "Cct": [    1500,     2350,     2856,     4150,     5000,     6500,     7500,   12000],
+                    "Rpg": [ 1.21465,  0.97144, 0.826658, 0.577637,  0.57544, 0.506837, 0.474143, 0.32702],
+                    "Bpg": [0.316872, 0.392334, 0.437256, 0.491942, 0.632323, 0.731936, 0.785892, 1.02869]
+                },
+                "CameraID_2":
+                {
+                    "Cct": [   1500,     2350,     2856,     4150,     5000,     6500,     7500,   12000],
+                    "Rpg": [1.19283, 0.928711, 0.771484, 0.514893, 0.525146, 0.452393, 0.407227, 0.30398],
+                    "Bpg": [0.21489, 0.322754, 0.386963, 0.450439, 0.615234, 0.720215, 0.761475, 0.94715]
+                },
+                "CameraID_3":
+                {
+                    "Cct": [   1500,    2350,    2856,    4150,    5000,    6500,    7500,   12000],
+                    "Rpg": [1.09666, 0.86023, 0.71948, 0.56641, 0.48828, 0.42395, 0.40613, 0.32593],
+                    "Bpg": [0.21432, 0.31274, 0.37134, 0.47766, 0.58594, 0.69373, 0.74646, 0.98373]
+                },
+                "CameraID_4":
+                {
+                    "Cct": [    1500,     2350,     2850,     4000,     5000,     6500,     7500,    12000],
+                    "Rpg": [1.080527, 0.857422, 0.724854, 0.585938, 0.508545, 0.445557, 0.419923,  0.27564],
+                    "Bpg": [0.279305, 0.371338, 0.426025, 0.531738,  0.62207, 0.718262, 0.760254, 0.974876]
+                }
+            },
+            "eyetuneFlag": true,
+            "eyetuneParam":
+            {
+                "eyeBrightLevel": 0.4,
+                "pupilLevel": 0.25,
+                "eyeSharpLevel": 0.0
+            },
+            "Acceleration": "NEON",
+            "HighpassKernelSize": 0,
+            "HighpassThreshold": 0,
+            "classicAdjustMaskParams":
+            {
+                "deblemish":
+                {
+                    "branch1": 90,
+                    "branch2": 10
+                },
+                "shadow":
+                {
+                    "branch1_pouch": 100,
+                    "branch1_folds": 100,
+                    "branch1_chin": 80,
+                    "branch1_face": 100,
+                    "branch1_forehead": 100,
+                    "branch2_nose": 100,
+                    "branch2_face": 100,
+                    "branch2_forehead": 100
+                }
+            },
+            "originalAdjustMaskParams":
+            {
+                "deblemish":
+                {
+                    "branch1": 60,
+                    "branch2": 40
+                },
+                "shadow":
+                {
+                    "branch1_pouch": 60,
+                    "branch1_folds": 80,
+                    "branch1_chin": 60,
+                    "branch1_face": 100,
+                    "branch1_forehead": 100,
+                    "branch2_nose": 100,
+                    "branch2_face": 100,
+                    "branch2_forehead": 100
+                }
+            }
+        }
+    ],
+    "EyeProduct": "2303",
+    "EyePlatform": "COMMON",
+    "EyeAiSdk": "ODNN",
+    "EyeParamGroup":
+    [
+        {
+            "Product": "2303",
+            "Platform": "COMMON",
+            "AiSdk": "ODNN",
+            "PerformanceProfileT": 30,
+            "decrption": true,
+            "runAiModel": true,
+            "useHistMatch": false,
+            "unifySkinOnly": false,
+            "Country": "China",
+            "Stratery": "RECTS_ONEBYONE",
+            "SourceOfFace": "RECT",
+            "pointsNum": 0,
+            "netWidth": 192,
+            "netHeight": 112,
+            "unifyStrengthInverse": 10,
+            "Acceleration": "NEON"
+        }
+    ],
+    "WechatParamGroup":
+    [
+        {
+            "Platform": "COMMON",
+            "AiSdk": "ODNN",
+            "AdjustParams":
+            {
+                "value_x1": 35,
+                "value_x2": 90,
+                "value_y1": 20,
+                "value_y2": 90
+            }
+        }
+    ]
+}

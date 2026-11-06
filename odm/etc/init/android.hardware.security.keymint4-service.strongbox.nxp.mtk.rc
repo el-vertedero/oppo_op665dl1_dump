@@ -1,0 +1,7 @@
+#ifdef OPLUS_FEATURE_SECURITY_COMMON
+service vendor.keymint4-strongbox /odm/bin/hw/android.hardware.security.keymint4-service.strongbox.nxp
+    class early_hal
+    user vendor_nxp_strongbox
+    group system
+    capabilities WAKE_ALARM
+#endif /* OPLUS_FEATURE_SECURITY_COMMON */

@@ -1,0 +1,26 @@
+{
+    "_comment": "Add for PreCache2.0 - MMS warmup",
+    "_owner": "80417835",
+    "enable": 1,
+    "record": 0,
+    "version": 20260731,
+    "replayThreadCount": 1,
+    "maxKeySize": 1024,
+    "maxValueSize": 2097152,
+    "maxTotalSize": 4194304,
+    "name": "com.android.mms",
+    "layerInfo": {
+        "dataWritePath": "/data/user_de/0/com.android.mms/cache",
+        "layerPath": ""
+    },
+    "WarmUp": {
+        "RT": {
+            "dataReadPath": "/odm/etc/precache/com.android.mms/rt"
+        }
+    },
+    "BringUp": {
+        "RE": {
+            "dataReadPath": "/odm/etc/precache/com.android.mms/re"
+        }
+    }
+}

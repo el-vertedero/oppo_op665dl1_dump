@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FIRMWARE>
+		<File name="XBUSC1B5AAATH3" manufacturer="XBSTOR" target_version="0302"></File>
+		<File name="XBUSC1B4BAATH4" manufacturer="XBSTOR" target_version="0302"></File>
+		<File name="XBUSC1B19A9TF2" manufacturer="XBSTOR" target_version="0350"></File>
+		<File name="XBUSC1B3BA9TF4" manufacturer="XBSTOR" target_version="0350"></File>
+		<File name="HN8T281EJKX158" manufacturer="SKhynix" target_version="A003"></File>
+		<File name="HN8T381ZJKX159" manufacturer="SKhynix" target_version="A003"></File>
+		<File name="KLUFG8RHKF-F0H1" manufacturer="SAMSUNG" target_version="2000"></File>
+		<File name="KLUGG8NHKB-F0H1" manufacturer="SAMSUNG" target_version="2000"></File>
+</FIRMWARE>
+

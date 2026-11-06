@@ -1,0 +1,17 @@
+{
+    "dmabufferpool": {
+        "CPU_RW": {
+            "minsize":  [   1, 128, 256,  640, 1280, 2560, 4608],
+            "maxsize":  [ 128, 256, 640, 1280, 2560, 4608, 7680],
+            "capacity": [  20,  20,  24,   24,   24,   12,    4]
+        },
+        "GPU_RW": {
+            "minsize":  [0],
+            "maxsize":  [0],
+            "capacity": [0]
+        },
+        "default": {
+        }
+    },
+    "modelbufferpool": 0
+}

@@ -1,0 +1,396 @@
+{
+  "desc": "自定义正则模块",
+  "base": "regex",
+  "modules": [
+    {
+      "name": "en_postprocess_sp",
+      "description": "sentencepiece post process",
+      "config": {
+        "regex": [
+          " ", "▁", " \\( ", " \\) ", " \\/ ", " _ ", ": =", "】"
+        ],
+        "replace": [
+          "", " ", "(", ")", "/", "_", " :=", "]"
+        ]
+      }
+    },
+    {
+      "name": "numcat_comma",
+      "base": "regex_pro",
+      "description": "去掉数字中间','左右两边的空格",
+      "config": {
+        "regex": "([0-9]) *[,] *(?=[0-9]{3}[^0-9])",
+        "replace": "$1,"
+      }
+    },
+    {
+       "name": "rm_space_comma",
+       "base": "regex_pro",
+       "description": "remove space before a comma",
+       "config": {
+         "regex": "([\u4E00-\u9FA5]|[a-zA-Z0-9àèîôëçÇœÀÂâBÇÉéÈÊêËÎÏïÔÛûÙùÜüŸÿ]) (,)",
+         "replace": "$1$2"
+       }
+     },
+    {
+      "name": "vi_postprocess",
+      "description": "vi post process",
+      "config": {
+        "regex": [
+          "—", " \\( ", " \\) ", " \\/ ", " _ ", ": =", "】"
+        ],
+        "replace": [
+          " ", "(", ")", "/", "_", " :=", "]"
+        ]
+      }
+    },
+    {
+      "name": "en_postprocess",
+      "description": "en post process",
+      "config": {
+        "regex": [
+          " \\( ", " \\) ", " \\/ ", " _ ", ": =", "】"
+        ],
+        "replace": [
+          "(", ")", "/", "_", " :=", "]"
+        ]
+      }
+    },
+    {
+      "name": "zh_postprocess",
+      "description": "zh post process",
+      "config": {
+        "regex": [
+          "▁", ",", "\\?", ";"
+        ],
+        "replace": [
+          " ", "，", "？", "；"
+        ]
+      }
+    },
+   {
+      "name": "norm_dot",
+      "description": "不规范圆点归一化",
+      "config": {
+        "regex": "[•·・‧]",
+        "replace": "·"
+      }
+    },
+    {
+      "name": "norm_slash",
+      "description": "将各种破折号转换成标准的英语破折号'-'",
+      "config": {
+        "regex": "[━─―–‒–―‒−─━▬ˉ¯‐‾­‑—]",
+        "replace": "-"
+      }
+    },
+    {
+      "name": "ko_postprocess",
+      "description": "ko post process",
+      "config": {
+        "regex": " @=@",
+        "replace": ""
+      }
+    },
+    {
+            "name": "tx_ko_post_seg",
+            "base": "pipeline",
+            "description": "韩语分词后预处理",
+            "config": {
+                "sub_modules": [
+                    "num_cat"
+                ]
+            }
+    },
+    {
+      "name": "online_jieba",
+      "base": "jieba",
+      "description": "jieba配置",
+      "config": {
+        "dic_path": "./jieba/jieba.dict.utf8.online"
+      }
+    },
+     {
+      "name": "keep_space_alnum",
+      "base": "keep_char",
+      "description": "只保留字母间，或数字间空格",
+      "config": {
+        "char": " ",
+        "left_char": ["a-zA-Z0-9"],
+        "right_char": ["a-zA-Z0-9"]
+      }
+    },
+     {
+      "name": "html",
+      "base": "replace",
+      "description": "把html中&amp;这样的字符替换成相应的值",
+      "config": {
+        "replace_dict": "./resources/replace_dict/html_unescape.dict"
+      }
+    },
+     {
+      "name": "cc_t2s",
+      "base": "cc",
+      "description": "繁体转简体",
+      "config": {
+        "config_file": "./resources/opencc/t2s.json"
+      }
+    },
+
+     {
+          "name": "tx_space_to_sp_sepa",
+          "description": "将空格替换成SentencePiece使用的分隔符",
+          "base": "replace",
+          "config": {
+              "replace_dict": "./resources/replace_dict/tx_space_to_sp_separator.dict"
+          }
+      },
+     {
+      "name": "yb_common_replace_cjk",
+      "description": "general char replace rules for cjk",
+      "base": "replace",
+      "config": {
+        "replace_dict":
+            "./resources/replace_dict/nfkc_reduce_no-combined_merge_cjk.dict"
+      }
+    },
+    {
+      "name": "common_replace",
+      "base": "replace",
+      "description": "general char replace rules",
+      "config": {
+        "replace_dict": "./resources/replace_dict/nfkc_reduce_no-combined_merge_common.dict"
+      }
+    },
+    {
+          "name": "tx_char_norm_zh",
+          "base": "replace",
+          "description": "自定中文替换规则，主要删掉了带附加符号拉丁字符的替换",
+          "config": {
+              "replace_dict": "./resources/replace_dict/tx_zh_char_norm.dict"
+          }
+    },
+    {
+          "name": "tx_char_norm_it",
+          "base": "replace",
+          "description": "自定意大利文替换规则",
+          "config": {
+              "replace_dict": "./resources/replace_dict/tx_it_char_norm.dict"
+          }
+    },
+    {
+          "name": "zsy_common_replace",
+          "base": "replace",
+          "description": "通用特殊字符替换",
+          "config": {
+              "replace_dict": "./resources/replace_dict/zsy_common_replace.dict"
+          }
+    },
+    {
+      "name": "xx_general_replace",
+      "base": "replace",
+      "description": "html tag替换词典",
+      "config": {
+        "replace_dict": "./resources/replace_dict/xx_general_char_norm.dict"
+      }
+    },
+    {
+      "name": "xx_html_tag_replace",
+      "base": "replace",
+      "description": "html tag替换词典",
+      "config": {
+        "replace_dict": "./resources/replace_dict/xx_html_tag_replace.dict"
+      }
+    },
+    {
+      "name": "tx_ko_regexes",
+      "base": "pipeline",
+      "description": "ko regexs by xiaoxue, modified by tingxun",
+      "config": {
+        "sub_modules": [
+          "ko_del_part_zh",
+          "del_angle_bracket",
+          "html_fix",
+          "ko_punc_fix",
+          "newline_char_del"
+        ]
+      }
+    },
+    {
+      "name": "ko_del_part_zh",
+      "description": "ko_del_part_zh",
+      "config": {
+        "regex": [
+          "\\([\u4e00-\u9fa5]+\\)"
+        ],
+        "replace": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "del_angle_bracket",
+      "description": "del angle bracket",
+      "config": {
+        "regex": [
+          "<[a-zA-Z]+>.*?</[a-zA-Z]+>"
+        ],
+        "replace": [
+          " "
+        ]
+      }
+    },
+    {
+      "name": "html_fix",
+      "description": "fix html",
+      "config": {
+        "regex": "& ?# ?(\\d{3})",
+        "replace": "&#\\1"
+      }
+    },
+    {
+      "name": "ko_punc_fix",
+      "description": "ko punc fix",
+      "config": {
+        "regex": [
+          "[”“]", "[‘’`]", "【", "】"
+        ],
+        "replace": [
+          "\"", "'", "[", "]"
+        ]
+      }
+    },
+    {
+      "name": "newline_char_del",
+      "description": "del newline char",
+      "config": {
+        "regex": [
+          "\\\\r|\\\\n"
+        ],
+        "replace": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "norm_multi_dot",
+      "base": "regex",
+      "description": "将四个以上的'.'转换成三个以上的连续点'.'",
+      "config": {
+        "regex": "\\.{4,}",
+        "replace": "..."
+      }
+    },
+    {
+      "name": "ellipsis",
+      "description": "三个以上的连续点'.'转成'…'",
+      "config": {
+        "regex": "\\.{3,}",
+        "replace": "…"
+      }
+    },
+    {
+       "name": "ellipsis2dot",
+       "base": "regex",
+       "description": "'…'转换成三个以上的连续点'.'",
+       "config": {
+         "regex": "…",
+         "replace": "..."
+       }
+     },
+    {
+      "name": "dot2ellipsis",
+      "base": "regex",
+      "description": "'。。。'转换成'…'",
+      "config": {
+        "regex": "[。.·]{3,}",
+        "replace": "…"
+      }
+    },
+    {
+      "name": "dot2period",
+      "base": "regex_pro",
+      "description": "句末.转换为。",
+      "config": {
+        "regex": "([^.…])\\.$",
+        "replace": "$1。"
+      }
+    },
+    {
+      "name": "del_multi_ellipsis",
+      "base": "regex",
+      "description": "'……'转换成'…'",
+      "config": {
+        "regex": "…{2,}",
+        "replace": "…"
+      }
+    },
+    {
+      "name": "del_multi_undslash",
+      "base": "regex",
+      "description": "多余2个'_'转换成'__'",
+      "config": {
+        "regex": "_{2,}",
+        "replace": "__"
+      }
+    },
+    {
+      "name": "rm_dot_space",
+      "base": "regex_pro",
+      "description": "删除'.'和'-'之间的空格",
+      "config": {
+        "regex": "([_.\\-]) +(?=[_.\\-])",
+        "replace": "$1"
+      }
+    },
+    {
+      "name": "del_multi_slash",
+      "base": "regex",
+      "description": "将多个'-'转换为两个'-'",
+      "config": {
+        "regex": "\\-{3,}",
+        "replace": "--"
+      }
+    },
+    {
+      "name": "comma_h2f",
+      "description": "逗号，感叹号，问号半角转全角",
+      "config": {
+        "regex": [",", "!", "\\?"],
+        "replace": ["，", "！", "？"]
+      }
+    },
+    {
+      "name": "del_tail_punc",
+      "description": "移除句子后所有标点空格",
+      "config": {
+        "regex": "[`~!@#$%^&*\\(\\)\\-_=+[{}\\]\\\\|;:'\",<\\.>/?，！？、。\\s]+$",
+        "replace": ""
+      }
+    },
+    {
+      "name": "quote_norm",
+      "description": "单引号和双引号normalize",
+      "config": {
+        "regex": ["[‘’`′]", "[„″“”]"],
+        "replace": ["'", "\""]
+      }
+    },
+    {
+      "name": "quote_norm_zh",
+      "description": "单引号和双引号normalize",
+      "config": {
+        "regex": ["[‘’`′]", "[„″]"],
+        "replace": ["'", "\""]
+      }
+    },
+    {
+      "name": "zh_full_stop_fix",
+      "description": "normalize full stop in zh",
+      "config": {
+        "regex": "([^\\.\\w])\\.([^\\.\\w]|$)",
+        "replace": "\\1。\\2"
+      }
+    }
+  ]
+}

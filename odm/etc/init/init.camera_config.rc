@@ -1,0 +1,7 @@
+on boot && property:ro.build.release_type=false
+    write /sys/module/imgsensor_isp66/parameters/sensor_debug 1
+
+on property:ro.oplus.image.my_engineering.type=factory
+    setprop vendor.debug.camera.sensorcontroldecision 3
+    setprop vendor.debug.camera.forceStreamingIds 2,3,4
+    write /sys/module/mtk_cam_isp66/parameters/debug_opts 799

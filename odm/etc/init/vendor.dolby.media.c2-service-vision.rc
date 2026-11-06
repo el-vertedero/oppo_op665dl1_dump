@@ -1,0 +1,8 @@
+service dolbycodec2 /odm/bin/hw/dolbycodec2
+    class hal
+    user mediacodec
+    group camera mediadrm drmrpc
+    capabilities SYS_NICE
+    ioprio rt 4
+    task_profiles ProcessCapacityHigh HighPerformance
+    writepid /dev/cpuset/foreground/tasks

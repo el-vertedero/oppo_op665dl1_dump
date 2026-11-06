@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<filter-conf>
+    <version>20250911</version>
+    <filter-name>spruce_parameters_list</filter-name>
+    <!--param lightTapDown,lightTapUp,heavyTapDown,heavyTapUp,lightSwipeDown,lightSwipeUp,heavySwipeDown,heavySwipeUp,Zone1Percent,Zone2Percent,longTapTime,doubleTapTime -->
+    <level_0>70,50,150,95,10,10,20,20,50,100,500,400</level_0>
+    <level_1>95,70,175,115,10,10,20,20,50,100,500,400</level_1>
+    <level_2>120,80,200,130,10,10,20,20,50,100,500,400</level_2>
+    <level_3>135,90,225,145,15,15,20,20,50,100,500,400</level_3>
+    <level_4>150,100,250,160,20,20,20,20,50,100,500,400</level_4>
+    <position_right_pixel>1530,1830</position_right_pixel>
+    <!-- position of action button -->
+    <action_position_left_pixel>460,605</action_position_left_pixel>
+</filter-conf>

@@ -1,0 +1,18 @@
+#================================audio related start========================================
+#ifdef OPLUS_BUG_COMPATIBILITY
+#Le.LI@PSW.MM.AudioDriver, 2025/03/31, Add for tfa98xx_v6
+on post-fs-data
+    chown system audio /dev/tfa98xx
+    chmod 0666 /dev/tfa98xx
+#enif
+
+#Zhao.Pan@MULTIMEDIA.AUDIODRIVER.FEATURE.FEEDBACK, 2023/11/14, add for audio hal daemon
+on property:sys.boot_completed=1
+    chmod 0666 /sys/class/misc/adsp_0/ipi_test
+
+#Zhao.Pan@MULTIMEDIA.AUDIODRIVER.ADSP, 2023/9/4, add for adsp feedback and load monitor
+on property:sys.boot_completed=1
+    chmod 0666 /sys/class/misc/adsp_0/load_monitor
+    chmod 0666 /sys/class/misc/adsp_1/load_monitor
+    chmod 0666 /sys/class/misc/adsp_0/adsp_fb
+#================================audio related end==========================================

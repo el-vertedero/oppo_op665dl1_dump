@@ -1,0 +1,986 @@
+{
+    "ctrl_type": ["LuxID", "drcGain", "CCT"],
+    "Preview": {
+        "ccm_enable": 1,
+        "intensity_ctrl_en": 1,
+        "ai_mod_0_c_ctrl_flag": 0,
+        "ai_mod_0_blend_conf_lut_select": [0, 0],
+        "moving_average": {
+            "window_size": 30
+        },
+        "process_params": {
+            "target_categories": [1, 2, 3, 4],
+            "confidence_threshold": 0.79,
+            "lowconf_enable": 1,
+            "time_smooth_ratio": 0.035,
+            "max_intensity_change": 0.02,
+            "record_cat_atten_enable": 0,
+            "record_cat_atten_window": 0,
+            "ccm_amplify_threshold": 0.3,
+            "ccm_amplify_k": 15.0,
+            "ccm_amplify_factor": 0,
+            "tdl_amplify_threshold": 0.4,
+            "tdl_amplify_k": 12.0,
+            "tdl_amplify_factor": 0,
+            "bypass_num": 6,
+            "temp_conv_step": 0.01,
+            "temp_idle_wait": 3,
+            "low_intensity_threshold": 0.05,
+            "low_intensity_counter_threshold": 7200,
+            "ai_stage_decay_blend_ratio": 0.01,
+            "ai_stage_rise_blend_ratio": 0.005,
+            "ai_stage_intensity_rising_close_thr": 0.05,
+            "ai_stage_bypass_wait_frames": 10,
+            "category_attenuation_enable": 1,
+            "category_enable": [18, 20, 21, 22],
+            "category_product_weight": [0.0, 0.0, 0.5, 1.0],
+            "category_min_product": [0.0, 0.0, 0.0, 0.0],
+            "category_att_smooth_alpha": 0.02,
+            "non_target_scene_enable": 1,
+            "arm_leg_near_face_enable": 1,
+            "arm_leg_fd_scale": 1.5,
+            "arm_leg_ratio_thr_low": 0.12,
+            "arm_leg_ratio_thr_high": 0.35,
+            "arm_leg_min_atten": 0.4,
+            "arm_leg_smooth_alpha": 0.15,
+            "arm_leg_class_id": 20,
+            "torso_large_enable": 1,
+            "torso_fd_scale": 3.0,
+            "torso_ratio_thr_low": 0.12,
+            "torso_ratio_thr_high": 0.2,
+            "torso_min_atten": 0.05,
+            "torso_smooth_alpha": 0.15,
+            "torso_class_id": 21,
+            "face_skin_occluded_enable": 1,
+            "skin_ratio_thr_low": 0.3,
+            "skin_ratio_thr_high": 0.45,
+            "skin_min_atten": 0.4,
+            "skin_smooth_alpha": 0.15,
+            "skin_class_id": 22,
+            "face_uni_enable": 1,
+            "face_uni_h_ref": 60.0,
+            "face_uni_s_ref": 0.30,
+            "face_uni_y_ref": 125.0,
+            "face_uni_h_wt": 0.40,
+            "face_uni_s_wt": 0.10,
+            "face_uni_y_wt": 0.50,
+            "face_uni_thr_low": 0.4,
+            "face_uni_thr_high": 0.8,
+            "face_uni_min_att": 0.5,
+            "face_uni_smooth": 0.15,
+            "display_face_enable": 1,
+            "display_overlap_thr_low": 0.70,
+            "display_overlap_thr_high": 0.90,
+            "display_min_atten": 0.5,
+            "display_smooth_alpha": 0.15,
+            "category_mean_att_x": [0.0, 200.0, 210.0, 220.0, 230.0, 240.0, 250.0, 255.0],
+            "category_mean_att_y": [0.0, 0.2, 0.4, 0.6, 0.8, 0.9, 1.0, 1.0],
+            "category_std_att_x": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0],
+            "category_std_att_y": [1.0, 1.0, 0.8, 0.65, 0.5, 0.3, 0.1, 0.0],
+            "var_att_lut": [1.0, 1.0, 0.99, 0.98, 0.96, 0.94, 0.9, 0.85, 0.8, 0.75, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.1, 0.1],
+            "cloth_att_lut": [1.0, 0.98, 0.95, 0.85, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1, 0.0],
+            "var_smooth_alpha": 0.1,
+            "cloth_smooth_alpha": 0.1,
+            "var_win_size": 10,
+            "cloth_win_size": 10,
+            "variance_cloth_att_en": 1,
+            "fd_min_att": 0.5,
+            "fd_att_step": 0.01,
+            "fd_win_size": 100,
+            "fd_cnt_thr": 30,
+            "fd_faceskin_pixel_thr": 20,
+            "fd_faceskin_att_en": 0,
+            "fd_flip_win_size": 12,
+            "fd_flip_cnt_thr": 4,
+            "fd_faceskin_flip_att_en": 1,
+            "ainr_open_att_en": 1,
+            "ainr_open_att_step": 0.01
+        },
+        "face_attenuation_params": {
+            "enable": 1,
+            "yaw_attenuation_max": 0.9,
+            "no_face_min_attenuation_ratio": 1.0,
+            "yaw_smooth_ratio": 0.2,
+            "yaw_weight": 0.5,
+            "face_ratio_weight": 0.5,
+            "face_ratio_smooth_ratio": 0.2,
+            "face_attenuation_smooth_ratio": 0.2,
+            "small_face_attenuation": 0.5,
+            "medium_face_attenuation": 0.8,
+            "large_face_attenuation": 1.0,
+            "sigmoid_manual_enable": 0,
+            "sigmoid_center": 0.0,
+            "sigmoid_k": 0.0
+        },
+        "multi_face_attenuation_params": {
+            "median_filter_enable": 1,
+            "median_filter_window_size": 5,
+            "face_count_smooth_ratio": 0.3,
+            "attenuation_smooth_ratio": 0.1,
+            "no_face_attenuation": 0.8,
+            "single_face_attenuation": 1.0,
+            "double_face_attenuation": 0.9,
+            "triple_face_attenuation": 0.8,
+            "multi_face_attenuation": 0.7
+        },
+        "trigger": [
+            {
+                "range": [0, 1000],
+                "trigger": [
+                    {
+                        "range": [0, 100],
+                        "trigger": [
+                            {
+                                "range": [0, 10000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "SDR30FPS": {
+        "ccm_enable": 1,
+        "intensity_ctrl_en": 1,
+        "ai_mod_0_c_ctrl_flag": 0,
+        "ai_mod_0_blend_conf_lut_select": [0, 0],
+        "moving_average": {
+            "window_size": 30
+        },
+        "process_params": {
+            "target_categories": [1, 2, 3, 4],
+            "confidence_threshold": 0.79,
+            "lowconf_enable": 1,
+            "time_smooth_ratio": 0.035,
+            "max_intensity_change": 0.02,
+            "record_cat_atten_enable": 0,
+            "record_cat_atten_window": 0,
+            "ccm_amplify_threshold": 0.3,
+            "ccm_amplify_k": 15.0,
+            "ccm_amplify_factor": 0,
+            "tdl_amplify_threshold": 0.4,
+            "tdl_amplify_k": 12.0,
+            "tdl_amplify_factor": 0,
+            "bypass_num": 6,
+            "temp_conv_step": 0.01,
+            "temp_idle_wait": 3,
+            "low_intensity_threshold": 0.05,
+            "low_intensity_counter_threshold": 7200,
+            "ai_stage_decay_blend_ratio": 0.01,
+            "ai_stage_rise_blend_ratio": 0.005,
+            "ai_stage_intensity_rising_close_thr": 0.05,
+            "ai_stage_bypass_wait_frames": 10,
+            "category_attenuation_enable": 1,
+            "category_enable": [18, 20, 21, 22],
+            "category_product_weight": [0.0, 0.0, 0.5, 1.0],
+            "category_min_product": [0.0, 0.0, 0.0, 0.0],
+            "category_att_smooth_alpha": 0.02,
+            "non_target_scene_enable": 1,
+            "arm_leg_near_face_enable": 1,
+            "arm_leg_fd_scale": 1.5,
+            "arm_leg_ratio_thr_low": 0.12,
+            "arm_leg_ratio_thr_high": 0.35,
+            "arm_leg_min_atten": 0.4,
+            "arm_leg_smooth_alpha": 0.15,
+            "arm_leg_class_id": 20,
+            "torso_large_enable": 1,
+            "torso_fd_scale": 3.0,
+            "torso_ratio_thr_low": 0.12,
+            "torso_ratio_thr_high": 0.2,
+            "torso_min_atten": 0.05,
+            "torso_smooth_alpha": 0.15,
+            "torso_class_id": 21,
+            "face_skin_occluded_enable": 1,
+            "skin_ratio_thr_low": 0.3,
+            "skin_ratio_thr_high": 0.45,
+            "skin_min_atten": 0.4,
+            "skin_smooth_alpha": 0.15,
+            "skin_class_id": 22,
+            "face_uni_enable": 1,
+            "face_uni_h_ref": 60.0,
+            "face_uni_s_ref": 0.30,
+            "face_uni_y_ref": 125.0,
+            "face_uni_h_wt": 0.40,
+            "face_uni_s_wt": 0.10,
+            "face_uni_y_wt": 0.50,
+            "face_uni_thr_low": 0.4,
+            "face_uni_thr_high": 0.8,
+            "face_uni_min_att": 0.5,
+            "face_uni_smooth": 0.15,
+            "display_face_enable": 1,
+            "display_overlap_thr_low": 0.70,
+            "display_overlap_thr_high": 0.90,
+            "display_min_atten": 0.5,
+            "display_smooth_alpha": 0.15,
+            "category_mean_att_x": [0.0, 200.0, 210.0, 220.0, 230.0, 240.0, 250.0, 255.0],
+            "category_mean_att_y": [0.0, 0.2, 0.4, 0.6, 0.8, 0.9, 1.0, 1.0],
+            "category_std_att_x": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0],
+            "category_std_att_y": [1.0, 1.0, 0.8, 0.65, 0.5, 0.3, 0.1, 0.0],
+            "var_att_lut": [1.0, 1.0, 0.99, 0.98, 0.96, 0.94, 0.9, 0.85, 0.8, 0.75, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.1, 0.1],
+            "cloth_att_lut": [1.0, 0.98, 0.95, 0.85, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1, 0.0],
+            "var_smooth_alpha": 0.1,
+            "cloth_smooth_alpha": 0.1,
+            "var_win_size": 10,
+            "cloth_win_size": 10,
+            "variance_cloth_att_en": 1,
+            "fd_min_att": 0.5,
+            "fd_att_step": 0.01,
+            "fd_win_size": 100,
+            "fd_cnt_thr": 30,
+            "fd_faceskin_pixel_thr": 20,
+            "fd_faceskin_att_en": 0,
+            "fd_flip_win_size": 12,
+            "fd_flip_cnt_thr": 4,
+            "fd_faceskin_flip_att_en": 1,
+            "ainr_open_att_en": 1,
+            "ainr_open_att_step": 0.01
+        },
+        "face_attenuation_params": {
+            "enable": 1,
+            "yaw_attenuation_max": 0.9,
+            "no_face_min_attenuation_ratio": 1.0,
+            "yaw_smooth_ratio": 0.2,
+            "yaw_weight": 0.5,
+            "face_ratio_weight": 0.5,
+            "face_ratio_smooth_ratio": 0.2,
+            "face_attenuation_smooth_ratio": 0.2,
+            "small_face_attenuation": 0.5,
+            "medium_face_attenuation": 0.8,
+            "large_face_attenuation": 1.0,
+            "sigmoid_manual_enable": 0,
+            "sigmoid_center": 0.0,
+            "sigmoid_k": 0.0
+        },
+        "multi_face_attenuation_params": {
+            "median_filter_enable": 1,
+            "median_filter_window_size": 5,
+            "face_count_smooth_ratio": 0.3,
+            "attenuation_smooth_ratio": 0.1,
+            "no_face_attenuation": 0.8,
+            "single_face_attenuation": 1.0,
+            "double_face_attenuation": 0.9,
+            "triple_face_attenuation": 0.8,
+            "multi_face_attenuation": 0.7
+        },
+        "trigger": [
+            {
+                "range": [0, 1000],
+                "trigger": [
+                    {
+                        "range": [0, 100],
+                        "trigger": [
+                            {
+                                "range": [0, 10000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "SDR60FPS": {
+        "ccm_enable": 1,
+        "intensity_ctrl_en": 1,
+        "ai_mod_0_c_ctrl_flag": 0,
+        "ai_mod_0_blend_conf_lut_select": [0, 0],
+        "moving_average": {
+            "window_size": 30
+        },
+        "process_params": {
+            "target_categories": [1, 2, 3, 4],
+            "confidence_threshold": 0.79,
+            "lowconf_enable": 1,
+            "time_smooth_ratio": 0.035,
+            "max_intensity_change": 0.02,
+            "record_cat_atten_enable": 0,
+            "record_cat_atten_window": 0,
+            "ccm_amplify_threshold": 0.3,
+            "ccm_amplify_k": 15.0,
+            "ccm_amplify_factor": 0,
+            "tdl_amplify_threshold": 0.4,
+            "tdl_amplify_k": 12.0,
+            "tdl_amplify_factor": 0,
+            "bypass_num": 6,
+            "temp_conv_step": 0.01,
+            "temp_idle_wait": 3,
+            "low_intensity_threshold": 0.05,
+            "low_intensity_counter_threshold": 14400,
+            "ai_stage_decay_blend_ratio": 0.01,
+            "ai_stage_rise_blend_ratio": 0.005,
+            "ai_stage_intensity_rising_close_thr": 0.05,
+            "ai_stage_bypass_wait_frames": 10,
+            "category_attenuation_enable": 1,
+            "category_enable": [18, 20, 21, 22],
+            "category_product_weight": [0.0, 0.0, 0.5, 1.0],
+            "category_min_product": [0.0, 0.0, 0.0, 0.0],
+            "category_att_smooth_alpha": 0.02,
+            "non_target_scene_enable": 1,
+            "arm_leg_near_face_enable": 1,
+            "arm_leg_fd_scale": 1.5,
+            "arm_leg_ratio_thr_low": 0.12,
+            "arm_leg_ratio_thr_high": 0.35,
+            "arm_leg_min_atten": 0.4,
+            "arm_leg_smooth_alpha": 0.15,
+            "arm_leg_class_id": 20,
+            "torso_large_enable": 1,
+            "torso_fd_scale": 3.0,
+            "torso_ratio_thr_low": 0.12,
+            "torso_ratio_thr_high": 0.2,
+            "torso_min_atten": 0.05,
+            "torso_smooth_alpha": 0.15,
+            "torso_class_id": 21,
+            "face_skin_occluded_enable": 1,
+            "skin_ratio_thr_low": 0.3,
+            "skin_ratio_thr_high": 0.45,
+            "skin_min_atten": 0.4,
+            "skin_smooth_alpha": 0.15,
+            "skin_class_id": 22,
+            "face_uni_enable": 1,
+            "face_uni_h_ref": 60.0,
+            "face_uni_s_ref": 0.30,
+            "face_uni_y_ref": 125.0,
+            "face_uni_h_wt": 0.40,
+            "face_uni_s_wt": 0.10,
+            "face_uni_y_wt": 0.50,
+            "face_uni_thr_low": 0.4,
+            "face_uni_thr_high": 0.8,
+            "face_uni_min_att": 0.5,
+            "face_uni_smooth": 0.15,
+            "display_face_enable": 1,
+            "display_overlap_thr_low": 0.70,
+            "display_overlap_thr_high": 0.90,
+            "display_min_atten": 0.5,
+            "display_smooth_alpha": 0.15,
+            "category_mean_att_x": [0.0, 200.0, 210.0, 220.0, 230.0, 240.0, 250.0, 255.0],
+            "category_mean_att_y": [0.0, 0.2, 0.4, 0.6, 0.8, 0.9, 1.0, 1.0],
+            "category_std_att_x": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0],
+            "category_std_att_y": [1.0, 1.0, 0.8, 0.65, 0.5, 0.3, 0.1, 0.0],
+            "var_att_lut": [1.0, 1.0, 0.99, 0.98, 0.96, 0.94, 0.9, 0.85, 0.8, 0.75, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.1, 0.1],
+            "cloth_att_lut": [1.0, 0.98, 0.95, 0.85, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1, 0.0],
+            "var_smooth_alpha": 0.1,
+            "cloth_smooth_alpha": 0.1,
+            "var_win_size": 10,
+            "cloth_win_size": 10,
+            "variance_cloth_att_en": 1,
+            "fd_min_att": 0.5,
+            "fd_att_step": 0.01,
+            "fd_win_size": 100,
+            "fd_cnt_thr": 30,
+            "fd_faceskin_pixel_thr": 20,
+            "fd_faceskin_att_en": 0,
+            "fd_flip_win_size": 12,
+            "fd_flip_cnt_thr": 4,
+            "fd_faceskin_flip_att_en": 1,
+            "ainr_open_att_en": 1,
+            "ainr_open_att_step": 0.01
+        },
+        "face_attenuation_params": {
+            "enable": 1,
+            "yaw_attenuation_max": 0.9,
+            "no_face_min_attenuation_ratio": 1.0,
+            "yaw_smooth_ratio": 0.2,
+            "yaw_weight": 0.5,
+            "face_ratio_weight": 0.5,
+            "face_ratio_smooth_ratio": 0.2,
+            "face_attenuation_smooth_ratio": 0.2,
+            "small_face_attenuation": 0.5,
+            "medium_face_attenuation": 0.8,
+            "large_face_attenuation": 1.0,
+            "sigmoid_manual_enable": 0,
+            "sigmoid_center": 0.0,
+            "sigmoid_k": 0.0
+        },
+        "multi_face_attenuation_params": {
+            "median_filter_enable": 1,
+            "median_filter_window_size": 5,
+            "face_count_smooth_ratio": 0.3,
+            "attenuation_smooth_ratio": 0.1,
+            "no_face_attenuation": 0.8,
+            "single_face_attenuation": 1.0,
+            "double_face_attenuation": 0.9,
+            "triple_face_attenuation": 0.8,
+            "multi_face_attenuation": 0.7
+        },
+        "trigger": [
+            {
+                "range": [0, 1000],
+                "trigger": [
+                    {
+                        "range": [0, 100],
+                        "trigger": [
+                            {
+                                "range": [0, 10000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "HDR30FPS": {
+        "ccm_enable": 1,
+        "intensity_ctrl_en": 1,
+        "ai_mod_0_c_ctrl_flag": 0,
+        "ai_mod_0_blend_conf_lut_select": [0, 0],
+        "moving_average": {
+            "window_size": 30
+        },
+        "process_params": {
+            "target_categories": [1, 2, 3, 4],
+            "confidence_threshold": 0.79,
+            "lowconf_enable": 1,
+            "time_smooth_ratio": 0.035,
+            "max_intensity_change": 0.02,
+            "record_cat_atten_enable": 0,
+            "record_cat_atten_window": 0,
+            "ccm_amplify_threshold": 0.3,
+            "ccm_amplify_k": 15.0,
+            "ccm_amplify_factor": 0,
+            "tdl_amplify_threshold": 0.4,
+            "tdl_amplify_k": 12.0,
+            "tdl_amplify_factor": 0,
+            "bypass_num": 6,
+            "temp_conv_step": 0.01,
+            "temp_idle_wait": 3,
+            "low_intensity_threshold": 0.05,
+            "low_intensity_counter_threshold": 7200,
+            "ai_stage_decay_blend_ratio": 0.01,
+            "ai_stage_rise_blend_ratio": 0.005,
+            "ai_stage_intensity_rising_close_thr": 0.05,
+            "ai_stage_bypass_wait_frames": 10,
+            "category_attenuation_enable": 1,
+            "category_enable": [18, 20, 21, 22],
+            "category_product_weight": [0.0, 0.0, 0.5, 1.0],
+            "category_min_product": [0.0, 0.0, 0.0, 0.0],
+            "category_att_smooth_alpha": 0.02,
+            "non_target_scene_enable": 1,
+            "arm_leg_near_face_enable": 1,
+            "arm_leg_fd_scale": 1.5,
+            "arm_leg_ratio_thr_low": 0.12,
+            "arm_leg_ratio_thr_high": 0.35,
+            "arm_leg_min_atten": 0.4,
+            "arm_leg_smooth_alpha": 0.15,
+            "arm_leg_class_id": 20,
+            "torso_large_enable": 1,
+            "torso_fd_scale": 3.0,
+            "torso_ratio_thr_low": 0.12,
+            "torso_ratio_thr_high": 0.2,
+            "torso_min_atten": 0.05,
+            "torso_smooth_alpha": 0.15,
+            "torso_class_id": 21,
+            "face_skin_occluded_enable": 1,
+            "skin_ratio_thr_low": 0.3,
+            "skin_ratio_thr_high": 0.45,
+            "skin_min_atten": 0.4,
+            "skin_smooth_alpha": 0.15,
+            "skin_class_id": 22,
+            "face_uni_enable": 1,
+            "face_uni_h_ref": 60.0,
+            "face_uni_s_ref": 0.30,
+            "face_uni_y_ref": 125.0,
+            "face_uni_h_wt": 0.40,
+            "face_uni_s_wt": 0.10,
+            "face_uni_y_wt": 0.50,
+            "face_uni_thr_low": 0.4,
+            "face_uni_thr_high": 0.8,
+            "face_uni_min_att": 0.5,
+            "face_uni_smooth": 0.15,
+            "display_face_enable": 1,
+            "display_overlap_thr_low": 0.70,
+            "display_overlap_thr_high": 0.90,
+            "display_min_atten": 0.5,
+            "display_smooth_alpha": 0.15,
+            "category_mean_att_x": [0.0, 200.0, 210.0, 220.0, 230.0, 240.0, 250.0, 255.0],
+            "category_mean_att_y": [0.0, 0.2, 0.4, 0.6, 0.8, 0.9, 1.0, 1.0],
+            "category_std_att_x": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0],
+            "category_std_att_y": [1.0, 1.0, 0.8, 0.65, 0.5, 0.3, 0.1, 0.0],
+            "var_att_lut": [1.0, 1.0, 0.99, 0.98, 0.96, 0.94, 0.9, 0.85, 0.8, 0.75, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.1, 0.1],
+            "cloth_att_lut": [1.0, 0.98, 0.95, 0.85, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1, 0.0],
+            "var_smooth_alpha": 0.1,
+            "cloth_smooth_alpha": 0.1,
+            "var_win_size": 10,
+            "cloth_win_size": 10,
+            "variance_cloth_att_en": 1,
+            "fd_min_att": 0.5,
+            "fd_att_step": 0.01,
+            "fd_win_size": 100,
+            "fd_cnt_thr": 30,
+            "fd_faceskin_pixel_thr": 20,
+            "fd_faceskin_att_en": 0,
+            "fd_flip_win_size": 12,
+            "fd_flip_cnt_thr": 4,
+            "fd_faceskin_flip_att_en": 1,
+            "ainr_open_att_en": 1,
+            "ainr_open_att_step": 0.01
+        },
+        "face_attenuation_params": {
+            "enable": 1,
+            "yaw_attenuation_max": 0.9,
+            "no_face_min_attenuation_ratio": 1.0,
+            "yaw_smooth_ratio": 0.2,
+            "yaw_weight": 0.5,
+            "face_ratio_weight": 0.5,
+            "face_ratio_smooth_ratio": 0.2,
+            "face_attenuation_smooth_ratio": 0.2,
+            "small_face_attenuation": 0.5,
+            "medium_face_attenuation": 0.8,
+            "large_face_attenuation": 1.0,
+            "sigmoid_manual_enable": 0,
+            "sigmoid_center": 0.0,
+            "sigmoid_k": 0.0
+        },
+        "multi_face_attenuation_params": {
+            "median_filter_enable": 1,
+            "median_filter_window_size": 5,
+            "face_count_smooth_ratio": 0.3,
+            "attenuation_smooth_ratio": 0.1,
+            "no_face_attenuation": 0.8,
+            "single_face_attenuation": 1.0,
+            "double_face_attenuation": 0.9,
+            "triple_face_attenuation": 0.8,
+            "multi_face_attenuation": 0.7
+        },
+        "trigger": [
+            {
+                "range": [0, 200],
+                "trigger": [
+                    {
+                        "range": [0, 2.5],
+                        "trigger": [
+                            {
+                                "range": [0, 2400],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [3400, 3900],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [4900, 5000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [6000, 10000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "range": [5, 20],
+                        "trigger": [
+                            {
+                                "range": [0, 2400],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [3400, 3900],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [4900, 5000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [6000, 10000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "range": [300, 1000],
+                "trigger": [
+                    {
+                        "range": [0, 10],
+                        "trigger": [
+                            {
+                                "range": [0, 2400],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [3400, 3900],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [4900, 5000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            },
+                            {
+                                "range": [6000, 10000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "HDR60FPS": {
+        "ccm_enable": 1,
+        "intensity_ctrl_en": 1,
+        "ai_mod_0_c_ctrl_flag": 0,
+        "ai_mod_0_blend_conf_lut_select": [0, 0],
+        "moving_average": {
+            "window_size": 30
+        },
+        "process_params": {
+            "target_categories": [1, 2, 3, 4],
+            "confidence_threshold": 0.79,
+            "lowconf_enable": 1,
+            "time_smooth_ratio": 0.035,
+            "max_intensity_change": 0.02,
+            "record_cat_atten_enable": 0,
+            "record_cat_atten_window": 0,
+            "ccm_amplify_threshold": 0.3,
+            "ccm_amplify_k": 15.0,
+            "ccm_amplify_factor": 0,
+            "tdl_amplify_threshold": 0.4,
+            "tdl_amplify_k": 12.0,
+            "tdl_amplify_factor": 0,
+            "bypass_num": 6,
+            "temp_conv_step": 0.01,
+            "temp_idle_wait": 3,
+            "low_intensity_threshold": 0.05,
+            "low_intensity_counter_threshold": 14400,
+            "ai_stage_decay_blend_ratio": 0.01,
+            "ai_stage_rise_blend_ratio": 0.005,
+            "ai_stage_intensity_rising_close_thr": 0.05,
+            "ai_stage_bypass_wait_frames": 10,
+            "category_attenuation_enable": 1,
+            "category_enable": [18, 20, 21, 22],
+            "category_product_weight": [0.0, 0.0, 0.5, 1.0],
+            "category_min_product": [0.0, 0.0, 0.0, 0.0],
+            "category_att_smooth_alpha": 0.02,
+            "non_target_scene_enable": 1,
+            "arm_leg_near_face_enable": 1,
+            "arm_leg_fd_scale": 1.5,
+            "arm_leg_ratio_thr_low": 0.12,
+            "arm_leg_ratio_thr_high": 0.35,
+            "arm_leg_min_atten": 0.4,
+            "arm_leg_smooth_alpha": 0.15,
+            "arm_leg_class_id": 20,
+            "torso_large_enable": 1,
+            "torso_fd_scale": 3.0,
+            "torso_ratio_thr_low": 0.12,
+            "torso_ratio_thr_high": 0.2,
+            "torso_min_atten": 0.05,
+            "torso_smooth_alpha": 0.15,
+            "torso_class_id": 21,
+            "face_skin_occluded_enable": 1,
+            "skin_ratio_thr_low": 0.3,
+            "skin_ratio_thr_high": 0.45,
+            "skin_min_atten": 0.4,
+            "skin_smooth_alpha": 0.15,
+            "skin_class_id": 22,
+            "face_uni_enable": 1,
+            "face_uni_h_ref": 60.0,
+            "face_uni_s_ref": 0.30,
+            "face_uni_y_ref": 125.0,
+            "face_uni_h_wt": 0.40,
+            "face_uni_s_wt": 0.10,
+            "face_uni_y_wt": 0.50,
+            "face_uni_thr_low": 0.4,
+            "face_uni_thr_high": 0.8,
+            "face_uni_min_att": 0.5,
+            "face_uni_smooth": 0.15,
+            "display_face_enable": 1,
+            "display_overlap_thr_low": 0.70,
+            "display_overlap_thr_high": 0.90,
+            "display_min_atten": 0.5,
+            "display_smooth_alpha": 0.15,
+            "category_mean_att_x": [0.0, 200.0, 210.0, 220.0, 230.0, 240.0, 250.0, 255.0],
+            "category_mean_att_y": [0.0, 0.2, 0.4, 0.6, 0.8, 0.9, 1.0, 1.0],
+            "category_std_att_x": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0],
+            "category_std_att_y": [1.0, 1.0, 0.8, 0.65, 0.5, 0.3, 0.1, 0.0],
+            "var_att_lut": [1.0, 1.0, 0.99, 0.98, 0.96, 0.94, 0.9, 0.85, 0.8, 0.75, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.1, 0.1],
+            "cloth_att_lut": [1.0, 0.98, 0.95, 0.85, 0.75, 0.6, 0.45, 0.3, 0.2, 0.1, 0.0],
+            "var_smooth_alpha": 0.1,
+            "cloth_smooth_alpha": 0.1,
+            "var_win_size": 10,
+            "cloth_win_size": 10,
+            "variance_cloth_att_en": 1,
+            "fd_min_att": 0.5,
+            "fd_att_step": 0.01,
+            "fd_win_size": 100,
+            "fd_cnt_thr": 30,
+            "fd_faceskin_pixel_thr": 20,
+            "fd_faceskin_att_en": 0,
+            "fd_flip_win_size": 12,
+            "fd_flip_cnt_thr": 4,
+            "fd_faceskin_flip_att_en": 1,
+            "ainr_open_att_en": 1,
+            "ainr_open_att_step": 0.01
+        },
+        "face_attenuation_params": {
+            "enable": 1,
+            "yaw_attenuation_max": 0.9,
+            "no_face_min_attenuation_ratio": 1.0,
+            "yaw_smooth_ratio": 0.2,
+            "yaw_weight": 0.5,
+            "face_ratio_weight": 0.5,
+            "face_ratio_smooth_ratio": 0.2,
+            "face_attenuation_smooth_ratio": 0.2,
+            "small_face_attenuation": 0.5,
+            "medium_face_attenuation": 0.8,
+            "large_face_attenuation": 1.0,
+            "sigmoid_manual_enable": 0,
+            "sigmoid_center": 0.0,
+            "sigmoid_k": 0.0
+        },
+        "multi_face_attenuation_params": {
+            "median_filter_enable": 1,
+            "median_filter_window_size": 5,
+            "face_count_smooth_ratio": 0.3,
+            "attenuation_smooth_ratio": 0.1,
+            "no_face_attenuation": 0.8,
+            "single_face_attenuation": 1.0,
+            "double_face_attenuation": 0.9,
+            "triple_face_attenuation": 0.8,
+            "multi_face_attenuation": 0.7
+        },
+        "trigger": [
+            {
+                "range": [0, 1000],
+                "trigger": [
+                    {
+                        "range": [0, 100],
+                        "trigger": [
+                            {
+                                "range": [0, 2000],
+                                "ccm_params": {
+                                    "ai_mod_0_blend_cat_lut": [0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0],
+                                    "ai_mod_0_transition_lut": [0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                                },
+                                "intensity_mapping": {
+                                    "use_moving_avg": 1.0,
+                                    "min_intensity": 0.0,
+                                    "max_intensity": 1.0,
+                                    "sigmoid_k": 15.0,
+                                    "sigmoid_center": 0.4
+                                },
+                                "base_intensity": {
+                                    "preview_intensity": 1.0,
+                                    "record_intensity": 1.0
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

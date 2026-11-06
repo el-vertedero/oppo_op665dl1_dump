@@ -1,0 +1,27 @@
+{
+    "module": "AI_global_detection",
+    "comment":
+    [
+        "BrandID 1 for oupo, 2 for yijia, 3 for zhenwo",
+        "OdnnRuntime: CPU_FLOAT32, GPU_FLOAT32_16_HYBRID, DSP_FIXED8_TF, GPU_FLOAT16, AIP_FIXED8_TF, AIP_FIXED_TF, CPU, GPU, DSP",
+        "OdnnBoostValue: [0, 110] Example:  low power  30 or 50 ; normal performance 70; high performance 100;super performance 110;",
+        "OdnnLogLevel: ERROR, WARING, INFO, DEBUG, PRINTF",
+        "OdnnPriority: NORMAL, HIGH, LOW",
+        "OdnnProfilingLevel: OFF, BASIC, DETAILED"
+    ],
+    "product": "DX-6",
+    "VENDOR": "MTK",
+    "MTK_VERSION": "mt6995",
+    "param":
+    [
+		{
+            "product_name": "DX-6",
+            "BrandID": 1,
+            "OdnnRuntime": "DSP",
+            "OdnnBoostValue": 60,
+            "OdnnLogLevel": "ERROR",
+            "OdnnPriority": "NORMAL",
+            "OdnnProfilingLevel": "OFF"
+        }
+    ]
+}

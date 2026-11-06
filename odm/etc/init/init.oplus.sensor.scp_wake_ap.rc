@@ -1,0 +1,11 @@
+# Wei.Tao@BSP.SENSOR.BASIC, 2026/07/07, DX6 mars sensor kernel wakeup print adapt
+# Enable/disable scp_ipi_resume_dbg via sysfs echo node (magic = 666)
+# IPI_RESUME_DEBUG_ON = 4, IPI_RESUME_DEBUG_OFF = 5
+# Property: persist.vendor.oplus.sensor.scp_ipi_resume_dbg (1=on, 0=off)
+
+on property:persist.vendor.oplus.sensor.scp_ipi_resume_dbg=1
+    write /sys/class/misc/scp/scp_ipi_test 666 4
+
+on property:persist.vendor.oplus.sensor.scp_ipi_resume_dbg=0
+    write /sys/class/misc/scp/scp_ipi_test 666 5
+

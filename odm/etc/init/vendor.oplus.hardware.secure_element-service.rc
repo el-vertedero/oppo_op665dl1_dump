@@ -1,0 +1,5 @@
+##     Wenjie.Liu  10:32, 2025/004/10 service run on early_hal
+service secure_element-1-0 /odm/bin/hw/vendor.oplus.hardware.secure_element-service
+    class early_hal
+    user secure_element
+    group secure_element system

@@ -1,0 +1,24 @@
+{
+  "AlgoSetting": {
+    "RemosaicPars": [
+      {
+        "rmc_enable": 1,
+        "fpn_enable_4cell": 1,
+        "fpn_enable_16cell": 1,
+        "low_power_en_lv1": 0,
+        "low_power_en_lv2": 0,
+        "low_power_en_lv3": 0,
+        "low_power_en_lv4": 0,
+        "low_power_en_lv5": 0,
+        "low_power_en_lv6": 0,
+        "low_power_en_lv7": 1,
+        "low_power_en_lv8": 1,
+        "HexaPars": {
+          "low_power_en_lv1": 1,
+          "low_power_en_lv2": 0,
+          "low_power_en_lv3": 0
+        }
+      }
+    ]
+  }
+}

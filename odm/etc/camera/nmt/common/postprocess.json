@@ -1,0 +1,78 @@
+{
+  "desc": "post process modules",
+  "base": "pipeline",
+  "modules": [
+    {
+      "name": "postprocess-en-yunbei_sp",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "first_upper", "punct_split-post", "en_postprocess_sp", "trim"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-vi-yunbei",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "first_upper", "punct_split-post", "debpe", "detok", "num_cat", "vi_postprocess", "trim"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-en-yunbei",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "first_upper", "punct_split-post", "debpe", "detok", "num_cat", "en_postprocess", "trim"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-zh-yunbei",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "punct_split-post", "debpe", "del_space", "zh_postprocess", "trim"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-ko",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "first_upper", "punct_split-post", "debpe", "ko_postprocess", "detok", "num_cat"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-zh",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "punct_split-post", "debpe", "del_space", "trim"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-en",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "first_upper", "punct_split-post", "debpe", "detok", "num_cat"
+        ]
+      }
+    },
+    {
+      "name": "postprocess-vi",
+      "description": "postprocess",
+      "config": {
+        "sub_modules": [
+          "long_split_post", "first_upper", "punct_split-post", "debpe", "hyphen2sp", "detok", "num_cat"
+        ]
+      }
+    }
+  ]
+}

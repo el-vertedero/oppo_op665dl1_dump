@@ -1,0 +1,38 @@
+{
+  "desc": "mose tokenizer modules",
+  "base": "mose",
+  "modules": [
+    {
+      "name": "mose_en",
+      "description": "英文mose tokenizer",
+      "config": {
+        "lang": "en",
+        "prefix_file": "./mose/nonbreaking_prefixes/nonbreaking_prefix.en"
+      }
+    },
+    {
+      "name": "mose_fr",
+      "description": "法语mose tokenizer",
+      "config": {
+        "lang": "fr",
+        "prefix_file": "./mose/nonbreaking_prefixes/nonbreaking_prefix.fr"
+      }
+    },
+    {
+      "name": "mose_it",
+      "description": "意大利语mose tokenizer",
+      "config": {
+        "lang": "it",
+        "prefix_file": "./mose/nonbreaking_prefixes/nonbreaking_prefix.it"
+      }
+    },
+    {
+      "name": "mose_es",
+      "description": "西班牙语mose tokenizer",
+      "config": {
+        "lang": "es",
+        "prefix_file": "./mose/nonbreaking_prefixes/nonbreaking_prefix.es"
+      }
+    }
+  ]
+}

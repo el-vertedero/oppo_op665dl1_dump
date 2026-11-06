@@ -1,0 +1,21 @@
+service face_hal /odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service_uff
+    class late_start
+    user system
+    group system input
+
+on boot
+#for face recognition device.
+    chown system system /dev/face_recognition
+    chmod 0660 /dev/face_recognition
+
+on post-fs-data
+    mkdir /data/vendor_de/0/facedata 0770 system system encryption=None
+    mkdir /data/vendor_de/0/faceunlock 0770 system system encryption=None
+    mkdir /data/vendor_de/0/faceunlock_ori 0770 system system encryption=None
+
+    mkdir /data/vendor_de/0/.faceauth 0770 system system encryption=None
+    mkdir /data/vendor_de/0/.facedldata 0770 system system encryption=None
+    mkdir /data/vendor_de/0/faceauth 0770 system system encryption=None
+    mkdir /data/vendor_de/0/facedldata 0770 system system encryption=None
+    mkdir /data/vendor_de/0/security_rus 0770 system system encryption=None
+

@@ -1,0 +1,387 @@
+{
+  "desc": "common modules",
+  "base": "pipeline",
+  "modules": [
+    {
+      "name": "general_en-xx_es_lower",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "lower",
+             "mose_es",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "general_en-xx_en_lower",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "lower",
+             "mose_en",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "general_en-xx_pre_lower",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "lower",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "general_en-xx_pre",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "general_en-xx_vi",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "vi_seg",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "general_en-xx_en",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "mose_en",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "general_en-xx_es",
+      "description": "process south-east language for dn_en of oppo NMT",
+     "config": {
+         "sub_modules": [
+             "f2h",
+             "space_norm",
+             "quote_norm",
+             "del_mul_space",
+             "common_replace",
+             "rm_dot_space",
+             "norm_multi_dot",
+             "html",
+             "dot2ellipsis",
+             "del_multi_slash",
+             "del_multi_ellipsis",
+             "ellipsis2dot",
+             "del_multi_undslash",
+             "del_mul_space",
+             "trim",
+             "rm_space_comma",
+             "numcat_comma",
+             "trim",
+             "mose_es",
+             "trim",
+             "punct_split-en-pre", "long_split_pre",
+             "bpe-model"
+       ]
+     }
+    },
+    {
+      "name": "preprocess-en_en2zh",
+      "description": "preprocess for english to chinese model",
+      "config": {
+        "sub_modules": [
+          "lower", "f2h", "space_norm", "norm_dot",
+          "norm_slash", "quote_norm", "ellipsis",
+          "mose_en", "num_cat", "del_mul_space",
+          "punct_split-en-pre", "long_split_pre",
+          "bpe-en", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-zh_zh2en",
+      "description": "preprocess for chinese to english model",
+      "config": {
+        "sub_modules": [
+           "f2h",
+              "space_norm",
+              "quote_norm",
+              "del_mul_space",
+              "common_replace",
+              "yb_common_replace_cjk",
+              "keep_space_alnum",
+              "rm_dot_space",
+              "norm_multi_dot",
+              "html",
+              "dot2ellipsis",
+              "del_multi_slash",
+              "dot2period",
+              "del_multi_ellipsis",
+              "del_multi_undslash",
+              "del_mul_space",
+              "trim",
+              "online_jieba",
+              "del_mul_space",
+              "rm_dot_space",
+              "trim",
+              "punct_split-zh-pre", "long_split_pre",
+              "bpe-zh"
+        ]
+      }
+    },
+    {
+            "name": "ko_pre_seg",
+            "description": "韩语分词前预处理",
+            "config": {
+                "sub_modules": [
+                    "f2h", "space_norm", "del_mul_space", "xx_general_replace", "tx_ko_regexes", "html", "html", "xx_html_tag_replace", "ellipsis",
+                    "ko_seg", "tx_ko_post_seg",
+                    "punct_split-zh-pre", "long_split_pre",
+                    "bpe-ko"
+                ]
+            }
+    },
+    {
+            "name": "it_lower",
+            "description": "意大利语预处理过程",
+            "config": {
+                "sub_modules": [
+                    "f2h", "html", "tx_char_norm_it", "quote_norm", "space_norm", "zsy_common_replace",
+                    "mose_it", "num_cat", "del_mul_space", "lower", "trim",
+                    "punct_split-en-pre", "long_split_pre",
+                    "bpe-it"
+                ]
+            }
+    },
+    {
+            "name": "zhth",
+            "description": "泰<->中方向中文预处理流程",
+            "config": {
+                "sub_modules": [
+                    "f2h", "html", "tx_char_norm_zh", "quote_norm", "space_norm", "num_cat", "zsy_common_replace", "del_mul_space", "trim", "del_space", "ellipsis", "tx_space_to_sp_sepa",
+                    "online_jieba", "punct_split-zh-pre", "long_split_pre",
+                    "bpe-zh"
+                ]
+            }
+    },
+    {
+      "name": "preprocess-en",
+      "description": "preprocess for english",
+      "config": {
+        "sub_modules": [
+          "lower", "f2h", "quote_norm",
+          "mose_en", "num_cat", "del_mul_space",
+          "bpe-en", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-fr",
+      "description": "preprocess for french",
+      "config": {
+        "sub_modules": [
+          "f2h", "quote_norm",
+          "mose_fr", "num_cat", "del_mul_space",
+          "bpe-fr", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-es",
+      "description": "preprocess for spanish",
+      "config": {
+        "sub_modules": [
+          "lower", "f2h", "quote_norm",
+          "mose_es", "num_cat", "del_mul_space",
+          "punct_split-en-pre", "long_split_pre",
+          "bpe-es", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-zh",
+      "description": "preprocess for chinese",
+      "config": {
+        "sub_modules": [
+          "f2h", "quote_norm_zh", "zh_full_stop_fix",
+          "jieba", "num_cat", "del_mul_space",
+          "punct_split-zh-pre", "long_split_pre",
+          "bpe-zh", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-ja",
+      "description": "preprocess for japanese",
+      "config": {
+        "sub_modules": [
+          "lower", "f2h", "quote_norm",
+          "jp_seg", "num_cat", "del_mul_space",
+          "punct_split-zh-pre", "long_split_pre",
+          "bpe-ja", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-ko",
+      "description": "preprocess for korean",
+      "config": {
+        "sub_modules": [
+          "lower", "f2h", "quote_norm",
+          "ko_seg", "num_cat", "del_mul_space",
+          "bpe-ko", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-vi",
+      "description": "preprocess for vietnamese",
+      "config": {
+        "sub_modules": [
+          "f2h", "quote_norm",
+          "mose_en", "num_cat", "del_mul_space",
+          "punct_split-en-pre", "long_split_pre",
+          "bpe-vi", "del_mul_space"
+        ]
+      }
+    },
+    {
+      "name": "preprocess-hi",
+      "description": "preprocess for hindi",
+      "config": {
+        "sub_modules": [
+          "lower", "f2h", "quote_norm",
+          "mose_es", "num_cat", "del_mul_space",
+          "punct_split-en-pre", "long_split_pre",
+          "bpe-hi", "del_mul_space"
+        ]
+      }
+    }
+  ]
+}

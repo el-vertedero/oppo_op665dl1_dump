@@ -1,0 +1,49 @@
+{
+  "desc": "common modules",
+  "modules": [
+    {
+      "name": "punct_split-en-pre",
+      "base": "dict_split_pre",
+      "description": "",
+      "config": {
+        "dict_file": "./split/punc.en",
+        "type": "punc"
+      }
+    },
+    {
+      "name": "punct_split-zh-pre",
+      "base": "dict_split_pre",
+      "description": "",
+      "config": {
+        "dict_file": "./split/punc.zh",
+        "type": "punc"
+      }
+    },
+    {
+      "name": "punct_split-post",
+      "base": "split_post",
+      "description": "",
+      "config": {
+        "type": "punc"
+      }
+    },
+    {
+      "name": "long_split_pre",
+      "base": "long_split",
+      "description": "长句切分",
+      "config": {
+        "type": "long",
+        "max_char": 400,
+        "split_len": 300
+      }
+    },
+    {
+      "name": "long_split_post",
+      "base": "split_post",
+      "description": "长句切分",
+      "config": {
+        "type": "long"
+      }
+    }
+  ]
+}

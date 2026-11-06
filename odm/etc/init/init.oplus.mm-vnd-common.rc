@@ -1,0 +1,66 @@
+on post-fs-data
+# ERM
+	chown system system /sys/kernel/oplus_mm/erm/min_batch_kb
+	chown system system /sys/kernel/oplus_mm/erm/free_boost_kb
+	chown system system /sys/kernel/oplus_mm/erm/osense_free_boost_kb
+	chown system system /sys/kernel/oplus_mm/erm/free_boost_enabled
+	chown system system /sys/kernel/oplus_mm/erm/memory_reclaim_exclusive
+	chmod 0666 /sys/kernel/oplus_mm/erm/memory_reclaim_exclusive
+	chown system system /sys/kernel/oplus_mm/erm/memory_reclaim_exclusive_stop
+	chmod 0666 /sys/kernel/oplus_mm/erm/memory_reclaim_exclusive_stop
+	chown system system /sys/kernel/oplus_mm/erm/wmarks_kb
+# Osvelte
+	chown system system /sys/kernel/oplus_mm/osvelte/common/compact_memory
+	chmod 0666 /sys/kernel/oplus_mm/osvelte/common/compact_memory
+	chown system system /sys/kernel/oplus_mm/osvelte/common/order4_frag_score
+	chmod 0666 /sys/kernel/oplus_mm/osvelte/common/order4_frag_score
+	chown system system /sys/kernel/oplus_mm/osvelte/common/compact_memory_stop
+	chmod 0666 /sys/kernel/oplus_mm/osvelte/common/compact_memory_stop
+	chown system system /sys/kernel/oplus_mm/osvelte/common/scene_bit
+
+# mm_osvelte/common.h
+#
+# enum oplus_mm_version_bit {
+# 	MM_VERSION_RELEASE = 0,
+# 	MM_VERSION_PRE_RELEASE,
+# 	MM_VERSION_AGING,
+# 	MM_VERSION_DAILY_OTA,
+# 	/* persist.sys.assert.panic = true */
+# 	MM_VERSION_LOG_ENABLED,
+#
+# 	NR_MM_VERSION_BIT,
+# };
+on property:ro.oplus.image.my_engineering.type=release && property:ro.debuggable=0
+	write /sys/kernel/oplus_mm/osvelte/common/version_bit "0 1"
+on property:ro.oplus.image.my_engineering.type=preversion
+	write /sys/kernel/oplus_mm/osvelte/common/version_bit "1 1"
+on property:ro.oplus.image.my_engineering.type=aging
+	write /sys/kernel/oplus_mm/osvelte/common/version_bit "2 1"
+on property:ro.oplus.dailyota=true
+	write /sys/kernel/oplus_mm/osvelte/common/version_bit "3 1"
+on property:persist.sys.assert.panic=true
+	write /sys/kernel/oplus_mm/osvelte/common/version_bit "4 1"
+on property:persist.sys.assert.panic=false
+	write /sys/kernel/oplus_mm/osvelte/common/version_bit "4 0"
+
+service init_oplus_mm-vnd-common /vendor/bin/sh /odm/bin/init.oplus.mm-vnd-common.sh
+	class core
+	user root
+	group root system
+	disabled
+	oneshot
+
+# enum oplus_mm_flag {
+# 	MM_FLAG_DUMP_PSS,
+# 	MM_FLAG_BOOT_COMPLETED,
+#
+# 	NR_MM_FLAG_BIT,
+# };
+on property:sys.boot_completed=1
+	start init_oplus_mm-vnd-common
+# set boot_completed
+	write /sys/kernel/oplus_mm/osvelte/common/flag_bit "1 1"
+# enable dump_pss
+#	write /sys/kernel/oplus_mm/osvelte/common/flag_bit "0 1"
+# set cpuctl mem cpu.shared
+	write /dev/cpuctl/mem/cpu.shares 2048
