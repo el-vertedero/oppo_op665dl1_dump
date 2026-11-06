@@ -1,0 +1,3920 @@
+{
+    "initConfig": {
+        "init_delegates": [
+            "cpu",
+            "gpu",
+            "video",
+            "common",
+            "ftrace",
+            "power",
+            "thermal",
+            "memory",
+            "audio",
+            "network",
+            "logger",
+            "camera"
+        ]
+    },
+    "TriggerEvent": {
+        "system_scan": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo",
+                            "cpu_uidstats",
+                            "cpu_mipsinfo_swpm",
+                            "cpu_cpucycles",
+                            "cpu_cpul1cacheaccess",
+                            "cpu_cpul1cacherefill",
+                            "cpu_cpul2cacheaccess",
+                            "cpu_cpul2cacherefill",
+                            "cpu_cpul3cacheaccess",
+                            "cpu_cpul3cacherefill",
+                            "cpu_suspendinfo",
+                            "cpu_cpuirqstats"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_staticuidinfo",
+                            "common_systemdisplayinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo",
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_cmdqmemoryusedinfo",
+                            "memory_dmabufinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "power": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_batteryinfo",
+                            "power_apupllinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_wifitxtimeoutinfo",
+                            "network_wifitxpowerinfo",
+                            "network_wifirxtxperfinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "memory_idleinfo",
+                            "memory_mdvinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "power_pmicinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "system_summary": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "api_get_customize_info": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_processinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": []
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "power_vcoreinfo",
+                            "memory_mdvinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_app_switch": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_cpufreqcapinfo",
+                            "cpu_frequencyinfo",
+                            "cpu_uidstats",
+                            "cpu_processinfo",
+                            "cpu_mipsinfo_swpm",
+                            "cpu_cpucycles",
+                            "cpu_cpul1cacheaccess",
+                            "cpu_cpul1cacherefill",
+                            "cpu_cpul2cacheaccess",
+                            "cpu_cpul2cacherefill",
+                            "cpu_cpul3cacheaccess",
+                            "cpu_cpul3cacherefill"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_fpsgostats",
+                            "gpu_gpustats",
+                            "gpu_fpsinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_appswitchinfo",
+                            "common_triggereventinfo",
+                            "common_systemdisplayinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo",
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_cmdqmemoryusedinfo",
+                            "memory_dmabufinfo",
+                            "memory_dmabufcachesyncinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "power": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_rawsystempowerinfo",
+                            "power_batteryinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networkstatusinfo",
+                            "network_networksystemtrafficstat",
+                            "network_wifitxtimeoutinfo",
+                            "network_wifipcieinfo",
+                            "network_wifirxtxperfinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_lpmstateinfo",
+                            "power_powerthrottlehw",
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "power_batterycurrentinfo",
+                            "power_vcoreinfo",
+                            "power_vcorevotinginfo",
+                            "cpu_tracebinderinfo",
+                            "power_mmdvfsinfo",
+                            "memory_idleinfo",
+                            "memory_mdvinfo",
+                            "memory_mmqosbwinfo",
+                            "memory_ufsnotifyinfo",
+                            "power_odpminfo",
+                            "memory_cmddrvoteinfo",
+                            "power_pmicinfo",
+                            "power_spmtblinfo",
+                            "power_spminfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_charge_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_uidstats",
+                            "cpu_processinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_fpsgostats",
+                            "gpu_gpustats",
+                            "gpu_fpsinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo",
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_dmabufinfo",
+                            "memory_dmabufcachesyncinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "power": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_rawsystempowerinfo",
+                            "power_batteryinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networkstatusinfo",
+                            "network_networksystemtrafficstat",
+                            "network_wifitxpowerinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "power_batterycurrentinfo",
+                            "power_vcoreinfo",
+                            "power_vcorevotinginfo",
+                            "power_mmdvfsinfo",
+                            "memory_idleinfo",
+                            "memory_mdvinfo",
+                            "memory_mmqosbwinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "power_wakelockinfo",
+                            "power_pmicinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_app_state_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_uidstats"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_staticuidinfo",
+                            "common_appstatechange"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_app_activity_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_appactivitychangeinfo",
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_app_activity_anim_end": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_appactivityanimendinfo",
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_network_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networkstatusinfo",
+                            "network_wifitxpowerinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_screen_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_uidstats",
+                            "cpu_processinfo",
+                            "cpu_suspendinfo",
+                            "cpu_cpuirqstats"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_fpsgostats",
+                            "gpu_gpustats",
+                            "gpu_fpsinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo",
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_dmabufinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "power": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_batteryinfo",
+                            "power_modeminfo",
+                            "power_modemlock",
+                            "power_spml2info",
+                            "power_scpinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networkstatusinfo",
+                            "network_networksystemtrafficstat",
+                            "network_networktcpinfo",
+                            "network_wifilpinfo",
+                            "network_wifiwakeupinfo",
+                            "network_wifitxpowerinfo",
+                            "network_conninfrainfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_lpmstateinfo",
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "power_rawspmpowerinfo",
+                            "power_rawspmsuspendpowerenable",
+                            "power_vcoreinfo",
+                            "power_vcorevotinginfo",
+                            "cpu_tracebinderinfo",
+                            "power_mmdvfsinfo",
+                            "memory_idleinfo",
+                            "memory_mdvinfo",
+                            "memory_mmqosbwinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "power_wakelockinfo",
+                            "power_pmicinfo",
+                            "power_spmtblinfo",
+                            "power_spminfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "game_stutter": {
+            "minDurationToProcessInMS": 30000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_fpsgostats",
+                            "gpu_gpustats",
+                            "gpu_fpsinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_systemdisplayinfo",
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_dmabufinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo",
+                            "thermal_thermalfrsinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networkstatusinfo",
+                            "network_networksystemtrafficstat"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "logger": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "logger_q2qtimehistinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "memory_mdvinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ],
+            "executeInfo": {
+                "loopexecute": {
+                    "enable": 0,
+                    "interval": 2000,
+                    "duration": 2000
+                }
+            }
+        },
+        "audio_buffer_underflow": {
+            "minDurationToProcessInMS": 10000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo",
+                            "cpu_cpuirqstats"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_systemdisplayinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "audio": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "audio_audiobufunderflowinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networksystemtrafficstat"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ],
+            "executeInfo": {
+                "loopexecute": {
+                    "enable": 0,
+                    "interval": 2000,
+                    "duration": 2000
+                }
+            }
+        },
+        "memory_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_memorylmkdinfo",
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo",
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_cmdqmemoryusedinfo",
+                            "memory_dmabufinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "memory_idleinfo",
+                            "memory_mdvinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "camera_event_notify": {
+            "minDurationToProcessInMS": 20000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "memory_idleinfo",
+                            "memory_mdvinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "video_customize": {
+            "minDurationToProcessInMS": 300,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "video": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "video_videocodecinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_telephony_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_telephonystatusinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "telephony_rild_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_telephonymipctimeout",
+                            "network_rildresponsetimeout",
+                            "network_rildexception",
+                            "network_rildconnectionstatus"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "common_customize": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "common_trace_notify": {
+            "minDurationToProcessInMS": 15000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "ftrace": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "ftrace_ftracecommoninfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ],
+            "executeInfo": {
+                "loopexecute": {
+                    "enable": 1,
+                    "interval": 10000,
+                    "duration": 10000
+                }
+            }
+        },
+        "audio_sse_profile": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo",
+                            "cpu_mipsinfo_sw",
+                            "cpu_mipsinfo_swpm",
+                            "cpu_cpucycles",
+                            "cpu_cpul1cacheaccess",
+                            "cpu_cpul1cacherefill",
+                            "cpu_cpul2cacheaccess",
+                            "cpu_cpul2cacherefill",
+                            "cpu_cpul3cacheaccess",
+                            "cpu_cpul3cacherefill",
+                            "cpu_cpuirqstats"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "ftrace": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "ftrace_ftraceirqinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": []
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "logger": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "logger_audioudmlogger"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    },
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "power_vcoreinfo",
+                            "power_vcorevotinginfo",
+                            "memory_idleinfo",
+                            "memory_ufsnotifyinfo"
+                        ]
+                    }
+                }
+            ]
+        },
+        "java_timesys_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_systemtimeinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "thermal_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_uidstats",
+                            "cpu_processinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_fpsgostats",
+                            "gpu_gpustats",
+                            "gpu_fpsinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo",
+                            "memory_processmemoryinfo",
+                            "memory_gpumemoryinfo",
+                            "memory_dmabufinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "power": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_rawsystempowerinfo",
+                            "power_batteryinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networkstatusinfo",
+                            "network_networksystemtrafficstat",
+                            "network_wifillsrateinfo",
+                            "network_wifillsradioinfo",
+                            "network_wifillsacinfo",
+                            "network_wifitxtimeoutinfo",
+                            "network_wifipcieinfo",
+                            "network_wifitxpowerinfo",
+                            "network_wifirxtxperfinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "power_batterycurrentinfo",
+                            "power_vcoreinfo",
+                            "power_vcorevotinginfo",
+                            "power_mmdvfsinfo",
+                            "memory_mdvinfo",
+                            "memory_mmqosbwinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "power_pmicinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "control_msg": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "audio_udm_log": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "logger": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "logger_audioudmlogger"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "aee_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "logger": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "logger_logaeeinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_shutdown_msg": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_usb_change": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_systemusbinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_wifitxpowerinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "gaming_customize": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "audio_customize": {
+            "minDurationToProcessInMS": 10000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "logger": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "logger_fetchaudioinstancetrace"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "cpufreqcap_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_cpufreqcapinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_wifillsrateinfo",
+                            "network_wifillsradioinfo",
+                            "network_wifillsacinfo",
+                            "network_wifitxtimeoutinfo",
+                            "network_wifipcieinfo",
+                            "network_wifirxtxperfinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "gaming_profile": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_surfaceinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "ux_set_info": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_uxsetinfo",
+                            "gpu_uxgetinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "ux_get_info": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "video": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "video_getvideocodecinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_updateapplaunchthreshold"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "game_set_info": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_perfnotifyinfo",
+                            "gpu_gpufencetimeoutinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "thermal_customize": {
+            "minDurationToProcessInMS": 10000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "power": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": []
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo",
+                            "thermal_thermal_abnormalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_pmicvoltageinfo",
+                            "memory_ufsnotifyinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "power_throttle_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_powerthrottle"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "thermal_throttle_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_powerthrottlehw"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "memory_customize": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_suspendinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_systemusbinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": []
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    },
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_bandwidthmeminfo",
+                            "memory_cmvoteinfo",
+                            "memory_vsmrinfo",
+                            "power_vcoreinfo",
+                            "power_vcorevotinginfo",
+                            "memory_mdvinfo",
+                            "memory_ufsnotifyinfo",
+                            "memory_cmddrvoteinfo",
+                            "memory_cpuqosinfo",
+                            "memory_mmqosinfo"
+                        ]
+                    }
+                }
+            ]
+        },
+        "usb_host_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_usbenumerationinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "usb_offload_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_usboffloadinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "hrt_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_staticsysteminfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    },
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_hrtmmdvfsoppinfo",
+                            "memory_hrtnotifyinfo",
+                            "common_timermappinginfo"
+                        ]
+                    }
+                }
+            ]
+        },
+        "magt_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_magttouchinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "magt_render_tid_mismatch_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_magtrendertidmismatchinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "touch_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_seamlesstouchinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "camera_info_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "camera": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "camera_cameranotifyinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "audio_swmixer_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "audio": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "audio_audioswmixerinfo",
+                            "audio_audioadspnotifyinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "power_smap_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_smapnotifyinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_rawthermalinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "touch_ghost_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_touchghostinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "gpu_worker_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "gpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "gpu_gpuworkereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "thermal_policy_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "thermal": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "thermal_thermalpolicy"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "java_app_life_cycle": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_applifecycleinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "wifi_tx_power_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_wifinotifytxpower"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "bt_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_btleachoppyinfo",
+                            "network_bta2dpstatus",
+                            "network_bta2dpexception"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "hpt_event_notify": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_powerthrottlehwoc"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "game_mode_notify": {
+            "minDurationToProcessInMS": 500,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "sw_config_setting": {
+            "minDurationToProcessInMS": 500,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_swcountsetting"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "audio_monitor_info_notify": {
+            "minDurationToProcessInMS": 10000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "cpu": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "cpu_frequencyinfo",
+                            "cpu_processinfo",
+                            "cpu_cpuirqstats"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_systemdisplayinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_systemmeminfo",
+                            "memory_vmstatinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "audio": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "audio_audiomonitornotifyinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "network": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "network_networktrafficstat",
+                            "network_networksystemtrafficstat"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ],
+            "executeInfo": {
+                "loopexecute": {
+                    "enable": 0,
+                    "interval": 2000,
+                    "duration": 2000
+                }
+            }
+        },
+        "java_window_change": {
+            "minDurationToProcessInMS": 1000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_windowchangeinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "memory_dmabuf_cache_notify": {
+            "minDurationToProcessInMS": 1000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "memory": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "memory_dmabufcachesyncinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "power_set_info": {
+            "minDurationToProcessInMS": 1000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                },
+                {
+                    "customize1": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "power_odpmctrlinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        },
+        "launcher_anim_end": {
+            "minDurationToProcessInMS": 1000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo",
+                            "common_launcheranimendinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "EventJoinGroup": [
+        {
+            "start": {
+                "event": "audio_sse_profile",
+                "state": "4096"
+            },
+            "end": {
+                "event": "audio_sse_profile",
+                "state": "0"
+            },
+            "relation_module": [
+                "ftrace",
+                "swmips",
+                "hwmips"
+            ]
+        },
+        {
+            "start": {
+                "event": "java_app_switch",
+                "state": "4096",
+                "mapString": "AllAPP"
+            },
+            "end": {
+                "event": "java_app_switch",
+                "state": "4096",
+                "mapString": "com.android.launcher3"
+            },
+            "relation_module": [
+                "hwmips"
+            ]
+        },
+        {
+            "start": {
+                "event": "java_app_switch",
+                "state": "4096",
+                "mapString": "AllAPP"
+            },
+            "end": {
+                "event": "java_screen_change",
+                "state": "0"
+            },
+            "relation_module": [
+                "hwmips"
+            ]
+        }
+    ],
+    "SubModuleProperty": {
+        "cpu_frequencyinfo": {
+            "limitedToProcessTimeInMS": 1000
+        },
+        "cpu_processinfo": {
+            "limitedToProcessTimeInMS": 1000
+        },
+        "memory_processmemoryinfo": {
+            "limitedToProcessTimeInMS": 10000
+        },
+        "memory_dmabufinfo": {
+            "limitedToProcessTimeInMS": 10000
+        },
+        "network_wifillsrateinfo": {
+            "limitedToProcessTimeInMS": 30000
+        },
+        "network_wifillsradioinfo": {
+            "limitedToProcessTimeInMS": 30000
+        },
+        "network_wifillsacinfo": {
+            "limitedToProcessTimeInMS": 30000
+        },
+        "network_wifilpinfo": {
+            "limitedToProcessTimeInMS": 30000
+        },
+        "network_wifitxtimeoutinfo": {
+            "limitedToProcessTimeInMS": 30000
+        },
+        "network_wifipcieinfo": {
+            "limitedToProcessTimeInMS": 10000
+        },
+        "network_wifitxpowerinfo": {
+            "limitedToProcessTimeInMS": 10000
+        },
+        "network_wifirxtxperfinfo": {
+            "limitedToProcessTimeInMS": 10000
+        },
+        "network_wifiwakeupinfo": {
+            "limitedToProcessTimeInMS": 10000
+        },
+        "network_wifinotifytxpower": {
+            "limitedToProcessTimeInMS": 10000
+        }
+    }
+}

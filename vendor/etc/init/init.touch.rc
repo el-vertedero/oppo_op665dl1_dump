@@ -1,0 +1,11 @@
+# TOUCH KO
+
+service insmod_touch_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.touch.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on init
+    start insmod_touch_sh

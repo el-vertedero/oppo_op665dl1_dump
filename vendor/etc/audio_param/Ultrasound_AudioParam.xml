@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This XML defines parameters used in ultrasound, parameter explanation as below
+    ParamUnit: do not change.
+    2in1_speaker: Specifies speaker configuration as project speaker config.
+      value = 0, stand alone ADDA receiver, not speaker reused. receiver use ADDA path.
+      value = 1, two analogPA, top AnalogPA re-used as receiver. receiver use ADDA path.
+      value = 2, two smartPA, top SmartPA re-used as receiver. receiver use I2S path.
+      value = 3, one analogPA and one SmartPA, AnalogPA reused as receiver, receiver use ADDA path.
+    ultrasound_rampdown_delay(milliseconds): Time delay for ramp-down, customer should tuning this .
+    delay_start_duration(milliseconds): Delay duration before starting, always set to 0 for usnd2.0.
+    delay_recovery_duration(milliseconds): time to waiting for SCP or AudioServer reset,.
+    mute_duration(milliseconds): Duration to keep the audio muted, always set to 0 for usnd2.0.
+    fallback_to_recv: If support fallback to receiver if there is no stream using speaker.
+      value = 1, support.
+      value = 2, not support.
+    fallback_to_recv_delay(milliseconds): Delay time for fallback transition to receiver mode.
+-->
+<AudioParam version="1.0">
+  <ParamTree>
+    <Param path="Common" param_id="0"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="2in1_speaker" value="2"/>
+      <Param name="ultrasound_rampdown_delay" value="25"/>
+      <Param name="delay_start_duration" value="1"/>
+      <Param name="delay_recovery_duration" value="250"/>
+      <Param name="mute_duration" value="0"/>
+      <Param name="fallback_to_recv" value="0"/>
+      <Param name="fallback_to_recv_delay" value="5000"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

@@ -1,0 +1,21 @@
+# rkp_only settings
+on fs && property:ro.product.first_api_level=33
+    setprop remote_provisioning.hostname remoteprovisioning.googleapis.com
+on fs && property:ro.product.first_api_level=34
+    setprop remote_provisioning.hostname remoteprovisioning.googleapis.com
+on fs && property:ro.product.first_api_level=35
+    setprop remote_provisioning.hostname remoteprovisioning.googleapis.com
+on fs && property:ro.product.first_api_level=36
+    setprop remote_provisioning.hostname remoteprovisioning.googleapis.com
+    #ifdef OPLUS_FEATURE_SECURITY_COMMON
+    # v-luojia2@BSP.Secure.Basic 2026/05/11, Set in odm/custom
+    #setprop remote_provisioning.tee.rkp_only 1
+    #endif /* OPLUS_FEATURE_SECURITY_COMMON */
+    setprop remote_provisioning.strongbox.rkp_only 1
+on fs && property:ro.product.first_api_level=37
+    setprop remote_provisioning.hostname remoteprovisioning.googleapis.com
+    #ifdef OPLUS_FEATURE_SECURITY_COMMON
+    # v-luojia2@BSP.Secure.Basic 2026/05/11, Set in odm/custom
+    #setprop remote_provisioning.tee.rkp_only 1
+    #endif /* OPLUS_FEATURE_SECURITY_COMMON */
+    setprop remote_provisioning.strongbox.rkp_only 1

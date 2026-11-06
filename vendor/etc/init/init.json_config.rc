@@ -1,0 +1,12 @@
+service json_config /vendor/bin/json_config
+    class core
+    user system
+    group system
+    seclabel u:r:json_config:s0
+    disabled
+
+on post-fs-data
+    mkdir /mnt/vendor/nvcfg/json_config 0770 system system
+    mkdir /mnt/vendor/nvcfg/json_config/scp 0770 system system
+    mkdir /mnt/vendor/nvcfg/json_config/sap 0770 system system
+    start json_config

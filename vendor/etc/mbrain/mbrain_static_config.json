@@ -1,0 +1,1501 @@
+{
+    "Delegates": {
+        "cpu": {
+            "customizedModule": "mtk_cpu"
+        },
+        "gpu": {
+            "customizedModule": "mtk_gpu"
+        },
+        "video": {
+            "customizedModule": "mtk_video"
+        },
+        "common": {
+            "customizedModule": "mtk_common"
+        },
+        "ftrace": {
+            "customizedModule": "mtk_ftrace"
+        },
+        "power": {
+            "customizedModule": "mtk_power"
+        },
+        "thermal": {
+            "customizedModule": "mtk_thermal"
+        },
+        "memory": {
+            "customizedModule": "mtk_memory"
+        },
+        "audio": {
+            "customizedModule": "mtk_audio"
+        },
+        "network": {
+            "customizedModule": "mtk_network"
+        },
+        "logger": {
+            "customizedModule": "mtk_logger"
+        },
+        "camera": {
+            "customizedModule": "mtk_camera"
+        },
+        "npu": {
+            "customizedModule": "mtk_npu"
+        },
+        "customize1": {
+            "customizedModule": "libCustomized1Delegate.so"
+        },
+        "database": {
+            "customizedModule": "mtk_database",
+            "endDelegate": 1
+        }
+    },
+    "SystemInfo": {
+        "mbrainVersion": "1.0",
+        "owner": "mtk",
+        "oneHourTimerDurationInSeconds": 3600,
+        "updateProcessDuration": 200,
+        "dropDatabaseThresholdInSecond": 604800,
+        "appSwitchCPUFreqMonitor": 1,
+        "processMode": 2,
+        "lowPriorityDB": 1,
+        "enabledAEE": 1,
+        "performanceConstraintMode": 1,
+        "triggerGameStutterCount": 1,
+        "enableLightModeOnGame": 0,
+        "enableAPPSwitchMonitor": 1,
+        "uploadTime": {
+            "packageType": 1,
+            "uploadType": 2,
+            "startTime": 1,
+            "endTime": 4,
+            "durationTimeInSecond": 86400
+        },
+        "oneDayEventCount": 3600,
+        "workingMode": 3,
+        "aeeTriggerSetting": {
+            "triggerMode": 1,
+            "internalInMiniSecond": 10000,
+            "fileCheckingInMiniSecond": 30000
+        }
+    },
+    "DatabaseInfo": {
+        "version": "1.0",
+        "batch_size": 200,
+        "database_mode": 2,
+        "TableInfo": {
+            "MBCPU_EventPoint_CPUFreqInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUFreqStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_ProcessInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_ProcessStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_ThreadInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_ThreadStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_UIDStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_MIPS_HW": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_MIPS_SW": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_CPUAffinity": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_DatabaseInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_TableInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_SystemTimeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_StaticCPUInfo": {
+                "status": "disable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_StaticSystemInfo": {
+                "status": "enable",
+                "version": "6.0"
+            },
+            "MBCommon_EventForward_TriggerEventInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBFtrace_EventBackward_FtraceRAWInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventForward_APPSwitchInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventForward_StaticUIDInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBCommon_EventForward_APPStateChangeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBFtrace_EventBackward_FtraceTaskStateInfo": {
+                "status": "disable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_SystemMemInfo": {
+                "status": "enable",
+                "version": "3.0"
+            },
+            "MBGPU_EventForward_FpsgoRuntimeInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBPower_EventForward_SystemPowerInfo": {
+                "status": "enable",
+                "version": "4.0"
+            },
+            "MBThermal_EventPoint_ThermalInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventForward_SystemDisplayInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBFtrace_EventBackward_FtraceIRQInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventBackward_TrafficStatInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBVideo_EventPoint_RAWVideoInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBLogger_EventForward_AudioUDMInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_ProcessMemoryInfo": {
+                "status": "enable",
+                "version": "4.0"
+            },
+            "MBGPU_EventForward_FpsgoPerfIndexInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBGPU_EventForward_FpsgoTargetFpsInfo": {
+                "status": "enable",
+                "version": "4.0"
+            },
+            "MBGPU_EventPoint_GPUStatInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventForward_SystemUSBInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventForward_NetworkStatusInfo": {
+                "status": "enable",
+                "version": "4.0"
+            },
+            "MBAudio_EventForward_SystemAudioInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_CPUFreqCap": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_SuspendInfo": {
+                "status": "enable",
+                "version": "4.0"
+            },
+            "MBCPU_EventPoint_CPUIdleInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_CPUFreqCapV": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBLogger_EventBackward_Q2qtimeHistInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_ProcessCPUFreqStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_BatteryInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBCPU_EventBackward_CPUIrqStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventForward_MemoryNotifyInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventBackward_FPSInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBThermal_EventPoint_FRSInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventBackward_SystemTrafficStatInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBPower_EventForward_ModemInfo": {
+                "status": "enable",
+                "version": "3.0"
+            },
+            "MBPower_EventForward_ModemLock": {
+                "status": "enable",
+                "version": "3.0"
+            },
+            "MBNetwork_EventPoint_TCPInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBGPU_EventPoint_SurfaceInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_HWStaticInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_SPML2Info": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_EnvStatusInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUIrqTimeStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_SCPInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventNone_StaticIrqInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBCPU_EventBackward_CPUIrqLongTimeStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventBackward_GPUOppInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventBackward_GPUStateInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventBackward_GPULoadingInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_T2Info": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_T3Info": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_T4Info": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventBackward_PerfNotifyInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBThermal_EventPoint_AbnormalInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBVideo_EventPoint_VideoCodecInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBVideo_EventPoint_VdecStreamErrorInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_GpuFenceTimeoutInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_GpuFenceLogBufRegularInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_GpuFenceLogBufExceptionInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_GpuFenceLogBufCriticalInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventBackward_GNSSMNLDInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_APUPLLInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_Q2QTimeoutInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBNetwork_EventPoint_GNSSLpInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBNetwork_EventPoint_GNSSMcuInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BtA2DPChoppy": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BtHfpChoppy": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BtApproachingLsto": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BtNonSleep": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFILlsRateInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFILlsRadioInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFILlsAcInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFILpInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_GpuMemoryInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUIdleTimeStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFITxTimeoutInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_USBEnumerationInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_MAGTTouchInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_TelephonyMIPCTimeout": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_RILDResponseTimeout": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_RILDException": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_RILDConnectionStatus": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_TelephonyInfo": {
+                "status": "enable",
+                "version": "3.0"
+            },
+            "MBCamera_EventPoint_CameraNotificationInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBLogger_EventPoint_LogMiscDataInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventForward_VMStatInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_USBOffloadInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventPoint_CPUTrustyIseInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventForward_CPUCycles": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BtLeaChoppy": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBAudio_EventForward_SwMixerInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventForward_DozeModeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBError_EventBackward_ErrorInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUL1CacheAccess": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUL1CacheRefill": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUL2CacheAccess": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUL2CacheRefill": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUL3CacheAccess": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_CPUL3CacheRefill": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventBackward_WIFIPCIEInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFITxPowerInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBLogger_EventPoint_LogAEEInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFIRxTxPerfInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_TouchGhostInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_GpuWorkerEventInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFIWakeUpInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_WIFINotifyTxPower": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_CCCIFSDInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_SeamlessTouchInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_CCCIEventInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBThermal_EventForward_ThermalPolicy": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBAudio_EventForward_AudioChangeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_APPLifeCycleInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_MDSNSInfo": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBAudio_EventForward_AdspNotifyInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_CmdqMemoryUsedInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCPU_EventBackward_ProcessCPUTimeStat": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_DMAbufInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_DMAbufInodeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_DMAbufInodeMmapInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_MDSysThinkInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_MDSysThinkPvtInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_MDSNSPvtInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNPU_EventPoint_NPUFreqInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNPU_EventForward_NPUActiveInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_MDMIPCSysData": {
+                "status": "enable",
+                "version": "2.0"
+            },
+            "MBAudio_EventForward_MonitorNotifyInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBPower_EventPoint_MDSysThinkRawInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventPoint_MemoryBuddyInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNPU_EventPoint_NPMicroLatencyInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_WindowChangeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_AppActivityChangeInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_AppActivityAnimEndInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BTA2dpStatus": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_BTA2dpException": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBMemory_EventBackward_DmabufCacheSyncInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBCommon_EventPoint_LauncherAnimEndInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBNetwork_EventPoint_ConnInfraInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_DispFenceLogBufInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_HwcFenceLogBufInfo": {
+                "status": "enable",
+                "version": "1.0"
+            },
+            "MBGPU_EventPoint_MAGTRenderTidMismatchInfo": {
+                "status": "enable",
+                "version": "1.0"
+            }
+        }
+    },
+    "ExtendInfo": {
+        "MonitorProcessInfo": {
+            "android.hardware.graphics.composer": {
+                "eventGroup": {
+                    "All": {
+                        "normal": [
+                            "binder"
+                        ]
+                    }
+                }
+            },
+            "surfaceflinger": {
+                "eventGroup": {
+                    "All": {
+                        "normal": [
+                            "binder"
+                        ]
+                    },
+                    "java_app_switch": {
+                        "normal": [
+                            "cpufreqdist"
+                        ]
+                    }
+                }
+            },
+            "system_server": {
+                "eventGroup": {
+                    "All": {
+                        "normal": [
+                            "binder"
+                        ]
+                    },
+                    "java_app_switch": {
+                        "normal": [
+                            "cpufreqdist"
+                        ]
+                    }
+                }
+            },
+            "android.hardware.audio.service.mediatek": {
+                "eventGroup": {
+                    "audio_sse_profile": {
+                        "normal": [
+                            "thread",
+                            "retired_mips"
+                        ]
+                    },
+                    "audio_buffer_underflow": {
+                        "normal": [
+                            "thread",
+                            "ftrace",
+                            "affinity"
+                        ]
+                    }
+                }
+            },
+            "android.hardware.media.c2": {
+                "eventGroup": {
+                    "audio_sse_profile": {
+                        "normal": [
+                            "thread",
+                            "retired_mips"
+                        ]
+                    }
+                }
+            },
+            "audioserver": {
+                "eventGroup": {
+                    "audio_sse_profile": {
+                        "normal": [
+                            "thread",
+                            "retired_mips"
+                        ]
+                    },
+                    "audio_buffer_underflow": {
+                        "normal": [
+                            "thread",
+                            "ftrace",
+                            "affinity"
+                        ]
+                    }
+                }
+            },
+            "mediaserver": {
+                "eventGroup": {
+                    "audio_sse_profile": {
+                        "normal": [
+                            "thread",
+                            "retired_mips"
+                        ]
+                    }
+                }
+            },
+            "android.system.suspend-service": {
+                "eventGroup": {
+                    "All": {
+                        "normal": [
+                            "binder"
+                        ]
+                    },
+                    "java_screen_change": {
+                        "normal": [
+                            "cpufreqdist"
+                        ]
+                    }
+                }
+            },
+            "android.hardware.sensors-service.multihal": {
+                "eventGroup": {
+                    "All": {
+                        "normal": [
+                            "binder"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "sysreq": {
+        "logger_trigger": {
+            "enable": 0,
+            "screenOff": 7200000,
+            "suspendRatio": 90,
+            "resMDRatioEnable": 1,
+            "resMDRatio": 70,
+            "loggerInterval": 1000,
+            "logMDCondition": 1
+        },
+        "platform_00_00": {
+            "sub_0": {
+                "data0": 0,
+                "data1": 0,
+                "data2": 558366718,
+                "data3": 0
+            },
+            "sub_1": {
+                "data0": 568590334,
+                "data1": 576978942,
+                "data2": 559939582,
+                "data3": 603455486
+            }
+        },
+        "platform_00_01": {
+            "sub_0": {
+                "data0": 0,
+                "data1": 0,
+                "data2": 279183358,
+                "data3": 0
+            },
+            "sub_1": {
+                "data0": 285736958,
+                "data1": 293601278,
+                "data2": 280494078,
+                "data3": 0
+            }
+        },
+        "platform_01_00": {
+            "sub_0": {
+                "data0": 0,
+                "data1": 0,
+                "data2": 153,
+                "data3": 0
+            },
+            "sub_1": {
+                "data0": 190,
+                "data1": 239,
+                "data2": 148,
+                "data3": 362
+            },
+            "sys_thr": {
+                "thr0": 100,
+                "thr1": 20,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 20,
+                "thr6": 100,
+                "thr7": 20,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            },
+            "sub_thr": {
+                "thr0": 100,
+                "thr1": 5,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 5,
+                "thr6": 100,
+                "thr7": 5,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            }
+        },
+        "platform_01_01": {
+            "sub_0": {
+                "data0": 0,
+                "data1": 0,
+                "data2": 77,
+                "data3": 0
+            },
+            "sub_1": {
+                "data0": 0,
+                "data1": 141,
+                "data2": 83,
+                "data3": 232
+            },
+            "sys_thr": {
+                "thr0": 100,
+                "thr1": 20,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 20,
+                "thr6": 100,
+                "thr7": 20,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            },
+            "sub_thr": {
+                "thr0": 100,
+                "thr1": 5,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 5,
+                "thr6": 100,
+                "thr7": 5,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            }
+        },
+        "platform_02_00": {
+            "sub_0": {
+                "data0": 0,
+                "data1": 0,
+                "data2": 138,
+                "data3": 0
+            },
+            "sub_1": {
+                "data0": 0,
+                "data1": 255,
+                "data2": 133,
+                "data3": 88
+            },
+            "sys_thr": {
+                "thr0": 100,
+                "thr1": 20,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 20,
+                "thr6": 100,
+                "thr7": 20,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            },
+            "sub_thr": {
+                "thr0": 100,
+                "thr1": 5,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 5,
+                "thr6": 100,
+                "thr7": 5,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            }
+        },
+        "platform_03_00": {
+            "sub_0": {
+                "data0": 0,
+                "data1": 0,
+                "data2": 179,
+                "data3": 0
+            },
+            "sub_1": {
+                "data0": 0,
+                "data1": 286,
+                "data2": 174,
+                "data3": 134
+            },
+            "sys_thr": {
+                "thr0": 100,
+                "thr1": 20,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 20,
+                "thr6": 100,
+                "thr7": 20,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            },
+            "sub_thr": {
+                "thr0": 100,
+                "thr1": 5,
+                "thr2": 100,
+                "thr3": 100,
+                "thr4": 100,
+                "thr5": 5,
+                "thr6": 100,
+                "thr7": 5,
+                "thr8": 100,
+                "thr9": 100,
+                "thr10": 80,
+                "thr11": 100,
+                "thr12": 100
+            }
+        }
+    },
+    "AppLaunchThresholdList": [
+        {
+            "appName": "com.android.test.test",
+            "state": 1,
+            "thresholdInMs": 400
+        },
+        {
+            "appName": "com.mediatek.test.test",
+            "state": 2,
+            "thresholdInMs": 300
+        },
+        {
+            "appName": "com.tencent.mm",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.mm",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.mm",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.ss.android.ugc.aweme",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.ss.android.ugc.aweme",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.ss.android.ugc.aweme",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "tv.danmaku.bili",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "tv.danmaku.bili",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "tv.danmaku.bili",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.smile.gifmaker",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.smile.gifmaker",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.smile.gifmaker",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.qiyi.video",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.qiyi.video",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.qiyi.video",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.sankuai.meituan",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.sankuai.meituan",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.sankuai.meituan",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.taobao.taobao",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.taobao.taobao",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.taobao.taobao",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.ss.android.auto",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.ss.android.auto",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.ss.android.auto",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "ctrip.android.view",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "ctrip.android.view",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "ctrip.android.view",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.ss.android.article.news",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.ss.android.article.news",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.ss.android.article.news",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.baidu.BaiduMap",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.baidu.BaiduMap",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.baidu.BaiduMap",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.jingdong.app.mall",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.jingdong.app.mall",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.jingdong.app.mall",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.kuaishou.nebula",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.kuaishou.nebula",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.kuaishou.nebula",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.tencent.qqlive",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.qqlive",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.qqlive",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.xunmeng.pinduoduo",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.xunmeng.pinduoduo",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.xunmeng.pinduoduo",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.dragon.read",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.dragon.read",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.dragon.read",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.sankuai.meituan.takeoutnew",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.sankuai.meituan.takeoutnew",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.sankuai.meituan.takeoutnew",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.kugou.android",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.kugou.android",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.kugou.android",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.zhihu.android",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.zhihu.android",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.zhihu.android",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.achievo.vipshop",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.achievo.vipshop",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.achievo.vipshop",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.tencent.tmgp.sgame",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.tmgp.sgame",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.tmgp.sgame",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.wuba",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.wuba",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.wuba",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.xingin.xhs",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.xingin.xhs",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.xingin.xhs",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.android.gallery3d",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.android.gallery3d",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.android.gallery3d",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.youku.phone",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.youku.phone",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.youku.phone",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.gotokeep.keep",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.gotokeep.keep",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.gotokeep.keep",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.netease.cloudmusic",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.netease.cloudmusic",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.netease.cloudmusic",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.mediatek.camera",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.mediatek.camera",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.mediatek.camera",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.eg.android.AlipayGphone",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.eg.android.AlipayGphone",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.eg.android.AlipayGphone",
+            "state": 3,
+            "thresholdInMs": 1200
+        },
+        {
+            "appName": "com.tencent.tmgp.pubgmhd",
+            "state": 1,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.tmgp.pubgmhd",
+            "state": 2,
+            "thresholdInMs": 1500
+        },
+        {
+            "appName": "com.tencent.tmgp.pubgmhd",
+            "state": 3,
+            "thresholdInMs": 1200
+        }
+    ]
+}

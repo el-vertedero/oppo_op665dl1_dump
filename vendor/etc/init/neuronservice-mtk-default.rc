@@ -1,0 +1,14 @@
+service neuralnetworks_hal_mtk_neuron_service /vendor/bin/hw/vendor.mediatek.hardware.neuropilot.neuronservice.neuronservice.mediatek
+    class hal
+    user system
+    group system
+    disabled
+
+on post-fs-data
+    mkdir /data/vendor/nn 0775 system system
+
+on post-fs-data
+    mkdir /data/vendor/nn/debug_plus 0775 system system
+
+on property:ro.vendor.mtk_nn_baseline_support=1
+    start neuralnetworks_hal_mtk_neuron_service

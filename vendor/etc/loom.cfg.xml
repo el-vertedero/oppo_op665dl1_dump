@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LOOM>
+    <Package name="com.miHoYo.hkrpg">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="Job.Worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GC">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GCMarker0">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GCMarker1">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Recv">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="CRI">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Preload">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="om.miHoYo.hkrpg">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-cpu-comman">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-event-hand">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="CriManaD">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="#1">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="#2">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.HoYoverse.hkrpgoversea">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="Job.Worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GC">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GCMarker0">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GCMarker1">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Recv">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="CRI">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Preload">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="om.miHoYo.hkrpg">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-cpu-comman">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-event-hand">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="CriManaD">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="#1">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="#2">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.miHoYo.Yuanshen">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityMultiRende">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="UnityPreload">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GC">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Noelle">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="3500000"></data>
+                </Thread>
+                <Thread name="DeviceInfo">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="MIHOYO_NETWORK">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="UnityChoreograp">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="AsyncReadManage">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-event-hand">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.miHoYo.GenshinImpact">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityMultiRende">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="UnityPreload">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GC">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Noelle">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="3500000"></data>
+                </Thread>
+                <Thread name="DeviceInfo">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="MIHOYO_NETWORK">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="UnityChoreograp">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="AsyncReadManage">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-event-hand">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.miHoYo.yuanshencb">
+    </Package>
+    <Package name="com.miHoYo.Nap">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-compiler">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Job.Worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="GC">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Il2cpp">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Network">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="CriManaDecodeTh">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="CRI">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="AudioTrack">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Loading.Preload">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="SRPSubmitThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="56"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="Background">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.tencent.tmgp.sgame">
+        <FPS value="Common">
+            <WINDOW mode="Single">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="32"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="CoreThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                    <Thread name="Job.worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="1">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="Loading.AsyncRe">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="cent.tmgp.sgame">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-event-hand">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+                <Thread name="mali-compiler">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="64"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.tencent.tmgp.pubgmhd">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="Thread-">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="RenderThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="32"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="RHIThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="16"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="PoolThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="FAsyncLoading">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="TaskGraphNP">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="mali-event-hand">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="7"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.kurogame.mingchao">
+        <FPS value="60">
+            <WINDOW mode="Common">
+                <Thread name="Timer">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="binder">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="FramePolicy">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="FAsyncPurge">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="LogMasterThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="RTHeartBeat">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="MemoryUsageThre">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="Backgro-Pool">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="Thread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="IOPool">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="TaskGrap">
+                    <data cmd="MODE" param1="0"></data>-
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="rogame.mingchao">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="V8">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="FAsyncLoading">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="mali">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="RHIThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="16"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="RenderThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="32"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="GameThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.kurogame.wutheringwaves.global">
+        <FPS value="60">
+            <WINDOW mode="Common">
+                <Thread name="Timer">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="255"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="binder">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="FramePolicy">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="FAsyncPurge">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="LogMasterThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="RTHeartBeat">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="MemoryUsageThre">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="Backgro-Pool">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="Thread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="IOPool">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="15"></data>
+                </Thread>
+                <Thread name="TaskGrap">
+                    <data cmd="MODE" param1="0"></data>-
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="ingwaves.global">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="V8">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="FAsyncLoading">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="mali">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                </Thread>
+                <Thread name="RHIThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="16"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="RenderThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="32"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="GameThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.hypergryph.endfield">
+        <FPS value="Common">
+            <WINDOW mode="Common">
+                <Thread name="UnityMain">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="UnityGfxDeviceW">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="32"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="LOADING_UB" param1="-1"></data>
+                    <data cmd="LOADING_LB" param1="-1"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="LIMIT_MIN_FREQ" param1="-1"></data>
+                    <data cmd="LIMIT_MAX_FREQ" param1="-1"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                    <data cmd="RESCUE_F_OPP" param1="0"></data>
+                    <data cmd="RESCUE_C_FREQ" param1="0"></data>
+                    <data cmd="RESCUE_TIME" param1="0"></data>
+                </Thread>
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                    <Thread name="Job.Worker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                </Thread>
+                <Thread name="Loading.AsyncRe">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+				<Thread name="rgryph.endfield">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="31"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                    <data cmd="BHR" param1="0"></data>
+                    <data cmd="SET_RESCUE" param1="0"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+    <Package name="com.hottagames.yh.laohu">
+        <FPS value="60">
+            <WINDOW mode="Common">
+                <Thread name="NativeThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                </Thread>
+                <Thread name="Backgro-rker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                </Thread>
+                <Thread name="Foregro-rker">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="1"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                </Thread>
+                <Thread name="FAsyncLoading">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                </Thread>
+                <Thread name="mali">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="PRIO" param1="2"></data>
+                    <data cmd="CPU_MASK" param1="63"></data>
+                </Thread>
+                <Thread name="RHIThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="16"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                </Thread>
+                <Thread name="RenderThread">
+                    <data cmd="MODE" param1="0"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="32"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="0"></data>
+                </Thread>
+                <Thread name="GameThread">
+                    <data cmd="MODE" param1="1"></data>
+                    <data cmd="MATCHING_NUM" param1="1"></data>
+                    <data cmd="PRIO" param1="3"></data>
+                    <data cmd="CPU_MASK" param1="128"></data>
+                    <data cmd="SET_EXCLUSIVE" param1="1"></data>
+                </Thread>
+            </WINDOW>
+        </FPS>
+    </Package>
+</LOOM>

@@ -1,0 +1,29 @@
+{
+    "TriggerEvent": {
+        "control_msg": {
+            "minDurationToProcessInMS": 1000,
+            "timerDurationInMS": 600000,
+            "delegateInfo": [
+                {
+                    "common": {
+                        "step": 0,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        },
+                        "submodules": [
+                            "common_triggereventinfo"
+                        ]
+                    },
+                    "db": {
+                        "step": 1,
+                        "info": {
+                            "version": "1",
+                            "subversion": "1"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

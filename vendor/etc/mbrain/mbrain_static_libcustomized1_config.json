@@ -1,0 +1,28 @@
+{
+    "sysreq": {
+        "platform_00_00": {
+        },
+        "platform_00_01": {
+        },
+        "platform_01_00": {
+            "filter": {
+                "grp": 10
+            }
+        },
+        "platform_01_01": {
+            "filter": {
+                "grp": 10
+            }
+        },
+        "platform_02_00": {
+            "filter": {
+                "grp": 10
+            }
+        },
+        "platform_03_00": {
+            "filter": {
+                "grp": 10
+            }
+        }
+    }
+}

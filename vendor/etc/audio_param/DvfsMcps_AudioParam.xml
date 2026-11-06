@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AudioParam>
+	<ParamTree>
+		<Param path="Common" param_id="0"/>
+		<Param path="MT6993" param_id="1"/>
+		<Param path="MT6995" param_id="2"/>
+	</ParamTree>
+	<ParamUnitPool>
+		<ParamUnit param_id="0">
+			<!-- default for task -->
+			<Param name="default_low" value="10,10"/>
+			<Param name="default_mid" value="30,30"/>
+			<Param name="default_high" value="90,90"/>
+			<!-- mixer thread -->
+			<Param name="mixer_thread" value="55,55"/>
+			<!-- device -->
+			<Param name="device_a2dp" value="40,40"/>
+			<Param name="device_bledl" value="30,30"/>
+			<Param name="device_bleul" value="35,35"/>
+			<Param name="device_usbdl" value="62,62"/>
+			<Param name="device_usbul" value="70,70"/>
+			<!-- decoder -->
+			<Param name="mp3_decoder" value="16,16"/>
+			<Param name="aac_decoder" value="17,23"/>
+			<Param name="aac_decoder_high" value="40,40"/>
+			<Param name="flac_decoder" value="11,12"/>
+			<Param name="flac_decoder_high" value="15,19"/>
+			<Param name="opus_decoder" value="16,16"/>
+			<!-- encoder -->
+			<Param name="sbc_encoder" value="14,14"/>
+			<Param name="aac_encoder" value="41,51"/>
+			<Param name="lc3_decoder" value="17,20"/>
+			<Param name="lc3_encoder" value="34,39"/>
+			<Param name="ldac_encoder" value="21,22"/>
+			<Param name="lhdcv3_encoder" value="0,0"/>
+			<Param name="lhdcv5_encoder" value="34,34"/>
+			<Param name="lhdcv5_encoder_high" value="70,70"/>
+			<!-- internal utility -->
+			<Param name="blisrc" value="10,11"/>
+			<Param name="blisrc_mid" value="14,16"/>
+			<Param name="blisrc_high" value="35,40"/>
+			<Param name="shifter" value="5,5"/>
+			<Param name="channelcvt" value="10,10"/>
+			<!-- aurisys -->
+			<Param name="aurisys_demo" value="0,0"/>
+			<Param name="mtk_bessound" value="0,0"/>
+			<Param name="mtk_dcrflt" value="9,9"/>
+			<Param name="hifire" value="550,550"/>
+			<Param name="nxp_record" value="0,0"/>
+			<Param name="goodix_sph_VOIP_DL" value="121,121"/>
+			<Param name="goodix_sph_VOIP_UL" value="429,429"/>
+			<Param name="goodix_sph_SPH_DL" value="47,47"/>
+			<Param name="goodix_sph_SPH_UL" value="591,591"/>
+		</ParamUnit>
+		<ParamUnit param_id="1">
+			<!-- default for task -->
+			<Param name="default_low" value="10,10"/>
+			<Param name="default_mid" value="30,30"/>
+			<Param name="default_high" value="90,90"/>
+			<!-- mixer thread -->
+			<Param name="mixer_thread" value="55,55"/>
+			<!-- device -->
+			<Param name="device_a2dp" value="40,40"/>
+			<Param name="device_bledl" value="30,30"/>
+			<Param name="device_bleul" value="35,35"/>
+			<Param name="device_usbdl" value="62,62"/>
+			<Param name="device_usbul" value="70,70"/>
+			<!-- decoder -->
+			<Param name="mp3_decoder" value="16,16"/>
+			<Param name="aac_decoder" value="17,23"/>
+			<Param name="aac_decoder_high" value="40,40"/>
+			<Param name="flac_decoder" value="11,12"/>
+			<Param name="flac_decoder_high" value="15,19"/>
+			<Param name="opus_decoder" value="16,16"/>
+			<!-- encoder -->
+			<Param name="sbc_encoder" value="14,14"/>
+			<Param name="aac_encoder" value="41,51"/>
+			<Param name="lc3_decoder" value="17,20"/>
+			<Param name="lc3_encoder" value="34,39"/>
+			<Param name="ldac_encoder" value="21,22"/>
+			<Param name="lhdcv3_encoder" value="0,0"/>
+			<Param name="lhdcv5_encoder" value="34,34"/>
+			<Param name="lhdcv5_encoder_high" value="70,70"/>
+			<!-- internal utility -->
+			<Param name="blisrc" value="10,11"/>
+			<Param name="blisrc_mid" value="14,16"/>
+			<Param name="blisrc_high" value="35,40"/>
+			<Param name="shifter" value="5,5"/>
+			<Param name="channelcvt" value="10,10"/>
+			<!-- aurisys -->
+			<Param name="aurisys_demo" value="0,0"/>
+			<Param name="mtk_bessound" value="0,0"/>
+			<Param name="mtk_dcrflt" value="9,9"/>
+			<Param name="hifire" value="550,550"/>
+			<Param name="nxp_record" value="0,0"/>
+			<Param name="goodix_sph_VOIP_DL" value="121,121"/>
+			<Param name="goodix_sph_VOIP_UL" value="429,429"/>
+			<Param name="goodix_sph_SPH_DL" value="47,47"/>
+			<Param name="goodix_sph_SPH_UL" value="591,591"/>
+		</ParamUnit>
+		<ParamUnit param_id="2">
+			<!-- default for task -->
+			<Param name="default_low" value="10,10,10,10,10"/>
+			<Param name="default_mid" value="30,30,30,30,30"/>
+			<Param name="default_high" value="90,90,90,90,90"/>
+			<!-- mixer thread -->
+			<Param name="mixer_thread" value="55,55,55,55,55"/>
+			<!-- device -->
+			<Param name="device_a2dp" value="40,40,40,40,40"/>
+			<Param name="device_bledl" value="30,30,30,30,30"/>
+			<Param name="device_bleul" value="35,35,35,35,35"/>
+			<Param name="device_usbdl" value="130,130,130,130,130"/>
+			<Param name="device_usbul" value="180,180,180,180,180"/>
+			<!-- decoder -->
+			<Param name="mp3_decoder" value="14,16,18,19,20"/>
+			<Param name="aac_decoder" value="18,21,24,26,28"/>
+			<Param name="aac_decoder_high" value="32,37,42,45,49"/>
+			<Param name="flac_decoder" value="6,7,8,9,9"/>
+			<Param name="flac_decoder_high" value="19,23,27,30,33"/>
+			<Param name="opus_decoder" value="12,12,12,12,13"/>
+			<Param name="lc3_decoder" value="69,79,89,96,105"/>
+			<Param name="msbc_decoder" value="25,29,33,35,38"/>
+			<Param name="cvsd_decoder" value="4,5,6,6,6"/>
+			<Param name="cvsd_decoder_high" value="90,99,108,114,122"/>
+			<!-- encoder -->
+			<Param name="sbc_encoder" value="15,15,15,16,16"/>
+			<Param name="aac_encoder" value="36,40,43,45,47"/>
+			<Param name="lc3_encoder" value="24,32,40,45,52"/>
+			<Param name="ldac_encoder" value="29,34,39,42,46"/>
+			<Param name="lhdcv3_encoder" value="0,0,0,0,0"/>
+			<Param name="lhdcv5_encoder" value="49,53,58,60,64"/>
+			<Param name="lhdcv5_encoder_high" value="140,146,153,158,164"/>
+			<Param name="msbc_encoder" value="5,7,8,9,10"/>
+			<Param name="cvsd_encoder" value="3,4,4,4,4"/>
+			<!-- internal utility -->
+			<Param name="blisrc" value="8,9,9,9,10"/>
+			<Param name="blisrc_mid" value="16,17,18,18,19"/>
+			<Param name="blisrc_high" value="32,34,36,37,38"/>
+			<Param name="shifter" value="5,5,5,5,5"/>
+			<Param name="channelcvt" value="10,10,10,10,10"/>
+			<!-- aurisys -->
+			<Param name="aurisys_demo" value="0,0,0,0,0"/>
+			<Param name="mtk_bessound" value="0,0,0,0,0"/>
+			<Param name="mtk_dcrflt" value="9,9,9,9,9"/>
+			<Param name="hifire" value="0,0,0,0,0"/>
+			<Param name="nxp_record" value="0,0,0,0,0"/>
+			<Param name="smartpa_awinic" value="104,121,139,150,164"/>
+			<Param name="smartpa_awinic_dual" value="230,257,284,303,325"/>
+			<Param name="goodix_sph_VOIP_DL" value="50,57,64,68,74"/>
+			<Param name="goodix_sph_VOIP_UL" value="205,233,261,280,303"/>
+			<Param name="goodix_sph_SPK_DL" value="47,50,53,55,58"/>
+			<Param name="goodix_sph_SPK_UL" value="188,217,246,265,290"/>
+			<Param name="goodix_sph_BT_DL" value="42,46,51,54,58"/>
+			<Param name="goodix_sph_BT_UL" value="27,31,35,38,42"/>
+			<Param name="goodix_sph_USB_DL" value="38,41,45,47,49"/>
+			<Param name="goodix_sph_USB_UL" value="153,177,201,217,237"/>
+			<Param name="goodix_sph_RCV_DL" value="60,66,72,76,81"/>
+			<Param name="goodix_sph_RCV_UL" value="170,189,208,221,237"/>
+		</ParamUnit>
+	</ParamUnitPool>
+</AudioParam>

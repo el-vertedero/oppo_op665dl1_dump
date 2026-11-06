@@ -1,0 +1,293 @@
+<!--
+     Mandatory property: vidProperty, pidProperty, configName
+     Optional property: saving(default 0), u3_lpm(default true)
+
+     Vendor customization (OPLUS):
+     Values follow oplus_modify/init.mt6995.usb_new.rc under OPLUS_FEATURE_CHG_BASIC.
+     XML cannot use #ifdef; use comments to document deltas vs MTK reference.
+     - VID: OPLUS uses 0x22D9 where MTK uses 0x0E8D; accessory / audio_source stay Google 0x18D1.
+     - PID: entries marked below override MTK default PIDs; unmarked entries keep MTK PID values with OPLUS VID.
+-->
+<settings>
+    <!-- Custom: mtp acm0, PID MTK ref 0x2008 -> 0x2764 -->
+    <function name="mtp" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2764</pidProperty>
+        <configName>mtp</configName>
+        <saving>2</saving>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="mtp" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2012</pidProperty>
+        <configName>mtp_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="mtp" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x202A</pidProperty>
+        <configName>mtp_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Custom: mtp,adb acm0, PID MTK ref 0x201D -> 0x2765 -->
+    <function name="mtp,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2765</pidProperty>
+        <configName>mtp_adb</configName>
+    </function>
+    <function name="mtp,adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x200A</pidProperty>
+        <configName>mtp_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="mtp,adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2026</pidProperty>
+        <configName>mtp_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Custom: rndis acm0, PID MTK ref 0x2004 -> 0x276A -->
+    <function name="rndis" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x276A</pidProperty>
+        <configName>rndis</configName>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="rndis" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2011</pidProperty>
+        <configName>rndis_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="rndis" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x202C</pidProperty>
+        <configName>rndis_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Custom: rndis,adb acm0, PID MTK ref 0x2005 -> 0x2766 -->
+    <function name="rndis,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2766</pidProperty>
+        <configName>rndis_adb</configName>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="rndis,adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2010</pidProperty>
+        <configName>rndis_adb_acm</configName>
+        <saving>1</saving>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="rndis,adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2028</pidProperty>
+        <configName>rndis_adb_acm</configName>
+        <saving>1</saving>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="ncm" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2067</pidProperty>
+        <configName>ncm</configName>
+    </function>
+    <function name="ncm" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2068</pidProperty>
+        <configName>ncm_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="ncm" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2069</pidProperty>
+        <configName>ncm_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="ncm,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x206A</pidProperty>
+        <configName>ncm_adb</configName>
+    </function>
+    <function name="ncm,adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x206B</pidProperty>
+        <configName>ncm_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="ncm,adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x206C</pidProperty>
+        <configName>ncm_adb_acm</configName>
+	<saving>1</saving>
+    </function>
+    <function name="ptp" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x200B</pidProperty>
+        <configName>ptp</configName>
+        <saving>2</saving>
+    </function>
+    <function name="ptp" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2013</pidProperty>
+        <configName>ptp_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="ptp" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x202B</pidProperty>
+        <configName>ptp_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Custom: ptp,adb acm0, PID MTK ref 0x200C -> 0x2772 -->
+    <function name="ptp,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2772</pidProperty>
+        <configName>ptp_adb</configName>
+    </function>
+    <function name="ptp,adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x200D</pidProperty>
+        <configName>ptp_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="ptp,adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2027</pidProperty>
+        <configName>ptp_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Custom: adb acm0, PID MTK ref 0x201C -> 0x2769 -->
+    <function name="adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2769</pidProperty>
+        <configName>adb</configName>
+    </function>
+    <!-- Custom: adb acm1, PID matches 6993 OPLUS RC (0x2006; not 0x200E which is acm2) -->
+    <function name="adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x201E</pidProperty>
+        <configName>adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Custom: adb acm2, PID matches 6993 OPLUS RC (MTK ref 0x2029 -> 0x200E) -->
+    <function name="adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x200E</pidProperty>
+        <configName>adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="midi" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2046</pidProperty>
+        <configName></configName>
+    </function>
+    <function name="midi,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2048</pidProperty>
+        <configName></configName>
+    </function>
+    <!-- Google standard accessory/audio VID (0x18D1); not OPLUS vendor VID -->
+    <function name="accessory" acmCount="0">
+        <vidProperty>0x18D1</vidProperty>
+        <pidProperty>0x2D00</pidProperty>
+        <configName></configName>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="accessory,adb" acmCount="0">
+        <vidProperty>0x18D1</vidProperty>
+        <pidProperty>0x2D01</pidProperty>
+        <configName></configName>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="audio_source" acmCount="0">
+        <vidProperty>0x18D1</vidProperty>
+        <pidProperty>0x2D02</pidProperty>
+        <configName></configName>
+    </function>
+   <function name="audio_source,adb" acmCount="0">
+        <vidProperty>0x18D1</vidProperty>
+        <pidProperty>0x2D03</pidProperty>
+        <configName></configName>
+    </function>
+   <function name="accessory,audio_source" acmCount="0">
+        <vidProperty>0x18D1</vidProperty>
+        <pidProperty>0x2D04</pidProperty>
+        <configName></configName>
+        <u3_lpm>false</u3_lpm>
+    </function>
+   <function name="accessory,audio_source,adb" acmCount="0">
+        <vidProperty>0x18D1</vidProperty>
+        <pidProperty>0x2D05</pidProperty>
+        <configName></configName>
+        <u3_lpm>false</u3_lpm>
+    </function>
+   <function name="via_bypass" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2031</pidProperty>
+        <configName>via_bypass</configName>
+        <saving>1</saving>
+    </function>
+    <function name="via_bypass" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2033</pidProperty>
+        <configName>via_bypass_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="via_bypass,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2032</pidProperty>
+        <configName>via_bypass_adb</configName>
+        <saving>1</saving>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="via_bypass,adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2034</pidProperty>
+        <configName>rndis_acm</configName>
+        <saving>1</saving>
+        <u3_lpm>false</u3_lpm>
+    </function>
+    <function name="via_bypass,adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2050</pidProperty>
+        <configName>rndis_adb_acm2</configName>
+        <saving>1</saving>
+        <u3_lpm>false</u3_lpm>
+    </function>
+   <function name="uvc" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x206D</pidProperty>
+        <configName>uvc</configName>
+    </function>
+    <function name="uvc" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x206E</pidProperty>
+        <configName>uvc_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="uvc" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x206F</pidProperty>
+        <configName>uvc_acm</configName>
+        <saving>1</saving>
+    </function>
+       <function name="uvc,adb" acmCount="0">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2070</pidProperty>
+        <configName>uvc_adb</configName>
+    </function>
+    <function name="uvc,adb" acmCount="1">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2071</pidProperty>
+        <configName>uvc_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <function name="uvc,adb" acmCount="2">
+        <vidProperty>0x22D9</vidProperty>
+        <pidProperty>0x2072</pidProperty>
+        <configName>uvc_adb_acm</configName>
+        <saving>1</saving>
+    </function>
+    <!-- Add more function definitions here -->
+</settings>

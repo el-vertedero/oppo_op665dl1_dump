@@ -1,0 +1,110 @@
+on post-fs-data
+    mkdir /data/vendor/mbrain 0775 root root
+    mkdir /data/vendor/mbrain_ela 0700 root root
+
+on property:sys.boot_completed=1 && property:ro.vendor.mbrain.mode=mtk
+    setprop vendor.mbrain.ready 1
+    start mtkd
+
+on property:sys.boot_completed=1 && property:ro.vendor.mbrain.mode=mtk && property:persist.vendor.mbrain.uxtrace=1
+    setprop persist.vendor.mbrain.aeetriggermode 10
+    setprop debug.sf.mbrain.t4 true
+    setprop debug.sf.mbrain.t4.log true
+    setprop debug.atrace.tags.enableflags 0x6c6e
+    # Start FTrace
+    write /sys/kernel/tracing/buffer_size_kb 30720
+    write /sys/kernel/tracing/tracing_on 1
+    write /sys/kernel/tracing/trace ""
+    write /sys/kernel/tracing/options/record-tgid 1
+    write /sys/kernel/tracing/events/sched/enable 1
+    write /sys/kernel/tracing/events/sched/sched_switch/enable 1
+    write /sys/kernel/tracing/events/sched/sched_wakeup/enable 1
+    write /sys/kernel/tracing/events/power/cpu_frequency/enable 1
+    write /sys/kernel/tracing/events/power/cpu_idle/enable 1
+    write /sys/kernel/tracing/events/power/cpu_frequency_limits/enable 1
+    write /sys/kernel/tracing/events/power/clock_set_rate/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction_received/enable 1
+    write /sys/kernel/tracing/current_tracer function
+    write /sys/kernel/tracing/events/task/task_newtask/enable 1
+    write /sys/kernel/tracing/events/task/task_rename/enable 1
+    write /sys/kernel/tracing/events/cpuhp/cpuhp_enter/enable 1
+    write /sys/kernel/tracing/events/cpuhp/cpuhp_exit/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_setup_root/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_destroy_root/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_remount/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_mkdir/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_rmdir/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_release/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_rename/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_freeze/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_unfreeze/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_attach_task/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_transfer_tasks/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_notify_populated/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_notify_frozen/enable 1
+    write /sys/kernel/tracing/events/power/suspend_resume/enable 1
+    write /sys/kernel/tracing/events/power/clock_enable/enable 1
+    write /sys/kernel/tracing/events/power/clock_disable/enable 1
+    write /sys/kernel/tracing/events/oom/oom_score_adj_update/enable 1
+    write /sys/kernel/tracing/events/clk/clk_enable/enable 1
+    write /sys/kernel/tracing/events/clk/clk_disable/enable 1
+    write /sys/kernel/tracing/events/clk/clk_set_rate/enable 1
+    write /sys/kernel/tracing/events/gpu_mem/gpu_mem_total/enable 1
+    write /sys/kernel/tracing/events/binder/binder_set_priority/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/enable 1
+
+
+on property:sys.boot_completed=1 && property:ro.vendor.mbrain.mode=mtk && property:persist.vendor.mbrain.uxtrace=1 && property:debug.atrace.tags.enableflags=0
+    setprop persist.vendor.mbrain.aeetriggermode 10
+    setprop debug.sf.mbrain.t4 true
+    setprop debug.sf.mbrain.t4.log true
+    setprop debug.atrace.tags.enableflags 0x6c6e
+    # Start FTrace
+    write /sys/kernel/tracing/buffer_size_kb 30720
+    write /sys/kernel/tracing/tracing_on 1
+    write /sys/kernel/tracing/trace ""
+    write /sys/kernel/tracing/options/record-tgid 1
+    write /sys/kernel/tracing/events/sched/enable 1
+    write /sys/kernel/tracing/events/sched/sched_switch/enable 1
+    write /sys/kernel/tracing/events/sched/sched_wakeup/enable 1
+    write /sys/kernel/tracing/events/power/cpu_frequency/enable 1
+    write /sys/kernel/tracing/events/power/cpu_idle/enable 1
+    write /sys/kernel/tracing/events/power/cpu_frequency_limits/enable 1
+    write /sys/kernel/tracing/events/power/clock_set_rate/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction_received/enable 1
+    write /sys/kernel/tracing/current_tracer function
+    write /sys/kernel/tracing/events/task/task_newtask/enable 1
+    write /sys/kernel/tracing/events/task/task_rename/enable 1
+    write /sys/kernel/tracing/events/cpuhp/cpuhp_enter/enable 1
+    write /sys/kernel/tracing/events/cpuhp/cpuhp_exit/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_setup_root/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_destroy_root/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_remount/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_mkdir/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_rmdir/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_release/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_rename/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_freeze/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_unfreeze/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_attach_task/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_transfer_tasks/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_notify_populated/enable 1
+    write /sys/kernel/tracing/events/cgroup/cgroup_notify_frozen/enable 1
+    write /sys/kernel/tracing/events/power/suspend_resume/enable 1
+    write /sys/kernel/tracing/events/power/clock_enable/enable 1
+    write /sys/kernel/tracing/events/power/clock_disable/enable 1
+    write /sys/kernel/tracing/events/oom/oom_score_adj_update/enable 1
+    write /sys/kernel/tracing/events/clk/clk_enable/enable 1
+    write /sys/kernel/tracing/events/clk/clk_disable/enable 1
+    write /sys/kernel/tracing/events/clk/clk_set_rate/enable 1
+    write /sys/kernel/tracing/events/gpu_mem/gpu_mem_total/enable 1
+    write /sys/kernel/tracing/events/binder/binder_set_priority/enable 1
+    write /sys/kernel/tracing/events/binder/binder_transaction_alloc_buf/enable 1
+
+service mtkd /vendor/bin/hw/mtkd-service
+    class hal
+    user root
+    group root readproc system radio
+    disabled

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="UltrasoundParam">
+			<Category name="Common"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="2in1_speaker" type="int"/>
+		<Param name="ultrasound_rampdown_delay" type="int"/>
+		<Param name="delay_start_duration" type="int"/>
+		<Param name="delay_recovery_duration" type="int"/>
+		<Param name="mute_duration" type="int"/>
+		<Param name="fallback_to_recv" type="int"/>
+		<Param name="fallback_to_recv_delay" type="int"/>
+	</ParamUnit>
+</ParamUnitDesc>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mnl_config version="26073001.6.0O.00" type="gps">
+
+    <feature>IFB
+        <version>1.0</version>
+        <config>1</config>
+        <format> CH:-7 to 6 </format>
+        <setting>-10.30,-9.35,-7.50,-1.52,-1.60,-4.89,-1.43,0,-0.44,-0.20,-1.09,-1.75,-3.35,-4.98</setting>
+    </feature>
+
+    <feature>GGTO
+        <version>1.0</version>
+        <config>1</config>
+        <format> GLONASS time offset, BEIDOU time offset, GALILEO time offset, NAVIC time offset, Unit: meter </format>
+        <setting>10.81,-28.03,3.02,18.78</setting>
+    </feature>
+
+    <feature>DCB
+        <version>2.0</version>
+        <config>1</config>
+        <format>L5_DCB_GPS,L5_DCB_QZSS,L5_DCB_CNSS,L5_DCB_GALILEO</format>
+        <setting>1.62,0.98,28.21,0.72</setting>
+        <format>L1C_DCB_GPS,L1C_DCB_QZSS,B1C_DCB_CNSS,E5B_DCB_GALILEO</format>
+        <setting>0.87,0.46,30.35,17.85</setting>        
+    </feature>
+
+    <feature>L1Only
+        <version>1.0</version>
+        <config>0</config>
+        <format>L1 only: 1</format>
+        <setting>0</setting>
+    </feature>
+
+    <feature>L5Test
+        <version>1.0</version>
+        <config>0</config>
+        <format>Search and used GPS L5 satellites according to the healthy status: 0, Search and used GPS L5 satellites regardless of its healthy status: 1</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>CAIC
+        <version>1.0</version>
+        <config>0</config>
+        <format>L1 CAIC FrequencyHz</format>
+        <setting>1560000000</setting>
+        <format>L5 CAIC FrequencyHz</format>
+        <setting>1170000000</setting>
+    </feature>
+
+    <feature>GnssMode
+        <version>1.0</version>
+        <config>0</config>
+        <format>GP+GL+BD:2, GP:3, BD:4, GP+GL+GA+BD:6, GP+GL+GA:8, GP+GL+GA+BD+NI:10, BD+GL+GA+NI:11</format>
+        <setting>10</setting>
+    </feature>
+
+    <feature>CoTMS
+        <version>5.2</version>
+        <config>1</config>
+        <format>RTS,TEP</format>
+        <setting>3,4</setting>
+    </feature>
+
+    <feature>SwitchTIA
+        <version>1</version>
+        <config>1</config>
+        <format>enable:1,disable:0</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>Blanking
+        <version>1</version>
+        <config>0</config>
+        <format>enable:1,disable:0</format>
+        <setting>0</setting>
+    </feature>
+
+    <feature>MDTime
+        <version>2.0</version>
+        <config>1</config>
+        <format>featureOption,requestInterval,sizeOfWindow,syncBackNum(optional)</format>
+        <setting>1,5000,1500,0</setting>
+    </feature>
+
+    <feature>Time_Source
+        <version>1.0</version>
+        <config>1</config>
+        <format>RAT,SIB</format>
+       <setting>50,6</setting>
+    </feature>
+
+    <feature>DGPSMode
+        <version>1.0</version>
+        <config>0</config>
+        <format>Disable:0, SBAS:2, SBAS+B2B:10, SBAS+B2B+PPP:42</format>
+        <setting>42</setting>
+    </feature>
+
+    <feature>GNSSPower
+        <version>1.0</version>
+        <config>1</config>
+        <format>singlebandTracking,multibandTracking,singlebandAcquisition,multibandAcquisition</format>
+        <setting>51.9,100.2,58.5,106.7</setting>
+    </feature>
+
+    <feature>OSNMA
+        <version>1.0</version>
+        <config>0</config>
+        <format>Disable:-1, Enable OSNMA when NMAS is test or operational phase: 1, Enable OSNMA when NMAS is operational phase: 2</format>
+        <setting>2</setting>
+    </feature>
+
+    <feature>LOW_PWR_GEAR
+        <version>1.0</version>
+        <config>1</config>
+        <format>Capability Support:1, Not Support:0</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>MVN1_List
+        <version>1.0</version>
+        <config>1</config>
+        <format>Disable:0,support n1 sv</format>
+        <setting>512</setting>
+    </feature>
+    
+    <feature>BDS_Priority
+        <version>1.0</version>
+        <config>0</config>
+        <format>Default:0,BDS Only:1, BDS Priority:2</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>B2B_MEO
+        <version>1.0</version>
+        <config>1</config>
+        <format>Support B2B CNAV3</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>UDROutputMode
+        <version>1.0</version>
+        <config>1</config>
+        <setting>65,0</setting>
+    </feature>
+
+</mnl_config>

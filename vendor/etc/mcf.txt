@@ -1,0 +1,42 @@
+{
+    "format_version": 2000,
+    "mcf_version": "20250221 5",
+    "subgraphs": [
+        {
+            "_hash": "93,194,13,101,40,225,50,7,2,228,214,27,90,16,249,67,243,156,30,133,119,82,81,36,246,55,164,187,82,187,201,115,",
+            "_hash_alg": "complex",
+            "compile_options": "--l1-size-kb=7168 -O3 --num-mdla=4 --relax-fp32 --reshape-to-4d --fc-to-conv",
+            "model_name": "swin_quant",
+            "use_ahwb": 1
+        },
+        {
+            "_hash": "106,187,36,236,206,19,53,62,141,200,107,254,11,197,85,240,77,46,54,79,174,178,37,174,32,88,70,231,216,203,53,135,",
+            "_hash_alg": "complex",
+            "compile_options": "--l1-size-kb=7168 -O3 --num-mdla=4 --relax-fp32 --reshape-to-4d --fc-to-conv",
+            "model_name": "swin_float",
+            "use_ahwb": 1
+        },
+        {
+            "_hash": "60,27,114,200,147,10,68,9,46,194,190,80,55,73,121,110,225,219,70,224,87,45,85,39,59,56,70,34,122,63,76,238,",
+            "_hash_alg": "complex",
+            "compile_options": "--num-mdla=4 --l1-size-kb=7168 --opt=3 --mlir-pattern-rewrite-nir --relax-fp32 --gno=SMP --fusion-config=mobilevit_v2_quant",
+            "model_name": "mobilevit_v2_quant",
+            "use_ahwb": 1
+        },
+        {
+            "_hash": "177,2,97,148,203,124,9,65,26,134,148,135,3,239,243,145,245,253,166,84,218,0,82,97,72,189,63,196,9,65,5,43,",
+            "_hash_alg": "complex",
+            "compile_options": "--num-mdla=4 --l1-size-kb=7168 --opt=3 --fusion-config=mobilenet_v3_b4_quant",
+            "model_name": "mobilenet_v3_b4_quant",
+            "use_ahwb": 1
+        },
+        {
+            "_hash": "86,198,156,11,236,150,157,13,96,147,130,204,58,21,5,38,134,53,207,182,246,136,92,176,198,122,74,127,185,121,55,158,",
+            "_hash_uncut": "216,4,205,67,203,196,23,133,96,147,130,204,58,21,5,38,0,120,74,127,185,121,55,158,198,122,74,127,185,121,55,158,",
+            "compile_options": "adapter --relax-fp32 --l1-size-kb 7168 --num-mdla 4 --opt-accuracy --opt 3 --mdla-opt-conv-rqu",
+            "model_name": "vit_b16_quant_ETHZv6",
+            "use_ahwb": 1
+        }
+    ]
+}
+

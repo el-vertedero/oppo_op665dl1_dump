@@ -1,0 +1,13 @@
+service vendor.keymint-trustonic /vendor/bin/hw/android.hardware.security.keymint@5.0-service.trustonic --support_rkp=yes --support_attest_key=yes
+    class early_hal
+    user system
+    group system
+    # The keymint service is not allowed to restart.
+    # If it crashes, a device restart is required.
+    # oneshot
+
+# We use the property set by Trustonic daemon so mcOpenSession is available
+# and DrAndroid is loaded
+#on property:vendor.sys.trustonic.enable=1
+on property:ro.vendor.trustonic.ready=true
+    start vendor.keymint-trustonic

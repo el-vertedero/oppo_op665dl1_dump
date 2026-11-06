@@ -1,0 +1,17 @@
+on post-fs-data
+    mkdir /data/vendor/conn_tasar 0770 system system
+
+service tasar_assistant /vendor/bin/tasar_assistant monitor_uevent
+    class main
+    user wifi
+    group system gps inet
+    capabilities NET_ADMIN NET_RAW
+
+service tasar_assistant_shutdown_sync /vendor/bin/tasar_assistant get_current_data
+    user wifi
+    group system gps inet
+    capabilities NET_ADMIN NET_RAW
+    oneshot
+
+on shutdown
+    start tasar_assistant_shutdown_sync

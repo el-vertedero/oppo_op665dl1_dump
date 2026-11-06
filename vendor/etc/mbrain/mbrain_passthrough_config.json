@@ -1,0 +1,34 @@
+{
+    "EventPassThroughTable": {
+        "system_scan": [
+            "MD"
+        ],
+        "java_app_switch": [
+            "MD"
+        ],
+        "java_charge_change": [
+            "MD"
+        ],
+        "java_usb_change": [
+            "MD"
+        ],
+        "java_network_change": [
+            "MD"
+        ],
+        "java_doze_mode_notify": [
+            "MD"
+        ],
+        "java_audio_mode_change": [
+            "MD"
+        ],
+        "video_customize": [
+            "MD"
+        ],
+        "java_app_life_cycle": [
+            "MD"
+        ],
+        "java_window_change" : [
+            "MD"
+        ]
+    }
+}

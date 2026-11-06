@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/mediatek/proprietary/trustzone/google_trusty/hardware/interfaces/capabilities_service/tz/android.hardware.virtualization.capabilities.capabilities_service-mtk_tz.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.virtualization.capabilities</name>
+        <fqname>IVmCapabilitiesService/default</fqname>
+    </hal>
+</manifest>

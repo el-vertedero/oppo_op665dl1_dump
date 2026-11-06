@@ -1,0 +1,5 @@
+libOpenCL.so
+libneuron_runtime.10.so
+libneuron_adapter_mgvi.so
+libaiboost.so
+libaiboost_llm.so

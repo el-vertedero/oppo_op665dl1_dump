@@ -1,0 +1,18 @@
+on post-fs-data
+    chmod 666 /proc/ppb/ppb_camera_power
+
+service camerahalserver /vendor/bin/hw/camerahalserver
+    class main
+    user cameraserver
+    group audio camera input drmrpc sdcard_rw system media graphics
+    ioprio rt 4
+#ifndef OPLUS_FEATURE_CAMERA_COMMON
+    capabilities SYS_NICE
+#else  /*OPLUS_FEATURE_CAMERA_COMMON*/
+    capabilities SYS_NICE IPC_LOCK
+#endif /*OPLUS_FEATURE_CAMERA_COMMON*/
+    task_profiles CameraServiceCapacity MaxPerformance
+#ifdef OPLUS_FEATURE_CAMERA_COMMON
+# wusongbai@CAMERA.DRV,2026/05/26,Add for APEX updatable service support
+    updatable
+#endif /*OPLUS_FEATURE_CAMERA_COMMON*/

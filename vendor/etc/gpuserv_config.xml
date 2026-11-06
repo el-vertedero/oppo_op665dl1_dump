@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GPUService>
+    <Package name="com.miHoYo.hkrpg">
+        <MFRC>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="0.5"
+                qualityMode="2"
+                minActiveFPS="0">
+                <ActiveTargetFPS>
+                    <Data active="60" stop="50"/>
+                </ActiveTargetFPS>
+                <!-- <ThermalWorkDuration> -->
+                    <!-- <Data active="600" idle="60"/> -->
+                <!-- </ThermalWorkDuration> -->
+            </Thermal>
+        </MFRC>
+    </Package>
+    <Package name="com.HoYoverse.hkrpgoversea">
+        <MFRC>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="0.5"
+                qualityMode="2"
+                minActiveFPS="0">
+                <ActiveTargetFPS>
+                    <Data active="60" stop="50"/>
+                </ActiveTargetFPS>
+                <!-- <ThermalWorkDuration> -->
+                    <!-- <Data active="600" idle="60"/> -->
+                <!-- </ThermalWorkDuration> -->
+            </Thermal>
+        </MFRC>
+    </Package>
+    <Package name="com.tencent.tmgp.dfm">
+        <MFRC>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="3"
+                qualityMode="2"
+                minActiveFPS="0">
+                <ActiveTargetFPS>
+                    <Data active="144" stop="125"/>
+                </ActiveTargetFPS>
+                <!-- <ThermalWorkDuration> -->
+                    <!-- <Data active="600" idle="600"/> -->
+                    <!-- <Data active="600" idle="200"/> -->
+                <!-- </ThermalWorkDuration> -->
+            </Thermal>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="1"
+                qualityMode="2"
+                minActiveFPS="0">
+                <ActiveTargetFPS>
+                    <Data active="120" stop="100"/>
+                </ActiveTargetFPS>
+                <!-- <ThermalWorkDuration> -->
+                    <!-- <Data active="600" idle="600"/> -->
+                    <!-- <Data active="600" idle="200"/> -->
+                <!-- </ThermalWorkDuration> -->
+            </Thermal>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="1"
+                qualityMode="2"
+                minActiveFPS="0">
+                <ActiveTargetFPS>
+                    <Data active="90" stop="70"/>
+                </ActiveTargetFPS>
+                <!-- <ThermalWorkDuration> -->
+                    <!-- <Data active="600" idle="600"/> -->
+                    <!-- <Data active="600" idle="200"/> -->
+                <!-- </ThermalWorkDuration> -->
+            </Thermal>
+        </MFRC>
+    </Package>
+    <Package name="com.miHoYo.Nap">
+        <MFRC>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="1"
+                qualityMode="2"
+                minActiveFPS="60">
+            </Thermal>
+        </MFRC>
+    </Package>
+    <Package name="com.HoYoverse.Nap">
+        <MFRC>
+            <Thermal
+                enable="false"
+                thermalAwareThreshold="1"
+                qualityMode="2"
+                minActiveFPS="60">
+            </Thermal>
+        </MFRC>
+    </Package>
+</GPUService>

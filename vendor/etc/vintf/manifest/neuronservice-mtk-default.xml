@@ -1,0 +1,8 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.neuropilot.neuronservice</name>
+        <version>1</version>
+        <fqname>INeuronService/default</fqname>
+    </hal>
+</manifest>
+

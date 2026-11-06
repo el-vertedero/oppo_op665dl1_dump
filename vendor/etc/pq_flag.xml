@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!--
+    please align enum
+    enum mml_pq_enable_flag {
+        MML_PQ_DEFAULT_EN = 1 << 0,
+        MML_PQ_COLOR_EN = 1 << 1,
+        MML_PQ_SHP_EN = 1 << 2,
+        MML_PQ_ULTRARES_EN = 1 << 3,
+        MML_PQ_DYN_CONTRAST_EN = 1 << 4,
+        MML_PQ_DRE_EN = 1 << 5,
+        MML_PQ_CCORR_EN = 1 << 6,
+        MML_PQ_AI_SCENE_PQ_EN = 1 << 7,
+        MML_PQ_AI_SDR_TO_HDR_EN = 1 << 8,
+        MML_PQ_VIDEO_HDR_EN = 1 << 9,
+        MML_PQ_AI_REGION_EN = 1 << 10,
+        MML_PQ_C3D_EN = 1 << 11,
+        MML_PQ_CLARITY_EN = 1 << 12,
+        MML_PQ_FG_EN = 1 << 13,
+        MML_PQ_COLOR_ADAPTIVE_EN = 1 << 14,
+    };
+    -->
+    <PQ_Flags>
+        <Platform PlatformID="mt6893" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6853" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6983" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6895" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6886" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6879" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6855" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6985" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6897" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6989" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6991" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6899" IRValue="1100" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6993" IRValue="0" DLValue="1">
+        </Platform>
+        <Platform PlatformID="mt6995" IRValue="0" DLValue="1">
+        </Platform>
+    </PQ_Flags>
+</root>

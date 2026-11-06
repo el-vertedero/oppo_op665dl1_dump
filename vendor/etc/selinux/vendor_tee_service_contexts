@@ -1,0 +1,9 @@
+#line 50 "system/sepolicy/flagging/flagging_macros"
+
+#line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_tee_service_contexts/android_common/k6995v1_64/newline"
+
+#line 1 "device/mediatek/sepolicy/base/vendor/tee_service_contexts"
+vendor.mtk_tz_service u:object_r:mtk_tz_service:s0
+
+#line 1 "out/soong/.intermediates/system/sepolicy/contexts/vendor_tee_service_contexts/android_common/k6995v1_64/newline"
+
